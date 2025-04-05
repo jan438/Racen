@@ -38,6 +38,9 @@ with open(file_to_open, 'r') as file:
 print("Count:", count)
 for i in range(count):
     print(formule1data[i])
+    img = "Teams/" + formule1data[i][0] + ".png"
+    I = Image(img)
+    print(I.drawHeight)
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuItalic', 'Ubuntu-Italic.ttf'))
