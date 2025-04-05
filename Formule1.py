@@ -43,7 +43,7 @@ for i in range(count):
     img = "Teams/" + formule1data[i][0] + ".png"
     row = round(i / 2)
     col = i % 2
-    print(i, formule1data[i][0], col, row)
+    print(i, formule1data[i][0], "col", col, "row", row)
     d.add(Image(path = img, width = 232, height = 69, x = col * 235, y = row * 100))
 renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
