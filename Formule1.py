@@ -36,6 +36,8 @@ with open(file_to_open, 'r') as file:
         formule1data.append(row)
         count += 1
 print("Count:", count)
+for i in range(count):
+    print(formule1data[i])
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuItalic', 'Ubuntu-Italic.ttf'))
