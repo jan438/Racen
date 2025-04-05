@@ -40,8 +40,10 @@ with open(file_to_open, 'r') as file:
 print("Count:", count)
 d = Drawing(595, 842)
 for i in range(count):
-    print(formule1data[i])
     img = "Teams/" + formule1data[i][0] + ".png"
+    row = round(i / 2)
+    col = i % 2
+    print(formule1data[i], col, row)
     d.add(Image(path = img, width = 465, height = 138, x = 0, y = 0))
 renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
