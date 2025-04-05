@@ -17,6 +17,8 @@ from reportlab.pdfbase.pdfmetrics import registerFontFamily
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Table, Image, Spacer, Frame
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_LEFT, TA_RIGHT, TA_CENTER
+from reportlab.graphics.shapes import *
+from reportlab.graphics import renderPDF
 
 formule1font = "LiberationSerif"
 
@@ -36,11 +38,14 @@ with open(file_to_open, 'r') as file:
         formule1data.append(row)
         count += 1
 print("Count:", count)
+d = Drawing(595, 842)
 for i in range(count):
     print(formule1data[i])
     img = "Teams/" + formule1data[i][0] + ".png"
-    I = Image(img)
-    print(I.drawWidth, I.drawHeight)
+    #I = Image(img)
+    #print(I.drawWidth, I.drawHeight)
+    d.add(Image(path = img, width = 71.25, height = 95, x = 0, y = 0))
+renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuItalic', 'Ubuntu-Italic.ttf'))
