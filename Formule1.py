@@ -44,7 +44,7 @@ for i in range(count):
     row = round(i / 2)
     col = i % 2
     print(formule1data[i], col, row)
-    d.add(Image(path = img, width = 465, height = 138, x = 0, y = 0))
+    d.add(Image(path = img, width = 232, height = 69, x = col * 235, y = row * 100))
 renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
