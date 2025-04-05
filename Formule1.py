@@ -39,12 +39,16 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("Count:", count)
 d = Drawing(595, 842)
+row = 0
+col = 0
 for i in range(count):
     img = "Teams/" + formule1data[i][0] + ".png"
-    row = round(i / 2)
-    col = i % 2
     print(i, formule1data[i][0], "col", col, "row", row)
     d.add(Image(path = img, width = 232, height = 69, x = col * 235, y = row * 100))
+    col = col + 1
+    if col == 2:
+        col = 0
+        row = row + 1
 renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
