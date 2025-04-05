@@ -42,9 +42,7 @@ d = Drawing(595, 842)
 for i in range(count):
     print(formule1data[i])
     img = "Teams/" + formule1data[i][0] + ".png"
-    #I = Image(img)
-    #print(I.drawWidth, I.drawHeight)
-    d.add(Image(path = img, width = 71.25, height = 95, x = 0, y = 0))
+    d.add(Image(path = img, width = 465, height = 138, x = 0, y = 0))
 renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
