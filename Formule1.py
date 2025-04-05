@@ -40,7 +40,7 @@ for i in range(count):
     print(formule1data[i])
     img = "Teams/" + formule1data[i][0] + ".png"
     I = Image(img)
-    print(I.drawHeight)
+    print(I.drawWidth, I.drawHeight)
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuItalic', 'Ubuntu-Italic.ttf'))
