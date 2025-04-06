@@ -44,7 +44,7 @@ col = 0
 for i in range(count):
     img = "Teams/" + formule1data[i][0] + ".png"
     print(i, formule1data[i][0], "col", col, "row", row)
-    d.add(Image(path = img, width = 232, height = 69, x = col * 235, y = row * 100))
+    d.add(Image(path = img, width = 232, height = 69, x = 2.5 + col * 295, y = row * 100))
     col = col + 1
     if col == 2:
         col = 0
