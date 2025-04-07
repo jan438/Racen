@@ -42,10 +42,10 @@ d = Drawing(595, 842)
 row = 0
 col = 0
 for i in range(count):
-    print(i, formule1data[i][0], "col", col, "row", row)
-    img = "Teams/" + formule1data[i][0] + ".png"
+    print(i, formule1data[i][0], formule1data[i][1], "col", col, "row", row)
+    img = "Teams/" + formule1data[i][1] + ".png"
     d.add(Image(path = img, width = 232, height = 69, x = col * 297.5, y = row * 160))
-    img = "Logos/" + formule1data[i][0] + ".png"
+    img = "Logos/" + formule1data[i][1] + ".png"
     d.add(Image(path = img, width = 65, height = 65, x = 232.5 + col * 297.5, y = row * 160))
     col = col + 1
     if col == 2:
