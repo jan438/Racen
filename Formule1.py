@@ -39,15 +39,17 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("Count:", count)
 d = Drawing(595, 842)
+rowheight = 160
+colwidth = 297.5
 row = 0
 col = 0
 for i in range(count):
     print(i, formule1data[i][0], formule1data[i][1], "col", col, "row", row)
-    d.add(String(col * 297.5, row * 160 + 72, formule1data[i][0], fontSize = 25, fillColor = colors.black))
+    d.add(String(col * colwidth, row * rowheight + 72, formule1data[i][0], fontSize = 25, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
-    d.add(Image(path = img, width = 232, height = 69, x = col * 297.5, y = row * 160))
+    d.add(Image(path = img, width = 232, height = 69, x = col * colwidth, y = row * rowheight))
     img = "Logos/" + formule1data[i][1] + ".png"
-    d.add(Image(path = img, width = 65, height = 65, x = 232.5 + col * 297.5, y = row * 160))
+    d.add(Image(path = img, width = 65, height = 65, x = 232.5 + col * colwidth, y = row * rowheight))
     col = col + 1
     if col == 2:
         col = 0
