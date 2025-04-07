@@ -45,7 +45,8 @@ row = 0
 col = 0
 for i in range(count):
     print(i, formule1data[i][0], formule1data[i][1], "col", col, "row", row)
-    d.add(String(col * colwidth, row * rowheight + 72, formule1data[i][0], fontSize = 25, fillColor = colors.black))
+    d.add(String(col * colwidth, row * rowheight + 100, formule1data[i][0], fontSize = 25, fillColor = colors.black))
+    #d.add(String(col * colwidth, row * rowheight + 72, formule1data[i][0], fontSize = 25, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
     d.add(Image(path = img, width = 232, height = 69, x = col * colwidth, y = row * rowheight))
     img = "Logos/" + formule1data[i][1] + ".png"
