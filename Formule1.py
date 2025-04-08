@@ -50,7 +50,7 @@ rowheight = 160
 colwidth = 297.5
 row = 0
 col = 0
-class MyArrow(_Symbol):
+class MyLogo(_Symbol):
     def __init__(self):
         self.x = 215
         self.y = 712
@@ -83,8 +83,8 @@ class MyArrow(_Symbol):
         lab.setText("N")
         g.add(lab)
         return g
-a = MyArrow()
-d.add(a)
+l = MyLogo()
+d.add(l)
 for i in range(count):
     print(i, formule1data[i][0], formule1data[i][1], "col", col, "row", row)
     d.add(String(col * colwidth, row * rowheight + 100, formule1data[i][0], fontSize = 25, fillColor = colors.black))
