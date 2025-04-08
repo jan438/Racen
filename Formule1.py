@@ -60,17 +60,8 @@ class MyLogo(_Symbol):
     def draw(self):
         g = shapes.Group()
         g.add(Circle(self.x + 9, self.y + 20, 26, fillColor = "#FEDDB9"))
-        arrow = shapes.Polygon(points = [
-        self.x + 26.1, self.y + 4.0,
-        self.x + 11.2, self.y + 18.9,
-        self.x + 14.5, self.y + 23.0,
-        self.x + 7.2, self.y + 24.2,
-        self.x, self.y + 26.1, # arrow point
-        self.x + 1.9, self.y + 18.9,
-        self.x + 3.8, self.y + 11.6,
-        self.x + 7.2, self.y + 14.9,
-        self.x + 22.1, self.y 
-        ],
+        arrow = shapes.Polygon(
+        points=[59.68, 762.591, 58.224, 7154.294, 110.626, 788.064, 61.135, 764.774],
                fillColor = self.fillColor,
                strokeColor = None,
                strokeWidth=0)
