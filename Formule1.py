@@ -53,9 +53,9 @@ col = 0
 class MyLogo(_Symbol):
     def __init__(self):
         self.x = 215
-        self.y = 712
+        self.y = 780
         self.size = 100
-        self.fillColor = colors.red
+        self.fillColor = colors.blue
 
     def draw(self):
         g = shapes.Group()
@@ -80,7 +80,7 @@ class MyLogo(_Symbol):
         lab.boxAnchor = 'ne'
         lab.angle = 45
         lab.boxStrokeColor = colors.black
-        lab.setText("N")
+        lab.setText("")
         g.add(lab)
         return g
 l = MyLogo()
