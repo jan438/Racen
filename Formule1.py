@@ -19,6 +19,13 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_LEFT, TA_RIGHT, TA_CENTER
 from reportlab.graphics.shapes import *
 from reportlab.graphics import renderPDF
+from reportlab.graphics.shapes import *
+from reportlab.graphics import shapes
+from reportlab.graphics import widgetbase
+from reportlab.graphics.widgetbase import Widget
+from reportlab.graphics.widgets import signsandsymbols
+from reportlab.graphics.widgets.signsandsymbols import _Symbol
+from reportlab.graphics.charts.textlabels import Label
 
 formule1font = "LiberationSerif"
 
@@ -43,6 +50,41 @@ rowheight = 160
 colwidth = 297.5
 row = 0
 col = 0
+class MyArrow(_Symbol):
+    def __init__(self):
+        self.x = 215
+        self.y = 712
+        self.size = 100
+        self.fillColor = colors.red
+
+    def draw(self):
+        g = shapes.Group()
+        g.add(Circle(self.x + 9, self.y + 20, 26, fillColor = "#FEDDB9"))
+        arrow = shapes.Polygon(points = [
+        self.x + 26.1, self.y + 4.0,
+        self.x + 11.2, self.y + 18.9,
+        self.x + 14.5, self.y + 23.0,
+        self.x + 7.2, self.y + 24.2,
+        self.x, self.y + 26.1, # arrow point
+        self.x + 1.9, self.y + 18.9,
+        self.x + 3.8, self.y + 11.6,
+        self.x + 7.2, self.y + 14.9,
+        self.x + 22.1, self.y 
+        ],
+               fillColor = self.fillColor,
+               strokeColor = None,
+               strokeWidth=0)
+        g.add(arrow)
+        lab = Label()
+        lab.setOrigin(self.x - 7, self.y + 40)
+        lab.boxAnchor = 'ne'
+        lab.angle = 45
+        lab.boxStrokeColor = colors.black
+        lab.setText("N")
+        g.add(lab)
+        return g
+a = MyArrow()
+d.add(a)
 for i in range(count):
     print(i, formule1data[i][0], formule1data[i][1], "col", col, "row", row)
     d.add(String(col * colwidth, row * rowheight + 100, formule1data[i][0], fontSize = 25, fillColor = colors.black))
