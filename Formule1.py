@@ -60,12 +60,12 @@ class MyLogo(_Symbol):
     def draw(self):
         g = shapes.Group()
         g.add(Circle(self.x + 9, self.y + 20, 26, fillColor = "#FEDDB9"))
-        arrow = shapes.Polygon(
+        logo = shapes.Polygon(
         points=[59.68, 762.591, 58.224, 7154.294, 110.626, 788.064, 61.135, 764.774],
                fillColor = self.fillColor,
                strokeColor = None,
                strokeWidth=0)
-        g.add(arrow)
+        g.add(logo)
         lab = Label()
         lab.setOrigin(self.x - 7, self.y + 40)
         lab.boxAnchor = 'ne'
