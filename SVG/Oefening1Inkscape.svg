@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   viewBox="0 0 304.221 325.328"
+   width="8.3in"
+   height="11.7in"
    version="1.1"
    id="svg1"
+   sodipodi:docname="TebekijkenInkscape.svg"
    inkscape:version="1.4.1-rc (06eac75fbf, 2025-03-29)"
-   sodipodi:docname="Oefening2.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
   <sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
@@ -22,38 +22,18 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     inkscape:zoom="0.61112514"
-     inkscape:cx="396.80907"
-     inkscape:cy="561.25984"
+     inkscape:document-units="in"
+     inkscape:zoom="0.610755"
+     inkscape:cx="398.68687"
+     inkscape:cy="561.59999"
      inkscape:window-width="1210"
      inkscape:window-height="933"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
-  <defs
-     id="defs1" />
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1">
-    <path
-       sodipodi:type="star"
-       style="fill:#ff2a2a;stroke-width:0.264583"
-       id="path1"
-       inkscape:flatsided="true"
-       sodipodi:sides="5"
-       sodipodi:cx="93.08309"
-       sodipodi:cy="139.84111"
-       sodipodi:r1="13.449186"
-       sodipodi:r2="10.88062"
-       sodipodi:arg1="1.5063695"
-       sodipodi:arg2="2.134688"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 93.948981,153.26239 -13.362714,-8.45037 3.907473,-15.32 15.77767,-1.01791 5.84366,14.6909 z"
-       inkscape:transform-center-x="-0.26757448"
-       inkscape:transform-center-y="1.02714" />
-  </g>
+     inkscape:current-layer="svg1" />
+  <polyline
+     style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"
+     points="86.608 314.41 152.838 321.689 112.082 264.192 82.969 320.961"
+     id="polyline1" />
 </svg>
