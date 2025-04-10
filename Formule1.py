@@ -26,6 +26,7 @@ from reportlab.graphics.widgetbase import Widget
 from reportlab.graphics.widgets import signsandsymbols
 from reportlab.graphics.widgets.signsandsymbols import _Symbol
 from reportlab.graphics.charts.textlabels import Label
+from svglib.svglib import svg2rlg
 
 formule1font = "LiberationSerif"
 
