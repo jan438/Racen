@@ -214,7 +214,6 @@ class SvgRenderer:
             iri, fragment = xlink_href, None
 
         if iri:
-            # Only local relative paths are supported yet
             if not isinstance(self.source_path, str):
                 logger.error(
                     "Unable to resolve image path %r as the SVG source is not "
@@ -226,7 +225,6 @@ class SvgRenderer:
             if not os.access(path, os.R_OK):
                 return None
             if path == self.source_path:
-                # Self-referencing, ignore the IRI part
                 iri = None
 
         if iri:
@@ -245,9 +243,7 @@ class SvgRenderer:
                     else:
                         return ext_svg.renderer, NodeTracker.from_xml_root(ext_svg.root_node)
             else:
-                # A raster image path
                 try:
-                    # This will catch invalid images
                     PDFImage(path, 0, 0)
                 except OSError:
                     logger.error("Unable to read the image %s. Skipping...", path)
