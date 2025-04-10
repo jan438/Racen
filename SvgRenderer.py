@@ -69,13 +69,10 @@ class SvgRenderer:
             item = self.renderG(node)
         elif name in self.handled_shapes:
             if name == 'image':
-                # We resolve the image target at renderer level because it can point
-                # to another SVG file or node which has to be rendered too.
                 target = self.xlink_href_target(node)
                 if target is None:
                     return
                 elif isinstance(target, tuple):
-                    # This is SVG content needed to be rendered
                     gr = Group()
                     renderer, img_node = target
                     renderer.renderNode(img_node, parent=gr)
@@ -83,7 +80,6 @@ class SvgRenderer:
                     parent.add(gr)
                     return
                 else:
-                    # Attaching target to node, so we can get it back in convertImage
                     node._resolved_target = target
 
             item = self.shape_converter.convertShape(name, node, clipping)
@@ -183,7 +179,6 @@ class SvgRenderer:
         if not xlink_href:
             return None
 
-        # First handle any raster embedded image data
         match = re.match(r"^data:image/(jpe?g|png);base64", xlink_href)
         if match:
             image_data = base64.decodebytes(xlink_href[(match.span(0)[1] + 1):].encode('ascii'))
