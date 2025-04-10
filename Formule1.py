@@ -40,7 +40,9 @@ os.chdir(path)
 d = svg2rlg("SVG/F1.svg")
 renderPDF.drawToFile(d, 'PDF/F1.pdf')
 d = svg2rlg("Logos/aston-martin.svg")
-renderPDF.drawToFile(d, 'PDF/aston-martin.pdf') 
+renderPDF.drawToFile(d, 'PDF/aston-martin.pdf')
+d = svg2rlg("Logos/ferrari.svg")
+renderPDF.drawToFile(d, 'PDF/ferrari.pdf') 
 formule1data = []
 file_to_open = "Data/Formule12025.csv"
 with open(file_to_open, 'r') as file:
