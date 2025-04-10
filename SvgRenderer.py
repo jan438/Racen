@@ -56,8 +56,6 @@ class SvgRenderer:
             self.renderStyle(node)
         elif name == "symbol":
             item = self.renderSymbol(node)
-            # First time the symbol node is rendered, it should not be part of a group.
-            # It is only rendered to be part of definitions.
             if node.attrib.get('_rendered'):
                 parent.add(item)
             else:
