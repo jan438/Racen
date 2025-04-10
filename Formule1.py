@@ -26,7 +26,7 @@ from reportlab.graphics.widgetbase import Widget
 from reportlab.graphics.widgets import signsandsymbols
 from reportlab.graphics.widgets.signsandsymbols import _Symbol
 from reportlab.graphics.charts.textlabels import Label
-from svglib.svglib import svg2rlg
+from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 formule1font = "LiberationSerif"
 
@@ -37,7 +37,9 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-d = svg2rlg("SVG/F1.svg")
+svg_root = load_svg_file("SVG/F1.svg")
+svgRenderer = SvgRenderer("SVG/F1.svg")
+d = svgRenderer.render(svg_root)
 renderPDF.drawToFile(d, 'PDF/F1.pdf')
 d = svg2rlg("Logos/aston-martin.svg")
 renderPDF.drawToFile(d, 'PDF/aston-martin.pdf')
