@@ -187,14 +187,7 @@ class SvgRenderer:
             self.shape_converter.applyTransformOnGroup(transform, group)
 
     def xlink_href_target(self, node, group=None):
-        """
-        Return either:
-            - a tuple (renderer, node) when the the xlink:href attribute targets
-              a vector file or node
-            - a PIL Image object representing the image file
-            - None if any problem occurs
-        """
-        # Bare 'href' was introduced in SVG 2.
+
         xlink_href = node.attrib.get('{http://www.w3.org/1999/xlink}href') or node.attrib.get('href')
         if not xlink_href:
             return None
@@ -207,7 +200,6 @@ class SvgRenderer:
 
             return PILImage.open(bytes_stream)
 
-        # From here, we can assume this is a path.
         if '#' in xlink_href:
             iri, fragment = xlink_href.split('#', 1)
         else:
@@ -292,15 +284,12 @@ class SvgRenderer:
         self.shape_converter.preserve_space = _saved_preserve_space
         self.attrConverter.set_box(_saved_box)
 
-        # Translating
         if not outermost:
             x, y = self.shape_converter.convert_length_attrs(node, "x", "y")
             if x or y:
                 group.translate(x or 0, y or 0)
 
-        # Scaling
         if not view_box and outermost:
-            # Apply only the 'reverse' y-scaling (PDF 0,0 is bottom left)
             group.scale(1, -1)
         elif view_box:
             x_scale, y_scale = 1, 1
