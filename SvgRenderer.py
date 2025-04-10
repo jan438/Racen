@@ -255,20 +255,16 @@ class SvgRenderer:
                 return path
 
         elif fragment:
-            # A pointer to an internal definition
             if fragment in self.definitions:
                 return self, self.definitions[fragment]
             else:
-                # The missing definition should appear later in the file
                 self.waiting_use_nodes[fragment].append((node, group))
                 return DELAYED
 
     def renderTitle_(self, node):
-        # Main SVG title attr. could be used in the PDF document info field.
         pass
 
     def renderDesc_(self, node):
-        # Main SVG desc. attr. could be used in the PDF document info field.
         pass
 
     def get_box(self, svg_node, default_box=False):
@@ -289,7 +285,6 @@ class SvgRenderer:
         if view_box:
             self.attrConverter.set_box(view_box)
 
-        # Rendering all definition nodes first.
         svg_ns = node.nsmap.get(None)
         for def_node in node.iter_subtree():
             if def_node.tag == (f'{{{svg_ns}}}defs' if svg_ns else 'defs'):
@@ -345,8 +340,6 @@ class SvgRenderer:
         return self.renderG(node)
 
     def renderA(self, node):
-        # currently nothing but a group...
-        # there is no linking info stored in shapes, maybe a group should?
         return self.renderG(node)
 
     def renderUse(self, node, group=None, clipping=None):
