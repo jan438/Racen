@@ -38,7 +38,9 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 d = svg2rlg("SVG/F1.svg")
-renderPDF.drawToFile(d, 'PDF/F1.pdf') 
+renderPDF.drawToFile(d, 'PDF/F1.pdf')
+d = svg2rlg("Logos/aston-martin.svg")
+renderPDF.drawToFile(d, 'PDF/aston-martin.pdf') 
 formule1data = []
 file_to_open = "Data/Formule12025.csv"
 with open(file_to_open, 'r') as file:
