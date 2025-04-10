@@ -1,9 +1,4 @@
 class SvgRenderer:
-    """Renderer that renders an SVG file on a ReportLab Drawing instance.
-
-    This is the base class for walking over an SVG DOM document and
-    transforming it into a ReportLab Drawing instance.
-    """
 
     def __init__(self, path, color_converter=None, parent_svgs=None, font_map=None):
         self.source_path = path
