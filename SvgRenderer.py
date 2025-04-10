@@ -113,10 +113,7 @@ class SvgRenderer:
             self.print_unused_attributes(node)
 
     def get_clippath(self, node):
-        """
-        Return the clipping Path object referenced by the node 'clip-path'
-        attribute, if any.
-        """
+
         def get_shape_from_group(group):
             for elem in group.contents:
                 if isinstance(elem, Group):
@@ -150,8 +147,6 @@ class SvgRenderer:
 
         shape = get_shape_from_node(self.definitions[ref])
         if isinstance(shape, Rect):
-            # It is possible to use a rect as a clipping path in an svg, so we
-            # need to convert it to a path for rlg.
             x1, y1, x2, y2 = shape.getBounds()
             cp = ClippingPath()
             cp.moveTo(x1, y1)
@@ -344,12 +339,11 @@ class SvgRenderer:
         elif item is DELAYED:
             return group
         else:
-            item = item[1]  # [0] is the renderer, not used here.
+            item = item[1]
 
         if clipping:
             group.add(clipping)
         if len(node.getchildren()) == 0:
-            # Append a copy of the referenced node as the <use> child (if not already done)
             node.append(copy.deepcopy(item))
         self.renderNode(list(node.iter_children())[-1], parent=group)
         self.apply_node_attr_to_group(node, group)
