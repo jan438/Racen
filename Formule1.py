@@ -71,6 +71,8 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("Count:", count)
 d = Drawing(595, 842)
+d.add(df1)
+renderPDF.drawToFile(d, 'PDF/Formulef1.pdf') 
 rowheight = 160
 colwidth = 297.5
 row = 0
