@@ -104,7 +104,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
         points = points.split()
         points = list(map(self.attrConverter.convertLength, points))
         if len(points) % 2 != 0 or len(points) == 0:
-            # Odd number of coordinates or no coordinates, invalid polygon
             return None
         nudge_points(points)
         shape = Polygon(points)
@@ -150,8 +149,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                 baseLineShift = attrConv.convertLength(baseLineShift, em_base=fs)
 
             frag_lengths.append(stringWidth(text, ff, fs))
-
-            # When x, y, dx, or dy is a list, we calculate position for each char of text.
             if any(isinstance(val, list) for val in (x1, y1, dx, dy)):
                 if has_x:
                     xlist = x1 if isinstance(x1, list) else [x1]
