@@ -73,7 +73,6 @@ d = Drawing(595, 842)
 gf1 = df1.asGroup()
 gf1 = Group(gf1, transform=mmult(translate(300, 775), rotate(0)))
 d.add(gf1)
-renderPDF.drawToFile(d, 'PDF/Formulef1.pdf') 
 rowheight = 160
 colwidth = 297.5
 row = 0
