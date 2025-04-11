@@ -204,7 +204,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
         normPath = normalise_svg_path(d)
         path = Path()
         points = path.points
-        # Track subpaths needing to be closed later
         unclosed_subpath_pointers = []
         subpath_start = []
         lastop = ''
@@ -212,19 +211,13 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
 
         for i in range(0, len(normPath), 2):
             op, nums = normPath[i:i+2]
-
             if op in ('m', 'M') and i > 0 and path.operators[-1] != _CLOSEPATH:
                 unclosed_subpath_pointers.append(len(path.operators))
-
-            # moveto absolute
             if op == 'M':
                 path.moveTo(*nums)
                 subpath_start = points[-2:]
-            # lineto absolute
             elif op == 'L':
                 path.lineTo(*nums)
-
-            # moveto relative
             elif op == 'm':
                 if len(points) >= 2:
                     if lastop in ('Z', 'z'):
@@ -236,24 +229,17 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                 else:
                     path.moveTo(*nums)
                 subpath_start = points[-2:]
-            # lineto relative
             elif op == 'l':
                 xn, yn = points[-2] + nums[0], points[-1] + nums[1]
                 path.lineTo(xn, yn)
-
-            # horizontal/vertical line absolute
             elif op == 'H':
                 path.lineTo(nums[0], points[-1])
             elif op == 'V':
                 path.lineTo(points[-2], nums[0])
-
-            # horizontal/vertical line relative
             elif op == 'h':
                 path.lineTo(points[-2] + nums[0], points[-1])
             elif op == 'v':
                 path.lineTo(points[-2], points[-1] + nums[0])
-
-            # cubic bezier, absolute
             elif op == 'C':
                 path.curveTo(*nums)
             elif op == 'S':
@@ -264,8 +250,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                     xp, yp, x0, y0 = points[-4:]
                 xi, yi = x0 + (x0 - xp), y0 + (y0 - yp)
                 path.curveTo(xi, yi, x2, y2, xn, yn)
-
-            # cubic bezier, relative
             elif op == 'c':
                 xp, yp = points[-2:]
                 x1, y1, x2, y2, xn, yn = nums
@@ -278,8 +262,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                     xp, yp, x0, y0 = points[-4:]
                 xi, yi = x0 + (x0 - xp), y0 + (y0 - yp)
                 path.curveTo(xi, yi, x0 + x2, y0 + y2, x0 + xn, y0 + yn)
-
-            # quadratic bezier, absolute
             elif op == 'Q':
                 x0, y0 = points[-2:]
                 x1, y1, xn, yn = nums
@@ -299,8 +281,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                 (x0, y0), (x1, y1), (x2, y2), (xn, yn) = \
                     convert_quadratic_to_cubic_path((x0, y0), (xi, yi), (xn, yn))
                 path.curveTo(x1, y1, x2, y2, xn, yn)
-
-            # quadratic bezier, relative
             elif op == 'q':
                 x0, y0 = points[-2:]
                 x1, y1, xn, yn = nums
@@ -322,8 +302,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                 (x0, y0), (x1, y1), (x2, y2), (xn, yn) = \
                     convert_quadratic_to_cubic_path((x0, y0), (xi, yi), (xn, yn))
                 path.curveTo(x1, y1, x2, y2, xn, yn)
-
-            # elliptical arc
             elif op in ('A', 'a'):
                 rx, ry, phi, fA, fS, x2, y2 = nums
                 x1, y1 = points[-2:]
@@ -426,7 +404,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
         )
 
         if shape.__class__ == Group:
-            # Recursively apply style on Group subelements
             for subshape in shape.contents:
                 self.applyStyleOnShape(subshape, node, only_explicit=only_explicit)
             return
@@ -469,10 +446,4 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
         if getattr(shape, 'fillOpacity', None) is not None and shape.fillColor:
             shape.fillColor.alpha = shape.fillOpacity
         if getattr(shape, 'strokeWidth', None) == 0:
-            # Quoting from the PDF 1.7 spec:
-            # A line width of 0 denotes the thinnest line that can be rendered at device
-            # resolution: 1 device pixel wide. However, some devices cannot reproduce 1-pixel
-            # lines, and on high-resolution devices, they are nearly invisible. Since the
-            # results of rendering such zero-width lines are device-dependent, their use
-            # is not recommended.
             shape.strokeColor = None
