@@ -304,7 +304,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                         path.curveTo(x1, y1, x2, y2, xn, yn)
             elif op in ('Z', 'z'):
                 path.closePath()
-
             else:
                 logger.debug("Suspicious path operator: %s", op)
 
@@ -314,17 +313,14 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
 
         gr = Group()
         self.applyStyleOnShape(path, node)
-
         if path.operators[-1] != _CLOSEPATH:
             unclosed_subpath_pointers.append(len(path.operators))
-
         if unclosed_subpath_pointers and path.fillColor is not None:
             closed_path = NoStrokePath(copy_from=path)
             for pointer in reversed(unclosed_subpath_pointers):
                 closed_path.operators.insert(pointer, _CLOSEPATH)
             gr.add(closed_path)
             path.fillColor = None
-
         gr.add(path)
         return gr
 
@@ -332,7 +328,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
         x, y, width, height = self.convert_length_attrs(node, 'x', 'y', 'width', 'height')
         image = node._resolved_target
         image = Image(int(x), int(y + height), int(width), int(height), image)
-
         group = Group(image)
         group.translate(0, (y + height) * 2)
         group.scale(1, -1)
