@@ -18,7 +18,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
         if not shape:
             return
         if name not in ('path', 'polyline', 'text'):
-            # Only apply style where the convert method did not apply it.
             self.applyStyleOnShape(shape, node)
         transform = node.getAttribute("transform")
         if not (transform or clipping):
@@ -33,7 +32,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
             return group
 
     def convert_length_attrs(self, node, *attrs, em_base=DEFAULT_FONT_SIZE, **kwargs):
-        # Support node both as NodeTracker or lxml node
         getAttr = (
             node.getAttribute if hasattr(node, 'getAttribute')
             else lambda attr: node.attrib.get(attr, '')
@@ -65,7 +63,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
         return Rect(x, y, width, height, rx=rx, ry=ry)
 
     def convertCircle(self, node):
-        # not rendered if r == 0, error if r < 0.
         cx, cy, r = self.convert_length_attrs(node, 'cx', 'cy', 'r')
         return Circle(cx, cy, r)
 
