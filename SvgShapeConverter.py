@@ -355,9 +355,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
             unclosed_subpath_pointers.append(len(path.operators))
 
         if unclosed_subpath_pointers and path.fillColor is not None:
-            # ReportLab doesn't fill unclosed paths, so we are creating a copy
-            # of the path with all subpaths closed, but without stroke.
-            # https://bitbucket.org/rptlab/reportlab/issues/99/
             closed_path = NoStrokePath(copy_from=path)
             for pointer in reversed(unclosed_subpath_pointers):
                 closed_path.operators.insert(pointer, _CLOSEPATH)
@@ -378,14 +375,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
         return group
 
     def applyTransformOnGroup(self, transform, group):
-        """Apply an SVG transformation to a RL Group shape.
-
-        The transformation is the value of an SVG transform attribute
-        like transform="scale(1, -1) translate(10, 30)".
-
-        rotate(<angle> [<cx> <cy>]) is equivalent to:
-          translate(<cx> <cy>) rotate(<angle>) translate(-<cx> -<cy>)
-        """
 
         tr = self.attrConverter.convertTransform(transform)
         for op, values in tr:
@@ -395,7 +384,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                 group.scale(*values)
             elif op == "translate":
                 if isinstance(values, (int, float)):
-                    # From the SVG spec: If <ty> is not provided, it is assumed to be zero.
                     values = values, 0
                 group.translate(*values)
             elif op == "rotate":
@@ -416,15 +404,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                 logger.debug("Ignoring transform: %s %s", op, values)
 
     def applyStyleOnShape(self, shape, node, only_explicit=False):
-        """
-        Apply styles from an SVG element to an RLG shape.
-        If only_explicit is True, only attributes really present are applied.
-        """
-
-        # RLG-specific: all RLG shapes
-        "Apply style attributes of a sequence of nodes to an RL shape."
-
-        # tuple format: (svgAttributes, rlgAttr, converter, default)
         mappingN = (
             (["fill"], "fillColor", "convertColor", ["black"]),
             (["fill-opacity"], "fillOpacity", "convertOpacity", [1]),
