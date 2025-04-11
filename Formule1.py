@@ -72,6 +72,7 @@ with open(file_to_open, 'r') as file:
 print("Count:", count)
 d = Drawing(595, 842)
 gf1 = df1.asGroup()
+gf1 = Group(gf1, transform=mmult(translate(300,10), rotate(30)))
 d.add(gf1)
 renderPDF.drawToFile(d, 'PDF/Formulef1.pdf') 
 rowheight = 160
