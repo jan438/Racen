@@ -168,19 +168,15 @@ class SvgRenderer:
         xlink_href = node.attrib.get('{http://www.w3.org/1999/xlink}href') or node.attrib.get('href')
         if not xlink_href:
             return None
-
         match = re.match(r"^data:image/(jpe?g|png);base64", xlink_href)
         if match:
             image_data = base64.decodebytes(xlink_href[(match.span(0)[1] + 1):].encode('ascii'))
             bytes_stream = BytesIO(image_data)
-
             return PILImage.open(bytes_stream)
-
         if '#' in xlink_href:
             iri, fragment = xlink_href.split('#', 1)
         else:
             iri, fragment = xlink_href, None
-
         if iri:
             if not isinstance(self.source_path, str):
                 logger.error(
@@ -194,7 +190,6 @@ class SvgRenderer:
                 return None
             if path == self.source_path:
                 iri = None
-
         if iri:
             if path.endswith('.svg'):
                 if path in self._parent_chain:
@@ -217,7 +212,6 @@ class SvgRenderer:
                     logger.error("Unable to read the image %s. Skipping...", path)
                     return None
                 return path
-
         elif fragment:
             if fragment in self.definitions:
                 return self, self.definitions[fragment]
@@ -248,12 +242,10 @@ class SvgRenderer:
         _saved_box = self.attrConverter.main_box
         if view_box:
             self.attrConverter.set_box(view_box)
-
         svg_ns = node.nsmap.get(None)
         for def_node in node.iter_subtree():
             if def_node.tag == (f'{{{svg_ns}}}defs' if svg_ns else 'defs'):
                 self.renderG(def_node)
-
         group = Group()
         for child in node.iter_children():
             self.renderNode(child, group)
@@ -264,7 +256,6 @@ class SvgRenderer:
             x, y = self.shape_converter.convert_length_attrs(node, "x", "y")
             if x or y:
                 group.translate(x or 0, y or 0)
-
         if not view_box and outermost:
             group.scale(1, -1)
         elif view_box:
@@ -277,7 +268,6 @@ class SvgRenderer:
             if width is not None and view_box.width != width:
                 x_scale = width / view_box.width
             group.scale(x_scale, y_scale * (-1 if outermost else 1))
-
         return group
 
     def renderG(self, node, clipping=None):
@@ -288,10 +278,8 @@ class SvgRenderer:
             gr.add(clipping)
         for child in node.iter_children():
             self.renderNode(child, parent=gr)
-
         if transform:
             self.shape_converter.applyTransformOnGroup(transform, gr)
-
         return gr
 
     def renderStyle(self, node):
@@ -306,7 +294,6 @@ class SvgRenderer:
     def renderUse(self, node, group=None, clipping=None):
         if group is None:
             group = Group()
-
         try:
             item = self.xlink_href_target(node, group=group)
         except CircularRefError:
@@ -321,7 +308,6 @@ class SvgRenderer:
             return group
         else:
             item = item[1]
-
         if clipping:
             group.add(clipping)
         if len(node.getchildren()) == 0:
