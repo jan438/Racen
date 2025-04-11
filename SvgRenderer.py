@@ -18,13 +18,10 @@ class SvgRenderer:
         view_box = self.get_box(node, default_box=True)
         # Knowing the main box is useful for percentage units
         self.attrConverter.set_box(view_box)
-
         main_group = self.renderSvg(node, outermost=True)
         for xlink in self.waiting_use_nodes.keys():
             logger.debug("Ignoring unavailable object width ID %r.", xlink)
-
         main_group.translate(0 - view_box.x, -view_box.height - view_box.y)
-
         width, height = self.shape_converter.convert_length_attrs(
             svg_node, "width", "height", defaults=(view_box.width, view_box.height)
         )
@@ -37,7 +34,6 @@ class SvgRenderer:
         ignored = False
         item = None
         name = node_name(node)
-
         clipping = self.get_clippath(node)
         if name == "svg":
             item = self.renderSvg(node)
@@ -79,7 +75,6 @@ class SvgRenderer:
                     return
                 else:
                     node._resolved_target = target
-
             item = self.shape_converter.convertShape(name, node, clipping)
             display = node.getAttribute("display")
             if item and display != "none":
@@ -87,7 +82,6 @@ class SvgRenderer:
         else:
             ignored = True
             logger.debug("Ignoring node: %s", name)
-
         if not ignored:
             if nid and item:
                 self.definitions[nid] = node
@@ -134,7 +128,6 @@ class SvgRenderer:
         if ref not in self.definitions:
             logger.warning("Unable to find a clipping path with id %s", ref)
             return
-
         shape = get_shape_from_node(self.definitions[ref])
         if isinstance(shape, Rect):
             x1, y1, x2, y2 = shape.getBounds()
@@ -144,7 +137,6 @@ class SvgRenderer:
             cp.lineTo(x2, y2)
             cp.lineTo(x1, y2)
             cp.closePath()
-            # Copy the styles from the rect to the clipping path.
             copy_shape_properties(shape, cp)
             return cp
         elif isinstance(shape, Path):
