@@ -251,7 +251,6 @@ class SvgRenderer:
             self.renderNode(child, group)
         self.shape_converter.preserve_space = _saved_preserve_space
         self.attrConverter.set_box(_saved_box)
-
         if not outermost:
             x, y = self.shape_converter.convert_length_attrs(node, "x", "y")
             if x or y:
