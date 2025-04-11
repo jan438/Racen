@@ -39,7 +39,7 @@ class SvgRenderer:
             item = self.renderSvg(node)
             parent.add(item)
         elif name == "defs":
-            ignored = True  # defs are handled in the initial rendering phase.
+            ignored = True
         elif name == 'a':
             item = self.renderA(node)
             parent.add(item)
