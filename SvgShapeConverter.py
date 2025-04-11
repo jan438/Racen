@@ -107,7 +107,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
             return None
         nudge_points(points)
         shape = Polygon(points)
-
         return shape
 
     def convertText(self, node):
@@ -117,11 +116,8 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
             preserve_space = xml_space == 'preserve'
         else:
             preserve_space = self.preserve_space
-
         gr = Group()
-
         frag_lengths = []
-
         dx0, dy0 = 0, 0
         x1, y1 = 0, 0
         ff = attrConv.findAttr(node, "font-family") or DEFAULT_FONT_NAME
@@ -191,7 +187,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                 gr.add(shape)
 
         gr.scale(1, -1)
-
         return gr
 
     def convertPath(self, node):
@@ -205,7 +200,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
         subpath_start = []
         lastop = ''
         last_quadratic_cp = None
-
         for i in range(0, len(normPath), 2):
             op, nums = normPath[i:i+2]
             if op in ('m', 'M') and i > 0 and path.operators[-1] != _CLOSEPATH:
@@ -311,8 +305,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
                     bp = bezier_arc_from_end_points(x1, y1, rx, ry, phi, fA, fS, x2, y2)
                     for _, _, x1, y1, x2, y2, xn, yn in bp:
                         path.curveTo(x1, y1, x2, y2, xn, yn)
-
-            # close path
             elif op in ('Z', 'z'):
                 path.closePath()
 
