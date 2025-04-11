@@ -1,13 +1,5 @@
 class SvgShapeConverter:
-    """An abstract SVG shape converter.
 
-    Implement subclasses with methods named 'convertX(node)', where
-    'X' should be the capitalised name of an SVG node element for
-    shapes, like 'Rect', 'Circle', 'Line', etc.
-
-    Each of these methods should return a shape object appropriate
-    for the target format.
-    """
     def __init__(self, path, attrConverter=None):
         self.attrConverter = attrConverter or Svg2RlgAttributeConverter()
         self.svg_source_file = path
@@ -15,14 +7,10 @@ class SvgShapeConverter:
 
     @classmethod
     def get_handled_shapes(cls):
-        """Dynamically determine a list of handled shape elements based on
-           convert<shape> method existence.
-        """
         return [key[7:].lower() for key in dir(cls) if key.startswith('convert')]
 
 
 class Svg2RlgShapeConverter(SvgShapeConverter):
-    """Converter from SVG shapes to RLG (ReportLab Graphics) shapes."""
 
     def convertShape(self, name, node, clipping=None):
         method_name = f"convert{name.capitalize()}"
@@ -92,7 +80,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
         points = points.split()
         points = list(map(self.attrConverter.convertLength, points))
         if len(points) % 2 != 0 or len(points) == 0:
-            # Odd number of coordinates or no coordinates, invalid polyline
             return None
 
         nudge_points(points)
@@ -101,8 +88,6 @@ class Svg2RlgShapeConverter(SvgShapeConverter):
         has_fill = self.attrConverter.findAttr(node, 'fill') not in ('', 'none')
 
         if has_fill:
-            # ReportLab doesn't fill polylines, so we are creating a polygon
-            # polygon copy of the polyline, but without stroke.
             group = Group()
             polygon = Polygon(points)
             self.applyStyleOnShape(polygon, node)
