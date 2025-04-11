@@ -57,6 +57,8 @@ d = svg2rlg("Logos/racing-bulls.svg")
 renderPDF.drawToFile(d, 'PDF/racing-bulls.pdf')
 d = svg2rlg("Logos/williams.svg")
 renderPDF.drawToFile(d, 'PDF/williams.pdf')
+d = svg2rlg("Logos/kick-sauber.svg")
+renderPDF.drawToFile(d, 'PDF/kick-sauber.pdf')
 formule1data = []
 file_to_open = "Data/Formule12025.csv"
 with open(file_to_open, 'r') as file:
