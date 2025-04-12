@@ -107,8 +107,8 @@ for i in range(count):
     svgRenderer = SvgRenderer(svgfile)
     df1 = svgRenderer.render(svg_root)
     gf1 = df1.asGroup()
-    gf1.translate(100 + col * colwidth, 50 + row * rowheight)
-    gf1.scale(0.1, 0.1)
+    gf1.translate(125 + col * colwidth, 85 + row * rowheight)
+    gf1.scale(0.05, 0.05)
     d.add(gf1)
     break
     if col == 2:
