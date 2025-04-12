@@ -99,13 +99,21 @@ for i in range(count):
     if col == 2:
         col = 0
         row = row + 1
-svgfile =  "Logos/alpine.svg"
-svg_root = load_svg_file(svgfile)
-svgRenderer = SvgRenderer(svgfile)
-df1 = svgRenderer.render(svg_root)
-gf1 = df1.asGroup()
-gf1.translate(300, 575)
-d.add(gf1)
+row = 0
+col = 0
+for i in range(count):
+    svgfile = "Logos/" + formule1data[i][1] + ".svg"
+    svg_root = load_svg_file(svgfile)
+    svgRenderer = SvgRenderer(svgfile)
+    df1 = svgRenderer.render(svg_root)
+    gf1 = df1.asGroup()
+    gf1.translate(100 + col * colwidth, 50 + row * rowheight)
+    gf1.scale(0.1, 0.1)
+    d.add(gf1)
+    break
+    if col == 2:
+        col = 0
+        row = row + 1
 renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
