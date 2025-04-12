@@ -71,6 +71,7 @@ with open(file_to_open, 'r') as file:
 print("Count:", count)
 d = Drawing(595, 842)
 gf1 = df1.asGroup()
+gf1.rotate(5)
 gf1 = Group(gf1, transform=mmult(translate(300, 775), scale(1.5, 1.5)))
 d.add(gf1)
 rowheight = 160
