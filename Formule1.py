@@ -37,29 +37,10 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-svg_root = load_svg_file("SVG/F1.svg")
-svgRenderer = SvgRenderer("SVG/F1.svg")
+svgfile =  "SVG/F1.svg"
+svg_root = load_svg_file(svgfile)
+svgRenderer = SvgRenderer(svgfile)
 df1 = svgRenderer.render(svg_root)
-d = svg2rlg("Logos/aston-martin.svg")
-renderPDF.drawToFile(d, 'PDF/aston-martin.pdf')
-d = svg2rlg("Logos/ferrari.svg")
-renderPDF.drawToFile(d, 'PDF/ferrari.pdf')
-d = svg2rlg("Logos/mclaren.svg")
-renderPDF.drawToFile(d, 'PDF/mclaren.pdf')
-d = svg2rlg("Logos/mercedes.svg")
-renderPDF.drawToFile(d, 'PDF/mercedes.pdf')
-d = svg2rlg("Logos/red-bull-racing.svg")
-renderPDF.drawToFile(d, 'PDF/red-bull-racing.pdf')
-d = svg2rlg("Logos/alpine.svg")
-renderPDF.drawToFile(d, 'PDF/alpine.pdf')
-d = svg2rlg("Logos/racing-bulls.svg")
-renderPDF.drawToFile(d, 'PDF/racing-bulls.pdf')
-d = svg2rlg("Logos/williams.svg")
-renderPDF.drawToFile(d, 'PDF/williams.pdf')
-d = svg2rlg("Logos/kick-sauber.svg")
-renderPDF.drawToFile(d, 'PDF/kick-sauber.pdf')
-d = svg2rlg("Logos/haas.svg")
-renderPDF.drawToFile(d, 'PDF/haas.pdf')
 formule1data = []
 file_to_open = "Data/Formule12025.csv"
 with open(file_to_open, 'r') as file:
@@ -71,7 +52,7 @@ with open(file_to_open, 'r') as file:
 print("Count:", count)
 d = Drawing(595, 842)
 gf1 = df1.asGroup()
-gf1.translate(300,775)
+gf1.translate(300, 775)
 gf1.rotate(5)
 gf1.scale(1.5, 1.5)
 d.add(gf1)
@@ -118,6 +99,13 @@ for i in range(count):
     if col == 2:
         col = 0
         row = row + 1
+svgfile =  "Logos/alpine.svg"
+svg_root = load_svg_file(svgfile)
+svgRenderer = SvgRenderer(svgfile)
+df1 = svgRenderer.render(svg_root)
+gf1 = df1.asGroup()
+gf1.translate(300, 575)
+d.add(gf1)
 renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
