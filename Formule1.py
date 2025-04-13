@@ -86,7 +86,6 @@ class MyLogo(_Symbol):
 #l = MyLogo()
 #d.add(l)
 for i in range(count):
-    print(i, formule1data[i][0], formule1data[i][1], "col", col, "row", row)
     d.add(String(col * colwidth, row * rowheight + 100, formule1data[i][0], fontSize = 25, fillColor = colors.black))
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 72, formule1data[i][2], fontSize = 18, fillColor = colors.black))
     d.add(String(col * colwidth, row * rowheight + 72, formule1data[i][3], fontSize = 18, fillColor = colors.black))
