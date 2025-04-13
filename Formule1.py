@@ -37,10 +37,6 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-svgfile =  "SVG/F1.svg"
-svg_root = load_svg_file(svgfile)
-svgRenderer = SvgRenderer(svgfile)
-df1 = svgRenderer.render(svg_root)
 formule1data = []
 file_to_open = "Data/Formule12025.csv"
 with open(file_to_open, 'r') as file:
@@ -51,8 +47,12 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("Count:", count)
 d = Drawing(595, 842)
+svgfile =  "SVG/F1.svg"
+svg_root = load_svg_file(svgfile)
+svgRenderer = SvgRenderer(svgfile)
+df1 = svgRenderer.render(svg_root)
 gf1 = df1.asGroup()
-gf1.translate(300, 775)
+gf1.translate(236, 775)
 gf1.scale(1.5, 1.5)
 d.add(gf1)
 rowheight = 160
@@ -83,8 +83,8 @@ class MyLogo(_Symbol):
         lab.setText("")
         g.add(lab)
         return g
-l = MyLogo()
-d.add(l)
+#l = MyLogo()
+#d.add(l)
 for i in range(count):
     print(i, formule1data[i][0], formule1data[i][1], "col", col, "row", row)
     d.add(String(col * colwidth, row * rowheight + 100, formule1data[i][0], fontSize = 25, fillColor = colors.black))
