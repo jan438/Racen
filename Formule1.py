@@ -109,6 +109,8 @@ for i in range(count):
     gf1 = df1.asGroup()
     gf1.translate(float(formule1data[i][4]) + col * colwidth, float(formule1data[i][5]) + row * rowheight)
     gf1.scale(float(formule1data[i][6]), float(formule1data[i][7]))
+    wgf1 = float(formule1data[i][6]) * gf1.width
+    print(i, wgf1)
     d.add(gf1)
     col = col + 1
     if col == 2:
