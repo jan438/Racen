@@ -111,7 +111,7 @@ for i in range(count):
     gf1.scale(float(formule1data[i][6]), float(formule1data[i][7]))
     d.add(gf1)
     col = col + 1
-    if i == 2:
+    if i == 3:
         break
     if col == 2:
         col = 0
