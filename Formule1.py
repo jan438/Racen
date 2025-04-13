@@ -93,13 +93,6 @@ for i in range(count):
     d.add(String(col * colwidth, row * rowheight + 72, formule1data[i][3], fontSize = 18, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
     d.add(Image(path = img, width = 232, height = 69, x = col * colwidth, y = row * rowheight))
-    col = col + 1
-    if col == 2:
-        col = 0
-        row = row + 1
-row = 0
-col = 0
-for i in range(count):
     svgfile = "Logos/" + formule1data[i][1] + ".svg"
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
