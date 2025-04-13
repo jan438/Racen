@@ -93,8 +93,8 @@ for i in range(count):
     d.add(String(col * colwidth, row * rowheight + 72, formule1data[i][3], fontSize = 18, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
     d.add(Image(path = img, width = 232, height = 69, x = col * colwidth, y = row * rowheight))
-    img = "Logos/" + formule1data[i][1] + ".png"
-    d.add(Image(path = img, width = 65, height = 65, x = 232.5 + col * colwidth, y = row * rowheight))
+    #img = "Logos/" + formule1data[i][1] + ".png"
+    #d.add(Image(path = img, width = 65, height = 65, x = 232.5 + col * colwidth, y = row * rowheight))
     col = col + 1
     if col == 2:
         col = 0
