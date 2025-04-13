@@ -53,7 +53,6 @@ print("Count:", count)
 d = Drawing(595, 842)
 gf1 = df1.asGroup()
 gf1.translate(300, 775)
-gf1.rotate(5)
 gf1.scale(1.5, 1.5)
 d.add(gf1)
 rowheight = 160
