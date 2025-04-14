@@ -86,7 +86,7 @@ class MyLogo(_Symbol):
 #l = MyLogo()
 #d.add(l)
 for i in range(count):
-    d.add(String(10 + col * colwidth, row * rowheight + 100, formule1data[i][0], fontSize = 25, fillColor = colors.black))
+    d.add(String(10 + col * colwidth, row * rowheight + 120, formule1data[i][0], fontSize = 20, fillColor = colors.black))
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 80, formule1data[i][2], fontSize = 18, fillColor = colors.black))
     d.add(String(10 + col * colwidth, row * rowheight + 80, formule1data[i][3], fontSize = 18, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
