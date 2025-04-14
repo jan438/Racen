@@ -52,8 +52,8 @@ svg_root = load_svg_file(svgfile)
 svgRenderer = SvgRenderer(svgfile)
 df1 = svgRenderer.render(svg_root)
 gf1 = df1.asGroup()
-gf1.translate(236, 775)
-gf1.scale(1.5, 1.5)
+gf1.translate(236, 792)
+gf1.scale(1.2, 1.2)
 d.add(gf1)
 rowheight = 160
 colwidth = 297.5
