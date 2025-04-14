@@ -46,10 +46,10 @@ with open(file_to_open, 'r') as file:
         formule1data.append(row)
         count += 1
 print("Count:", count)
-d = Drawing(595, 842)                 # l + carw = 270 + m + carw = 270 + r : 540 + 10 + 10 + 35 = 595
-svgfile =  "SVG/F1.svg"               # carh = 138 / 80 = 1.725
-svg_root = load_svg_file(svgfile)     # carw = 465 / 270 = 1.7222222
-svgRenderer = SvgRenderer(svgfile)    # car 465 * 138
+d = Drawing(595, 842)
+svgfile =  "SVG/F1.svg"
+svg_root = load_svg_file(svgfile)
+svgRenderer = SvgRenderer(svgfile)
 df1 = svgRenderer.render(svg_root)
 gf1 = df1.asGroup()
 gf1.translate(236, 775)
