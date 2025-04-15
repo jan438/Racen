@@ -105,11 +105,11 @@ for i in range(count):
     if col == 2:
         col = 0
         row = row + 1
-d.add(Line(logox,0,logox,842, strokeColor=colors.blue, strokeWidth=1))
-d.add(Line(logox + colwidth,0,logox + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
+#d.add(Line(logox,0,logox,842, strokeColor=colors.blue, strokeWidth=1))
+#d.add(Line(logox + colwidth,0,logox + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
 #d.add(Line(595,0,595,842, strokeColor=colors.blue, strokeWidth=1))
-for i in range(5):
-    d.add(Line(0,i*rowheight+logoy,595,i*rowheight+logoy, strokeColor=colors.blue, strokeWidth=1))
+#for i in range(5):
+    #d.add(Line(0,i*rowheight+logoy,595,i*rowheight+logoy, strokeColor=colors.blue, strokeWidth=1))
 renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
