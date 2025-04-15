@@ -52,7 +52,7 @@ svg_root = load_svg_file(svgfile)
 svgRenderer = SvgRenderer(svgfile)
 df1 = svgRenderer.render(svg_root)
 gf1 = df1.asGroup()
-gf1.translate(236, 792)
+gf1.translate(297.5 - 60, 792)
 gf1.scale(1.2, 1.2)
 d.add(gf1)
 rowheight = 160
@@ -104,9 +104,9 @@ for i in range(count):
     if col == 2:
         col = 0
         row = row + 1
-d.add(Line(logox,0,logox,842, strokeColor=colors.blue, strokeWidth=1))
-d.add(Line(logox + colwidth,0,logox + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
-d.add(Line(595,0,595,842, strokeColor=colors.blue, strokeWidth=1))
+#d.add(Line(logox,0,logox,842, strokeColor=colors.blue, strokeWidth=1))
+#d.add(Line(logox + colwidth,0,logox + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
+#d.add(Line(595,0,595,842, strokeColor=colors.blue, strokeWidth=1))
 renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
