@@ -57,6 +57,7 @@ gf1.scale(1.2, 1.2)
 d.add(gf1)
 rowheight = 160
 colwidth = 297.5
+logox = 250
 row = 0
 col = 0
 class MyLogo(_Symbol):
@@ -103,8 +104,8 @@ for i in range(count):
     if col == 2:
         col = 0
         row = row + 1
-d.add(Line(250,0,250,842, strokeColor=colors.blue, strokeWidth=1))
-d.add(Line(250 + colwidth,0,250 + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
+d.add(Line(logox,0,logox,842, strokeColor=colors.blue, strokeWidth=1))
+d.add(Line(logox + colwidth,0,logox + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
 d.add(Line(595,0,595,842, strokeColor=colors.blue, strokeWidth=1))
 renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
