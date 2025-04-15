@@ -104,6 +104,7 @@ for i in range(count):
         col = 0
         row = row + 1
 d.add(Line(250,0,250,842, strokeColor=colors.blue, strokeWidth=1))
+d.add(Line(250 + colwidth,0,250 + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
 d.add(Line(595,0,595,842, strokeColor=colors.blue, strokeWidth=1))
 renderPDF.drawToFile(d, 'PDF/Formule12025.pdf') 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
