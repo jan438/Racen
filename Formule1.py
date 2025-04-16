@@ -110,7 +110,7 @@ for i in range(count):
     svgRenderer = SvgRenderer(svgfile)
     df1 = svgRenderer.render(svg_root)
     gf1 = df1.asGroup()
-    gf1.translate(logox - float(formule1data[i][8]) + col * colwidth, logoy - float(formule1data[i][9]) + row * rowheight)
+    gf1.translate(logox - float(formule1data[i][8]) + col * colwidth, row * rowheight + 95)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
     col = col + 1
