@@ -52,8 +52,8 @@ svg_root = load_svg_file(svgfile)
 svgRenderer = SvgRenderer(svgfile)
 df1 = svgRenderer.render(svg_root)
 gf1 = df1.asGroup()
-gf1.translate(297.5 - 60, 792)
-gf1.scale(1.2, 1.2)
+gf1.translate(297.5 - 60, 800)
+gf1.scale(1.1, 1.1)
 d.add(gf1)
 rowheight = 160
 colwidth = 297.5
@@ -88,7 +88,7 @@ class MyLogo(_Symbol):
 #l = MyLogo()
 #d.add(l)
 for i in range(count):
-    d.add(String(10 + col * colwidth, row * rowheight + 120, formule1data[i][0], fontSize = 22, fillColor = colors.black))
+    d.add(String(10 + col * colwidth, row * rowheight + 135, formule1data[i][0], fontSize = 22, fillColor = colors.black))
     d.add(String(10 + col * colwidth, row * rowheight + 95, formule1data[i][3], fontSize = 18, fillColor = colors.black))
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][2], fontSize = 18, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
