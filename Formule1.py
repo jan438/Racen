@@ -98,8 +98,8 @@ for i in range(count):
     svgRenderer = SvgRenderer(svgfile)
     df1 = svgRenderer.render(svg_root)
     gf1 = df1.asGroup()
-    gf1.translate(logox - float(formule1data[i][4]) + col * colwidth, logoy - float(formule1data[i][5]) + row * rowheight)
-    gf1.scale(float(formule1data[i][6]), float(formule1data[i][7]))
+    gf1.translate(logox - float(formule1data[i][6]) + col * colwidth, logoy - float(formule1data[i][7]) + row * rowheight)
+    gf1.scale(float(formule1data[i][8]), float(formule1data[i][9]))
     d.add(gf1)
     col = col + 1
     if col == 2:
