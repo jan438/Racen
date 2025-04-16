@@ -89,9 +89,9 @@ class MyLogo(_Symbol):
 #d.add(l)
 for i in range(count):
     d.add(String(10 + col * colwidth, row * rowheight + 135, formule1data[i][0], fontSize = 22, fillColor = colors.black))
-    d.add(String(10 + col * colwidth, row * rowheight + 95, formule1data[i][6], fontSize = 18, fillColor = colors.black))
-    d.add(String(100 + col * colwidth, row * rowheight + 95, formule1data[i][11], fontSize = 18, fillColor = colors.black))
-    d.add(String(10 + col * colwidth, row * rowheight + 110, formule1data[i][5], fontSize = 16, fillColor = colors.black))
+    d.add(String(10 + col * colwidth, row * rowheight + 95, formule1data[i][7], fontSize = 18, fillColor = colors.black))
+    d.add(String(100 + col * colwidth, row * rowheight + 95, formule1data[i][12], fontSize = 18, fillColor = colors.black))
+    d.add(String(10 + col * colwidth, row * rowheight + 110, formule1data[i][6], fontSize = 16, fillColor = colors.black))
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], fontSize = 18, fillColor = colors.black))
     d.add(String(90 + col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][4], fontSize = 18, fillColor = colors.black))
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], fontSize = 16, fillColor = colors.black))
@@ -102,8 +102,8 @@ for i in range(count):
     svgRenderer = SvgRenderer(svgfile)
     df1 = svgRenderer.render(svg_root)
     gf1 = df1.asGroup()
-    gf1.translate(logox - float(formule1data[i][7]) + col * colwidth, logoy - float(formule1data[i][8]) + row * rowheight)
-    gf1.scale(float(formule1data[i][9]), float(formule1data[i][10]))
+    gf1.translate(logox - float(formule1data[i][8]) + col * colwidth, logoy - float(formule1data[i][9]) + row * rowheight)
+    gf1.scale(float(formule1data[i][10]), float(formule1data[i][11]))
     d.add(gf1)
     col = col + 1
     if col == 2:
