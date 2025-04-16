@@ -105,6 +105,14 @@ for i in range(count):
     gf1.translate(logox - float(formule1data[i][8]) + col * colwidth, logoy - float(formule1data[i][9]) + row * rowheight)
     gf1.scale(float(formule1data[i][10]), float(formule1data[i][11]))
     d.add(gf1)
+    svgfile = "Flags/" + "GB" + ".svg"
+    svg_root = load_svg_file(svgfile)
+    svgRenderer = SvgRenderer(svgfile)
+    df1 = svgRenderer.render(svg_root)
+    gf1 = df1.asGroup()
+    gf1.translate(logox - float(formule1data[i][8]) + col * colwidth, logoy - float(formule1data[i][9]) + row * rowheight)
+    gf1.scale(0.3, 0.3)
+    d.add(gf1)
     col = col + 1
     if col == 2:
         col = 0
