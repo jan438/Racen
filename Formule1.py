@@ -91,10 +91,12 @@ class MyLogo(_Symbol):
 for i in range(count):
     d.add(String(10 + col * colwidth, row * rowheight + 135, formule1data[i][0], fontSize = 22, fillColor = colors.black))
     d.add(String(10 + col * colwidth, row * rowheight + 95, formule1data[i][7], fontSize = 18, fillColor = colors.black))
-    d.add(String(100 + col * colwidth, row * rowheight + 95, formule1data[i][12], fontSize = 18, fillColor = colors.black))
+    #score1
+    d.add(String((col + 1) * colwidth - 60, row * rowheight + 95, formule1data[i][12], fontSize = 18, fillColor = colors.black))
     d.add(String(10 + col * colwidth, row * rowheight + 110, formule1data[i][6], fontSize = 16, fillColor = colors.black))
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], fontSize = 18, fillColor = colors.black))
-    d.add(String(90 + col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][4], fontSize = 18, fillColor = colors.black))
+    #score2
+    d.add(String((col + 1) * colwidth - 60, row * rowheight + 95, formule1data[i][4], fontSize = 18, fillColor = colors.black))
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], fontSize = 16, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
     d.add(Image(path = img, width = 270, height = 89, x = 10 + col * colwidth, y = row * rowheight))
