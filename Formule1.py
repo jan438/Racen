@@ -92,7 +92,7 @@ for i in range(count):
     d.add(String(10 + col * colwidth, row * rowheight + 135, formule1data[i][0], fontSize = 22, fillColor = colors.black))
     d.add(String(10 + col * colwidth, row * rowheight + 95, formule1data[i][7], fontSize = 18, fillColor = colors.black))
     #score2
-    print(formule1data[i][7], formule1data[i][8])
+    print(formule1data[i][7], formule1data[i][12])
     d.add(String(halfcolwidth - 60, row * rowheight + 95, formule1data[i][12], fontSize = 18, fillColor = colors.black))
     d.add(String(10 + col * colwidth, row * rowheight + 110, formule1data[i][6], fontSize = 16, fillColor = colors.black))
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], fontSize = 18, fillColor = colors.black))
