@@ -110,6 +110,7 @@ for i in range(count):
     svgRenderer = SvgRenderer(svgfile)
     df1 = svgRenderer.render(svg_root)
     gf1 = df1.asGroup()
+    #logo coordinates
     gf1.translate(logox - float(formule1data[i][8]) + col * colwidth, logoy - float(formule1data[i][9]) + row * rowheight)
     gf1.scale(float(formule1data[i][10]), float(formule1data[i][11]))
     d.add(gf1)
