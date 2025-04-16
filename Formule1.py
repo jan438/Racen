@@ -57,6 +57,7 @@ gf1.scale(1.1, 1.1)
 d.add(gf1)
 rowheight = 160
 colwidth = 297.5
+halfcolwidth = 148.75
 logox = 250
 logoy = 130
 row = 0
@@ -110,7 +111,7 @@ for i in range(count):
     svgRenderer = SvgRenderer(svgfile)
     df1 = svgRenderer.render(svg_root)
     gf1 = df1.asGroup()
-    gf1.translate(255 + (col + 1) * colwidth, row * rowheight + 90)
+    gf1.translate((col + 1) * colwidth - 20, row * rowheight + 90)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
     svgfile = "Flags/" + "GB" + ".svg"
@@ -118,7 +119,7 @@ for i in range(count):
     svgRenderer = SvgRenderer(svgfile)
     df1 = svgRenderer.render(svg_root)
     gf1 = df1.asGroup()
-    gf1.translate(155 + (col + 1) * colwidth, row * rowheight + 90)
+    gf1.translate((col + 1) * colwidth - 20 - halfcolwidth, row * rowheight + 90)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
     svgfile = "Flags/" + "GB" + ".svg"
@@ -126,7 +127,7 @@ for i in range(count):
     svgRenderer = SvgRenderer(svgfile)
     df1 = svgRenderer.render(svg_root)
     gf1 = df1.asGroup()
-    gf1.translate(255 + col * colwidth, row * rowheight + 90)
+    gf1.translate(col * colwidth - 20, row * rowheight + 90)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
     svgfile = "Flags/" + "GB" + ".svg"
@@ -134,7 +135,7 @@ for i in range(count):
     svgRenderer = SvgRenderer(svgfile)
     df1 = svgRenderer.render(svg_root)
     gf1 = df1.asGroup()
-    gf1.translate(155 + col * colwidth, row * rowheight + 90)
+    gf1.translate(col * colwidth - 20 - halfcolwidth, row * rowheight + 90)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
     col = col + 1
