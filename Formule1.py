@@ -95,7 +95,7 @@ for i in range(count):
     d.add(String(halfcolwidth - 60, row * rowheight + 95, formule1data[i][12], fontSize = 18, fillColor = colors.black))
     d.add(String(10 + col * colwidth, row * rowheight + 110, formule1data[i][6], fontSize = 16, fillColor = colors.black))
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], fontSize = 18, fillColor = colors.black))
-    #score1
+    #score1 to correct
     d.add(String((col + 1) * colwidth - 60, row * rowheight + 95, formule1data[i][4], fontSize = 18, fillColor = colors.black))
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], fontSize = 16, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
