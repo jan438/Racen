@@ -94,7 +94,7 @@ for i in range(count):
     #name2
     d.add(String(10 + col * colwidth, row * rowheight + 95, formule1data[i][7], fontSize = 18, fillColor = colors.black))
     #score2
-    d.add(String(col * colwidth + halfcolwidth - 60, row * rowheight + 95, formule1data[i][12], fontSize = 18, fillColor = colors.black))
+    d.add(String(col * colwidth + halfcolwidth - 60, row * rowheight + 95, formule1data[i][8], fontSize = 18, fillColor = colors.black))
     #surnane2
     d.add(String(10 + col * colwidth, row * rowheight + 110, formule1data[i][6], fontSize = 16, fillColor = colors.black))
     #name1
@@ -111,8 +111,8 @@ for i in range(count):
     df1 = svgRenderer.render(svg_root)
     gf1 = df1.asGroup()
     #logo coordinates
-    gf1.translate(logox - float(formule1data[i][8]) + col * colwidth, logoy - float(formule1data[i][9]) + row * rowheight)
-    gf1.scale(float(formule1data[i][10]), float(formule1data[i][11]))
+    gf1.translate(logox - float(formule1data[i][10]) + col * colwidth, logoy - float(formule1data[i][11]) + row * rowheight)
+    gf1.scale(float(formule1data[i][12]), float(formule1data[i][13]))
     d.add(gf1)
     svgfile = "Flags/" + "GB" + ".svg"
     svg_root = load_svg_file(svgfile)
