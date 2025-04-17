@@ -123,7 +123,7 @@ for i in range(count):
     gf1.translate(col * colwidth - 40 - halfcolwidth, row * rowheight + 90)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
-    print("de 1")
+    print("de 1", "col", str(col), "row", str(row))
     svgfile = "Flags/" + "GB" + ".svg"
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -132,7 +132,7 @@ for i in range(count):
     gf1.translate(col * colwidth - 40, row * rowheight + 90)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
-    print("de 2")
+    print("de 2", "col", str(col), "row", str(row))
     col = col + 1
     if col == 2:
         col = 0
