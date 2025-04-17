@@ -115,6 +115,7 @@ for i in range(count):
     gf1.translate(logox - float(formule1data[i][10]) + col * colwidth, logoy - float(formule1data[i][11]) + row * rowheight)
     gf1.scale(float(formule1data[i][12]), float(formule1data[i][13]))
     d.add(gf1)
+    #land2 9
     svgfile = "Flags/" + "GB" + ".svg"
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -123,6 +124,7 @@ for i in range(count):
     gf1.translate(col * colwidth + halfcolwidth + flagx, row * rowheight + 90)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
+    #land1 5
     svgfile = "Flags/" + "GB" + ".svg"
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
