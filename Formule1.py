@@ -120,7 +120,8 @@ for i in range(count):
     gf1.scale(float(formule1data[i][12]), float(formule1data[i][13]))
     d.add(gf1)
     #land2 9
-    svgfile = lookupflag("GB")
+    landcode = formule1data[i][9]
+    svgfile = lookupflag(landcode)
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
     df1 = svgRenderer.render(svg_root)
@@ -129,7 +130,8 @@ for i in range(count):
     gf1.scale(0.3, 0.3)
     d.add(gf1)
     #land1 5
-    svgfile = lookupflag("GB")
+    landcode = formule1data[i][5]
+    svgfile = lookupflag(landcode)
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
     df1 = svgRenderer.render(svg_root)
