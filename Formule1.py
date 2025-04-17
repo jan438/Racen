@@ -62,6 +62,8 @@ logox = 250
 logoy = 130
 row = 0
 col = 0
+flagx = 0
+flagy = 0
 class MyLogo(_Symbol):
     def __init__(self):
         self.x = 215
