@@ -64,7 +64,6 @@ row = 0
 col = 0
 flagx = 110
 def lookupflag(flagcode):
-    print("lookupflag", flagcode)
     flagimage = "Flags/" + flagcode + ".svg"
     return flagimage 
 class MyLogo(_Symbol):
