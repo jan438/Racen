@@ -89,6 +89,7 @@ class MyLogo(_Symbol):
 #l = MyLogo()
 #d.add(l)
 for i in range(count):
+    print("Team", formule1data[i][0])
     #team 0
     d.add(String(10 + col * colwidth, row * rowheight + 135, formule1data[i][0], fontSize = 22, fillColor = colors.black))
     #name2 7
@@ -122,6 +123,7 @@ for i in range(count):
     gf1.translate((col + 1) * colwidth - 40, row * rowheight + 90)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
+    print("de 1")
     svgfile = "Flags/" + "GB" + ".svg"
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -130,6 +132,7 @@ for i in range(count):
     gf1.translate((col + 1) * colwidth - 40 - halfcolwidth, row * rowheight + 90)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
+    print("de 2")
     svgfile = "Flags/" + "GB" + ".svg"
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -138,6 +141,7 @@ for i in range(count):
     gf1.translate(col * colwidth - 40, row * rowheight + 90)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
+    print("de 3")
     svgfile = "Flags/" + "GB" + ".svg"
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -146,6 +150,7 @@ for i in range(count):
     gf1.translate(col * colwidth - 40 - halfcolwidth, row * rowheight + 90)
     gf1.scale(0.3, 0.3)
     d.add(gf1)
+    print("de 4")
     col = col + 1
     if col == 2:
         col = 0
