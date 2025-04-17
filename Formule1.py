@@ -63,6 +63,8 @@ logoy = 130
 row = 0
 col = 0
 flagx = 110
+def lookupflag(flagcode):
+    print("lookupflag", flagcode)
 class MyLogo(_Symbol):
     def __init__(self):
         self.x = 215
@@ -116,6 +118,7 @@ for i in range(count):
     gf1.scale(float(formule1data[i][12]), float(formule1data[i][13]))
     d.add(gf1)
     #land2 9
+    lookupflag("GB")
     svgfile = "Flags/" + "GB" + ".svg"
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -125,6 +128,7 @@ for i in range(count):
     gf1.scale(0.3, 0.3)
     d.add(gf1)
     #land1 5
+    lookupflag("GB")
     svgfile = "Flags/" + "GB" + ".svg"
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
