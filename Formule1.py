@@ -113,14 +113,7 @@ for i in range(count):
     d.add(transform_svg("Logos/" + formule1data[i][1] + ".svg", logox - float(formule1data[i][10]) + col * colwidth, logoy - float(formule1data[i][11]) + row * rowheight,float(formule1data[i][12]), float(formule1data[i][13])))
     #land1 5
     landcode = formule1data[i][5]
-    svgfile = lookupflag(landcode)
-    svg_root = load_svg_file(svgfile)
-    svgRenderer = SvgRenderer(svgfile)
-    df1 = svgRenderer.render(svg_root)
-    gf1 = df1.asGroup()
-    gf1.translate(col * colwidth + halfcolwidth + flagx, row * rowheight + 90)
-    gf1.scale(0.3, 0.3)
-    d.add(gf1)
+    d.add(transform_svg(lookupflag(landcode), col * colwidth + halfcolwidth + flagx, row * rowheight + 90, 0.3 ,0.3))
     #land2 9
     landcode = formule1data[i][9]
     svgfile = lookupflag(landcode)
