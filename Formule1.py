@@ -28,6 +28,13 @@ from reportlab.graphics.widgets.signsandsymbols import _Symbol
 from reportlab.graphics.charts.textlabels import Label
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
+pdfmetrics.registerFont(TTFont('Arial', 'Arial.ttf'))
+text = "Hello, ReportLab!"
+font_name = "Arial"
+font_size = 12
+text_width = pdfmetrics.stringWidth(text, font_name, font_size)
+print(f"The width of the text '{text}' is {text_width} points.")
+
 formule1font = "LiberationSerif"
 
 styles = getSampleStyleSheet()
@@ -99,13 +106,13 @@ for i in range(count):
     #name2 7
     d.add(String(10 + col * colwidth, row * rowheight + 95, formule1data[i][7], fontSize = 18, fillColor = colors.black))
     #score2 8
-    d.add(String(col * colwidth + halfcolwidth - 60, row * rowheight + 95, formule1data[i][8], fontSize = 18, fillColor = colors.black))
+    d.add(String(col * colwidth + halfcolwidth - 60, row * rowheight + 95, formule1data[i][8], font = "Arial", fontSize = 18, fillColor = colors.black))
     #surnane2 6
     d.add(String(10 + col * colwidth, row * rowheight + 110, formule1data[i][6], fontSize = 16, fillColor = colors.black))
     #name1 3
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], fontSize = 18, fillColor = colors.black))
     #score1 4
-    d.add(String((col + 1) * colwidth - 60, row * rowheight + 95, formule1data[i][4], fontSize = 18, fillColor = colors.black))
+    d.add(String((col + 1) * colwidth - 60, row * rowheight + 95, formule1data[i][4], font = "Arial", fontSize = 18, fillColor = colors.black))
     #surname1 2
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], fontSize = 16, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
