@@ -110,15 +110,7 @@ for i in range(count):
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], fontSize = 16, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
     d.add(Image(path = img, width = 270, height = 89, x = 10 + col * colwidth, y = row * rowheight))
-    svgfile = "Logos/" + formule1data[i][1] + ".svg"
-    svg_root = load_svg_file(svgfile)
-    svgRenderer = SvgRenderer(svgfile)
-    df1 = svgRenderer.render(svg_root)
-    gf1 = df1.asGroup()
-    #logo coordinates
-    gf1.translate(logox - float(formule1data[i][10]) + col * colwidth, logoy - float(formule1data[i][11]) + row * rowheight)
-    gf1.scale(float(formule1data[i][12]), float(formule1data[i][13]))
-    d.add(gf1)
+    d.add(transform_svg("Logos/" + formule1data[i][1] + ".svg", logox - float(formule1data[i][10]) + col * colwidth, logoy - float(formule1data[i][11]) + row * rowheight,float(formule1data[i][12]), float(formule1data[i][13])))
     #land1 5
     landcode = formule1data[i][5]
     svgfile = lookupflag(landcode)
