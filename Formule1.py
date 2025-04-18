@@ -31,7 +31,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 pdfmetrics.registerFont(TTFont('Arial', 'Arial.ttf'))
 text = "Hello, ReportLab!"
 font_name = "Arial"
-font_size = 12
+font_size = 18
 text_width = pdfmetrics.stringWidth(text, font_name, font_size)
 print(f"The width of the text '{text}' is {text_width} points.")
 
