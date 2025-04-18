@@ -30,12 +30,10 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 text = "Hello, ReportLab!"
-font_name = "LiberationSerif"
-font_size = 18
-text_width = pdfmetrics.stringWidth(text, font_name, font_size)
-print(f"The width of the text '{text}' is {text_width} points.")
-
 formule1font = "LiberationSerif"
+font_size = 18
+text_width = pdfmetrics.stringWidth(text, formule1font, font_size)
+print(f"The width of the text '{text}' is {text_width} points.")
 
 styles = getSampleStyleSheet()
 
