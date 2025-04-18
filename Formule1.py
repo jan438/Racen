@@ -32,6 +32,17 @@ formule1font = "LiberationSerif"
 
 styles = getSampleStyleSheet()
 
+def transform_svg(svgfile, tx, ty, sx, sy): 
+    svg_root = load_svg_file(svgfile)
+    svgRenderer = SvgRenderer(svgfile)
+    df1 = svgRenderer.render(svg_root)
+    gimg = df1.asGroup()
+    gimg.translate(tx, ty)
+    gimg.scale(sx, sy)
+    return gimg
+def lookupflag(flagcode):
+    flagimage = "Flags/" + flagcode + ".svg"
+    return flagimage
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
 if sys.platform[0] == 'w':
@@ -47,14 +58,7 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("Count:", count)
 d = Drawing(595, 842)
-svgfile =  "SVG/F1.svg"
-svg_root = load_svg_file(svgfile)
-svgRenderer = SvgRenderer(svgfile)
-df1 = svgRenderer.render(svg_root)
-gf1 = df1.asGroup()
-gf1.translate(297.5 - 60, 800)
-gf1.scale(1.1, 1.1)
-d.add(gf1)
+d.add(transform_svg("SVG/F1.svg", 297.5 - 60, 800, 1.1, 1.1))
 rowheight = 160
 colwidth = 297.5
 halfcolwidth = 148.75
@@ -62,10 +66,7 @@ logox = 250
 logoy = 130
 row = 0
 col = 0
-flagx = 110
-def lookupflag(flagcode):
-    flagimage = "Flags/" + flagcode + ".svg"
-    return flagimage 
+flagx = 110 
 class MyLogo(_Symbol):
     def __init__(self):
         self.x = 215
