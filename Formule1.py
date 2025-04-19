@@ -95,6 +95,7 @@ class MyLogo(_Symbol):
         return g
 #l = MyLogo()
 #d.add(l)
+d.add(String(100, 830,"Scores 2025", textAnchor="middle")) 
 for i in range(count):
     #team 0
     d.add(String(10 + col * colwidth, row * rowheight + 135, formule1data[i][0], font = formule1font, fontSize = 22, fillColor = colors.black))
