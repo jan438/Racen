@@ -70,7 +70,8 @@ logox = 250
 logoy = 130
 row = 0
 col = 0
-flagx = 110 
+flagx = 110
+maxscorewidth = 18.0
 class MyLogo(_Symbol):
     def __init__(self):
         self.x = 215
