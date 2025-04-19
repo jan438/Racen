@@ -57,7 +57,7 @@ with open(file_to_open, 'r') as file:
 print("Count:", count)
 d = Drawing(595, 842)
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
-text = "Hello, ReportLab!"
+text = "77"
 formule1font = "LiberationSerif"
 font_size = 18
 text_width = pdfmetrics.stringWidth(text, formule1font, font_size)
