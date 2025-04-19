@@ -28,13 +28,6 @@ from reportlab.graphics.widgets.signsandsymbols import _Symbol
 from reportlab.graphics.charts.textlabels import Label
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
-pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
-text = "Hello, ReportLab!"
-formule1font = "LiberationSerif"
-font_size = 18
-text_width = pdfmetrics.stringWidth(text, formule1font, font_size)
-print(f"The width of the text '{text}' is {text_width} points.")
-
 styles = getSampleStyleSheet()
 
 def transform_svg(svgfile, tx, ty, sx, sy): 
@@ -63,6 +56,12 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("Count:", count)
 d = Drawing(595, 842)
+pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
+text = "Hello, ReportLab!"
+formule1font = "LiberationSerif"
+font_size = 18
+text_width = pdfmetrics.stringWidth(text, formule1font, font_size)
+print(f"The width of the text '{text}' is {text_width} points.")
 d.add(transform_svg("SVG/F1.svg", 297.5 - 60, 800, 1.1, 1.1))
 rowheight = 160
 colwidth = 297.5
