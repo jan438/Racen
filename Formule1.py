@@ -101,7 +101,9 @@ for i in range(count):
     #name2 7
     d.add(String(10 + col * colwidth, row * rowheight + 95, formule1data[i][7], fontSize = 18, fillColor = colors.black))
     #score2 8
-    d.add(String(col * colwidth + halfcolwidth - 60, row * rowheight + 95, formule1data[i][8], font = "LiberationSerif", fontSize = 18, fillColor = colors.black))
+    score = formule1data[i][8]
+    scorewidth = pdfmetrics.stringWidth(score, formule1font, score_font_size)
+    d.add(String(col * colwidth + halfcolwidth - 60 + (maxscorewidth - scorewidth), row * rowheight + 95, formule1data[i][8], font = "LiberationSerif", fontSize = 18, fillColor = colors.black))
     #surnane2 6
     d.add(String(10 + col * colwidth, row * rowheight + 110, formule1data[i][6], fontSize = 16, fillColor = colors.black))
     #name1 3
