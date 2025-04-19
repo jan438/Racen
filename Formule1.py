@@ -110,7 +110,7 @@ for i in range(count):
     score = formule1data[i][4]
     text_width = pdfmetrics.stringWidth(score, formule1font, score_font_size)
     print(f"The width of the text '{score}' is {text_width} points.")
-    d.add(String((col + 1) * colwidth - 60, row * rowheight + 95, score, font = "LiberationSerif", fontSize = score_font_size, fillColor = colors.black))
+    d.add(String((col + 1) * colwidth - 60 + (maxscorewidth - text_width), row * rowheight + 95, score, font = "LiberationSerif", fontSize = score_font_size, fillColor = colors.black))
     #surname1 2
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], fontSize = 16, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
