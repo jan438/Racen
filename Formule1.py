@@ -58,7 +58,7 @@ print("Count:", count)
 d = Drawing(595, 842)
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 formule1font = "LiberationSerif"
-font_size = 18
+score_font_size = 18
 d.add(transform_svg("SVG/F1.svg", 297.5 - 60, 800, 1.1, 1.1))
 rowheight = 160
 colwidth = 297.5
@@ -108,9 +108,9 @@ for i in range(count):
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], fontSize = 18, fillColor = colors.black))
     #score1 4
     score = formule1data[i][4]
-    text_width = pdfmetrics.stringWidth(score, formule1font, font_size)
+    text_width = pdfmetrics.stringWidth(score, formule1font, score_font_size)
     print(f"The width of the text '{score}' is {text_width} points.")
-    d.add(String((col + 1) * colwidth - 60, row * rowheight + 95, score, font = "LiberationSerif", fontSize = 18, fillColor = colors.black))
+    d.add(String((col + 1) * colwidth - 60, row * rowheight + 95, score, font = "LiberationSerif", fontSize = score_font_size, fillColor = colors.black))
     #surname1 2
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], fontSize = 16, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
