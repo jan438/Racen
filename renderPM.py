@@ -37,7 +37,7 @@ d.add(String(150,100, 'Hello World', fontSize=18, fillColor=colors.red))
 fillColor = colors.red
 img = PILImage.open("Teams/642.png")
 im = Image(path = "Teams/642.png", x = 0, y = 0, width=2*inch, height=2*inch)
-img.show()
+d.add(im)
 renderPM.drawToFile(d, 'PDF/example1.png', 'PNG')
 
 key = input("Wait")
