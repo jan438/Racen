@@ -31,6 +31,11 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from PIL import Image as PILImage
 from io import StringIO
 
+if sys.platform[0] == 'l':
+    path = '/home/jan/git/Racen'
+if sys.platform[0] == 'w':
+    path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
+os.chdir(path)
 d = Drawing(400, 200)
 d.add(Rect(50, 50, 300, 100, fillColor=colors.yellow))
 d.add(String(150,100, 'Hello World', fontSize=18, fillColor=colors.red))
