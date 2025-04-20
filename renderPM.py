@@ -29,6 +29,7 @@ from reportlab.graphics.charts.textlabels import Label
 from reportlab.graphics import renderPM
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from PIL import Image as PILImage
+from io import StringIO
 
 d = Drawing(400, 200)
 d.add(Rect(50, 50, 300, 100, fillColor=colors.yellow))
