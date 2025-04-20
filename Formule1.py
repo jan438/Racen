@@ -26,6 +26,7 @@ from reportlab.graphics.widgetbase import Widget
 from reportlab.graphics.widgets import signsandsymbols
 from reportlab.graphics.widgets.signsandsymbols import _Symbol
 from reportlab.graphics.charts.textlabels import Label
+from reportlab.graphics import renderPM
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from PIL import Image as PILImage
 
