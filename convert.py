@@ -64,7 +64,7 @@ image = PILImage.open("Teams/642.png").convert("RGBA")
 new_image = PILImage.new("RGBA", image.size, color = (255,255,255))
 new_image.paste(image, mask=image)
 
-new_image.convert("RGB").save("PDF/transparanttowhite.png")
+new_image.convert("RGB").save("PDF/transparanttowhitepaste.png")
   
 # creating image object 
 img1 = PILImage.open(r"Teams/454.png").convert("RGBA")
@@ -75,13 +75,13 @@ img2 = img2.resize(img1.size)
   
 # using alpha_composite 
 im3 = PILImage.alpha_composite(img1, img2) 
-im3.show()
+#im3.show()
 
 
 img_without_bg = PILImage.open('Teams/642.png').convert("RGBA")
 white_bg = PILImage.new("RGBA", img_without_bg.size, "WHITE")
 result = PILImage.alpha_composite(white_bg, img_without_bg)
 
-result.save('PDF/result_with_white_bg.png') 
+result.save('PDF/transparanttowhitealphacomp.png') 
 
 key = input("Wait")
