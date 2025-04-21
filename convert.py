@@ -64,5 +64,5 @@ image = PILImage.open("Teams/642.png").convert("RGBA")
 new_image = PILImage.new("RGBA", image.size, "WHITE")
 new_image.paste(image, mask=image)
 
-new_image.convert("RGB").save("test.jpg")
+new_image.convert("RGB").save("PDF/642test.png")
 key = input("Wait")
