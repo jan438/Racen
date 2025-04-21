@@ -75,6 +75,13 @@ img2 = img2.resize(img1.size)
   
 # using alpha_composite 
 im3 = PILImage.alpha_composite(img1, img2) 
-im3.show() 
+im3.show()
+
+
+img_without_bg = PILImage.open('Teams/642.png').convert("RGBA")
+white_bg = PILImage.new("RGBA", img_without_bg.size, "WHITE")
+result = PILImage.alpha_composite(white_bg, img_without_bg)
+
+result.save('PDF/result_with_white_bg.png') 
 
 key = input("Wait")
