@@ -60,4 +60,9 @@ rgba_image.putalpha(mask)
 # Save the image in RGBA format
 rgba_image.save('PDF/whitetotransparant.png')
 
+image = PILImage.open("Teams/642.png").convert("RGBA")
+new_image = PILImage.new("RGBA", image.size, "WHITE")
+new_image.paste(image, mask=image)
+
+new_image.convert("RGB").save("test.jpg")
 key = input("Wait")
