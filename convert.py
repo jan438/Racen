@@ -65,4 +65,17 @@ new_image = PILImage.new("RGBA", image.size, color = (255,255,255))
 new_image.paste(image, mask=image)
 
 new_image.convert("RGB").save("PDF/transparanttowhite.png")
+  
+# creating image object 
+img1 = PILImage.open(r"Teams/642.png").convert("RGBA")
+  
+# creating image2 object having alpha 
+img2 = PILImage.open(r"Teams/642.png").convert("RGBA") 
+img2 = img2.resize(img1.size) 
+  
+# using alpha_composite 
+im3 = PILImage.alpha_composite(img1, img2) 
+im3.show() 
+
+
 key = input("Wait")
