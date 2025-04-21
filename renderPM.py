@@ -36,10 +36,7 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-d = Drawing(400, 200)
-d.add(Rect(50, 50, 300, 100, fillColor=colors.yellow))
-d.add(String(150,100, 'Hello World', fontSize=18, fillColor=colors.red))
-fillColor = colors.red
+d = Drawing(200, 200)
 im = Image(path = "Teams/642.png", x = 0, y = 0, width=2*inch, height=2*inch)
 d.add(im)
 renderPM.drawToFile(d, 'PDF/642.png', 'PNG')
