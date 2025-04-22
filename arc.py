@@ -36,6 +36,6 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-d = Drawing(200, 200)
+d = Drawing(595, 842)
 renderPDF.drawToFile(d, 'PDF/Arc.pdf') 
 key = input("Wait")
