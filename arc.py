@@ -61,7 +61,7 @@ class MyArc(_Symbol):
     def draw(self):
         g = shapes.Group()
         logo = shapes.Polygon(
-        points=[self.x + 1.0, self.y + 2.0, self.x + 4.0, self.y + 3.0, self.x + 6.0, self.y + 7.0],
+        points=[self.x + 1.0, self.y + 2.0, self.x + 40.0, self.y + 30.0, self.x + 60.0, self.y + 70.0],
                fillColor = self.fillColor,
                strokeColor = self.strokeColor,
                strokeWidth = 5)
