@@ -77,8 +77,8 @@ class MyArc(_Symbol):
                strokeWidth = 5)
         g.add(logo2)
         bzcurve1 = self.bezier(
-        [self.x + 4.0, self.y + 9.0],
-        [self.x + 54.0, self.y + 309.0],
+        [self.x + 4.0, self.y + 309.0],
+        [self.x + 204.0, self.y + 509.0],
         [self.x + 4.0, self.y + 9.0],
         [self.x + 4.0, self.y + 9.0])
         g.add(bzcurve1)
@@ -92,7 +92,7 @@ os.chdir(path)
 d = Drawing(595, 842)
 l = MyLogo()
 d.add(l)
-a = MyArc(315, 200)
+a = MyArc(115, 200)
 d.add(a)
 renderPDF.drawToFile(d, 'PDF/Arc.pdf') 
 key = input("Wait")
