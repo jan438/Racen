@@ -51,10 +51,9 @@ class MyLogo(_Symbol):
         return g
         
 class MyArc(_Symbol):
-    def __init__(self):
-        self.x = 315
-        self.y = 280
-        self.size = 100
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
         self.fillColor = colors.blue
         self.strokeColor = colors.purple
 
@@ -81,7 +80,7 @@ os.chdir(path)
 d = Drawing(595, 842)
 l = MyLogo()
 d.add(l)
-a = MyArc()
+a = MyArc(315, 200)
 d.add(a)
 renderPDF.drawToFile(d, 'PDF/Arc.pdf') 
 key = input("Wait")
