@@ -60,12 +60,17 @@ class MyArc(_Symbol):
 
     def draw(self):
         g = shapes.Group()
-        logo = shapes.Polygon(
+        logo1 = shapes.Polygon(
         points=[self.x + 1.0, self.y + 2.0, self.x + 40.0, self.y + 30.0, self.x + 60.0, self.y + 70.0],
                fillColor = self.fillColor,
                strokeColor = self.strokeColor,
                strokeWidth = 5)
-        g.add(logo)
+        g.add(logo1)
+        logo2 = shapes.PolyLine(
+        points=[self.x + 81.0, self.y + 102.0, self.x + 90.0, self.y + 43.0, self.x + 160.0, self.y + 170.0],
+               strokeColor = self.strokeColor,
+               strokeWidth = 5)
+        g.add(logo2)
         return g
 
 if sys.platform[0] == 'l':
