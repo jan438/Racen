@@ -41,12 +41,6 @@ class MyLogo(_Symbol):
     def draw(self):
         g = shapes.Group()
         g.add(Circle(self.x + 9, self.y + 20, 26, fillColor = "#FEDDB9"))
-        logo = shapes.Polygon(
-        points=[59.68, 762.591, 58.224, 7154.294, 110.626, 788.064, 61.135, 764.774],
-               fillColor = self.fillColor,
-               strokeColor = None,
-               strokeWidth=0)
-        g.add(logo)
         lab = Label()
         lab.setOrigin(self.x - 7, self.y + 40)
         lab.boxAnchor = 'ne'
@@ -54,6 +48,23 @@ class MyLogo(_Symbol):
         lab.boxStrokeColor = colors.black
         lab.setText("")
         g.add(lab)
+        return g
+        
+class MyArc(_Symbol):
+    def __init__(self):
+        self.x = 315
+        self.y = 280
+        self.size = 100
+        self.fillColor = colors.blue
+
+    def draw(self):
+        g = shapes.Group()
+        logo = shapes.Polygon(
+        points=[59.68, 762.591, 58.224, 7154.294, 110.626, 788.064, 61.135, 764.774],
+               fillColor = self.fillColor,
+               strokeColor = None,
+               strokeWidth=0)
+        g.add(logo)
         return g
 
 if sys.platform[0] == 'l':
@@ -64,5 +75,7 @@ os.chdir(path)
 d = Drawing(595, 842)
 l = MyLogo()
 d.add(l)
+a = MyArc()
+d.add(a)
 renderPDF.drawToFile(d, 'PDF/Arc.pdf') 
 key = input("Wait")
