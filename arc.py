@@ -79,7 +79,7 @@ class MyArc(_Symbol):
         bzcurve1 = self.bezier(
         [self.x + 4.0, self.y + 309.0],
         [self.x + 204.0, self.y + 509.0],
-        [self.x + 104.0, self.y + 309.0],
+        [self.x + 104.0, self.y + 329.0],
         [self.x + 104.0, self.y + 409.0])
         g.add(bzcurve1)
         return g
