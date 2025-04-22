@@ -31,11 +31,38 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from PIL import Image as PILImage
 from io import StringIO
 
+class MyLogo(_Symbol):
+    def __init__(self):
+        self.x = 215
+        self.y = 780
+        self.size = 100
+        self.fillColor = colors.blue
+
+    def draw(self):
+        g = shapes.Group()
+        g.add(Circle(self.x + 9, self.y + 20, 26, fillColor = "#FEDDB9"))
+        logo = shapes.Polygon(
+        points=[59.68, 762.591, 58.224, 7154.294, 110.626, 788.064, 61.135, 764.774],
+               fillColor = self.fillColor,
+               strokeColor = None,
+               strokeWidth=0)
+        g.add(logo)
+        lab = Label()
+        lab.setOrigin(self.x - 7, self.y + 40)
+        lab.boxAnchor = 'ne'
+        lab.angle = 45
+        lab.boxStrokeColor = colors.black
+        lab.setText("")
+        g.add(lab)
+        return g
+
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 d = Drawing(595, 842)
+l = MyLogo()
+d.add(l)
 renderPDF.drawToFile(d, 'PDF/Arc.pdf') 
 key = input("Wait")
