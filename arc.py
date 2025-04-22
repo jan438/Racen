@@ -46,7 +46,7 @@ class MyLogo(_Symbol):
         lab.boxAnchor = 'ne'
         lab.angle = 45
         lab.boxStrokeColor = colors.black
-        lab.setText("")
+        lab.setText("abc")
         g.add(lab)
         return g
         
