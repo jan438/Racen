@@ -82,13 +82,13 @@ class MyArc(_Symbol):
                strokeColor = self.strokeColor,
                strokeWidth = 5)
         g.add(logo2)
-        bzcurve1 = self.mycircle(300, 400, 100.0, -1, 0, 3)
+        bzcurve1 = self.mycircle(300, 400, 100.0, -1, 0, 36)
         g.add(bzcurve1)
-        bzcurve2 = self.mycircle(300, 400, 100.0, -1, 90, 3)
+        bzcurve2 = self.mycircle(300, 400, 100.0, -1, 90, 36)
         g.add(bzcurve2)
-        bzcurve3 = self.mycircle(300, 400, 100.0, -1, 180, 3)
+        bzcurve3 = self.mycircle(300, 400, 100.0, -1, 180, 36)
         g.add(bzcurve3)
-        bzcurve4 = self.mycircle(300, 400, 100.0, -1, 270, 3)
+        bzcurve4 = self.mycircle(300, 400, 100.0, -1, 270, 36)
         g.add(bzcurve4)
         return g
 
