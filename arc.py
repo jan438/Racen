@@ -63,15 +63,15 @@ class MyArc(_Symbol):
     # sin(30) = 0.5
     # step = 90 / smooth
         step = 90 / smooth
-        bzpoints = [
+        mcpoints = [
         x+cos(radians(startdegree+0*step))*radius, y+sin(radians(startdegree+0*step))*radius,
         x+cos(radians(startdegree+1*step))*radius, y+sin(radians(startdegree+1*step))*radius,
         x+cos(radians(startdegree+2*step))*radius, y+sin(radians(startdegree+2*step))*radius,
         x+cos(radians(startdegree+3*step))*radius, y+sin(radians(startdegree+3*step))*radius]
-        bzcurve = shapes.PolyLine(
-        points = bzpoints,
+        mccurve = shapes.PolyLine(
+        points = mcpoints,
                  strokeColor = self.strokeColor)
-        return bzcurve
+        return mccurve
 
     def draw(self):
         g = shapes.Group()
