@@ -90,6 +90,8 @@ class MyArc(_Symbol):
         g.add(bzcurve1)
         bzcurve2 = self.mycircle(300, 400, 100.0, -1, 90, 3)
         g.add(bzcurve2)
+        bzcurve3 = self.mycircle(300, 400, 100.0, -1, 180, 3)
+        g.add(bzcurve3)
         return g
 
 if sys.platform[0] == 'l':
