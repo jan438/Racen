@@ -88,7 +88,7 @@ class MyArc(_Symbol):
         g.add(logo2)
         bzcurve1 = self.mycircle(300, 400, 100.0, -1, 0, 3)
         g.add(bzcurve1)
-        bzcurve2 = self.mycircle(200, 500, 100.0, -1, 90, 3)
+        bzcurve2 = self.mycircle(300, 400, 100.0, -1, 90, 3)
         g.add(bzcurve2)
         return g
 
