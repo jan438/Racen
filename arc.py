@@ -64,10 +64,10 @@ class MyArc(_Symbol):
     # step = 90 / smooth
         step = 90 / smooth
         bzpoints = [
-        x+cos(radians(0*step))*radius, y+sin(radians(0*step))*radius,
-        x+cos(radians(1*step))*radius, y+sin(radians(1*step))*radius,
-        x+cos(radians(2*step))*radius, y+sin(radians(2*step))*radius,
-        x+cos(radians(3*step))*radius, y+sin(radians(3*step))*radius]
+        x+cos(radians(startdegree+0*step))*radius, y+sin(radians(startdegree+0*step))*radius,
+        x+cos(radians(startdegree+1*step))*radius, y+sin(radians(startdegree+1*step))*radius,
+        x+cos(radians(startdegree+2*step))*radius, y+sin(radians(startdegree+2*step))*radius,
+        x+cos(radians(startdegree+3*step))*radius, y+sin(radians(startdegree+3*step))*radius]
         bzcurve = shapes.PolyLine(
         points = bzpoints,
                  strokeColor = self.strokeColor)
