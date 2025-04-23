@@ -57,9 +57,10 @@ class MyArc(_Symbol):
         self.fillColor = colors.blue
         self.strokeColor = colors.purple
         
-    def bezier(self, s, e, c1, c2):
+    def bezier(self, x, y, radius, direction, startdegree, smooth):
+        bzpoints = [x+1.0*radius, y+0*radius, x+0.866*radius, y+0.5*radius, x+0.5*radius, y+0.866*radius, x+0*radius, y+1.0*radius]
         bzcurve = shapes.PolyLine(
-        points = [s[0], s[1], c1[0], c1[1], c2[0], c2[1], e[0], e[1]],
+        points = bzpoints,
                  strokeColor = self.strokeColor)
         return bzcurve
 
@@ -76,11 +77,7 @@ class MyArc(_Symbol):
                strokeColor = self.strokeColor,
                strokeWidth = 5)
         g.add(logo2)
-        bzcurve1 = self.bezier(
-        [self.x + 4.0, self.y + 309.0],
-        [self.x + 204.0, self.y + 509.0],
-        [self.x + 104.0, self.y + 329.0],
-        [self.x + 174.0, self.y + 409.0])
+        bzcurve1 = self.bezier(300, 400, 100.0, -1, 0, 3)
         g.add(bzcurve1)
         return g
 
