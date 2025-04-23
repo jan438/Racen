@@ -63,7 +63,10 @@ class MyArc(_Symbol):
     # sin(30) = 0.5
         print("cos0", cos(0), "sin0", sin(0))
         print("sin30", sin(radians(30)))
-        bzpoints = [x+1.0*radius, y+0*radius, x+cos(radians(30))*radius, y+sin(radians(30))*radius, x+0.5*radius, y+0.866*radius, x+0*radius, y+1.0*radius]
+        bzpoints = [x+cos(radians(0))*radius, y+sin(radians(0))*radius, 
+        x+cos(radians(30))*radius, y+sin(radians(30))*radius, 
+        x+cos(radians(60))*radius, y+sin(radians(60))*radius, 
+        x+cos(radians(90))*radius, y+sin(radians(90))*radius]
         bzcurve = shapes.PolyLine(
         points = bzpoints,
                  strokeColor = self.strokeColor)
