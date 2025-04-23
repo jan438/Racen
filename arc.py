@@ -63,14 +63,9 @@ class MyArc(_Symbol):
     # sin(radians(30)) = 0.5
         step = 90 / smooth
         mcpoints = []
-        mcpoints.append(x+cos(radians(startdegree+0*step))*radius)
-        mcpoints.append(y+sin(radians(startdegree+0*step))*radius)
-        mcpoints.append(x+cos(radians(startdegree+1*step))*radius)
-        mcpoints.append(y+sin(radians(startdegree+1*step))*radius)
-        mcpoints.append(x+cos(radians(startdegree+2*step))*radius)
-        mcpoints.append(y+sin(radians(startdegree+2*step))*radius)
-        mcpoints.append(x+cos(radians(startdegree+3*step))*radius)
-        mcpoints.append(y+sin(radians(startdegree+3*step))*radius)
+        for i in range(smooth + 1):
+            mcpoints.append(x+cos(radians(startdegree+i*step))*radius)
+            mcpoints.append(y+sin(radians(startdegree+i*step))*radius)
         mccurve = shapes.PolyLine(
         points = mcpoints,
                  strokeColor = self.strokeColor)
