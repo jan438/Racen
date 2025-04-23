@@ -4,7 +4,7 @@
         
 Anticlock
           
-1e cp1  30°    self.x - 0.134 * radius
+1e cp1  30°    self.x - 0.134 * radius  bezier(300.0, 400.0, 100.0, -1, 0, 3)
          self,y + 0.5 *radius
 2e cp2 60°   self x - 0.5 * radius, 
           self.y + 0.866 * radius 
