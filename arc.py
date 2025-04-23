@@ -58,9 +58,7 @@ class MyArc(_Symbol):
         self.strokeColor = colors.purple
         
     def mycircle(self, x, y, radius, direction, startdegree, smooth):
-    # 0 raden
-    # cos(0) = 1 sin(0) = 0
-    # sin(radians(30)) = 0.5
+        # sin(radians(30)) = 0.5
         step = 90 / smooth
         mcpoints = []
         for i in range(smooth + 1):
