@@ -60,8 +60,7 @@ class MyArc(_Symbol):
     def mycircle(self, x, y, radius, direction, startdegree, smooth):
     # 0 raden
     # cos(0) = 1 sin(0) = 0
-    # sin(30) = 0.5
-    # step = 90 / smooth
+    # sin(radians(30)) = 0.5
         step = 90 / smooth
         mcpoints = [
         x+cos(radians(startdegree+0*step))*radius, y+sin(radians(startdegree+0*step))*radius,
