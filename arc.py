@@ -57,7 +57,7 @@ class MyArc(_Symbol):
         self.fillColor = colors.blue
         self.strokeColor = colors.purple
         
-    def mycircle(self, x, y, radius, direction, startdegree, smooth):
+    def mycircle(self, x, y, radius, startdegree, smooth):
         # sin(radians(30)) = 0.5
         step = 90 / smooth
         mcpoints = []
@@ -82,13 +82,13 @@ class MyArc(_Symbol):
                strokeColor = self.strokeColor,
                strokeWidth = 5)
         g.add(logo2)
-        mccurve1 = self.mycircle(300, 400, 100.0, -1, 0, 36)
+        mccurve1 = self.mycircle(300, 400, 100.0, 0, 36)
         g.add(mccurve1)
-        mccurve2 = self.mycircle(300, 400, 100.0, -1, 90, 36)
+        mccurve2 = self.mycircle(300, 400, 100.0, 90, 36)
         g.add(mccurve2)
-        mccurve3 = self.mycircle(300, 400, 100.0, -1, 180, 36)
+        mccurve3 = self.mycircle(300, 400, 100.0, 180, 36)
         g.add(mccurve3)
-        mccurve4 = self.mycircle(300, 400, 100.0, -1, 270, 36)
+        mccurve4 = self.mycircle(300, 400, 100.0, 270, 36)
         g.add(mccurve4)
         return g
 
