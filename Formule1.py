@@ -118,10 +118,8 @@ for i in range(count):
     if col == 2:
         col = 0
         row = row + 1
-upperrc = upperrightcorner(200, 790, 10.0, 2, colors.black)
-d.add(upperrc)
-bottomrc = bottomrightcorner(300, 700, 8.0, 1, colors.black)
-d.add(bottomrc)
+d.add(upperrightcorner(200, 790, 10.0, 2, colors.black))
+d.add(bottomrightcorner(300, 700, 8.0, 1, colors.black))
 #d.add(Line(logox,0,logox,842, strokeColor=colors.blue, strokeWidth=1))
 #d.add(Line(logox + colwidth,0,logox + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
 #d.add(Line(595,0,595,842, strokeColor=colors.blue, strokeWidth=1))
