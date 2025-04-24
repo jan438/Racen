@@ -40,8 +40,11 @@ def mycorner(x, y, radius, startdegree, smooth, width, color):
         mcpoints.append(y + sin(radians(startdegree + i * step)) * radius)
     mccurve = shapes.PolyLine(points = mcpoints, strokeWidth = width, strokeColor = color)
     return mccurve
-def uprightcorner(x, y, radius, width, color):
+def upperrightcorner(x, y, radius, width, color):
     corner = mycorner(x, y, radius, 0, 36, width, color)
+    return corner
+def bottomrightcorner(x, y, radius, width, color):
+    corner = mycorner(x, y, radius, 270, 36, width, color)
     return corner
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
@@ -115,8 +118,10 @@ for i in range(count):
     if col == 2:
         col = 0
         row = row + 1
-uprc = uprightcorner(200, 790, 10.0, 2, colors.black)
-d.add(uprc)
+upperrc = upperrightcorner(200, 790, 10.0, 2, colors.black)
+d.add(upperrc)
+bottomrc = bottomrightcorner(300, 700, 8.0, 1, colors.black)
+d.add(bottomrc)
 #d.add(Line(logox,0,logox,842, strokeColor=colors.blue, strokeWidth=1))
 #d.add(Line(logox + colwidth,0,logox + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
 #d.add(Line(595,0,595,842, strokeColor=colors.blue, strokeWidth=1))
