@@ -115,7 +115,7 @@ for i in range(count):
     if col == 2:
         col = 0
         row = row + 1
-uprc = uprightcorner(200, 800, 100.0, colors.black)
+uprc = uprightcorner(200, 790, 10.0, colors.black)
 d.add(uprc)
 #d.add(Line(logox,0,logox,842, strokeColor=colors.blue, strokeWidth=1))
 #d.add(Line(logox + colwidth,0,logox + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
