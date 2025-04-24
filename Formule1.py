@@ -32,16 +32,16 @@ from PIL import Image as PILImage
 
 styles = getSampleStyleSheet()
 
-def mycorner(x, y, radius, startdegree, smooth, color):
+def mycorner(x, y, radius, startdegree, smooth, width, color):
     step = 90 / smooth
     mcpoints = []
     for i in range(smooth + 1):
         mcpoints.append(x + cos(radians(startdegree + i * step)) * radius)
         mcpoints.append(y + sin(radians(startdegree + i * step)) * radius)
-    mccurve = shapes.PolyLine(points = mcpoints, strokeColor = color)
+    mccurve = shapes.PolyLine(points = mcpoints, strokeWidth = width, strokeColor = color)
     return mccurve
-def uprightcorner(x, y, radius, color):
-    corner = mycorner(x, y, radius, 0, 36, color)
+def uprightcorner(x, y, radius, width, color):
+    corner = mycorner(x, y, radius, 0, 36, width, color)
     return corner
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
@@ -115,7 +115,7 @@ for i in range(count):
     if col == 2:
         col = 0
         row = row + 1
-uprc = uprightcorner(200, 790, 10.0, colors.black)
+uprc = uprightcorner(200, 790, 10.0, 2, colors.black)
 d.add(uprc)
 #d.add(Line(logox,0,logox,842, strokeColor=colors.blue, strokeWidth=1))
 #d.add(Line(logox + colwidth,0,logox + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
