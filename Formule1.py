@@ -118,7 +118,7 @@ for i in range(count):
     d.add(upperrightcorner(col * colwidth + colwidth - 10, row * rowheight + 145, 10.0, 2, colors.black))
     d.add(Line(col * colwidth + colwidth, row * rowheight + 145, col * colwidth + colwidth, row * rowheight + 135, strokeColor=colors.black, strokeWidth = 2))
     d.add(Line(col * colwidth, row * rowheight + 82, col * colwidth + halfcolwidth - 8.0, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
-    d.add(bottomrightcorner(col * colwidth + 100, row * rowheight + 90, 8.0, 1, colors.black))
+    d.add(bottomrightcorner(col * colwidth + halfcolwidth - 8.0, row * rowheight + 90, 8.0, 1, colors.black))
     col = col + 1
     if col == 2:
         col = 0
