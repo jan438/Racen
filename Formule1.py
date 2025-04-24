@@ -109,6 +109,8 @@ for i in range(count):
     d.add(Image(path = img, width = 270, height = 89, x = 10 + col * colwidth, y = row * rowheight, mask = None))
     img = "Teams/verstappen.png"
     d.add(Image(path = img, width = 27, height = 27, x = 160 + col * colwidth, y = 125 + row * rowheight, mask = None))
+    img = "Teams/verstappen.png"
+    d.add(Image(path = img, width = 27, height = 27, x = 188 + col * colwidth, y = 125 + row * rowheight, mask = None))
     d.add(transform_svg("Logos/" + formule1data[i][1] + ".svg", logox - float(formule1data[i][10]) + col * colwidth, logoy - float(formule1data[i][11]) + row * rowheight, float(formule1data[i][12]), float(formule1data[i][13])))
     #land1 5
     landcode = formule1data[i][5]
