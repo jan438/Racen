@@ -114,7 +114,7 @@ for i in range(count):
     #land2 9
     landcode = formule1data[i][9]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
-    d.add(Line(col * colwidth, row * rowheight + 10, col * colwidth + 20, row * rowheight + 10, strokeColor=colors.black, strokeWidth = 2))
+    d.add(Line(col * colwidth, row * rowheight + 155, col * colwidth + 20, row * rowheight + 155, strokeColor=colors.black, strokeWidth = 2))
     d.add(upperrightcorner(col * colwidth + 30, row * rowheight, 10.0, 2, colors.black))
     d.add(bottomrightcorner(col * colwidth + 100, row * rowheight, 8.0, 1, colors.black))
     col = col + 1
