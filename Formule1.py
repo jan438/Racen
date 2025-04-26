@@ -83,8 +83,8 @@ logox = 250
 logoy = 130
 row = 0
 col = 0
-flagx = 110
-maxscorewidth = 18.0
+flagx = 115
+maxscorewidth = 27.0
 d.add(String(100, 830,"Scores 2025", textAnchor="middle")) 
 for i in range(count):
     #team 0
@@ -94,7 +94,7 @@ for i in range(count):
     #score2 8
     score = formule1data[i][8]
     scorewidth = pdfmetrics.stringWidth(score, formule1font, score_font_size)
-    d.add(String(col * colwidth + halfcolwidth - 60 + (maxscorewidth - scorewidth), row * rowheight + 95, formule1data[i][8], font = formule1font, fontSize = 18, fillColor = colors.black))
+    d.add(String(col * colwidth + halfcolwidth - 64 + (maxscorewidth - scorewidth), row * rowheight + 95, formule1data[i][8], font = formule1font, fontSize = 18, fillColor = colors.black))
     #surname2 6
     d.add(String(10 + col * colwidth, row * rowheight + 110, formule1data[i][6], font = formule1font, fontSize = 16, fillColor = colors.black))
     #name1 3
@@ -102,7 +102,7 @@ for i in range(count):
     #score1 4
     score = formule1data[i][4]
     scorewidth = pdfmetrics.stringWidth(score, formule1font, score_font_size)
-    d.add(String((col + 1) * colwidth - 60 + (maxscorewidth - scorewidth), row * rowheight + 95, score, font = formule1font, fontSize = score_font_size, fillColor = colors.black))
+    d.add(String((col + 1) * colwidth - 64 + (maxscorewidth - scorewidth), row * rowheight + 95, score, font = formule1font, fontSize = score_font_size, fillColor = colors.black))
     #surname1 2
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], font = formule1font, fontSize = 16, fillColor = colors.black))
     img = "Teams/" + formule1data[i][1] + ".png"
