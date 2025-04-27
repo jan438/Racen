@@ -9,7 +9,7 @@ from ics import Calendar, Event
 from pypdf import PdfReader, PdfWriter
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.lib.pagesizes import LETTER, A4, landscape, portrait
-from reportlab.lib.units import inch
+from reportlab.lib.units import inch, mm
 from reportlab.lib.colors import blue, green, black, red, pink, gray, brown, purple, orange, yellow, white, lightgrey
 from reportlab.pdfbase import pdfmetrics  
 from reportlab.pdfbase.ttfonts import TTFont
