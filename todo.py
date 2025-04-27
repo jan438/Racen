@@ -1,49 +1,10 @@
-        bzcurve1 = self.mycircle(x,y,radius,direction,startangle,smooth)
-        g.add(bzcurve1)
-        return g
-        
-Anticlock
-          
-1e cp1  30°    self.x - 0.134 * radius  mycircle(300.0, 400.0, 100.0, -1, 0, 3)
-         self,y + 0.5 *radius
-2e cp2 60°   self x - 0.5 * radius, 
-          self.y + 0.866 * radius 
-
-1e cp1  120°    self.x - 0.5 * radius
-         self,y - 0.134 *radius
-2e cp2 150°   self x - 0.866 * radius, 
-          self.y + 0.5 * radius    
-
-1e cp1  210°    self.x + 0.134 * radius
-         self,y - 0.5 *radius
-2e cp2 240°   self x + 0.5 * radius, 
-          self.y - 0.866 * radius    
-
- 1e cp1  300°    self.x + 0.5 * radius
-         self,y + 0.134 * radius
-2e cp2 330°   self x +  0.866 * radius, 
-          self.y + 0.5 * radius
-                                     
-Clock
-          
-1e cp1  60°    self.x + 0.5 * radius
-         self,y - 0.134 *radius
-2e cp2 30°   self x + 0.866 * radius, 
-          self.y - 0.5 * radius 
-
-1e cp1  150°    self.x + 0.134 * radius
-         self,y + 0.5 *radius
-2e cp2 120°   self x + 0.5 * radius, 
-          self.y + 0.866 * radius    
-
-1e cp1  240°    self.x - 0.5 * radius
-         self,y + 0.134 *radius
-2e cp2 210°   self x - 0.866 * radius, 
-          self.y + 0.5 * radius    
-
- 1e cp1  330°    self.x - 0.134 * radius
-         self,y - 0.5 * radius
-2e cp2 300°   self x - 0.5 * radius, 
-          self.y - 0.866 * radius
-                                                                         
-                                     
+mclaren.svg SVGWidth 800px SVGHeight 800px Logowidth 20.0 Logoheight 20.0 Scalingx 0.05 Scalingy 0.05
+mercedes.svg SVGWidth 2500 SVGHeight 2500 Logowidth 10.0 Logoheight 10.0 Scalingx 0.012 Scalingy 0.012
+red-bull-racing.svg SVGWidth 671.09387 SVGHeight 255.86429 Logowidth 50.0 Logoheight 25.0 Scalingx 0.09 Scalingy 0.09
+williams.svg SVGWidth None SVGHeight None Logowidth 15.0 Logoheight 15.0 Scalingx 0.02 Scalingy 0.02
+ferrari.svg SVGWidth None SVGHeight None Logowidth 15.0 Logoheight 15.0 Scalingx 0.1 Scalingy 0.1
+haas.svg SVGWidth None SVGHeight None Logowidth 15.0 Logoheight 15.0 Scalingx 0.25 Scalingy 0.25
+aston-martin.svg SVGWidth 2500 SVGHeight 559 Logowidth 30.0 Logoheight 5.0 Scalingx 0.025 Scalingy 0.025
+racing-bulls.svg SVGWidth 421.20001 SVGHeight 350 Logowidth 15.0 Logoheight 15.0 Scalingx 0.08 Scalingy 0.08
+kick-sauber.svg SVGWidth 200 SVGHeight 200 Logowidth 15.0 Logoheight 17.0 Scalingx 0.15 Scalingy 0.15
+alpine.svg SVGWidth 133.35 SVGHeight 71.1 Logowidth 28.0 Logoheight 15.0 Scalingx 0.3 Scalingy 0.3                                                                                                 
