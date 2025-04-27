@@ -82,6 +82,8 @@ colwidth = 297.5
 halfcolwidth = 148.75
 logox = 246
 logoy = 125
+logowidth = 25
+logoheight = 25
 row = 0
 col = 0
 flagx = 115
@@ -132,8 +134,8 @@ for i in range(count):
     if col == 2:
         col = 0
         row = row + 1
-#d.add(Line(logox,0,logox,842, strokeColor=colors.blue, strokeWidth=1))
-#d.add(Line(logox + colwidth,0,logox + colwidth,842, strokeColor=colors.blue, strokeWidth=1))
+d.add(Line(logox - 0.5 * logowidth, logoy, logox + 0.5 * logowidth, logoy, strokeColor=colors.blue, strokeWidth=1))
+d.add(Line(logox, logoy - 0.5 * logoheight, logox, logoy + 0.5 * logoheight, strokeColor=colors.blue, strokeWidth=1))
 #d.add(Line(595,0,595,842, strokeColor=colors.blue, strokeWidth=1))
 #for i in range(5):
     #d.add(Line(0,i*rowheight+logoy,595,i*rowheight+logoy, strokeColor=colors.blue, strokeWidth=1))
