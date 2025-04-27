@@ -130,6 +130,8 @@ for i in range(count):
     d.add(Line(col * colwidth + halfcolwidth, row * rowheight + 82, col * colwidth + colwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
     d.add(bottomrightcorner(col * colwidth + colwidth - 8.0 -4, row * rowheight + 90, 8.0, 1, colors.black))
     d.add(Line(col * colwidth + colwidth - 4, row * rowheight + 90, col * colwidth + colwidth - 4, row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
+    d.add(Line(col * colwidth + logox - 0.5 * logowidth, row * rowheight + logoy, col * colwidth + logox + 0.5 * logowidth, row * rowheight + logoy, strokeColor=colors.blue, strokeWidth=1))
+    #d.add(Line(logox, logoy - 0.5 * logoheight, logox, logoy + 0.5 * logoheight, strokeColor=colors.blue, strokeWidth=1))
     col = col + 1
     if col == 2:
         col = 0
