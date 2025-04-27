@@ -115,7 +115,7 @@ for i in range(count):
     img = "Teams/" + formule1data[i][3] + ".png"
     d.add(Image(path = img, width = 27, height = 27, x = 188 + col * colwidth, y = 125 + row * rowheight, mask = None))
     # logo
-    print(formule1data[i][1] + ".svg")
+    print(formule1data[i][1] + ".svg", "Scalingx", float(formule1data[i][12]), "Scalingy", float(formule1data[i][13]))
     d.add(transform_svg("Logos/" + formule1data[i][1] + ".svg", logox - 0.5 * float(formule1data[i][10]) + col * colwidth, logoy -  0.5 * float(formule1data[i][11]) + row * rowheight, float(formule1data[i][12]), float(formule1data[i][13])))
     #
     #land1 5
