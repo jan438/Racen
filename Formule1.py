@@ -111,7 +111,7 @@ for i in range(count):
     d.add(Image(path = img, width = 27, height = 27, x = 160 + col * colwidth, y = 125 + row * rowheight, mask = None))
     img = "Teams/" + formule1data[i][3] + ".png"
     d.add(Image(path = img, width = 27, height = 27, x = 188 + col * colwidth, y = 125 + row * rowheight, mask = None))
-    d.add(transform_svg("Logos/" + formule1data[i][1] + ".svg", logox - float(formule1data[i][10]) + col * colwidth, logoy - float(formule1data[i][11]) + row * rowheight, float(formule1data[i][12]), float(formule1data[i][13])))
+    d.add(transform_svg("Logos/" + formule1data[i][1] + ".svg", logox - 0.5 * float(formule1data[i][10]) + col * colwidth, logoy -  0.5 * float(formule1data[i][11]) + row * rowheight, float(formule1data[i][12]), float(formule1data[i][13])))
     #land1 5
     landcode = formule1data[i][5]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + halfcolwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
