@@ -72,7 +72,7 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("Count:", count)
 # 595 pixels? = 210 mm
-d = Drawing(210*mm, 293*mm)
+d = Drawing(210*mm, 297*mm)
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 formule1font = "LiberationSerif"
 score_font_size = 18
