@@ -1,9 +1,5 @@
 # Formula 1 2023 Season Track svgs
 
-This repository contains the track svgs for the 2023 Formula 1 season.
-
-## Tracks
-
 - [x] Bahrain International Circuit
 - [x] Jeddah Corniche Street Circuit
 - [x] Albert Park Grand Prix Circuit
