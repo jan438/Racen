@@ -32,7 +32,7 @@ if geometry['type'] == 'LineString':
             max_x = max(max_x, x)
             min_y = min(min_y, y)
             max_y = max(max_y, y)
-    print("min_x", str(min_x))
+    print("min_x", str(min_x), "min_y", str(min_y), "max_x", str(max_x), "max_y", str(max_y))
 my_canvas = canvas.Canvas('PDF/Circuits.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
