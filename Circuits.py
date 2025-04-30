@@ -15,7 +15,8 @@ with open('Data/sample.geojson', 'r') as file:
 features = geojson_data['features']
 print("properties", features[0]["properties"])
 print("bbox", features[0]["bbox"])
-print("geometry", features[0]["geometry"])
+geometry = features[0]["geometry"]
+print("geometry", geometry)
 my_canvas = canvas.Canvas('PDF/Circuits.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
