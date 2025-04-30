@@ -1,7 +1,6 @@
 import os
 import sys
 import geojson
-import pprint as pp
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
 from svglib.svglib import svg2rlg
@@ -13,7 +12,8 @@ if sys.platform[0] == 'w':
 os.chdir(path)
 with open('Data/sample.geojson', 'r') as file:
     geojson_data = geojson.load(file)
-pp.pprint(dict(geojson_data))
+features = geojson_data['features']
+print("Features", features)
 my_canvas = canvas.Canvas('PDF/Circuits.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
