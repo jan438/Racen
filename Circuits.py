@@ -11,7 +11,7 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-with open('Circuits/GeoJSON/sample.geojson', 'r') as file:
+with open('Data/sample.geojson', 'r') as file:
     geojson_data = geojson.load(file)
 pp.pprint(dict(geojson_data))
 my_canvas = canvas.Canvas('PDF/Circuits.pdf')
