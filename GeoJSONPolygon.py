@@ -57,5 +57,5 @@ def geojson_to_svg(geojson_path, svg_path, width=500, height=500):
         f.write('</svg>')
 
 # Example usage
-geojson_to_svg('./Data/pulau.json', 'PDF/output.svg')
+geojson_to_svg('./Data/pulau.json', 'PDF/pulau.svg')
 key = input("Wait")
