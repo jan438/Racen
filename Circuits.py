@@ -17,6 +17,8 @@ print("properties", features[0]["properties"])
 print("bbox", features[0]["bbox"])
 geometry = features[0]["geometry"]
 print("geometry", geometry)
+coordinates = geometry["coordinates"]
+print("coordinates", coordinates)
 my_canvas = canvas.Canvas('PDF/Circuits.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
