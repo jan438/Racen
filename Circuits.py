@@ -23,12 +23,13 @@ if geometry['type'] == 'LineString':
     coords = [coordinates]
     for polygon in coords:
         for ring in polygon:
-            for point in ring:
-                print(point)
-                #min_x = min(min_x, x)
-                #max_x = max(max_x, x)
-                #min_y = min(min_y, y)
-                #max_y = max(max_y, y)
+            x = ring[0]
+            y = ring[1]
+            print("x", x, "y", y)
+            #min_x = min(min_x, x)
+            #max_x = max(max_x, x)
+            #min_y = min(min_y, y)
+            #max_y = max(max_y, y)
     #print("min_x", str(min_x))
 my_canvas = canvas.Canvas('PDF/Circuits.pdf')
 drawing = svg2rlg('SVG/F1.svg')
