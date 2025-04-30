@@ -13,9 +13,9 @@ os.chdir(path)
 with open('Data/sample.geojson', 'r') as file:
     geojson_data = geojson.load(file)
 features = geojson_data['features']
-print(features[0]["properties"])
-print(features[0]["bbox"])
-print(features[0]["geometry"])
+print("properties", features[0]["properties"])
+print("bbox", features[0]["bbox"])
+print("geometry", features[0]["geometry"])
 my_canvas = canvas.Canvas('PDF/Circuits.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
