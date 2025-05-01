@@ -67,6 +67,7 @@ for feature in geojson_data['features']:
 my_canvas = canvas.Canvas('PDF/Circuits.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
+drawing = svg2rlg('SVG/Zandvoort.svg')
 my_canvas.drawString(50, 30, 'My SVG Image')
 my_canvas.save()
 key = input("Wait")
