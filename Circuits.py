@@ -73,7 +73,7 @@ for feature in geojson_data['features']:
     with open("SVG/Zandvoort.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
         for path in svg_paths:
-            f.write(f'  <path d="{path}" fill="none" stroke="black"/>\n')
+            f.write(f'  <path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
         f.write('</svg>')
 my_canvas = canvas.Canvas('PDF/CircuitsCanvas.pdf')
 drawing = svg2rlg('SVG/F1.svg')
