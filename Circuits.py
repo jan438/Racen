@@ -1,5 +1,6 @@
 import os
 import sys
+import csv
 import geojson
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
@@ -21,6 +22,15 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
+circuitsdata = []
+file_to_open = "Data/Circuits2025.csv"
+with open(file_to_open, 'r') as file:
+    csvreader = csv.reader(file, delimiter = ';')
+    count = 0
+    for row in csvreader:
+        circuitsdata.append(row)
+        count += 1
+print("Count:", count)
 with open('Data/Zandvoort.geojson', 'r') as file:
     geojson_data = geojson.load(file)
 features = geojson_data['features']
