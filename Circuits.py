@@ -5,6 +5,8 @@ import geojson
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
 from svglib.svglib import svg2rlg
+from reportlab.lib.units import inch, mm
+from reportlab.graphics.shapes import *
 
 def coordinates_to_path(coordinates, scale, translate):
     path_data = ""
@@ -67,6 +69,7 @@ for feature in geojson_data['features']:
 my_canvas = canvas.Canvas('PDF/Circuits.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
+d = Drawing(210*mm, 297*mm)
 drawing = svg2rlg('SVG/Zandvoort.svg')
 my_canvas.drawString(50, 30, 'My SVG Image')
 my_canvas.save()
