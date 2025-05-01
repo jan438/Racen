@@ -4,9 +4,9 @@ import csv
 import geojson
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
-from svglib.svglib import svg2rlg
 from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
+from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 def coordinates_to_path(coordinates, scale, translate):
     path_data = ""
@@ -18,7 +18,14 @@ def coordinates_to_path(coordinates, scale, translate):
             path_data += f"{command}{x},{height - y} "
         path_data += "Z "
     return path_data.strip()
-
+def transform_svg(svgfile, tx, ty, sx, sy): 
+    svg_root = load_svg_file(svgfile)
+    svgRenderer = SvgRenderer(svgfile)
+    df1 = svgRenderer.render(svg_root)
+    gimg = df1.asGroup()
+    gimg.translate(tx, ty)
+    gimg.scale(sx, sy)
+    return gimg
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
 if sys.platform[0] == 'w':
@@ -66,11 +73,12 @@ for feature in geojson_data['features']:
         for path in svg_paths:
             f.write(f'  <path d="{path}" fill="none" stroke="black"/>\n')
         f.write('</svg>')
-my_canvas = canvas.Canvas('PDF/Circuits.pdf')
+my_canvas = canvas.Canvas('PDF/CircuitsCanvas.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
 d = Drawing(210*mm, 297*mm)
-drawing = svg2rlg('SVG/Zandvoort.svg')
+d.add(transform_svg("SVG/Zandvoort.svg", 297.5 - 60, 800, 1.1, 1.1))
+renderPDF.drawToFile(d, 'PDF/CircuitsDrawing.pdf')
 my_canvas.drawString(50, 30, 'My SVG Image')
 my_canvas.save()
 key = input("Wait")
