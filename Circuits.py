@@ -40,8 +40,8 @@ min_x = min_y = float('inf')
 max_x = max_y = float('-inf')
 if geometry['type'] == 'LineString':
     coords = [coordinates]
-    for polygon in coords:
-        for point in polygon:
+    for linestring in coords:
+        for point in linestring:
             x, y = point
             min_x = min(min_x, x)
             max_x = max(max_x, x)
