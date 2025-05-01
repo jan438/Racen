@@ -75,7 +75,7 @@ for feature in geojson_data['features']:
         for path in svg_paths:
             f.write(f'  <path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
         f.write('</svg>')
-my_canvas = canvas.Canvas('PDF/CircuitsCanvas.pdf')
+my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
 my_canvas.drawString(50, 30, 'My SVG Image')
