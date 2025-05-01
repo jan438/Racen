@@ -21,7 +21,7 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-with open('Data/sample.geojson', 'r') as file:
+with open('Data/Zandvoort.geojson', 'r') as file:
     geojson_data = geojson.load(file)
 features = geojson_data['features']
 print("properties", features[0]["properties"])
@@ -57,7 +57,7 @@ for feature in geojson_data['features']:
     if geometry['type'] == 'LineString':
         svg_paths.append(coordinates_to_path([coords], scale, translate))
         
-    with open("PDF/output.svg", 'w') as f:
+    with open("PDF/Zandvoort.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
         for path in svg_paths:
             f.write(f'  <path d="{path}" fill="none" stroke="black"/>\n')
