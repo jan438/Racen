@@ -19,7 +19,6 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_LEFT, TA_RIGHT, TA_CENTER
 from reportlab.graphics.shapes import *
 from reportlab.graphics import renderPDF
-from reportlab.graphics.shapes import *
 from reportlab.graphics import shapes
 from reportlab.graphics import widgetbase
 from reportlab.graphics.widgetbase import Widget
