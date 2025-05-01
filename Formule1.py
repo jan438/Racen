@@ -63,7 +63,7 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 formule1data = []
-file_to_open = "Data/Formule12025.csv"
+file_to_open = "Data/Teams2025.csv"
 with open(file_to_open, 'r') as file:
     csvreader = csv.reader(file, delimiter = ';')
     count = 0
