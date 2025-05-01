@@ -40,6 +40,8 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 print("Count:", count)
+for i in range(count):
+     print(circuitsdata[i][0])
 with open('Data/Zandvoort.geojson', 'r') as file:
     geojson_data = geojson.load(file)
 features = geojson_data['features']
