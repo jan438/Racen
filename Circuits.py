@@ -5,6 +5,17 @@ from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
 from svglib.svglib import svg2rlg
 
+def coordinates_to_path(coordinates, scale, translate):
+    path_data = ""
+    for polygon in coordinates:
+        for i, point in enumerate(polygon):
+            x = (point[0] - translate[0]) * scale[0]
+            y = (point[1] - translate[1]) * scale[1]
+            command = "M" if i == 0 else "L"
+            path_data += f"{command}{x},{height - y} "
+        path_data += "Z "
+    return path_data.strip()
+
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
 if sys.platform[0] == 'w':
@@ -24,10 +35,8 @@ max_x = max_y = float('-inf')
 if geometry['type'] == 'LineString':
     coords = [coordinates]
     for polygon in coords:
-        for ring in polygon:
-            x = ring[0]
-            y = ring[1]
-            print("x", x, "y", y)
+        for point in polygon:
+            x, y = point
             min_x = min(min_x, x)
             max_x = max(max_x, x)
             min_y = min(min_y, y)
@@ -39,6 +48,15 @@ scale_x = width / (max_x - min_x)
 scale_y = height / (max_y - min_y)
 scale = (scale_x, scale_y)
 translate = (min_x, min_y)
+
+svg_paths = []
+for feature in geojson_data['features']:
+    geometry = feature['geometry']
+    coords = geometry['coordinates']
+
+    if geometry['type'] == 'LineString':
+        svg_paths.append(coordinates_to_path([coords], scale, translate))
+
 my_canvas = canvas.Canvas('PDF/Circuits.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
