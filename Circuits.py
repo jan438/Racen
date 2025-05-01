@@ -10,8 +10,8 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 def coordinates_to_path(coordinates, scale, translate):
     path_data = ""
-    for polygon in coordinates:
-        for i, point in enumerate(polygon):
+    for LineString in coordinates:
+        for i, point in enumerate(LineString):
             x = (point[0] - translate[0]) * scale[0]
             y = (point[1] - translate[1]) * scale[1]
             command = "M" if i == 0 else "L"
@@ -70,7 +70,7 @@ for feature in geojson_data['features']:
     coords = geometry['coordinates']
     if geometry['type'] == 'LineString':
         svg_paths.append(coordinates_to_path([coords], scale, translate))    
-    with open("PDF/Zandvoort.svg", 'w') as f:
+    with open("SVG/Zandvoort.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
         for path in svg_paths:
             f.write(f'  <path d="{path}" fill="none" stroke="black"/>\n')
