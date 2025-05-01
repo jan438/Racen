@@ -24,12 +24,8 @@ os.chdir(path)
 with open('Data/Zandvoort.geojson', 'r') as file:
     geojson_data = geojson.load(file)
 features = geojson_data['features']
-print("properties", features[0]["properties"])
-print("bbox", features[0]["bbox"])
 geometry = features[0]["geometry"]
-print("geometry", geometry)
 coordinates = geometry["coordinates"]
-print("coordinates", coordinates)
 min_x = min_y = float('inf')
 max_x = max_y = float('-inf')
 if geometry['type'] == 'LineString':
@@ -41,29 +37,23 @@ if geometry['type'] == 'LineString':
             max_x = max(max_x, x)
             min_y = min(min_y, y)
             max_y = max(max_y, y)
-    print("min_x", str(min_x), "min_y", str(min_y), "max_x", str(max_x), "max_y", str(max_y))
 width = 500
 height = 500
 scale_x = width / (max_x - min_x)
 scale_y = height / (max_y - min_y)
 scale = (scale_x, scale_y)
 translate = (min_x, min_y)
-
 svg_paths = []
 for feature in geojson_data['features']:
     geometry = feature['geometry']
     coords = geometry['coordinates']
-
     if geometry['type'] == 'LineString':
-        svg_paths.append(coordinates_to_path([coords], scale, translate))
-        
+        svg_paths.append(coordinates_to_path([coords], scale, translate))    
     with open("PDF/Zandvoort.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
         for path in svg_paths:
             f.write(f'  <path d="{path}" fill="none" stroke="black"/>\n')
         f.write('</svg>')
-
-
 my_canvas = canvas.Canvas('PDF/Circuits.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
