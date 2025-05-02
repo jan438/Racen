@@ -91,6 +91,8 @@ print("Count:", count)
 for i in range(count):
      print(circuitsdata[i][0])
 GeoJSON_to_SVG("Zandvoort")
+GeoJSON_to_SVG("Spa")
+GeoJSON_to_SVG("Catalunya")
 with open('Data/Zandvoort.geojson', 'r') as file:
     geojson_data = geojson.load(file)
 features = geojson_data['features']
