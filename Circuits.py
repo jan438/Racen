@@ -26,7 +26,14 @@ def GeoJSON_to_SVG(circuitname):
         coordinates = geometry["coordinates"]
         min_x = min_y = float('inf')
         max_x = max_y = float('-inf')
-        print(circuitname)
+        width = 500
+        height = 500
+        scale_x = width / (max_x - min_x)
+        scale_y = height / (max_y - min_y)
+        scale = (scale_x, scale_y)
+        translate = (min_x, min_y)
+        svg_paths = []
+        print("GeoJSOn", circuitname)
     return
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
