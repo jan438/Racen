@@ -8,18 +8,8 @@ from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
-def coordinates_to_path(coordinates, scale, translate):
-    path_data = ""
-    for LineString in coordinates:
-        for i, point in enumerate(LineString):
-            x = (point[0] - translate[0]) * scale[0]
-            y = (point[1] - translate[1]) * scale[1]
-            command = "M" if i == 0 else "L"
-            path_data += f"{command}{x},{height - y} "
-        path_data += "Z "
-    return path_data.strip()
 def GeoJSON_to_SVG(circuitname):
-    def xcoordinates_to_path(coordinates, scale, translate):
+    def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
         for LineString in coordinates:
             for i, point in enumerate(LineString):
@@ -45,20 +35,18 @@ def GeoJSON_to_SVG(circuitname):
                 max_x = max(max_x, x)
                 min_y = min(min_y, y)
                 max_y = max(max_y, y)
-                print("Resultaat in functie 1", min_x, max_x, min_y, max_y)
     width = 500
     height = 500
     scale_x = width / (max_x - min_x)
     scale_y = height / (max_y - min_y)
     scale = (scale_x, scale_y)
     translate = (min_x, min_y)
-    print("Resultaat in functie 2", min_x, max_x, min_y, max_y)
     svg_paths = []
     for feature in geojson_data['features']:
         geometry = feature['geometry']
         coords = geometry['coordinates']
         if geometry['type'] == 'LineString':
-            svg_paths.append(xcoordinates_to_path([coords], scale, translate))
+            svg_paths.append(coordinates_to_path([coords], scale, translate))
             with open("SVG/" + circuitname + ".svg", 'w') as f:
                 f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
                 for path in svg_paths:
