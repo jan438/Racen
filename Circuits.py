@@ -47,7 +47,12 @@ def GeoJSON_to_SVG(circuitname):
             geometry = feature['geometry']
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
-                svg_paths.append(xcoordinates_to_path([coords], scale, translate))    
+                svg_paths.append(xcoordinates_to_path([coords], scale, translate))
+                with open("SVG/" + circuitname + ".svg", 'w') as f:
+                    f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
+                    for path in svg_paths:
+                        f.write(f'  <path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
+                    f.write('</svg>')  
         print("GeoJSOn", circuitname)
     return
 def transform_svg(svgfile, tx, ty, sx, sy): 
@@ -103,11 +108,11 @@ for feature in geojson_data['features']:
     coords = geometry['coordinates']
     if geometry['type'] == 'LineString':
         svg_paths.append(coordinates_to_path([coords], scale, translate))    
-    with open("SVG/Zandvoort.svg", 'w') as f:
-        f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
-        for path in svg_paths:
-            f.write(f'  <path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
-        f.write('</svg>')
+        with open("SVG/Zandvoort.svg", 'w') as f:
+            f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
+            for path in svg_paths:
+                f.write(f'  <path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
+            f.write('</svg>')
 my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
