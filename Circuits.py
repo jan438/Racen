@@ -19,6 +19,16 @@ def coordinates_to_path(coordinates, scale, translate):
         path_data += "Z "
     return path_data.strip()
 def GeoJSON_to_SVG(circuitname):
+    def xcoordinates_to_path(coordinates, scale, translate):
+        path_data = ""
+        for LineString in coordinates:
+            for i, point in enumerate(LineString):
+                x = (point[0] - translate[0]) * scale[0]
+                y = (point[1] - translate[1]) * scale[1]
+                command = "M" if i == 0 else "L"
+                path_data += f"{command}{x},{height - y} "
+            path_data += "Z "
+        return path_data.strip()
     with open("Data/" + circuitname + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
         features = geojson_data['features']
@@ -33,6 +43,11 @@ def GeoJSON_to_SVG(circuitname):
         scale = (scale_x, scale_y)
         translate = (min_x, min_y)
         svg_paths = []
+        for feature in geojson_data['features']:
+            geometry = feature['geometry']
+            coords = geometry['coordinates']
+            if geometry['type'] == 'LineString':
+                svg_paths.append(xcoordinates_to_path([coords], scale, translate))    
         print("GeoJSOn", circuitname)
     return
 def transform_svg(svgfile, tx, ty, sx, sy): 
