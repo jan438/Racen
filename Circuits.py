@@ -21,7 +21,13 @@ def coordinates_to_path(coordinates, scale, translate):
 def GeoJSON_to_SVG(circuitname):
     with open("Data/" + circuitname + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
-    print(circuitname)
+        features = geojson_data['features']
+        geometry = features[0]["geometry"]
+        coordinates = geometry["coordinates"]
+        min_x = min_y = float('inf')
+        max_x = max_y = float('-inf')
+        print(circuitname)
+    return
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
