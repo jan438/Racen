@@ -18,6 +18,8 @@ def coordinates_to_path(coordinates, scale, translate):
             path_data += f"{command}{x},{height - y} "
         path_data += "Z "
     return path_data.strip()
+def GeoJSON_to_SVG(circuitname):
+    print(circuitname)
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -42,6 +44,7 @@ with open(file_to_open, 'r') as file:
 print("Count:", count)
 for i in range(count):
      print(circuitsdata[i][0])
+GeoJSON_to_SVG("Zandvoort")
 with open('Data/Zandvoort.geojson', 'r') as file:
     geojson_data = geojson.load(file)
 features = geojson_data['features']
