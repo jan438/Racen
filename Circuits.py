@@ -50,9 +50,8 @@ def GeoJSON_to_SVG(circuitname):
             with open("SVG/" + circuitname + ".svg", 'w') as f:
                 f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
                 for path in svg_paths:
-                    f.write(f'  <path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
+                    f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
                 f.write('</svg>')  
-                print("GeoJSOn in fuctie svg geschreveve", circuitname)
     return
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
