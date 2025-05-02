@@ -19,6 +19,8 @@ def coordinates_to_path(coordinates, scale, translate):
         path_data += "Z "
     return path_data.strip()
 def GeoJSON_to_SVG(circuitname):
+    with open("Data/" + circuitname + ".geojson", 'r') as file:
+        geojson_data = geojson.load(file)
     print(circuitname)
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
