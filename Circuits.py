@@ -77,10 +77,7 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("Count:", count)
 for i in range(count):
-     print(circuitsdata[i][0])
-GeoJSON_to_SVG("Zandvoort")
-GeoJSON_to_SVG("Spa")
-GeoJSON_to_SVG("Catalunya")
+     GeoJSON_to_SVG(circuitsdata[i][0])
 my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
