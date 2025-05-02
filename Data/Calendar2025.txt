@@ -1,97 +1,49 @@
 # 	Grand Prix 	Circuit 	Datum 	
 1 	
-aus
-GP Australië
-	Albert Park 	16 mrt 	
+aus GP Australië Albert Park 	16 mrt 	
 2 	
-chn
-GP China
-	Shanghai International Circuit 	23 mrt 	
+chn GP China Shanghai International Circuit 	23 mrt 	
 3 	
-jpn
-GP Japan
-	Suzuka Circuit 	6 apr 	
+jpn GP Japan Suzuka Circuit 	6 apr 	
 4 	
-bhr
-GP Bahrein
-	Bahrain International Circuit 	13 apr 	
+bhr GP Bahrein Bahrain International Circuit 	13 apr 	
 5 	
-sau
-GP Saoedi-Arabië
-	Jeddah Street Circuit 	20 apr 	
+sau GP Saoedi-Arabië Jeddah Street Circuit 	20 apr 	
 6 	
-usa
-GP Miami
-	Miami International Autodrome 	4 mei 	
+usa GP Miami Miami International Autodrome 	4 mei 	
 7 	
-ita
-GP Emilia-Romagna
-	Autodromo Enzo e Dino Ferrari 	18 mei 	
+ita GP Emilia-Romagna Autodromo Enzo e Dino Ferrari 	18 mei 	
 8 	
-mco
-GP Monaco
-	Circuit de Monaco 	25 mei 	
+mco GP Monaco Circuit de Monaco 	25 mei 	
 9 	
-esp
-GP Spanje
-	Circuit de Catalunya 	1 jun 	
+esp GP Spanje Circuit de Catalunya 	1 jun 	
 10 	
-can
-GP Canada
-	Circuit Gilles Villeneuve 	15 jun 	
+can GP Canada Circuit Gilles Villeneuve 	15 jun 	
 11 	
-aut
-GP Oostenrijk
-	Red Bull Ring 	29 jun 	
+aut GP Oostenrijk Red Bull Ring 	29 jun 	
 12 	
-gbr
-GP Groot-Brittannië
-	Circuit Silverstone 	6 jul 	
+gbr GP Groot-Brittannië Circuit Silverstone 	6 jul 	
 13 	
-bel
-GP België
-	Spa-Francorchamps 	27 jul 	
+bel GP België Spa-Francorchamps 	27 jul 	
 14 	
-hun
-GP Hongarije
-	Hungaroring 	3 aug 	
+hun GP Hongarije Hungaroring 	3 aug 	
 15 	
-nld
-GP Nederland
-	Circuit Zandvoort 	31 aug 	
+nld GP Nederland Circuit Zandvoort 	31 aug 	
 16 	
-ita
-GP Italië
-	Autodromo Nazionale Monza 	7 sep 	
+ita GP Italië Autodromo Nazionale Monza 	7 sep 	
 17 	
-aze
-GP Azerbeidzjan
-	Baku City Circuit 	21 sep 	
+aze GP Azerbeidzjan Baku City Circuit 	21 sep 	
 18 	
-sgp
-GP Singapore
-	Marina Bay Street Circuit 	5 okt 	
+sgp GP Singapore Marina Bay Street Circuit 	5 okt 	
 19 	
-usa
-GP Verenigde Staten
-	Circuit of the Americas 	19 okt 	
+usa GP Verenigde Staten Circuit of the Americas 	19 okt 	
 20 	
-mex
-GP Mexico
-	Autodromo Hermanos Rodriguez 	26 okt 	
+mex GP Mexico Autodromo Hermanos Rodriguez 	26 okt 	
 21 	
-bra
-GP Brazilië
-	Autodromo Jose Carlos Pace Interlagos 	9 nov 	
+bra GP Brazilië Autodromo Jose Carlos Pace Interlagos 	9 nov 	
 22 	
-usa
-GP Las Vegas
-	Las Vegas Street Circuit 	23 nov 	
+usa GP Las Vegas Las Vegas Street Circuit 	23 nov 	
 23 	
-qat
-GP Qatar
-	Losail International Circuit 	30 nov 	
+qat GP Qatar Losail International Circuit 	30 nov 	
 24 	
-are
-GP Abu Dhabi
-	Yas Marina Circuit 	7 dec
+are GP Abu Dhabi Yas Marina Circuit 	7 dec
