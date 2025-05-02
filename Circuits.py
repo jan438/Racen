@@ -42,6 +42,7 @@ def GeoJSON_to_SVG(circuitname):
         scale_y = height / (max_y - min_y)
         scale = (scale_x, scale_y)
         translate = (min_x, min_y)
+        print("Resultaat in functie", min_x, max_x, min_y, max_y)
         svg_paths = []
         for feature in geojson_data['features']:
             geometry = feature['geometry']
@@ -96,6 +97,7 @@ if geometry['type'] == 'LineString':
             max_x = max(max_x, x)
             min_y = min(min_y, y)
             max_y = max(max_y, y)
+            print("Resultaat", min_x, max_x, min_y, max_y)
 width = 500
 height = 500
 scale_x = width / (max_x - min_x)
