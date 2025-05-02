@@ -31,30 +31,40 @@ def GeoJSON_to_SVG(circuitname):
         return path_data.strip()
     with open("Data/" + circuitname + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
-        features = geojson_data['features']
-        geometry = features[0]["geometry"]
-        coordinates = geometry["coordinates"]
-        min_x = min_y = float('inf')
-        max_x = max_y = float('-inf')
-        width = 500
-        height = 500
-        scale_x = width / (max_x - min_x)
-        scale_y = height / (max_y - min_y)
-        scale = (scale_x, scale_y)
-        translate = (min_x, min_y)
-        print("Resultaat in functie", min_x, max_x, min_y, max_y)
-        svg_paths = []
-        for feature in geojson_data['features']:
-            geometry = feature['geometry']
-            coords = geometry['coordinates']
-            if geometry['type'] == 'LineString':
-                svg_paths.append(xcoordinates_to_path([coords], scale, translate))
-                with open("SVG/" + circuitname + ".svg", 'w') as f:
-                    f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
-                    for path in svg_paths:
-                        f.write(f'  <path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
-                    f.write('</svg>')  
-                    print("GeoJSOn", circuitname)
+    features = geojson_data['features']
+    geometry = features[0]["geometry"]
+    coordinates = geometry["coordinates"]
+    min_x = min_y = float('inf')
+    max_x = max_y = float('-inf')
+    if geometry['type'] == 'LineString':
+        coords = [coordinates]
+        for linestring in coords:
+            for point in linestring:
+                x, y = point
+                min_x = min(min_x, x)
+                max_x = max(max_x, x)
+                min_y = min(min_y, y)
+                max_y = max(max_y, y)
+                print("Resultaat in functie 1", min_x, max_x, min_y, max_y)
+    width = 500
+    height = 500
+    scale_x = width / (max_x - min_x)
+    scale_y = height / (max_y - min_y)
+    scale = (scale_x, scale_y)
+    translate = (min_x, min_y)
+    print("Resultaat in functie 2", min_x, max_x, min_y, max_y)
+    svg_paths = []
+    for feature in geojson_data['features']:
+        geometry = feature['geometry']
+        coords = geometry['coordinates']
+        if geometry['type'] == 'LineString':
+            svg_paths.append(xcoordinates_to_path([coords], scale, translate))
+            with open("SVG/" + circuitname + ".svg", 'w') as f:
+                f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
+                for path in svg_paths:
+                    f.write(f'  <path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
+                f.write('</svg>')  
+                print("GeoJSOn in fuctie svg geschreveve", circuitname)
     return
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
