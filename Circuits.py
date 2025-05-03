@@ -8,6 +8,9 @@ from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
+SUMMARY = "SUMMARY".encode()
+DESCRIPTION = "DESCRIPTION".encode()
+
 def GeoJSON_to_SVG(circuitname):
     def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
