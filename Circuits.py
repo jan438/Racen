@@ -88,7 +88,7 @@ col = 0
 for i in range(count):
      #GeoJSON_to_SVG(circuitsdata[i][0])
      print("Geo i", i)
-     renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", col * colwidth, row * rowheight, 0.5, 0.5), my_canvas, 0, 40)
+     renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", col * colwidth, row * rowheight, 0.1, 0.1), my_canvas, 0, 40)
      col += 1
      if col == colcount:
          row += 1
