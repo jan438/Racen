@@ -81,8 +81,8 @@ renderPDF.draw(drawing, my_canvas, 300, 750)
 my_canvas.drawString(300, 710, 'My SVG Image')
 rowcount = 6
 colcount = 4
-rowheight = 100
-colwidth = 100
+rowheight = 120
+colwidth = 130
 row = 0
 col = 0
 for i in range(count):
