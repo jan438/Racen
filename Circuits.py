@@ -80,16 +80,18 @@ for i in range(count):
      print("Geo i", i)
 f1cal2025 = "Calendar/Formule1.ics"
 cal_file = open(os.path.join(path, f1cal2025), 'r')
-count = 0
+linecount = 0
 lastpos = 0
 alleventslines = []
 for line in cal_file:
     newlinepos = line.find("\t\n")
     lastsubstring = line[lastpos:newlinepos]
     alleventslines.append(lastsubstring)
-    count += 1
-print("Cal count", count)
+    linecount += 1
+print("Cal linecount", linecount)
 cal_file.close()
+eventcount = len(alleventslines)
+print("Cal eventcount", eventcount)
 my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
