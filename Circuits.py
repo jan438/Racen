@@ -77,9 +77,18 @@ with open(file_to_open, 'r') as file:
 print("Count:", count)
 for i in range(count):
      #GeoJSON_to_SVG(circuitsdata[i][0])
-     print("i", i)
+     print("Geo i", i)
 f1cal2025 = "Calendar/Formule1.ics"
 cal_file = open(os.path.join(path, f1cal2025), 'r')
+count = 0
+lastpos = 0
+alleventslines = []
+for line in cal_file:
+    newlinepos = line.find("\t\n")
+    lastsubstring = line[lastpos:newlinepos]
+    alleventslines.append(lastsubstring)
+    count += 1
+print("Cal count", count)
 cal_file.close()
 my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 drawing = svg2rlg('SVG/F1.svg')
