@@ -1,10 +1,10 @@
-Albert Park
-Shanghai		
-Suzuka	
-Bahrain		
-JeddahCorniche
-Miami
-EnzoEDinoFerrari
+Albert Park ***
+Shanghai ***		
+Suzuka ***	
+Bahrain	***	
+JeddahCorniche ***
+Miami ***
+EnzoEDinoFerrari 
 Monaco
 Catalunya
 GillesVilleneuve
