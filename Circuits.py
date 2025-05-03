@@ -79,9 +79,19 @@ my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 0, 40)
 my_canvas.drawString(50, 30, 'My SVG Image')
+rowcount = 6
+colcount = 4
+rowheight = 100
+colwidth = 100
+row = 0
+col = 0
 for i in range(count):
      #GeoJSON_to_SVG(circuitsdata[i][0])
      print("Geo i", i)
-     renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", 50, 200, 0.5, 0.5), my_canvas, 0, 40)
+     renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", col * colwidth, row * rowheight, 0.5, 0.5), my_canvas, 0, 40)
+     col += 1
+     if col == colcount:
+         row += 1
+         col = 0
 my_canvas.save()
 key = input("Wait")
