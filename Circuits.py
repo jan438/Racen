@@ -77,8 +77,7 @@ with open(file_to_open, 'r') as file:
 my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 300, 750)
-drawing = svg2rlg('SVG/finishflag.svg')
-renderPDF.draw(drawing, my_canvas, 270, 750)
+renderPDF.draw(transform_svg("SVG/finishflag.svg", 270, 750, 0.2, 0.2), my_canvas, 0, 40)
 rowcount = 6
 colcount = 4
 rowheight = 120
