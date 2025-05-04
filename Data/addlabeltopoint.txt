@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[7.090301513671875,44.66743203082226]},"properties":{"label":"W","title":"World Wide Web"}}]}
