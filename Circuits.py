@@ -78,6 +78,8 @@ print("Count:", count)
 my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 300, 750)
+drawing = svg2rlg('SVG/finishflag.svg')
+renderPDF.draw(drawing, my_canvas, 270, 750)
 rowcount = 6
 colcount = 4
 rowheight = 120
