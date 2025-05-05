@@ -84,13 +84,13 @@ rowheight = 120
 colwidth = 130
 row = 0
 col = 0
-for i in range(count):
-     #GeoJSON_to_SVG(circuitsdata[i][0])
-     renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", col * colwidth, row * rowheight, 0.2, 0.2), my_canvas, 0, 40)
-     my_canvas.drawString(col * colwidth, row * rowheight + 27, circuitsdata[i][0])
-     col += 1
-     if col == colcount:
-         row += 1
-         col = 0
+#for i in range(count):
+#     GeoJSON_to_SVG(circuitsdata[i][0])
+#     renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", col * colwidth, row * rowheight, 0.2, 0.2), my_canvas, 0, 40)
+#     my_canvas.drawString(col * colwidth, row * rowheight + 27, circuitsdata[i][0])
+#     col += 1
+#     if col == colcount:
+#         row += 1
+#         col = 0
 my_canvas.save()
 key = input("Wait")
