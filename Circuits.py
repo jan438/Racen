@@ -28,6 +28,9 @@ def GeoJSON_to_SVG(circuitname):
     print("len features", len(features), "\n0", features[0], "\n1", features[1])
     geometry = features[0]["geometry"]
     if geometry['type'] == 'Point':
+        coordinates = geometry["coordinates"]
+        startfinish_x = coordinates[0]
+        startfinish_y = coordinates[1]
         print("Point", startfinish_x, startfinish_y)
     geometry = features[1]["geometry"]
     coordinates = geometry["coordinates"]
