@@ -26,6 +26,8 @@ def GeoJSON_to_SVG(circuitname):
     coordinates = geometry["coordinates"]
     min_x = min_y = float('inf')
     max_x = max_y = float('-inf')
+    if geometry['type'] == 'Point':
+       print("Point")
     if geometry['type'] == 'LineString':
         coords = [coordinates]
         for linestring in coords:
