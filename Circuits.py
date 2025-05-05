@@ -84,6 +84,7 @@ rowheight = 120
 colwidth = 130
 row = 0
 col = 0
+GeoJSON_to_SVG(circuitsdata[0][0])
 #for i in range(count):
 #     GeoJSON_to_SVG(circuitsdata[i][0])
 #     renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", col * colwidth, row * rowheight, 0.2, 0.2), my_canvas, 0, 40)
