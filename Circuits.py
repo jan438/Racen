@@ -23,7 +23,7 @@ def GeoJSON_to_SVG(circuitname):
         geojson_data = geojson.load(file)
     features = geojson_data['features']
     print("len features", len(features), "\n0", features[0], "\n1", features[1])
-    geometry = features[0]["geometry"]
+    geometry = features[1]["geometry"]
     coordinates = geometry["coordinates"]
     min_x = min_y = float('inf')
     max_x = max_y = float('-inf')
