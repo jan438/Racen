@@ -8,6 +8,9 @@ from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
+startfinish_x = 0
+startfinish_y = 0
+
 def GeoJSON_to_SVG(circuitname):
     def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
@@ -25,7 +28,7 @@ def GeoJSON_to_SVG(circuitname):
     print("len features", len(features), "\n0", features[0], "\n1", features[1])
     geometry = features[0]["geometry"]
     if geometry['type'] == 'Point':
-        print("Point")
+        print("Point", startfinish_x, startfinish_y)
     geometry = features[1]["geometry"]
     coordinates = geometry["coordinates"]
     min_x = min_y = float('inf')
