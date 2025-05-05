@@ -96,9 +96,11 @@ row = 0
 col = 0
 GeoJSON_to_SVG(circuitsdata[0][0])
 for i in range(count):
-    renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", col * colwidth, row * rowheight, 0.2, 0.2), my_canvas, 0, 40)
-    my_canvas.drawString(col * colwidth, row * rowheight + 27, circuitsdata[i][0])
-    renderPDF.draw(transform_svg("SVG/finishflag.svg", col * colwidth, row * rowheight, 0.3, 0.3), my_canvas, 0, 40)
+    circuit_x = col * colwidth
+    circuit_y = row * rowheight
+    renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", circuit_x, circuit_y, 0.2, 0.2), my_canvas, 0, 40)
+    my_canvas.drawString(circuit_x, circuit_y + 27, circuitsdata[i][0])
+    renderPDF.draw(transform_svg("SVG/finishflag.svg", circuit_x + float(30.0), circuit_y + float(30.0), 0.3, 0.3), my_canvas, circuit_x, circuit_y)
     col += 1
     if col == colcount:
        row += 1
