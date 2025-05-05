@@ -23,13 +23,15 @@ def GeoJSON_to_SVG(circuitname):
         geojson_data = geojson.load(file)
     features = geojson_data['features']
     print("len features", len(features), "\n0", features[0], "\n1", features[1])
+    geometry = features[0]["geometry"]
+    if geometry['type'] == 'Point':
+        print("Point")
     geometry = features[1]["geometry"]
     coordinates = geometry["coordinates"]
     min_x = min_y = float('inf')
     max_x = max_y = float('-inf')
-    if geometry['type'] == 'Point':
-       print("Point")
     if geometry['type'] == 'LineString':
+        print("LineString")
         coords = [coordinates]
         for linestring in coords:
             for point in linestring:
