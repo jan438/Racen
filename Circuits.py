@@ -102,7 +102,7 @@ for i in range(count):
     my_canvas.drawString(circuit_x, circuit_y + 27, circuitsdata[i][0])
     flag_x = circuitsdata[i][3]
     flag_y = circuitsdata[i][4]
-    print(flag_x)
+    print(str(float(flag_x)))
     renderPDF.draw(transform_svg("SVG/finishflag.svg", circuit_x + float("0.0"), circuit_y + float("0.0"), 0.3, 0.3), my_canvas, 0, 0)
     col += 1
     if col == colcount:
