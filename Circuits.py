@@ -94,7 +94,7 @@ rowheight = 120
 colwidth = 130
 row = 0
 col = 0
-GeoJSON_to_SVG(circuitsdata[8][0])
+GeoJSON_to_SVG(circuitsdata[9][0])
 for i in range(count):
     circuit_x = col * colwidth
     circuit_y = row * rowheight
