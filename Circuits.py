@@ -112,8 +112,8 @@ print(f"Decimale breedtegraad: {decimale_breedtegraad}")
 for i in range(count):
     circuit_x = col * colwidth
     circuit_y = row * rowheight
-    renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", circuit_x, circuit_y, 0.2, 0.2), my_canvas, 20, 20)
-    my_canvas.drawString(circuit_x, circuit_y + 27, circuitsdata[i][0])
+    renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", circuit_x, circuit_y, 0.2, 0.2), my_canvas, 0, 10)
+    my_canvas.drawString(circuit_x, circuit_y, circuitsdata[i][0])
     flag_x = circuitsdata[i][3]
     flag_y = circuitsdata[i][4]
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
