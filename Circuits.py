@@ -27,27 +27,27 @@ def GeoJSON_to_SVG(circuitname):
     with open("Data/" + circuitname + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
     features = geojson_data['features']
-    print("len features", len(features), "\n0", features[0], "\n1", features[1])
-    geometry = features[0]["geometry"]
-    if geometry['type'] == 'Point':
-        coordinates = geometry["coordinates"]
-        startfinish_x = coordinates[0]
-        startfinish_y = coordinates[1]
-        print("Point", startfinish_x, startfinish_y)
-    geometry = features[1]["geometry"]
-    coordinates = geometry["coordinates"]
-    min_x = min_y = float('inf')
-    max_x = max_y = float('-inf')
-    if geometry['type'] == 'LineString':
-        print("LineString")
-        coords = [coordinates]
-        for linestring in coords:
-            for point in linestring:
-                x, y = point
-                min_x = min(min_x, x)
-                max_x = max(max_x, x)
-                min_y = min(min_y, y)
-                max_y = max(max_y, y)
+    #print("len features", len(features), "\n0", features[0], "\n1", features[1])
+    for feature in features:
+        geometry = feature["geometry"]
+        if geometry['type'] == 'Point':
+            coordinates = geometry["coordinates"]
+            startfinish_x = coordinates[0]
+            startfinish_y = coordinates[1]
+            print("Point", startfinish_x, startfinish_y)
+        elif geometry['type'] == 'LineString':
+            coordinates = geometry["coordinates"]
+            min_x = min_y = float('inf')
+            max_x = max_y = float('-inf')
+            print("LineString")
+            coords = [coordinates]
+            for linestring in coords:
+               for point in linestring:
+                    x, y = point
+                    min_x = min(min_x, x)
+                    max_x = max(max_x, x)
+                    min_y = min(min_y, y)
+                    max_y = max(max_y, y)
     scale_x = width / (max_x - min_x)
     scale_y = height / (max_y - min_y)
     scale = (scale_x, scale_y)
