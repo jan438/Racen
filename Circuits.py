@@ -11,6 +11,11 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 startfinish_x = 0
 startfinish_y = 0
 
+def dms_to_decimal(degrees, minutes, seconds, direction):
+    decimal = degrees + (minutes / 60) + (seconds / 3600)
+    if direction in ['S', 'W']:
+        decimal *= -1
+    return decimal
 def GeoJSON_to_SVG(circuitname):
     def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
@@ -92,10 +97,22 @@ colwidth = 130
 row = 0
 col = 0
 GeoJSON_to_SVG(circuitsdata[23][0])
+
+graden = 4
+minuten = 32
+seconden = 27
+richting = 'E'
+
+# Zandvoort *** 52°23′20″N 4°32′27″E  4.54083333 52.388888889  "bbox": [ 4.538742, 52.384363, 4.553061, 52.391811 ] 
+# width = 4.553061 - 4.538742 = 0.014319  start_x 4.54083333 - 4.538742 = 0.0020913
+ 
+decimale_breedtegraad = dms_to_decimal(graden, minuten, seconden, richting)
+print(f"Decimale breedtegraad: {decimale_breedtegraad}")
+
 for i in range(count):
     circuit_x = col * colwidth
     circuit_y = row * rowheight
-    renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", circuit_x, circuit_y, 0.2, 0.2), my_canvas, 0, 40)
+    renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", circuit_x, circuit_y, 0.2, 0.2), my_canvas, 20, 20)
     my_canvas.drawString(circuit_x, circuit_y + 27, circuitsdata[i][0])
     flag_x = circuitsdata[i][3]
     flag_y = circuitsdata[i][4]
