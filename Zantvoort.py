@@ -98,6 +98,7 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 my_canvas = canvas.Canvas('PDF/Zandvoort2025.pdf')
+my_canvas.setFont("Helvetica", 25)
 bottom_margin = 5
 left_margin = 5
 drawing = svg2rlg('SVG/F1.svg')
@@ -106,6 +107,8 @@ rowcount = 6
 colcount = 4
 rowheight = 120
 colwidth = 130
+name_x = 300
+name_y = 25
 row = 0
 col = 0
 GeoJSON_to_SVG(circuitsdata[0][0])
@@ -121,7 +124,7 @@ print(f"Decimale breedtegraad: {decimale_breedtegraad}")
 circuit_x = col * colwidth
 circuit_y = row * rowheight
 renderPDF.draw(scaleSVG("SVG/" + circuitsdata[0][0] + ".svg", 1.0), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
-my_canvas.drawString(circuit_x + left_margin, circuit_y + bottom_margin, circuitsdata[0][0])
+my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[0][0])
 flag_x = circuitsdata[0][3]
 flag_y = circuitsdata[0][4]
 print(circuitsdata[0][0], circuitsdata[0][1], flag_x, flag_y)
