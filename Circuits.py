@@ -98,6 +98,7 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
+my_canvas.setFont("Helvetica", 10)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 300, 750)
 rowcount = 6
