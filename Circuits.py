@@ -124,7 +124,7 @@ for i in range(count):
     flag_x = circuitsdata[i][3]
     flag_y = circuitsdata[i][4]
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
-    renderPDF.draw(scaleSVG("SVG/finishflag.svg", 0.3), my_canvas, circuit_x + float(flag_x), circuit_y + float(flag_y))
+    renderPDF.draw(scaleSVG("SVG/finishflag.svg", 0.2), my_canvas, circuit_x + float(flag_x), circuit_y + float(flag_y))
     col += 1
     if col == colcount:
        row += 1
