@@ -123,10 +123,10 @@ for i in range(count):
     circuit_y = row * rowheight
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + ".svg", circuitscale), my_canvas, circuit_x, circuit_y)
     my_canvas.drawString(circuit_x, circuit_y, circuitsdata[i][0])
-    flag_x = circuitsdata[i][3]
-    flag_y = circuitsdata[i][4]
+    flag_x = float(circuitsdata[i][3]) * circuitscale
+    flag_y = float(circuitsdata[i][4]) * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
-    renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + float(flag_x), circuit_y + float(flag_y))
+    renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + flag_x, circuit_y + flag_y)
     col += 1
     if col == colcount:
        row += 1
