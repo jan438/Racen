@@ -75,7 +75,8 @@ def GeoJSON_to_SVG(circuitname):
                 f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
                 for path in svg_paths:
                     f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
-                f.write('</svg>')  
+                f.write('</svg>')
+    print("Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y)            
     return
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
