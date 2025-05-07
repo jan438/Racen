@@ -126,9 +126,9 @@ circuit_x = col * colwidth
 circuit_y = row * rowheight
 renderPDF.draw(scaleSVG("SVG/" + circuitsdata[0][0] + ".svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
 my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[0][0])
-flag_x = circuitsdata[0][3]
-flag_y = circuitsdata[0][4]
+flag_x = float(circuitsdata[0][3]) * circuitscale
+flag_y = float(circuitsdata[0][4]) * circuitscale
 print(circuitsdata[0][0], circuitsdata[0][1], flag_x, flag_y)
-renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + float(flag_x), circuit_y + + bottom_margin + float(flag_y))
+renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x, circuit_y + + bottom_margin + flag_y)
 my_canvas.save()
 key = input("Wait")
