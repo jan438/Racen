@@ -98,6 +98,8 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 my_canvas = canvas.Canvas('PDF/Zandvoort2025.pdf')
+bottom_margin = 5
+left_margin = 5
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 300, 750)
 rowcount = 6
@@ -118,11 +120,11 @@ decimale_breedtegraad = dms_to_decimal(graden, minuten, seconden, richting)
 print(f"Decimale breedtegraad: {decimale_breedtegraad}")
 circuit_x = col * colwidth
 circuit_y = row * rowheight
-renderPDF.draw(scaleSVG("SVG/" + circuitsdata[0][0] + ".svg", 1.0), my_canvas, circuit_x, circuit_y)
+renderPDF.draw(scaleSVG("SVG/" + circuitsdata[0][0] + ".svg", 1.0), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
 my_canvas.drawString(circuit_x, circuit_y, circuitsdata[0][0])
 flag_x = circuitsdata[0][3]
 flag_y = circuitsdata[0][4]
 print(circuitsdata[0][0], circuitsdata[0][1], flag_x, flag_y)
-renderPDF.draw(scaleSVG("SVG/finishflag.svg", 1.0), my_canvas, circuit_x + float(flag_x), circuit_y + float(flag_y))
+renderPDF.draw(scaleSVG("SVG/finishflag.svg", 1.0), my_canvas, circuit_x + left_margin + float(flag_x), circuit_y + + bottom_margin + float(flag_y))
 my_canvas.save()
 key = input("Wait")
