@@ -11,6 +11,16 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 startfinish_x = 0
 startfinish_y = 0
 
+def scaleSVG(svgfile, scaling_factor):
+    svg_root = load_svg_file(svgfile)
+    svgRenderer = SvgRenderer(svgfile)
+    drawing = svgRenderer.render(svg_root)
+    scaling_x = scaling_factor
+    scaling_y = scaling_factor
+    drawing.width = drawing.minWidth() * scaling_x
+    drawing.height = drawing.height * scaling_y
+    drawing.scale(scaling_x, scaling_y)
+    return drawing
 def dms_to_decimal(degrees, minutes, seconds, direction):
     decimal = degrees + (minutes / 60) + (seconds / 3600)
     if direction in ['S', 'W']:
@@ -112,12 +122,12 @@ print(f"Decimale breedtegraad: {decimale_breedtegraad}")
 for i in range(count):
     circuit_x = col * colwidth
     circuit_y = row * rowheight
-    renderPDF.draw(transform_svg("SVG/" + circuitsdata[i][0] + ".svg", circuit_x, circuit_y, 0.2, 0.2), my_canvas, 0, 10)
+    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + ".svg", 0.2), my_canvas, circuit_x, circuit_y)
     my_canvas.drawString(circuit_x, circuit_y, circuitsdata[i][0])
     flag_x = circuitsdata[i][3]
     flag_y = circuitsdata[i][4]
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
-    renderPDF.draw(transform_svg("SVG/finishflag.svg", circuit_x + float(flag_x), circuit_y + float(flag_y), 0.3, 0.3), my_canvas, 0, 0)
+    renderPDF.draw(scaleSVG("SVG/finishflag.svg", 0.3), my_canvas, circuit_x + float(flag_x), circuit_y + float(flag_y))
     col += 1
     if col == colcount:
        row += 1
