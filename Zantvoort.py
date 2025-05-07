@@ -107,18 +107,15 @@ colwidth = 130
 row = 0
 col = 0
 GeoJSON_to_SVG(circuitsdata[0][0])
-
 graden = 4
 minuten = 32
 seconden = 27
 richting = 'E'
-
+# pagesize=(595.27,841.89),
 # Zandvoort *** 52°23′20″N 4°32′27″E  4.54083333 52.388888889  "bbox": [ 4.538742, 52.384363, 4.553061, 52.391811 ] 
 # width = 4.553061 - 4.538742 = 0.014319  start_x 4.54083333 - 4.538742 = 0.0020913
- 
 decimale_breedtegraad = dms_to_decimal(graden, minuten, seconden, richting)
 print(f"Decimale breedtegraad: {decimale_breedtegraad}")
-
 circuit_x = col * colwidth
 circuit_y = row * rowheight
 renderPDF.draw(scaleSVG("SVG/" + circuitsdata[0][0] + ".svg", 0.2), my_canvas, circuit_x, circuit_y)
@@ -127,6 +124,5 @@ flag_x = circuitsdata[0][3]
 flag_y = circuitsdata[0][4]
 print(circuitsdata[0][0], circuitsdata[0][1], flag_x, flag_y)
 renderPDF.draw(scaleSVG("SVG/finishflag.svg", 0.3), my_canvas, circuit_x + float(flag_x), circuit_y + float(flag_y))
-
 my_canvas.save()
 key = input("Wait")
