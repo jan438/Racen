@@ -12,6 +12,8 @@ MarinaBay *** 1°17′29.51″N 103°51′49.86″E
 Miami *** 25°57′29″N 80°14′20″W
 Monaco *** 43°44′5″N 7°25′14″E
 Monza *** 45°37′14″N 9°17′22″E
+LasVegas *** 36°06′36″N 115°09′44″W
+Lusail *** 25°29′24″N 51°27′15″E
 RedBullRing *** 47°13′11″N 14°45′53″E
 Shanghai *** 31°20′20″N 121°13′11″E		
 Suzuka *** 34.8417°N 136.5389°E	
@@ -19,6 +21,4 @@ Silverstone *** 52°04′16″N 1°00′58″W
 SpaFrancorchamps *** 50°26′14″N 5°58′17″E
 Zandvoort *** 52°23′20″N 4°32′27″E
 theAmericas *** 30°7′58″N 97°38′28″W
-LasVegas *** 36°06′36″N 115°09′44″W
-Lusail *** 25°29′24″N 51°27′15″E
 YasMarina *** 24°28′2″N 54°36′11″E
