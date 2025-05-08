@@ -1,4 +1,4 @@
-AlbertPark *** 37°50′59″S 144°58′6″E
+AlbertPark *** 37°50′59″S 144°58′6″E  xxx
 Bahrain	*** 26°1′57″N 50°30′38″E
 Baku *** 40°22′21″N 49°51′12″E
 Catalunya *** 41°34′12″N 2°15′40″E
@@ -21,4 +21,4 @@ SpaFrancorchamps *** 50°26′14″N 5°58′17″E
 Suzuka *** 34.8417°N 136.5389°E
 theAmericas *** 30°7′58″N 97°38′28″W
 YasMarina *** 24°28′2″N 54°36′11″E
-Zandvoort *** 52°23′20″N 4°32′27″E
+Zandvoort *** 52°23′20″N 4°32′27″E   xxx
