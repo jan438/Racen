@@ -11,6 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 startfinish_x = 0
 startfinish_y = 0
 circuitscale = 0.2
+flagcorrection = -5.0
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -129,7 +130,7 @@ for i in range(count):
     flag_x = float(circuitsdata[i][3]) * circuitscale
     flag_y = float(circuitsdata[i][4]) * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
-    renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + flag_x, circuit_y + flag_y)
+    renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + flag_x + flagcorrection * circuitscale, circuit_y + flag_y)
     col += 1
     if col == colcount:
        row += 1
