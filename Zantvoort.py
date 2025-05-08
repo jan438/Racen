@@ -102,6 +102,7 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
+cx = 0
 my_canvas = canvas.Canvas('PDF/Zandvoort2025.pdf')
 my_canvas.setFont("Helvetica", 25)
 bottom_margin = 5
@@ -116,7 +117,7 @@ name_x = 300
 name_y = 25
 row = 0
 col = 0
-GeoJSON_to_SVG(circuitsdata[0][0])
+GeoJSON_to_SVG(circuitsdata[cx][0])
 graden = 4
 minuten = 32
 seconden = 27
@@ -128,11 +129,11 @@ decimale_breedtegraad = dms_to_decimal(graden, minuten, seconden, richting)
 print(f"Decimale breedtegraad: {decimale_breedtegraad}")
 circuit_x = col * colwidth
 circuit_y = row * rowheight
-renderPDF.draw(scaleSVG("SVG/" + circuitsdata[0][0] + ".svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
-my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[0][0])
-flag_x = float(circuitsdata[0][3]) * circuitscale
-flag_y = float(circuitsdata[0][4]) * circuitscale
-print(circuitsdata[0][0], circuitsdata[0][1], flag_x, flag_y)
+renderPDF.draw(scaleSVG("SVG/" + circuitsdata[cx][0] + ".svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
+my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[cx][0])
+flag_x = float(circuitsdata[cx][3]) * circuitscale
+flag_y = float(circuitsdata[cx][4]) * circuitscale
+print(circuitsdata[cx][0], circuitsdata[cx][1], flag_x, flag_y)
 renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + + bottom_margin + flag_y)
 my_canvas.save()
 key = input("Wait")
