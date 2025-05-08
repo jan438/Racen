@@ -1,7 +1,8 @@
 AlbertPark *** 37°50′59″S 144°58′6″E
+Bahrain	*** 26°1′57″N 50°30′38″E
+Baku *** 40°22′21″N 49°51′12″E
 Shanghai *** 31°20′20″N 121°13′11″E		
 Suzuka *** 34.8417°N 136.5389°E	
-Bahrain	*** 26°1′57″N 50°30′38″E	
 JeddahCorniche *** 21°37′55″N 39°6′16″E
 Miami *** 25°57′29″N 80°14′20″W
 EnzoEDinoFerrari *** 44°20′28″N 11°42′48″E
@@ -14,7 +15,6 @@ SpaFrancorchamps *** 50°26′14″N 5°58′17″E
 Hungaroring *** 47°34′56″N 19°15′04″E
 Zandvoort *** 52°23′20″N 4°32′27″E
 Monza *** 45°37′14″N 9°17′22″E
-Baku *** 40°22′21″N 49°51′12″E
 MarinaBay *** 1°17′29.51″N 103°51′49.86″E
 theAmericas *** 30°7′58″N 97°38′28″W
 HermanosRodriguez *** 19°24′22″N 99°5′33″W
