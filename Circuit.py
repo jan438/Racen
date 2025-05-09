@@ -125,6 +125,6 @@ my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin
 flag_x = float(circuitsdata[cx][3]) * circuitscale
 flag_y = float(circuitsdata[cx][4]) * circuitscale
 print(circuitsdata[cx][0], circuitsdata[cx][1], flag_x, flag_y)
-renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + + bottom_margin + flag_y)
+renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
 my_canvas.save()
 key = input("Wait")
