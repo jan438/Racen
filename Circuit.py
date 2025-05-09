@@ -118,17 +118,8 @@ name_y = 25
 row = 0
 col = 0
 GeoJSON_to_SVG(circuitsdata[cx][1])
-graden = 4
-minuten = 32
-seconden = 27
-richting = 'E'
-# pagesize=(595.27,841.89),
-# Zandvoort *** 52°23′20″N 4°32′27″E  4.54083333 52.388888889  "bbox": [ 4.538742, 52.384363, 4.553061, 52.391811 ] 
-# width = 4.553061 - 4.538742 = 0.014319  start_x 4.54083333 - 4.538742 = 0.0020913
-decimale_breedtegraad = dms_to_decimal(graden, minuten, seconden, richting)
-print(f"Decimale breedtegraad: {decimale_breedtegraad}")
-circuit_x = col * colwidth
-circuit_y = row * rowheight
+circuit_x = 0
+circuit_y = 0
 renderPDF.draw(scaleSVG("SVG/" + circuitsdata[cx][0] + ".svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
 my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[cx][0])
 flag_x = float(circuitsdata[cx][3]) * circuitscale
