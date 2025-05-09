@@ -80,7 +80,7 @@ def GeoJSON_to_SVG(circuitname):
                     f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
                 f.write('</svg>')
     print("Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)      
-    return
+    return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -102,7 +102,7 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-cx = 1
+cx = 23
 my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025.pdf")
 my_canvas.setFont("Helvetica", 25)
 bottom_margin = 5
@@ -117,13 +117,13 @@ name_x = 300
 name_y = 25
 row = 0
 col = 0
-GeoJSON_to_SVG(circuitsdata[cx][1])
+[offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[cx][1])
 circuit_x = 0
 circuit_y = 0
 renderPDF.draw(scaleSVG("SVG/" + circuitsdata[cx][0] + ".svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
 my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[cx][0])
-flag_x = float(circuitsdata[cx][3]) * circuitscale
-flag_y = float(circuitsdata[cx][4]) * circuitscale
+flag_x = offset_x * circuitscale
+flag_y = offset_y * circuitscale
 print(circuitsdata[cx][0], circuitsdata[cx][1], flag_x, flag_y)
 renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
 my_canvas.save()
