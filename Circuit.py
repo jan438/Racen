@@ -117,7 +117,7 @@ name_x = 300
 name_y = 25
 row = 0
 col = 0
-GeoJSON_to_SVG(circuitsdata[cx][0])
+GeoJSON_to_SVG(circuitsdata[cx][1])
 graden = 4
 minuten = 32
 seconden = 27
