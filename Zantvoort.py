@@ -102,7 +102,7 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-cx = 0
+cx = 23
 my_canvas = canvas.Canvas('PDF/Zandvoort2025.pdf')
 my_canvas.setFont("Helvetica", 25)
 bottom_margin = 5
