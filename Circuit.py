@@ -8,8 +8,6 @@ from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
-startfinish_x = 0
-startfinish_y = 0
 circuitscale = 1.0
 flagcorrection = -5.0
 
@@ -109,14 +107,8 @@ bottom_margin = 5
 left_margin = 5
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 300, 750)
-rowcount = 6
-colcount = 4
-rowheight = 120
-colwidth = 130
 name_x = 300
 name_y = 25
-row = 0
-col = 0
 [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[cx][1])
 circuit_x = 0
 circuit_y = 0
