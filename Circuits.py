@@ -8,8 +8,6 @@ from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
-startfinish_x = 0
-startfinish_y = 0
 circuitscale = 0.2
 flagcorrection = -5.0
 
@@ -80,7 +78,7 @@ def GeoJSON_to_SVG(circuitname):
                     f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
                 f.write('</svg>')
     print("Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)
-    return
+    return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -112,23 +110,14 @@ rowheight = 120
 colwidth = 130
 row = 0
 col = 0
-GeoJSON_to_SVG(circuitsdata[23][0])
-graden = 4
-minuten = 32
-seconden = 27
-richting = 'E'
-# pagesize=(595.27,841.89),
-# Zandvoort *** 52°23′20″N 4°32′27″E  4.54083333 52.388888889  "bbox": [ 4.538742, 52.384363, 4.553061, 52.391811 ] 
-# width = 4.553061 - 4.538742 = 0.014319  start_x 4.54083333 - 4.538742 = 0.0020913
-decimale_breedtegraad = dms_to_decimal(graden, minuten, seconden, richting)
-print(f"Decimale breedtegraad: {decimale_breedtegraad}")
 for i in range(count):
+    [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[i][0])
     circuit_x = col * colwidth
     circuit_y = row * rowheight
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + ".svg", circuitscale), my_canvas, circuit_x, circuit_y)
     my_canvas.drawString(circuit_x, circuit_y, circuitsdata[i][0])
-    flag_x = float(circuitsdata[i][3]) * circuitscale
-    flag_y = float(circuitsdata[i][4]) * circuitscale
+    flag_x = offset_x * circuitscale
+    flag_y = offset_y * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
     renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + flag_x + flagcorrection * circuitscale, circuit_y + flag_y)
     col += 1
