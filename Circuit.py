@@ -77,7 +77,7 @@ def GeoJSON_to_SVG(circuitname):
                 for path in svg_paths:
                     f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
                 f.write('</svg>')
-    print("Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)      
+    print("Circuit", circuitname,"Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)      
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
@@ -116,7 +116,6 @@ renderPDF.draw(scaleSVG("SVG/" + circuitsdata[cx][0] + ".svg", circuitscale), my
 my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[cx][0])
 flag_x = offset_x * circuitscale
 flag_y = offset_y * circuitscale
-print(circuitsdata[cx][0], circuitsdata[cx][1], flag_x, flag_y)
 renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
 my_canvas.save()
 key = input("Wait")
