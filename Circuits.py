@@ -91,6 +91,8 @@ with open(file_to_open, 'r') as file:
         count += 1
 my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 my_canvas.setFont("Helvetica", 10)
+bottom_margin = 15
+left_margin = 20
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 300, 750)
 rowcount = 6
@@ -103,12 +105,12 @@ for i in range(count):
     [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[i][1])
     circuit_x = col * colwidth
     circuit_y = row * rowheight
-    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + ".svg", circuitscale), my_canvas, circuit_x, circuit_y)
-    my_canvas.drawString(circuit_x, circuit_y, circuitsdata[i][0])
+    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + ".svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
+    my_canvas.drawString(circuit_x + left_margin, circuit_y + bottom_margin, circuitsdata[i][0])
     flag_x = offset_x * circuitscale
     flag_y = offset_y * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
-    renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + flag_x + flagcorrection * circuitscale, circuit_y + flag_y)
+    renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
     col += 1
     if col == colcount:
         row += 1
