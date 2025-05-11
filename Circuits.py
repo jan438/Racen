@@ -91,6 +91,7 @@ with open(file_to_open, 'r') as file:
         count += 1
 my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 my_canvas.setFont("Helvetica", 10)
+my_canvas.setTitle("Circuits2025")
 bottom_margin = 15
 left_margin = 20
 drawing = svg2rlg('SVG/F1.svg')
