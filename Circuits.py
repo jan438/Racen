@@ -66,17 +66,6 @@ def GeoJSON_to_SVG(circuitname):
     translate = (min_x, min_y)
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
-    svg_paths = []
-    for feature in geojson_data['features']:
-        geometry = feature['geometry']
-        coords = geometry['coordinates']
-        if geometry['type'] == 'LineString':
-            svg_paths.append(coordinates_to_path([coords], scale, translate))
-            with open("SVG/" + circuitname + ".svg", 'w') as f:
-                f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
-                for path in svg_paths:
-                    f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
-                f.write('</svg>')
     print("Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
