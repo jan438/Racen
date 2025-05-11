@@ -100,18 +100,19 @@ colwidth = 130
 row = 0
 col = 0
 for i in range(count):
-    [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[i][0])
-    circuit_x = col * colwidth
-    circuit_y = row * rowheight
-    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + ".svg", circuitscale), my_canvas, circuit_x, circuit_y)
-    my_canvas.drawString(circuit_x, circuit_y, circuitsdata[i][0])
-    flag_x = offset_x * circuitscale
-    flag_y = offset_y * circuitscale
-    print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
-    renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + flag_x + flagcorrection * circuitscale, circuit_y + flag_y)
+    if i == 0:
+        [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[i][1])
+        circuit_x = col * colwidth
+        circuit_y = row * rowheight
+        renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + ".svg", circuitscale), my_canvas, circuit_x, circuit_y)
+        my_canvas.drawString(circuit_x, circuit_y, circuitsdata[i][0])
+        flag_x = offset_x * circuitscale
+        flag_y = offset_y * circuitscale
+        print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
+        renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + flag_x + flagcorrection * circuitscale, circuit_y + flag_y)
     col += 1
     if col == colcount:
-       row += 1
-       col = 0
+        row += 1
+        col = 0
 my_canvas.save()
 key = input("Wait")
