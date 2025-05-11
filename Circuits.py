@@ -4,12 +4,19 @@ import csv
 import geojson
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 0.2
 flagcorrection = -5.0
+A4_height = A4[1]
+A4_width = A4[0]
+left_padding = 0
+bottom_padding = 0
+width = A4_width
+height = A4_height
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -92,6 +99,8 @@ with open(file_to_open, 'r') as file:
 my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 my_canvas.setFont("Helvetica", 10)
 my_canvas.setTitle("Circuits2025")
+my_canvas.setFillColorRGB(0,0,0)
+my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 bottom_margin = 15
 left_margin = 20
 drawing = svg2rlg('SVG/F1.svg')
