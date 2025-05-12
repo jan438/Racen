@@ -11,8 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 0.24
 flagcorrectionx = -30.0
-flagcorrectiony = -15.0
-#flagcorrectionx = -5.0
+flagcorrectiony = -5.0
 A4_height = A4[1]
 A4_width = A4[0]
 left_padding = 0
