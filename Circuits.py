@@ -99,9 +99,9 @@ with open(file_to_open, 'r') as file:
 my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
 my_canvas.setFont("Helvetica", 10)
 my_canvas.setTitle("Circuits2025")
-my_canvas.setFillColorRGB(0,255,250)
+my_canvas.setFillColorRGB(255,255,255)
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
-my_canvas.setFillColorRGB(255,0,250)
+my_canvas.setFillColorRGB(0,0,248)
 bottom_margin = 15
 left_margin = 20
 drawing = svg2rlg('SVG/F1.svg')
