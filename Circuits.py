@@ -105,7 +105,7 @@ my_canvas.setFillColorRGB(0,0,248)
 bottom_margin = 15
 left_margin = 20
 drawing = svg2rlg('SVG/F1.svg')
-renderPDF.draw(drawing, my_canvas, 300, 750)
+renderPDF.draw(drawing, my_canvas, 100, 780)
 rowcount = 6
 colcount = 4
 rowheight = 132
