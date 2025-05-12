@@ -10,7 +10,9 @@ from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 0.24
-flagcorrection = -5.0
+flagcorrectionx = -30.0
+flagcorrectiony = -15.0
+#flagcorrectionx = -5.0
 A4_height = A4[1]
 A4_width = A4[0]
 left_padding = 0
@@ -121,7 +123,7 @@ for i in range(count):
     flag_x = offset_x * circuitscale
     flag_y = offset_y * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
-    renderPDF.draw(scaleSVG("SVG/startflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
+    renderPDF.draw(scaleSVG("SVG/startflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectionx * circuitscale)
     col += 1
     if col == colcount:
         row += 1
