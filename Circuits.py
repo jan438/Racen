@@ -121,7 +121,7 @@ for i in range(count):
     flag_x = offset_x * circuitscale
     flag_y = offset_y * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
-    renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
+    renderPDF.draw(scaleSVG("SVG/startflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
     col += 1
     if col == colcount:
         row += 1
