@@ -84,6 +84,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                 svg_paths.append(coordinates_to_path([coords], scale, translate))
                 for path in svg_paths:
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="yellow"/>\n')
+                    f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="white"/>\n')
         f.write('</svg>')
     print("Geo", geojsonfile, "SVG", svgfile,"Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y, "Sectoren", len(addedfeatures))      
     return [offset_x, offset_y]
