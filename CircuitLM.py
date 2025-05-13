@@ -36,7 +36,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                 y = (point[1] - translate[1]) * scale[1]
                 command = "M" if i == 0 else "L"
                 path_data += f"{command}{x},{height - y} "
-            path_data += "Z "
+            #path_data += "Z "
         return path_data.strip()
     def calculate_distance(x1, y1, x2, y2):
         return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
