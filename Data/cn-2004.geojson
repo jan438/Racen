@@ -5,19 +5,6 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startfinish"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    121.22138315821,
-                    31.34276853145
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "Location": "Shanghai",
                 "altitude": "14",
                 "length": "5451",
@@ -593,6 +580,45 @@
                         121.21838000000,
                         31.33683500000
                     ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.21551281226,
+                    31.34058305100
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.22057410412,
+                    31.33730473513
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.22095040834,
+                    31.34328275477
                 ]
             }
         }
