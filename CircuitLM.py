@@ -75,10 +75,10 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
         coords = geometry['coordinates']
         if geometry['type'] == 'LineString':
             svg_paths.append(coordinates_to_path([coords], scale, translate))
-            with open("SVG/" + svgfile + ".svg", 'w') as f:
+            with open("SVG/" + svgfile + "LM.svg", 'w') as f:
                 f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
                 for path in svg_paths:
-                    f.write(f'<path d="{path}" fill="none" stroke-width="5" stroke="white"/>\n')
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="white"/>\n')
                 f.write('</svg>')
     distance = calculate_distance(1, 2, 4, 6)
     print("Distance:", distance)             
@@ -106,7 +106,7 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 cx = 17
-my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025.pdf")
+my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025LM.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle(circuitsdata[cx][0])
 bottom_margin = 5
