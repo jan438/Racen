@@ -48,7 +48,8 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     print("Count features", len(features))
     for feature in features:
         geometry = feature["geometry"]
-        if geometry['type'] == 'Point':
+        properties = feature['properties']
+        if geometry['type'] == 'Point' and properties['place'] == "startfinish":
             coordinates = geometry["coordinates"]
             startfinish_x = coordinates[0]
             startfinish_y = coordinates[1]
