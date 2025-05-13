@@ -70,18 +70,16 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
     svg_paths = []
-    for feature in geojson_data['features']:
-        geometry = feature['geometry']
-        coords = geometry['coordinates']
-        if geometry['type'] == 'LineString':
-            svg_paths.append(coordinates_to_path([coords], scale, translate))
-            with open("SVG/" + svgfile + "LM.svg", 'w') as f:
-                f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
+    with open("SVG/" + svgfile + "LM.svg", 'w') as f:
+        f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
+        for feature in geojson_data['features']:
+            geometry = feature['geometry']
+            coords = geometry['coordinates']
+            if geometry['type'] == 'LineString':
+                svg_paths.append(coordinates_to_path([coords], scale, translate))
                 for path in svg_paths:
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="white"/>\n')
-                f.write('</svg>')
-    distance = calculate_distance(1, 2, 4, 6)
-    print("Distance:", distance)             
+        f.write('</svg>')
     print("Geo", geojsonfile, "SVG", svgfile,"Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)      
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
