@@ -121,7 +121,7 @@ name_y = 25
 [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[cx][1], circuitsdata[cx][0])
 circuit_x = 0
 circuit_y = 0
-renderPDF.draw(scaleSVG("SVG/" + circuitsdata[cx][0] + ".svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
+renderPDF.draw(scaleSVG("SVG/" + circuitsdata[cx][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
 my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[cx][0])
 flag_x = offset_x * circuitscale
 flag_y = offset_y * circuitscale
