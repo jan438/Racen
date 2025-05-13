@@ -75,7 +75,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             with open("SVG/" + svgfile + ".svg", 'w') as f:
                 f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
                 for path in svg_paths:
-                    f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="black"/>\n')
+                    f.write(f'<path d="{path}" fill="none" stroke-width="5" stroke="white"/>\n')
                 f.write('</svg>')
     print("Geo", geojsonfile, "SVG", svgfile,"Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)      
     return [offset_x, offset_y]
@@ -100,7 +100,7 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-cx = 4
+cx = 17
 my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle(circuitsdata[cx][0])
