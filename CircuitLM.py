@@ -81,10 +81,20 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             geometry = feature['geometry']
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
-                svg_paths.append(coordinates_to_path([coords], scale, translate))
-                for path in svg_paths:
-                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="yellow"/>\n')
-                    f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="white"/>\n')
+                svg_paths.append(coordinates_to_path([coords[:20]], scale, translate))
+                svg_paths.append(coordinates_to_path([coords[20:30]], scale, translate))
+                svg_paths.append(coordinates_to_path([coords[30:]], scale, translate))
+                for i in range(len(svg_paths)):
+                    path = svg_paths[i]
+                    if i == 0:
+                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="yellow"/>\n')
+                        f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="white"/>\n')
+                    if i == 1:
+                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="green"/>\n')
+                        f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="white"/>\n')
+                    if i == 2:
+                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="red"/>\n')
+                        f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="white"/>\n')
         f.write('</svg>')
     print("Geo", geojsonfile, "SVG", svgfile,"Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y, "Sectoren", len(addedfeatures))      
     return [offset_x, offset_y]
