@@ -45,6 +45,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     with open("Data/" + geojsonfile + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
     features = geojson_data['features']
+    print("Count features", len(features))
     for feature in features:
         geometry = feature["geometry"]
         if geometry['type'] == 'Point':
