@@ -46,6 +46,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
         geojson_data = geojson.load(file)
     features = geojson_data['features']
     print("Count features", len(features))
+    addedfeatures = []
     for feature in features:
         geometry = feature["geometry"]
         properties = feature['properties']
@@ -53,6 +54,8 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             coordinates = geometry["coordinates"]
             startfinish_x = coordinates[0]
             startfinish_y = coordinates[1]
+        elif geometry['type'] == 'Point' and properties['place'] == "startsector":
+            addedfeatures.append(feature)
         elif geometry['type'] == 'LineString':
             coordinates = geometry["coordinates"]
             min_x = min_y = float('inf')
@@ -82,7 +85,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                 for path in svg_paths:
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="white"/>\n')
         f.write('</svg>')
-    print("Geo", geojsonfile, "SVG", svgfile,"Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)      
+    print("Geo", geojsonfile, "SVG", svgfile,"Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y, "Sectoren", len(addedfeatures))      
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
