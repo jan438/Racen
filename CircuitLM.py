@@ -83,7 +83,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             if geometry['type'] == 'LineString':
                 svg_paths.append(coordinates_to_path([coords[:20]], scale, translate))
                 svg_paths.append(coordinates_to_path([coords[21:40]], scale, translate))
-                svg_paths.append(coordinates_to_path([coords[41:]], scale, translate))
+                svg_paths.append(coordinates_to_path([coords[41:-1]], scale, translate))
                 for i in range(len(svg_paths)):
                     path = svg_paths[i]
                     if i == 0:
