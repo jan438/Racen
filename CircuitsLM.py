@@ -97,7 +97,7 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-my_canvas = canvas.Canvas('PDF/Circuits2025.pdf')
+my_canvas = canvas.Canvas('PDF/Circuits2025LM.pdf')
 my_canvas.setFont("Helvetica", 10)
 my_canvas.setTitle("Circuits2025")
 my_canvas.setFillColorRGB(0,0,0)
@@ -117,7 +117,7 @@ for i in range(count):
     [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[i][1])
     circuit_x = col * colwidth
     circuit_y = row * rowheight
-    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + ".svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
+    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
     my_canvas.drawString(circuit_x + left_margin, circuit_y + bottom_margin, circuitsdata[i][0])
     flag_x = offset_x * circuitscale
     flag_y = offset_y * circuitscale
