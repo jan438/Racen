@@ -73,6 +73,8 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     translate = (min_x, min_y)
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
+    for i in range(len(addedfeatures)):
+        print("Added featre", i)
     svg_paths = []
     with open("SVG/" + svgfile + "LM.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
@@ -87,13 +89,10 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     path = svg_paths[i]
                     if i == 0:
                         f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="yellow"/>\n')
-                        #f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="white"/>\n')
                     if i == 1:
                         f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="green"/>\n')
-                        #f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="white"/>\n')
                     if i == 2:
                         f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="red"/>\n')
-                        #f.write(f'<path d="{path}" fill="none" stroke-width="3" stroke="white"/>\n')
         f.write('</svg>')
     print("Geo", geojsonfile, "SVG", svgfile,"Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y, "Sectoren", len(addedfeatures))      
     return [offset_x, offset_y]
