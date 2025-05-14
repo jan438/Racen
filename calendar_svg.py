@@ -117,9 +117,6 @@ def convert_text_to_paths(svg_path):
     cairosvg.svg2svg(url=svg_path, write_to=path_svg_path)
     print(f"Text converted to paths.")
 
-
-# CLI entry point
-if __name__ == "__main__":
-    file_path = generate_calendar_svg(2025, 5, 1, "cairocal.svg", False)
-    print(f"SVG calendar saved as {file_path}")
-    key = input("Wait")
+file_path = generate_calendar_svg(2025, 5, 1, "cairocal.svg", False)
+print(f"SVG calendar saved as {file_path}")
+key = input("Wait")
