@@ -9,6 +9,11 @@ import unicodedata
 import svgwrite
 from svgwrite import Drawing
 import cairosvg
+from reportlab.graphics import renderPDF
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import inch, mm
+from reportlab.graphics.shapes import *
+from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calendar.svg", as_text=False):
     output_dir = "SVG"
@@ -78,7 +83,6 @@ def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calenda
     if not as_text:
         convert_text_to_paths(file_path)
     return file_path
-
 def add_text(dwg, text, insert, font_size=16, font_family="sans-serif", font_weight="normal", text_anchor="start", as_text=True):
     dwg.add(dwg.text(
         text,
@@ -88,17 +92,30 @@ def add_text(dwg, text, insert, font_size=16, font_family="sans-serif", font_wei
         font_weight=font_weight,
         text_anchor=text_anchor,
     ))
-
 def convert_text_to_paths(svg_path):
     path_svg_path = svg_path
     cairosvg.svg2svg(url=svg_path, write_to=path_svg_path)
     print(f"Text converted to paths.")
+def scaleSVG(svgfile, scaling_factor):
+    svg_root = load_svg_file(svgfile)
+    svgRenderer = SvgRenderer(svgfile)
+    drawing = svgRenderer.render(svg_root)
+    scaling_x = scaling_factor
+    scaling_y = scaling_factor
+    drawing.width = drawing.minWidth() * scaling_x
+    drawing.height = drawing.height * scaling_y
+    drawing.scale(scaling_x, scaling_y)
+    return drawing
 
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-file_path = generate_calendar_svg(2025, 5, 1, "May2025.svg", False)
-print(f"SVG calendar saved as {file_path}")
+my_canvas = canvas.Canvas("PDF/Calendar2025.pdf")
+my_canvas.setFont("Helvetica", 25)
+my_canvas.setTitle("Calendar 2025")
+#file_path = generate_calendar_svg(2025, 5, 1, "May2025.svg", False)
+renderPDF.draw(scaleSVG("SVG/May2025.svg", 0.45), my_canvas, 75, 300)
+my_canvas.save()
 key = input("Wait")
