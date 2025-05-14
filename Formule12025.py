@@ -23,8 +23,8 @@ def processreport():
         inputpdf = open("PDF/Calendar2025.pdf", "rb")
         merger.append(inputpdf)
         inputpdf.close()
-    if os.path.isfile("PDF/Circuits2025.pdf"):
-        inputpdf = open("PDF/Circuits2025.pdf", "rb")
+    if os.path.isfile("PDF/Circuits2025LM.pdf"):
+        inputpdf = open("PDF/Circuits2025LM.pdf", "rb")
         merger.append(inputpdf)
         inputpdf.close()
     if os.path.isfile("PDF/Teams2025.pdf"):
