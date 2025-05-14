@@ -99,6 +99,6 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-file_path = generate_calendar_svg(2025, 5, 1, "cairocal.svg", False)
+file_path = generate_calendar_svg(2025, 5, 1, "May2025.svg", False)
 print(f"SVG calendar saved as {file_path}")
 key = input("Wait")
