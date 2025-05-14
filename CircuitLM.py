@@ -73,7 +73,9 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     translate = (min_x, min_y)
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
+    startindices = []
     for i in range(len(addedfeatures)):
+        startindices.append(40 + i * 20)
         print("Added featre", i)
     svg_paths = []
     with open("SVG/" + svgfile + "LM.svg", 'w') as f:
@@ -82,9 +84,9 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             geometry = feature['geometry']
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
-                svg_paths.append(coordinates_to_path([coords[:22]], scale, translate))
-                svg_paths.append(coordinates_to_path([coords[20:42]], scale, translate))
-                svg_paths.append(coordinates_to_path([coords[40:]], scale, translate))
+                svg_paths.append(coordinates_to_path([coords[:startindices[0] + 1]], scale, translate))
+                svg_paths.append(coordinates_to_path([coords[startindices[0] - 1:startindices[1] + 1]], scale, translate))
+                svg_paths.append(coordinates_to_path([coords[startindices[1] - 1:]], scale, translate))
                 for i in range(len(svg_paths)):
                     path = svg_paths[i]
                     if i == 0:
