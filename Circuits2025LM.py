@@ -105,8 +105,7 @@ my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFillColorRGB(255,170,0)
 bottom_margin = 15
 left_margin = 20
-drawing = svg2rlg('SVG/WorldMap.svg')
-renderPDF.draw(drawing, my_canvas, 100, 400)
+renderPDF.draw(scaleSVG("SVG/WorldMap.svg", 0.45), my_canvas, 75, 300)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 rowcount = 6
