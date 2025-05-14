@@ -90,11 +90,11 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                 for i in range(len(svg_paths)):
                     path = svg_paths[i]
                     if i == 0:
-                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="yellow"/>\n')
+                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#fae44a"/>\n')
                     if i == 1:
-                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="green"/>\n')
+                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#db4a25"/>\n')
                     if i == 2:
-                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="red"/>\n')
+                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#1bce20"/>\n')
         f.write('</svg>')
     print("Geo", geojsonfile, "SVG", svgfile,"Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y, "Sectoren", len(addedfeatures))      
     return [offset_x, offset_y]
