@@ -1,6 +1,12 @@
 import os
 import calendar
 import datetime
+import os
+import sys
+import csv
+import math
+import unicodedata
+import svgwrite
 from svgwrite import Drawing
 import cairosvg
 
@@ -88,6 +94,11 @@ def convert_text_to_paths(svg_path):
     cairosvg.svg2svg(url=svg_path, write_to=path_svg_path)
     print(f"Text converted to paths.")
 
+if sys.platform[0] == 'l':
+    path = '/home/jan/git/Racen'
+if sys.platform[0] == 'w':
+    path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
+os.chdir(path)
 file_path = generate_calendar_svg(2025, 5, 1, "cairocal.svg", False)
 print(f"SVG calendar saved as {file_path}")
 key = input("Wait")
