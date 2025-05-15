@@ -31,6 +31,10 @@ def processreport():
         inputpdf = open("PDF/Teams2025.pdf", "rb")
         merger.append(inputpdf)
         inputpdf.close()
+    if os.path.isfile("PDF/Schema2025.pdf"):
+        inputpdf = open("PDF/Schema2025.pdf", "rb")
+        merger.append(inputpdf)
+        inputpdf.close()
     output = open("PDF/F1Totaal.pdf", "wb")
     merger.write(output)
     merger.close()
