@@ -100,5 +100,5 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 for i in range(12):
-    file_path = generate_calendar_svg(2025, i + 1, 1, monthnames[i] + ".svg", False)
+    file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
 key = input("Wait")
