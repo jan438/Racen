@@ -14,6 +14,8 @@ from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
+monthnames = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus", "September","Oktober","November","December"]
+
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -35,6 +37,7 @@ my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle("Calendar 2025")
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
-renderPDF.draw(scaleSVG("SVG/May2025.svg", 0.45), my_canvas, 75, 300)
+for i in range(12):
+    renderPDF.draw(scaleSVG("SVG/" + monthnames[i] + ".svg", 0.45), my_canvas, 75, 300)
 my_canvas.save()
 key = input("Wait")
