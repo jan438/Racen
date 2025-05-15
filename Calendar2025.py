@@ -36,7 +36,7 @@ my_canvas = canvas.Canvas("PDF/Calendar2025.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle("Calendar 2025")
 my_canvas.bookmarkPage("Meaning_of_life")
-my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", (inch, inch, 6*inch, 2*inch))
+my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", (0, 0, 6, 2), Border='[0 0 0]')
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 row = 0
