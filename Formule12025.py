@@ -31,24 +31,11 @@ def processreport():
         inputpdf = open("PDF/Teams2025.pdf", "rb")
         merger.append(inputpdf)
         inputpdf.close()
-    if os.path.isfile("PDF/Schema2025.pdf"):
-        inputpdf = open("PDF/Schema2025.pdf", "rb")
-        merger.append(inputpdf)
-        inputpdf.close()
     output = open("PDF/F1Totaal.pdf", "wb")
     merger.write(output)
     merger.close()
     output.close()
-
- #   if os.path.isfile("PDF/Calendar2025.pdf"):
- #       os.remove("PDF/Calendar.pdf")
- 
- #   if os.path.isfile("PDF/Calendar2025.pdf"):
- #       os.remove("PDF/Calendar.pdf")
- 
- #   if os.path.isfile("PDF/Calendar2025.pdf"):
- #       os.remove("PDF/Calendar.pdf")
-        
+   
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
 if sys.platform[0] == 'w':
