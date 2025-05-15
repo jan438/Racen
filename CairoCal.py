@@ -10,6 +10,8 @@ import svgwrite
 from svgwrite import Drawing
 import cairosvg
 
+monthnames = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus", "September","Oktober","November","December"]
+
 def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calendar.svg", as_text=False):
     output_dir = "SVG"
     os.makedirs(output_dir, exist_ok=True)
@@ -97,5 +99,6 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-file_path = generate_calendar_svg(2025, 5, 1, "May2025.svg", False)
+for i in range(12):
+    file_path = generate_calendar_svg(2025, i + 1, 1, monthnames[i] + ".svg", False)
 key = input("Wait")
