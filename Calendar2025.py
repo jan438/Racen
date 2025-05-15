@@ -38,17 +38,16 @@ my_canvas.setTitle("Calendar 2025")
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 row = 0
-col = 0
+col = 1
 leftmargin = 75
 bottommargin = 50
 colwidth = 200
 rowheight = 125
-colcount = 2
 for i in range(12):
-    renderPDF.draw(scaleSVG("SVG/" + monthnames[i] + ".svg", 0.25), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
-    col += 1
-    if col == colcount:
+    renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.25), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
+    col -= 1
+    if col == -1:
         row += 1
-        col = 0
+        col = 1
 my_canvas.save()
 key = input("Wait")
