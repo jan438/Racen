@@ -36,8 +36,6 @@ my_canvas = canvas.Canvas("PDF/Calendar2025.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle("Calendar 2025")
 my_canvas.bookmarkPage("Meaning_of_life")
-#canvas.linkAbsolute(contents, destinationname, Rect=None, addtopage=1, name=None, thickness=0, color=None, dashArray=None, **kw)
-my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", (20, 30, 106, 200), addtopage = 0, thickness = 5, color = colors.green)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 row = 0
@@ -56,5 +54,7 @@ for i in range(12):
     if col == -1:
         row += 1
         col = 1
+#canvas.linkAbsolute(contents, destinationname, Rect=None, addtopage=1, name=None, thickness=0, color=None, dashArray=None, **kw)
+my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", (20, 30, 106, 200), addtopage = 1, thickness = 5, color = colors.green)
 my_canvas.save()
 key = input("Wait")
