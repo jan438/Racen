@@ -57,6 +57,7 @@ my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", (20, 30, 4
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
+renderPDF.draw(scaleSVG("SVG/clock-two-thirty.svg", 0.025), my_canvas, 50, 30)
 my_canvas.bookmarkPage("Meaning_of_life", fit="XYZ", left=0,top=200, zoom=2)
 my_canvas.save()
 key = input("Wait")
