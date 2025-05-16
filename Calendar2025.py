@@ -54,7 +54,6 @@ for i in range(12):
     if col == -1:
         row += 1
         col = 1
-#canvas.linkAbsolute(contents, destinationname, Rect=None, addtopage=1, name=None, thickness=0, color=None, dashArray=None, **kw)
-my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", (20, 30, 106, 200), addtopage = 1, thickness = 5, color = colors.green)
+my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", (20, 30, 40, 50), addtopage = 1, thickness = 5, color = colors.green)
 my_canvas.save()
 key = input("Wait")
