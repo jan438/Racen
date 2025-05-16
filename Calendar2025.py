@@ -54,6 +54,9 @@ for i in range(12):
     if col == -1:
         row += 1
         col = 1
+my_canvas.showPage()
+drawing = svg2rlg('SVG/F1.svg')
+renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", (20, 30, 40, 50), addtopage = 1, thickness = 5, color = colors.green)
 my_canvas.save()
 key = input("Wait")
