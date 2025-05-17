@@ -9,7 +9,7 @@ from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
-circuitscale = 0.24
+circuitscale = 0.20
 flagcorrectionx = -30.0
 flagcorrectiony = -5.0
 A4_height = A4[1]
@@ -109,9 +109,9 @@ renderPDF.draw(scaleSVG("SVG/WorldMap.svg", 0.45), my_canvas, 75, 300)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 rowcount = 6
-colcount = 4
-rowheight = 132
-colwidth = 145
+colcount = 5
+rowheight = 110
+colwidth = 110
 row = 0
 col = 0
 for i in range(count):
