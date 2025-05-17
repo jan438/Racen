@@ -57,9 +57,9 @@ for i in range(12):
         linkx1 = leftmargin + flagoffset + col * colwidth
         linky1 = bottommargin + row * rowheight + 9
         linkx2 = linkx1 + 20
-        linky2 = linky1 + 20
+        linky2 = linky1 + 10
         linkarea = (linkx1, linky1, linkx2, linky2)
-        my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", linkarea, addtopage = 1, thickness = 5, color = colors.green)
+        my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", linkarea, addtopage = 1, thickness = 1, color = colors.green)
     col -= 1
     if col == -1:
         row += 1
