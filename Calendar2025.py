@@ -49,11 +49,11 @@ for i in range(12):
     if i == 4:
         renderPDF.draw(scaleSVG("Flags/NL.svg", 0.25), my_canvas, leftmargin + flagoffset + col * colwidth, bottommargin + row * rowheight + 4)
         renderPDF.draw(scaleSVG("SVG/racingcar.svg", 0.025), my_canvas, leftmargin + flagoffset - 20 + col * colwidth, bottommargin + row * rowheight + 9)
+        my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", (20, 30, 40, 50), addtopage = 1, thickness = 5, color = colors.green)
     col -= 1
     if col == -1:
         row += 1
         col = 2
-my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", (20, 30, 40, 50), addtopage = 1, thickness = 5, color = colors.green)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
