@@ -40,7 +40,7 @@ renderPDF.draw(drawing, my_canvas, 100, 800)
 row = 0
 col = 2
 leftmargin = 25
-bottommargin = 50
+bottommargin = 100
 colwidth = 180
 rowheight = 140
 flagoffset = 155
