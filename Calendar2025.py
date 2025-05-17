@@ -54,6 +54,11 @@ for i in range(12):
     if i == 4:
         renderPDF.draw(scaleSVG("Flags/NL.svg", 0.25), my_canvas, leftmargin + flagoffset + col * colwidth, bottommargin + row * rowheight + 4)
         renderPDF.draw(scaleSVG("SVG/racingcar.svg", 0.025), my_canvas, leftmargin + flagoffset - 20 + col * colwidth, bottommargin + row * rowheight + 9)
+        linkx1 = leftmargin + flagoffset + col * colwidth
+        linky1 = bottommargin + row * rowheight + 9
+        linkx2 = linkx1 + 20
+        linky2 = linky1 + 20
+        linkarea = (linkx1, linky1, linkx2, linky2)
         my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", linkarea, addtopage = 1, thickness = 5, color = colors.green)
     col -= 1
     if col == -1:
