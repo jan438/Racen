@@ -39,7 +39,7 @@ drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 row = 0
 col = 2
-leftmargin = 30
+leftmargin = 25
 bottommargin = 50
 colwidth = 200
 rowheight = 125
