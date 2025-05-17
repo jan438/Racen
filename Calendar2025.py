@@ -44,7 +44,8 @@ bottommargin = 100
 colwidth = 180
 rowheight = 140
 flagoffset = 155
-linkarea = (20, 30, 40, 50)
+linkunder = 100
+linkarea = (linkunder, linkunder + 10, linkunder + 20, linkunder + 30)
 for i in range(12):
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
     if i == 4:
