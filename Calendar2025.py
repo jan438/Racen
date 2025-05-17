@@ -42,7 +42,7 @@ col = 2
 leftmargin = 25
 bottommargin = 50
 colwidth = 180
-rowheight = 125
+rowheight = 140
 flagoffset = 155
 for i in range(12):
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
