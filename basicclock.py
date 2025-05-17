@@ -134,7 +134,7 @@ width = 800
 height = 800 * nrows // ncols
 cwidth = cheight = width // ncols
 r = cwidth * 0.4
-with open('time.svg', 'w') as fo:
+with open('SVG/time.svg', 'w') as fo:
     preamble(fo)
     for i, time in enumerate(times):
         print('{:2d}:{:02d}'.format(*[int(s) for s in time.split(':')]))
