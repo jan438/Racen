@@ -41,7 +41,7 @@ row = 0
 col = 2
 leftmargin = 25
 bottommargin = 50
-colwidth = 200
+colwidth = 180
 rowheight = 125
 flagoffset = 130
 for i in range(12):
