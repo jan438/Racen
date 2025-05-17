@@ -13,8 +13,8 @@ line.mn-hand {stroke-width: 4px; stroke: #f00;}
 line.hr-hand {stroke-width: 12px; stroke: #000;}
 ]]></style>
     </defs>
-<line x1="400" y1="400" x2="177.2270954375068" y2="423.41437577195455" class="mn-hand"/>
-<line x1="400" y1="400" x2="558.4428909986513" y2="377.7323038463895" class="hr-hand"/>
+<line x1="400" y1="400" x2="400.0" y2="176.0" class="mn-hand"/>
+<line x1="400" y1="400" x2="560.0" y2="400.0" class="hr-hand"/>
 <circle cx="400" cy="400" r="320.0"/>
 <text x="540.0" y="157.5128869403572">1</text>
 <text x="570.0" y="105.55136271329087" class="min-labels">5</text>

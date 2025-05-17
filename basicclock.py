@@ -101,15 +101,8 @@ def get_random_times(n, difficulty):
 
     times = []
     for i in range(n):
-        hr = random.randint(1,12)
-        if difficulty == MEDIUM:
-            mn = random.randint(0,1)*30
-        elif difficulty == HARD:
-            mn = random.randint(0,3)*15
-        elif difficulty == VERYHARD:
-            mn = random.randint(0,59)
-        else:
-            mn = 0
+        hr = 3
+        mn = 0
         times.append('{}:{}'.format(hr,mn))
     return times
 
@@ -137,8 +130,6 @@ if n > 2:
 nrows = n // ncols
 difficulty = args.difficulty
 times = get_random_times(n, difficulty)
-
-# We've got the parameters: los geht's!
 width = 800
 height = 800 * nrows // ncols
 cwidth = cheight = width // ncols
