@@ -38,8 +38,8 @@ my_canvas.setTitle("Calendar 2025")
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 row = 0
-col = 1
-leftmargin = 75
+col = 2
+leftmargin = 30
 bottommargin = 50
 colwidth = 200
 rowheight = 125
@@ -52,7 +52,7 @@ for i in range(12):
     col -= 1
     if col == -1:
         row += 1
-        col = 1
+        col = 2
 my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", (20, 30, 40, 50), addtopage = 1, thickness = 5, color = colors.green)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
