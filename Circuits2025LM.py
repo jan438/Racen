@@ -110,8 +110,8 @@ drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 rowcount = 6
 colcount = 5
-rowheight = 110
-colwidth = 110
+rowheight = 115
+colwidth = 115
 row = 0
 col = 0
 for i in range(count):
