@@ -7,6 +7,7 @@ import csv
 import math
 import unicodedata
 import svgwrite
+from ics import Calendar, Event
 from svgwrite import Drawing
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
