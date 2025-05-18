@@ -12,6 +12,7 @@ import cairosvg
 from ics import Calendar, Event
 
 monthnames = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus", "September","Oktober","November","December"]
+alleventslines = []
 
 def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calendar.svg", as_text=False):
     output_dir = "SVG"
@@ -104,7 +105,6 @@ eventcal = "Calendar/Formule1.ics"
 in_file = open(os.path.join(path, eventcal), 'r')
 count = 0
 lastpos = 0
-alleventslines = []
 for line in in_file:
     newlinepos = line.find("\t\n")
     lastsubstring = line[lastpos:newlinepos]
@@ -112,6 +112,8 @@ for line in in_file:
     count += 1
 in_file.close()
 print("Count events", len(alleventslines))
+for i in range(len(alleventslines)):
+    print(alleventslines[i])
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
 key = input("Wait")
