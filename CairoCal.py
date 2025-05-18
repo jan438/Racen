@@ -113,6 +113,13 @@ for line in in_file:
 in_file.close()
 print("Count events", len(alleventslines))
 for i in range(len(alleventslines)):
+    neweventpos = alleventslines[i].find("BEGIN:VEVENT")
+    summaryeventpos = alleventslines[i].find("SUMMARY")
+    descriptioneventpos = alleventslines[i].find("DESCRIPTION")
+    locationeventpos = alleventslines[i].find("LOCATION")
+    dtstarteventpos = alleventslines[i].find("DTSTART")
+    dtendeventpos = alleventslines[i].find("DTEND")
+    endeventpos = alleventslines[i].find("END:VEVENT")
     print(alleventslines[i])
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
