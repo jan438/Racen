@@ -70,16 +70,18 @@ def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calenda
             if day != 0:
                 if day == 31 and month == 8:
                     print("day", monthnames[month - 1], day)
-                add_text(
-                    dwg,
-                    str(day),
-                    (i * cell_width + cell_width / 2, y_offset + cell_height / 2),
-                    font_size=day_font_size,
-                    font_family="sans-serif",
-                    font_weight="300",
-                    text_anchor="middle",
-                    as_text=as_text,
-                )
+                
+                else:
+                    add_text(
+                        dwg,
+                        str(day),
+                        (i * cell_width + cell_width / 2, y_offset + cell_height / 2),
+                        font_size=day_font_size,
+                        font_family="sans-serif",
+                        font_weight="300",
+                        text_anchor="middle",
+                        as_text=as_text,
+                    )
         y_offset += cell_height
     dwg.save()
     if not as_text:
