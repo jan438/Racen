@@ -9,6 +9,7 @@ import unicodedata
 import svgwrite
 from svgwrite import Drawing
 import cairosvg
+from ics import Calendar, Event
 
 monthnames = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus", "September","Oktober","November","December"]
 
@@ -99,6 +100,18 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
+eventcal = "Calendar/Formule1.ics"
+in_file = open(os.path.join(path, eventcal), 'r')
+count = 0
+lastpos = 0
+alleventslines = []
+for line in in_file:
+    newlinepos = line.find("\t\n")
+    lastsubstring = line[lastpos:newlinepos]
+    alleventslines.append(lastsubstring)
+    count += 1
+in_file.close()
+print("Count events", len(alleventslines))
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
 key = input("Wait")
