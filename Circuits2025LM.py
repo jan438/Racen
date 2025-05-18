@@ -104,14 +104,15 @@ my_canvas.setTitle("Circuits2025")
 my_canvas.setFillColorRGB(0,0,0)
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFillColorRGB(255,170,0)
-bottom_margin = 15
+bottom_margin = 40
 left_margin = 20
 renderPDF.draw(scaleSVG("SVG/WorldMap.svg", 0.35), my_canvas, 120, 245)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 rowcount = 6
 colcount = 5
-rowheight = 115
+rowheight = 125
+#rowheight = 115
 colwidth = 115
 row = 0
 col = 0
