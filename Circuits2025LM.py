@@ -115,6 +115,8 @@ colwidth = 115
 row = 0
 col = 0
 for i in range(count):
+    if i == 11:
+        col = col + 3
     [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[i][1])
     circuit_x = col * colwidth
     circuit_y = row * rowheight
