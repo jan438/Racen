@@ -126,10 +126,10 @@ for i in range(count):
     flag_y = offset_y * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
     renderPDF.draw(scaleSVG("SVG/startflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectionx * circuitscale)
+    my_canvas.circle(240 + i * 5, 275 + i * 5, 2, fill=1)
     col += 1
     if col == colcount:
         row += 1
         col = 0
-my_canvas.circle(250, 275, 2, fill=1)
 my_canvas.save()
 key = input("Wait")
