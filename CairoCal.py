@@ -105,6 +105,7 @@ eventcal = "Calendar/Formule1.ics"
 in_file = open(os.path.join(path, eventcal), 'r')
 count = 0
 lastpos = 0
+found = 0
 for line in in_file:
     newlinepos = line.find("\t\n")
     lastsubstring = line[lastpos:newlinepos]
@@ -120,8 +121,12 @@ for i in range(len(alleventslines)):
     dtstarteventpos = alleventslines[i].find("DTSTART")
     dtendeventpos = alleventslines[i].find("DTEND")
     endeventpos = alleventslines[i].find("END:VEVENT")
-    if neweventpos == 0:
-        print(i, alleventslines[i])
+#    if neweventpos == 0:
+#        print(i, alleventslines[i])
+    if summaryeventpos == 0:
+        eventsummary = alleventslines[i][8:]
+        print(i, eventsummary)
+        found += 1
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
 key = input("Wait")
