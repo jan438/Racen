@@ -130,5 +130,6 @@ for i in range(count):
     if col == colcount:
         row += 1
         col = 0
+my_canvas.circle(250, 275, 2, fill=1)
 my_canvas.save()
 key = input("Wait")
