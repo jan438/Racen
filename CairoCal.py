@@ -68,7 +68,8 @@ def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calenda
     for week in month_days:
         for i, day in enumerate(week):
             if day != 0:
-                print("day", monthnames[month - 1], day)
+                if day == 31 and month == 8:
+                    print("day", monthnames[month - 1], day)
                 add_text(
                     dwg,
                     str(day),
