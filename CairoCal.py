@@ -1,6 +1,7 @@
 import os
 import calendar
 from datetime import datetime, date, timedelta
+from dateutil import tz
 import os
 import sys
 import csv
@@ -26,6 +27,8 @@ class RaceEvent:
         self.month = month
         self.geo = geo
 def converttimetztolocal(timetz):
+    tzinfo = tz.tzutc()
+    print(tzinfo)
     return timetz
 def lookupraceevent(month, day):
     raceevent = None
