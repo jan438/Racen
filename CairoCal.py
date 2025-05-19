@@ -28,6 +28,8 @@ class RaceEvent:
         self.month = month
         self.geo = geo
 def converttimetztolocal(timetz):
+    # Zandvoort 20250831T130000Z
+    # utc_format = "%Y%m%dT%H%M%SZ"
     utc_string = "2025-05-19 15:50:00"
     utc_format = "%Y-%m-%d %H:%M:%S"
     local_tz = pytz.timezone('Europe/Amsterdam')
