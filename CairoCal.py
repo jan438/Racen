@@ -14,6 +14,19 @@ from ics import Calendar, Event
 monthnames = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus", "September","Oktober","November","December"]
 alleventslines = []
 raceevents = []
+class RaceEvent:
+    def __init__(self, categories, summary, weekday, weeknr, day, location, starttime, endtime, dayyear, month, sequence):
+        self.categories = categories
+        self.summary = summary
+        self.weekday = weekday
+        self.weeknr = weeknr
+        self.day = day
+        self.location = location
+        self.starttime = starttime
+        self.endtime = endtime
+        self.dayyear = dayyear
+        self.month = month
+        self.sequence = sequence
 
 def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calendar.svg", as_text=False):
     output_dir = "SVG"
@@ -126,13 +139,23 @@ for i in range(len(alleventslines)):
     dtstarteventpos = alleventslines[i].find("DTSTART")
     dtendeventpos = alleventslines[i].find("DTEND")
     endeventpos = alleventslines[i].find("END:VEVENT")
-#    if neweventpos == 0:
-#        print(i, alleventslines[i])
+    if neweventpos == 0:
+        found = 0
+        weekday = 0
+        weeknr = 0
+        first_week = 0
+        day = 0
+        eventlocation = ""
+        starttime = 0
+        endtime = 0
+        dayyear = 0
+        month = 0
+        eventcategories = ""
+        sequence = ""
     if summaryeventpos == 0:
         eventsummary = alleventslines[i][8:]
-        print(i, eventsummary)
-        raceevents.append(eventsummary)
-        found += 1
+    if endeventpos == 0:
+        raceevents.append(RaceEvent(eventcategories, eventsummary, weekday - 1, weeknr - first_week, day, eventlocation, starttime, endtime, dayyear, month, sequence))  
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
 key = input("Wait")
