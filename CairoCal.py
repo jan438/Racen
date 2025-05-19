@@ -139,6 +139,7 @@ for i in range(len(alleventslines)):
     summaryeventpos = alleventslines[i].find("SUMMARY")
     descriptioneventpos = alleventslines[i].find("DESCRIPTION")
     locationeventpos = alleventslines[i].find("LOCATION")
+    categorieseventpos = alleventslines[i].find("CATEGORIES")
     dtstarteventpos = alleventslines[i].find("DTSTART")
     dtendeventpos = alleventslines[i].find("DTEND")
     endeventpos = alleventslines[i].find("END:VEVENT")
@@ -167,6 +168,9 @@ for i in range(len(alleventslines)):
         found += 1
     if summaryeventpos == 0:
         eventsummary = alleventslines[i][8:]
+    if categorieseventpos == 0:
+        categories = alleventslines[i][11:]
+        print(categories)
     if endeventpos == 0:
         raceevents.append(RaceEvent(eventcategories, eventsummary, day, eventlocation, starttime, endtime, month, sequence))
 print("Count race events", len(raceevents))
