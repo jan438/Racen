@@ -24,7 +24,9 @@ class RaceEvent:
         self.starttime = starttime
         self.endtime = endtime
         self.month = month
-        self.geo = geo   
+        self.geo = geo
+def converttimetztolocal(timetz):
+    return timetz
 def lookupraceevent(month, day):
     raceevent = None
     for i in range(len(raceevents)):
@@ -178,6 +180,7 @@ print("Count race events", len(raceevents))
 raceevent = lookupraceevent(8, 31)
 if raceevent is not None:
     starttime = raceevent.starttime
+    starttime = converttimetztolocal(starttime)
     print(raceevent.summary, raceevent.location, starttime, raceevent.categories, raceevent.geo)
 else:
     print("Not found")
