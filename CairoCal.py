@@ -160,7 +160,7 @@ for i in range(len(alleventslines)):
         year = int(eventdtstartstr[:4])
         month = int(eventdtstartstr[4:6])
         day = int(eventdtstartstr[6:8])
-        starttime = eventdtstartstr[9:11] + ':' + eventdtstartstr[11:13]
+        starttime = eventdtstartstr
     if dtendeventpos == 0:
         eventdtendstr = alleventslines[i][6:]
         endtime = eventdtendstr[9:11] + ':' + eventdtendstr[11:13]
@@ -177,7 +177,8 @@ for i in range(len(alleventslines)):
 print("Count race events", len(raceevents))
 raceevent = lookupraceevent(8, 31)
 if raceevent is not None:
-    print(raceevent.summary, raceevent.location, raceevent.starttime, raceevent.categories, raceevent.geo)
+    starttime = raceevent.starttime
+    print(raceevent.summary, raceevent.location, starttime, raceevent.categories, raceevent.geo)
 else:
     print("Not found")
 for i in range(12):
