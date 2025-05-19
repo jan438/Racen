@@ -167,9 +167,13 @@ for i in range(len(alleventslines)):
     if endeventpos == 0:
         raceevents.append(RaceEvent(eventcategories, eventsummary, day, eventlocation, starttime, endtime, month, sequence))
 print("Count race events", len(raceevents))
-raceevent = lookupraceevent(8, 31)
 for i in range(len(raceevents)):
     print(i, raceevents[i].summary, raceevents[i].month, raceevents[i].day, raceevents[i].starttime)
+raceevent = lookupraceevent(8, 31)
+if raceevent is not None:
+    print(raceevent.summary)
+else:
+    print("Not found")
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
 key = input("Wait")
