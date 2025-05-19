@@ -156,7 +156,7 @@ for i in range(len(alleventslines)):
         eventsummary = alleventslines[i][8:]
     if endeventpos == 0:
         raceevents.append(RaceEvent(eventcategories, eventsummary, weekday - 1, weeknr - first_week, day, eventlocation, starttime, endtime, dayyear, month, sequence))
-    print("Count race events", len(raceevents))
+print("Count race events", len(raceevents))
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
 key = input("Wait")
