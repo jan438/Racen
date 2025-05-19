@@ -16,7 +16,7 @@ alleventslines = []
 raceevents = []
 
 class RaceEvent:
-    def __init__(self, categories, summary, day, location, starttime, endtime, month, sequence):
+    def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
         self.categories = categories
         self.summary = summary
         self.day = day
@@ -24,7 +24,7 @@ class RaceEvent:
         self.starttime = starttime
         self.endtime = endtime
         self.month = month
-        self.sequence = sequence   
+        self.geo = geo   
 def lookupraceevent(month, day):
     raceevent = None
     for i in range(len(raceevents)):
@@ -140,6 +140,7 @@ for i in range(len(alleventslines)):
     descriptioneventpos = alleventslines[i].find("DESCRIPTION")
     locationeventpos = alleventslines[i].find("LOCATION")
     categorieseventpos = alleventslines[i].find("CATEGORIES")
+    geoeventpos = alleventslines[i].find("GEO")
     dtstarteventpos = alleventslines[i].find("DTSTART")
     dtendeventpos = alleventslines[i].find("DTEND")
     endeventpos = alleventslines[i].find("END:VEVENT")
@@ -170,9 +171,12 @@ for i in range(len(alleventslines)):
         eventsummary = alleventslines[i][8:]
     if categorieseventpos == 0:
         categories = alleventslines[i][11:]
-        print(categories)
+        print("Categoreies", categories)
+    if geoeventpos == 0:
+        geo = alleventslines[i][5:]
+        print("GEO", geo)
     if endeventpos == 0:
-        raceevents.append(RaceEvent(eventcategories, eventsummary, day, eventlocation, starttime, endtime, month, sequence))
+        raceevents.append(RaceEvent(eventcategories, eventsummary, day, eventlocation, starttime, endtime, month, geo))
 print("Count race events", len(raceevents))
 for i in range(len(raceevents)):
     print(i, raceevents[i].summary, raceevents[i].month, raceevents[i].day, raceevents[i].starttime)
