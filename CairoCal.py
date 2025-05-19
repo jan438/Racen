@@ -14,6 +14,7 @@ from ics import Calendar, Event
 monthnames = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus", "September","Oktober","November","December"]
 alleventslines = []
 raceevents = []
+
 class RaceEvent:
     def __init__(self, categories, summary, day, location, starttime, endtime, month, sequence):
         self.categories = categories
@@ -23,12 +24,11 @@ class RaceEvent:
         self.starttime = starttime
         self.endtime = endtime
         self.month = month
-        self.sequence = sequence
-        
+        self.sequence = sequence   
 def lookupraceevent(month, day):
     raceevent = None
     for i in range(len(raceevents)):
-        if raceevents[i].month == 8 and raceevents[i].day == 31:
+        if raceevents[i].month == month and raceevents[i].day == day:
             raceevent = raceevents[i]
     return raceevent
 def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calendar.svg", as_text=False):
