@@ -33,13 +33,12 @@ def lookupraceevent(month, day):
         if raceevents[i].month == month and raceevents[i].day == day:
             raceevent = raceevents[i]
     return raceevent
-def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calendar.svg", as_text=False):
+def generate_calendar_svg(year, month, start_day=0, file_name="calendar.svg", as_text=False):
     output_dir = "SVG"
     os.makedirs(output_dir, exist_ok=True)
     file_path = os.path.join(output_dir, file_name)
-    today = datetime.date.today()
-    year = year or today.year
-    month = month or today.month
+    year = year
+    month = month
     cal = calendar.Calendar(firstweekday=start_day)
     month_days = cal.monthdayscalendar(year, month)
     month_name = calendar.month_name[month]
