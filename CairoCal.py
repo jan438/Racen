@@ -27,6 +27,9 @@ class RaceEvent:
         
 def lookupraceevent(month, day):
     raceevent = None
+    for i in range(len(raceevents)):
+        if raceevents[i].month == 8 and raceevents[i].day == 31:
+            raceevent = raceevents[i]
     return raceevent
 def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calendar.svg", as_text=False):
     output_dir = "SVG"
