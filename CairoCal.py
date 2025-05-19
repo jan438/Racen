@@ -30,8 +30,8 @@ class RaceEvent:
 def converttimetztolocal(timetz):
     # Zandvoort 20250831T130000Z
     # utc_format = "%Y%m%dT%H%M%SZ"
-    utc_string = "2025-05-19 15:50:00"
-    utc_format = "%Y-%m-%d %H:%M:%S"
+    utc_string = timetz
+    utc_format = "%Y%m%dT%H%M%SZ"
     local_tz = pytz.timezone('Europe/Amsterdam')
     utc_dt = datetime.strptime(utc_string, utc_format)
     local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
