@@ -15,16 +15,13 @@ monthnames = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus
 alleventslines = []
 raceevents = []
 class RaceEvent:
-    def __init__(self, categories, summary, weekday, weeknr, day, location, starttime, endtime, dayyear, month, sequence):
+    def __init__(self, categories, summary, day, location, starttime, endtime, month, sequence):
         self.categories = categories
         self.summary = summary
-        self.weekday = weekday
-        self.weeknr = weeknr
         self.day = day
         self.location = location
         self.starttime = starttime
         self.endtime = endtime
-        self.dayyear = dayyear
         self.month = month
         self.sequence = sequence
 
@@ -141,21 +138,31 @@ for i in range(len(alleventslines)):
     endeventpos = alleventslines[i].find("END:VEVENT")
     if neweventpos == 0:
         found = 0
-        weekday = 0
-        weeknr = 0
-        first_week = 0
         day = 0
         eventlocation = ""
         starttime = 0
         endtime = 0
-        dayyear = 0
         month = 0
         eventcategories = ""
         sequence = ""
+    if dtstarteventpos == 0:
+        eventdtstartstr = alleventslines[i][8:]
+        datevaluepos = alleventslines[i].find("VALUE=DATE:")
+        if datevaluepos == 8:
+            eventdtstartstr = alleventslines[i][19:]
+        year = int(eventdtstartstr[:4])
+        month = int(eventdtstartstr[4:6])
+        day = int(eventdtstartstr[6:8])
+        starttime = eventdtstartstr[9:11] + ':' + eventdtstartstr[11:13]
+        found += 1
+    if dtendeventpos == 0:
+        eventdtendstr = alleventslines[i][6:]
+        endtime = eventdtendstr[9:11] + ':' + eventdtendstr[11:13]
+        found += 1
     if summaryeventpos == 0:
         eventsummary = alleventslines[i][8:]
     if endeventpos == 0:
-        raceevents.append(RaceEvent(eventcategories, eventsummary, weekday - 1, weeknr - first_week, day, eventlocation, starttime, endtime, dayyear, month, sequence))
+        raceevents.append(RaceEvent(eventcategories, eventsummary, day, eventlocation, starttime, endtime, month, sequence))
 print("Count race events", len(raceevents))
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
