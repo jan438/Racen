@@ -24,7 +24,10 @@ class RaceEvent:
         self.endtime = endtime
         self.month = month
         self.sequence = sequence
-
+        
+def lookupraceevent(month, day):
+    raceevent = None
+    return raceevent
 def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calendar.svg", as_text=False):
     output_dir = "SVG"
     os.makedirs(output_dir, exist_ok=True)
@@ -164,6 +167,7 @@ for i in range(len(alleventslines)):
     if endeventpos == 0:
         raceevents.append(RaceEvent(eventcategories, eventsummary, day, eventlocation, starttime, endtime, month, sequence))
 print("Count race events", len(raceevents))
+raceevent = lookupraceevent(8, 31)
 for i in range(len(raceevents)):
     print(i, raceevents[i].summary, raceevents[i].month, raceevents[i].day, raceevents[i].starttime)
 for i in range(12):
