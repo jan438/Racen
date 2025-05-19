@@ -28,15 +28,12 @@ class RaceEvent:
         self.month = month
         self.geo = geo
 def converttimetztolocal(timetz):
-    # Zandvoort 20250831T130000Z
-    # utc_format = "%Y%m%dT%H%M%SZ"
     utc_string = timetz
     utc_format = "%Y%m%dT%H%M%SZ"
     local_tz = pytz.timezone('Europe/Amsterdam')
     utc_dt = datetime.strptime(utc_string, utc_format)
     local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
-    print(local_dt)
-    return timetz
+    return local_dt
 def lookupraceevent(month, day):
     raceevent = None
     for i in range(len(raceevents)):
@@ -189,8 +186,8 @@ print("Count race events", len(raceevents))
 raceevent = lookupraceevent(8, 31)
 if raceevent is not None:
     starttime = raceevent.starttime
-    starttime = converttimetztolocal(starttime)
-    print(raceevent.summary, raceevent.location, starttime, raceevent.categories, raceevent.geo)
+    localtime = converttimetztolocal(starttime)
+    print(raceevent.summary, raceevent.location, starttime, raceevent.categories, raceevent.geo, starttime, localtime)
 else:
     print("Not found")
 for i in range(12):
