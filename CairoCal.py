@@ -165,7 +165,7 @@ for i in range(len(alleventslines)):
         raceevents.append(RaceEvent(eventcategories, eventsummary, day, eventlocation, starttime, endtime, month, sequence))
 print("Count race events", len(raceevents))
 for i in range(len(raceevents)):
-    print(i, raceevents[i].summary)
+    print(i, raceevents[i].summary, raceevents[i].month, raceevents[i].day, raceevents[i].starttime)
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
 key = input("Wait")
