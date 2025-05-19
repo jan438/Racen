@@ -127,7 +127,7 @@ for line in in_file:
     alleventslines.append(lastsubstring)
     count += 1
 in_file.close()
-print("Count events", len(alleventslines))
+print("Count eventslines", len(alleventslines))
 for i in range(len(alleventslines)):
     neweventpos = alleventslines[i].find("BEGIN:VEVENT")
     summaryeventpos = alleventslines[i].find("SUMMARY")
@@ -164,6 +164,8 @@ for i in range(len(alleventslines)):
     if endeventpos == 0:
         raceevents.append(RaceEvent(eventcategories, eventsummary, day, eventlocation, starttime, endtime, month, sequence))
 print("Count race events", len(raceevents))
+for i in range(len(raceevents)):
+    print(i, raceevents[i].summary)
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
 key = input("Wait")
