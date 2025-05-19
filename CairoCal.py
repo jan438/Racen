@@ -147,12 +147,12 @@ for i in range(len(alleventslines)):
     if neweventpos == 0:
         found = 0
         day = 0
-        eventlocation = ""
+        location = ""
         starttime = 0
         endtime = 0
         month = 0
-        eventcategories = ""
-        sequence = ""
+        categories = ""
+        geo = ""
     if dtstarteventpos == 0:
         eventdtstartstr = alleventslines[i][8:]
         datevaluepos = alleventslines[i].find("VALUE=DATE:")
@@ -168,21 +168,19 @@ for i in range(len(alleventslines)):
         endtime = eventdtendstr[9:11] + ':' + eventdtendstr[11:13]
         found += 1
     if summaryeventpos == 0:
-        eventsummary = alleventslines[i][8:]
+        summary = alleventslines[i][8:]
     if categorieseventpos == 0:
         categories = alleventslines[i][11:]
-        print("Categoreies", categories)
     if geoeventpos == 0:
         geo = alleventslines[i][5:]
-        print("GEO", geo)
     if endeventpos == 0:
-        raceevents.append(RaceEvent(eventcategories, eventsummary, day, eventlocation, starttime, endtime, month, geo))
+        raceevents.append(RaceEvent(categories, summary, day, location, starttime, endtime, month, geo))
 print("Count race events", len(raceevents))
 for i in range(len(raceevents)):
     print(i, raceevents[i].summary, raceevents[i].month, raceevents[i].day, raceevents[i].starttime)
 raceevent = lookupraceevent(8, 31)
 if raceevent is not None:
-    print(raceevent.summary)
+    print(raceevent.summary, raceevent.categories, raceevent.geo)
 else:
     print("Not found")
 for i in range(12):
