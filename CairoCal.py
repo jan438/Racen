@@ -2,6 +2,7 @@ import os
 import calendar
 from datetime import datetime, date, timedelta
 from dateutil import tz
+import pytz
 import os
 import sys
 import csv
@@ -27,8 +28,12 @@ class RaceEvent:
         self.month = month
         self.geo = geo
 def converttimetztolocal(timetz):
-    tzinfo = tz.tzutc()
-    print(tzinfo)
+    utc_string = "2022-05-10 16:30:00"
+    utc_format = "%Y-%m-%d %H:%M:%S"
+    local_tz = pytz.timezone('Asia/Kolkata')
+    utc_dt = datetime.strptime(utc_string, utc_format)
+    local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
+    print(local_dt)
     return timetz
 def lookupraceevent(month, day):
     raceevent = None
