@@ -171,6 +171,8 @@ for i in range(len(alleventslines)):
         summary = alleventslines[i][8:]
     if categorieseventpos == 0:
         categories = alleventslines[i][11:]
+    if locationeventpos == 0:
+        location = alleventslines[i][9:]
     if geoeventpos == 0:
         geo = alleventslines[i][5:]
     if endeventpos == 0:
@@ -180,7 +182,7 @@ for i in range(len(raceevents)):
     print(i, raceevents[i].summary, raceevents[i].month, raceevents[i].day, raceevents[i].starttime)
 raceevent = lookupraceevent(8, 31)
 if raceevent is not None:
-    print(raceevent.summary, raceevent.categories, raceevent.geo)
+    print(raceevent.summary, raceevent.location, raceevent.starttime, raceevent.categories, raceevent.geo)
 else:
     print("Not found")
 for i in range(12):
