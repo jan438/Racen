@@ -164,7 +164,7 @@ for i in range(12):
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
-        print("1", raceevent.summary)
+        print("1", raceevent.summary, raceevent.geo)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
