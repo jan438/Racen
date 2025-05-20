@@ -93,8 +93,8 @@ def generate_calendar_svg(year, month, start_day=0, file_name="calendar.svg", as
         for i, day in enumerate(week):
             if day != 0:
                 raceevent = lookupraceevent(month, day)
-                if raceevent is not None:
-                    print("raceevent on these day", month, day)
+                if raceevent is not None and raceevent.categories == "Grand Prix,F1":
+                    print("raceevent on these day", month, day, raceevent.categories)
                 if day == 31 and month == 8:
                     print("day", monthnames[month - 1], day)
                 
