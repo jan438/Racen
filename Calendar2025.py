@@ -33,7 +33,9 @@ class RaceEvent:
         self.geo = geo
 def lookuplocation(lat, lon):
     location = geolocator.reverse(lat+","+lon)
-    return location
+    address = location.raw['address']
+    code = address.get('country_code')
+    return code
 def converttimetztolocal(timetz):
     utc_string = timetz
     utc_format = "%Y%m%dT%H%M%SZ"
@@ -142,8 +144,8 @@ linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
 Latitude = "52.388408"
 Longitude = "4.547122"
-location = lookuplocation(Latitude, Longitude)
-print(location)
+code = lookuplocation(Latitude, Longitude)
+print("Code", code)
 for i in range(12):
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
     if i == 4:
