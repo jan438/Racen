@@ -137,8 +137,11 @@ linkx2 = 10
 linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
-Latitude = "25.594095"
-Longitude = "85.137566"
+#Latitude = "25.594095"
+#Longitude = "85.137566"
+#52.388408;4.547122
+Latitude = "52.388408"
+Longitude = "4.547122"
 location = geolocator.reverse(Latitude+","+Longitude)
 print(location)
 for i in range(12):
