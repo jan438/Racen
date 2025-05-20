@@ -129,7 +129,7 @@ leftmargin = 25
 bottommargin = 100
 colwidth = 180
 rowheight = 140
-flagoffset = 155
+flagoffset = 158
 linkx1 = 0
 linky1 = 0
 linkx2 = 10
@@ -138,14 +138,13 @@ linkarea = (linkx1, linky1, linkx2, linky2)
 for i in range(12):
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
     if i == 4:
-        renderPDF.draw(scaleSVG("Flags/NL.svg", 0.25), my_canvas, leftmargin + flagoffset + col * colwidth, bottommargin + row * rowheight + 4)
-        renderPDF.draw(scaleSVG("SVG/racingcar.svg", 0.025), my_canvas, leftmargin + flagoffset - 20 + col * colwidth, bottommargin + row * rowheight + 9)
+        renderPDF.draw(scaleSVG("Flags/NL.svg", 0.25), my_canvas, leftmargin + flagoffset + col * colwidth, bottommargin + row * rowheight + 3)
+        renderPDF.draw(scaleSVG("SVG/racingcar.svg", 0.025), my_canvas, leftmargin + flagoffset - 22 + col * colwidth, bottommargin + row * rowheight)
         linkx1 = leftmargin + flagoffset + col * colwidth
         linky1 = bottommargin + row * rowheight + 9
         linkx2 = linkx1 + 20
         linky2 = linky1 + 10
         linkarea = (linkx1, linky1, linkx2, linky2)
-        #my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", linkarea, addtopage = 1, thickness = 1, color = colors.green)
         my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", linkarea, addtopage = 1, thickness = 0, color = None)
     col -= 1
     if col == -1:
