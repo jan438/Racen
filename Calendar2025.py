@@ -161,6 +161,8 @@ for i in range(12):
     if col == -1:
         row += 1
         col = 2
+for i in range(len(raceevents)):
+    print(raceevents[i].summary)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
