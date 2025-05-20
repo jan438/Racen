@@ -1,6 +1,8 @@
 import os
 import calendar
-import datetime
+from datetime import datetime, date, timedelta
+from dateutil import tz
+import pytz
 import os
 import sys
 import csv
@@ -16,7 +18,32 @@ from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 monthnames = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus", "September","Oktober","November","December"]
+alleventslines = []
+raceevents = []
 
+class RaceEvent:
+    def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
+        self.categories = categories
+        self.summary = summary
+        self.day = day
+        self.location = location
+        self.starttime = starttime
+        self.endtime = endtime
+        self.month = month
+        self.geo = geo
+def converttimetztolocal(timetz):
+    utc_string = timetz
+    utc_format = "%Y%m%dT%H%M%SZ"
+    local_tz = pytz.timezone('Europe/Amsterdam')
+    utc_dt = datetime.strptime(utc_string, utc_format)
+    local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
+    return local_dt
+def lookupraceevent(month, day):
+    raceevent = None
+    for i in range(len(raceevents)):
+        if raceevents[i].month == month and raceevents[i].day == day:
+            raceevent = raceevents[i]
+    return raceevent
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -33,6 +60,65 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
+eventcal = "Calendar/Formule1.ics"
+in_file = open(os.path.join(path, eventcal), 'r')
+count = 0
+lastpos = 0
+found = 0
+for line in in_file:
+    newlinepos = line.find("\t\n")
+    lastsubstring = line[lastpos:newlinepos]
+    alleventslines.append(lastsubstring)
+    count += 1
+in_file.close()
+print("Count eventslines", len(alleventslines))
+for i in range(len(alleventslines)):
+    neweventpos = alleventslines[i].find("BEGIN:VEVENT")
+    summaryeventpos = alleventslines[i].find("SUMMARY")
+    locationeventpos = alleventslines[i].find("LOCATION")
+    categorieseventpos = alleventslines[i].find("CATEGORIES")
+    geoeventpos = alleventslines[i].find("GEO")
+    dtstarteventpos = alleventslines[i].find("DTSTART")
+    dtendeventpos = alleventslines[i].find("DTEND")
+    endeventpos = alleventslines[i].find("END:VEVENT")
+    if neweventpos == 0:
+        day = 0
+        location = ""
+        starttime = 0
+        endtime = 0
+        month = 0
+        categories = ""
+        geo = ""
+    if dtstarteventpos == 0:
+        eventdtstartstr = alleventslines[i][8:]
+        datevaluepos = alleventslines[i].find("VALUE=DATE:")
+        if datevaluepos == 8:
+            eventdtstartstr = alleventslines[i][19:]
+        year = int(eventdtstartstr[:4])
+        month = int(eventdtstartstr[4:6])
+        day = int(eventdtstartstr[6:8])
+        starttime = eventdtstartstr
+    if dtendeventpos == 0:
+        eventdtendstr = alleventslines[i][6:]
+        endtime = eventdtendstr[9:11] + ':' + eventdtendstr[11:13]
+    if summaryeventpos == 0:
+        summary = alleventslines[i][8:]
+    if categorieseventpos == 0:
+        categories = alleventslines[i][11:]
+    if locationeventpos == 0:
+        location = alleventslines[i][9:]
+    if geoeventpos == 0:
+        geo = alleventslines[i][5:]
+    if endeventpos == 0:
+        raceevents.append(RaceEvent(categories, summary, day, location, starttime, endtime, month, geo))
+print("Count race events", len(raceevents))
+raceevent = lookupraceevent(8, 31)
+if raceevent is not None:
+    starttime = raceevent.starttime
+    localtime = converttimetztolocal(starttime)
+    print(raceevent.summary, raceevent.location, starttime, raceevent.categories, raceevent.geo, starttime, localtime)
+else:
+    print("Not found")
 my_canvas = canvas.Canvas("PDF/Calendar2025.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle("Calendar 2025")
