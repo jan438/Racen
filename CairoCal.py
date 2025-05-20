@@ -145,7 +145,6 @@ print("Count eventslines", len(alleventslines))
 for i in range(len(alleventslines)):
     neweventpos = alleventslines[i].find("BEGIN:VEVENT")
     summaryeventpos = alleventslines[i].find("SUMMARY")
-    descriptioneventpos = alleventslines[i].find("DESCRIPTION")
     locationeventpos = alleventslines[i].find("LOCATION")
     categorieseventpos = alleventslines[i].find("CATEGORIES")
     geoeventpos = alleventslines[i].find("GEO")
