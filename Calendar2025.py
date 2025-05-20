@@ -162,12 +162,16 @@ for i in range(12):
         row += 1
         col = 2
 for i in range(len(raceevents)):
-    print("1", raceevents[i].summary)
+    raceevent = raceevents[i]
+    if raceevent is not None and raceevent.categories == "Grand Prix,F1":
+        print("1", raceevent.summary)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 for i in range(len(raceevents)):
-    print("2", raceevents[i].summary)
+    raceevent = raceevents[i]
+    if raceevent is not None and raceevent.categories == "Grand Prix,F1":
+        print("2", raceevent.summary)
 renderPDF.draw(scaleSVG("SVG/time.svg", 0.025), my_canvas, 250, 30)
 my_canvas.drawString(250, 60, "Zandvoort")
 my_canvas.bookmarkPage("Meaning_of_life", fit = "XYZ", left = 250,top = 30, zoom = 4)
