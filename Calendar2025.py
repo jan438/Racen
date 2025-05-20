@@ -144,7 +144,7 @@ linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
 Latitude = "52.388408"
 Longitude = "4.547122"
-code = lookuplocation(Latitude, Longitude)
+code = lookuplocation(Latitude, Longitude).upper()
 print("Code", code)
 for i in range(12):
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
