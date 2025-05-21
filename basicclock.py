@@ -54,10 +54,6 @@ def make_clock_face(fo, cx, cy, r):
             xt, yt = (r-40)*x + cx, (r-40)*y + cy
             print('<text x="{}" y="{}">{}</text>'.format(xt,yt,str(hr+1)),
                   file=fo)
-            if min_ticks and min_ticklabels:
-                xt, yt = (r+20)*x + cx, (r+20)*y + cy
-                print('<text x="{}" y="{}" class="min-labels">{}</text>'
-                      .format(xt,yt,str((hr+1)*5 % 60)), file=fo)
             add_tick(x, y, 20)
             continue
         if min_ticks:
