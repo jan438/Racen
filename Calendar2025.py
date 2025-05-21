@@ -177,7 +177,7 @@ for i in range(len(raceevents)):
         code = lookuplocation(result[0], result[1]).upper()
         month = raceevent.month
         day = raceevent.day
-        weekday = weekDay(2025, month, day) 
+        weekday = weekDay(2025, month, 1) 
         if month == 1 or month == 2 or month == 3:
             row = 3
         if month == 4 or month == 5 or month == 6:
@@ -188,7 +188,7 @@ for i in range(len(raceevents)):
             row = 0
         col = (month - 1) % 3
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
-        print("1", raceevent.summary, "month", month, "day", day, "col", col, "row", row, "weekday", weekday)
+        print("1", raceevent.summary, "month", month, "day", day, "col", col, "row", row, "weekday 1e", weekday)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
