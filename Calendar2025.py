@@ -165,9 +165,9 @@ for i in range(len(raceevents)):
         code = lookuplocation(result[0], result[1]).upper()
         month = raceevent.month
         day = raceevent.day
-        col = (12 - month) % 3
-        row = (12 - month) / 4
+        col = 0
         if month == 3:
+            row = 3
             renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
             print("1", raceevent.summary, "month", month, "day", day, "col", col, "row", row)
 my_canvas.showPage()
