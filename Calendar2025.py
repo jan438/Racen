@@ -165,7 +165,9 @@ for i in range(len(raceevents)):
         result = raceevent.geo.split(";")
         code = lookuplocation(result[0], result[1]).upper()
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, flagx + i * 4, flagy + i * 4)
-        print("1", raceevent.summary, code)
+        month = raceevent.month
+        day = raceevent.day
+        print("1", raceevent.summary, month, day)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
