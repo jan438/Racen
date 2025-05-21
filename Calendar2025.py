@@ -165,6 +165,7 @@ for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
+        code = lookuplocation(result[0], result[1]).upper()
         print("1", raceevent.summary, result[0], result[1])
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
