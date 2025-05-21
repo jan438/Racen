@@ -26,6 +26,17 @@ class RaceEvent:
         self.endtime = endtime
         self.month = month
         self.geo = geo
+def weekDay(year, month, day):
+    offset = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
+    afterFeb = 1
+    if month > 2: afterFeb = 0
+    aux = year - 1700 - afterFeb
+    dayOfWeek  = 5
+    dayOfWeek += (aux + afterFeb) * 365                  
+    dayOfWeek += aux / 4 - aux / 100 + (aux + 100) / 400     
+    dayOfWeek += offset[month - 1] + (day - 1)               
+    dayOfWeek %= 7
+    return round(dayOfWeek)
 def converttimetztolocal(timetz):
     utc_string = timetz
     utc_format = "%Y%m%dT%H%M%SZ"
@@ -166,6 +177,7 @@ for i in range(len(alleventslines)):
         year = int(eventdtstartstr[:4])
         month = int(eventdtstartstr[4:6])
         day = int(eventdtstartstr[6:8])
+        weekday = weekDay(year, month, day)
         starttime = eventdtstartstr
     if dtendeventpos == 0:
         eventdtendstr = alleventslines[i][6:]
