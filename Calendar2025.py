@@ -156,8 +156,8 @@ for i in range(12):
     if col == -1:
         row += 1
         col = 2
-flagx = 0
-flagy = 0
+row = 0
+col = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
@@ -165,17 +165,17 @@ for i in range(len(raceevents)):
         code = lookuplocation(result[0], result[1]).upper()
         month = raceevent.month
         day = raceevent.day
-        flagx = (month % 3) * colwidth
-        flagy = (month / 4) * rowheight
-        renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagx, bottommargin + flagy)
-        print("1", raceevent.summary, month, day)
+        col = month % 3
+        row = month / 4
+        renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
+        print("1", raceevent.summary, "month", month, "day", day, "col", col, "row", row)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
-    if raceevent is not None and raceevent.categories == "Grand Prix,F1":
-        print("2", raceevent.summary)
+#    if raceevent is not None and raceevent.categories == "Grand Prix,F1":
+#        print("2", raceevent.summary)
 renderPDF.draw(scaleSVG("SVG/time.svg", 0.025), my_canvas, 250, 30)
 my_canvas.drawString(250, 60, "Zandvoort")
 my_canvas.bookmarkPage("Meaning_of_life", fit = "XYZ", left = 250,top = 30, zoom = 4)
