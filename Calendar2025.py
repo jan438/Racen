@@ -145,7 +145,6 @@ geolocator = Nominatim(user_agent="my_geopy_app")
 for i in range(12):
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
     if i == 4:
-        renderPDF.draw(scaleSVG("Flags/NL.svg", 0.25), my_canvas, leftmargin + flagoffset + col * colwidth, bottommargin + row * rowheight + 3)
         renderPDF.draw(scaleSVG("SVG/racingcar.svg", 0.025), my_canvas, leftmargin + flagoffset - 22 + col * colwidth, bottommargin + row * rowheight)
         linkx1 = leftmargin + flagoffset + col * colwidth
         linky1 = bottommargin + row * rowheight + 9
@@ -157,16 +156,18 @@ for i in range(12):
     if col == -1:
         row += 1
         col = 2
-flagx = 50
-flagy = 50
+flagx = 0
+flagy = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
         code = lookuplocation(result[0], result[1]).upper()
-        renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, flagx + i * 4, flagy + i * 4)
         month = raceevent.month
         day = raceevent.day
+        flagx = (month % 3) * colwidth
+        flagy = (month / 4) * rowheight
+        renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagx, bottommargin + flagy)
         print("1", raceevent.summary, month, day)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
