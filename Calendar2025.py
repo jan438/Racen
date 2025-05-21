@@ -187,8 +187,11 @@ for i in range(len(raceevents)):
         if month == 10 or month == 11 or month == 12:
             row = 0
         col = (month - 1) % 3
+        # augustus 1e op 5 friday hongarije 3 week = 1 zandvoort 31 week = 5
+        # zandvoort 31 / 7 = 4.428571429
+        weeknr = round(day / 7 + 1)
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
-        print("1", raceevent.summary, "month", month, "day", day, "col", col, "row", row, "weekday 1e", weekday)
+        print("1", raceevent.summary, "month", month, "day", day, "col", col, "row", row, "weekday 1e", weekday, "weeknr", weeknr)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
