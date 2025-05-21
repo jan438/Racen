@@ -26,7 +26,7 @@ def preamble(fo):
           '      font-family:Arial,Helvetica;font-size: 20pt;'
           '      font-weight: bold;}', file=fo)
     print('text.min-labels {font-size: 14pt; font-weight: normal;}', file=fo)
-    print('line.mn-hand {stroke-width: 4px; stroke: #f00;}', file=fo)
+    print('line.mn-hand {stroke-width: 4px; stroke: #000;}', file=fo)
     print('line.hr-hand {stroke-width: 12px; stroke: #000;}', file=fo)
 
     print("""]]></style>
