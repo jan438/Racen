@@ -142,9 +142,7 @@ linkx2 = 10
 linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
-#Latitude = "52.388408"
-#Longitude = "4.547122"
-geo = "-37.8373;144.9666"
+geo = "52.388408;4.547122"
 result = geo.split(';')
 code = lookuplocation(result[0], result[1]).upper()
 print("Code", code)
@@ -166,7 +164,8 @@ for i in range(12):
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
-        print("1", raceevent.summary, raceevent.geo)
+        geo = raceevent.geo.split(";") 
+        print("1", raceevent.summary, geo[0], geo[1])
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
