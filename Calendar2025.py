@@ -157,14 +157,14 @@ for i in range(12):
     if col == -1:
         row += 1
         col = 2
+flagx = 50
+flagy = 50
 for i in range(len(raceevents)):
-    col = 5
-    row = 5
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
         code = lookuplocation(result[0], result[1]).upper()
-        renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, 200, 600)
+        renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, flagx + i * 4, flagy + i * 4)
         print("1", raceevent.summary, code)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
