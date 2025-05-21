@@ -145,7 +145,7 @@ geolocator = Nominatim(user_agent="my_geopy_app")
 geo = "52.388408;4.547122"
 result = geo.split(';')
 code = lookuplocation(result[0], result[1]).upper()
-print("Code", code)
+print("Code", code, result[0], result[1])
 for i in range(12):
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
     if i == 4:
@@ -164,8 +164,9 @@ for i in range(12):
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
-        geo = raceevent.geo.split(";") 
-        print("1", raceevent.summary, geo[0], geo[1])
+        result = raceevent.geo.split(";")
+        #code = lookuplocation(geo[0], geo[1]).upper()
+        print("1", raceevent.summary, result[0], result[1])
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
