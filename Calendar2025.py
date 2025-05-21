@@ -36,6 +36,9 @@ def lookuplocation(lat, lon):
     address = location.raw['address']
     code = address.get('country_code')
     return code
+def lookupflag(flagcode):
+    flagimage = "Flags/" + flagcode + ".svg"
+    return flagimage
 def converttimetztolocal(timetz):
     utc_string = timetz
     utc_format = "%Y%m%dT%H%M%SZ"
@@ -166,7 +169,8 @@ for i in range(len(raceevents)):
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
         code = lookuplocation(result[0], result[1]).upper()
-        print("1", raceevent.summary, code)
+        flag = lookupflag(code)
+        print("1", raceevent.summary, code, flag)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
