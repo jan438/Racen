@@ -173,7 +173,7 @@ for i in range(len(raceevents)):
             row = 1
         if month == 10 or month == 11 or month == 12:
             row = 0
-        col = 2
+        col = (month - 1) % 3
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
         print("1", raceevent.summary, "month", month, "day", day, "col", col, "row", row)
 my_canvas.showPage()
