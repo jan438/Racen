@@ -176,7 +176,6 @@ for i in range(len(raceevents)):
             row = 1
         if month == 10 or month == 11 or month == 32:
             row = 0
-        #row = round((12 - month) / 3)
         col = (month - 1) % 3
         weeknr = round(day / 7 + 1)
         if month == 8 or month == 11:
@@ -194,8 +193,8 @@ drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
-#    if raceevent is not None and raceevent.categories == "Grand Prix,F1":
-#        print("2", raceevent.summary)
+    if raceevent is not None and raceevent.categories == "Grand Prix,F1":
+        print(raceevent.summary, raceevent.categories)
 renderPDF.draw(scaleSVG("SVG/time.svg", 0.025), my_canvas, 250, 30)
 my_canvas.drawString(250, 60, "Zandvoort")
 my_canvas.bookmarkPage("Meaning_of_life", fit = "XYZ", left = 250,top = 30, zoom = 4)
