@@ -192,16 +192,16 @@ my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 colwidth = 150
-rowheight = 150
+rowheight = 120
 row = 6
 col = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
         if raceevent.categories == "Grand Prix,F1":
-            my_canvas.drawString(col * colwidth, row * rowheight, raceevent.summary)
+            my_canvas.drawString(col * colwidth, row * rowheight, "GP " + raceevent.summary[27:-1])
             col += 1
-            if col == 3:
+            if col == 4:
                 col = 0
                 row = row - 1
                 if row < 0:
