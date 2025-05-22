@@ -156,19 +156,10 @@ linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
 for i in range(12):
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
-    if i == 4:
-        linkx1 = leftmargin + flagoffset + col * colwidth
-        linky1 = bottommargin + row * rowheight + 9
-        linkx2 = linkx1 + 20
-        linky2 = linky1 + 10
-        linkarea = (linkx1, linky1, linkx2, linky2)
-        my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", linkarea, addtopage = 1, thickness = 0, color = None)
     col -= 1
     if col == -1:
         row += 1
         col = 2
-row = 0
-col = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
@@ -193,6 +184,12 @@ for i in range(len(raceevents)):
             weeknr = weeknr + 1
         renderPDF.draw(scaleSVG("SVG/racingcar.svg", 0.025), my_canvas, leftmargin + flagoffset - 22 + col * colwidth, bottommargin + row * rowheight + (6 - weeknr) * 15)
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagoffset + col * colwidth, bottommargin + row * rowheight + (6 - weeknr) * 15)
+        linkx1 = leftmargin + flagoffset + col * colwidth
+        linky1 = bottommargin + row * rowheight + (6 - weeknr) * 15
+        linkx2 = linkx1 + 20
+        linky2 = linky1 + 10
+        linkarea = (linkx1, linky1, linkx2, linky2)
+        my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", linkarea, addtopage = 1, thickness = 0, color = None)
         print("1", raceevent.summary, "month", month, "day", day, "col", col, "row", row, "weekday 1e", weekday, "weeknr", weeknr)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
