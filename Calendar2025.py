@@ -207,16 +207,24 @@ for i in range(len(raceevents)):
             my_canvas.bookmarkPage(code, fit = "FitR", left = col * colwidth, bottom = row * rowheight - 100, right = col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             i = i + 1
             raceevent = raceevents[i] 
-            my_canvas.drawString(col * colwidth, row * rowheight - 20, raceevent.summary[4:])
+            result = raceevent.summary.split("(")
+            result = result[0][4:-1]
+            my_canvas.drawString(col * colwidth, row * rowheight - 20, result)
             i = i + 1
-            raceevent = raceevents[i] 
-            my_canvas.drawString(col * colwidth, row * rowheight - 40, raceevent.summary[4:])
+            raceevent = raceevents[i]
+            result = raceevent.summary.split("(")
+            result = result[0][4:-1]
+            my_canvas.drawString(col * colwidth, row * rowheight - 40, result)
             i = i + 1
-            raceevent = raceevents[i] 
-            my_canvas.drawString(col * colwidth, row * rowheight - 60, raceevent.summary[4:])
+            raceevent = raceevents[i]
+            result = raceevent.summary.split("(")
+            result = result[0][4:-1]
+            my_canvas.drawString(col * colwidth, row * rowheight - 60, result)
             i = i + 1
-            raceevent = raceevents[i] 
-            my_canvas.drawString(col * colwidth, row * rowheight - 80, raceevent.summary[4:])
+            raceevent = raceevents[i]
+            result = raceevent.summary.split("(")
+            result = result[0][4:-1]
+            my_canvas.drawString(col * colwidth, row * rowheight - 80, result)
             col += 1
             if col == 4:
                 col = 0
