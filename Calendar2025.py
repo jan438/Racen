@@ -209,22 +209,23 @@ for i in range(len(raceevents)):
             raceevent = raceevents[i] 
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
-            my_canvas.drawString(col * colwidth, row * rowheight - 20, result)
+            my_canvas.drawString(col * colwidth, row * rowheight - 15, result)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
-            my_canvas.drawString(col * colwidth, row * rowheight - 40, result)
+            my_canvas.drawString(col * colwidth, row * rowheight - 30, result)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
-            my_canvas.drawString(col * colwidth, row * rowheight - 60, result)
+            my_canvas.drawString(col * colwidth, row * rowheight - 45, result)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
-            result = result[0][4:-1]
-            my_canvas.drawString(col * colwidth, row * rowheight - 80, result)
+            result[0] = result[0][4:-1]
+            my_canvas.drawString(col * colwidth, row * rowheight - 60, result[0])
+            my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][15:-1])
             col += 1
             if col == 4:
                 col = 0
