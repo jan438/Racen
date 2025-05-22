@@ -225,14 +225,19 @@ for i in range(len(raceevents)):
             result = raceevent.summary.split("(")
             result[0] = result[0][4:-1]
             my_canvas.drawString(col * colwidth, row * rowheight - 60, result[0])
-            my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][15:-1])
+            if raceevent.location == "Austin":
+                my_canvas.drawString(col * colwidth, row * rowheight - 75, "the Americas")
+            elif raceevent.location == "Las Vegas":
+                my_canvas.drawString(col * colwidth, row * rowheight - 75, "Las Vegas")
+            else:
+                my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][15:-1])
             col += 1
             if col == 4:
                 col = 0
                 row = row - 1
                 if row < 0:
                     break
-renderPDF.draw(scaleSVG("SVG/time.svg", 0.025), my_canvas, 250, 30)
-my_canvas.drawString(250, 60, "Zandvoort")
+#renderPDF.draw(scaleSVG("SVG/time.svg", 0.025), my_canvas, 250, 30)
+#my_canvas.drawString(250, 60, "Zandvoort")
 my_canvas.save()
 key = input("Wait")
