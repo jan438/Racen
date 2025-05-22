@@ -189,6 +189,8 @@ for i in range(len(raceevents)):
         # augustus 1e op 5 friday hongarije 3 week = 1 zandvoort 31 week = 5
         # zandvoort 31 / 7 = 4.428571429
         weeknr = round(day / 7 + 1)
+        if month == 8 or month == 11:
+            weeknr = weeknr + 1
         renderPDF.draw(scaleSVG("SVG/racingcar.svg", 0.025), my_canvas, leftmargin + flagoffset - 22 + col * colwidth, bottommargin + row * rowheight + (6 - weeknr) * 15)
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagoffset + col * colwidth, bottommargin + row * rowheight + (6 - weeknr) * 15)
         print("1", raceevent.summary, "month", month, "day", day, "col", col, "row", row, "weekday 1e", weekday, "weeknr", weeknr)
