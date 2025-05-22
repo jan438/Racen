@@ -199,7 +199,9 @@ for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
         if raceevent.categories == "Vrije Training 1,F1":
-            my_canvas.drawString(col * colwidth, row * rowheight, raceevent.summary[4:])
+            result = raceevent.summary.split("(")
+            result = result[0][4:-1]
+            my_canvas.drawString(col * colwidth, row * rowheight, result)
             result = raceevent.geo.split(";")
             code = lookuplocation(result[0], result[1]).upper()
             my_canvas.bookmarkPage(code, fit = "FitR", left = col * colwidth, bottom = row * rowheight - 100, right = col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
