@@ -187,7 +187,7 @@ for i in range(len(raceevents)):
         linkx2 = linkx1 + 20
         linky2 = linky1 + 10
         linkarea = (linkx1, linky1, linkx2, linky2)
-        my_canvas.linkAbsolute("Find ", code, linkarea, addtopage = 1, thickness = 0, color = None)
+        my_canvas.linkAbsolute("Find ", raceevent.location, linkarea, addtopage = 1, thickness = 0, color = None)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
@@ -202,9 +202,7 @@ for i in range(len(raceevents)):
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
             my_canvas.drawString(col * colwidth, row * rowheight, result)
-            result = raceevent.geo.split(";")
-            code = lookuplocation(result[0], result[1]).upper()
-            my_canvas.bookmarkPage(code, fit = "FitR", left = col * colwidth, bottom = row * rowheight - 100, right = col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
+            my_canvas.bookmarkPage(raceevent.location, fit = "FitR", left = col * colwidth, bottom = row * rowheight - 100, right = col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             i = i + 1
             raceevent = raceevents[i] 
             result = raceevent.summary.split("(")
