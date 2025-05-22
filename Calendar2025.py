@@ -191,10 +191,21 @@ for i in range(len(raceevents)):
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
+colwidth = 150
+rowheight = 150
+row = 6
+col = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
-    if raceevent is not None and raceevent.categories == "Grand Prix,F1":
-        print(raceevent.summary, raceevent.categories)
+    if raceevent is not None:
+        if raceevent.categories == "Grand Prix,F1":
+            my_canvas.drawString(col * colwidth, row * rowheight, raceevent.summary)
+            col += 1
+            if col == 3:
+                col = 0
+                row = row - 1
+                if row < 0:
+                    break
 renderPDF.draw(scaleSVG("SVG/time.svg", 0.025), my_canvas, 250, 30)
 my_canvas.drawString(250, 60, "Zandvoort")
 my_canvas.bookmarkPage("Meaning_of_life", fit = "XYZ", left = 250,top = 30, zoom = 4)
