@@ -168,14 +168,7 @@ for i in range(len(raceevents)):
         month = raceevent.month
         day = raceevent.day
         weekday = weekDay(2025, month, 1) 
-        if month == 1 or month == 2 or month == 3:
-            row = 3
-        if month == 4 or month == 5 or month == 6:
-            row = 2
-        if month == 7 or month == 8 or month == 9:
-            row = 1
-        if month == 10 or month == 11 or month == 12:
-            row = 0
+        row = round((12 - month) / 3)
         col = (month - 1) % 3
         weeknr = round(day / 7 + 1)
         if month == 8 or month == 11:
