@@ -187,7 +187,7 @@ for i in range(len(raceevents)):
         linkx2 = linkx1 + 20
         linky2 = linky1 + 10
         linkarea = (linkx1, linky1, linkx2, linky2)
-        my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", linkarea, addtopage = 1, thickness = 0, color = None)
+        my_canvas.linkAbsolute("Find ", code, linkarea, addtopage = 1, thickness = 0, color = None)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
@@ -200,6 +200,9 @@ for i in range(len(raceevents)):
     if raceevent is not None:
         if raceevent.categories == "Grand Prix,F1":
             my_canvas.drawString(col * colwidth, row * rowheight, "GP " + raceevent.summary[27:-1])
+            result = raceevent.geo.split(";")
+            code = lookuplocation(result[0], result[1]).upper()
+            my_canvas.bookmarkPage(code, fit = "XYZ", left = col * colwidth, top = row * rowheight, zoom = 2)
             col += 1
             if col == 4:
                 col = 0
@@ -208,6 +211,5 @@ for i in range(len(raceevents)):
                     break
 renderPDF.draw(scaleSVG("SVG/time.svg", 0.025), my_canvas, 250, 30)
 my_canvas.drawString(250, 60, "Zandvoort")
-my_canvas.bookmarkPage("Meaning_of_life", fit = "XYZ", left = 250,top = 30, zoom = 4)
 my_canvas.save()
 key = input("Wait")
