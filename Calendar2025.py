@@ -202,7 +202,7 @@ for i in range(len(raceevents)):
             my_canvas.drawString(col * colwidth, row * rowheight, "GP " + raceevent.summary[27:-1])
             result = raceevent.geo.split(";")
             code = lookuplocation(result[0], result[1]).upper()
-            my_canvas.bookmarkPage(code, fit = "FitR", left = col * colwidth, bottom = row * rowheight, right = col * colwidth + colwidth, top = row * rowheight + rowheight)
+            my_canvas.bookmarkPage(code, fit = "FitR", left = col * colwidth, bottom = row * rowheight - 100, right = col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             col += 1
             if col == 4:
                 col = 0
