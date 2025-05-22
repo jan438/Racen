@@ -162,7 +162,7 @@ for i in range(12):
         col = 2
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
-    if raceevent is not None and raceevent.categories == "Vrije Training 1,F1":
+    if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
         code = lookuplocation(result[0], result[1]).upper()
         month = raceevent.month
