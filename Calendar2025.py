@@ -198,7 +198,7 @@ col = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
-        if raceevent.categories == "Grand Prix,F1":
+        if raceevent.categories == "Vrije Training 1,F1":
             my_canvas.drawString(col * colwidth, row * rowheight, "GP " + raceevent.summary[27:-1])
             result = raceevent.geo.split(";")
             code = lookuplocation(result[0], result[1]).upper()
