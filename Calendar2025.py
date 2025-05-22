@@ -199,22 +199,22 @@ for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
         if raceevent.categories == "Vrije Training 1,F1":
-            my_canvas.drawString(col * colwidth, row * rowheight, raceevent.summary)
+            my_canvas.drawString(col * colwidth, row * rowheight, raceevent.summary[4:])
             result = raceevent.geo.split(";")
             code = lookuplocation(result[0], result[1]).upper()
             my_canvas.bookmarkPage(code, fit = "FitR", left = col * colwidth, bottom = row * rowheight - 100, right = col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             i = i + 1
             raceevent = raceevents[i] 
-            my_canvas.drawString(col * colwidth, row * rowheight - 20, raceevent.summary)
+            my_canvas.drawString(col * colwidth, row * rowheight - 20, raceevent.summary[4:])
             i = i + 1
             raceevent = raceevents[i] 
-            my_canvas.drawString(col * colwidth, row * rowheight - 40, raceevent.summary)
+            my_canvas.drawString(col * colwidth, row * rowheight - 40, raceevent.summary[4:])
             i = i + 1
             raceevent = raceevents[i] 
-            my_canvas.drawString(col * colwidth, row * rowheight - 60, raceevent.summary)
+            my_canvas.drawString(col * colwidth, row * rowheight - 60, raceevent.summary[4:])
             i = i + 1
             raceevent = raceevents[i] 
-            my_canvas.drawString(col * colwidth, row * rowheight - 80, raceevent.summary)
+            my_canvas.drawString(col * colwidth, row * rowheight - 80, raceevent.summary[4:])
             col += 1
             if col == 4:
                 col = 0
