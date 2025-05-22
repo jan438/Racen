@@ -177,8 +177,6 @@ for i in range(len(raceevents)):
         if month == 10 or month == 11 or month == 12:
             row = 0
         col = (month - 1) % 3
-        # augustus 1e op 5 friday hongarije 3 week = 1 zandvoort 31 week = 5
-        # zandvoort 31 / 7 = 4.428571429
         weeknr = round(day / 7 + 1)
         if month == 8 or month == 11:
             weeknr = weeknr + 1
@@ -190,7 +188,6 @@ for i in range(len(raceevents)):
         linky2 = linky1 + 10
         linkarea = (linkx1, linky1, linkx2, linky2)
         my_canvas.linkAbsolute("Find the Meaning of Life", "Meaning_of_life", linkarea, addtopage = 1, thickness = 0, color = None)
-        print("1", raceevent.summary, "month", month, "day", day, "col", col, "row", row, "weekday 1e", weekday, "weeknr", weeknr)
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
