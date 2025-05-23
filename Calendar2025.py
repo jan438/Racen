@@ -195,7 +195,7 @@ colwidth = 150
 rowheight = 120
 row = 6
 col = 0
-clockoffset = 130
+clockoffset = 80
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
