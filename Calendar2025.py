@@ -195,6 +195,7 @@ colwidth = 150
 rowheight = 120
 row = 6
 col = 0
+clockoffset = 130
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
@@ -228,13 +229,12 @@ for i in range(len(raceevents)):
                 my_canvas.drawString(col * colwidth, row * rowheight - 75, "Las Vegas")
             else:
                 my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
+            renderPDF.draw(scaleSVG("SVG/" + "0300" + ".svg", 0.025), my_canvas, leftmargin + clockoffset + col * colwidth, bottommargin + row * rowheight - 75)
             col += 1
             if col == 4:
                 col = 0
                 row = row - 1
                 if row < 0:
                     break
-#renderPDF.draw(scaleSVG("SVG/time.svg", 0.025), my_canvas, 250, 30)
-#my_canvas.drawString(250, 60, "Zandvoort")
 my_canvas.save()
 key = input("Wait")
