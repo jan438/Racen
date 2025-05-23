@@ -221,14 +221,13 @@ for i in range(len(raceevents)):
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
-            result[0] = result[0][4:-1]
-            my_canvas.drawString(col * colwidth, row * rowheight - 60, result[0])
+            x = result[1].find("van ")
             if raceevent.location == "Austin":
                 my_canvas.drawString(col * colwidth, row * rowheight - 75, "the Americas")
             elif raceevent.location == "Las Vegas":
                 my_canvas.drawString(col * colwidth, row * rowheight - 75, "Las Vegas")
             else:
-                my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][15:-1])
+                my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
             col += 1
             if col == 4:
                 col = 0
