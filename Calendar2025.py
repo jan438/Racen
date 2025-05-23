@@ -229,7 +229,7 @@ for i in range(len(raceevents)):
                 my_canvas.drawString(col * colwidth, row * rowheight - 75, "Las Vegas")
             else:
                 my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
-            renderPDF.draw(scaleSVG("SVG/" + "0300" + ".svg", 0.025), my_canvas, leftmargin + clockoffset + col * colwidth, bottommargin + row * rowheight - 75)
+            renderPDF.draw(scaleSVG("SVG/" + "0300" + ".svg", 0.030), my_canvas, leftmargin + clockoffset + col * colwidth, row * rowheight - 75)
             col += 1
             if col == 4:
                 col = 0
