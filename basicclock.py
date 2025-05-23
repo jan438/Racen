@@ -22,10 +22,7 @@ def preamble(fo):
     print('circle {fill:none; stroke-width: 2px; stroke: #000;}', file=fo)
     print('circle.centre-circ {fill:#000;}', file=fo)
     print('line {stroke-width: 2px; stroke: #000;}', file=fo)
-    print('text {dominant-baseline: middle; text-anchor:middle;'
-          '      font-family:Arial,Helvetica;font-size: 20pt;'
-          '      font-weight: bold;}', file=fo)
-    print('text.min-labels {font-size: 14pt; font-weight: normal;}', file=fo)
+
     print('line.mn-hand {stroke-width: 4px; stroke: #000;}', file=fo)
     print('line.hr-hand {stroke-width: 12px; stroke: #000;}', file=fo)
 
@@ -117,7 +114,6 @@ parser.add_argument('-L', '--no-minute-ticklabels', dest='no_min_ticklabels',
     default=False, action='store_true')
 args = parser.parse_args()
 min_ticks = not args.no_min_ticks
-min_ticklabels = not args.no_min_ticklabels
 n = args.n
 assert n in (1, 2, 4, 6)
 ncols = 1

@@ -7,8 +7,6 @@
 circle {fill:none; stroke-width: 2px; stroke: #000;}
 circle.centre-circ {fill:#000;}
 line {stroke-width: 2px; stroke: #000;}
-text {dominant-baseline: middle; text-anchor:middle;      font-family:Arial,Helvetica;font-size: 20pt;      font-weight: bold;}
-text.min-labels {font-size: 14pt; font-weight: normal;}
 line.mn-hand {stroke-width: 4px; stroke: #000;}
 line.hr-hand {stroke-width: 12px; stroke: #000;}
 ]]></style>
