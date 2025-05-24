@@ -61,7 +61,6 @@ def converttimetztolocalclock(timetz):
     utc_dt = datetime.strptime(utc_string, utc_format)
     local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
     hour = local_dt.hour
-    print("hour", hour)
     return hour
 def lookupraceevent(month, day):
     raceevent = None
@@ -243,7 +242,7 @@ for i in range(len(raceevents)):
             else:
                 my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
             hour = converttimetztolocalclock(raceevent.starttime)
-            print(raceevent.location, converttimetztolocal(raceevent.starttime), "todo", str(hour))
+            print(len(str(hour)), str(hour))
             renderPDF.draw(scaleSVG("SVG/" + "0300" + ".svg", 0.030), my_canvas, leftmargin + clockoffset + col * colwidth, row * rowheight - 75)
             col += 1
             if col == 4:
