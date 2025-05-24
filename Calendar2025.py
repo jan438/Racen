@@ -242,8 +242,10 @@ for i in range(len(raceevents)):
             else:
                 my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
             hour = converttimetztolocalclock(raceevent.starttime)
-            print(len(str(hour)), str(hour))
-            renderPDF.draw(scaleSVG("SVG/" + "0300" + ".svg", 0.030), my_canvas, leftmargin + clockoffset + col * colwidth, row * rowheight - 75)
+            strhour = str(hour)
+            if len(strhour) == 1:
+                strhour = "0" + strhour
+            renderPDF.draw(scaleSVG("SVG/" + strhour + "00" + ".svg", 0.030), my_canvas, leftmargin + clockoffset + col * colwidth, row * rowheight - 75)
             col += 1
             if col == 4:
                 col = 0
