@@ -241,7 +241,7 @@ for i in range(len(raceevents)):
             else:
                 my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
             loctim = converttimetztolocalclock(raceevent.starttime)
-            print(raceevent.location, converttimetztolocal(raceevent.starttime), loctim)
+            print(raceevent.location, converttimetztolocal(raceevent.starttime), "todo", loctim)
             renderPDF.draw(scaleSVG("SVG/" + "0300" + ".svg", 0.030), my_canvas, leftmargin + clockoffset + col * colwidth, row * rowheight - 75)
             col += 1
             if col == 4:
