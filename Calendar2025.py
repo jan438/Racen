@@ -54,6 +54,13 @@ def converttimetztolocal(timetz):
     utc_dt = datetime.strptime(utc_string, utc_format)
     local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
     return local_dt
+def converttimetztolocalclock(timetz):
+    utc_string = timetz
+    utc_format = "%Y%m%dT%H%M%SZ"
+    local_tz = pytz.timezone('Europe/Amsterdam')
+    utc_dt = datetime.strptime(utc_string, utc_format)
+    local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
+    return local_dt
 def lookupraceevent(month, day):
     raceevent = None
     for i in range(len(raceevents)):
@@ -233,7 +240,8 @@ for i in range(len(raceevents)):
                 my_canvas.drawString(col * colwidth, row * rowheight - 75, "Las Vegas")
             else:
                 my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
-            print(raceevent.location, converttimetztolocal(raceevent.starttime))
+            loctim = converttimetztolocalclock(raceevent.starttime)
+            print(raceevent.location, converttimetztolocal(raceevent.starttime), loctim)
             renderPDF.draw(scaleSVG("SVG/" + "0300" + ".svg", 0.030), my_canvas, leftmargin + clockoffset + col * colwidth, row * rowheight - 75)
             col += 1
             if col == 4:
