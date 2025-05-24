@@ -56,6 +56,10 @@ def converttimetztolocal(timetz):
     return local_dt
 def converttimetztolocalclock(timetz):
     local = pytz.timezone("Europe/Amsterdam")
+    naive = datetime.strptime("2001-2-3 10:11:12", "%Y-%m-%d %H:%M:%S")
+    local_dt = local.localize(naive, is_dst=None)
+    utc_dt = local_dt.astimezone(pytz.utc)
+    print(local_dt)
     return timetz
 def lookupraceevent(month, day):
     raceevent = None
