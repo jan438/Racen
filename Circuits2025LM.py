@@ -106,7 +106,7 @@ my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFillColorRGB(255,170,0)
 bottom_margin = 40
 left_margin = 20
-renderPDF.draw(scaleSVG("SVG/WorldMap.svg", 0.35), my_canvas, 120, 245)
+renderPDF.draw(scaleSVG("SVG/WorldMap.svg", 0.35), my_canvas, 120, 315)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 rowcount = 6
@@ -128,7 +128,9 @@ for i in range(count):
     flag_y = offset_y * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
     renderPDF.draw(scaleSVG("SVG/startflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectionx * circuitscale)
-    my_canvas.circle(240 + i * 5, 275 + i * 5, 2, fill=1)
+    worldlocx =circuitsdata[i][3]
+    worldlocy =circuitsdata[i][4]
+    my_canvas.circle(float(worldlocx), float(worldlocy), 2, fill = 1)
     col += 1
     if col == colcount:
         row += 1
