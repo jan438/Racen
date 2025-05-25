@@ -261,5 +261,10 @@ for i in range(len(raceevents)):
                 if row < 0:
                     break
 my_canvas.arc(0.0, 0.0, 20.0, 20.0, startAng = 0, extent = 90)
+my_canvas.setFillColorRGB(1, 0.6, 0.8)
+p = my_canvas.beginPath()
+p.moveTo(0.2*inch, 0.2*inch)
+p.arcTo(inch, inch, 2.5*inch,2*inch, startAng=-30, extent=135)
+my_canvas.drawPath(p, fill=1, stroke=1)
 my_canvas.save()
 key = input("Wait")
