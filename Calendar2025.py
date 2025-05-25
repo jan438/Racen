@@ -214,6 +214,8 @@ for i in range(len(raceevents)):
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
             my_canvas.drawString(col * colwidth, row * rowheight, result)
+            [hour,minute] = converttimetztolocalclock(raceevent.starttime)
+            print(raceevent.location, "Vrije Traing 1", str(hour), ":", str(minute))
             my_canvas.bookmarkPage(raceevent.location, fit = "FitR", left = col * colwidth, bottom = row * rowheight - 100, right = col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             i = i + 1
             raceevent = raceevents[i] 
