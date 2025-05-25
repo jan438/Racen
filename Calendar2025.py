@@ -215,7 +215,11 @@ for i in range(len(raceevents)):
             result = result[0][4:-1]
             my_canvas.drawString(col * colwidth, row * rowheight, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-            print(raceevent.location, "Vrije Traing 1", str(hour), ":", str(minute))
+            strhour = str(hour)
+            strminute = str(minute)
+            if len(strminute) == 1:
+                strminute = "0" + strminute
+            print(raceevent.location, "Vrije Traing 1", strhour, ":", strminute)
             my_canvas.bookmarkPage(raceevent.location, fit = "FitR", left = col * colwidth, bottom = row * rowheight - 100, right = col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             i = i + 1
             raceevent = raceevents[i] 
