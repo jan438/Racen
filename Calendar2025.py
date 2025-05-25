@@ -219,7 +219,8 @@ for i in range(len(raceevents)):
             strminute = str(minute)
             if len(strminute) == 1:
                 strminute = "0" + strminute
-            print(raceevent.location, "Vrije Traing 1", strhour, ":", strminute)
+            startevent = strhour + ":" + strminute
+            my_canvas.drawString(col * colwidth + 100, row * rowheight, startevent)
             my_canvas.bookmarkPage(raceevent.location, fit = "FitR", left = col * colwidth, bottom = row * rowheight - 100, right = col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             i = i + 1
             raceevent = raceevents[i] 
