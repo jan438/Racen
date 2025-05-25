@@ -260,6 +260,6 @@ for i in range(len(raceevents)):
                 row = row - 1
                 if row < 0:
                     break
-my_canvas.arc(0.0, 0.0, 20.0, 20.0)
+my_canvas.arc(0.0, 0.0, 20.0, 20.0, startAng = 0, extent = 90)
 my_canvas.save()
 key = input("Wait")
