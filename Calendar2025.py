@@ -164,14 +164,14 @@ linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
 for i in range(12):
-    break
+    #break
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
     col -= 1
     if col == -1:
         row += 1
         col = 2
 for i in range(len(raceevents)):
-    break
+    #break
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
@@ -202,6 +202,7 @@ for i in range(len(raceevents)):
 my_canvas.showPage()
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
+leftmargin = 5
 colwidth = 150
 rowheight = 120
 row = 6
@@ -213,7 +214,7 @@ for i in range(len(raceevents)):
         if raceevent.categories == "Vrije Training 1,F1":
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
-            my_canvas.drawString(col * colwidth, row * rowheight, result)
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             strminute = str(minute)
@@ -221,34 +222,34 @@ for i in range(len(raceevents)):
                 strminute = "0" + strminute
             startevent = strhour + ":" + strminute
             my_canvas.drawString(col * colwidth + 100, row * rowheight, startevent)
-            my_canvas.bookmarkPage(raceevent.location, fit = "FitR", left = col * colwidth, bottom = row * rowheight - 100, right = col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
+            my_canvas.bookmarkPage(raceevent.location, fit = "FitR", left = leftmargin + col * colwidth, bottom = row * rowheight - 100, right = leftmargin + col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             i = i + 1
             raceevent = raceevents[i] 
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
-            my_canvas.drawString(col * colwidth, row * rowheight - 15, result)
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 15, result)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
-            my_canvas.drawString(col * colwidth, row * rowheight - 30, result)
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 30, result)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
-            my_canvas.drawString(col * colwidth, row * rowheight - 45, result)
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 45, result)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             x = result[1].find("van ")
             if raceevent.location == "Imola":
-                my_canvas.drawString(col * colwidth, row * rowheight - 75, "Imola")
+                my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Imola")
             elif raceevent.location == "Austin":
-                my_canvas.drawString(col * colwidth, row * rowheight - 75, "Austin")
+                my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Austin")
             elif raceevent.location == "Las Vegas":
-                my_canvas.drawString(col * colwidth, row * rowheight - 75, "Las Vegas")
+                my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Las Vegas")
             else:
-                my_canvas.drawString(col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
+                my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             if len(strhour) == 1:
