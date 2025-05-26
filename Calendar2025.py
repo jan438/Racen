@@ -213,6 +213,9 @@ for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
         if raceevent.categories == "Vrije Training 1,F1":
+            my_canvas.line(20.0, row * rowheight + 60.0, 32.0, row * rowheight + 60.0)
+            my_canvas.arc(2.0, row * rowheight + 32.0, 30.0, row * rowheight + 60.0, startAng = 90, extent = 90)
+            my_canvas.line(2.0, row * rowheight + 2.0, 2.0, row * rowheight + 50.0)
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
@@ -264,9 +267,6 @@ for i in range(len(raceevents)):
                     break
 my_canvas.setLineWidth(1)
 my_canvas.setStrokeColor(colors.black)
-my_canvas.line(20.0, 60.0, 40.0, 60.0)
-my_canvas.arc(10.0, 40.0, 30.0, 60.0, startAng = 90, extent = 90)
-my_canvas.line(10.0, 10.0, 10.0, 50.0)
 my_canvas.line(10.0, 10.0, 80.0, 10.0)
 my_canvas.arc(70.0, 10.0, 90.0, 30.0, startAng = 270, extent = 90)
 my_canvas.line(90.0, 20.0, 90.0, 40.0)
