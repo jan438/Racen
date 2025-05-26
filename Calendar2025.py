@@ -219,7 +219,7 @@ for i in range(len(raceevents)):
             my_canvas.line(col * colwidth + 2.0, row * rowheight + 2.0, col * colwidth + 2.0, row * rowheight + 22.0)
                  
             my_canvas.line(10.0, 10.0, 80.0, 10.0)
-            my_canvas.arc(col * colwidth + 70.0, row * rowheight - 80.0, col * colwidth + 90.0, row * rowheight - 60.0, startAng = 270, extent = 90)
+            my_canvas.arc(col * colwidth + 100.0, row * rowheight - 80.0, col * colwidth + 120.0, row * rowheight - 60.0, startAng = 270, extent = 90)
             my_canvas.line(90.0, 20.0, 90.0, 40.0)
             
             result = raceevent.summary.split("(")
