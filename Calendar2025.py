@@ -215,7 +215,7 @@ for i in range(len(raceevents)):
         if raceevent.categories == "Vrije Training 1,F1":
             my_canvas.line(col * colwidth + 16.0, row * rowheight + 30.0, col * colwidth + 50.0, row * rowheight + 30.0)
             my_canvas.arc(col * colwidth + 2.0, row * rowheight + 2.0, col * colwidth + 30.0, row * rowheight + 30.0, startAng = 90, extent = 90)
-            my_canvas.line(col * colwidth + 2.0, row * rowheight + 2.0, col * colwidth + 2.0, row * rowheight + 20.0)
+            my_canvas.line(col * colwidth + 2.0, row * rowheight + 2.0, col * colwidth + 2.0, row * rowheight + 17.0)
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
