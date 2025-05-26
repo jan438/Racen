@@ -260,9 +260,12 @@ for i in range(len(raceevents)):
                 row = row - 1
                 if row < 0:
                     break
+my_canvas.setLineWidth(4)
+my_canvas.setStrokeColor(colors.green)
 my_canvas.arc(0.0, 0.0, 20.0, 20.0, startAng = 90, extent = 90)
 my_canvas.arc(20.0, 20.0, 40.0, 40.0, startAng = 0, extent = 90)
 my_canvas.arc(40.0, 40.0, 60.0, 60.0, startAng = 180, extent = 90)
 my_canvas.arc(60.0, 60.0, 80.0, 80.0, startAng = 270, extent = 90)
+my_canvas.line(0.0, 0.0, 80.0, 80.0)
 my_canvas.save()
 key = input("Wait")
