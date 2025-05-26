@@ -213,9 +213,9 @@ for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
         if raceevent.categories == "Vrije Training 1,F1":
-            my_canvas.line(12.0, row * rowheight + 60.0, 32.0, row * rowheight + 60.0)
-            my_canvas.arc(2.0, row * rowheight + 32.0, 30.0, row * rowheight + 60.0, startAng = 90, extent = 90)
-            my_canvas.line(2.0, row * rowheight + 2.0, 2.0, row * rowheight + 50.0)
+            my_canvas.line(col * colwidth + 12.0, row * rowheight + 60.0, col * colwidth + 32.0, row * rowheight + 60.0)
+            my_canvas.arc(col * colwidth + 2.0, row * rowheight + 32.0, col * colwidth + 30.0, row * rowheight + 60.0, startAng = 90, extent = 90)
+            my_canvas.line(col * colwidth + 2.0, row * rowheight + 2.0, col * colwidth + 2.0, row * rowheight + 50.0)
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
