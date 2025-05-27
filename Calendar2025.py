@@ -44,7 +44,17 @@ def weekDay(year, month, day):
     dayOfWeek %= 7
     return round(dayOfWeek)
 def sortondate():
-    print("Sort on date", str(len(circuitsdata)))
+    for n in range(len(circuitsdata) - 1, 0, -1):
+        swapped = False  
+        for i in range(n):
+            if circuitsdata[i][3] > circuitsdata[i + 1][3]:
+                circuitsdata[i][3], circuitsdata[i + 1][3] = circuitsdata[i + 1][3], circuitsdata[i][3]
+                for j in range(n):
+                    print(circuitsdata[j][0])
+                print("\n")
+                swapped = True
+        if not swapped:
+            break
 def lookuplocation(lat, lon):
     location = geolocator.reverse(lat+","+lon)
     address = location.raw['address']
