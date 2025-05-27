@@ -210,9 +210,14 @@ for i in range(len(raceevents)):
 my_canvas.showPage()
 colwidth = 150
 rowheight = 120
-row = 0
+row = 5
 col = 0
-renderPDF.draw(scaleSVG("Location/" + circuitsdata[13][5] + "_location_map.svg", 0.1), my_canvas, col * colwidth, row * rowheight)
+for i in range(24): 
+    renderPDF.draw(scaleSVG("Location/" + circuitsdata[13][5] + "_location_map.svg", 0.1), my_canvas, col * colwidth, row * rowheight)
+    col += 1
+    if col == 4:
+       row -= 1
+       col = 0
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 leftmargin = 5
