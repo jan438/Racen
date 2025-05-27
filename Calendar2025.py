@@ -49,9 +49,6 @@ def sortondate():
         for i in range(n):
             if circuitsdata[i][2] > circuitsdata[i + 1][2]:
                 circuitsdata[i][2], circuitsdata[i + 1][2] = circuitsdata[i + 1][2], circuitsdata[i][2]
-                for j in range(n):
-                    print(circuitsdata[j][0])
-                print("\n")
                 swapped = True
         if not swapped:
             break
@@ -106,6 +103,8 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 sortondate()
+for i in range(24):
+    print(circuitsdata[i][0],circuitsdata[i][2])
 eventcal = "Calendar/Formule1.ics"
 in_file = open(os.path.join(path, eventcal), 'r')
 count = 0
