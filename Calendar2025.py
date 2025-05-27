@@ -85,6 +85,14 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
+circuitsdata = []
+file_to_open = "Data/Circuits2025.csv"
+with open(file_to_open, 'r') as file:
+    csvreader = csv.reader(file, delimiter = ';')
+    count = 0
+    for row in csvreader:
+        circuitsdata.append(row)
+        count += 1
 eventcal = "Calendar/Formule1.ics"
 in_file = open(os.path.join(path, eventcal), 'r')
 count = 0
@@ -204,7 +212,7 @@ colwidth = 150
 rowheight = 120
 row = 0
 col = 0
-renderPDF.draw(scaleSVG("Location/Netherlands_location_map.svg", 0.1), my_canvas, col * colwidth, row * rowheight)
+renderPDF.draw(scaleSVG("Location/" + circuitsdata[13][5] + "_location_map.svg", 0.1), my_canvas, col * colwidth, row * rowheight)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 leftmargin = 5
