@@ -20,6 +20,7 @@ from geopy.geocoders import Nominatim
 monthnames = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus", "September","Oktober","November","December"]
 alleventslines = []
 raceevents = []
+circuitsdata = []
 
 class RaceEvent:
     def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
@@ -42,6 +43,8 @@ def weekDay(year, month, day):
     dayOfWeek += offset[month - 1] + (day - 1)               
     dayOfWeek %= 7
     return round(dayOfWeek)
+def sortondate():
+    print("Sort on date", str(len(circuitsdata)))
 def lookuplocation(lat, lon):
     location = geolocator.reverse(lat+","+lon)
     address = location.raw['address']
@@ -85,7 +88,6 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-circuitsdata = []
 file_to_open = "Data/Circuits2025.csv"
 with open(file_to_open, 'r') as file:
     csvreader = csv.reader(file, delimiter = ';')
@@ -93,6 +95,7 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
+sortondate()
 eventcal = "Calendar/Formule1.ics"
 in_file = open(os.path.join(path, eventcal), 'r')
 count = 0
