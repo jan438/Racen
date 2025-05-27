@@ -47,8 +47,8 @@ def sortondate():
     for n in range(len(circuitsdata) - 1, 0, -1):
         swapped = False  
         for i in range(n):
-            if circuitsdata[i][3] > circuitsdata[i + 1][3]:
-                circuitsdata[i][3], circuitsdata[i + 1][3] = circuitsdata[i + 1][3], circuitsdata[i][3]
+            if circuitsdata[i][2] > circuitsdata[i + 1][2]:
+                circuitsdata[i][2], circuitsdata[i + 1][2] = circuitsdata[i + 1][2], circuitsdata[i][2]
                 for j in range(n):
                     print(circuitsdata[j][0])
                 print("\n")
