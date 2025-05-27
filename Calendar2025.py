@@ -47,7 +47,7 @@ def sortondate():
     for n in range(len(circuitsdata) - 1, 0, -1):
         swapped = False  
         for i in range(n):
-            if circuitsdata[i][2] > circuitsdata[i + 1][2]:
+            if circuitsdata[i][2] < circuitsdata[i + 1][2]:
                 circuitsdata[i][2], circuitsdata[i + 1][2] = circuitsdata[i + 1][2], circuitsdata[i][2]
                 swapped = True
         if not swapped:
@@ -102,9 +102,11 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
+for i in range(24):
+    print("B", circuitsdata[i][0],circuitsdata[i][2])
 sortondate()
 for i in range(24):
-    print(circuitsdata[i][0],circuitsdata[i][2])
+    print("A", circuitsdata[i][0],circuitsdata[i][2])
 eventcal = "Calendar/Formule1.ics"
 in_file = open(os.path.join(path, eventcal), 'r')
 count = 0
