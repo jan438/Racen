@@ -212,8 +212,11 @@ colwidth = 150
 rowheight = 120
 row = 5
 col = 0
-for i in range(24): 
-    renderPDF.draw(scaleSVG("Location/" + circuitsdata[13][5] + "_location_map.svg", 0.1), my_canvas, col * colwidth, row * rowheight)
+for i in range(24):
+    if i == 0:
+        renderPDF.draw(scaleSVG("Location/" + circuitsdata[0][5] + "_location_map.svg", 0.05), my_canvas, col * colwidth, row * rowheight)
+    else:
+        renderPDF.draw(scaleSVG("Location/" + circuitsdata[13][5] + "_location_map.svg", 0.1), my_canvas, col * colwidth, row * rowheight)
     col += 1
     if col == 4:
        row -= 1
