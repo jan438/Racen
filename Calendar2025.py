@@ -47,7 +47,13 @@ def sortondate():
     for n in range(len(circuitsdata) - 1, 0, -1):
         swapped = False  
         for i in range(n):
-            if circuitsdata[i][2] < circuitsdata[i + 1][2]:
+            datei = circuitsdata[i][2]
+            datei1 = circuitsdata[i + 1][2]
+            mi = int(datei[0:2])
+            di = int(datei[2:4])
+            mi1 = int(datei1[0:2])
+            di1 = int(datei1[2:4])
+            if mi < mi1:
                 circuitsdata[i][2], circuitsdata[i + 1][2] = circuitsdata[i + 1][2], circuitsdata[i][2]
                 swapped = True
         if not swapped:
@@ -104,9 +110,11 @@ with open(file_to_open, 'r') as file:
         count += 1
 for i in range(24):
     print("B", circuitsdata[i][0],circuitsdata[i][2])
+print("\n")
 sortondate()
 for i in range(24):
     print("A", circuitsdata[i][0],circuitsdata[i][2])
+print("\n")
 eventcal = "Calendar/Formule1.ics"
 in_file = open(os.path.join(path, eventcal), 'r')
 count = 0
