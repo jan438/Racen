@@ -56,6 +56,7 @@ def sortondate():
             if mi > mi1 or (mi == mi1 and di > di1):
                 circuitsdata[i][0], circuitsdata[i + 1][0] = circuitsdata[i + 1][0], circuitsdata[i][0]
                 circuitsdata[i][2], circuitsdata[i + 1][2] = circuitsdata[i + 1][2], circuitsdata[i][2]
+                circuitsdata[i][5], circuitsdata[i + 1][5] = circuitsdata[i + 1][5], circuitsdata[i][5]
                 swapped = True
         if not swapped:
             break
