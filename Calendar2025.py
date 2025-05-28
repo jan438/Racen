@@ -317,7 +317,5 @@ for i in range(len(raceevents)):
                 row = row - 1
                 if row < 0:
                     break
-my_canvas.setLineWidth(1)
-my_canvas.setStrokeColor(colors.black)
 my_canvas.save()
 key = input("Wait")
