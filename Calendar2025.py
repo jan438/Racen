@@ -110,13 +110,7 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-for i in range(24):
-    print("B", circuitsdata[i][0],circuitsdata[i][2])
-print("\n")
 sortondate()
-for i in range(24):
-    print("A", circuitsdata[i][0],circuitsdata[i][2])
-print("\n")
 eventcal = "Calendar/Formule1.ics"
 in_file = open(os.path.join(path, eventcal), 'r')
 count = 0
@@ -196,14 +190,14 @@ linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
 for i in range(12):
-    #break
+    break
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
     col -= 1
     if col == -1:
         row += 1
         col = 2
 for i in range(len(raceevents)):
-    #break
+    break
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
@@ -236,6 +230,9 @@ colwidth = 150
 rowheight = 120
 row = 5
 col = 0
+my_canvas.setFillColorRGB(0,0,0.77)
+for i in range(24):
+    my_canvas.rect(0.2*inch,0.2*inch,1*inch,1.5*inch, fill=1)
 for i in range(24):
     renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", 0.05), my_canvas, col * colwidth, row * rowheight)
     col += 1
