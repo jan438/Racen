@@ -233,8 +233,14 @@ row = 5
 col = 0
 my_canvas.setFillColor(HexColor('#FECDE5'))
 for i in range(24):
-    my_canvas.rect(0.2*inch,0.2*inch,1*inch,1.5*inch, fill=1)
+    my_canvas.rect(col * colwidth, row * rowheight, col * colwidth + colwidth, row * rowheight + rowheight, fill=1)
+    col += 1
+    if col == 4:
+       row -= 1
+       col = 0
 my_canvas.setFillColorRGB(0,0,0)
+row = 5
+col = 0
 for i in range(24):
     renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", 0.05), my_canvas, col * colwidth, row * rowheight)
     col += 1
