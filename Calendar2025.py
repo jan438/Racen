@@ -58,6 +58,7 @@ def sortondate():
                 circuitsdata[i][0], circuitsdata[i + 1][0] = circuitsdata[i + 1][0], circuitsdata[i][0]
                 circuitsdata[i][2], circuitsdata[i + 1][2] = circuitsdata[i + 1][2], circuitsdata[i][2]
                 circuitsdata[i][5], circuitsdata[i + 1][5] = circuitsdata[i + 1][5], circuitsdata[i][5]
+                circuitsdata[i][6], circuitsdata[i + 1][6] = circuitsdata[i + 1][6], circuitsdata[i][6]
                 swapped = True
         if not swapped:
             break
@@ -244,6 +245,7 @@ row = 5
 col = 0
 for i in range(24):
     renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6])), my_canvas, col * colwidth, row * rowheight + bottommargin)
+    print(i, col, row, circuitsdata[i][5], "scale", circuitsdata[i][6])
     col += 1
     if col == 4:
        row -= 1
