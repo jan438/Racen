@@ -239,10 +239,11 @@ for i in range(24):
        row -= 1
        col = 0
 my_canvas.setFillColorRGB(0,0,0)
+bottommargin = 30
 row = 5
 col = 0
 for i in range(24):
-    renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6])), my_canvas, col * colwidth, row * rowheight)
+    renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6])), my_canvas, col * colwidth, row * rowheight + bottommargin)
     col += 1
     if col == 4:
        row -= 1
