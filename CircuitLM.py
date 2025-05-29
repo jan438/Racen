@@ -75,8 +75,11 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     offset_y = (startfinish_y - min_y) * scale_y
     startindices = []
     for i in range(len(addedfeatures)):
+        feature = addedfeatures[i]
+        geometry = feature["geometry"]
+        coordinates = geometry["coordinates"]
         startindices.append(40 + i * 20)
-        print("Added featre", i)
+        print(i, "Startsector", coordinates[0], coordinates[1])
     svg_paths = []
     with open("SVG/" + svgfile + "LM.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
