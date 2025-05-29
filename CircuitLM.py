@@ -38,11 +38,17 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                 path_data += f"{command}{x},{height - y} "
         return path_data.strip()
     def nearestpoint(coordinates, coords):
+        np = -1
+        dist = float('inf')
         for linestring in coords:
+            counter = 0
             for point in linestring:
-                print(point[0], point[1])
-        print(coordinates[0], coordinates[1])
-        return None
+                d = calculate_distance(point[0], point[1], coordinates[0], coordinates[1])
+                if d < dist:
+                    dist = d
+                    np = counter
+                counter += 1
+        return np
     def calculate_distance(x1, y1, x2, y2):
         return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
     width = 500
@@ -85,8 +91,8 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
         geometry = feature["geometry"]
         coordinates = geometry["coordinates"]
         npoint = nearestpoint(coordinates, coords)
-        startindices.append(40 + i * 20)
-        print(i, "Startsector", coordinates[0], coordinates[1])
+        startindices.append(npoint)
+        print(i, "Startsector", coordinates[0], coordinates[1], "nearest point", npoint)
     svg_paths = []
     with open("SVG/" + svgfile + "LM.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
