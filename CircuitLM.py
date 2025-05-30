@@ -57,7 +57,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
         geojson_data = geojson.load(file)
     features = geojson_data['features']
     print("Count features", len(features))
-    addedfeatures = []
+    startindices = []
     for feature in features:
         geometry = feature["geometry"]
         properties = feature['properties']
@@ -66,7 +66,9 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             startfinish_x = coordinates[0]
             startfinish_y = coordinates[1]
         elif geometry['type'] == 'Point' and properties['place'] == "startsector":
-            addedfeatures.append(feature)
+            coordinates = geometry["coordinates"]
+            npoint = nearestpoint(coordinates, coords)
+            startindices.append(npoint)
         elif geometry['type'] == 'LineString':
             coordinates = geometry["coordinates"]
             min_x = min_y = float('inf')
@@ -85,14 +87,6 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     translate = (min_x, min_y)
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
-    startindices = []
-    for i in range(len(addedfeatures)):
-        feature = addedfeatures[i]
-        geometry = feature["geometry"]
-        coordinates = geometry["coordinates"]
-        npoint = nearestpoint(coordinates, coords)
-        startindices.append(npoint)
-        print(i, "Startsector", coordinates[0], coordinates[1], "nearest point", npoint)
     svg_paths = []
     with open("SVG/" + svgfile + "LM.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
@@ -111,8 +105,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                         f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#db4a25"/>\n')
                     if i == 2:
                         f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#1bce20"/>\n')
-        f.write('</svg>')
-    print("Geo", geojsonfile, "SVG", svgfile,"Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y, "Sectoren", len(addedfeatures))      
+        f.write('</svg>')    
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
