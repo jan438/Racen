@@ -8,8 +8,8 @@
                 "Location": "Melbourne",
                 "opened": "1953",
                 "id": "au-1953",
-                "altitude": "10",
                 "length": "5278",
+                "altitude": "10",
                 "Name": "Albert Park Circuit",
                 "firstgp": "1996"
             },
@@ -613,6 +613,32 @@
                 "coordinates": [
                     144.96687376780,
                     -37.84873854928
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    144.97160389878,
+                    -37.84733457373
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    144.96640410941,
+                    -37.83875119859
                 ]
             }
         }
