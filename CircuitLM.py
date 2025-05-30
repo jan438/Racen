@@ -69,7 +69,6 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             coordinates = geometry["coordinates"]
             npoint = nearestpoint(coordinates, coords)
             startindices.append(npoint)
-            print("Startindex", npoint)
         elif geometry['type'] == 'LineString':
             coordinates = geometry["coordinates"]
             min_x = min_y = float('inf')
@@ -93,7 +92,6 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             temp = startindices[0]
             startindices[0] = startindices[1]
             startindices[1] = temp
-        print("two sectoren")
     svg_paths = []
     with open("SVG/" + svgfile + "LM.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
