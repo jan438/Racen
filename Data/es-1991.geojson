@@ -18,8 +18,8 @@
         {
             "type": "Feature",
             "properties": {
-                "Name": "Circuit de Barcelona-Catalunya",
                 "id": "es-1991",
+                "Name": "Circuit de Barcelona-Catalunya",
                 "Location": "Barcelona",
                 "opened": "1991",
                 "firstgp": "1991",
@@ -629,6 +629,32 @@
                         2.26122100000,
                         41.57003400000
                     ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.26103238360,
+                    41.57238464915
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.25388941221,
+                    41.56790204198
                 ]
             }
         }
