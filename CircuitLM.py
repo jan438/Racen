@@ -89,6 +89,10 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
     if len(startindices) == 2:
+        if startindices[0] > startindices[1]:
+            temp = startindices[0]
+            startindices[0] = startindices[1]
+            startindices[1] = temp
         print("two sectoren")
     svg_paths = []
     with open("SVG/" + svgfile + "LM.svg", 'w') as f:
