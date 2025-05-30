@@ -88,6 +88,8 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     translate = (min_x, min_y)
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
+    if len(startindices) == 2:
+        print("two sectoren")
     svg_paths = []
     with open("SVG/" + svgfile + "LM.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
