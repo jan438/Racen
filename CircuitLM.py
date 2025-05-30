@@ -69,6 +69,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             coordinates = geometry["coordinates"]
             npoint = nearestpoint(coordinates, coords)
             startindices.append(npoint)
+            print("Startindex", npoint)
         elif geometry['type'] == 'LineString':
             coordinates = geometry["coordinates"]
             min_x = min_y = float('inf')
