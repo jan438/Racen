@@ -285,6 +285,10 @@
                         26.02944700000
                     ],
                     [
+                        50.51434823519,
+                        26.02995268405
+                    ],
+                    [
                         50.51438600000,
                         26.03004100000
                     ],
@@ -405,6 +409,32 @@
                 "coordinates": [
                     50.51058251569,
                     26.03269578710
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    50.51458192046,
+                    26.03012630626
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    50.51734150976,
+                    26.03461836881
                 ]
             }
         }
