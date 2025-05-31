@@ -5,12 +5,25 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -99.09379914875,
+                    19.40617512842
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "opened": "1962",
-                "altitude": "2232",
                 "id": "mx-1962",
+                "altitude": "2232",
                 "Name": "Autódromo Hermanos Rodríguez",
-                "firstgp": "1963",
                 "Location": "Mexico City",
+                "firstgp": "1963",
                 "length": "4304"
             },
             "geometry": {
@@ -426,13 +439,26 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startfinish"
+                "place": "startsector"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -99.09379914875,
-                    19.40617512842
+                    -99.08580236358,
+                    19.39883508699
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -99.09393132702,
+                    19.40365056555
                 ]
             }
         }
