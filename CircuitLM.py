@@ -61,15 +61,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     for feature in features:
         geometry = feature["geometry"]
         properties = feature['properties']
-        if geometry['type'] == 'Point' and properties['place'] == "startfinish":
-            coordinates = geometry["coordinates"]
-            startfinish_x = coordinates[0]
-            startfinish_y = coordinates[1]
-        elif geometry['type'] == 'Point' and properties['place'] == "startsector":
-            coordinates = geometry["coordinates"]
-            npoint = nearestpoint(coordinates, coords)
-            startindices.append(npoint)
-        elif geometry['type'] == 'LineString':
+        if geometry['type'] == 'LineString':
             coordinates = geometry["coordinates"]
             min_x = min_y = float('inf')
             max_x = max_y = float('-inf')
@@ -85,6 +77,17 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     scale_y = height / (max_y - min_y)
     scale = (scale_x, scale_y)
     translate = (min_x, min_y)
+    for feature in features:
+        geometry = feature["geometry"]
+        properties = feature['properties']
+        if geometry['type'] == 'Point' and properties['place'] == "startfinish":
+            coordinates = geometry["coordinates"]
+            startfinish_x = coordinates[0]
+            startfinish_y = coordinates[1]
+        elif geometry['type'] == 'Point' and properties['place'] == "startsector":
+            coordinates = geometry["coordinates"]
+            npoint = nearestpoint(coordinates, coords)
+            startindices.append(npoint)
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
     if len(startindices) == 2:
