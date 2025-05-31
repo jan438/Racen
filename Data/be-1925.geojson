@@ -5,8 +5,8 @@
         {
             "type": "Feature",
             "properties": {
-                "Name": "Circuit de Spa-Francorchamps",
                 "Location": "Spa Francorchamps",
+                "Name": "Circuit de Spa-Francorchamps",
                 "altitude": "413",
                 "id": "be-1925",
                 "length": "7004",
@@ -638,6 +638,19 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.97685249319,
+                    50.43338087847
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "place": "startfinish"
             },
             "geometry": {
@@ -645,6 +658,19 @@
                 "coordinates": [
                     5.96537437916,
                     50.44359087789
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.96072501651,
+                    50.42915434306
                 ]
             }
         }
