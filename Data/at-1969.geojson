@@ -5,6 +5,32 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.75462220679,
+                    47.22573945652
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.76673479172,
+                    47.22028536175
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "length": "4318",
                 "altitude": "721",
                 "Location": "Spielberg",
@@ -346,13 +372,13 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startfinish"
+                "place": "startsector"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    14.76673479172,
-                    47.22028536175
+                    14.75907464566,
+                    47.22310901552
                 ]
             }
         }
