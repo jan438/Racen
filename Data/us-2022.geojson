@@ -5,25 +5,38 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startfinish"
+                "place": "startsector"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -80.23787444121,
-                    25.95942644558
+                    -80.23062777779,
+                    25.96018598867
                 ]
             }
         },
         {
             "type": "Feature",
             "properties": {
-                "altitude": "1",
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.24406854668,
+                    25.95611313419
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "firstgp": "2022",
-                "length": "5412",
+                "altitude": "1",
                 "Location": "Miami",
-                "opened": "2022",
+                "length": "5412",
                 "id": "us-2022",
+                "opened": "2022",
                 "Name": "Miami International Autodrome"
             },
             "geometry": {
@@ -465,6 +478,19 @@
                         -80.23663600000,
                         25.95589500000
                     ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.23787444121,
+                    25.95942644558
                 ]
             }
         }
