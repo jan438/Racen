@@ -5,10 +5,23 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.54541803163,
+                    52.38833573625
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "altitude": "3",
                 "opened": "1948",
-                "Name": "Circuit Zandvoort",
                 "id": "nl-1948",
+                "Name": "Circuit Zandvoort",
                 "Location": "Zandvoort",
                 "length": "4259",
                 "firstgp": "1952"
@@ -509,6 +522,19 @@
                 "coordinates": [
                     4.54067143829,
                     52.38867422309
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.54422000408,
+                    52.38739388791
                 ]
             }
         }
