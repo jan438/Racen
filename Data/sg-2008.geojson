@@ -5,11 +5,24 @@
         {
             "type": "Feature",
             "properties": {
-                "altitude": "18",
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.86391583993,
+                    1.29316862495
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "Name": "Marina Bay Street Circuit",
+                "altitude": "18",
                 "opened": "2008",
-                "length": "4928",
                 "id": "sg-2008",
+                "length": "4928",
                 "Location": "Singapore",
                 "firstgp": "2008"
             },
@@ -486,13 +499,26 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startfinish"
+                "place": "startsector"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    103.86391583993,
-                    1.29316862495
+                    103.85639085843,
+                    1.29277516402
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.85457156238,
+                    1.29022315679
                 ]
             }
         }
