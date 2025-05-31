@@ -19,10 +19,10 @@
             "type": "Feature",
             "properties": {
                 "altitude": "239",
-                "length": "4381",
                 "opened": "1986",
-                "Name": "Hungaroring",
+                "length": "4381",
                 "id": "hu-1986",
+                "Name": "Hungaroring",
                 "firstgp": "1986",
                 "Location": "Budapest"
             },
@@ -593,6 +593,32 @@
                         19.24588800000,
                         47.58026000000
                     ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.25534790609,
+                    47.58042170340
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.24959231767,
+                    47.58512035660
                 ]
             }
         }
