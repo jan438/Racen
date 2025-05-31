@@ -5,13 +5,26 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    54.60608415377,
+                    24.47646126225
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "length": "5281",
-                "opened": "2009",
                 "Location": "Yas Marina",
+                "opened": "2009",
                 "Name": "Yas Marina Circuit",
                 "altitude": "9",
-                "firstgp": "2009",
-                "id": "ae-2009"
+                "id": "ae-2009",
+                "firstgp": "2009"
             },
             "geometry": {
                 "type": "LineString",
@@ -548,6 +561,19 @@
                         54.60546300000,
                         24.46997000000
                     ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    54.60781151605,
+                    24.46360009158
                 ]
             }
         },
