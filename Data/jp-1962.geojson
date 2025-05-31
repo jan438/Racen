@@ -5,13 +5,26 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.52652003762,
+                    34.84518149024
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "opened": "1962",
                 "Name": "Suzuka International Racing Course",
-                "length": "5807",
                 "id": "jp-1962",
+                "length": "5807",
                 "Location": "Suzuka",
-                "altitude": "60",
-                "firstgp": "1987"
+                "firstgp": "1987",
+                "altitude": "60"
             },
             "geometry": {
                 "type": "LineString",
@@ -405,6 +418,10 @@
                         34.84538100000
                     ],
                     [
+                        136.52705582041,
+                        34.84540620941
+                    ],
+                    [
                         136.52682900000,
                         34.84544700000
                     ],
@@ -704,6 +721,19 @@
                         136.54028300000,
                         34.84334400000
                     ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.53304541956,
+                    34.84362668960
                 ]
             }
         },
