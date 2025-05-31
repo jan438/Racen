@@ -5,13 +5,13 @@
         {
             "type": "Feature",
             "properties": {
-                "firstgp": "2021",
                 "Location": "Jeddah",
-                "altitude": "12",
+                "firstgp": "2021",
                 "length": "6175",
+                "altitude": "12",
                 "id": "sa-2021",
-                "opened": "2021",
-                "Name": "Jeddah Corniche Circuit"
+                "Name": "Jeddah Corniche Circuit",
+                "opened": "2021"
             },
             "geometry": {
                 "type": "LineString",
@@ -634,6 +634,19 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.10317660455,
+                    21.64707363076
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "place": "startfinish"
             },
             "geometry": {
@@ -641,6 +654,19 @@
                 "coordinates": [
                     39.10596849840,
                     21.62845439283
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.10286639412,
+                    21.63426286401
                 ]
             }
         }
