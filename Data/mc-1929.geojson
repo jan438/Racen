@@ -10,8 +10,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    7.42195975376,
-                    43.73634707728
+                    7.42848994001,
+                    43.74086127935
                 ]
             }
         },
@@ -23,8 +23,21 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    7.42812715189,
-                    43.74045355896
+                    7.42187913418,
+                    43.73625970227
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42125433241,
+                    43.73548788414
                 ]
             }
         },
@@ -34,8 +47,8 @@
                 "altitude": "47",
                 "id": "mc-1929",
                 "Location": "Monaco",
-                "Name": "Circuit de Monaco",
                 "firstgp": "1929",
+                "Name": "Circuit de Monaco",
                 "opened": "1929",
                 "length": "3337"
             },
@@ -65,6 +78,14 @@
                     [
                         7.42755100000,
                         43.73995800000
+                    ],
+                    [
+                        7.42809325916,
+                        43.74049019168
+                    ],
+                    [
+                        7.42842216731,
+                        43.74081299109
                     ],
                     [
                         7.42862800000,
@@ -686,19 +707,6 @@
                         7.42719100000,
                         43.73940400000
                     ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "place": "startfinish"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    7.42125433241,
-                    43.73548788414
                 ]
             }
         }
