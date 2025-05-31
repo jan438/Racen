@@ -5,6 +5,19 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    51.45965863154,
+                    25.48931518258
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "place": "startfinish"
             },
             "geometry": {
@@ -12,6 +25,19 @@
                 "coordinates": [
                     51.45170282365,
                     25.48569126600
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    51.45422420277,
+                    25.49541372231
                 ]
             }
         },
