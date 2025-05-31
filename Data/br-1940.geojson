@@ -5,6 +5,32 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -46.69954953175,
+                    -23.70499776301
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -46.69432529371,
+                    -23.70084157917
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "opened": "1940",
                 "length": "4309",
                 "altitude": "765",
@@ -706,13 +732,13 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startfinish"
+                "place": "startsector"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -46.69954953175,
-                    -23.70499776301
+                    -46.69665479001,
+                    -23.69850464786
                 ]
             }
         }
