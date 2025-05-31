@@ -18,8 +18,8 @@
         {
             "type": "Feature",
             "properties": {
-                "altitude": "610",
                 "Name": "Las Vegas Street Circuit",
+                "altitude": "610",
                 "firstgp": "2023",
                 "Location": "Las Vegas",
                 "length": "6116",
@@ -88,6 +88,10 @@
                     [
                         -115.16383800000,
                         36.11919000000
+                    ],
+                    [
+                        -115.16312545247,
+                        36.11918764057
                     ],
                     [
                         -115.16202600000,
@@ -253,6 +257,32 @@
                         -115.16221900000,
                         36.10901700000
                     ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.16312545247,
+                    36.11918764057
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.16719298200,
+                    36.12475688181
                 ]
             }
         }
