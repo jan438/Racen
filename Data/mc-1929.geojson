@@ -5,11 +5,37 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42195975376,
+                    43.73634707728
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.42812715189,
+                    43.74045355896
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "altitude": "47",
                 "id": "mc-1929",
                 "Location": "Monaco",
-                "firstgp": "1929",
                 "Name": "Circuit de Monaco",
+                "firstgp": "1929",
                 "opened": "1929",
                 "length": "3337"
             },
@@ -295,6 +321,10 @@
                     [
                         7.42196000000,
                         43.73639200000
+                    ],
+                    [
+                        7.42191805406,
+                        43.73630653521
                     ],
                     [
                         7.42188000000,
