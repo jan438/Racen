@@ -5,10 +5,23 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.63597715667,
+                    30.13643969942
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "Name": "Circuit of the Americas",
                 "firstgp": "2012",
-                "altitude": "130",
                 "opened": "2012",
+                "altitude": "130",
                 "length": "5514",
                 "id": "us-2012",
                 "Location": "Austin"
@@ -441,6 +454,10 @@
                         30.13701200000
                     ],
                     [
+                        -97.63598554145,
+                        30.13651718632
+                    ],
+                    [
                         -97.63572700000,
                         30.13621000000
                     ],
@@ -713,6 +730,19 @@
                 "coordinates": [
                     -97.64227828378,
                     30.13495125534
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.63196958058,
+                    30.13611812229
                 ]
             }
         }
