@@ -133,7 +133,7 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-cx = 3
+cx = 4
 my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025LM.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle(circuitsdata[cx][0])
