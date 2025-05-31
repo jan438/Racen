@@ -5,11 +5,50 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.28078251039,
+                    45.61624308893
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.29057412765,
+                    45.63019872822
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.28588714498,
+                    45.62257223956
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "id": "it-1922",
                 "Name": "Autodromo Nazionale Monza",
                 "length": "5793",
-                "altitude": "142",
                 "Location": "Monza",
+                "altitude": "142",
                 "firstgp": "1950",
                 "opened": "1922"
             },
@@ -516,19 +555,6 @@
                         9.28122300000,
                         45.61897500000
                     ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "place": "startfinish"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.28078251039,
-                    45.61624308893
                 ]
             }
         }
