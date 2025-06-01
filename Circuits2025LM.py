@@ -112,7 +112,8 @@ renderPDF.draw(drawing, my_canvas, 100, 800)
 rowcount = 6
 colcount = 5
 rowheight = 125
-#rowheight = 115
+worldkaartx = 100.0
+worldkaarty = 100.0
 colwidth = 115
 row = 0
 col = 0
@@ -128,9 +129,9 @@ for i in range(count):
     flag_y = offset_y * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y)
     renderPDF.draw(scaleSVG("SVG/startflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectionx * circuitscale)
-    worldlocx =circuitsdata[i][3]
-    worldlocy =circuitsdata[i][4]
-    my_canvas.circle(float(worldlocx), float(worldlocy), 2, fill = 1)
+    worldlocx = worldkaartx + float(circuitsdata[i][3])
+    worldlocy = worldkaarty + float(circuitsdata[i][4])
+    my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
     col += 1
     if col == colcount:
         row += 1
