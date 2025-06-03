@@ -227,15 +227,8 @@ for i in range(len(raceevents)):
 my_canvas.showPage()
 colwidth = 150
 rowheight = 120
-row = 5
-col = 0
 my_canvas.setFillColor(HexColor('#FECDE5'))
-for i in range(24):
-    #my_canvas.rect(col * colwidth, row * rowheight, col * colwidth + colwidth, row * rowheight + rowheight, fill=1)
-    col += 1
-    if col == 4:
-       row -= 1
-       col = 0
+my_canvas.rect(0, 0, 4 * colwidth + colwidth, 6 * rowheight + rowheight, fill=1)
 my_canvas.setFillColorRGB(0,0,0)
 bottommargin = 30
 row = 5
