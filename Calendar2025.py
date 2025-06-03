@@ -310,5 +310,7 @@ for i in range(len(raceevents)):
                     break
 for row in range(7):
     my_canvas.line(0, row * rowheight + bottommargin, 4 * colwidth, row * rowheight + bottommargin)
+for col in range(5):
+    my_canvas.line(col * colwidth, 6 * rowheight + bottommargin, col * colwidth, bottommargin)
 my_canvas.save()
 key = input("Wait")
