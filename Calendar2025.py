@@ -228,9 +228,9 @@ my_canvas.showPage()
 colwidth = 150
 rowheight = 120
 my_canvas.setFillColor(HexColor('#FECDE5'))
-my_canvas.rect(0, 0, 4 * colwidth + colwidth, 6 * rowheight + rowheight, fill=1)
-my_canvas.setFillColorRGB(0,0,0)
 bottommargin = 30
+my_canvas.rect(0, bottommargin, 4 * colwidth, 6 * rowheight + bottommargin, fill=1)
+my_canvas.setFillColorRGB(0,0,0)
 row = 5
 col = 0
 for i in range(24):
