@@ -315,5 +315,6 @@ for row in range(6):
     my_canvas.line(0, row * rowheight + rowheight + bottommargin - locmargin, 4 * colwidth, row * rowheight + rowheight + bottommargin - locmargin)
 for col in range(5):
     my_canvas.line(col * colwidth, 6 * rowheight + bottommargin, col * colwidth, bottommargin)
+    my_canvas.line(col * colwidth + locmargin, 6 * rowheight + bottommargin, col * colwidth + locmargin, bottommargin)
 my_canvas.save()
 key = input("Wait")
