@@ -233,12 +233,14 @@ my_canvas.rect(0, bottommargin, 4 * colwidth, 6 * rowheight + bottommargin, fill
 my_canvas.setFillColorRGB(0,0,0)
 row = 5
 col = 0
-for i in range(24):
+i = 0
+renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6])), my_canvas, col * colwidth, row * rowheight + bottommargin)
+#for i in range(24):
     #renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6])), my_canvas, col * colwidth, row * rowheight + bottommargin)
-    col += 1
-    if col == 4:
-       row -= 1
-       col = 0
+    #col += 1
+    #if col == 4:
+       #row -= 1
+       #col = 0
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 leftmargin = 5
