@@ -308,8 +308,10 @@ for i in range(len(raceevents)):
                 row = row - 1
                 if row < 0:
                     break
+locmargin = 25
 for row in range(7):
     my_canvas.line(0, row * rowheight + bottommargin, 4 * colwidth, row * rowheight + bottommargin)
+    my_canvas.line(0, row * rowheight + bottommargin + locmargin, 4 * colwidth, row * rowheight + bottommargin + locmargin)
 for col in range(5):
     my_canvas.line(col * colwidth, 6 * rowheight + bottommargin, col * colwidth, bottommargin)
 my_canvas.save()
