@@ -225,7 +225,7 @@ for i in range(len(raceevents)):
         linkarea = (linkx1, linky1, linkx2, linky2)
         my_canvas.linkAbsolute("Find ", raceevent.location, linkarea, addtopage = 1, thickness = 0, color = None)
 my_canvas.showPage()
-colwidth = 150
+colwidth = 148
 rowheight = 120
 my_canvas.setFillColor(HexColor('#FECDE5'))
 bottommargin = 30
