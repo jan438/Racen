@@ -253,7 +253,7 @@ for i in range(len(raceevents)):
     if raceevent is not None:
         if raceevent.categories == "Vrije Training 1,F1":
         
-            my_canvas.line(col * colwidth + 12.0, row * rowheight + 32.0, col * colwidth + colwidth - 9.0, row * rowheight + 32.0)
+            my_canvas.line(col * colwidth + 12.0, row * rowheight + 32.0, col * colwidth + colwidth - 8.0, row * rowheight + 32.0)
             my_canvas.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 22.0, row * rowheight + 32.0, startAng = 90, extent = 90)
             my_canvas.line(col * colwidth + 2.0, row * rowheight - 80.0, col * colwidth + 2.0, row * rowheight + 22.0)
                  
