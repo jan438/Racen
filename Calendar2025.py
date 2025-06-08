@@ -263,7 +263,6 @@ for i in range(len(raceevents)):
             p = my_canvas.beginPath()
             p.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
             my_canvas.drawPath(p, fill=1, stroke=1)
-            #my_canvas.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
             my_canvas.line(col * colwidth + 140.0, row * rowheight + 32, col * colwidth + 140.0, row * rowheight - 70.0)
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
