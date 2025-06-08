@@ -310,16 +310,5 @@ for i in range(len(raceevents)):
                 row = row - 1
                 if row < 0:
                     break
-locmargin = 10
-for row in range(6):
-    break
-    my_canvas.line(0, row * rowheight + bottommargin, 4 * colwidth, row * rowheight + bottommargin)
-    my_canvas.line(0, row * rowheight + bottommargin + locmargin, 4 * colwidth, row * rowheight + bottommargin + locmargin)
-    my_canvas.line(0, row * rowheight + rowheight + bottommargin - locmargin, 4 * colwidth, row * rowheight + rowheight + bottommargin - locmargin)
-for col in range(5):
-    break
-    my_canvas.line(col * colwidth, 6 * rowheight + bottommargin, col * colwidth, bottommargin)
-    my_canvas.line(col * colwidth + locmargin, 6 * rowheight + bottommargin, col * colwidth + locmargin, bottommargin)
-    my_canvas.line(col * colwidth + colwidth - locmargin, 6 * rowheight + bottommargin, col * colwidth + colwidth - locmargin, bottommargin)
 my_canvas.save()
 key = input("Wait")
