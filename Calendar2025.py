@@ -238,7 +238,7 @@ for i in range(24):
     if i == 21:
         renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6])), my_canvas, col * colwidth + float(circuitsdata[i][7]), row * rowheight + float(circuitsdata[i][8]) + bottommargin)
         my_canvas.setFillColor(HexColor('#BECD97'))
-        my_canvas.rect(col * colwidth + leftmargin, row * rowheight + bottommargin, 20, 100, fill = 1, stroke = 0)
+        my_canvas.rect(col * colwidth + leftmargin, row * rowheight + bottommargin + 10, 20, 100, fill = 1, stroke = 0)
         my_canvas.setFillColorRGB(0,0,0)
     col += 1
     if col == 4:
