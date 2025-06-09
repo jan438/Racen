@@ -235,7 +235,7 @@ leftmargin = 5
 row = 5
 col = 0
 for i in range(24):
-    if i == 0 or i == 5 or i == 20 or i == 21:
+    if i == 0 or i == 4 or i == 5 or i == 20 or i == 21:
         drawing = scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6]))
         my_canvas.setFillColor(HexColor('#BECD97'))
         my_canvas.rect(col * colwidth + 2.1, row * rowheight + bottommargin + 10, 138, 112, fill = 1, stroke = 0)
