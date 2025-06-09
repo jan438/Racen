@@ -236,7 +236,8 @@ row = 5
 col = 0
 for i in range(24):
     if i == 21:
-        renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6])), my_canvas, col * colwidth + float(circuitsdata[i][7]), row * rowheight + float(circuitsdata[i][8]) + bottommargin)
+        drawing = scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6]))
+        renderPDF.draw(drawing, my_canvas, col * colwidth + float(circuitsdata[i][7]), row * rowheight + float(circuitsdata[i][8]) + bottommargin)
         my_canvas.setFillColor(HexColor('#BECD97'))
         my_canvas.rect(col * colwidth + 2.1, row * rowheight + bottommargin + 10, float(circuitsdata[i][7]), 112, fill = 1, stroke = 0)
         my_canvas.rect(col * colwidth + 115.0, row * rowheight + bottommargin + 10, 25, 112, fill = 1, stroke = 0)
@@ -255,7 +256,6 @@ for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
         if raceevent.categories == "Vrije Training 1,F1":
-        
             my_canvas.line(col * colwidth + 12.0, row * rowheight + 32.0, col * colwidth + colwidth - 8.0, row * rowheight + 32.0)
             p = my_canvas.beginPath()
             p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 22.0, row * rowheight + 32.0, startAng = 90, extent = 90)
