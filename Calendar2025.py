@@ -236,13 +236,11 @@ row = 5
 col = 0
 for i in range(24):
     if i == 21:
-        # colwidth = 2.1 + 37.0 + 77.595 + 25 + 6.5 = 140
         drawing = scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6]))
-        print("Width", drawing.width, str(115))
         renderPDF.draw(drawing, my_canvas, col * colwidth + float(circuitsdata[i][7]), row * rowheight + float(circuitsdata[i][8]) + bottommargin)
         my_canvas.setFillColor(HexColor('#BECD97'))
         my_canvas.rect(col * colwidth + 2.1, row * rowheight + bottommargin + 10, float(circuitsdata[i][7]), 112, fill = 1, stroke = 0)
-        my_canvas.rect(col * colwidth + 2.1 + float(circuitsdata[i][7]) + drawing.width, row * rowheight + bottommargin + 10, 25, 112, fill = 1, stroke = 0)
+        my_canvas.rect(col * colwidth + 0.8 + float(circuitsdata[i][7]) + drawing.width, row * rowheight + bottommargin + 10, 25, 112, fill = 1, stroke = 0)
         my_canvas.setFillColorRGB(0,0,0)
     col += 1
     if col == 4:
