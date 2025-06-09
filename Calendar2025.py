@@ -189,14 +189,14 @@ linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
 for i in range(12):
-    #break
+    break
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
     col -= 1
     if col == -1:
         row += 1
         col = 2
 for i in range(len(raceevents)):
-    #break
+    break
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
@@ -234,7 +234,8 @@ my_canvas.setFillColorRGB(0,0,0)
 row = 5
 col = 0
 for i in range(24):
-    renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6])), my_canvas, col * colwidth + float(circuitsdata[i][7]), row * rowheight + float(circuitsdata[i][8]) + bottommargin)
+    if i == 21:
+        renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6])), my_canvas, col * colwidth + float(circuitsdata[i][7]), row * rowheight + float(circuitsdata[i][8]) + bottommargin)
     col += 1
     if col == 4:
        row -= 1
