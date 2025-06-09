@@ -239,7 +239,7 @@ for i in range(24):
         renderPDF.draw(scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6])), my_canvas, col * colwidth + float(circuitsdata[i][7]), row * rowheight + float(circuitsdata[i][8]) + bottommargin)
         my_canvas.setFillColor(HexColor('#BECD97'))
         my_canvas.rect(col * colwidth + 2.1, row * rowheight + bottommargin + 10, float(circuitsdata[i][7]), 112, fill = 1, stroke = 0)
-        my_canvas.rect(col * colwidth + 115.0, row * rowheight + bottommargin + 10, 22, 112, fill = 1, stroke = 0)
+        my_canvas.rect(col * colwidth + 112.0, row * rowheight + bottommargin + 10, 28, 112, fill = 1, stroke = 0)
         my_canvas.setFillColorRGB(0,0,0)
     col += 1
     if col == 4:
