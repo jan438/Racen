@@ -89,6 +89,8 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             coordinates = geometry["coordinates"]
             startfinish_x = coordinates[0]
             startfinish_y = coordinates[1]
+            npoint = nearestpoint(coordinates, coords)
+            print("Nearest point", npoint)
         elif geometry['type'] == 'Point' and properties['place'] == "startsector":
             coordinates = geometry["coordinates"]
             npoint = nearestpoint(coordinates, coords)
