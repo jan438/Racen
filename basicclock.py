@@ -19,12 +19,12 @@ def preamble(fo):
         <defs>
         <style type="text/css"><![CDATA[""", file=fo)
 
-    print('circle {fill:none; stroke-width: 2px; stroke: #000;}', file=fo)
+    print('circle {fill:none; stroke-width: 10px; stroke: #000;}', file=fo)
     print('circle.centre-circ {fill:#000;}', file=fo)
     print('line {stroke-width: 2px; stroke: #000;}', file=fo)
 
-    print('line.mn-hand {stroke-width: 4px; stroke: #000;}', file=fo)
-    print('line.hr-hand {stroke-width: 12px; stroke: #000;}', file=fo)
+    print('line.mn-hand {stroke-width: 20px; stroke: #000;}', file=fo)
+    print('line.hr-hand {stroke-width: 40px; stroke: #000;}', file=fo)
 
     print("""]]></style>
     </defs>""", file=fo)
