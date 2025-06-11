@@ -102,6 +102,8 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             startindices[0] = startindices[1]
             startindices[1] = temp
     print("Nearestpoinntstartfiniah", npointstartfinish, "Nearestpoints", startindices[0], startindices[1])
+    if npointstartfinish > startindices[0] and npointstartfinish > startindices[1]:
+        print("To tail")
     svg_paths = []
     with open("SVG/" + svgfile + "LM.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
