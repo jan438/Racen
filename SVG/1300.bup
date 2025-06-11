@@ -4,15 +4,15 @@
 
         <defs>
         <style type="text/css"><![CDATA[
-circle {fill:none; stroke-width: 10px; stroke: #000;}
+circle {fill:none; stroke-width: 2px; stroke: #000;}
 circle.centre-circ {fill:#000;}
 line {stroke-width: 2px; stroke: #000;}
-line.mn-hand {stroke-width: 20px; stroke: #000;}
-line.hr-hand {stroke-width: 40px; stroke: #000;}
+line.mn-hand {stroke-width: 4px; stroke: #000;}
+line.hr-hand {stroke-width: 12px; stroke: #000;}
 ]]></style>
     </defs>
 <line x1="400" y1="400" x2="400.0" y2="176.0" class="mn-hand"/>
-<line x1="400" y1="400" x2="538.5640646055102" y2="480.0" class="hr-hand"/>
+<line x1="400" y1="400" x2="480.0" y2="261.4359353944898" class="hr-hand"/>
 <circle cx="400" cy="400" r="320.0"/>
 <text x="540.0" y="157.5128869403572">1</text>
 <line x1="550.0" y1="140.1923788646684" x2="560.0" y2="122.87187078897966"/>
