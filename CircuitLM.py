@@ -11,6 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 1.0
 flagcorrection = -5.0
+cx = 14
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -69,8 +70,6 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             min_x = min_y = float('inf')
             max_x = max_y = float('-inf')
             coords = [coordinates]
-            coords = tail(coords, 2)
-            print("Tail", coords)
             for linestring in coords:
                for point in linestring:
                     x, y = point
@@ -89,8 +88,10 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             coordinates = geometry["coordinates"]
             startfinish_x = coordinates[0]
             startfinish_y = coordinates[1]
-            npoint = nearestpoint(coordinates, coords)
-            print("Nearest point", npoint)
+            if cx == 14:
+                npoint = nearestpoint(coordinates, coords)
+                coords = tail(coords, npoint)
+                print("Nearest point", npoint)
         elif geometry['type'] == 'Point' and properties['place'] == "startsector":
             coordinates = geometry["coordinates"]
             npoint = nearestpoint(coordinates, coords)
@@ -143,7 +144,6 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-cx = 14
 my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025LM.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle(circuitsdata[cx][0])
