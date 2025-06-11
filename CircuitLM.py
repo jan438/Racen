@@ -69,6 +69,8 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             min_x = min_y = float('inf')
             max_x = max_y = float('-inf')
             coords = [coordinates]
+            coords = tail(coords, 2)
+            print("Tail", coords)
             for linestring in coords:
                for point in linestring:
                     x, y = point
@@ -140,9 +142,6 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 cx = 14
-my_list = [1, 2, 3, 4, 5]
-my_list = tail(my_list, 2)
-print("Tail", my_list)
 my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025LM.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle(circuitsdata[cx][0])
