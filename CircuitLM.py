@@ -22,6 +22,9 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.height = drawing.height * scaling_y
     drawing.scale(scaling_x, scaling_y)
     return drawing
+def tail(my_list, n):
+    my_list = my_list[-n:] + my_list[:-n]
+    return my_list
 def dms_to_decimal(degrees, minutes, seconds, direction):
     decimal = degrees + (minutes / 60) + (seconds / 3600)
     if direction in ['S', 'W']:
@@ -137,6 +140,9 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 cx = 14
+my_list = [1, 2, 3, 4, 5]
+my_list = tail(my_list, 2)
+print("Tail", my_list)
 my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025LM.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle(circuitsdata[cx][0])
