@@ -109,24 +109,18 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
         coords = tail(coords, npointstartfinish)
         startindices[0] = nearestpoint(startsectoren[0], coords)
         startindices[1] = nearestpoint(startsectoren[1], coords)
-    svg_paths = []
     with open("SVG/" + svgfile + "LM.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
         for feature in geojson_data['features']:
             geometry = feature['geometry']
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
-                svg_paths.append(coordinates_to_path([coords[:startindices[0] + 1]], scale, translate))
-                svg_paths.append(coordinates_to_path([coords[startindices[0] - 1:startindices[1] + 1]], scale, translate))
-                svg_paths.append(coordinates_to_path([coords[startindices[1] - 1:]], scale, translate))
-                for i in range(len(svg_paths)):
-                    path = svg_paths[i]
-                    if i == 0:
-                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#fae44a"/>\n')
-                    if i == 1:
-                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#db4a25"/>\n')
-                    if i == 2:
-                        f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#1bce20"/>\n')
+                path = coordinates_to_path([coords[:startindices[0] + 1]], scale, translate)
+                f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#fae44a"/>\n')
+                path = coordinates_to_path([coords[startindices[0] - 1:startindices[1] + 1]], scale, translate)
+                f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#db4a25"/>\n')
+                path = coordinates_to_path([coords[startindices[1] - 1:]], scale, translate)
+                f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#1bce20"/>\n')
         f.write('</svg>')    
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
