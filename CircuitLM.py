@@ -62,6 +62,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     features = geojson_data['features']
     print("Count features", len(features))
     startindices = []
+    startsectoren = []
     for feature in features:
         geometry = feature["geometry"]
         properties = feature['properties']
@@ -93,7 +94,11 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
         elif geometry['type'] == 'Point' and properties['place'] == "startsector":
             coordinates = geometry["coordinates"]
             npoint = nearestpoint(coordinates, coords)
+            for linestring in coords:
+                startsector = linestring[npoint]
+                print("Startsector", startsector)
             startindices.append(npoint)
+            startsectoren.append(startsector)
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
     if len(startindices) == 2:
