@@ -108,7 +108,6 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             startindices[1] = temp
     if npointstartfinish > startindices[0] and npointstartfinish > startindices[1]:
         coords = tail(coords, npointstartfinish)
-        print("Startsectoren 0", startsectoren[0], "1", startsectoren[1])
         startindices[0] = nearestpoint(startsectoren[0], coords)
         startindices[1] = nearestpoint(startsectoren[1], coords)
     svg_paths = []
