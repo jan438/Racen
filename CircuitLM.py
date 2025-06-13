@@ -12,6 +12,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 circuitscale = 1.0
 flagcorrection = -5.0
 cx = 14
+sec1color = "#db4a25"
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -108,7 +109,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     path = coordinates_to_path([coords[:startindices[0] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#fae44a"/>\n')
                     path = coordinates_to_path([coords[startindices[0] - 1:startindices[1] + 1]], scale, translate)
-                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#db4a25"/>\n')
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                     path = coordinates_to_path([coords[startindices[1] - 1:startindices[2] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#1bce20"/>\n')
                     path = coordinates_to_path([coords[startindices[2] - 1:]], scale, translate)
