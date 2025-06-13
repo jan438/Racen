@@ -117,9 +117,9 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     path = coordinates_to_path([coords[startindices[0] - 1:startindices[1] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#db4a25"/>\n')
                     path = coordinates_to_path([coords[startindices[1] - 1:startindices[2] + 1]], scale, translate)
-                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#00ffff"/>\n')
-                    path = coordinates_to_path([coords[startindices[2] - 1:]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#1bce20"/>\n')
+                    path = coordinates_to_path([coords[startindices[2] - 1:]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#fae44a"/>\n')
                 else:
                     path = coordinates_to_path([coords[:startindices[0] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#fae44a"/>\n')
