@@ -11,7 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 1.0
 flagcorrection = -5.0
-cx = 14
+cx = 2
 sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
@@ -91,9 +91,8 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             coordinates = geometry["coordinates"]
             startfinish_x = coordinates[0]
             startfinish_y = coordinates[1]
-            if cx == 14:
-                npointstartfinish = nearestpoint(coordinates, coords)
-                startindices.append(npointstartfinish)
+            npointstartfinish = nearestpoint(coordinates, coords)
+            startindices.append(npointstartfinish)
         elif geometry['type'] == 'Point' and properties['place'] == "startsector":
             coordinates = geometry["coordinates"]
             npoint = nearestpoint(coordinates, coords)
