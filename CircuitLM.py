@@ -114,16 +114,16 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
                 if cx == 14:
-                    point1 = coords[0]
-                    point2 = coords[1]
-                    angle = get_angle(point1, point2)
-                    print(f"The angle is {angle} degrees.", point1, point2)
                     path = coordinates_to_path([coords[:startindices[0] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                     path = coordinates_to_path([coords[startindices[0] - 1:startindices[1] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
                     path = coordinates_to_path([coords[startindices[1] - 1:startindices[2] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
+                    point1 = coords[startindices[2]]
+                    point2 = coords[startindices[2] + 1]
+                    angle = get_angle(point1, point2)
+                    print(f"The angle is {angle} degrees.", point1, point2)
                     path = coordinates_to_path([coords[startindices[2] - 1:]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                 elif cx == 2:
