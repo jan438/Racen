@@ -127,7 +127,7 @@ for i in range(count):
     my_canvas.drawString(circuit_x + left_margin, circuit_y + bottom_margin, circuitsdata[i][0])
     flag_x = offset_x * circuitscale
     flag_y = offset_y * circuitscale
-    print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y, circuitsdata[i][10])
+    print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y, circuitsdata[i][9])
     renderPDF.draw(scaleSVG("SVG/startflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectionx * circuitscale)
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
