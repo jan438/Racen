@@ -11,7 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 1.0
 flagcorrection = -5.0
-cx = 14
+cx = 0
 sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
@@ -133,6 +133,15 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
                     path = coordinates_to_path([coords[startindices[1] - 1:]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                elif cx == 0:
+                    path = coordinates_to_path([coords[:startindices[0] + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
+                    path = coordinates_to_path([coords[startindices[0] - 1:startindices[1] + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                    path = coordinates_to_path([coords[startindices[2] - 1:startindices[1] + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#00ffff"/>\n')
+                    path = coordinates_to_path([coords[startindices[1] - 1:]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
                 else:
                     path = coordinates_to_path([coords[:startindices[0] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#fae44a"/>\n')
