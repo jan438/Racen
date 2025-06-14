@@ -1,4 +1,4 @@
-AlbertPark;au-1953;0316;430.0;340.0;Australia;0.075;0.0;
+AlbertPark;au-1953;0316;430.0;340.0;Australia;0.075;0.0;0.0;088;
 
 00 Naam circuit
 01 Naam geo
@@ -9,3 +9,4 @@ AlbertPark;au-1953;0316;430.0;340.0;Australia;0.075;0.0;
 06 Scale kaart
 07 x kaart
 08 y kaart
+09 angle
