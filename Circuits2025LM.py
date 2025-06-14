@@ -19,6 +19,7 @@ left_padding = 0
 bottom_padding = 0
 width = A4_width
 height = A4_height
+arrowscale = 0.02
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -129,6 +130,7 @@ for i in range(count):
     flag_y = offset_y * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y, circuitsdata[i][9])
     renderPDF.draw(scaleSVG("SVG/startflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectionx * circuitscale)
+    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectionx * circuitscale)
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
