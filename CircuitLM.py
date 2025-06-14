@@ -11,7 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 1.0
 flagcorrection = -5.0
-cx = 2
+cx = 14
 sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
@@ -34,6 +34,13 @@ def dms_to_decimal(degrees, minutes, seconds, direction):
     if direction in ['S', 'W']:
         decimal *= -1
     return decimal
+def get_angle(point1, point2):
+    x1, y1 = point1
+    x2, y2 = point2
+    angle_radians = math.atan2(y2 - y1, x2 - x1)
+    angle_degrees = math.degrees(angle_radians)
+    normalized_angle = angle_degrees % 360
+    return normalized_angle
 def GeoJSON_to_SVG(geojsonfile, svgfile):
     def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
@@ -107,6 +114,10 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
                 if cx == 14:
+                    point1 = (7.42719100000,43.73940400000)
+                    point2 = (7.42717100000,43.73949400000)
+                    angle = get_angle(point1, point2)
+                    print(f"The angle is {angle} degrees.")
                     path = coordinates_to_path([coords[:startindices[0] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                     path = coordinates_to_path([coords[startindices[0] - 1:startindices[1] + 1]], scale, translate)
