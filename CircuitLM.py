@@ -144,14 +144,15 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                 else:
                     print(circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
-                    path = coordinates_to_path([coords[:startindices[0] + 1]], scale, translate)
-                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#fae44a"/>\n')
-                    path = coordinates_to_path([coords[startindices[0] - 1:startindices[1] + 1]], scale, translate)
-                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#db4a25"/>\n')
-                    path = coordinates_to_path([coords[startindices[1] - 1:startindices[2] + 1]], scale, translate)
-                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#00ffff"/>\n')
-                    path = coordinates_to_path([coords[startindices[2] - 1:]], scale, translate)
-                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="#1bce20"/>\n')
+                    idx1 = circuitsdata[cx][12]
+                    idx2 = circuitsdata[cx][13]
+                    idx3 = circuitsdata[cx][14]
+                    path = coordinates_to_path([coords[0:20]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                    #path = coordinates_to_path([coords[idx2:idx3]], scale, translate)
+                    #f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
+                    #path = coordinates_to_path([coords[idx3:idx1]], scale, translate)
+                    #f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
         f.write('</svg>')    
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
