@@ -79,7 +79,7 @@ def GeoJSON_to_SVG(circuitname):
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
     #print("Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)
-    #print(circuitname, "Offsetstart", round(offset_x, 3), round(offset_y, 3))
+    print(circuitname, "Offsetstart", round(offset_x, 3), round(offset_y, 3))
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
@@ -132,8 +132,8 @@ for i in range(count):
     flag_x = offset_x * circuitscale
     flag_y = offset_y * circuitscale
     if i == 23:
-        arrow_x = float(circuitsdata[i][10])
-        arrow_y = float(circuitsdata[i][11])
+        arrow_x = float(circuitsdata[i][10]) * circuitscale
+        arrow_y = float(circuitsdata[i][11]) * circuitscale
     else:
         arrow_x = offset_x * circuitscale
         arrow_y = offset_y * circuitscale
