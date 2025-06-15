@@ -5,13 +5,26 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.54054469923,
+                    52.38839769925
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "place": "startsector"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.54541803163,
-                    52.38833573625
+                    4.54422000408,
+                    52.38739388791
                 ]
             }
         },
@@ -20,8 +33,8 @@
             "properties": {
                 "altitude": "3",
                 "opened": "1948",
-                "id": "nl-1948",
                 "Name": "Circuit Zandvoort",
+                "id": "nl-1948",
                 "Location": "Zandvoort",
                 "length": "4259",
                 "firstgp": "1952"
@@ -32,6 +45,10 @@
                     [
                         4.54049100000,
                         52.38840800000
+                    ],
+                    [
+                        4.54055694406,
+                        52.38850529568
                     ],
                     [
                         4.54067143829,
@@ -515,26 +532,13 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startfinish"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    4.54067143829,
-                    52.38867422309
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "place": "startsector"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.54422000408,
-                    52.38739388791
+                    4.54541803163,
+                    52.38833573625
                 ]
             }
         }
