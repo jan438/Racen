@@ -127,7 +127,7 @@ for i in range(count):
     circuit_x = col * colwidth
     circuit_y = row * rowheight
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
-    my_canvas.drawString(circuit_x + left_margin, circuit_y + bottom_margin, circuitsdata[i][0])
+    my_canvas.drawString(circuit_x + left_margin, circuit_y + bottom_margin - 12, circuitsdata[i][0])
     flag_x = offset_x * circuitscale
     flag_y = offset_y * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y, circuitsdata[i][9])
