@@ -180,13 +180,11 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     idx2 = int(circuitsdata[cx][13])   # case giles neuve
                     idx3 = int(circuitsdata[cx][14])
                     path = coordinates_to_path([coords[idx1:idx2 + 1]], scale, translate)
-                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                     path = coordinates_to_path([coords[idx2 - 1:idx3 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
                     path = coordinates_to_path([coords[idx3 - 1:]], scale, translate)
-                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
-                    path = coordinates_to_path([coords[:idx1 + 1]], scale, translate)
-                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
         f.write('</svg>')    
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
