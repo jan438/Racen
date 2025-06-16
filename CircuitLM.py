@@ -164,7 +164,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     print(f"The angle is {angle} degrees.", point1, point2)
                     path = coordinates_to_path([coords[startindices[2] - 1:]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
-                elif cx == 23:
+                elif cx == 5 or cx == 23:
                     idx1 = int(circuitsdata[cx][12])
                     idx2 = int(circuitsdata[cx][13])
                     idx3 = int(circuitsdata[cx][14])
@@ -177,7 +177,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                 else:
                     print(circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
                     idx1 = int(circuitsdata[cx][12])
-                    idx2 = int(circuitsdata[cx][13])   # case giles neuve
+                    idx2 = int(circuitsdata[cx][13])   # clockwise start on zero
                     idx3 = int(circuitsdata[cx][14])
                     path = coordinates_to_path([coords[idx1:idx2 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
