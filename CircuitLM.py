@@ -11,7 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 1.0
 flagcorrection = -5.0
-cx = 6
+cx = 7
 sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
@@ -113,6 +113,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             geometry = feature['geometry']
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
+                print(circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
                 if cx == 0:
                     path = coordinates_to_path([coords[:startindices[0] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
@@ -174,8 +175,16 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
                     path = coordinates_to_path([coords[idx3 - 1:]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
+                elif cx == 7:
+                    path = coordinates_to_path([coords[:startindices[0] + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
+                    path = coordinates_to_path([coords[startindices[0] - 1:startindices[1] + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                    path = coordinates_to_path([coords[startindices[2] - 1:startindices[1] + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
+                    path = coordinates_to_path([coords[startindices[1] - 1:]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
                 else:
-                    print(circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
                     idx1 = int(circuitsdata[cx][12])
                     idx2 = int(circuitsdata[cx][13])   # clockwise start on zero
                     idx3 = int(circuitsdata[cx][14])
