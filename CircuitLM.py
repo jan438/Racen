@@ -11,7 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 1.0
 flagcorrection = -5.0
-cx = 4
+cx = 5
 sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
@@ -139,6 +139,18 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
                     path = coordinates_to_path([coords[startindices[1] - 1:]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                elif cx == 4:
+                    idx1 = int(circuitsdata[cx][12])
+                    idx2 = int(circuitsdata[cx][13])
+                    idx3 = int(circuitsdata[cx][14])
+                    path = coordinates_to_path([coords[idx1:idx2 + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
+                    path = coordinates_to_path([coords[idx2 - 1:idx3 + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
+                    path = coordinates_to_path([coords[idx3 - 1:]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                    path = coordinates_to_path([coords[:idx1 + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                 elif cx == 14:
                     path = coordinates_to_path([coords[:startindices[0] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
@@ -165,7 +177,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                 else:
                     print(circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
                     idx1 = int(circuitsdata[cx][12])
-                    idx2 = int(circuitsdata[cx][13])   # case enzo
+                    idx2 = int(circuitsdata[cx][13])   # case giles neuve
                     idx3 = int(circuitsdata[cx][14])
                     path = coordinates_to_path([coords[idx1:idx2 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
