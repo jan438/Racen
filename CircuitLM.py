@@ -116,7 +116,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             geometry = feature['geometry']
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
-                print("Circuitsdata", circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
+                print("Circuitsdata", circuitsdata[cx][0], circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
                 idx1 = int(circuitsdata[cx][12])
                 idx2 = int(circuitsdata[cx][13])
                 idx3 = int(circuitsdata[cx][14])
