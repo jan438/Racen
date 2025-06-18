@@ -124,7 +124,7 @@ def GeoJSON_to_Canvas(circuitindex):
     print("startindex", startindex)
     for linestring in coords:
         for i, point in enumerate(linestring):
-            if i == startindex:
+            if i == 0:
                 print("hallo")
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
