@@ -39,49 +39,6 @@ def dms_to_decimal(degrees, minutes, seconds, direction):
     if direction in ['S', 'W']:
         decimal *= -1
     return decimal
-def GeoJSON_to_SVG(circuitname):
-    def coordinates_to_path(coordinates, scale, translate):
-        path_data = ""
-        for LineString in coordinates:
-            for i, point in enumerate(LineString):
-                x = (point[0] - translate[0]) * scale[0]
-                y = (point[1] - translate[1]) * scale[1]
-                command = "M" if i == 0 else "L"
-                path_data += f"{command}{x},{height - y} "
-            path_data += "Z "
-        return path_data.strip()
-    width = 500
-    height = 500
-    with open("Data/" + circuitname + ".geojson", 'r') as file:
-        geojson_data = geojson.load(file)
-    features = geojson_data['features']
-    for feature in features:
-        geometry = feature["geometry"]
-        if geometry['type'] == 'Point':
-            coordinates = geometry["coordinates"]
-            startfinish_x = coordinates[0]
-            startfinish_y = coordinates[1]
-        elif geometry['type'] == 'LineString':
-            coordinates = geometry["coordinates"]
-            min_x = min_y = float('inf')
-            max_x = max_y = float('-inf')
-            coords = [coordinates]
-            for linestring in coords:
-               for point in linestring:
-                    x, y = point
-                    min_x = min(min_x, x)
-                    max_x = max(max_x, x)
-                    min_y = min(min_y, y)
-                    max_y = max(max_y, y)
-    scale_x = width / (max_x - min_x)
-    scale_y = height / (max_y - min_y)
-    scale = (scale_x, scale_y)
-    translate = (min_x, min_y)
-    offset_x = (startfinish_x - min_x) * scale_x
-    offset_y = (startfinish_y - min_y) * scale_y
-    #print("Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)
-    print(circuitname, "Offsetstart", round(offset_x, 3), round(offset_y, 3))
-    return [offset_x, offset_y]
 def GeoJSON_to_Canvas(circuitindex):
     def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
@@ -141,8 +98,6 @@ def GeoJSON_to_Canvas(circuitindex):
                 #point)
             #if i == sect2:
                 #coords_to_offsets(point)
-    #offset_x = (startfinish_x - min_x) * scale_x
-    #offset_y = (startfinish_y - min_y) * scale_y
     #print(circuitsdata[circuitindex][0], str(circuitsdata[circuitindex][12]), "Offsetstart", round(offset_x, 3), round(offset_y, 3))
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
@@ -203,7 +158,7 @@ for i in range(count):
         arrow_y = offset_y * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y, circuitsdata[i][9], circuitsdata[i][10],  circuitsdata[i][11])
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectiony * circuitscale)
-    #renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow_x, circuit_y + bottom_margin + arrow_y)
+    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow_x, circuit_y + bottom_margin + arrow_y)
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
