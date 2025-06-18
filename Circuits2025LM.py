@@ -23,6 +23,11 @@ height = A4_height
 arrowscale = 0.01
 arrow_x = 0.0
 arrow_y = 0.0
+g_min_x = 0
+g_min_y = 0
+g_max_x = 0
+g_max_y = 0
+g_max_y = 0
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -83,7 +88,7 @@ def GeoJSON_to_SVG(circuitname):
     print(circuitname, "Offsetstart", round(offset_x, 3), round(offset_y, 3))
     return [offset_x, offset_y]
 def coords_to_offsets(coordinates):
-    print("x", coordinates[0], "y", coordinates[1])
+    print("x", coordinates[0], "y", coordinates[1], "g_min_x", g_min_x)
     return [0, 0]
 def GeoJSON_to_Canvas(circuitindex):
     def coordinates_to_path(coordinates, scale, translate):
@@ -130,15 +135,15 @@ def GeoJSON_to_Canvas(circuitindex):
         for i, point in enumerate(linestring):
             if i == startindex:
                 coords_to_offsets(point)
-                print("startindex", point)
             if i == sect1:
-                print("sector1", point)
+                coords_to_offsets(point)
             if i == sect2:
-                print("sector2", point)      
-    offset_x = (startfinish_x - min_x) * scale_x
-    offset_y = (startfinish_y - min_y) * scale_y
+                coords_to_offsets(point)
+    #offset_x = (startfinish_x - min_x) * scale_x
+    #offset_y = (startfinish_y - min_y) * scale_y
     #print(circuitsdata[circuitindex][0], str(circuitsdata[circuitindex][12]), "Offsetstart", round(offset_x, 3), round(offset_y, 3))
-    return [offset_x, offset_y]
+    #return [offset_x, offset_y]
+    return [30, 70]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
