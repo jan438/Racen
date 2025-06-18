@@ -11,7 +11,7 @@ from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 0.20
-flagscale = 0.01
+flagscale = 0.015
 flagcorrectionx = -30.0
 flagcorrectiony = -30.0
 A4_height = A4[1]
