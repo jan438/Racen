@@ -23,11 +23,6 @@ height = A4_height
 arrowscale = 0.01
 arrow_x = 0.0
 arrow_y = 0.0
-g_min_x = 0
-g_min_y = 0
-g_max_x = 0
-g_max_y = 0
-g_max_y = 0
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -87,9 +82,6 @@ def GeoJSON_to_SVG(circuitname):
     #print("Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)
     print(circuitname, "Offsetstart", round(offset_x, 3), round(offset_y, 3))
     return [offset_x, offset_y]
-def coords_to_offsets(coordinates):
-    print("x", coordinates[0], "y", coordinates[1], "g_min_x", g_min_x)
-    return [0, 0]
 def GeoJSON_to_Canvas(circuitindex):
     def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
@@ -101,8 +93,15 @@ def GeoJSON_to_Canvas(circuitindex):
                 path_data += f"{command}{x},{height - y} "
             path_data += "Z "
         return path_data.strip()
+    def coords_to_offsets(coordinates):
+        print("coords_to_offsets", "x", coordinates[0], "y", coordinates[1], "g_min_x", g_min_x)
+        return [0, 0]
     width = 500
     height = 500
+    g_min_x = 0
+    g_min_y = 0
+    g_max_x = 0
+    g_max_y = 0
     with open("Data/" + circuitsdata[circuitindex][1] + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
     features = geojson_data['features']
@@ -124,6 +123,7 @@ def GeoJSON_to_Canvas(circuitindex):
                     max_x = max(max_x, x)
                     min_y = min(min_y, y)
                     max_y = max(max_y, y)
+    g_min_x = min_x
     scale_x = width / (max_x - min_x)
     scale_y = height / (max_y - min_y)
     scale = (scale_x, scale_y)
