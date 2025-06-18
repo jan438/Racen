@@ -120,6 +120,9 @@ def GeoJSON_to_Canvas(circuitindex):
     scale_y = height / (max_y - min_y)
     scale = (scale_x, scale_y)
     translate = (min_x, min_y)
+    startindex = circuitsdata[circuitindex][12]
+    for linestring in coords:
+        print(linestring)
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
     print(circuitsdata[circuitindex][0], str(circuitsdata[circuitindex][12]), "Offsetstart", round(offset_x, 3), round(offset_y, 3))
