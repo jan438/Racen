@@ -82,6 +82,9 @@ def GeoJSON_to_SVG(circuitname):
     #print("Scale", scale_x, scale_y, "Startfinish", startfinish_x, startfinish_y, "Offsetflag", offset_x, offset_y)
     print(circuitname, "Offsetstart", round(offset_x, 3), round(offset_y, 3))
     return [offset_x, offset_y]
+def coords_to_offsets(coordinates):
+    print("x", coordinates[0], "y", coordinates[1])
+    return [0, 0]
 def GeoJSON_to_Canvas(circuitindex):
     def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
@@ -126,6 +129,7 @@ def GeoJSON_to_Canvas(circuitindex):
     for linestring in coords:
         for i, point in enumerate(linestring):
             if i == startindex:
+                coords_to_offsets(point)
                 print("startindex", point)
             if i == sect1:
                 print("sector1", point)
