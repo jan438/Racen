@@ -159,7 +159,6 @@ for i in range(count):
     arrow1_y = sect1_offset_y * circuitscale
     arrow2_x = sect2_offset_x * circuitscale
     arrow2_y = sect2_offset_y * circuitscale
-    print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y, circuitsdata[i][9], circuitsdata[i][10],  circuitsdata[i][11])
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectiony * circuitscale)
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
