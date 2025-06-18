@@ -93,9 +93,9 @@ def GeoJSON_to_Canvas(circuitindex):
                 path_data += f"{command}{x},{height - y} "
             path_data += "Z "
         return path_data.strip()
-    def coords_to_offsets(coordinates):
-        print("coords_to_offsets", "x", coordinates[0], "y", coordinates[1], "g_min_x", g_min_x)
-        return [0, 0]
+    #def coords_to_offsets(coordinates):
+        #print("coords_to_offsets", "x", coordinates[0], "y", coordinates[1], "g_min_x", g_min_x)
+        #return [0, 0]
     width = 500
     height = 500
     g_min_x = 0
@@ -107,11 +107,7 @@ def GeoJSON_to_Canvas(circuitindex):
     features = geojson_data['features']
     for feature in features:
         geometry = feature["geometry"]
-        if geometry['type'] == 'Point':
-            coordinates = geometry["coordinates"]
-            startfinish_x = coordinates[0]
-            startfinish_y = coordinates[1]
-        elif geometry['type'] == 'LineString':
+        if geometry['type'] == 'LineString':
             coordinates = geometry["coordinates"]
             min_x = min_y = float('inf')
             max_x = max_y = float('-inf')
@@ -124,8 +120,11 @@ def GeoJSON_to_Canvas(circuitindex):
                     min_y = min(min_y, y)
                     max_y = max(max_y, y)
     g_min_x = min_x
-    scale_x = width / (max_x - min_x)
-    scale_y = height / (max_y - min_y)
+    g_min_y = min_y
+    g_max_x = max_x
+    g_max_y = max_y
+    scale_x = width / (g_max_x - g_min_x)
+    scale_y = height / (g_max_y - g_min_y)
     scale = (scale_x, scale_y)
     translate = (min_x, min_y)
     startindex = int(circuitsdata[circuitindex][12])
@@ -134,16 +133,18 @@ def GeoJSON_to_Canvas(circuitindex):
     for linestring in coords:
         for i, point in enumerate(linestring):
             if i == startindex:
-                coords_to_offsets(point)
-            if i == sect1:
-                coords_to_offsets(point)
-            if i == sect2:
-                coords_to_offsets(point)
+                startfinish_x = point[0]
+                startfinish_y = point[1]
+                offset_x = (startfinish_x - g_min_x) * scale_x
+                offset_y = (startfinish_y - g_min_y) * scale_y
+            #if i == sect1:
+                #point)
+            #if i == sect2:
+                #coords_to_offsets(point)
     #offset_x = (startfinish_x - min_x) * scale_x
     #offset_y = (startfinish_y - min_y) * scale_y
     #print(circuitsdata[circuitindex][0], str(circuitsdata[circuitindex][12]), "Offsetstart", round(offset_x, 3), round(offset_y, 3))
-    #return [offset_x, offset_y]
-    return [30, 70]
+    return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
