@@ -121,12 +121,14 @@ def GeoJSON_to_Canvas(circuitindex):
     scale = (scale_x, scale_y)
     translate = (min_x, min_y)
     startindex = circuitsdata[circuitindex][12]
+    print("startindex", startindex)
     for linestring in coords:
         for i, point in enumerate(linestring):
-            print(i, point)
+            if i == startindex:
+                print("hallo")
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
-    print(circuitsdata[circuitindex][0], str(circuitsdata[circuitindex][12]), "Offsetstart", round(offset_x, 3), round(offset_y, 3))
+    #print(circuitsdata[circuitindex][0], str(circuitsdata[circuitindex][12]), "Offsetstart", round(offset_x, 3), round(offset_y, 3))
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
