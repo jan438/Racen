@@ -99,10 +99,12 @@ def GeoJSON_to_Canvas(circuitindex):
                 sect1_y = point[1]
                 sect1_offset_x = (sect1_x - g_min_x) * scale_x
                 sect1_offset_y = (sect1_y - g_min_y) * scale_y
-            #if i == sect2:
-                #coords_to_offsets(point)
-    #print(circuitsdata[circuitindex][0], str(circuitsdata[circuitindex][12]), "Offsetstart", round(offset_x, 3), round(offset_y, 3))
-    return [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y]
+            if i == sect2:
+                sect2_x = point[0]
+                sect2_y = point[1]
+                sect2_offset_x = (sect2_x - g_min_x) * scale_x
+                sect2_offset_y = (sect2_y - g_min_y) * scale_y
+    return [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect2_offset_x, sect2_offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -146,18 +148,21 @@ col = 0
 for i in range(count):
     if i == 11 or i == 13:
         col = col + 3
-    [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y] = GeoJSON_to_Canvas(i)
+    [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect2_offset_x, sect2_offset_y] = GeoJSON_to_Canvas(i)
     circuit_x = col * colwidth
     circuit_y = row * rowheight
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
     my_canvas.drawString(circuit_x + left_margin, circuit_y + bottom_margin - 12, circuitsdata[i][0])
     flag_x = startfinish_offset_x * circuitscale
     flag_y = startfinish_offset_y * circuitscale
-    arrow_x = sect1_offset_x * circuitscale
-    arrow_y = sect1_offset_y * circuitscale
+    arrow1_x = sect1_offset_x * circuitscale
+    arrow1_y = sect1_offset_y * circuitscale
+    arrow2_x = sect2_offset_x * circuitscale
+    arrow2_y = sect2_offset_y * circuitscale
     print(i, circuitsdata[i][0], circuitsdata[i][1], flag_x, flag_y, circuitsdata[i][9], circuitsdata[i][10],  circuitsdata[i][11])
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectiony * circuitscale)
-    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow_x, circuit_y + bottom_margin + arrow_y)
+    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
+    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
