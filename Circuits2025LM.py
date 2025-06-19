@@ -40,19 +40,6 @@ def dms_to_decimal(degrees, minutes, seconds, direction):
         decimal *= -1
     return decimal
 def GeoJSON_to_Canvas(circuitindex):
-    def coordinates_to_path(coordinates, scale, translate):
-        path_data = ""
-        for LineString in coordinates:
-            for i, point in enumerate(LineString):
-                x = (point[0] - translate[0]) * scale[0]
-                y = (point[1] - translate[1]) * scale[1]
-                command = "M" if i == 0 else "L"
-                path_data += f"{command}{x},{height - y} "
-            path_data += "Z "
-        return path_data.strip()
-    #def coords_to_offsets(coordinates):
-        #print("coords_to_offsets", "x", coordinates[0], "y", coordinates[1], "g_min_x", g_min_x)
-        #return [0, 0]
     width = 500
     height = 500
     g_min_x = 0
