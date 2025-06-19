@@ -24,7 +24,7 @@ left_padding = 0
 bottom_padding = 0
 width = A4_width
 height = A4_height
-arrowscale = 0.01
+arrowscale = 0.008
 arrow_x = 0.0
 arrow_y = 0.0
 
