@@ -42,7 +42,9 @@ def rotatescaleSVG(svgfile, angle, scaling_factor):
     namespace = {'svg': 'http://www.w3.org/2000/svg'}
     paths = svg_root.findall('.//svg:path', namespaces=namespace)
     path_data = [path.attrib.get('d') for path in paths if 'd' in path.attrib]
-    print(len(path_data), path_data)
+    print("Before", path_data[0])
+    path_data[0] = rotate_path(path_data[0], angle)
+    print("After", path_data[0])
     drawing = svgRenderer.render(svg_root)
     scaling_x = scaling_factor
     scaling_y = scaling_factor
@@ -51,18 +53,6 @@ def rotatescaleSVG(svgfile, angle, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
 def rotate_path(path, angle_degrees):
-    angle_radians = radians(angle_degrees)
-    cos_theta = cos(angle_radians)
-    sin_theta = sin(angle_radians)
-    for segment in path:
-        segment.start = complex(
-            segment.start.real * cos_theta - segment.start.imag * sin_theta,
-            segment.start.real * sin_theta + segment.start.imag * cos_theta
-        )
-        segment.end = complex(
-            segment.end.real * cos_theta - segment.end.imag * sin_theta,
-            segment.end.real * sin_theta + segment.end.imag * cos_theta
-        )
     return path
 def dms_to_decimal(degrees, minutes, seconds, direction):
     decimal = degrees + (minutes / 60) + (seconds / 3600)
