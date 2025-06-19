@@ -2,6 +2,8 @@ import os
 import sys
 import csv
 import geojson
+import xml.etree.ElementTree as ET
+from math import radians, cos, sin
 from ics import Calendar, Event
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
@@ -37,6 +39,10 @@ def scaleSVG(svgfile, scaling_factor):
 def rotatescaleSVG(svgfile, angle, scaling_factor):
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
+    namespace = {'svg': 'http://www.w3.org/2000/svg'}
+    paths = svg_root.findall('.//svg:path', namespaces=namespace)
+    path_data = [path.attrib.get('d') for path in paths if 'd' in path.attrib]
+    print(len(path_data), path_data)
     drawing = svgRenderer.render(svg_root)
     scaling_x = scaling_factor
     scaling_y = scaling_factor
@@ -44,6 +50,20 @@ def rotatescaleSVG(svgfile, angle, scaling_factor):
     drawing.height = drawing.height * scaling_y
     drawing.scale(scaling_x, scaling_y)
     return drawing
+def rotate_path(path, angle_degrees):
+    angle_radians = radians(angle_degrees)
+    cos_theta = cos(angle_radians)
+    sin_theta = sin(angle_radians)
+    for segment in path:
+        segment.start = complex(
+            segment.start.real * cos_theta - segment.start.imag * sin_theta,
+            segment.start.real * sin_theta + segment.start.imag * cos_theta
+        )
+        segment.end = complex(
+            segment.end.real * cos_theta - segment.end.imag * sin_theta,
+            segment.end.real * sin_theta + segment.end.imag * cos_theta
+        )
+    return path
 def dms_to_decimal(degrees, minutes, seconds, direction):
     decimal = degrees + (minutes / 60) + (seconds / 3600)
     if direction in ['S', 'W']:
