@@ -11,7 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 1.0
 flagcorrection = -5.0
-cx = 22
+cx = 14
 sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
@@ -159,10 +159,6 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
                     path = coordinates_to_path([coords[startindices[1] - 1:startindices[2] + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
-                    point1 = coords[startindices[2]]
-                    point2 = coords[startindices[2] + 1]
-                    angle = get_angle(point1, point2)
-                    print(f"The angle is {angle} degrees.", point1, point2)
                     path = coordinates_to_path([coords[startindices[2] - 1:]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                 elif cx == 5 or cx == 6 or cx == 23:
