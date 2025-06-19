@@ -24,9 +24,10 @@ left_padding = 0
 bottom_padding = 0
 width = A4_width
 height = A4_height
-arrowscale = 0.008
+arrowscale = 0.006
 arrow_x = 0.0
 arrow_y = 0.0
+rulerscale = 0.03
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -182,6 +183,7 @@ for i in range(count):
     circuit_x = col * colwidth
     circuit_y = row * rowheight
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
+    my_canvas.setFont("Helvetica", 9)
     my_canvas.drawString(circuit_x + left_margin, circuit_y + bottom_margin - 12, circuitsdata[i][0])
     flag_x = startfinish_offset_x * circuitscale
     flag_y = startfinish_offset_y * circuitscale
@@ -189,9 +191,14 @@ for i in range(count):
     arrow1_y = sect1_offset_y * circuitscale
     arrow2_x = sect2_offset_x * circuitscale
     arrow2_y = sect2_offset_y * circuitscale
+    ruler_x = 70
+    ruler_y = 40
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectiony * circuitscale)
     renderPDF.draw(scaleSVG("SVG/a" + sect1_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
     renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
+    renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + ruler_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + ruler_y + flagcorrectiony * circuitscale)
+    my_canvas.setFont("Helvetica", 6)
+    my_canvas.drawString(circuit_x + left_margin + ruler_x, circuit_y + bottom_margin + ruler_y + 10, "Hallo")
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
