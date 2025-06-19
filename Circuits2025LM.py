@@ -67,9 +67,10 @@ def GeoJSON_to_Canvas(circuitindex):
         x2, y2 = point2
         angle_radians = math.atan2(y2 - y1, x2 - x1)
         angle_degrees = math.degrees(angle_radians)
-        normalized_angle = angle_degrees % 360
-        normalized_angle = round(random.randint(0, 354) / 10) * 10
-        if normalized_angle < 10:
+        normalized_angle = round((angle_degrees % 360) / 10) * 10
+        if normalized_angle == 360:
+            arrow_id = "000"
+        elif normalized_angle < 10:
             arrow_id = "00" + str(normalized_angle)
         elif normalized_angle < 100:
             arrow_id = "0" + str(normalized_angle)
