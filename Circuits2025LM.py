@@ -68,7 +68,7 @@ def GeoJSON_to_Canvas(circuitindex):
         angle_radians = math.atan2(y2 - y1, x2 - x1)
         angle_degrees = math.degrees(angle_radians)
         normalized_angle = angle_degrees % 360
-        normalized_angle = round(random.randint(0, 359) / 10) * 10
+        normalized_angle = round(random.randint(0, 349) / 10) * 10
         if normalized_angle < 10:
             arrow_id = "00" + str(normalized_angle)
         elif normalized_angle < 100:
@@ -187,7 +187,7 @@ for i in range(count):
     arrow2_y = sect2_offset_y * circuitscale
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectiony * circuitscale)
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
-    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
+    renderPDF.draw(scaleSVG("SVG/a" + sect1_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
