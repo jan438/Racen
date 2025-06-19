@@ -2,6 +2,8 @@ import os
 import sys
 import csv
 import geojson
+import random
+import math
 import xml.etree.ElementTree as ET
 from math import radians, cos, sin
 from ics import Calendar, Event
@@ -60,6 +62,14 @@ def dms_to_decimal(degrees, minutes, seconds, direction):
         decimal *= -1
     return decimal
 def GeoJSON_to_Canvas(circuitindex):
+    def get_angle(point1, point2):
+        x1, y1 = point1
+        x2, y2 = point2
+        angle_radians = math.atan2(y2 - y1, x2 - x1)
+        angle_degrees = math.degrees(angle_radians)
+        normalized_angle = angle_degrees % 360
+        normalized_angle = round(random.randint(0, 359) / 10) * 10
+        return normalized_angle
     width = 500
     height = 500
     g_min_x = 0
@@ -106,12 +116,15 @@ def GeoJSON_to_Canvas(circuitindex):
                 sect1_y = point[1]
                 sect1_offset_x = (sect1_x - g_min_x) * scale_x
                 sect1_offset_y = (sect1_y - g_min_y) * scale_y
+                point2 = linestring[i + 1]
+                sect1_angle = get_angle(point, point2)
+                print(sect1_angle)
             if i == sect2:
                 sect2_x = point[0]
                 sect2_y = point[1]
                 sect2_offset_x = (sect2_x - g_min_x) * scale_x
                 sect2_offset_y = (sect2_y - g_min_y) * scale_y
-    return [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect2_offset_x, sect2_offset_y]
+    return [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect1_angle, sect2_offset_x, sect2_offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -155,7 +168,7 @@ col = 0
 for i in range(count):
     if i == 11 or i == 13:
         col = col + 3
-    [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect2_offset_x, sect2_offset_y] = GeoJSON_to_Canvas(i)
+    [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect1_angle, sect2_offset_x, sect2_offset_y] = GeoJSON_to_Canvas(i)
     circuit_x = col * colwidth
     circuit_y = row * rowheight
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
@@ -167,7 +180,7 @@ for i in range(count):
     arrow2_x = sect2_offset_x * circuitscale
     arrow2_y = sect2_offset_y * circuitscale
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectiony * circuitscale)
-    renderPDF.draw(rotatescaleSVG("SVG/" + circuitsdata[i][9] + ".svg", 45, arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
+    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][9] + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
