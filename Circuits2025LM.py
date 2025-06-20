@@ -192,14 +192,12 @@ for i in range(count):
     arrow1_y = sect1_offset_y * circuitscale
     arrow2_x = sect2_offset_x * circuitscale
     arrow2_y = sect2_offset_y * circuitscale
-    ruler_x = 70
-    ruler_y = 40
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectiony * circuitscale)
     renderPDF.draw(scaleSVG("SVG/a" + sect1_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
     renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
-    renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + ruler_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + ruler_y + flagcorrectiony * circuitscale)
+    renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]) + flagcorrectionx * circuitscale, circuit_y + bottom_margin + int(circuitsdata[i][11]) + flagcorrectiony * circuitscale)
     my_canvas.setFont("Helvetica", 6)
-    my_canvas.drawString(circuit_x + left_margin + ruler_x, circuit_y + bottom_margin + ruler_y + 10, f"{length}")
+    my_canvas.drawString(circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 10, f"{length}")
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
