@@ -92,7 +92,6 @@ def GeoJSON_to_Canvas(circuitindex):
         properties = feature['properties']
         if geometry['type'] == 'LineString':
             length = properties['length']
-            print("Length", length)
             coordinates = geometry["coordinates"]
             min_x = min_y = float('inf')
             max_x = max_y = float('-inf')
@@ -138,7 +137,7 @@ def GeoJSON_to_Canvas(circuitindex):
                 point2 = linestring[i + 1]
                 sect2_angle = get_angle(point, point2)
                 print(sect2_angle)
-    return [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect1_angle, sect2_offset_x, sect2_offset_y, sect2_angle]
+    return [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect1_angle, sect2_offset_x, sect2_offset_y, sect2_angle, length]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -182,7 +181,7 @@ col = 0
 for i in range(count):
     if i == 11 or i == 13:
         col = col + 3
-    [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect1_angle, sect2_offset_x, sect2_offset_y, sect2_angle] = GeoJSON_to_Canvas(i)
+    [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect1_angle, sect2_offset_x, sect2_offset_y, sect2_angle, length] = GeoJSON_to_Canvas(i)
     circuit_x = col * colwidth
     circuit_y = row * rowheight
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
@@ -201,7 +200,7 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
     renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + ruler_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + ruler_y + flagcorrectiony * circuitscale)
     my_canvas.setFont("Helvetica", 6)
-    my_canvas.drawString(circuit_x + left_margin + ruler_x, circuit_y + bottom_margin + ruler_y + 10, "Hallo")
+    my_canvas.drawString(circuit_x + left_margin + ruler_x, circuit_y + bottom_margin + ruler_y + 10, str(length))
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
