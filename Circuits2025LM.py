@@ -4,7 +4,6 @@ import csv
 import geojson
 import random
 import math
-import xml.etree.ElementTree as ET
 from math import radians, cos, sin
 from ics import Calendar, Event
 from reportlab.graphics import renderPDF
