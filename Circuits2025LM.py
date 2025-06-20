@@ -89,7 +89,10 @@ def GeoJSON_to_Canvas(circuitindex):
     features = geojson_data['features']
     for feature in features:
         geometry = feature["geometry"]
+        properties = feature['properties']
         if geometry['type'] == 'LineString':
+            length = properties['length']
+            print("Length", length)
             coordinates = geometry["coordinates"]
             min_x = min_y = float('inf')
             max_x = max_y = float('-inf')
