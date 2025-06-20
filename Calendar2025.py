@@ -189,14 +189,14 @@ linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
 for i in range(12):
-    #break
+    break
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
     col -= 1
     if col == -1:
         row += 1
         col = 2
 for i in range(len(raceevents)):
-    #break
+    break
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
@@ -282,16 +282,37 @@ for i in range(len(raceevents)):
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 15, result)
+            [hour,minute] = converttimetztolocalclock(raceevent.starttime)
+            strhour = str(hour)
+            strminute = str(minute)
+            if len(strminute) == 1:
+                strminute = "0" + strminute
+            startevent = strhour + ":" + strminute
+            my_canvas.drawString(col * colwidth + 100, row * rowheight - 15, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 30, result)
+            [hour,minute] = converttimetztolocalclock(raceevent.starttime)
+            strhour = str(hour)
+            strminute = str(minute)
+            if len(strminute) == 1:
+                strminute = "0" + strminute
+            startevent = strhour + ":" + strminute
+            my_canvas.drawString(col * colwidth + 100, row * rowheight - 30, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 45, result)
+            [hour,minute] = converttimetztolocalclock(raceevent.starttime)
+            strhour = str(hour)
+            strminute = str(minute)
+            if len(strminute) == 1:
+                strminute = "0" + strminute
+            startevent = strhour + ":" + strminute
+            my_canvas.drawString(col * colwidth + 100, row * rowheight - 45, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
