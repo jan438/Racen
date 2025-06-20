@@ -199,7 +199,7 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
     renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + ruler_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + ruler_y + flagcorrectiony * circuitscale)
     my_canvas.setFont("Helvetica", 6)
-    my_canvas.drawString(circuit_x + left_margin + ruler_x, circuit_y + bottom_margin + ruler_y + 10, str(length))
+    my_canvas.drawString(circuit_x + left_margin + ruler_x, circuit_y + bottom_margin + ruler_y + 10, f"{length}")
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
