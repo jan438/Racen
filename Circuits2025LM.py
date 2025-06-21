@@ -113,9 +113,13 @@ def GeoJSON_to_Canvas(circuitindex):
     #print(circuitsdata[circuitindex][23])
     if circuitindex == 2:
         print(circuitsdata[circuitindex][0])
-    startindex = int(circuitsdata[circuitindex][12])
-    sect1 = int(circuitsdata[circuitindex][13])
-    sect2 = int(circuitsdata[circuitindex][14])
+        startindex = int(circuitsdata[circuitindex][14])
+        sect1 = int(circuitsdata[circuitindex][13])
+        sect2 = int(circuitsdata[circuitindex][14])
+    else:
+        startindex = int(circuitsdata[circuitindex][12])
+        sect1 = int(circuitsdata[circuitindex][13])
+        sect2 = int(circuitsdata[circuitindex][14])
     for linestring in coords:
         for i, point in enumerate(linestring):
             if i == startindex:
