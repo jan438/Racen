@@ -110,16 +110,9 @@ def GeoJSON_to_Canvas(circuitindex):
     scale_y = height / (g_max_y - g_min_y)
     scale = (scale_x, scale_y)
     translate = (min_x, min_y)
-    #print(circuitsdata[circuitindex][23])
-    if circuitindex == 2:
-        print(circuitsdata[circuitindex][0])
-        startindex = int(circuitsdata[circuitindex][14])
-        sect1 = int(circuitsdata[circuitindex][13])
-        sect2 = int(circuitsdata[circuitindex][14])
-    else:
-        startindex = int(circuitsdata[circuitindex][12])
-        sect1 = int(circuitsdata[circuitindex][13])
-        sect2 = int(circuitsdata[circuitindex][14])
+    startindex = int(circuitsdata[circuitindex][12])
+    sect1 = int(circuitsdata[circuitindex][13])
+    sect2 = int(circuitsdata[circuitindex][14])
     for linestring in coords:
         for i, point in enumerate(linestring):
             if i == startindex:
@@ -127,6 +120,7 @@ def GeoJSON_to_Canvas(circuitindex):
                 startfinish_y = point[1]
                 startfinish_offset_x = (startfinish_x - g_min_x) * scale_x
                 startfinish_offset_y = (startfinish_y - g_min_y) * scale_y
+                #print(circuitsdata[circuitindex][0], "startfinish_x", round(startfinish_x), "startfinish_offset_y", round(startfinish_offset_y))
             if i == sect1:
                 sect1_x = point[0]
                 sect1_y = point[1]
@@ -134,7 +128,7 @@ def GeoJSON_to_Canvas(circuitindex):
                 sect1_offset_y = (sect1_y - g_min_y) * scale_y
                 point2 = linestring[i + 1]
                 sect1_angle = get_angle(point, point2)
-                print(sect1_angle)
+                #print(sect1_angle)
             if i == sect2:
                 sect2_x = point[0]
                 sect2_y = point[1]
@@ -142,7 +136,14 @@ def GeoJSON_to_Canvas(circuitindex):
                 sect2_offset_y = (sect2_y - g_min_y) * scale_y
                 point2 = linestring[i + 1]
                 sect2_angle = get_angle(point, point2)
-                print(sect2_angle)
+                #print(sect2_angle)
+    if circuitindex == 2:
+        startfinish_x = 20
+        startfinish_y = 30
+        sect1_offset_x = 40
+        sect1_offset_y = 31
+        sect2_offset_x = 60
+        sect2_offset_y = 10        
     return [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect1_angle, sect2_offset_x, sect2_offset_y, sect2_angle, length]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
