@@ -110,6 +110,7 @@ def GeoJSON_to_Canvas(circuitindex):
     scale_y = height / (g_max_y - g_min_y)
     scale = (scale_x, scale_y)
     translate = (min_x, min_y)
+    print(circuitsdata[circuitindex][0])
     startindex = int(circuitsdata[circuitindex][12])
     sect1 = int(circuitsdata[circuitindex][13])
     sect2 = int(circuitsdata[circuitindex][14])
@@ -120,7 +121,6 @@ def GeoJSON_to_Canvas(circuitindex):
                 startfinish_y = point[1]
                 startfinish_offset_x = (startfinish_x - g_min_x) * scale_x
                 startfinish_offset_y = (startfinish_y - g_min_y) * scale_y
-                print(circuitsdata[circuitindex][0])
                 print("startfinish", round(startfinish_x), round(startfinish_offset_y))
             if i == sect1:
                 sect1_x = point[0]
@@ -144,7 +144,8 @@ def GeoJSON_to_Canvas(circuitindex):
         sect1_offset_x = 40
         sect1_offset_y = 31
         sect2_offset_x = 60
-        sect2_offset_y = 10        
+        sect2_offset_y = 10
+    key = input("Wait")
     return [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect1_angle, sect2_offset_x, sect2_offset_y, sect2_angle, length]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
