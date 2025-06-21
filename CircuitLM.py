@@ -82,6 +82,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             max_x = max_y = float('-inf')
             coords = [coordinates]
             for linestring in coords:
+               print(geojsonfile, "len", len(linestring))
                for point in linestring:
                     x, y = point
                     min_x = min(min_x, x)
