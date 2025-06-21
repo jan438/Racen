@@ -139,12 +139,12 @@ def GeoJSON_to_Canvas(circuitindex):
                 sect2_angle = get_angle(point, point2)
                 print("sect2", round(sect2_offset_x), round(sect2_offset_y))
     if circuitindex == 2:
-        startfinish_x = 20
-        startfinish_y = 30
-        sect1_offset_x = 40
-        sect1_offset_y = 31
-        sect2_offset_x = 60
-        sect2_offset_y = 10
+        startfinish_x = int(circuitsdata[circuitindex][15])
+        startfinish_y = int(circuitsdata[circuitindex][16])
+        sect1_offset_x = int(circuitsdata[circuitindex][18])
+        sect1_offset_y = int(circuitsdata[circuitindex][19])
+        sect2_offset_x = int(circuitsdata[circuitindex][21])
+        sect2_offset_y = int(circuitsdata[circuitindex][22])
     key = input("Wait")
     return [startfinish_offset_x, startfinish_offset_y, sect1_offset_x, sect1_offset_y, sect1_angle, sect2_offset_x, sect2_offset_y, sect2_angle, length]
 def transform_svg(svgfile, tx, ty, sx, sy): 
