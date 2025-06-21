@@ -110,7 +110,9 @@ def GeoJSON_to_Canvas(circuitindex):
     scale_y = height / (g_max_y - g_min_y)
     scale = (scale_x, scale_y)
     translate = (min_x, min_y)
-    print(circuitsdata[circuitindex][23])
+    #print(circuitsdata[circuitindex][23])
+    if circuitindex == 2:
+        print(circuitsdata[circuitindex][0])
     startindex = int(circuitsdata[circuitindex][12])
     sect1 = int(circuitsdata[circuitindex][13])
     sect2 = int(circuitsdata[circuitindex][14])
