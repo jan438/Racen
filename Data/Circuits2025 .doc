@@ -18,9 +18,9 @@ AlbertPark;au-1953;0316;430.0;340.0;Australia;0.075;0.0;0.0;a088;
 15 x startfinish
 16 y startfinish
 17 a startfinish
-18 x sector1
-19 y sector1
-20 a sector1
-21 x sector2
-22 y sector2
-23 a swctor2
+18 x sector2
+19 y sector2
+20 a sector2
+21 x sector3
+22 y sector3
+23 a sector3
