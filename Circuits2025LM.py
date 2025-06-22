@@ -113,7 +113,7 @@ def GeoJSON_to_Canvas(circuitindex):
     print(circuitsdata[circuitindex][0], "ac", circuitsdata[circuitindex][9])
     startindex = int(circuitsdata[circuitindex][12])
     sect2a = int(circuitsdata[circuitindex][13])
-    sect2 = int(circuitsdata[circuitindex][14])
+    sect3 = int(circuitsdata[circuitindex][14])
     for linestring in coords:
         for i, point in enumerate(linestring):
             if i == startindex:
@@ -128,28 +128,28 @@ def GeoJSON_to_Canvas(circuitindex):
                 sect2a_offset_y = (sect2a_y - g_min_y) * scale_y
                 point2 = linestring[i + 1]
                 sect2a_angle = get_angle(point, point2)
-            if i == sect2:
-                sect2_x = point[0]
-                sect2_y = point[1]
-                sect2_offset_x = (sect2_x - g_min_x) * scale_x
-                sect2_offset_y = (sect2_y - g_min_y) * scale_y
+            if i == sect3:
+                sect3_x = point[0]
+                sect3_y = point[1]
+                sect3_offset_x = (sect3_x - g_min_x) * scale_x
+                sect3_offset_y = (sect3_y - g_min_y) * scale_y
                 point2 = linestring[i + 1]
-                sect2_angle = get_angle(point, point2)
+                sect3_angle = get_angle(point, point2)
     if circuitindex == 2:
         print("startfinish", round(startfinish_x), round(startfinish_offset_y))
         print("sect2a", round(sect2a_offset_x), round(sect2a_offset_y))
-        print("sect2", round(sect2_offset_x), round(sect2_offset_y))
+        print("sect3", round(sect3_offset_x), round(sect3_offset_y))
         startfinish_x = int(circuitsdata[circuitindex][15])
         startfinish_y = int(circuitsdata[circuitindex][16])
         sect2a_offset_x = int(circuitsdata[circuitindex][18])
         sect2a_offset_y = int(circuitsdata[circuitindex][19])
-        sect2_offset_x = int(circuitsdata[circuitindex][21])
-        sect2_offset_y = int(circuitsdata[circuitindex][22])
+        sect3_offset_x = int(circuitsdata[circuitindex][21])
+        sect3_offset_y = int(circuitsdata[circuitindex][22])
         print("startfinish", round(startfinish_x), round(startfinish_offset_y))
         print("sect2a", round(sect2a_offset_x), round(sect2a_offset_y))
-        print("sect2", round(sect2_offset_x), round(sect2_offset_y))
+        print("sect3", round(sect3_offset_x), round(sect3_offset_y))
         key = input("Wait")
-    return [startfinish_offset_x, startfinish_offset_y, sect2a_offset_x, sect2a_offset_y, sect2a_angle, sect2_offset_x, sect2_offset_y, sect2_angle, length]
+    return [startfinish_offset_x, startfinish_offset_y, sect2a_offset_x, sect2a_offset_y, sect2a_angle, sect3_offset_x, sect3_offset_y, sect3_angle, length]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -193,7 +193,7 @@ col = 0
 for i in range(count):
     if i == 11 or i == 13:
         col = col + 3
-    [startfinish_offset_x, startfinish_offset_y, sect2a_offset_x, sect2a_offset_y, sect2a_angle, sect2_offset_x, sect2_offset_y, sect2_angle, length] = GeoJSON_to_Canvas(i)
+    [startfinish_offset_x, startfinish_offset_y, sect2a_offset_x, sect2a_offset_y, sect2a_angle, sect3_offset_x, sect3_offset_y, sect3_angle, length] = GeoJSON_to_Canvas(i)
     circuit_x = col * colwidth
     circuit_y = row * rowheight
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
@@ -203,11 +203,11 @@ for i in range(count):
     flag_y = startfinish_offset_y * circuitscale
     arrow1_x = sect2a_offset_x * circuitscale
     arrow1_y = sect2a_offset_y * circuitscale
-    arrow2_x = sect2_offset_x * circuitscale
-    arrow2_y = sect2_offset_y * circuitscale
+    arrow2_x = sect3_offset_x * circuitscale
+    arrow2_y = sect3_offset_y * circuitscale
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectiony * circuitscale)
     renderPDF.draw(scaleSVG("SVG/a" + sect2a_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
-    renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
+    renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
     renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
     my_canvas.setFont("Helvetica", 6)
     my_canvas.drawString(circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + 7 + int(circuitsdata[i][11]) + 10, f"{length}")
