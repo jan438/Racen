@@ -209,10 +209,9 @@ for i in range(count):
     my_canvas.setFillColorRGB(170,255,127)
     my_canvas.drawString(circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + 7 + int(circuitsdata[i][11]) + 10, f"{length}")
     if circuitsdata[i][9] == "a":
-        anticlock = "Anti Clock Wise"
+        renderPDF.draw(scaleSVG("SVG/Counterclockwise_arrow.svg", rulerscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 5)
     else:
-        anticlock = "Clock Wise"
-    my_canvas.drawString(circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + 7 + int(circuitsdata[i][11]) - 5, anticlock)
+        renderPDF.draw(scaleSVG("SVG/Clockwise_arrow.svg", rulerscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 5)
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
