@@ -27,7 +27,7 @@ arrowscale = 0.0075
 arrow_x = 0.0
 arrow_y = 0.0
 rulerscale = 0.03
-clockwisescale = 0.02
+clockwisescale = 0.015
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
