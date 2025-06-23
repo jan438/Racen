@@ -144,10 +144,6 @@ def GeoJSON_to_Canvas(circuitindex):
         sect3_offset_x = int(circuitsdata[circuitindex][21])
         sect3_offset_y = int(circuitsdata[circuitindex][22])
         sect3_angle = circuitsdata[circuitindex][23][1:]
-        print("startfinish", round(startfinish_x), round(startfinish_offset_y))
-        print("sect2", round(sect2_offset_x), round(sect2_offset_y))
-        print("sect3", round(sect3_offset_x), round(sect3_offset_y))
-        key = input("Wait")
     return [startfinish_offset_x, startfinish_offset_y, sect2_offset_x, sect2_offset_y, sect2_angle, sect3_offset_x, sect3_offset_y, sect3_angle, length]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
