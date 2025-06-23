@@ -392,32 +392,6 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "info1"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    49.83388833452,
-                    40.37403192605
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "place": "info2"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    49.84524681856,
-                    40.36695161711
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "place": "startfinish"
             },
             "geometry": {
