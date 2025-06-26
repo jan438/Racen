@@ -136,7 +136,7 @@ def GeoJSON_to_Canvas(circuitindex):
                 sect3_offset_y = (sect3_y - g_min_y) * scale_y
                 point2 = linestring[i + 1]
                 sect3_angle = get_angle(point, point2)
-    if circuitindex == 21:
+    if circuitindex == 22:
         print("1 offsets startf", round(startfinish_offset_x), round(startfinish_offset_y), "sec2", round(sect2_offset_x), round(sect2_offset_y), "sec3", round(sect3_offset_x), round(sect3_offset_y), "angels", sect2_angle, sect3_angle)
         startfinish_offset_x = int(circuitsdata[circuitindex][15])
         startfinish_offset_y = int(circuitsdata[circuitindex][16])
@@ -144,7 +144,7 @@ def GeoJSON_to_Canvas(circuitindex):
         sect2_offset_y = int(circuitsdata[circuitindex][19])
         sect3_offset_x = int(circuitsdata[circuitindex][21])
         sect3_offset_y = int(circuitsdata[circuitindex][22])
-    elif circuitindex < 21:
+    elif circuitindex < 22:
         startfinish_offset_x = int(circuitsdata[circuitindex][15])
         startfinish_offset_y = int(circuitsdata[circuitindex][16])
         sect2_offset_x = int(circuitsdata[circuitindex][18])
