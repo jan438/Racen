@@ -197,7 +197,8 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
     my_canvas.setFont("Helvetica", 9)
     my_canvas.setFillColorRGB(255,170,0)
-    my_canvas.drawString(circuit_x + left_margin, circuit_y + bottom_margin - 12, circuitsdata[i][24])
+    displayname = circuitsdata[i][24]
+    my_canvas.drawString(circuit_x + left_margin, circuit_y + bottom_margin - 12, displayname)
     flag_x = startfinish_offset_x * circuitscale
     flag_y = startfinish_offset_y * circuitscale
     arrow1_x = sect2_offset_x * circuitscale
