@@ -200,7 +200,7 @@ for i in range(count):
     displayname = circuitsdata[i][24]
     namewidth = pdfmetrics.stringWidth(displayname, "Helvetica", 9)
     print(i, "width", namewidth)
-    my_canvas.drawString(circuit_x + left_margin, circuit_y + bottom_margin - 12, displayname)
+    my_canvas.drawString(circuit_x + left_margin + colwidth / 2 - namewidth / 2, circuit_y + bottom_margin - 12, displayname)
     flag_x = startfinish_offset_x * circuitscale
     flag_y = startfinish_offset_y * circuitscale
     arrow1_x = sect2_offset_x * circuitscale
