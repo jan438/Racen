@@ -29,49 +29,25 @@ AlbertPark;au-1953;0316;330.0;240.0;Australia;0.061;8.0;10.0;c;70;50;0;44;93;198
 00 AlbertPark length linestring 146
 01 Bahrain 95
 02 BakuCity 86
-03 Catalunya
-04 EnzoEDinoFerrari
-05 GillesVilleneuve
-06 HermanosRodríguez
-07 Hungaroring
-08 JeddahCorniche
-09 JoseCarlosPace
-10 LasVegas
-11 Lusail
-12 MarinaBay
-13 Miami
-14 Monaco
-15 Monza
-16 RedBullRing
-17 Shanghai
-18 Silverstone
-19 SpaFrancorchamps
-20 Suzuka
-21 theAmericas
-22 YasMarina
-23 Zandvoort
+03 Catalunya 150
+04 EnzoEDinoFerrari 85
+05 GillesVilleneuve 103
+06 HermanosRodríguez 101
+07 Hungaroring 141
+08 JeddahCorniche 153
+09 JoseCarlosPace 171
+10 LasVegas 57
+11 Lusail 107
+12 MarinaBay 116
+13 Miami 109
+14 Monaco 163
+15 Monza 125
+16 RedBullRing 81
+17 Shanghai 141
+18 Silverstone 135
+19 SpaFrancorchamps 154
+20 Suzuka 173
+21 theAmericas 172
+22 YasMarina 133
+23 Zandvoort 121
 
-146
-95
-86
-150
-85
-103
-101
-141
-153
-171
-57
-107
-116
-109
-163
-125
-81
-141
-135
-154
-173
-172
-133
-121
