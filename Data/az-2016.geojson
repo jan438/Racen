@@ -10,16 +10,16 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    49.83967083548,
-                    40.36782826714
+                    49.83391783707,
+                    40.36288291261
                 ]
             }
         },
         {
             "type": "Feature",
             "properties": {
-                "Location": "Baku",
                 "Name": "Baku City Circuit",
+                "Location": "Baku",
                 "id": "az-2016",
                 "opened": "2016",
                 "altitude": "-25",
@@ -384,8 +384,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    49.83391783707,
-                    40.36288291261
+                    49.84212988429,
+                    40.36989900606
                 ]
             }
         },
