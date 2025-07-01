@@ -27,7 +27,7 @@ height = A4_height
 arrowscale = 0.0075
 arrow_x = 0.0
 arrow_y = 0.0
-rulerscale = 0.03
+rulerscale = 0.034
 clockwisescale = 0.01
 
 def scaleSVG(svgfile, scaling_factor):
