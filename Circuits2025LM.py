@@ -93,6 +93,7 @@ def GeoJSON_to_Canvas(circuitindex):
         properties = feature['properties']
         if geometry['type'] == 'LineString':
             length = properties['length']
+            altitude = properties['altitude']
             coordinates = geometry["coordinates"]
             min_x = min_y = float('inf')
             max_x = max_y = float('-inf')
@@ -146,7 +147,7 @@ def GeoJSON_to_Canvas(circuitindex):
     sect3_offset_x = int(circuitsdata[circuitindex][21])
     sect3_offset_y = int(circuitsdata[circuitindex][22])
     sect3_angle = circuitsdata[circuitindex][23][1:]
-    return [startfinish_offset_x, startfinish_offset_y, sect2_offset_x, sect2_offset_y, sect2_angle, sect3_offset_x, sect3_offset_y, sect3_angle, length]
+    return [startfinish_offset_x, startfinish_offset_y, sect2_offset_x, sect2_offset_y, sect2_angle, sect3_offset_x, sect3_offset_y, sect3_angle, length, altitude]
 def transform_svg(svgfile, tx, ty, sx, sy): 
     svg_root = load_svg_file(svgfile)
     svgRenderer = SvgRenderer(svgfile)
@@ -190,7 +191,7 @@ col = 0
 for i in range(count):
     if i == 11 or i == 13:
         col = col + 3
-    [startfinish_offset_x, startfinish_offset_y, sect2_offset_x, sect2_offset_y, sect2_angle, sect3_offset_x, sect3_offset_y, sect3_angle, length] = GeoJSON_to_Canvas(i)
+    [startfinish_offset_x, startfinish_offset_y, sect2_offset_x, sect2_offset_y, sect2_angle, sect3_offset_x, sect3_offset_y, sect3_angle, length, altitude] = GeoJSON_to_Canvas(i)
     circuit_x = col * colwidth
     circuit_y = row * rowheight
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
@@ -213,10 +214,11 @@ for i in range(count):
     my_canvas.setFillColorRGB(170,255,127)
     my_canvas.drawString(circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + 7 + int(circuitsdata[i][11]) + 10, f"{length}")
     if circuitsdata[i][9] == "a":
-        renderPDF.draw(scaleSVG("SVG/anticlockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 8 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
+        renderPDF.draw(scaleSVG("SVG/anticlockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
     else:
-        renderPDF.draw(scaleSVG("SVG/clockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 8 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
-    renderPDF.draw(scaleSVG("SVG/altitude.svg", clockwisescale), my_canvas, circuit_x + 14 + left_margin + 8 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
+        renderPDF.draw(scaleSVG("SVG/clockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
+    renderPDF.draw(scaleSVG("SVG/altitude.svg", clockwisescale), my_canvas, circuit_x + 8 + left_margin + 8 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
+    my_canvas.drawString(circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + 11 + int(circuitsdata[i][11]) + 10, f"{altitude}")
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
