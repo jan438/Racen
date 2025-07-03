@@ -214,11 +214,12 @@ for i in range(count):
     my_canvas.setFillColorRGB(170,255,127)
     my_canvas.drawString(circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + 7 + int(circuitsdata[i][11]) + 10, f"{length}")
     if circuitsdata[i][9] == "a":
-        renderPDF.draw(scaleSVG("SVG/anticlockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
+        renderPDF.draw(scaleSVG("SVG/anticlockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
     else:
-        renderPDF.draw(scaleSVG("SVG/clockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
-    renderPDF.draw(scaleSVG("SVG/altitude.svg", clockwisescale), my_canvas, circuit_x + 8 + left_margin + 8 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
-    my_canvas.drawString(circuit_x + left_margin + 15 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]), f"{altitude}")
+        renderPDF.draw(scaleSVG("SVG/clockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
+    renderPDF.draw(scaleSVG("SVG/altitude.svg", clockwisescale), my_canvas, circuit_x + 8 + left_margin + 6 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
+    my_canvas.setFont("Helvetica", 7)
+    my_canvas.drawString(circuit_x + left_margin + 20 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]), f"{altitude}")
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
