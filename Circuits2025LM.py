@@ -218,7 +218,7 @@ for i in range(count):
     else:
         renderPDF.draw(scaleSVG("SVG/clockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
     renderPDF.draw(scaleSVG("SVG/altitude.svg", clockwisescale), my_canvas, circuit_x + 8 + left_margin + 8 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
-    my_canvas.drawString(circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + 11 + int(circuitsdata[i][11]) + 10, f"{altitude}")
+    my_canvas.drawString(circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + 11 + int(circuitsdata[i][11]), f"{altitude}")
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
