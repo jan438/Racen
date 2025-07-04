@@ -234,11 +234,13 @@ my_canvas.setFillColorRGB(0,0,0)
 leftmargin = 5
 row = 5
 col = 0
+eventwidth = 138
+eventheight = 112
 for i in range(24):
     if True:
         drawing = scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6]))
         my_canvas.setFillColor(HexColor('#BECD97'))
-        my_canvas.rect(col * colwidth + 2.1, row * rowheight + bottommargin + 10, 138, 112, fill = 1, stroke = 0)
+        my_canvas.rect(col * colwidth + 2.1, row * rowheight + bottommargin + 10, eventwidth, eventheight, fill = 1, stroke = 0)
         renderPDF.draw(drawing, my_canvas, col * colwidth + float(circuitsdata[i][7]), row * rowheight + float(circuitsdata[i][8]) + bottommargin)
         my_canvas.setFillColorRGB(0,0,0)
     col += 1
