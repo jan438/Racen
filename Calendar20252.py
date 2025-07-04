@@ -239,10 +239,7 @@ eventheight = 112
 for i in range(24):
     if True:
         #drawing = scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6]))
-        #my_canvas.setFillColor(HexColor('#BECD97'))
-        #my_canvas.rect(col * colwidth + 2.1, row * rowheight + bottommargin + 10, eventwidth, eventheight, fill = 1, stroke = 0)
-        #renderPDF.draw(drawing, my_canvas, col * colwidth + float(circuitsdata[i][7]), row * rowheight + float(circuitsdata[i][8]) + bottommargin)
-        image = "Circuits/Location/UK.png"
+        image = "Circuits/Location/United_Kingdom_location_map.png"
         my_canvas.drawImage(image, col * colwidth + 2.1, row * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None) 
         my_canvas.setFillColorRGB(0,0,0)
     col += 1
