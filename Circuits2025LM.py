@@ -28,7 +28,8 @@ arrowscale = 0.0075
 arrow_x = 0.0
 arrow_y = 0.0
 rulerscale = 0.034
-clockwisescale = 0.01
+clockwisescale = 0.010
+altitudescale = 0.010
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -217,7 +218,7 @@ for i in range(count):
         renderPDF.draw(scaleSVG("SVG/anticlockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
     else:
         renderPDF.draw(scaleSVG("SVG/clockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
-    renderPDF.draw(scaleSVG("SVG/altitude.svg", clockwisescale), my_canvas, circuit_x + 6 + left_margin + 6 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
+    renderPDF.draw(scaleSVG("SVG/altitude.svg", altitudescale), my_canvas, circuit_x + 6 + left_margin + 6 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
     my_canvas.setFont("Helvetica", 6)
     my_canvas.drawString(circuit_x + left_margin + 21 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]), f"{altitude}")
     worldlocx = worldkaartx + float(circuitsdata[i][3])
