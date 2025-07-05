@@ -219,7 +219,7 @@ for i in range(count):
     else:
         renderPDF.draw(scaleSVG("SVG/clockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
     renderPDF.draw(scaleSVG("SVG/altitude.svg", altitudescale), my_canvas, circuit_x + 6 + left_margin + 6 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
-    my_canvas.setFont("Helvetica", 6)
+    my_canvas.setFont("Helvetica", 7)
     my_canvas.drawString(circuit_x + left_margin + 21 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]), f"{altitude}")
     worldlocx = worldkaartx + float(circuitsdata[i][3])
     worldlocy = worldkaarty + float(circuitsdata[i][4])
