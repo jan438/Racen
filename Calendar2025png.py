@@ -238,8 +238,7 @@ eventwidth = 138
 eventheight = 112
 for i in range(24):
     if True:
-        #drawing = scaleSVG("Location/" + circuitsdata[i][5] + "_location_map.svg", float(circuitsdata[i][6]))
-        image = "Circuits/Location/United_Kingdom_location_map.png"
+        image = "Circuits/Location/" + circuitsdata[18][5] + "_location_map.png"
         my_canvas.drawImage(image, col * colwidth + 2.1, row * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None) 
         my_canvas.setFillColorRGB(0,0,0)
     col += 1
