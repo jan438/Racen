@@ -83,7 +83,7 @@ logox = 256
 logoy = 135
 logowidth = 25
 logoheight = 25
-row = 0
+row = 4
 col = 0
 flagx = 115
 maxscorewidth = 27.0
@@ -141,7 +141,7 @@ for i in range(count):
     col = col + 1
     if col == 2:
         col = 0
-        row = row + 1
+        row = row - 1
 #d.add(Line(595,0,595,842, strokeColor=colors.blue, strokeWidth=1))
 #for i in range(5):
     #d.add(Line(0,i*rowheight+logoy,595,i*rowheight+logoy, strokeColor=colors.blue, strokeWidth=1))
