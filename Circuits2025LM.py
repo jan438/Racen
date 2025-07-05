@@ -187,7 +187,7 @@ rowheight = 125
 worldkaartx = 100.0
 worldkaarty = 100.0
 colwidth = 115
-row = 0
+row = 5
 col = 0
 for i in range(count):
     if i == 11 or i == 13:
@@ -226,7 +226,7 @@ for i in range(count):
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
     col += 1
     if col == colcount:
-        row += 1
+        row = row - 1
         col = 0
 my_canvas.save()
 key = input("Wait")
