@@ -31,7 +31,7 @@ rulerscale = 0.034
 clockwisescale = 0.010
 altitudescale = 0.010
 worldmapscale = 0.34
-worldmap_x = 120
+worldmap_x = 125
 worldmap_y = 315
 
 def scaleSVG(svgfile, scaling_factor):
