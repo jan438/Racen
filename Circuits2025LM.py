@@ -31,6 +31,8 @@ rulerscale = 0.034
 clockwisescale = 0.010
 altitudescale = 0.010
 worldmapscale = 0.34
+worldmap_x = 120
+worldmap_y = 315
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -179,7 +181,7 @@ my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFillColorRGB(255,170,0)
 bottom_margin = 40
 left_margin = 16
-renderPDF.draw(scaleSVG("SVG/WorldMap.svg", worldmapscale), my_canvas, 120, 315)
+renderPDF.draw(scaleSVG("SVG/WorldMap.svg", worldmapscale), my_canvas, worldmap_x, worldmap_y)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 rowcount = 6
