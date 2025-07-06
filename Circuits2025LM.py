@@ -187,8 +187,6 @@ renderPDF.draw(drawing, my_canvas, 100, 800)
 rowcount = 6
 colcount = 5
 rowheight = 125
-worldkaartx = 100.0
-worldkaarty = 100.0
 colwidth = 115
 row = 5
 col = 0
@@ -224,8 +222,8 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/altitude.svg", altitudescale), my_canvas, circuit_x + 6 + left_margin + 6 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
     my_canvas.setFont("Helvetica", 7)
     my_canvas.drawString(circuit_x + left_margin + 21 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]), f"{altitude}")
-    worldlocx = worldkaartx + float(circuitsdata[i][3])
-    worldlocy = worldkaarty + float(circuitsdata[i][4])
+    worldlocx = worldmap_x + float(circuitsdata[i][3])
+    worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
     col += 1
     if col == colcount:
