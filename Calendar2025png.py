@@ -170,7 +170,7 @@ if raceevent is not None:
     print(raceevent.summary, raceevent.location, starttime, raceevent.categories, raceevent.geo, starttime, localtime)
 else:
     print("Not found")
-my_canvas = canvas.Canvas("PDF/Calendar2025png.pdf")
+my_canvas = canvas.Canvas("PDF/Calendar2025.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle("Calendar 2025")
 drawing = svg2rlg('SVG/F1.svg')
