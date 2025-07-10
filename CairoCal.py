@@ -140,66 +140,6 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-eventcal = "Calendar/Formule1.ics"
-in_file = open(os.path.join(path, eventcal), 'r')
-count = 0
-lastpos = 0
-found = 0
-for line in in_file:
-    newlinepos = line.find("\t\n")
-    lastsubstring = line[lastpos:newlinepos]
-    alleventslines.append(lastsubstring)
-    count += 1
-in_file.close()
-print("Count eventslines", len(alleventslines))
-for i in range(len(alleventslines)):
-    neweventpos = alleventslines[i].find("BEGIN:VEVENT")
-    summaryeventpos = alleventslines[i].find("SUMMARY")
-    locationeventpos = alleventslines[i].find("LOCATION")
-    categorieseventpos = alleventslines[i].find("CATEGORIES")
-    geoeventpos = alleventslines[i].find("GEO")
-    dtstarteventpos = alleventslines[i].find("DTSTART")
-    dtendeventpos = alleventslines[i].find("DTEND")
-    endeventpos = alleventslines[i].find("END:VEVENT")
-    if neweventpos == 0:
-        day = 0
-        location = ""
-        starttime = 0
-        endtime = 0
-        month = 0
-        categories = ""
-        geo = ""
-    if dtstarteventpos == 0:
-        eventdtstartstr = alleventslines[i][8:]
-        datevaluepos = alleventslines[i].find("VALUE=DATE:")
-        if datevaluepos == 8:
-            eventdtstartstr = alleventslines[i][19:]
-        year = int(eventdtstartstr[:4])
-        month = int(eventdtstartstr[4:6])
-        day = int(eventdtstartstr[6:8])
-        weekday = weekDay(year, month, day)
-        starttime = eventdtstartstr
-    if dtendeventpos == 0:
-        eventdtendstr = alleventslines[i][6:]
-        endtime = eventdtendstr[9:11] + ':' + eventdtendstr[11:13]
-    if summaryeventpos == 0:
-        summary = alleventslines[i][8:]
-    if categorieseventpos == 0:
-        categories = alleventslines[i][11:]
-    if locationeventpos == 0:
-        location = alleventslines[i][9:]
-    if geoeventpos == 0:
-        geo = alleventslines[i][4:]
-    if endeventpos == 0:
-        raceevents.append(RaceEvent(categories, summary, day, location, starttime, endtime, month, geo))
-print("Count race events", len(raceevents))
-raceevent = lookupraceevent(8, 31)
-if raceevent is not None:
-    starttime = raceevent.starttime
-    localtime = converttimetztolocal(starttime)
-    print(raceevent.summary, raceevent.location, starttime, raceevent.categories, raceevent.geo, starttime, localtime)
-else:
-    print("Not found")
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
 key = input("Wait")
