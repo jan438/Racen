@@ -119,7 +119,8 @@ def generate_calendar_svg(year, month, start_day=0, file_name="calendar.svg", as
                     )
         y_offset += cell_height
         countweeks = countweeks + 1
-    print("Count weeks", str(countweeks))
+    if countweeks == 5:
+        print(month_name, str(countweeks))
     dwg.save()
     if not as_text:
         convert_text_to_paths(file_path)
