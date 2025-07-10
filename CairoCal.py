@@ -98,6 +98,7 @@ def generate_calendar_svg(year, month, start_day=0, file_name="calendar.svg", as
         stroke="black",
         stroke_width=1
     ))
+    countweeks = 0
     y_offset = line_y + 20
     for week in month_days:
         for i, day in enumerate(week):
@@ -117,6 +118,8 @@ def generate_calendar_svg(year, month, start_day=0, file_name="calendar.svg", as
                         as_text=as_text,
                     )
         y_offset += cell_height
+        countweeks = countweeks + 1
+    print("Count weeks", str(countweeks))
     dwg.save()
     if not as_text:
         convert_text_to_paths(file_path)
