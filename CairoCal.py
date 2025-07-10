@@ -102,13 +102,9 @@ def generate_calendar_svg(year, month, start_day=0, file_name="calendar.svg", as
     for week in month_days:
         for i, day in enumerate(week):
             if day != 0:
-                raceevent = lookupraceevent(month, day)
-                if raceevent is not None and raceevent.categories == "Grand Prix,F1":
-                    print("raceevent on these day", month, day, raceevent.categories)  
-                else:
-                    add_text(
-                        dwg,
-                        str(day),
+                add_text(
+                    dwg,
+                    str(day),
                         (i * cell_width + cell_width / 2, y_offset + cell_height / 2),
                         font_size=day_font_size,
                         font_family="sans-serif",
