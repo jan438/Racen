@@ -30,7 +30,7 @@ def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calenda
     line_spacing = 60
     day_font_size = 32
     width = cell_width * 7
-    height = cell_height * (len(month_days) + 2) + line_spacing + 20
+    height = cell_height * (6 + 2) + line_spacing + 20
 
     # Create SVG drawing
     dwg = Drawing(file_path, size=(width, height))
