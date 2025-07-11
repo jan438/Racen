@@ -7,7 +7,7 @@ import cairosvg
 
 def generate_calendar_svg(year=None, month=None, start_day=0, file_name="calendar.svg", as_text=False):
     # Ensure the output directory exists
-    output_dir = "output"
+    output_dir = "PDF"
     os.makedirs(output_dir, exist_ok=True)
 
     # Append file path to output directory
