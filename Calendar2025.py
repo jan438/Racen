@@ -215,7 +215,7 @@ for i in range(len(raceevents)):
         col = (month - 1) % 3
         weeknr = round(day / 7 + 1)
         y_offset = (6 - weeknr) * 15
-        if month == 4:
+        if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + 15
         renderPDF.draw(scaleSVG("SVG/formula-1color.svg", 0.028), my_canvas, leftmargin + flagoffset - 25 + col * colwidth, bottommargin + row * rowheight + y_offset)
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagoffset + col * colwidth, bottommargin + row * rowheight + y_offset)
