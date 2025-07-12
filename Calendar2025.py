@@ -214,12 +214,11 @@ for i in range(len(raceevents)):
             row = 0
         col = (month - 1) % 3
         weeknr = round(day / 7 + 1)
-        if month == 8 or month == 11:
-            weeknr = weeknr + 1
-        renderPDF.draw(scaleSVG("SVG/formula-1color.svg", 0.028), my_canvas, leftmargin + flagoffset - 25 + col * colwidth, bottommargin + row * rowheight + (6 - weeknr) * 15)
-        renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagoffset + col * colwidth, bottommargin + row * rowheight + (6 - weeknr) * 15)
+        y_offset = (6 - weeknr) * 15
+        renderPDF.draw(scaleSVG("SVG/formula-1color.svg", 0.028), my_canvas, leftmargin + flagoffset - 25 + col * colwidth, bottommargin + row * rowheight + y_offset)
+        renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagoffset + col * colwidth, bottommargin + row * rowheight + y_offset)
         linkx1 = leftmargin + flagoffset + col * colwidth
-        linky1 = bottommargin + row * rowheight + (6 - weeknr) * 15
+        linky1 = bottommargin + row * rowheight + y_offset
         linkx2 = linkx1 + 20
         linky2 = linky1 + 10
         linkarea = (linkx1, linky1, linkx2, linky2)
