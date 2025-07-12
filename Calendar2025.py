@@ -175,6 +175,7 @@ my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle("Calendar 2025")
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
+my_canvas.drawString(100, 775, "2025")
 row = 0
 col = 2
 leftmargin = 25
