@@ -230,7 +230,23 @@ for i in range(len(raceevents)):
         linkarea = (linkx1, linky1, linkx2, linky2)
         my_canvas.linkAbsolute("Find ", raceevent.location, linkarea, addtopage = 1, thickness = 0, color = None)
     elif raceevent is not None:
-        print(raceevent.categories)
+        month = raceevent.month
+        day = raceevent.day
+        weekday = weekDay(2025, month, 1)
+        if month == 1 or month == 2 or month == 3:
+            row = 3
+        if month == 4 or month == 5 or month == 6:
+            row = 2
+        if month == 7 or month == 8 or month == 9:
+            row = 1
+        if month == 10 or month == 11 or month == 12:
+            row = 0
+        col = (month - 1) % 3
+        weeknr = round(day / 7 + 1)
+        y_offset = (6 - weeknr) * weekheight
+        if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
+            y_offset = y_offset + weekheight
+        print(raceevent.categories, "month", month, "day", day, "weekday", weekday)
 my_canvas.showPage()
 colwidth = 148
 rowheight = 120
