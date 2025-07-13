@@ -227,6 +227,8 @@ for i in range(len(raceevents)):
         linky2 = linky1 + 10
         linkarea = (linkx1, linky1, linkx2, linky2)
         my_canvas.linkAbsolute("Find ", raceevent.location, linkarea, addtopage = 1, thickness = 0, color = None)
+    if raceevent is not None and raceevent.categories != "Grand Prix,F1":
+        print(raceevent.categories)
 my_canvas.showPage()
 colwidth = 148
 rowheight = 120
