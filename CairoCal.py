@@ -60,8 +60,8 @@ def generate_calendar_svg(year, month, start_day=0, file_name="calendar.svg", as
     month_days = cal.monthdayscalendar(year, month)
     month_name = calendar.month_name[month]
     cell_width = 60
-    cell_height = 40
-    header_font_size = 58
+    cell_height = 50
+    header_font_size = 45
     line_spacing = 60
     day_font_size = 32
     width = cell_width * 7

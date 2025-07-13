@@ -179,9 +179,9 @@ my_canvas.drawString(100, 775, "2025")
 row = 0
 col = 2
 leftmargin = 25
-bottommargin = 100
+bottommargin = 50
 colwidth = 180
-rowheight = 140
+rowheight = 160
 flagoffset = 158
 linkx1 = 0
 linky1 = 0
@@ -190,14 +190,12 @@ linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
 for i in range(12):
-    #break
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
     col -= 1
     if col == -1:
         row += 1
         col = 2
 for i in range(len(raceevents)):
-    #break
     raceevent = raceevents[i]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
