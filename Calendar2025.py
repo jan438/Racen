@@ -182,6 +182,7 @@ leftmargin = 25
 bottommargin = 50
 colwidth = 180
 rowheight = 160
+weekheight = 15
 flagoffset = 158
 linkx1 = 0
 linky1 = 0
@@ -213,9 +214,9 @@ for i in range(len(raceevents)):
             row = 0
         col = (month - 1) % 3
         weeknr = round(day / 7 + 1)
-        y_offset = (6 - weeknr) * 15
+        y_offset = (6 - weeknr) * weekheight
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
-            y_offset = y_offset + 15
+            y_offset = y_offset + weekheight
         renderPDF.draw(scaleSVG("SVG/formula-1color.svg", 0.028), my_canvas, leftmargin + flagoffset - 25 + col * colwidth, bottommargin + row * rowheight + y_offset)
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagoffset + col * colwidth, bottommargin + row * rowheight + y_offset)
         linkx1 = leftmargin + flagoffset + col * colwidth
