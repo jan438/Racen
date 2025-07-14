@@ -231,7 +231,7 @@ for i in range(len(raceevents)):
         linky2 = linky1 + 10
         linkarea = (linkx1, linky1, linkx2, linky2)
         my_canvas.linkAbsolute("Find ", raceevent.location, linkarea, addtopage = 1, thickness = 0, color = None)
-    elif raceevent is not None:
+    elif raceevent is not None and raceevent.categories == "Sprint,F1":
         month = raceevent.month
         day = raceevent.day
         if month == 1 or month == 2 or month == 3:
