@@ -22,6 +22,7 @@ monthnames = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus
 alleventslines = []
 raceevents = []
 circuitsdata = []
+weekdaycairo = [6, 0, 1, 2, 3, 4, 5]
 
 class RaceEvent:
     def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
@@ -208,7 +209,7 @@ for i in range(len(raceevents)):
         month = raceevent.month
         day = raceevent.day
         weekday = weekDay(2025, month, 1)
-        raceday = weekDay(2025, month, day)
+        raceday = weekdaycairo[weekDay(2025, month, day)]
         print(month, weekday, raceday)
         if month == 1 or month == 2 or month == 3:
             row = 3
