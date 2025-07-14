@@ -107,6 +107,8 @@ def generate_calendar_svg(year, month, start_day=0, file_name="calendar.svg", as
                 raceevent = lookupraceevent(month, day)
                 if raceevent is not None and raceevent.categories == "Grand Prix,F1":
                     print("raceevent on these day", month, day, raceevent.categories)  
+                elif raceevent is not None and raceevent.categories == "Sprint,F1":
+                    print("sprintevent on these day", month, day, raceevent.categories)  
                 else:
                     add_text(
                         dwg,
