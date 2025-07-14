@@ -205,7 +205,7 @@ if raceevent is not None:
 else:
     print("Not found")
 for i in range(len(raceevents)):
-    if raceevents[i].categories == "Grand Prix,F1":
+    if raceevents[i].categories == "Sprint,F1":
         print(i, raceevents[i].categories)
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
