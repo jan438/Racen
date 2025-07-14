@@ -206,7 +206,7 @@ else:
     print("Not found")
 for i in range(len(raceevents)):
     if raceevents[i].categories == "Sprint,F1":
-        print(i, raceevents[i].categories)
+        print(i, raceevents[i].categories, raceevents[i].month, raceevents[i].day)
 for i in range(12):
     file_path = generate_calendar_svg(2025, i + 1, 0, monthnames[i] + ".svg", False)
 key = input("Wait")
