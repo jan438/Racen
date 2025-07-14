@@ -210,7 +210,6 @@ for i in range(len(raceevents)):
         day = raceevent.day
         weekday = weekDay(2025, month, 1)
         raceday = weekdaycairo[weekDay(2025, month, day)]
-        print(month, weekday, raceday)
         if month == 1 or month == 2 or month == 3:
             row = 3
         if month == 4 or month == 5 or month == 6:
@@ -235,7 +234,6 @@ for i in range(len(raceevents)):
     elif raceevent is not None:
         month = raceevent.month
         day = raceevent.day
-        weekday = weekDay(2025, month, 1)
         if month == 1 or month == 2 or month == 3:
             row = 3
         if month == 4 or month == 5 or month == 6:
@@ -249,7 +247,8 @@ for i in range(len(raceevents)):
         y_offset = (6 - weeknr) * weekheight
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
-        #print(raceevent.categories, "month", month, "day", day, "weekday", weekday)
+        raceday = weekdaycairo[weekDay(2025, month, day)]
+        print(raceevent.categories, "month", month, "day", day, "raceday", raceday)
 my_canvas.showPage()
 colwidth = 148
 rowheight = 120
