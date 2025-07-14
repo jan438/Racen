@@ -49,6 +49,7 @@ def lookupraceevent(month, day):
     for i in range(len(raceevents)):
         if raceevents[i].month == month and raceevents[i].day == day:
             raceevent = raceevents[i]
+            break
     return raceevent
 def generate_calendar_svg(year, month, start_day=0, file_name="calendar.svg", as_text=False):
     output_dir = "SVG"
