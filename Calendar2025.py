@@ -214,12 +214,12 @@ for i in range(len(raceevents)):
         row = 1
     if month == 10 or month == 11 or month == 12:
         row = 0
+    col = (month - 1) % 3
+    weeknr = round(day / 7 + 1)
+    y_offset = (6 - weeknr) * weekheight
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
         code = lookuplocation(result[0], result[1]).upper()
-        col = (month - 1) % 3
-        weeknr = round(day / 7 + 1)
-        y_offset = (6 - weeknr) * weekheight
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
         renderPDF.draw(scaleSVG("SVG/formula-1color.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
@@ -231,27 +231,18 @@ for i in range(len(raceevents)):
         linkarea = (linkx1, linky1, linkx2, linky2)
         my_canvas.linkAbsolute("Find ", raceevent.location, linkarea, addtopage = 1, thickness = 0, color = None)
     elif raceevent is not None and raceevent.categories == "Sprint,F1":
-        col = (month - 1) % 3
-        weeknr = round(day / 7 + 1)
-        y_offset = (6 - weeknr) * weekheight
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
         if month == 5:
             y_offset = y_offset - weekheight
         renderPDF.draw(scaleSVG("SVG/racingcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
     elif raceevent is not None and raceevent.categories == "Vrije Training 1,F1":
-        col = (month - 1) % 3
-        weeknr = round(day / 7 + 1)
-        y_offset = (6 - weeknr) * weekheight
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
         if month == 5 or month == 10:
             y_offset = y_offset - weekheight
         renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
     elif raceevent is not None and raceevent.categories == "Vrije Training 3,F1":
-        col = (month - 1) % 3
-        weeknr = round(day / 7 + 1)
-        y_offset = (6 - weeknr) * weekheight
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
         if month == 5:
