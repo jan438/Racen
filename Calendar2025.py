@@ -203,12 +203,12 @@ for i in range(12):
         col = 2
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
+    month = raceevent.month
+    day = raceevent.day
+    raceday = weekdaycairo[weekDay(2025, month, day)]
     if raceevent is not None and raceevent.categories == "Grand Prix,F1":
         result = raceevent.geo.split(";")
         code = lookuplocation(result[0], result[1]).upper()
-        month = raceevent.month
-        day = raceevent.day
-        raceday = weekdaycairo[weekDay(2025, month, day)]
         if month == 1 or month == 2 or month == 3:
             row = 3
         if month == 4 or month == 5 or month == 6:
@@ -231,8 +231,6 @@ for i in range(len(raceevents)):
         linkarea = (linkx1, linky1, linkx2, linky2)
         my_canvas.linkAbsolute("Find ", raceevent.location, linkarea, addtopage = 1, thickness = 0, color = None)
     elif raceevent is not None and raceevent.categories == "Sprint,F1":
-        month = raceevent.month
-        day = raceevent.day
         if month == 1 or month == 2 or month == 3:
             row = 3
         if month == 4 or month == 5 or month == 6:
@@ -246,13 +244,10 @@ for i in range(len(raceevents)):
         y_offset = (6 - weeknr) * weekheight
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
-        raceday = weekdaycairo[weekDay(2025, month, day)]
         if month == 5:
             y_offset = y_offset - weekheight
         renderPDF.draw(scaleSVG("SVG/racingcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
     elif raceevent is not None and raceevent.categories == "Vrije Training 1,F1":
-        month = raceevent.month
-        day = raceevent.day
         if month == 1 or month == 2 or month == 3:
             row = 3
         if month == 4 or month == 5 or month == 6:
@@ -266,13 +261,10 @@ for i in range(len(raceevents)):
         y_offset = (6 - weeknr) * weekheight
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
-        raceday = weekdaycairo[weekDay(2025, month, day)]
         if month == 5 or month == 10:
             y_offset = y_offset - weekheight
         renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
     elif raceevent is not None and raceevent.categories == "Vrije Training 3,F1":
-        month = raceevent.month
-        day = raceevent.day
         if month == 1 or month == 2 or month == 3:
             row = 3
         if month == 4 or month == 5 or month == 6:
@@ -286,7 +278,6 @@ for i in range(len(raceevents)):
         y_offset = (6 - weeknr) * weekheight
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
-        raceday = weekdaycairo[weekDay(2025, month, day)]
         if month == 5:
             y_offset = y_offset - weekheight
         renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
