@@ -208,7 +208,6 @@ for i in range(len(raceevents)):
         code = lookuplocation(result[0], result[1]).upper()
         month = raceevent.month
         day = raceevent.day
-        weekday = weekDay(2025, month, 1)
         raceday = weekdaycairo[weekDay(2025, month, day)]
         if month == 1 or month == 2 or month == 3:
             row = 3
