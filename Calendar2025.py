@@ -268,7 +268,7 @@ for i in range(len(raceevents)):
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
         raceday = weekdaycairo[weekDay(2025, month, day)]
-        if month == 5:
+        if month == 5 or month == 10:
             y_offset = y_offset - weekheight
         renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
 my_canvas.showPage()
