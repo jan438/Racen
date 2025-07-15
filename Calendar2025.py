@@ -247,6 +247,11 @@ for i in range(len(raceevents)):
             y_offset = y_offset + weekheight
         y_offset = y_offset + 0.4 * weekheight
         renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
+    elif raceevent is not None and raceevent.categories == "Vrije Training 2,F1":
+        if month == 4 or month == 7 or month == 9 or month == 10 or month == 12:
+            y_offset = y_offset + weekheight
+        y_offset = y_offset + 0.4 * weekheight
+        renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
 my_canvas.showPage()
 colwidth = 148
 rowheight = 120
