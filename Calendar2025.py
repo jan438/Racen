@@ -25,6 +25,7 @@ circuitsdata = []
 weekdaycairo = [6, 0, 1, 2, 3, 4, 5]
 scalingcar = 0.028
 scalingqcar = 0.28
+scalingtcar = 0.28
 
 class RaceEvent:
     def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
@@ -192,6 +193,7 @@ flagoffset_x = weekwidth + 4
 flagoffset_y = 17
 lcaroffset_y = 13
 qcaroffset_y = 17
+tcaroffset_y = 17
 linkx1 = 0
 linky1 = 0
 linkx2 = 10
@@ -240,7 +242,7 @@ for i in range(len(raceevents)):
     elif raceevent is not None and raceevent.categories == "Vrije Training 1,F1":
         if month == 4 or month == 7 or month == 9 or month == 12:
             y_offset = y_offset + weekheight
-        renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
+        renderPDF.draw(scaleSVG("SVG/T.svg", scalingtcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + tcaroffset_y)
     elif raceevent is not None and raceevent.categories == "Vrije Training 3,F1":
         if month == 4 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
