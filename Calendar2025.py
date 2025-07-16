@@ -199,6 +199,7 @@ linky1 = 0
 linkx2 = 10
 linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
+my_canvas.setFont("Helvetica", 4)
 geolocator = Nominatim(user_agent="my_geopy_app")
 for i in range(12):
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
@@ -243,7 +244,6 @@ for i in range(len(raceevents)):
         if month == 4 or month == 7 or month == 9 or month == 12:
             y_offset = y_offset + weekheight
         renderPDF.draw(scaleSVG("SVG/T.svg", scalingtcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + tcaroffset_y)
-        my_canvas.setFont("Helvetica", 4)
         my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + tcaroffset_y, "1")
     elif raceevent is not None and raceevent.categories == "Vrije Training 3,F1":
         if month == 4 or month == 7 or month == 9 or month == 10 or month == 12:
@@ -267,7 +267,7 @@ for i in range(len(raceevents)):
 my_canvas.showPage()
 colwidth = 148
 rowheight = 120
-my_canvas.setFont("Helvetica", 12)
+my_canvas.setFont("Helvetica", 11)
 my_canvas.setFillColor(HexColor('#FECDE5'))
 bottommargin = 30
 my_canvas.rect(0, bottommargin, 4 * colwidth, 6 * rowheight + bottommargin, fill=1)
