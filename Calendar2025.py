@@ -24,6 +24,7 @@ raceevents = []
 circuitsdata = []
 weekdaycairo = [6, 0, 1, 2, 3, 4, 5]
 scalingcar = 0.028
+scalingqcar = 0.28
 
 class RaceEvent:
     def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
@@ -190,6 +191,7 @@ weekwidth = 7 * daywidth
 flagoffset_x = weekwidth + 4
 flagoffset_y = 17
 lcaroffset_y = 13
+qcaroffset_y = 15
 linkx1 = 0
 linky1 = 0
 linkx2 = 10
@@ -257,7 +259,7 @@ for i in range(len(raceevents)):
         if month == 4 or month == 7 or month == 9 or month == 12:
             y_offset = y_offset + weekheight
         y_offset = y_offset + 0.4 * weekheight
-        renderPDF.draw(scaleSVG("SVG/formula1quacar.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
+        renderPDF.draw(scaleSVG("SVG/Q.svg", scalingqcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + qcaroffset_y)
 my_canvas.showPage()
 colwidth = 148
 rowheight = 120
