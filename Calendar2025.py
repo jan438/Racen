@@ -259,7 +259,7 @@ for i in range(len(raceevents)):
         if month == 4 or month == 7 or month == 9 or month == 12:
             y_offset = y_offset + weekheight
         y_offset = y_offset + 0.4 * weekheight
-        renderPDF.draw(scaleSVG("SVG/Q.svg", scalingqcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + qcaroffset_y)
+        renderPDF.draw(scaleSVG("SVG/SQ.svg", scalingqcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + qcaroffset_y)
 my_canvas.showPage()
 colwidth = 148
 rowheight = 120
