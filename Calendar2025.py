@@ -23,6 +23,7 @@ alleventslines = []
 raceevents = []
 circuitsdata = []
 weekdaycairo = [6, 0, 1, 2, 3, 4, 5]
+scalingcar = 0.028
 
 class RaceEvent:
     def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
@@ -233,30 +234,30 @@ for i in range(len(raceevents)):
     elif raceevent is not None and raceevent.categories == "Sprint,F1":
         if month == 4 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
-        renderPDF.draw(scaleSVG("SVG/racingcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
+        renderPDF.draw(scaleSVG("SVG/racingcar.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
     elif raceevent is not None and raceevent.categories == "Vrije Training 1,F1":
         if month == 4 or month == 7 or month == 9 or month == 12:
             y_offset = y_offset + weekheight
-        renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
+        renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
     elif raceevent is not None and raceevent.categories == "Vrije Training 3,F1":
         if month == 4 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
-        renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
+        renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
     elif raceevent is not None and raceevent.categories == "Kwalificatie,F1":
         if month == 4 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
         y_offset = y_offset + 0.4 * weekheight
-        renderPDF.draw(scaleSVG("SVG/formula1quacar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
+        renderPDF.draw(scaleSVG("SVG/formula1quacar.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
     elif raceevent is not None and raceevent.categories == "Vrije Training 2,F1":
         if month == 4 or month == 7 or month == 9 or month == 12:
             y_offset = y_offset + weekheight
         y_offset = y_offset + 0.4 * weekheight
-        renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
+        renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
     elif raceevent is not None and raceevent.categories == "Sprint Qualifying,F1":
         if month == 4 or month == 7 or month == 9 or month == 12:
             y_offset = y_offset + weekheight
         y_offset = y_offset + 0.4 * weekheight
-        renderPDF.draw(scaleSVG("SVG/formula1quacar.svg", 0.028), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
+        renderPDF.draw(scaleSVG("SVG/formula1quacar.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
 my_canvas.showPage()
 colwidth = 148
 rowheight = 120
