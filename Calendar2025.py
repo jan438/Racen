@@ -246,7 +246,7 @@ for i in range(len(raceevents)):
     elif raceevent is not None and raceevent.categories == "Vrije Training 3,F1":
         if month == 4 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
-        renderPDF.draw(scaleSVG("SVG/formula1smallcar.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + lcaroffset_y)
+        renderPDF.draw(scaleSVG("SVG/T.svg", scalingtcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + tcaroffset_y)
     elif raceevent is not None and raceevent.categories == "Kwalificatie,F1":
         if month == 4 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
