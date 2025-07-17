@@ -261,7 +261,7 @@ for i in range(len(raceevents)):
             y_offset = y_offset + weekheight
         y_offset = y_offset + 0.4 * weekheight
         renderPDF.draw(scaleSVG("SVG/T.svg", scalingtcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + tcaroffset_y)
-        my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + tcaroffset_y, "2")
+        my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth + 6, bottommargin + row * rowheight + y_offset + tcaroffset_y + 8, "2")
     elif raceevent is not None and raceevent.categories == "Sprint Qualifying,F1":
         if month == 4 or month == 7 or month == 9 or month == 12:
             y_offset = y_offset + weekheight
