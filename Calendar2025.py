@@ -270,7 +270,7 @@ for i in range(len(raceevents)):
 my_canvas.showPage()
 colwidth = 148
 rowheight = 120
-my_canvas.setFont("Helvetica", 11)
+my_canvas.setFont("Helvetica", 12)
 my_canvas.setFillColor(HexColor('#FECDE5'))
 bottommargin = 30
 my_canvas.rect(0, bottommargin, 4 * colwidth, 6 * rowheight + bottommargin, fill=1)
