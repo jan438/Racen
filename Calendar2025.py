@@ -239,7 +239,7 @@ for i in range(len(raceevents)):
         my_canvas.setFont("Helvetica", 7)
         my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + rcaroffset_y, str(day))
         my_canvas.setFont("Helvetica", 6)
-        my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth + 1.0, bottommargin + row * rowheight + y_offset + rcaroffset_y, startevent)
+        my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth + 8.0, bottommargin + row * rowheight + y_offset + rcaroffset_y, startevent)
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagoffset_x + col * colwidth, bottommargin + row * rowheight + y_offset + flagoffset_y)
         linkx1 = leftmargin + flagoffset_x + col * colwidth
         linky1 = bottommargin + row * rowheight + y_offset + flagoffset_y
