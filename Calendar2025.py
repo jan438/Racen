@@ -201,7 +201,6 @@ linky1 = 0
 linkx2 = 10
 linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
-my_canvas.setFont("Helvetica", 5)
 geolocator = Nominatim(user_agent="my_geopy_app")
 for i in range(12):
     renderPDF.draw(scaleSVG("SVG/" + monthnames[11 - i] + ".svg", 0.30), my_canvas, leftmargin + col * colwidth, bottommargin + row * rowheight)
@@ -231,6 +230,7 @@ for i in range(len(raceevents)):
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
         renderPDF.draw(scaleSVG("SVG/formula-1color.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + rcaroffset_y)
+        my_canvas.setFont("Helvetica", 7)
         my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + rcaroffset_y, str(day))
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagoffset_x + col * colwidth, bottommargin + row * rowheight + y_offset + flagoffset_y)
         linkx1 = leftmargin + flagoffset_x + col * colwidth
@@ -247,11 +247,13 @@ for i in range(len(raceevents)):
         if month == 4 or month == 7 or month == 9 or month == 12:
             y_offset = y_offset + weekheight
         renderPDF.draw(scaleSVG("SVG/T.svg", scalingtcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + tcaroffset_y)
+        my_canvas.setFont("Helvetica", 5)
         my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth + 6, bottommargin + row * rowheight + y_offset + tcaroffset_y + 8.4, "1")
     elif raceevent is not None and raceevent.categories == "Vrije Training 3,F1":
         if month == 4 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
         renderPDF.draw(scaleSVG("SVG/T.svg", scalingtcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + tcaroffset_y)
+        my_canvas.setFont("Helvetica", 5)
         my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth + 6, bottommargin + row * rowheight + y_offset + tcaroffset_y + 8.4, "3")
     elif raceevent is not None and raceevent.categories == "Kwalificatie,F1":
         if month == 4 or month == 7 or month == 9 or month == 10 or month == 12:
@@ -263,6 +265,7 @@ for i in range(len(raceevents)):
             y_offset = y_offset + weekheight
         y_offset = y_offset + 0.4 * weekheight
         renderPDF.draw(scaleSVG("SVG/T.svg", scalingtcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + tcaroffset_y)
+        my_canvas.setFont("Helvetica", 5)
         my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth + 6, bottommargin + row * rowheight + y_offset + tcaroffset_y + 8.4, "2")
     elif raceevent is not None and raceevent.categories == "Sprint Qualifying,F1":
         if month == 4 or month == 7 or month == 9 or month == 12:
