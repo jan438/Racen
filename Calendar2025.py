@@ -232,7 +232,12 @@ for i in range(len(raceevents)):
         renderPDF.draw(scaleSVG("SVG/formula-1color.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + rcaroffset_y)
         my_canvas.setFont("Helvetica", 7)
         [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-        my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + rcaroffset_y, str(day) + " " + str(hour) + ":" + str(minute))
+        strhour = str(hour)
+        strminute = str(minute)
+        if len(strminute) == 1:
+            strminute = "0" + strminute
+        startevent = strhour + ":" + strminute
+        my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + rcaroffset_y, str(day) + " " + startevent)
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagoffset_x + col * colwidth, bottommargin + row * rowheight + y_offset + flagoffset_y)
         linkx1 = leftmargin + flagoffset_x + col * colwidth
         linky1 = bottommargin + row * rowheight + y_offset + flagoffset_y
