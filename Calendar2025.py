@@ -230,7 +230,7 @@ for i in range(len(raceevents)):
         if month == 4 or month == 5 or month == 7 or month == 9 or month == 10 or month == 12:
             y_offset = y_offset + weekheight
         renderPDF.draw(scaleSVG("SVG/formula-1color.svg", scalingcar), my_canvas, leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + rcaroffset_y)
-        my_canvas.setFont("Helvetica", 8)
+        my_canvas.setFont("Helvetica", 7)
         [hour,minute] = converttimetztolocalclock(raceevent.starttime)
         my_canvas.drawString(leftmargin + raceday * daywidth + col * colwidth, bottommargin + row * rowheight + y_offset + rcaroffset_y, str(day) + " " + str(hour) + ":" + str(minute))
         renderPDF.draw(scaleSVG("Flags/" + code + ".svg", 0.25), my_canvas, leftmargin + flagoffset_x + col * colwidth, bottommargin + row * rowheight + y_offset + flagoffset_y)
