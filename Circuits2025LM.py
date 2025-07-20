@@ -173,9 +173,9 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-my_canvas = canvas.Canvas('PDF/Circuits2025LM.pdf')
+my_canvas = canvas.Canvas('PDF/Circuits2026LM.pdf')
 my_canvas.setFont("Helvetica", 10)
-my_canvas.setTitle("Circuits2025")
+my_canvas.setTitle("Circuits2026")
 my_canvas.setFillColorRGB(0,0,0)
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFillColorRGB(255,170,0)
