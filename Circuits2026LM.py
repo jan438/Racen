@@ -166,16 +166,16 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 circuitsdata = []
-file_to_open = "Data/Circuits2025.csv"
+file_to_open = "Data/Circuits2026.csv"
 with open(file_to_open, 'r') as file:
     csvreader = csv.reader(file, delimiter = ';')
     count = 0
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-my_canvas = canvas.Canvas('PDF/Circuits2025LM.pdf')
+my_canvas = canvas.Canvas('PDF/Circuits2026LM.pdf')
 my_canvas.setFont("Helvetica", 10)
-my_canvas.setTitle("Circuits2025")
+my_canvas.setTitle("Circuits2026")
 my_canvas.setFillColorRGB(0,0,0)
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFillColorRGB(255,170,0)
