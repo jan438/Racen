@@ -300,7 +300,6 @@ for i in range(24):
     image = "Circuits/Location/" + circuitsdata[i][5] + "_location_map.png"
     my_canvas.drawImage(image, col * colwidth + 2.1, row * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
     my_canvas.setFillColor(HexColor('#ffaca4'))
-    print(circuitsdata[i][25], circuitsdata[i][26])
     my_canvas.circle(col * colwidth + 2.1 + float(circuitsdata[i][25]), row * rowheight + bottommargin + 10 + float(circuitsdata[i][26]), 6.0, stroke = 0, fill = 1)
     my_canvas.setFillColorRGB(0,0,0)
     col += 1
