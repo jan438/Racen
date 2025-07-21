@@ -216,9 +216,9 @@ for i in range(count):
     my_canvas.setFillColorRGB(170,255,127)
     my_canvas.drawString(circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + 7 + int(circuitsdata[i][11]) + 10, f"{length}")
     if circuitsdata[i][9] == "a":
-        renderPDF.draw(scaleSVG("SVG/anticlockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
+        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-left.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
     else:
-        renderPDF.draw(scaleSVG("SVG/clockwise.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
+        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-right.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
     renderPDF.draw(scaleSVG("SVG/altitude.svg", altitudescale), my_canvas, circuit_x + 6 + left_margin + 6 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) - 2)
     my_canvas.setFont("Helvetica", 7)
     my_canvas.drawString(circuit_x + left_margin + 21 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]), f"{altitude}")
