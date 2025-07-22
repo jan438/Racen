@@ -115,7 +115,7 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 sortondate()
-eventcal = "Calendar/Formule1.ics"
+eventcal = "Calendar/Formule12026.ics"
 in_file = open(os.path.join(path, eventcal), 'r')
 count = 0
 lastpos = 0
