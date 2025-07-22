@@ -228,6 +228,8 @@ drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 row = 6
 col = 0
+caloffsetx = 5
+caloffsety = 10
 clockoffsetx = 95
 clockoffsety = -5
 for i in range(len(raceevents)):
@@ -245,7 +247,7 @@ for i in range(len(raceevents)):
             p.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.line(col * colwidth + 140.0, row * rowheight + 32, col * colwidth + 140.0, row * rowheight - 70.0)
-            renderPDF.draw(scaleSVG("SVG/calendar-blank-thin.svg", 0.030), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
+            renderPDF.draw(scaleSVG("SVG/calendar-blank-thin.svg", 0.030), my_canvas, caloffsetx + col * colwidth, caloffsety + row * rowheight)
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
