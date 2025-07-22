@@ -245,6 +245,7 @@ for i in range(len(raceevents)):
             p.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.line(col * colwidth + 140.0, row * rowheight + 32, col * colwidth + 140.0, row * rowheight - 70.0)
+            renderPDF.draw(scaleSVG("SVG/calendar-blank-thin.svg", 0.030), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
@@ -296,9 +297,7 @@ for i in range(len(raceevents)):
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             x = result[1].find("van ")
-            if raceevent.location == "Imola":
-                my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Imola")
-            elif raceevent.location == "Austin":
+            if raceevent.location == "Austin":
                 my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Austin")
             elif raceevent.location == "Las Vegas":
                 my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Las Vegas")
