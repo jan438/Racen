@@ -27,6 +27,8 @@ scalingcar = 0.028
 scalingqcar = 0.28
 scalingtcar = 0.28
 scalingscar = 0.024
+outsidearea = "#E0E0E0"
+circuitarea = "#36454F"
 
 class RaceEvent:
     def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
@@ -205,7 +207,7 @@ geolocator = Nominatim(user_agent="my_geopy_app")
 colwidth = 148
 rowheight = 120
 my_canvas.setFont("Helvetica", 12)
-my_canvas.setFillColor(HexColor('#FECDE5'))
+my_canvas.setFillColor(HexColor(outsidearea))
 bottommargin = 30
 my_canvas.rect(0, bottommargin, 4 * colwidth, 6 * rowheight + bottommargin, fill=1)
 my_canvas.setFillColorRGB(0,0,0)
@@ -217,7 +219,7 @@ eventheight = 112
 for i in range(24):
     image = "Circuits/Location/" + circuitsdata[i][5] + "_location_map.png"
     my_canvas.drawImage(image, col * colwidth + 2.1, row * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-    my_canvas.setFillColor(HexColor('#ffaca4'))
+    my_canvas.setFillColor(HexColor(circuitarea))
     my_canvas.circle(col * colwidth + 2.1 + float(circuitsdata[i][25]), row * rowheight + bottommargin + 10 + float(circuitsdata[i][26]), 6.0, stroke = 0, fill = 1)
     my_canvas.setFillColorRGB(0,0,0)
     col += 1
