@@ -12,6 +12,7 @@ from ics import Calendar, Event
 from svgwrite import Drawing
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import A4
 from reportlab.lib.colors import HexColor
 from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
@@ -29,6 +30,12 @@ scalingtcar = 0.28
 scalingscar = 0.024
 outsidearea = "#9e9e9e"
 circuitarea = "#36454F"
+left_padding = 0
+bottom_padding = 0
+A4_width = A4[0]
+A4_height = A4[1]
+width = A4_width
+height = A4_height
 
 class RaceEvent:
     def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
@@ -178,6 +185,8 @@ if raceevent is not None:
 else:
     print("Not found")
 my_canvas = canvas.Canvas("PDF/Calendar2026.pdf")
+my_canvas.setFillColor(HexColor(outsidearea))
+my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle("Calendar 2026")
 drawing = svg2rlg('SVG/F1.svg')
@@ -207,9 +216,9 @@ geolocator = Nominatim(user_agent="my_geopy_app")
 colwidth = 148
 rowheight = 120
 my_canvas.setFont("Helvetica", 12)
-my_canvas.setFillColor(HexColor(outsidearea))
+#my_canvas.setFillColor(HexColor(outsidearea))
 bottommargin = 30
-my_canvas.rect(0, bottommargin, 4 * colwidth, 6 * rowheight + bottommargin, fill=1)
+#my_canvas.rect(0, bottommargin, 4 * colwidth, 6 * rowheight + bottommargin, fill=1)
 my_canvas.setFillColorRGB(0,0,0)
 leftmargin = 5
 row = 5
