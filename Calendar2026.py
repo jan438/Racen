@@ -216,9 +216,7 @@ geolocator = Nominatim(user_agent="my_geopy_app")
 colwidth = 148
 rowheight = 120
 my_canvas.setFont("Helvetica", 12)
-#my_canvas.setFillColor(HexColor(outsidearea))
 bottommargin = 30
-#my_canvas.rect(0, bottommargin, 4 * colwidth, 6 * rowheight + bottommargin, fill=1)
 my_canvas.setFillColorRGB(0,0,0)
 leftmargin = 5
 row = 5
