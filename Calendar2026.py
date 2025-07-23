@@ -264,7 +264,6 @@ for i in range(len(raceevents)):
             my_canvas.line(col * colwidth + 140.0, row * rowheight + 32, col * colwidth + 140.0, row * rowheight - 70.0)
             renderPDF.draw(scaleSVG("SVG/calendar-blank-thin.svg", 0.030), my_canvas, caloffsetx + col * colwidth, caloffsety + row * rowheight)
             renderPDF.draw(scaleSVG("Flags/AU.svg", 0.30), my_canvas, flagoffsetx + col * colwidth, flagoffsety + row * rowheight)
-            my_canvas.drawString(caloffsetx + 7.0 + col * colwidth, caloffsety + 5.0 + row * rowheight, str(raceevent.day))
             result = raceevent.summary.split("(")
             result = result[0][4:-1]
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
@@ -329,7 +328,7 @@ for i in range(len(raceevents)):
             renderPDF.draw(scaleSVG("SVG/" + strhour + "00" + ".svg", 0.030), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
             my_canvas.drawString(monthoffsetx + col * colwidth, monthoffsety + 5.0 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.drawString(locoffsetx + col * colwidth, locoffsety + row * rowheight - 65, raceevent.location)
-            #renderPDF.draw(scaleSVG("SVG/flippedcar.svg", 0.30), my_canvas, clockoffsetx - 15.0 + col * colwidth, clockoffsety - 75.0 + row * rowheight)
+            my_canvas.drawString(caloffsetx + 7.0 + col * colwidth, caloffsety + 5.0 + row * rowheight, str(raceevent.day))
             col += 1
             if col == 4:
                 col = 0
