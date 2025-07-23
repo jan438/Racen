@@ -31,6 +31,7 @@ scalingscar = 0.024
 outsidearea = "#9e9e9e"
 circuitarea = "#36454F"
 text1 = "#959595"
+text2 = "#000000"
 left_padding = 0
 bottom_padding = 0
 A4_width = A4[0]
@@ -228,7 +229,6 @@ for i in range(24):
     my_canvas.drawImage(image, col * colwidth + 2.1, row * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
     my_canvas.setFillColor(HexColor(circuitarea))
     my_canvas.circle(col * colwidth + 2.1 + float(circuitsdata[i][25]), row * rowheight + bottommargin + 10 + float(circuitsdata[i][26]), 3.0, stroke = 0, fill = 1)
-    my_canvas.setFillColor(HexColor(text1))
     col += 1
     if col == 4:
        row -= 1
@@ -251,6 +251,7 @@ for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
         if raceevent.categories == "Vrije Training 1,F1":
+            my_canvas.setFillColor(HexColor(text2))
             my_canvas.line(col * colwidth + 12.0, row * rowheight + 32.0, col * colwidth + colwidth - 8.0, row * rowheight + 32.0)
             p = my_canvas.beginPath()
             p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 22.0, row * rowheight + 32.0, startAng = 90, extent = 90)
@@ -327,7 +328,9 @@ for i in range(len(raceevents)):
                 strhour = "0" + strhour
             renderPDF.draw(scaleSVG("SVG/" + strhour + "00" + ".svg", 0.030), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
             my_canvas.drawString(monthoffsetx + col * colwidth, monthoffsety + 5.0 + row * rowheight, monthnames[raceevent.month - 1])
+            my_canvas.setFillColor(HexColor(text1))
             my_canvas.drawString(locoffsetx + col * colwidth, locoffsety + row * rowheight - 65, raceevent.location)
+            my_canvas.setFillColor(HexColor(text2))
             my_canvas.drawString(caloffsetx + 7.0 + col * colwidth, caloffsety + 5.0 + row * rowheight, str(raceevent.day))
             col += 1
             if col == 4:
