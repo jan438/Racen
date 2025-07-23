@@ -239,7 +239,7 @@ flagoffsety = 10
 clockoffsetx = 95
 clockoffsety = -5
 locoffsetx = 5
-locoffsety = 10
+locoffsety = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
@@ -321,7 +321,7 @@ for i in range(len(raceevents)):
                 strhour = "0" + strhour
             renderPDF.draw(scaleSVG("SVG/" + strhour + "00" + ".svg", 0.030), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
             my_canvas.drawString(monthoffsetx + col * colwidth, monthoffsety + 5.0 + row * rowheight, monthnames[raceevent.month - 1])
-            my_canvas.drawString(locoffsetx + col * colwidth, locoffsety + row * rowheight, raceevent.location)
+            my_canvas.drawString(locoffsetx + col * colwidth, locoffsety + row * rowheight - 65, raceevent.location)
             #renderPDF.draw(scaleSVG("SVG/flippedcar.svg", 0.30), my_canvas, clockoffsetx - 15.0 + col * colwidth, clockoffsety - 75.0 + row * rowheight)
             col += 1
             if col == 4:
