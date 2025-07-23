@@ -18,7 +18,7 @@ from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from geopy.geocoders import Nominatim
 
-monthnames = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus", "September","Oktober","November","December"]
+monthnames = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG", "SEP","OCT","NOV","DEC"]
 alleventslines = []
 raceevents = []
 circuitsdata = []
@@ -318,7 +318,7 @@ for i in range(len(raceevents)):
             if len(strhour) == 1:
                 strhour = "0" + strhour
             renderPDF.draw(scaleSVG("SVG/" + strhour + "00" + ".svg", 0.030), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
-            my_canvas.drawString(monthoffsetx + col * colwidth, monthoffsety + 5.0 + row * rowheight, str(raceevent.month))
+            my_canvas.drawString(monthoffsetx + col * colwidth, monthoffsety + 5.0 + row * rowheight, monthnames [raceevent.month - 1])
             #renderPDF.draw(scaleSVG("SVG/flippedcar.svg", 0.30), my_canvas, clockoffsetx - 15.0 + col * colwidth, clockoffsety - 75.0 + row * rowheight)
             col += 1
             if col == 4:
