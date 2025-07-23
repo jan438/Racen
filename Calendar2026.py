@@ -232,6 +232,8 @@ row = 6
 col = 0
 caloffsetx = 5
 caloffsety = 10
+monthoffsetx = 15
+monthoffsety = 10
 flagoffsetx = 55
 flagoffsety = 10
 clockoffsetx = 95
@@ -316,7 +318,8 @@ for i in range(len(raceevents)):
             if len(strhour) == 1:
                 strhour = "0" + strhour
             renderPDF.draw(scaleSVG("SVG/" + strhour + "00" + ".svg", 0.030), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
-            renderPDF.draw(scaleSVG("SVG/flippedcar.svg", 0.30), my_canvas, clockoffsetx - 15.0 + col * colwidth, clockoffsety - 75.0 + row * rowheight)
+            my_canvas.drawString(monthoffsetx + col * colwidth, monthoffsety + 5.0 + row * rowheight, str(raceevent.month))
+            #renderPDF.draw(scaleSVG("SVG/flippedcar.svg", 0.30), my_canvas, clockoffsetx - 15.0 + col * colwidth, clockoffsety - 75.0 + row * rowheight)
             col += 1
             if col == 4:
                 col = 0
