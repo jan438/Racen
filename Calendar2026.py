@@ -318,7 +318,8 @@ for i in range(len(raceevents)):
             if len(strhour) == 1:
                 strhour = "0" + strhour
             renderPDF.draw(scaleSVG("SVG/" + strhour + "00" + ".svg", 0.030), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
-            my_canvas.drawString(monthoffsetx + col * colwidth, monthoffsety + 5.0 + row * rowheight, monthnames [raceevent.month - 1])
+            my_canvas.drawString(monthoffsetx + col * colwidth, monthoffsety + 5.0 + row * rowheight, monthnames[raceevent.month - 1])
+            my_canvas.drawString(col * colwidth, row * rowheight, raceevent.location)
             #renderPDF.draw(scaleSVG("SVG/flippedcar.svg", 0.30), my_canvas, clockoffsetx - 15.0 + col * colwidth, clockoffsety - 75.0 + row * rowheight)
             col += 1
             if col == 4:
