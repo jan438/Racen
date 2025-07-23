@@ -27,7 +27,7 @@ scalingcar = 0.028
 scalingqcar = 0.28
 scalingtcar = 0.28
 scalingscar = 0.024
-outsidearea = "#E0E0E0"
+outsidearea = "#9e9e9e"
 circuitarea = "#36454F"
 
 class RaceEvent:
