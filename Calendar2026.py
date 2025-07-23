@@ -237,11 +237,11 @@ drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 row = 6
 col = 0
-caloffsetx = 5
+caloffsetx = 15
 caloffsety = 10
-monthoffsetx = 15
+monthoffsetx = 25
 monthoffsety = 10
-flagoffsetx = 55
+flagoffsetx = 75
 flagoffsety = 10
 clockoffsetx = 95
 clockoffsety = -5
