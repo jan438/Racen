@@ -186,7 +186,7 @@ if raceevent is not None:
     print(raceevent.summary, raceevent.location, starttime, raceevent.categories, raceevent.geo, starttime, localtime)
 else:
     print("Not found")
-my_canvas = canvas.Canvas("PDF/Calendar2026.pdf")
+my_canvas = canvas.Canvas("PDF/Calendar2026newcal.pdf")
 my_canvas.setFillColor(HexColor(outsidearea))
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFont("Helvetica", 25)
