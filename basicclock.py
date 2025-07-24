@@ -99,6 +99,7 @@ def get_random_times(n, difficulty):
         times.append('{}:{}'.format(hr,mn))
     return times
 
+# python basicclock.py 1
 
 parser = argparse.ArgumentParser(description='Create clock faces to help'
     ' learning the time.')
