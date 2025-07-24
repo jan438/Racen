@@ -250,7 +250,8 @@ locoffsety = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
-        if i == 0:
+        print(raceevent.summary)
+        if raceevent.summary == "F1: Free Training 1 (Grand Prix of Australia)":
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.line(col * colwidth + 12.0, row * rowheight + 32.0, col * colwidth + colwidth - 8.0, row * rowheight + 32.0)
             p = my_canvas.beginPath()
