@@ -252,7 +252,7 @@ for i in range(len(raceevents)):
     if raceevent is not None:
         subsummary = raceevent.summary[4:19]
         print(subsummary)
-        if raceevent.summary == "F1: Free Training 1 (Grand Prix of Australia)":
+        if subsummary == "Free Training 1":
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.line(col * colwidth + 12.0, row * rowheight + 32.0, col * colwidth + colwidth - 8.0, row * rowheight + 32.0)
             p = my_canvas.beginPath()
