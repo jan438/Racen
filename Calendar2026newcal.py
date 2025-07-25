@@ -258,8 +258,7 @@ for i in range(len(raceevents)):
             p = my_canvas.beginPath()
             p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 22.0, row * rowheight + 32.0, startAng = 90, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
-            my_canvas.line(col * colwidth + 2.0, row * rowheight - 80.0, col * colwidth + 2.0, row * rowheight + 22.0)
-                 
+            my_canvas.line(col * colwidth + 2.0, row * rowheight - 80.0, col * colwidth + 2.0, row * rowheight + 22.0)   
             my_canvas.line(col * colwidth + 2.0, row * rowheight - 80, col * colwidth + 130.0, row * rowheight - 80)
             p = my_canvas.beginPath()
             p.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
@@ -267,6 +266,7 @@ for i in range(len(raceevents)):
             my_canvas.line(col * colwidth + 140.0, row * rowheight + 32, col * colwidth + 140.0, row * rowheight - 70.0)
             renderPDF.draw(scaleSVG("SVG/calendar-blank-thin.svg", 0.030), my_canvas, caloffsetx + col * colwidth, caloffsety + row * rowheight)
             renderPDF.draw(scaleSVG("Flags/AU.svg", 0.30), my_canvas, flagoffsetx + col * colwidth, flagoffsety + row * rowheight)
+            my_canvas.setFont("Helvetica", 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
@@ -318,6 +318,7 @@ for i in range(len(raceevents)):
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[1][:-1].encode()
+            my_canvas.setFont("Helvetica", 12)
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result[14:])
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
