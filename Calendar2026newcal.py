@@ -301,7 +301,7 @@ for i in range(len(raceevents)):
             if len(strminute) == 1:
                 strminute = "0" + strminute
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(col * colwidth + 100, row * rowheight - 30, startevent)
+            my_canvas.drawString(col * colwidth + 100, row * rowheight - 34, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
