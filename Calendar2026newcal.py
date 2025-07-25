@@ -318,9 +318,7 @@ for i in range(len(raceevents)):
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[1][:-1].encode()
-            #x = result.find("of ")
-            #my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
-            print("GP Of", result)
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result[14:])
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             if len(strhour) == 1:
