@@ -253,8 +253,9 @@ for i in range(len(raceevents)):
     if raceevent is not None:
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
-            print(subsummary)
-            break
+            print(i, subsummary)
+            if i == 1:
+                break
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.line(col * colwidth + 12.0, row * rowheight + 32.0, col * colwidth + colwidth - 8.0, row * rowheight + 32.0)
             p = my_canvas.beginPath()
@@ -270,8 +271,8 @@ for i in range(len(raceevents)):
             renderPDF.draw(scaleSVG("SVG/calendar-blank-thin.svg", 0.030), my_canvas, caloffsetx + col * colwidth, caloffsety + row * rowheight)
             renderPDF.draw(scaleSVG("Flags/AU.svg", 0.30), my_canvas, flagoffsetx + col * colwidth, flagoffsety + row * rowheight)
             result = raceevent.summary.split("(")
-            result = result[0][4:-1]
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
+            print(result)
+            #my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             strminute = str(minute)
@@ -282,9 +283,8 @@ for i in range(len(raceevents)):
             my_canvas.bookmarkPage(raceevent.location, fit = "FitR", left = leftmargin + col * colwidth, bottom = row * rowheight - 100, right = leftmargin + col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             i = i + 1
             raceevent = raceevents[i] 
-            result = raceevent.summary.split("(")
-            result = result[0][4:-1]
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 15, result)
+            #result = raceevent.summary.split("(")
+            #my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 15, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             strminute = str(minute)
@@ -294,9 +294,8 @@ for i in range(len(raceevents)):
             my_canvas.drawString(col * colwidth + 100, row * rowheight - 15, startevent)
             i = i + 1
             raceevent = raceevents[i]
-            result = raceevent.summary.split("(")
-            result = result[0][4:-1]
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 30, result)
+            #result = raceevent.summary.split("(")
+            #my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 30, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             strminute = str(minute)
@@ -306,9 +305,8 @@ for i in range(len(raceevents)):
             my_canvas.drawString(col * colwidth + 100, row * rowheight - 30, startevent)
             i = i + 1
             raceevent = raceevents[i]
-            result = raceevent.summary.split("(")
-            result = result[0][4:-1]
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 45, result)
+            #result = raceevent.summary.split("(")
+            #my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 45, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             strminute = str(minute)
@@ -318,14 +316,14 @@ for i in range(len(raceevents)):
             my_canvas.drawString(col * colwidth + 100, row * rowheight - 45, startevent)
             i = i + 1
             raceevent = raceevents[i]
-            result = raceevent.summary.split("(")
-            x = result[1].find("van ")
-            if raceevent.location == "Austin":
-                my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Austin")
-            elif raceevent.location == "Las Vegas":
-                my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Las Vegas")
-            else:
-                my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
+            #result = raceevent.summary.split("(")
+            #x = result[1].find("of ")
+            #if raceevent.location == "Austin":
+                #my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Austin")
+            #elif raceevent.location == "Las Vegas":
+                #my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Las Vegas")
+            #else:
+                #my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             if len(strhour) == 1:
