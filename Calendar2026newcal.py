@@ -251,8 +251,8 @@ locoffsety = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
-        subsummary = raceevent.summary[:11]
-        print(subsummary)
+        subsummary = raceevent.summary[:10]
+        print(subsummary[:10])
         if subsummary == "Practice 1":
             print(subsummary)
             my_canvas.setFillColor(HexColor(text1))
