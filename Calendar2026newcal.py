@@ -269,7 +269,7 @@ for i in range(len(raceevents)):
             my_canvas.setFont("Helvetica", 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 4, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             strminute = str(minute)
@@ -294,7 +294,7 @@ for i in range(len(raceevents)):
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 30, result)
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 34, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             strminute = str(minute)
