@@ -253,7 +253,6 @@ for i in range(len(raceevents)):
     if raceevent is not None:
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
-            print(i, subsummary)
             if i == 1:
                 break
             my_canvas.setFillColor(HexColor(text1))
@@ -283,8 +282,9 @@ for i in range(len(raceevents)):
             my_canvas.bookmarkPage(raceevent.location, fit = "FitR", left = leftmargin + col * colwidth, bottom = row * rowheight - 100, right = leftmargin + col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             i = i + 1
             raceevent = raceevents[i] 
-            #result = raceevent.summary.split("(")
-            #my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 15, result)
+            result = raceevent.summary.split("(")
+            result = result[0][:-1].encode()
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 15, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             strminute = str(minute)
