@@ -252,9 +252,9 @@ for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
         subsummary = raceevent.summary[:10]
-        print(subsummary[:10])
         if subsummary == "Practice 1":
             print(subsummary)
+            break
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.line(col * colwidth + 12.0, row * rowheight + 32.0, col * colwidth + colwidth - 8.0, row * rowheight + 32.0)
             p = my_canvas.beginPath()
