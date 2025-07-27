@@ -220,7 +220,7 @@ colwidth = 148
 rowheight = 120
 my_canvas.setFont("Helvetica", 12)
 bottommargin = 30
-leftmargin = 5
+leftmargin = 8
 row = 5
 col = 0
 eventwidth = 138
@@ -294,7 +294,7 @@ flagoffsetx = 75
 flagoffsety = 10
 clockoffsetx = 95
 clockoffsety = -5
-locoffsetx = 5
+locoffsetx = leftmargin
 locoffsety = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
