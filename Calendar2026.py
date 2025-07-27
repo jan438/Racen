@@ -19,7 +19,7 @@ from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from geopy.geocoders import Nominatim
 
-monthnames = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG", "SEP","OCT","NOV","DEC"]
+monthnames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug", "Sep","Oct","Nov","Dec"]
 alleventslines = []
 raceevents = []
 circuitsdata = []
