@@ -318,6 +318,7 @@ for i in range(len(raceevents)):
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[1][:-1].encode()
+            print(result)
             my_canvas.setFont("Helvetica", 12)
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result[14:])
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
