@@ -320,7 +320,7 @@ for i in range(len(raceevents)):
             result = result[1][:-1].encode()
             result = result[14:].decode()
             if result == "USA":
-                print(result, len(result))
+                print(result, len(result), raceevent.location)
             my_canvas.setFont("Helvetica", 12)
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
