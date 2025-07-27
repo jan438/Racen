@@ -253,13 +253,13 @@ my_canvas.drawImage(image, 2 * colwidth + 2.1, 3 * rowheight + bottommargin + 10
 image = "Circuits/Location/Belgium_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + 2.1, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 
-image = "Circuits/Location/Australia_location_map.png"
+image = "Circuits/Location/Hungary_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + 2.1, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/China_location_map.png"
+image = "Circuits/Location/Netherlands_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + 2.1, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Japan_location_map.png"
+image = "Circuits/Location/Italy_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + 2.1, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Bahrain_location_map.png"
+image = "Circuits/Location/Spain_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + 2.1, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 
 image = "Circuits/Location/Australia_location_map.png"
