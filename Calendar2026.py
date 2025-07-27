@@ -232,7 +232,9 @@ image = "Circuits/Location/China_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + 2.1, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 image = "Circuits/Location/Japan_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + 2.1, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/China_location_map.png"#my_canvas.circle(col * colwidth + 2.1 + float(circuitsdata[i][25]), row * rowheight + bottommargin + 10 + float(circuitsdata[i][26]), 3.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Bahrain_location_map.png"
+my_canvas.drawImage(image, 3 * colwidth + 2.1, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+#my_canvas.circle(col * colwidth + 2.1 + float(circuitsdata[i][25]), row * rowheight + bottommargin + 10 + float(circuitsdata[i][26]), 3.0, stroke = 0, fill = 1)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 row = 6
