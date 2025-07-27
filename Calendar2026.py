@@ -29,7 +29,7 @@ scalingqcar = 0.28
 scalingtcar = 0.28
 scalingscar = 0.024
 outsidearea = "#9e9e9e"
-circuitarea = "#36454F"
+circuitarea = "#ffa981"
 text1 = "#696969"
 text2 = "#808080"
 text3 = "#A9A9A9"
@@ -280,9 +280,8 @@ my_canvas.drawImage(image, 2 * colwidth + 2.1, 0 * rowheight + bottommargin + 10
 image = "Circuits/Location/United_Arab_Emirates_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + 2.1, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 
+my_canvas.circle(col * colwidth + 2.1 + 35.0, row * rowheight + bottommargin + 10 + 48.0, 4.0, stroke = 0, fill = 1)
 
-
-#my_canvas.circle(col * colwidth + 2.1 + float(circuitsdata[i][25]), row * rowheight + bottommargin + 10 + float(circuitsdata[i][26]), 3.0, stroke = 0, fill = 1)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 row = 6
