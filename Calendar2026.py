@@ -30,8 +30,9 @@ scalingtcar = 0.28
 scalingscar = 0.024
 outsidearea = "#9e9e9e"
 circuitarea = "#36454F"
-text1 = "#000000"
-text2 = "#959595"
+text1 = "#696969"
+text2 = "#808080"
+text3 = "#A9A9A9"
 left_padding = 0
 bottom_padding = 0
 A4_width = A4[0]
@@ -82,14 +83,14 @@ def lookuplocation(lat, lon):
     return code
 def converttimetztolocal(timetz):
     utc_string = timetz
-    utc_format = "%Y%m%dT%H%M%SZ"
+    utc_format = "%Y%m%dT%H%M%S"
     local_tz = pytz.timezone('Europe/Amsterdam')
     utc_dt = datetime.strptime(utc_string, utc_format)
     local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
     return local_dt
 def converttimetztolocalclock(timetz):
     utc_string = timetz
-    utc_format = "%Y%m%dT%H%M%SZ"
+    utc_format = "%Y%m%dT%H%M%S"
     local_tz = pytz.timezone('Europe/Amsterdam')
     utc_dt = datetime.strptime(utc_string, utc_format)
     local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
@@ -250,14 +251,14 @@ locoffsety = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
-        if raceevent.categories == "Vrije Training 1,F1":
+        subsummary = raceevent.summary[:10]
+        if subsummary == "Practice 1":
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.line(col * colwidth + 12.0, row * rowheight + 32.0, col * colwidth + colwidth - 8.0, row * rowheight + 32.0)
             p = my_canvas.beginPath()
             p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 22.0, row * rowheight + 32.0, startAng = 90, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
-            my_canvas.line(col * colwidth + 2.0, row * rowheight - 80.0, col * colwidth + 2.0, row * rowheight + 22.0)
-                 
+            my_canvas.line(col * colwidth + 2.0, row * rowheight - 80.0, col * colwidth + 2.0, row * rowheight + 22.0)   
             my_canvas.line(col * colwidth + 2.0, row * rowheight - 80, col * colwidth + 130.0, row * rowheight - 80)
             p = my_canvas.beginPath()
             p.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
@@ -265,21 +266,22 @@ for i in range(len(raceevents)):
             my_canvas.line(col * colwidth + 140.0, row * rowheight + 32, col * colwidth + 140.0, row * rowheight - 70.0)
             renderPDF.draw(scaleSVG("SVG/calendar-blank-thin.svg", 0.030), my_canvas, caloffsetx + col * colwidth, caloffsety + row * rowheight)
             renderPDF.draw(scaleSVG("Flags/AU.svg", 0.30), my_canvas, flagoffsetx + col * colwidth, flagoffsety + row * rowheight)
+            my_canvas.setFont("Helvetica", 11)
             result = raceevent.summary.split("(")
-            result = result[0][4:-1]
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight, result)
+            result = result[0][:-1].encode()
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 4, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             strminute = str(minute)
             if len(strminute) == 1:
                 strminute = "0" + strminute
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(col * colwidth + 100, row * rowheight, startevent)
+            my_canvas.drawString(col * colwidth + 100, row * rowheight - 4, startevent)
             my_canvas.bookmarkPage(raceevent.location, fit = "FitR", left = leftmargin + col * colwidth, bottom = row * rowheight - 100, right = leftmargin + col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             i = i + 1
             raceevent = raceevents[i] 
             result = raceevent.summary.split("(")
-            result = result[0][4:-1]
+            result = result[0][:-1].encode()
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 15, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
@@ -291,19 +293,19 @@ for i in range(len(raceevents)):
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
-            result = result[0][4:-1]
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 30, result)
+            result = result[0][:-1].encode()
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 34, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             strminute = str(minute)
             if len(strminute) == 1:
                 strminute = "0" + strminute
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(col * colwidth + 100, row * rowheight - 30, startevent)
+            my_canvas.drawString(col * colwidth + 100, row * rowheight - 34, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
-            result = result[0][4:-1]
+            result = result[0][:-1].encode()
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 45, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
@@ -315,13 +317,9 @@ for i in range(len(raceevents)):
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
-            x = result[1].find("van ")
-            if raceevent.location == "Austin":
-                my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Austin")
-            elif raceevent.location == "Las Vegas":
-                my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, "Las Vegas")
-            else:
-                my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result[1][x + 4:-1])
+            result = result[1][:-1].encode()
+            my_canvas.setFont("Helvetica", 12)
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result[14:])
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             if len(strhour) == 1:

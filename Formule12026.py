@@ -19,8 +19,8 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 def processreport():
     merger = PdfWriter()
 
-    if os.path.isfile("PDF/Calendar2026newcal.pdf"):
-        inputpdf = open("PDF/Calendar2026newcal.pdf", "rb")
+    if os.path.isfile("PDF/Calendar2026.pdf"):
+        inputpdf = open("PDF/Calendar2026.pdf", "rb")
         merger.append(inputpdf)
         inputpdf.close()
     if os.path.isfile("PDF/Circuits2026LM.pdf"):
