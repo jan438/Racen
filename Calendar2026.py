@@ -321,7 +321,12 @@ for i in range(len(raceevents)):
             result = result[14:].decode()
             if result == "USA":
                 if raceevent.location == "Las Vegas":
-                    print(result, len(result), raceevent.location, "Nevada")
+                    state = "Nevada"
+                if raceevent.location == "Austin":
+                    state = "Texas"
+                if raceevent.location == "Miami":
+                    state = "Florida"
+                print(result, len(result), raceevent.location, state)
             my_canvas.setFont("Helvetica", 12)
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
