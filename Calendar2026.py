@@ -372,7 +372,7 @@ for i in range(len(raceevents)):
             if len(strhour) == 1:
                 strhour = "0" + strhour
             renderPDF.draw(scaleSVG("SVG/" + strhour + "00" + ".svg", 0.030), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
-            my_canvas.setFont("Helvetica", 8)
+            my_canvas.setFont("Helvetica", 7)
             my_canvas.drawString(caloffsetx + 2.0 + col * colwidth, caloffsety + 10.0 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.setFillColor(HexColor(text2))
             my_canvas.drawString(locoffsetx + col * colwidth, locoffsety + row * rowheight - 65, raceevent.location)
