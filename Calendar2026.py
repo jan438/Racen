@@ -201,11 +201,8 @@ leftmargin = 25
 bottommargin = 50
 colwidth = 180
 rowheight = 160
-weekheight = 19
-daywidth = 22
-weekwidth = 7 * daywidth
-flagoffset_x = weekwidth + 4
-flagoffset_y = 18
+flagoffset_x = 10
+flagoffset_y = 10
 linkx1 = 0
 linky1 = 0
 linkx2 = 10
@@ -224,8 +221,10 @@ eventheight = 112
 my_canvas.setFillColor(HexColor(circuitarea))
 image = "Circuits/Location/Australia_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + 2.1, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/AU.svg", 0.30), my_canvas, flagoffset_x + 0 * colwidth + 2.1, flagoffset_y + 5 * rowheight + bottommargin + 10)
 image = "Circuits/Location/China_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + 2.1, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/CN.svg", 0.30), my_canvas, flagoffset_x + 1 * colwidth + 2.1, flagoffset_y + 5 * rowheight + bottommargin + 10)
 image = "Circuits/Location/Japan_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + 2.1, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 image = "Circuits/Location/Bahrain_location_map.png"
@@ -307,7 +306,7 @@ for i in range(len(raceevents)):
             my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.line(col * colwidth + 140.0, row * rowheight + 32, col * colwidth + 140.0, row * rowheight - 70.0)
             renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.6), my_canvas, caloffsetx + col * colwidth, caloffsety + row * rowheight)
-            renderPDF.draw(scaleSVG("Flags/AU.svg", 0.30), my_canvas, flagoffsetx + col * colwidth, flagoffsety + row * rowheight)
+            #renderPDF.draw(scaleSVG("Flags/AU.svg", 0.30), my_canvas, flagoffsetx + col * colwidth, flagoffsety + row * rowheight)
             my_canvas.setFont("Helvetica", 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
