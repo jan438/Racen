@@ -19,7 +19,7 @@ from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from geopy.geocoders import Nominatim
 
-monthnames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug", "Sep","Oct","Nov","Dec"]
+monthnames = ["jan","feb","mar","apr","may","jun","jul","aug", "sep","oct","nov","dec"]
 alleventslines = []
 raceevents = []
 circuitsdata = []
@@ -374,10 +374,12 @@ for i in range(len(raceevents)):
             if len(strhour) == 1:
                 strhour = "0" + strhour
             renderPDF.draw(scaleSVG("SVG/" + strhour + "00" + ".svg", 0.030), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
+            my_canvas.setFont("Helvetica", 8)
             my_canvas.drawString(monthoffsetx + col * colwidth, monthoffsety + 5.0 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.setFillColor(HexColor(text2))
             my_canvas.drawString(locoffsetx + col * colwidth, locoffsety + row * rowheight - 65, raceevent.location)
             my_canvas.setFillColor(HexColor(text1))
+            my_canvas.setFont("Helvetica", 12)
             my_canvas.drawString(caloffsetx + 2.0 + col * colwidth, caloffsety + 1.5 + row * rowheight, str(raceevent.day))
             col += 1
             if col == 4:
