@@ -310,7 +310,7 @@ for i in range(len(raceevents)):
             p.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.line(col * colwidth + 140.0, row * rowheight + 32, col * colwidth + 140.0, row * rowheight - 70.0)
-            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.5), my_canvas, caloffsetx + col * colwidth, caloffsety + row * rowheight)
+            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.58), my_canvas, caloffsetx + col * colwidth, caloffsety + row * rowheight)
             renderPDF.draw(scaleSVG("Flags/AU.svg", 0.30), my_canvas, flagoffsetx + col * colwidth, flagoffsety + row * rowheight)
             my_canvas.setFont("Helvetica", 11)
             result = raceevent.summary.split("(")
