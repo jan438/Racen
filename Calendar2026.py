@@ -253,9 +253,10 @@ my_canvas.drawImage(image, 1 * colwidth + 2.1, 3 * rowheight + bottommargin + 10
 renderPDF.draw(scaleSVG("Flags/AT.svg", 0.30), my_canvas, flagoffset_x + 1 * colwidth + 2.1, flagoffset_y + 3 * rowheight + bottommargin + 10)
 image = "Circuits/Location/United_Kingdom_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + 2.1, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-
+renderPDF.draw(scaleSVG("Flags/GB.svg", 0.30), my_canvas, flagoffset_x + 2 * colwidth + 2.1, flagoffset_y + 3 * rowheight + bottommargin + 10)
 image = "Circuits/Location/Belgium_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + 2.1, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/BE.svg", 0.30), my_canvas, flagoffset_x + 3 * colwidth + 2.1, flagoffset_y + 3 * rowheight + bottommargin + 10)
 
 image = "Circuits/Location/Hungary_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + 2.1, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
