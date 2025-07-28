@@ -393,6 +393,7 @@ for i in range(len(raceevents)):
             my_canvas.setFillColor(HexColor("#ffffff"))
             my_canvas.drawString(caloffsetx + 1.4 + col * colwidth, caloffsety + 15.0 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.setFillColor(HexColor(text2))
+            my_canvas.setFont("Helvetica", 11)
             my_canvas.drawString(locoffsetx + col * colwidth, locoffsety + row * rowheight - 65, raceevent.location)
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.setFont("Helvetica", 12)
