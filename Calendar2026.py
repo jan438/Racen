@@ -240,6 +240,7 @@ my_canvas.drawImage(image, 1 * colwidth + 2.1, 4 * rowheight + bottommargin + 10
 renderPDF.draw(scaleSVG("Flags/US.svg", 0.30), my_canvas, flagoffset_x + 1 * colwidth + 2.1, flagoffset_y + 4 * rowheight + bottommargin + 10)
 image = "Circuits/Location/Canada_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + 2.1, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/CA.svg", 0.30), my_canvas, flagoffset_x + 2 * colwidth + 2.1, flagoffset_y + 4 * rowheight + bottommargin + 10)
 image = "Circuits/Location/Monaco_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + 2.1, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 
