@@ -94,7 +94,7 @@ def get_random_times(n, difficulty):
 
     times = []
     for i in range(n):
-        hr = 1
+        hr = 3
         mn = 30
         times.append('{}:{}'.format(hr,mn))
     return times
