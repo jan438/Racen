@@ -306,7 +306,7 @@ my_canvas.circle(3 * colwidth + 2.1 + 35.0, 1 * rowheight + bottommargin + 10 + 
 
 image = "Circuits/Location/Brazil_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + 2.1, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-renderPDF.draw(scaleSVG("Flags/BR.svg", 0.30), my_canvas, flagoffset_x + 0 * colwidth + 2.1, flagoffset_y + 0 * rowheight + bottommargin + 10)
+renderPDF.draw(scaleSVG("Flags/BRtw.svg", 0.5), my_canvas, flagoffset_x + 0 * colwidth + 2.1, flagoffset_y + 0 * rowheight + bottommargin + 10)
 my_canvas.circle(0 * colwidth + 2.1 + 35.0, 0 * rowheight + bottommargin + 10 + 48.0, 4.0, stroke = 0, fill = 1)
 image = "Circuits/Location/USA_Nevada_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + 2.1, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
