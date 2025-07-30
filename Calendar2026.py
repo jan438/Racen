@@ -226,15 +226,15 @@ my_canvas.circle(0 * colwidth + 2.1 + float(circuitsdata[0][25]), 5 * rowheight 
 image = "Circuits/Location/China_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + 2.1, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/CNtw.svg", 0.5), my_canvas, flagoffset_x + 1 * colwidth + 2.1, flagoffset_y + 5 * rowheight + bottommargin + 10)
-my_canvas.circle(1 * colwidth + 2.1 + 35.0, 5 * rowheight + bottommargin + 10 + 48.0, 4.0, stroke = 0, fill = 1)
+my_canvas.circle(1 * colwidth + 2.1 + float(circuitsdata[0][25]), 5 * rowheight + bottommargin + 10 + float(circuitsdata[0][26]), 4.0, stroke = 0, fill = 1)
 image = "Circuits/Location/Japan_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + 2.1, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/JPtw.svg", 0.5), my_canvas, flagoffset_x + 2 * colwidth + 2.1, flagoffset_y + 5 * rowheight + bottommargin + 10)
-my_canvas.circle(2 * colwidth + 2.1 + 35.0, 5 * rowheight + bottommargin + 10 + 48.0, 4.0, stroke = 0, fill = 1)
+my_canvas.circle(2 * colwidth + 2.1 + float(circuitsdata[0][25]), 5 * rowheight + bottommargin + 10 + float(circuitsdata[0][26]), 4.0, stroke = 0, fill = 1)
 image = "Circuits/Location/Bahrain_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + 2.1, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/BHtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + 2.1, flagoffset_y + 5 * rowheight + bottommargin + 10)
-my_canvas.circle(3 * colwidth + 2.1 + 35.0, 5 * rowheight + bottommargin + 10 + 48.0, 4.0, stroke = 0, fill = 1)
+my_canvas.circle(3 * colwidth + 2.1 + float(circuitsdata[0][25]), 5 * rowheight + bottommargin + 10 + float(circuitsdata[0][26]), 4.0, stroke = 0, fill = 1)
 
 image = "Circuits/Location/Saudi_Arabia_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + 2.1, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
