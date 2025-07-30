@@ -291,19 +291,23 @@ my_canvas.circle(3 * colwidth + 2.1 + float(circuitsdata[0][25]), 2 * rowheight 
 image = "Circuits/Location/Azerbaijan_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + 2.1, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/AZtw.svg", 0.5), my_canvas, flagoffset_x + 0 * colwidth + 2.1, flagoffset_y + 1 * rowheight + bottommargin + 10)
-my_canvas.circle(0 * colwidth + 2.1 + 35.0, 1 * rowheight + bottommargin + 10 + 48.0, 4.0, stroke = 0, fill = 1)
+my_canvas.circle(0 * colwidth + 2.1 + float(circuitsdata[0][25]), 1 * rowheight + bottommargin + 10 + float(circuitsdata[0][26]),
+4.0, stroke = 0, fill = 1)
 image = "Circuits/Location/Singapore_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + 2.1, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/SGtw.svg", 0.5), my_canvas, flagoffset_x + 1 * colwidth + 2.1, flagoffset_y + 1 * rowheight + bottommargin + 10)
-my_canvas.circle(1 * colwidth + 2.1 + 35.0, 1 * rowheight + bottommargin + 10 + 48.0, 4.0, stroke = 0, fill = 1)
+my_canvas.circle(1 * colwidth + 2.1 + float(circuitsdata[0][25]), 1 * rowheight + bottommargin + 10 + float(circuitsdata[0][26]),
+4.0, stroke = 0, fill = 1)
 image = "Circuits/Location/USA_Texas_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + 2.1, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/UStw.svg", 0.5), my_canvas, flagoffset_x + 2 * colwidth + 2.1, flagoffset_y + 1 * rowheight + bottommargin + 10)
-my_canvas.circle(2 * colwidth + 2.1 + 35.0, 1 * rowheight + bottommargin + 10 + 48.0, 4.0, stroke = 0, fill = 1)
+my_canvas.circle(2 * colwidth + 2.1 + float(circuitsdata[0][25]), 1 * rowheight + bottommargin + 10 + float(circuitsdata[0][26]),
+4.0, stroke = 0, fill = 1)
 image = "Circuits/Location/Mexico_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + 2.1, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/MXtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + 2.1, flagoffset_y + 1 * rowheight + bottommargin + 10)
-my_canvas.circle(3 * colwidth + 2.1 + 35.0, 1 * rowheight + bottommargin + 10 + 48.0, 4.0, stroke = 0, fill = 1)
+my_canvas.circle(3 * colwidth + 2.1 + float(circuitsdata[0][25]), 1 * rowheight + bottommargin + 10 + float(circuitsdata[0][26]),
+4.0, stroke = 0, fill = 1)
 
 image = "Circuits/Location/Brazil_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + 2.1, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
