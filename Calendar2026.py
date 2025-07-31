@@ -322,6 +322,7 @@ my_canvas.circle(3 * colwidth + 2.1 + 85, 0 * rowheight + bottommargin + 10 + 65
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.setFont("Helvetica", 30)
+my_canvas.setFillColor(HexColor("#000000"))
 my_canvas.drawString(100, 775, "2026")
 row = 6
 col = 0
