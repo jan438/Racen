@@ -5,11 +5,37 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    144.96874884754,
+                    -37.85033990860
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    144.96632060589,
+                    -37.83822456451
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "Location": "Melbourne",
                 "opened": "1953",
                 "id": "au-1953",
-                "length": "5278",
                 "altitude": "10",
+                "length": "5278",
                 "Name": "Albert Park Circuit",
                 "firstgp": "1996"
             },
@@ -381,6 +407,10 @@
                         -37.84709000000
                     ],
                     [
+                        144.97264841917,
+                        -37.84764939939
+                    ],
+                    [
                         144.97289700000,
                         -37.84782400000
                     ],
@@ -597,6 +627,10 @@
                         -37.85270900000
                     ],
                     [
+                        144.96922499697,
+                        -37.85022535935
+                    ],
+                    [
                         144.96864400000,
                         -37.84975700000
                     ]
@@ -606,39 +640,13 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startfinish"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    144.96864400000,
-                    -37.84975700000
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "place": "startsector"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    144.97160389878,
-                    -37.84733457373
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "place": "startsector"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    144.96640410941,
-                    -37.83875119859
+                    144.97297987465,
+                    -37.84737662702
                 ]
             }
         }
