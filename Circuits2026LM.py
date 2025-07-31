@@ -184,6 +184,8 @@ left_margin = 16
 renderPDF.draw(scaleSVG("SVG/WorldMap.svg", worldmapscale), my_canvas, worldmap_x, worldmap_y)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
+my_canvas.setFillColorRGB(255, 255, 255)
+my_canvas.drawString(100, 775, "2026")
 rowcount = 6
 colcount = 5
 rowheight = 125
