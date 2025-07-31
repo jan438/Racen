@@ -87,7 +87,8 @@ row = 4
 col = 0
 flagx = 115
 maxscorewidth = 27.0
-d.add(String(100, 830,"Scores 2026", textAnchor="middle")) 
+d.add(String(100, 830,"Scores", textAnchor="middle"))
+d.add(String(350, 830,"2026", textAnchor="middle"))
 for i in range(count):
     #team 0
     d.add(String(10 + col * colwidth, row * rowheight + 135, formule1data[i][0], font = formule1font, fontSize = 22, fillColor = colors.black))
