@@ -192,9 +192,7 @@ my_canvas.setFillColor(HexColor(outsidearea))
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle("Calendar 2026")
-drawing = svg2rlg('SVG/F1.svg')
-renderPDF.draw(drawing, my_canvas, 100, 800)
-my_canvas.drawString(100, 775, "2026")
+
 row = 0
 col = 2
 leftmargin = 25
@@ -323,6 +321,8 @@ my_canvas.circle(3 * colwidth + 2.1 + 85, 0 * rowheight + bottommargin + 10 + 65
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
+my_canvas.setFont("Helvetica", 30)
+my_canvas.drawString(100, 775, "2026")
 row = 6
 col = 0
 caloffsetx = 55
