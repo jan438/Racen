@@ -327,10 +327,10 @@ row = 6
 col = 0
 caloffsetx = 55
 caloffsety = 10
-flagoffsetx = 100
+flagoffsetx = 110
 flagoffsety = 10
 clockoffsetx = 105
-clockoffsety = 85
+clockoffsety = 88
 locoffsetx = leftmargin
 locoffsety = 0
 for i in range(len(raceevents)):
