@@ -325,12 +325,12 @@ drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 row = 6
 col = 0
-caloffsetx = 15
+caloffsetx = 55
 caloffsety = 10
-flagoffsetx = 75
+flagoffsetx = 80
 flagoffsety = 10
-clockoffsetx = 95
-clockoffsety = -5
+clockoffsetx = 105
+clockoffsety = 80
 locoffsetx = leftmargin
 locoffsety = 0
 for i in range(len(raceevents)):
