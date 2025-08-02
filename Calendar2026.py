@@ -355,6 +355,8 @@ for i in range(len(raceevents)):
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 4, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
+            if len(strhour) == 1:
+                strhour = "0" + strhour
             strminute = str(minute)
             if len(strminute) == 1:
                 strminute = "0" + strminute
@@ -368,6 +370,8 @@ for i in range(len(raceevents)):
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 15, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
+            if len(strhour) == 1:
+                strhour = "0" + strhour
             strminute = str(minute)
             if len(strminute) == 1:
                 strminute = "0" + strminute
@@ -380,6 +384,8 @@ for i in range(len(raceevents)):
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 34, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
+            if len(strhour) == 1:
+                strhour = "0" + strhour
             strminute = str(minute)
             if len(strminute) == 1:
                 strminute = "0" + strminute
@@ -392,6 +398,8 @@ for i in range(len(raceevents)):
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 45, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
+            if len(strhour) == 1:
+                strhour = "0" + strhour
             strminute = str(minute)
             if len(strminute) == 1:
                 strminute = "0" + strminute
