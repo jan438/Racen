@@ -369,12 +369,8 @@ for i in range(len(raceevents)):
             result = result[0][:-1].encode()
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 15, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-            strhour = str(hour)
-            if len(strhour) == 1:
-                strhour = "0" + strhour
-            strminute = str(minute)
-            if len(strminute) == 1:
-                strminute = "0" + strminute
+            strhour = "{:02d}".format(hour)
+            strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
             my_canvas.drawString(col * colwidth + 100, row * rowheight - 15, startevent)
             i = i + 1
@@ -383,12 +379,8 @@ for i in range(len(raceevents)):
             result = result[0][:-1].encode()
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 34, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-            strhour = str(hour)
-            if len(strhour) == 1:
-                strhour = "0" + strhour
-            strminute = str(minute)
-            if len(strminute) == 1:
-                strminute = "0" + strminute
+            strhour = "{:02d}".format(hour)
+            strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
             my_canvas.drawString(col * colwidth + 100, row * rowheight - 34, startevent)
             i = i + 1
@@ -397,12 +389,8 @@ for i in range(len(raceevents)):
             result = result[0][:-1].encode()
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 45, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-            strhour = str(hour)
-            if len(strhour) == 1:
-                strhour = "0" + strhour
-            strminute = str(minute)
-            if len(strminute) == 1:
-                strminute = "0" + strminute
+            strhour = "{:02d}".format(hour)
+            strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
             my_canvas.drawString(col * colwidth + 100, row * rowheight - 45, startevent)
             i = i + 1
