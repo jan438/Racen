@@ -10,9 +10,11 @@ from reportlab.lib.colors import HexColor
 from reportlab.lib.units import inch, mm
 
 outsidearea = "#9e9e9e"
-col = 13
-row = 17
+col = 0
+row = 5
 arcdim = 20
+colwidth = 148
+rowheight = 120
 
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
@@ -21,9 +23,10 @@ if sys.platform[0] == 'w':
 os.chdir(path)
 my_canvas = canvas.Canvas("PDF/arcfilloutside.pdf")
 my_canvas.setFillColor(HexColor(outsidearea))
-p = my_canvas.beginPath()
-p.arc(col, row, col + arcdim, row + arcdim, startAng = 90, extent = 90)
-p.lineTo(col, row + arcdim)
-my_canvas.drawPath(p, fill=1, stroke=0)
+for i in range(24):
+    p = my_canvas.beginPath()
+    p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 2.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
+    p.lineTo(col, row + arcdim)
+    my_canvas.drawPath(p, fill=1, stroke=0)
 my_canvas.save()
 key = input("Wait")
