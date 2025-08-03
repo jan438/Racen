@@ -23,6 +23,7 @@ if sys.platform[0] == 'w':
 os.chdir(path)
 my_canvas = canvas.Canvas("PDF/arcfilloutside.pdf")
 my_canvas.setFillColor(HexColor(outsidearea))
+my_canvas.setStrokeColor(HexColor(outsidearea))
 for i in range(24):
     p = my_canvas.beginPath()
     p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 2.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
