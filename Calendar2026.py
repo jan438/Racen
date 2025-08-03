@@ -337,7 +337,6 @@ for i in range(len(raceevents)):
     if raceevent is not None:
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
-            my_canvas.setFillColor(HexColor(outsidearea))
             my_canvas.line(col * colwidth + 12.0, row * rowheight + 32.0, col * colwidth + colwidth - 8.0, row * rowheight + 32.0)
             p = my_canvas.beginPath()
             p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 22.0, row * rowheight + 32.0, startAng = 90, extent = 90)
