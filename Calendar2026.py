@@ -39,6 +39,7 @@ A4_width = A4[0]
 A4_height = A4[1]
 width = A4_width
 height = A4_height
+arcdim = 20.0
 
 class RaceEvent:
     def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
@@ -339,7 +340,7 @@ for i in range(len(raceevents)):
         if subsummary == "Practice 1":
             my_canvas.line(col * colwidth + 12.0, row * rowheight + 32.0, col * colwidth + colwidth - 8.0, row * rowheight + 32.0)
             p = my_canvas.beginPath()
-            p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 22.0, row * rowheight + 32.0, startAng = 90, extent = 90)
+            p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 2.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.line(col * colwidth + 2.0, row * rowheight - 80.0, col * colwidth + 2.0, row * rowheight + 22.0)   
