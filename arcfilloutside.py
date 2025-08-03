@@ -26,7 +26,7 @@ my_canvas.setFillColor(HexColor(outsidearea))
 for i in range(24):
     p = my_canvas.beginPath()
     p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 2.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
-    p.lineTo(col, row + arcdim)
+    p.lineTo(col * colwidth + 2.0, row * rowheight + 12.0 + arcdim)
     my_canvas.drawPath(p, fill=1, stroke=0)
     col += 1
     if col == 4:
