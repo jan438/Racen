@@ -320,6 +320,19 @@ my_canvas.drawImage(image, 3 * colwidth + 2.1, 0 * rowheight + bottommargin + 10
 renderPDF.draw(scaleSVG("Flags/AEtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + 2.1, flagoffset_y + 0 * rowheight + bottommargin + 10)
 my_canvas.circle(3 * colwidth + 2.1 + 85, 0 * rowheight + bottommargin + 10 + 65, 4.0, stroke = 0, fill = 1)
 
+row = 6
+col = 0
+my_canvas.setFillColor(HexColor(outsidearea))
+for i in range(24):
+    p = my_canvas.beginPath()
+    p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 2.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
+    p.lineTo(col * colwidth + 2.0, row * rowheight + 12.0 + arcdim)
+    my_canvas.drawPath(p, fill=1, stroke=0)
+    col += 1
+    if col == 4:
+        col = 0
+        row -= 1
+
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.setFont("Helvetica", 30)
