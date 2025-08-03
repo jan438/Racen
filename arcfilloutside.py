@@ -28,15 +28,13 @@ for i in range(24):
     p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 2.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
     p.lineTo(col * colwidth + 2.0, row * rowheight + 12.0 + arcdim)
     my_canvas.drawPath(p, fill=1, stroke=0)
+    p = my_canvas.beginPath()
+    p.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
+    p.lineTo(col * colwidth + 140.0, row * rowheight - 80.0)
+    my_canvas.drawPath(p, fill = 1, stroke = 0)
     col += 1
     if col == 4:
         col = 0
         row -= 1
-col = 0
-row = 6
-p = my_canvas.beginPath()
-p.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
-p.lineTo(col * colwidth + 140.0, row * rowheight - 80.0)
-my_canvas.drawPath(p, fill = 1, stroke = 0)
 my_canvas.save()
 key = input("Wait")
