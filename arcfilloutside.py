@@ -36,6 +36,7 @@ col = 0
 row = 6
 p = my_canvas.beginPath()
 p.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
-my_canvas.drawPath(p, fill = 0, stroke = 1)
+p.lineTo(col * colwidth + 140.0, row * rowheight - 80.0)
+my_canvas.drawPath(p, fill = 1, stroke = 0)
 my_canvas.save()
 key = input("Wait")
