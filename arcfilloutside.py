@@ -11,7 +11,7 @@ from reportlab.lib.units import inch, mm
 
 outsidearea = "#9e9e9e"
 col = 0
-row = 5
+row = 6
 arcdim = 20
 colwidth = 148
 rowheight = 120
@@ -28,5 +28,9 @@ for i in range(24):
     p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 2.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
     p.lineTo(col, row + arcdim)
     my_canvas.drawPath(p, fill=1, stroke=0)
+    col += 1
+    if col == 4:
+        col = 0
+        row -= 1
 my_canvas.save()
 key = input("Wait")
