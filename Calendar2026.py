@@ -197,8 +197,6 @@ my_canvas.setTitle("Calendar 2026")
 
 row = 0
 col = 2
-colwidth = 180
-rowheight = 160
 flagoffset_x = 80
 flagoffset_y = 90
 linkx1 = 0
