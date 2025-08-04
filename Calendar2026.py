@@ -337,6 +337,7 @@ for i in range(24):
         row -= 1
 
 my_canvas.setStrokeColor(HexColor(circuitarea))
+my_canvas.setLineWidth(1)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.setFont("Helvetica", 30)
