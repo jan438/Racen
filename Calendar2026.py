@@ -323,6 +323,7 @@ row = 6
 col = 0
 my_canvas.setFillColor(HexColor(outsidearea))
 my_canvas.setStrokeColor(HexColor(outsidearea))
+my_canvas.setLineWidth(1)
 for i in range(24):
     p = my_canvas.beginPath()
     p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 2.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
@@ -337,8 +338,6 @@ for i in range(24):
         col = 0
         row -= 1
 
-my_canvas.setStrokeColor(HexColor(circuitarea))
-my_canvas.setLineWidth(1)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.setFont("Helvetica", 30)
@@ -351,6 +350,7 @@ caloffsety = 10
 clockoffsetx = 105
 clockoffsety = 88
 my_canvas.setStrokeColor(black)
+my_canvas.setLineWidth(1)
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
