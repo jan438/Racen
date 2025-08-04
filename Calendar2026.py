@@ -348,8 +348,6 @@ caloffsetx = 55
 caloffsety = 10
 clockoffsetx = 105
 clockoffsety = 88
-locoffsetx = leftmargin
-locoffsety = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
@@ -427,7 +425,7 @@ for i in range(len(raceevents)):
             my_canvas.drawString(caloffsetx + 1.4 + col * colwidth, caloffsety + 15.0 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.setFillColor(HexColor(text2))
             my_canvas.setFont("Helvetica", 11)
-            my_canvas.drawString(locoffsetx + col * colwidth, locoffsety + row * rowheight - 65, raceevent.location)
+            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 65, raceevent.location)
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.setFont("Helvetica", 12)
             my_canvas.drawString(caloffsetx + 2.0 + col * colwidth, caloffsety + 1.5 + row * rowheight, str(raceevent.day))
