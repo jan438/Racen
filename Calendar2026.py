@@ -14,6 +14,7 @@ from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.colors import HexColor
+from reportlab.lib.colors import blue, green, black, red, pink, gray, brown, purple, orange, yellow, white, lightgrey
 from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
@@ -349,6 +350,7 @@ caloffsetx = 55
 caloffsety = 10
 clockoffsetx = 105
 clockoffsety = 88
+my_canvas.setStrokeColor(black)
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     if raceevent is not None:
