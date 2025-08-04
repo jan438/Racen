@@ -348,7 +348,7 @@ row = 6
 col = 0
 caloffsetx = 48.4
 caloffsety = 10
-clockoffsetx = 105
+clockoffsetx = 97
 clockoffsety = 88
 my_canvas.setStrokeColor(black)
 my_canvas.setLineWidth(1)
@@ -423,7 +423,7 @@ for i in range(len(raceevents)):
             strhour = str(hour)
             if len(strhour) == 1:
                 strhour = "0" + strhour
-            renderPDF.draw(scaleSVG("Clocks/" + strhour + "00" + "tw.svg", 0.5), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
+            renderPDF.draw(scaleSVG("Clocks/" + strhour + "00" + "tw.svg", 0.5), my_canvas, leftmargin + clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
             my_canvas.setFont("Helvetica", 7)
             my_canvas.setFillColor(HexColor("#ffffff"))
             my_canvas.drawString(leftmargin + caloffsetx + col * colwidth, caloffsety + 15.0 + row * rowheight, monthnames[raceevent.month - 1])
