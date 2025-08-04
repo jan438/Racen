@@ -380,7 +380,6 @@ for i in range(len(raceevents)):
                 strminute = "0" + strminute
             startevent = strhour + ":" + strminute
             my_canvas.drawString(col * colwidth + 100, row * rowheight - 4, startevent)
-            my_canvas.bookmarkPage(raceevent.location, fit = "FitR", left = leftmargin + col * colwidth, bottom = row * rowheight - 100, right = leftmargin + col * colwidth + colwidth, top = row * rowheight + rowheight - 100)
             i = i + 1
             raceevent = raceevents[i] 
             result = raceevent.summary.split("(")
