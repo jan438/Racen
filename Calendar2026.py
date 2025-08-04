@@ -346,7 +346,7 @@ my_canvas.setFillColor(HexColor("#000000"))
 my_canvas.drawString(100, 775, "2026")
 row = 6
 col = 0
-caloffsetx = 55
+caloffsetx = 48.4
 caloffsety = 10
 clockoffsetx = 105
 clockoffsety = 88
@@ -368,7 +368,7 @@ for i in range(len(raceevents)):
             p.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.line(col * colwidth + 140.0, row * rowheight + 32, col * colwidth + 140.0, row * rowheight - 70.0)
-            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.6), my_canvas, caloffsetx + col * colwidth, caloffsety + row * rowheight)
+            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.6), my_canvas, leftmargin + caloffsetx + col * colwidth, caloffsety + row * rowheight)
             my_canvas.setFont("Helvetica", 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
@@ -381,7 +381,7 @@ for i in range(len(raceevents)):
             if len(strminute) == 1:
                 strminute = "0" + strminute
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(col * colwidth + 100, row * rowheight - 4, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 4, startevent)
             i = i + 1
             raceevent = raceevents[i] 
             result = raceevent.summary.split("(")
@@ -391,7 +391,7 @@ for i in range(len(raceevents)):
             strhour = "{:02d}".format(hour)
             strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(col * colwidth + 100, row * rowheight - 15, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 15, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
@@ -401,7 +401,7 @@ for i in range(len(raceevents)):
             strhour = "{:02d}".format(hour)
             strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(col * colwidth + 100, row * rowheight - 34, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 34, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
@@ -411,7 +411,7 @@ for i in range(len(raceevents)):
             strhour = "{:02d}".format(hour)
             strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(col * colwidth + 100, row * rowheight - 45, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 45, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
@@ -426,13 +426,13 @@ for i in range(len(raceevents)):
             renderPDF.draw(scaleSVG("Clocks/" + strhour + "00" + "tw.svg", 0.5), my_canvas, clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
             my_canvas.setFont("Helvetica", 7)
             my_canvas.setFillColor(HexColor("#ffffff"))
-            my_canvas.drawString(caloffsetx + 1.4 + col * colwidth, caloffsety + 15.0 + row * rowheight, monthnames[raceevent.month - 1])
+            my_canvas.drawString(leftmargin + caloffsetx + col * colwidth, caloffsety + 15.0 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.setFillColor(HexColor(text2))
             my_canvas.setFont("Helvetica", 11)
             my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 65, raceevent.location)
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.setFont("Helvetica", 12)
-            my_canvas.drawString(caloffsetx + 2.0 + col * colwidth, caloffsety + 1.5 + row * rowheight, str(raceevent.day))
+            my_canvas.drawString(leftmargin + caloffsetx + 0.6 + col * colwidth, caloffsety + 1.5 + row * rowheight, str(raceevent.day))
             col += 1
             if col == 4:
                 col = 0
