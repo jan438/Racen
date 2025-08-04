@@ -327,12 +327,12 @@ my_canvas.setStrokeColor(HexColor(outsidearea))
 my_canvas.setLineWidth(1)
 for i in range(24):
     p = my_canvas.beginPath()
-    p.arc(col * colwidth + 2.0, row * rowheight + 12.0, col * colwidth + 2.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
-    p.lineTo(col * colwidth + 2.0, row * rowheight + 12.0 + arcdim)
+    p.arc(leftmargin + col * colwidth - 6.0, row * rowheight + 12.0, leftmargin + col * colwidth - 6.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
+    p.lineTo(leftmargin + col * colwidth - 6.0, row * rowheight + 12.0 + arcdim)
     my_canvas.drawPath(p, fill=1, stroke=0)
     p = my_canvas.beginPath()
-    p.arc(col * colwidth + 120.0, row * rowheight - 80.0, col * colwidth + 140.0, row * rowheight - 60.0, startAng = 270, extent = 90)
-    p.lineTo(col * colwidth + 140.0, row * rowheight - 80.0)
+    p.arc(leftmargin + col * colwidth + 112.0, row * rowheight - 80.0, leftmargin + col * colwidth + 132.0, row * rowheight - 60.0, startAng = 270, extent = 90)
+    p.lineTo(leftmargin + col * colwidth + 132.0, row * rowheight - 80.0)
     my_canvas.drawPath(p, fill = 1, stroke = 0)
     col += 1
     if col == 4:
