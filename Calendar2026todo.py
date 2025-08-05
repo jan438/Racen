@@ -345,7 +345,7 @@ row = 6
 col = 0
 caloffsetx = 48.4
 caloffsety = 10
-clockoffsetx = 97
+clockoffsetx = 102.9  # done
 clockoffsety = 88
 my_canvas.setStrokeColor(black)
 my_canvas.setLineWidth(1)
