@@ -30,7 +30,7 @@ Viewbox = 115 * 125
 Circuitbox = 95 * 85
 
 Table length linestrings
-00 AlbertPark 
+00 AlbertPark   
 01 Bahrain 94 len orig file
 02 BakuCity 
 03 Catalunya 
@@ -56,5 +56,5 @@ Table length linestrings
 23 Zandvoort 
 
 Coords startindex startsector2 startsector3 OpenStreetMap
-00 AlbertPark
+00 AlbertPark  len 148
 
