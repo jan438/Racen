@@ -426,7 +426,7 @@ for i in range(len(raceevents)):
             my_canvas.drawString(leftmargin + caloffsetx + col * colwidth, caloffsety + 15.0 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.setFillColor(HexColor(text2))
             my_canvas.setFont("Helvetica", 11)
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 65, raceevent.location)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 65, raceevent.location)
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.setFont("Helvetica", 12)
             my_canvas.drawString(leftmargin + caloffsetx + 0.6 + col * colwidth, caloffsety + 1.5 + row * rowheight, str(raceevent.day))
