@@ -205,14 +205,14 @@ linkx2 = 10
 linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
-colwidth = 148
+colwidth = 147
 rowheight = 120
 my_canvas.setFont("Helvetica", 12)
 bottommargin = 30
-leftmargin = 2.1
+leftmargin = 8.0
 row = 5
 col = 0
-eventwidth = 138
+eventwidth = 137
 eventheight = 112
 my_canvas.setFillColor(HexColor(circuitarea))
 image = "Circuits/Location/Australia_location_map.png"
@@ -317,7 +317,6 @@ my_canvas.drawImage(image, 3 * colwidth + leftmargin, 0 * rowheight + bottommarg
 renderPDF.draw(scaleSVG("Flags/AEtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 0 * rowheight + bottommargin + 10)
 my_canvas.circle(3 * colwidth + leftmargin + 85, 0 * rowheight + bottommargin + 10 + 65, 4.0, stroke = 0, fill = 1)
 
-leftmargin = 8.0
 row = 6
 col = 0
 my_canvas.setFillColor(HexColor(outsidearea))
