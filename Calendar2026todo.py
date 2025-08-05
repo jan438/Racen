@@ -343,7 +343,7 @@ my_canvas.setFillColor(HexColor("#000000"))
 my_canvas.drawString(100, 775, "2026")
 row = 6
 col = 0
-caloffsetx = 48.4
+caloffsetx = 54.3  # done
 caloffsety = 10
 clockoffsetx = 102.9  # done
 clockoffsety = 88
