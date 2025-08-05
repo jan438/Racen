@@ -1,0 +1,60 @@
+AlbertPark;au-1953;0316;330.0;240.0;Australia;0.061;8.0;10.0;c;70;50;0;44;93;198;131;a;135;485;a070;337;186;a130;
+
+00 Naam circuit
+01 Naam geo
+02 Datum GP
+03 worldlocx circuit small cirkel
+04 worldlocy circuit small cirkel
+05 Land locatie kaart
+06 Scale kaart
+07 x kaart
+08 y kaart
+09 ac
+10 x info
+11 y info
+12 index sec1
+13 index sec2
+14 index sec3
+15 x startfinish
+16 y startfinish
+17 a startfinish
+18 x sector2
+19 y sector2
+20 a sector2
+21 x sector3
+22 y sector3
+23 a sector3
+24 Display Name
+
+Viewbox = 115 * 125
+Circuitbox = 95 * 85
+
+Table length linestrings
+00 AlbertPark 
+01 Bahrain 94 len orig file
+02 BakuCity 
+03 Catalunya 
+04 EnzoEDinoFerrari 
+05 GillesVilleneuve      
+06 HermanosRodríguez 
+07 Hungaroring 
+08 JeddahCorniche 
+09 JoseCarlosPace 
+10 LasVegas    
+11 Lusail 
+12 MarinaBay 
+13 Miami 
+14 Monaco 
+15 Monza 
+16 RedBullRing 
+17 Shanghai 
+18 Silverstone 
+19 SpaFrancorchamps 
+20 Suzuka 
+21 theAmericas 
+22 YasMarina 
+23 Zandvoort 
+
+Coords startindex startsector2 startsector3 OpenStreetMap
+00 AlbertPark
+
