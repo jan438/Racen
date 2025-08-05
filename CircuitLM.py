@@ -101,16 +101,15 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             startfinish_x = coordinates[0]
             startfinish_y = coordinates[1]
             npointstartfinish = nearestpoint(coordinates, coords)
-            startfinishindex = len(startindices)
             startindices.append(npointstartfinish)
-            print("startfinishindex", startfinishindex, "Nearest Point", npointstartfinish)
+            print("Nearest Point startfinish", npointstartfinish)
         elif geometry['type'] == 'Point' and properties['place'] == "startsector":
             coordinates = geometry["coordinates"]
             npoint = nearestpoint(coordinates, coords)
             startindices.append(npoint)
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
-    print("Startindexes", startindices[0], startindices[1], startindices[2], startfinishindex)
+    print("Startindexes", startindices[0], startindices[1], startindices[2])
     with open("SVG/" + svgfile + "LM.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
         for feature in geojson_data['features']:
