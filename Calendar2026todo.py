@@ -354,17 +354,17 @@ for i in range(len(raceevents)):
     if raceevent is not None:
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
-            my_canvas.line(leftmargin + col * colwidth + 4.0, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 16.0, row * rowheight + 32.0)
+            my_canvas.line(leftmargin + col * colwidth + 4.0 + 5.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 16.0 + 5.9, row * rowheight + 32.0)
             p = my_canvas.beginPath()
-            p.arc(leftmargin + col * colwidth - 6.0, row * rowheight + 12.0, leftmargin + col * colwidth - 6.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
+            p.arc(leftmargin + col * colwidth - 6.0 + 5.9, row * rowheight + 12.0, leftmargin + col * colwidth - 6.0 + 5.9 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.setFillColor(HexColor(text1))
-            my_canvas.line(leftmargin + col * colwidth - 6.0, row * rowheight - 80.0, leftmargin + col * colwidth - 6.0, row * rowheight + 22.0)   
-            my_canvas.line(leftmargin + col * colwidth - 6.0, row * rowheight - 80, leftmargin + col * colwidth + 122.0, row * rowheight - 80)
+            my_canvas.line(leftmargin + col * colwidth - 6.0 + 5.9, row * rowheight - 80.0, leftmargin + col * colwidth - 6.0 + 5.9, row * rowheight + 22.0)   
+            my_canvas.line(leftmargin + col * colwidth - 6.0 + 5.9, row * rowheight - 80, leftmargin + col * colwidth + 122.0 + 5.9, row * rowheight - 80)
             p = my_canvas.beginPath()
-            p.arc(leftmargin + col * colwidth + 112.0, row * rowheight - 80.0, leftmargin + col * colwidth + 132.0, row * rowheight - 60.0, startAng = 270, extent = 90)
+            p.arc(leftmargin + col * colwidth + 112.0 + 5.9, row * rowheight - 80.0, leftmargin + col * colwidth + 132.0 + 5.9, row * rowheight - 60.0, startAng = 270, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
-            my_canvas.line(leftmargin + col * colwidth + 132.0, row * rowheight + 32, leftmargin + col * colwidth + 132.0, row * rowheight - 70.0)
+            my_canvas.line(leftmargin + col * colwidth + 132.0 + 5.9, row * rowheight + 32, leftmargin + col * colwidth + 132.0 + 5.9, row * rowheight - 70.0)
             renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.6), my_canvas, leftmargin + caloffsetx + col * colwidth, caloffsety + row * rowheight)
             my_canvas.setFont("Helvetica", 11)
             result = raceevent.summary.split("(")
