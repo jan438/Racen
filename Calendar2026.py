@@ -205,14 +205,14 @@ linkx2 = 10
 linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
-colwidth = 148
+colwidth = 147
 rowheight = 120
 my_canvas.setFont("Helvetica", 12)
 bottommargin = 30
-leftmargin = 2.1
+leftmargin = 8.0
 row = 5
 col = 0
-eventwidth = 138
+eventwidth = 137
 eventheight = 112
 my_canvas.setFillColor(HexColor(circuitarea))
 image = "Circuits/Location/Australia_location_map.png"
@@ -317,7 +317,6 @@ my_canvas.drawImage(image, 3 * colwidth + leftmargin, 0 * rowheight + bottommarg
 renderPDF.draw(scaleSVG("Flags/AEtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 0 * rowheight + bottommargin + 10)
 my_canvas.circle(3 * colwidth + leftmargin + 85, 0 * rowheight + bottommargin + 10 + 65, 4.0, stroke = 0, fill = 1)
 
-leftmargin = 8.0
 row = 6
 col = 0
 my_canvas.setFillColor(HexColor(outsidearea))
@@ -325,12 +324,12 @@ my_canvas.setStrokeColor(HexColor(outsidearea))
 my_canvas.setLineWidth(1)
 for i in range(24):
     p = my_canvas.beginPath()
-    p.arc(leftmargin + col * colwidth - 6.0, row * rowheight + 12.0, leftmargin + col * colwidth - 6.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
-    p.lineTo(leftmargin + col * colwidth - 6.0, row * rowheight + 12.0 + arcdim)
+    p.arc(leftmargin + col * colwidth - 6.0 + 5.9, row * rowheight + 12.0, leftmargin + col * colwidth - 6.0 + 5.9 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
+    p.lineTo(leftmargin + col * colwidth - 6.0 + 5.9, row * rowheight + 12.0 + arcdim)
     my_canvas.drawPath(p, fill=1, stroke=0)
     p = my_canvas.beginPath()
-    p.arc(leftmargin + col * colwidth + 112.0, row * rowheight - 80.0, leftmargin + col * colwidth + 132.0, row * rowheight - 60.0, startAng = 270, extent = 90)
-    p.lineTo(leftmargin + col * colwidth + 132.0, row * rowheight - 80.0)
+    p.arc(leftmargin + col * colwidth + 112.0 + 5.9, row * rowheight - 80.0, leftmargin + col * colwidth + 132.0 + 5.9, row * rowheight - 60.0, startAng = 270, extent = 90)
+    p.lineTo(leftmargin + col * colwidth + 132.0 + 5.9, row * rowheight - 80.0)
     my_canvas.drawPath(p, fill = 1, stroke = 0)
     col += 1
     if col == 4:
@@ -344,9 +343,9 @@ my_canvas.setFillColor(HexColor("#000000"))
 my_canvas.drawString(100, 775, "2026")
 row = 6
 col = 0
-caloffsetx = 48.4
+caloffsetx = 54.3  # done
 caloffsety = 10
-clockoffsetx = 97
+clockoffsetx = 102.9  # done
 clockoffsety = 88
 my_canvas.setStrokeColor(black)
 my_canvas.setLineWidth(1)
@@ -355,22 +354,22 @@ for i in range(len(raceevents)):
     if raceevent is not None:
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
-            my_canvas.line(leftmargin + col * colwidth + 4.0, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 16.0, row * rowheight + 32.0)
+            my_canvas.line(leftmargin + col * colwidth + 4.0 + 5.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 16.0 + 5.9, row * rowheight + 32.0)
             p = my_canvas.beginPath()
-            p.arc(leftmargin + col * colwidth - 6.0, row * rowheight + 12.0, leftmargin + col * colwidth - 6.0 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
+            p.arc(leftmargin + col * colwidth - 6.0 + 5.9, row * rowheight + 12.0, leftmargin + col * colwidth - 6.0 + 5.9 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.setFillColor(HexColor(text1))
-            my_canvas.line(leftmargin + col * colwidth - 6.0, row * rowheight - 80.0, leftmargin + col * colwidth - 6.0, row * rowheight + 22.0)   
-            my_canvas.line(leftmargin + col * colwidth - 6.0, row * rowheight - 80, leftmargin + col * colwidth + 122.0, row * rowheight - 80)
+            my_canvas.line(leftmargin + col * colwidth - 6.0 + 5.9, row * rowheight - 80.0, leftmargin + col * colwidth - 6.0 + 5.9, row * rowheight + 22.0)   
+            my_canvas.line(leftmargin + col * colwidth - 6.0 + 5.9, row * rowheight - 80, leftmargin + col * colwidth + 122.0 + 5.9, row * rowheight - 80)
             p = my_canvas.beginPath()
-            p.arc(leftmargin + col * colwidth + 112.0, row * rowheight - 80.0, leftmargin + col * colwidth + 132.0, row * rowheight - 60.0, startAng = 270, extent = 90)
+            p.arc(leftmargin + col * colwidth + 112.0 + 5.9, row * rowheight - 80.0, leftmargin + col * colwidth + 132.0 + 5.9, row * rowheight - 60.0, startAng = 270, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
-            my_canvas.line(leftmargin + col * colwidth + 132.0, row * rowheight + 32, leftmargin + col * colwidth + 132.0, row * rowheight - 70.0)
+            my_canvas.line(leftmargin + col * colwidth + 132.0 + 5.9, row * rowheight + 32, leftmargin + col * colwidth + 132.0 + 5.9, row * rowheight - 70.0)
             renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.6), my_canvas, leftmargin + caloffsetx + col * colwidth, caloffsety + row * rowheight)
             my_canvas.setFont("Helvetica", 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 4, result)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 4, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             if len(strhour) == 1:
@@ -379,44 +378,44 @@ for i in range(len(raceevents)):
             if len(strminute) == 1:
                 strminute = "0" + strminute
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 4, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 4, startevent)
             i = i + 1
             raceevent = raceevents[i] 
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 15, result)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 15, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = "{:02d}".format(hour)
             strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 15, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 15, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 34, result)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 34, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = "{:02d}".format(hour)
             strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 34, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 34, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 45, result)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 45, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = "{:02d}".format(hour)
             strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 45, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 45, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[1][:-1].encode()
             result = result[14:].decode()
             my_canvas.setFont("Helvetica", 12)
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 75, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             if len(strhour) == 1:
@@ -427,7 +426,7 @@ for i in range(len(raceevents)):
             my_canvas.drawString(leftmargin + caloffsetx + col * colwidth, caloffsety + 15.0 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.setFillColor(HexColor(text2))
             my_canvas.setFont("Helvetica", 11)
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 65, raceevent.location)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 65, raceevent.location)
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.setFont("Helvetica", 12)
             my_canvas.drawString(leftmargin + caloffsetx + 0.6 + col * colwidth, caloffsety + 1.5 + row * rowheight, str(raceevent.day))
