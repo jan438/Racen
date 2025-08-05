@@ -360,7 +360,7 @@ for i in range(len(raceevents)):
             my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight - 80.0, leftmargin + col * colwidth - 0.1, row * rowheight + 22.0)   
-            my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight - 80, leftmargin + col * colwidth + 122.0 + 5.9, row * rowheight - 80)
+            my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight - 80, leftmargin + col * colwidth + 127.9, row * rowheight - 80)
             p = my_canvas.beginPath()
             p.arc(leftmargin + col * colwidth + 117.9, row * rowheight - 80.0, leftmargin + col * colwidth + 137.9, row * rowheight - 60.0, startAng = 270, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
