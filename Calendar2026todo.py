@@ -369,7 +369,7 @@ for i in range(len(raceevents)):
             my_canvas.setFont("Helvetica", 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 4, result)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 4, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             if len(strhour) == 1:
@@ -378,44 +378,44 @@ for i in range(len(raceevents)):
             if len(strminute) == 1:
                 strminute = "0" + strminute
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 4, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 4, startevent)
             i = i + 1
             raceevent = raceevents[i] 
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 15, result)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 15, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = "{:02d}".format(hour)
             strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 15, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 15, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 34, result)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 34, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = "{:02d}".format(hour)
             strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 34, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 34, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 45, result)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 45, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = "{:02d}".format(hour)
             strminute = "{:02d}".format(minute)
             startevent = strhour + ":" + strminute
-            my_canvas.drawString(leftmargin + col * colwidth + 100, row * rowheight - 45, startevent)
+            my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 45, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[1][:-1].encode()
             result = result[14:].decode()
             my_canvas.setFont("Helvetica", 12)
-            my_canvas.drawString(leftmargin + col * colwidth, row * rowheight - 75, result)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 75, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             if len(strhour) == 1:
