@@ -107,6 +107,9 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
             coordinates = geometry["coordinates"]
             npoint = nearestpoint(coordinates, coords)
             startindices.append(npoint)
+    if len(startindices) < 3:
+        print("Insufficient startindices", startindices)
+        return
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
     print("Startindexes", startindices[0], startindices[1], startindices[2])
