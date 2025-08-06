@@ -32,7 +32,7 @@ Circuitbox = 95 * 85
 Table length linestrings
 00 AlbertPark 146 len orig file  
 01 Bahrain 94 len orig file
-02 BakuCity 
+02 BakuCity 86 len orig file
 03 Catalunya 
 04 EnzoEDinoFerrari 
 05 GillesVilleneuve      
@@ -58,3 +58,4 @@ Table length linestrings
 Coords startindex startsector2 startsector3 OpenStreetMap
 00 AlbertPark          len 148  two points added
 01 Bahrain             len 96   two points added
+02 BakuCity            len 89   three points added
