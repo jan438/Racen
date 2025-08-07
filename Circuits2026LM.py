@@ -227,7 +227,8 @@ for i in range(count):
     my_canvas.drawString(circuit_x + left_margin + 20 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 3, f"{altitude}")
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
-    my_canvas.circle(worldlocx, worldlocy, 2, fill = 1)
+    my_canvas.setFillColorRGB(255,0,0)
+    my_canvas.circle(worldlocx, worldlocy, 1, fill = 1)
     col += 1
     if col == colcount:
         row = row - 1
