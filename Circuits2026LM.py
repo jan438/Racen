@@ -228,7 +228,7 @@ for i in range(count):
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.setFillColorRGB(255,0,0)
-    my_canvas.circle(worldlocx, worldlocy, 1, fill = 1)
+    my_canvas.circle(worldlocx, worldlocy, 1, stroke = 0, fill = 1)
     col += 1
     if col == colcount:
         row = row - 1
