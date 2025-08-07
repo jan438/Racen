@@ -5,19 +5,6 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startfinish"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -73.52324600000,
-                    45.50181600000
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "firstgp": "1978",
                 "Location": "Montreal",
                 "length": "4361",
@@ -182,8 +169,8 @@
                         45.50122200000
                     ],
                     [
-                        -73.52808433041,
-                        45.50179463157
+                        -73.52808391931,
+                        45.50188281205
                     ],
                     [
                         -73.52808100000,
@@ -447,13 +434,13 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startsector"
+                "place": "startfinish"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -73.52793001110,
-                    45.50150687330
+                    -73.52265805133,
+                    45.49969901490
                 ]
             }
         },
@@ -465,8 +452,21 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -73.52743890462,
-                    45.51183228236
+                    -73.52724935123,
+                    45.51211032522
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.52811021996,
+                    45.50199761215
                 ]
             }
         }
