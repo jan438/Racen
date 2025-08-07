@@ -5,21 +5,34 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startfinish"
+                "place": "startsector"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    2.26107937684,
-                    41.56992364842
+                    2.26115479582,
+                    41.57247564997
                 ]
             }
         },
         {
             "type": "Feature",
             "properties": {
-                "id": "es-1991",
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.26149483113,
+                    41.57032081345
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "Name": "Circuit de Barcelona-Catalunya",
+                "id": "es-1991",
                 "Location": "Barcelona",
                 "opened": "1991",
                 "firstgp": "1991",
@@ -200,6 +213,10 @@
                     [
                         2.25259500000,
                         41.56650400000
+                    ],
+                    [
+                        2.25370454296,
+                        41.56782446477
                     ],
                     [
                         2.25408900000,
@@ -414,6 +431,10 @@
                         41.57064400000
                     ],
                     [
+                        2.26115678309,
+                        41.57243902237
+                    ],
+                    [
                         2.26167000000,
                         41.57263600000
                     ],
@@ -626,6 +647,10 @@
                         41.57268500000
                     ],
                     [
+                        2.26148734299,
+                        41.57034879627
+                    ],
+                    [
                         2.26122100000,
                         41.57003400000
                     ]
@@ -640,21 +665,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    2.26103238360,
-                    41.57238464915
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "place": "startsector"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    2.25388941221,
-                    41.56790204198
+                    2.25369402103,
+                    41.56782171163
                 ]
             }
         }
