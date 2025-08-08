@@ -229,7 +229,6 @@ for i in range(count):
     my_canvas.drawString(circuit_x + left_margin + 20 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 3, f"{altitude}")
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
-    print("len circuitcolors", len(circuitcolors))
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
     my_canvas.circle(worldlocx, worldlocy, 1.5, stroke = 0, fill = 1)
     col += 1
