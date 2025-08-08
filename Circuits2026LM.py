@@ -230,7 +230,7 @@ for i in range(count):
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     print("len circuitcolors", len(circuitcolors))
-    my_canvas.setFillColor(HexColor(circuitcolors[3]))
+    my_canvas.setFillColor(HexColor(circuitcolors[i]))
     my_canvas.circle(worldlocx, worldlocy, 1.5, stroke = 0, fill = 1)
     col += 1
     if col == colcount:
