@@ -34,7 +34,7 @@ altitudescale = 0.010
 worldmapscale = 0.34
 worldmap_x = 125
 worldmap_y = 315
-circuitcolors = ["#FF0000", "#FF0000"]
+circuitcolors = ["#FF0000", "#FF0000", "#FF0000", "#00FF00"]
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -229,7 +229,7 @@ for i in range(count):
     my_canvas.drawString(circuit_x + left_margin + 20 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 3, f"{altitude}")
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
-    my_canvas.setFillColor(HexColor(circuitcolors[0]))
+    my_canvas.setFillColor(HexColor(circuitcolors[3]))
     my_canvas.circle(worldlocx, worldlocy, 1.5, stroke = 0, fill = 1)
     col += 1
     if col == colcount:
