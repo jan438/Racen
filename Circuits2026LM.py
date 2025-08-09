@@ -33,7 +33,7 @@ clockwisescale = 0.010
 altitudescale = 0.010
 worldmapscale = 0.34
 worldmap_x = 125
-worldmap_y = 315
+worldmap_y = 325
 circuitcolors = ["#8250C4", "#ECC846", "#73B761", "#118DFF", "#A3623A", "#FFFF80", "#FFFFFF", "#808080", "#C0C0C0", "#FF8000", "#804000", "#FFFF00", "#808000", "#00FF00", "#008000", "#008080", "#00FFFF", "#0000FF", "#000080", "#FF00FF", "#800080", "#FF8080", "#8080FF", "#80FF80"]
 
 def scaleSVG(svgfile, scaling_factor):
