@@ -34,7 +34,6 @@ altitudescale = 0.010
 worldmapscale = 0.34
 worldmap_x = 125
 worldmap_y = 315
-worldcolor ="#9BD5C1"
 circuitcolors = ["#8250C4", "#ECC846", "#73B761", "#118DFF", "#A3623A", "#FFFF80", "#FFFFFF", "#808080", "#C0C0C0", "#FF8000", "#804000", "#FFFF00", "#808000", "#00FF00", "#008000", "#008080", "#00FFFF", "#0000FF", "#000080", "#FF00FF", "#800080", "#FF8080", "#8080FF", "#80FF80"]
 
 def scaleSVG(svgfile, scaling_factor):
@@ -232,10 +231,8 @@ for i in range(count):
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
     my_canvas.circle(worldlocx, worldlocy, 1.5, stroke = 0, fill = 1)
-    my_canvas.setFillColor(HexColor(worldcolor))
-    my_canvas.circle(circuit_x + left_margin + int(circuitsdata[i][10]) + 27, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 14, 3.4, stroke = 0, fill = 1)
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
-    my_canvas.circle(circuit_x + left_margin + int(circuitsdata[i][10]) + 27, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 14, 1.7, stroke = 0, fill = 1)
+    my_canvas.circle(circuit_x + left_margin + int(circuitsdata[i][10]) + 27, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 14, 2.8, stroke = 0, fill = 1)
     col += 1
     if col == colcount:
         row = row - 1
