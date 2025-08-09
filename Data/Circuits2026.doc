@@ -29,6 +29,8 @@ AlbertPark;au-1953;0316;330.0;240.0;Australia;0.061;8.0;10.0;c;70;50;0;44;93;198
 Viewbox = 115 * 125
 Circuitbox = 95 * 85
 
+worldcolor ="#9BD5C1"
+
 Table length linestrings
 00 AlbertPark 146 len orig file          #8250C4
 01 Bahrain 94 len orig file              #ECC846
