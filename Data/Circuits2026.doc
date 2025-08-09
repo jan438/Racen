@@ -39,8 +39,8 @@ Table length linestrings
 04 GillesVilleneuve 102 len orig file    #A3623A
 05 HermanosRodríguez                     #000000
 06 Hungaroring                           #FFFFFF
-07 JeddahCorniche 
-08 JoseCarlosPace 
+07 JeddahCorniche                        #808080
+08 JoseCarlosPace                        #C0C0C0
 09 LasVegas
 10 Lusail 
 11 Madrid
