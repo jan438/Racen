@@ -53,9 +53,9 @@ Table length linestrings
 18 Silverstone                           #000080
 19 SpaFrancorchamps                      #FF00FF
 20 Suzuka                                #800080
-21 theAmericas 
-22 YasMarina 
-23 Zandvoort 
+21 theAmericas                           #FF8080
+22 YasMarina                             #8080FF
+23 Zandvoort                             #80FF80
 
 Coords startindex startsector2 startsector3 OpenStreetMap
 00 AlbertPark          len 148  two points added
