@@ -235,7 +235,7 @@ for i in range(count):
     my_canvas.circle(worldlocx, worldlocy, 1.5, stroke = 0, fill = 1)
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
     my_canvas.circle(circuit_x + left_margin + int(circuitsdata[i][10]) + 27, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 14, 2.8, stroke = 0, fill = 1)
-    legend_x = worldmap_x + 15 + legendcol * 30
+    legend_x = worldmap_x + 30 + legendcol * 30
     legend_y = worldmap_y - 40 + legendrow * 10
     my_canvas.circle(legend_x, legend_y, 2.0, stroke = 0, fill = 1)
     legendcol += 1
