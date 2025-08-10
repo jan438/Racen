@@ -239,7 +239,7 @@ for i in range(count):
     legend_y = worldmap_y - 40 + legendrow * 10
     my_canvas.circle(legend_x, legend_y, 2.8, stroke = 0, fill = 1)
     my_canvas.setFillColor(HexColor("#FFFFFF"))
-    my_canvas.drawString(legend_x + 5, legend_y, circuitsdata[i][25])
+    my_canvas.drawString(legend_x + 5, legend_y - 2, circuitsdata[i][25])
     legendcol += 1
     if legendcol == 6:
         legendrow = legendrow + 1
