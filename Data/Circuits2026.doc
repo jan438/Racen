@@ -25,6 +25,7 @@ AlbertPark;au-1953;0316;330.0;240.0;Australia;0.061;8.0;10.0;c;70;50;0;44;93;198
 22 y sector3
 23 a sector3
 24 Display Name
+25 State name
 
 Viewbox = 115 * 125
 Circuitbox = 95 * 85
