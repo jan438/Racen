@@ -34,7 +34,7 @@ altitudescale = 0.010
 worldmapscale = 0.34
 worldmap_x = 125
 worldmap_y = 325
-circuitcolors = ["#8250C4", "#ECC846", "#73B761", "#118DFF", "#A3623A", "#FFFF80", "#FFFFFF", "#808080", "#C0C0C0", "#FF8000", "#804000", "#FFFF00", "#808000", "#00FF00", "#008000", "#008080", "#00FFFF", "#0000FF", "#000080", "#FF00FF", "#800080", "#FF8080", "#8080FF", "#80FF80"]
+circuitcolors = ["#88255F", "#DB4035", "#FF9933", "#FAD000", "#AF883B", "#7ECC49", "#000000", "#299438", "#6ACCBC", "#158FAD", "#14AAF5", "#96C3EB", "#4073FF", "#000000", "#884DFF", "#AF38EB", "#EB96EB", "#E05194", "#FF8D85", "#808080", "#B8B8B8", "#CCAC93", "#FFFFFF", "#80FF80"]
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
