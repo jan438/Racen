@@ -33,30 +33,30 @@ Circuitbox = 95 * 85
 worldcolor ="#9BD5C1"
 
 Table length linestrings
-00 AlbertPark 146 len orig file          #8250C4
-01 Bahrain 94 len orig file              #ECC846
-02 BakuCity 86 len orig file             #73B761
-03 Catalunya 150 len orig file           #118DFF
-04 GillesVilleneuve 102 len orig file    #A3623A
-05 HermanosRodríguez                     #FFFF80
-06 Hungaroring                           #FFFFFF
-07 JeddahCorniche                        #808080
-08 JoseCarlosPace                        #C0C0C0
-09 LasVegas                              #FF8000
-10 Lusail                                #804000
-11 Madring                               #FFFF00
-12 MarinaBay                             #808000
-13 Miami                                 #00FF00
-14 Monaco                                #008000
-15 Monza                                 #008080
-16 RedBullRing                           #00FFFF
-17 Shanghai                              #0000FF
-18 Silverstone                           #000080
-19 SpaFrancorchamps                      #FF00FF
-20 Suzuka                                #800080
-21 theAmericas                           #FF8080
-22 YasMarina                             #8080FF
-23 Zandvoort                             #80FF80
+00 AlbertPark 146 len orig file          #
+01 Bahrain 94 len orig file              #
+02 BakuCity 86 len orig file             #
+03 Catalunya 150 len orig file           #
+04 GillesVilleneuve 102 len orig file    #
+05 HermanosRodríguez                     #
+06 Hungaroring                           #
+07 JeddahCorniche                        #
+08 JoseCarlosPace                        #
+09 LasVegas                              #
+10 Lusail                                #
+11 Madring                               #
+12 MarinaBay                             #
+13 Miami                                 #
+14 Monaco                                #
+15 Monza                                 #
+16 RedBullRing                           #
+17 Shanghai                              #
+18 Silverstone                           #
+19 SpaFrancorchamps                      #
+20 Suzuka                                #
+21 theAmericas                           #
+22 YasMarina                             #
+23 Zandvoort                             #
 
 Coords startindex startsector2 startsector3 OpenStreetMap
 00 AlbertPark          len 148  two points added
