@@ -33,11 +33,11 @@ Circuitbox = 95 * 85
 worldcolor ="#9BD5C1"
 
 Table length linestrings
-00 AlbertPark 146 len orig file          #
-01 Bahrain 94 len orig file              #
-02 BakuCity 86 len orig file             #
-03 Catalunya 150 len orig file           #
-04 GillesVilleneuve 102 len orig file    #
+00 AlbertPark 146 len orig file          #88255F  Barry Red
+01 Bahrain 94 len orig file              #DB4035  Red
+02 BakuCity 86 len orig file             #FF9933  Orange 
+03 Catalunya 150 len orig file           #FAD000  Yellow
+04 GillesVilleneuve 102 len orig file    #AFB83B  Olive Green
 05 HermanosRodríguez                     #
 06 Hungaroring                           #
 07 JeddahCorniche                        #
