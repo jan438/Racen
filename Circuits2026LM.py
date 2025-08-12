@@ -9,6 +9,9 @@ from ics import Calendar, Event
 from reportlab.graphics import renderPDF
 from reportlab.pdfbase import pdfmetrics  
 from reportlab.pdfgen import canvas
+from reportlab.pdfbase import pdfmetrics  
+from reportlab.pdfbase.pdfmetrics import registerFontFamily
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import inch, mm
 from reportlab.lib.colors import HexColor
@@ -34,6 +37,7 @@ altitudescale = 0.010
 worldmapscale = 0.34
 worldmap_x = 125
 worldmap_y = 325
+cirfont = "LiberationSerif"
   
 circuitcolors = ["#88255F", "#DB4035", "#FF9933", "#FAD000", "#AFB83B", "#7ECC49", "#E7E84F", "#299438", "#A8A202", "#158FAD", "#14AAF5", "#CD0027", "#4073FF", "#D38895", "#884DFF", "#AF38EB", "#EB96EB", "#E05194", "#FF8D85", "#808080", "#FFE001", "#CCAC93", "#9A6324", "#80FF80"]
 
@@ -176,8 +180,12 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
+pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
+pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
+pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
+pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-BoldItalic.ttf'))
 my_canvas = canvas.Canvas('PDF/Circuits2026LM.pdf')
-my_canvas.setFont("Helvetica", 10)
+my_canvas.setFont(cirfont, 10)
 my_canvas.setTitle("Circuits2026")
 my_canvas.setFillColorRGB(0,0,0)
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
@@ -188,7 +196,7 @@ renderPDF.draw(scaleSVG("SVG/WorldMap.svg", worldmapscale), my_canvas, worldmap_
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.setFillColorRGB(255, 255, 255)
-my_canvas.setFont("Helvetica", 25)
+my_canvas.setFont(cirfont, 25)
 my_canvas.drawString(100, 775, "2026 Circuits")
 rowcount = 6
 colcount = 5
@@ -205,7 +213,7 @@ for i in range(count):
     circuit_x = col * colwidth
     circuit_y = row * rowheight
     renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
-    my_canvas.setFont("Helvetica", 9)
+    my_canvas.setFont(cirfont, 9)
     my_canvas.setFillColorRGB(255,170,0)
     displayname = circuitsdata[i][24]
     namewidth = pdfmetrics.stringWidth(displayname, "Helvetica", 9)
@@ -220,7 +228,7 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
     renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
     renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
-    my_canvas.setFont("Helvetica", 8)
+    my_canvas.setFont(cirfont, 8)
     my_canvas.setFillColorRGB(170,255,127)
     my_canvas.drawString(circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + 7 + int(circuitsdata[i][11]) + 10, f"{length}")
     if circuitsdata[i][9] == "a":
@@ -228,7 +236,7 @@ for i in range(count):
     else:
         renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-right.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 1)
     renderPDF.draw(scaleSVG("SVG/altitude.svg", altitudescale), my_canvas, circuit_x + 6 + left_margin + 6 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 1)
-    my_canvas.setFont("Helvetica", 7)
+    my_canvas.setFont(cirfont, 7)
     my_canvas.drawString(circuit_x + left_margin + 20 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 3, f"{altitude}")
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
