@@ -33,7 +33,6 @@ outsidearea = "#9e9e9e"
 circuitarea = "#ffa981"
 text1 = "#696969"
 text2 = "#808080"
-text3 = "#A9A9A9"
 left_padding = 0
 bottom_padding = 0
 A4_width = A4[0]
