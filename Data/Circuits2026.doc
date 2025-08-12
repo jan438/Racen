@@ -38,25 +38,25 @@ Table length linestrings
 02 BakuCity 86 len orig file             #FF9933  Orange 
 03 Catalunya 150 len orig file           #FAD000  Yellow
 04 GillesVilleneuve 102 len orig file    #AFB83B  Olive Green
-05 HermanosRodríguez                     #
-06 Hungaroring                           #
-07 JeddahCorniche                        #
-08 JoseCarlosPace                        #
-09 LasVegas                              #
-10 Lusail                                #
-11 Madring                               #
-12 MarinaBay                             #
-13 Miami                                 #
-14 Monaco                                #
-15 Monza                                 #
-16 RedBullRing                           #
-17 Shanghai                              #
-18 Silverstone                           #
-19 SpaFrancorchamps                      #
-20 Suzuka                                #
-21 theAmericas                           #
-22 YasMarina                             #
-23 Zandvoort                             #
+05 HermanosRodríguez                     #7ECC49
+06 Hungaroring                           #E7E84F
+07 JeddahCorniche                        #299438
+08 JoseCarlosPace                        #A8A202
+09 LasVegas                              #158FAD
+10 Lusail                                #14AAF5
+11 Madring                               #CD0027
+12 MarinaBay                             #4073FF
+13 Miami                                 #D38895
+14 Monaco                                #884DFF
+15 Monza                                 #AF38EB
+16 RedBullRing                           #EB96EB
+17 Shanghai                              #E05194
+18 Silverstone                           #FF8D85
+19 SpaFrancorchamps                      #808080
+20 Suzuka                                #FFE001
+21 theAmericas                           #CCAC93
+22 YasMarina                             #FFFFFF
+23 Zandvoort                             #80FF80
 
 Coords startindex startsector2 startsector3 OpenStreetMap
 00 AlbertPark          len 148  two points added
