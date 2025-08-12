@@ -14,7 +14,10 @@ from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.colors import HexColor
+from reportlab.pdfbase import pdfmetrics  
+from reportlab.pdfbase.pdfmetrics import registerFontFamily
 from reportlab.lib.colors import blue, green, black, red, pink, gray, brown, purple, orange, yellow, white, lightgrey
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
@@ -40,6 +43,7 @@ A4_height = A4[1]
 width = A4_width
 height = A4_height
 arcdim = 20.0
+calfont = "LiberationSerif"
 
 class RaceEvent:
     def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
@@ -188,10 +192,14 @@ if raceevent is not None:
     print(raceevent.summary, raceevent.location, starttime, raceevent.categories, raceevent.geo, starttime, localtime)
 else:
     print("Not found")
+pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
+pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
+pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
+pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-BoldItalic.ttf'))
 my_canvas = canvas.Canvas("PDF/Calendar2026.pdf")
 my_canvas.setFillColor(HexColor(outsidearea))
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
-my_canvas.setFont("Helvetica", 25)
+my_canvas.setFont(calfont, 25)
 my_canvas.setTitle("Calendar 2026")
 
 row = 0
@@ -206,7 +214,7 @@ linkarea = (linkx1, linky1, linkx2, linky2)
 geolocator = Nominatim(user_agent="my_geopy_app")
 colwidth = 147
 rowheight = 120
-my_canvas.setFont("Helvetica", 12)
+my_canvas.setFont(calfont, 12)
 bottommargin = 30
 leftmargin = 8.0
 row = 5
@@ -337,7 +345,7 @@ for i in range(24):
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
-my_canvas.setFont("Helvetica", 30)
+my_canvas.setFont(calfont, 30)
 my_canvas.setFillColor(HexColor("#000000"))
 my_canvas.drawString(100, 775, "2026 Calendar")
 row = 6
@@ -365,7 +373,7 @@ for i in range(len(raceevents)):
             my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.line(leftmargin + col * colwidth + 137.9, row * rowheight + 32, leftmargin + col * colwidth + 137.9, row * rowheight - 70.0)
             renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.6), my_canvas, leftmargin + caloffsetx + col * colwidth, caloffsety + row * rowheight)
-            my_canvas.setFont("Helvetica", 11)
+            my_canvas.setFont(calfont, 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 4, result)
@@ -413,21 +421,21 @@ for i in range(len(raceevents)):
             result = raceevent.summary.split("(")
             result = result[1][:-1].encode()
             result = result[14:].decode()
-            my_canvas.setFont("Helvetica", 12)
+            my_canvas.setFont(calfont, 12)
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 75, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             if len(strhour) == 1:
                 strhour = "0" + strhour
             renderPDF.draw(scaleSVG("Clocks/" + strhour + "00" + "tw.svg", 0.5), my_canvas, leftmargin + clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
-            my_canvas.setFont("Helvetica", 7)
+            my_canvas.setFont(calfont, 7)
             my_canvas.setFillColor(HexColor("#ffffff"))
             my_canvas.drawString(leftmargin + caloffsetx + col * colwidth, caloffsety + 15.0 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.setFillColor(HexColor(text2))
-            my_canvas.setFont("Helvetica", 11)
+            my_canvas.setFont(calfont, 11)
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 65, raceevent.location)
             my_canvas.setFillColor(HexColor(text1))
-            my_canvas.setFont("Helvetica", 12)
+            my_canvas.setFont(calfont, 12)
             my_canvas.drawString(leftmargin + caloffsetx + 0.6 + col * colwidth, caloffsety + 1.5 + row * rowheight, str(raceevent.day))
             col += 1
             if col == 4:
