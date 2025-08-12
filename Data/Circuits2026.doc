@@ -38,23 +38,23 @@ Table length linestrings
 02 BakuCity 86 len orig file             #FF9933  Orange 
 03 Catalunya 150 len orig file           #FAD000  Yellow
 04 GillesVilleneuve 102 len orig file    #AFB83B  Olive Green
-05 HermanosRodríguez                     #7ECC49
+05 HermanosRodríguez                     #7ECC49  Lime Green
 06 Hungaroring                           #E7E84F
-07 JeddahCorniche                        #299438
+07 JeddahCorniche                        #299438  Green
 08 JoseCarlosPace                        #A8A202
-09 LasVegas                              #158FAD
-10 Lusail                                #14AAF5
+09 LasVegas                              #158FAD  Teal
+10 Lusail                                #14AAF5  Sky Blue
 11 Madring                               #CD0027
 12 MarinaBay                             #4073FF
 13 Miami                                 #D38895
-14 Monaco                                #884DFF
-15 Monza                                 #AF38EB
-16 RedBullRing                           #EB96EB
-17 Shanghai                              #E05194
-18 Silverstone                           #FF8D85
+14 Monaco                                #884DFF  Grape
+15 Monza                                 #AF38EB  Violet
+16 RedBullRing                           #EB96EB  Lavender
+17 Shanghai                              #E05194  Magenta
+18 Silverstone                           #FF8D85  Salmon
 19 SpaFrancorchamps                      #808080
 20 Suzuka                                #FFE001
-21 theAmericas                           #CCAC93
+21 theAmericas                           #CCAC93  Taupe
 22 YasMarina                             #FFFFFF
 23 Zandvoort                             #80FF80
 
