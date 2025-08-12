@@ -340,7 +340,7 @@ drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.setFont("Helvetica", 30)
 my_canvas.setFillColor(HexColor("#000000"))
-my_canvas.drawString(100, 775, "2026")
+my_canvas.drawString(100, 775, "2026 Calendar")
 row = 6
 col = 0
 caloffsetx = 54.3  # done
