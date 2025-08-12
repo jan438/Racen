@@ -189,7 +189,7 @@ drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.setFillColorRGB(255, 255, 255)
 my_canvas.setFont("Helvetica", 25)
-my_canvas.drawString(100, 775, "2026")
+my_canvas.drawString(100, 775, "2026 Circuits")
 rowcount = 6
 colcount = 5
 rowheight = 125
