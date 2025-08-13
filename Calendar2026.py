@@ -372,7 +372,7 @@ for i in range(len(raceevents)):
             p.arc(leftmargin + col * colwidth + 117.9, row * rowheight - 80.0, leftmargin + col * colwidth + 137.9, row * rowheight - 60.0, startAng = 270, extent = 90)
             my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.line(leftmargin + col * colwidth + 137.9, row * rowheight + 32, leftmargin + col * colwidth + 137.9, row * rowheight - 70.0)
-            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.6), my_canvas, leftmargin + caloffsetx + col * colwidth, caloffsety + row * rowheight)
+            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.65), my_canvas, leftmargin + caloffsetx + col * colwidth, caloffsety + row * rowheight)
             my_canvas.setFont(calfont, 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1].encode()
@@ -428,7 +428,7 @@ for i in range(len(raceevents)):
             if len(strhour) == 1:
                 strhour = "0" + strhour
             renderPDF.draw(scaleSVG("Clocks/" + strhour + "00" + "tw.svg", 0.5), my_canvas, leftmargin + clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
-            my_canvas.setFont(calfont, 7)
+            my_canvas.setFont(calfont, 8)
             my_canvas.setFillColor(HexColor("#ffffff"))
             my_canvas.drawString(leftmargin + caloffsetx + col * colwidth, caloffsety + 15.0 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.setFillColor(HexColor(text2))
