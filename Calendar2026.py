@@ -350,9 +350,9 @@ my_canvas.setFillColor(HexColor("#000000"))
 my_canvas.drawString(100, 775, "2026 Calendar")
 row = 6
 col = 0
-caloffsetx = 54.3  # done
+caloffsetx = 54.3
 caloffsety = 10
-clockoffsetx = 102.9  # done
+clockoffsetx = 102.9
 clockoffsety = 88
 my_canvas.setStrokeColor(black)
 my_canvas.setLineWidth(1)
@@ -430,7 +430,7 @@ for i in range(len(raceevents)):
             renderPDF.draw(scaleSVG("Clocks/" + strhour + "00" + "tw.svg", 0.5), my_canvas, leftmargin + clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
             my_canvas.setFont(calfont, 8)
             my_canvas.setFillColor(HexColor("#ffffff"))
-            my_canvas.drawString(leftmargin + caloffsetx + col * colwidth, caloffsety + 16.2 + row * rowheight, monthnames[raceevent.month - 1])
+            my_canvas.drawString(leftmargin + caloffsetx + 3.5 + col * colwidth, caloffsety + 16.2 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.setFillColor(HexColor(text2))
             my_canvas.setFont(calfont, 11)
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 65, raceevent.location)
