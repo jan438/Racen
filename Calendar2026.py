@@ -435,7 +435,7 @@ for i in range(len(raceevents)):
             my_canvas.setFont(calfont, 11)
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 65, raceevent.location)
             my_canvas.setFillColor(HexColor(text1))
-            my_canvas.setFont(calfont, 12)
+            my_canvas.setFont(calfont, 14)
             my_canvas.drawString(leftmargin + caloffsetx + 0.6 + col * colwidth, caloffsety + 1.5 + row * rowheight, str(raceevent.day))
             col += 1
             if col == 4:
