@@ -430,7 +430,7 @@ for i in range(len(raceevents)):
             renderPDF.draw(scaleSVG("Clocks/" + strhour + "00" + "tw.svg", 0.5), my_canvas, leftmargin + clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
             my_canvas.setFont(calfont, 8)
             my_canvas.setFillColor(HexColor("#ffffff"))
-            my_canvas.drawString(leftmargin + caloffsetx + col * colwidth, caloffsety + 15.0 + row * rowheight, monthnames[raceevent.month - 1])
+            my_canvas.drawString(leftmargin + caloffsetx + col * colwidth, caloffsety + 15.5 + row * rowheight, monthnames[raceevent.month - 1])
             my_canvas.setFillColor(HexColor(text2))
             my_canvas.setFont(calfont, 11)
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 65, raceevent.location)
