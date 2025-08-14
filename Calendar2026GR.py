@@ -196,7 +196,7 @@ pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf')
 pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-BoldItalic.ttf'))
-my_canvas = canvas.Canvas("PDF/Calendar2026.pdf")
+my_canvas = canvas.Canvas("PDF/Calendar2026GR.pdf")
 my_canvas.setFillColor(HexColor(outsidearea))
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFont(calfont, 25)
@@ -204,7 +204,7 @@ my_canvas.setTitle("Calendar 2026")
 
 row = 0
 col = 2
-flagoffset_x = 80
+flagoffset_x = 81
 flagoffset_y = 90
 linkx1 = 0
 linky1 = 0
