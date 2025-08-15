@@ -206,6 +206,8 @@ row = 0
 col = 2
 flagoffset_x = 81
 flagoffset_y = 90
+circuit_x = 10
+circuit_y = 10
 linkx1 = 0
 linky1 = 0
 linkx2 = 10
@@ -277,7 +279,7 @@ image = "Circuits/Location/Hungary_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/HUtw.svg", 0.5), my_canvas, flagoffset_x + 0 * colwidth + leftmargin, flagoffset_y + 2 * rowheight + bottommargin + 10)
 my_canvas.circle(0 * colwidth + leftmargin + 58, 2 * rowheight + bottommargin + 10 + 60, 4.0, stroke = 0, fill = 1)
-renderPDF.draw(scaleSVG("SVG/HungaroringLC.svg", 0.08), my_canvas, flagoffset_x + 0 * colwidth + leftmargin, 33.3 + 2 * rowheight + bottommargin + 10)
+renderPDF.draw(scaleSVG("SVG/HungaroringLC.svg", 0.08), my_canvas, circuit_x + 0 * colwidth + leftmargin, circuit_y + 2 * rowheight + bottommargin + 10)
 image = "Circuits/Location/Netherlands_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/NLtw.svg", 0.5), my_canvas, flagoffset_x + 1 * colwidth + leftmargin, flagoffset_y + 2 * rowheight + bottommargin + 10)
