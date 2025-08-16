@@ -229,6 +229,9 @@ image = "Circuits/Location/Australia_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/AUtw.svg", 0.5), my_canvas, flagoffset_x + 0 * colwidth + leftmargin, flagoffset_y + 5 * rowheight + bottommargin + 10)
 my_canvas.circle(0 * colwidth + leftmargin + 105, 5 * rowheight + bottommargin + 10 + 20, 4.0, stroke = 0, fill = 1)
+circuit_x = 60
+circuit_y = 30
+renderPDF.draw(scaleSVG("SVG/AlbertParkLC.svg", circuitscale), my_canvas, circuit_x + 0 * colwidth + leftmargin, circuit_y + 5 * rowheight + bottommargin + 10)
 image = "Circuits/Location/China_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/CNtw.svg", 0.5), my_canvas, flagoffset_x + 1 * colwidth + leftmargin, flagoffset_y + 5 * rowheight + bottommargin + 10)
