@@ -16,6 +16,7 @@ sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
 strokecolor = "#000000"   #black
+circuitcolors = ["#88255F", "#DB4035", "#FF9933", "#FAD000", "#AFB83B", "#7ECC49", "#E7E84F", "#299438", "#A8A202", "#158FAD", "#14AAF5", "#CD0027", "#4073FF", "#D38895", "#884DFF", "#AF38EB", "#EB96EB", "#E05194", "#FF8D85", "#808080", "#FFE001", "#CCAC93", "#9A6324", "#80FF80"]
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -179,8 +180,9 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     path = coordinates_to_path([coords[idx1 - 1:]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                 elif cx == 5:
+                    cc = circuitcolors[5]
                     path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{sec3color}" stroke-width="10" stroke="{strokecolor}"/>\n')
+                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
                 elif cx == 6:
                     path = coordinates_to_path([coords], scale, translate)
                     f.write(f'<path d="{path}" fill="{sec2color}" stroke-width="7" stroke="{strokecolor}"/>\n')
