@@ -305,6 +305,9 @@ image = "Circuits/Location/Belgium_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + leftmargin, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/BEtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 3 * rowheight + bottommargin + 10)
 my_canvas.circle(3 * colwidth + leftmargin + 105, 3 * rowheight + bottommargin + 10 + 59, 4.0, stroke = 0, fill = 1)
+circuit_x = 60
+circuit_y = 30
+renderPDF.draw(scaleSVG("SVG/SpaFrancorchampsLC.svg", circuitscale), my_canvas, circuit_x + 3 * colwidth + leftmargin, circuit_y + 3 * rowheight + bottommargin + 10)
 
 image = "Circuits/Location/Hungary_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
