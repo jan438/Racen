@@ -243,6 +243,9 @@ image = "Circuits/Location/Japan_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/JPtw.svg", 0.5), my_canvas, flagoffset_x + 2 * colwidth + leftmargin, flagoffset_y + 5 * rowheight + bottommargin + 10)
 my_canvas.circle(2 * colwidth + leftmargin + 73, 5 * rowheight + bottommargin + 10 + 45, 4.0, stroke = 0, fill = 1)
+circuit_x = 60
+circuit_y = 30
+renderPDF.draw(scaleSVG("SVG/SuzukaLC.svg", circuitscale), my_canvas, circuit_x + 2 * colwidth + leftmargin, circuit_y + 5 * rowheight + bottommargin + 10)
 image = "Circuits/Location/Bahrain_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/BHtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 5 * rowheight + bottommargin + 10)
