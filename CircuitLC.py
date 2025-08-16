@@ -11,7 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 1.0
 flagcorrection = -5.0
-cx = 5
+cx = 6
 sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
@@ -184,8 +184,9 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                     path = coordinates_to_path([coords], scale, translate)
                     f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
                 elif cx == 6:
+                    cc = circuitcolors[6]
                     path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{sec2color}" stroke-width="7" stroke="{strokecolor}"/>\n')
+                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
                 elif cx == 7:
                     path = coordinates_to_path([coords[idx2:idx3]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
