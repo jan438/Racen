@@ -452,7 +452,7 @@ for i in range(len(raceevents)):
             result = raceevent.summary.split("(")
             result = result[0][:-1]
             if result[:8] == "Practice":
-                renderPDF.draw(scaleSVG("SVG/stopwatch.svg", 0.024), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 4)
+                renderPDF.draw(scaleSVG("SVG/stopwatch.svg", 0.024), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 5.0)
                 my_canvas.drawString(leftmargin + col * colwidth + 9.0, row * rowheight - 4, result[9:])
             else:
                 my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 4, result)
