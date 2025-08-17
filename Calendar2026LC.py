@@ -456,15 +456,15 @@ for i in range(len(raceevents)):
                 my_canvas.drawString(leftmargin + col * colwidth + 9.0, row * rowheight - 4, result[9:])
             else:
                 my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 4, result)
-            [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-            strhour = str(hour)
-            if len(strhour) == 1:
-                strhour = "0" + strhour
-            strminute = str(minute)
-            if len(strminute) == 1:
-                strminute = "0" + strminute
-            startevent = strhour + ":" + strminute
-            my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 4, startevent)
+                [hour,minute] = converttimetztolocalclock(raceevent.starttime)
+                strhour = str(hour)
+                if len(strhour) == 1:
+                    strhour = "0" + strhour
+                strminute = str(minute)
+                if len(strminute) == 1:
+                    strminute = "0" + strminute
+                startevent = strhour + ":" + strminute
+                my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 4, startevent)
             i = i + 1
             raceevent = raceevents[i] 
             result = raceevent.summary.split("(")
