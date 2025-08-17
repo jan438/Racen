@@ -451,6 +451,8 @@ for i in range(len(raceevents)):
             my_canvas.setFont(calfont, 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1]
+            if result[:8] == "Practice":
+                print(result)
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 4, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
