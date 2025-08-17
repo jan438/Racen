@@ -450,7 +450,7 @@ for i in range(len(raceevents)):
             renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.65), my_canvas, leftmargin + caloffsetx + col * colwidth, caloffsety + row * rowheight)
             my_canvas.setFont(calfont, 11)
             result = raceevent.summary.split("(")
-            result = result[0][:-1].encode()
+            result = result[0][:-1]
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 4, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
@@ -464,7 +464,7 @@ for i in range(len(raceevents)):
             i = i + 1
             raceevent = raceevents[i] 
             result = raceevent.summary.split("(")
-            result = result[0][:-1].encode()
+            result = result[0][:-1]
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 15, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = "{:02d}".format(hour)
@@ -474,7 +474,7 @@ for i in range(len(raceevents)):
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
-            result = result[0][:-1].encode()
+            result = result[0][:-1]
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 34, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = "{:02d}".format(hour)
@@ -484,7 +484,7 @@ for i in range(len(raceevents)):
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
-            result = result[0][:-1].encode()
+            result = result[0][:-1]
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 45, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = "{:02d}".format(hour)
@@ -494,8 +494,8 @@ for i in range(len(raceevents)):
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
-            result = result[1][:-1].encode()
-            result = result[14:].decode()
+            result = result[1][:-1]
+            result = result[14:]
             my_canvas.setFont(calfont, 12)
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 75, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
