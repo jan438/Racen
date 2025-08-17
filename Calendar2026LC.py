@@ -453,7 +453,7 @@ for i in range(len(raceevents)):
             result = result[0][:-1]
             if result[:8] == "Practice":
                 renderPDF.draw(scaleSVG("SVG/stopwatch.svg", 0.02), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 4)
-            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 4, result)
+            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 4, result[9:])
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
             strhour = str(hour)
             if len(strhour) == 1:
