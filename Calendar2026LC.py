@@ -449,7 +449,7 @@ for i in range(len(raceevents)):
             result = raceevent.summary.split("(")
             result = result[0][:-1]
             renderPDF.draw(scaleSVG("SVG/dateom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth, row * rowheight - 6.9)
-            print(raceevent.day)
+            my_canvas.drawString(leftmargin + col * colwidth + 3.0, row * rowheight - 3.0, str(raceevent.day))
             if result[:10] == "Practice 1":
                 renderPDF.draw(scaleSVG("SVG/stopwatchom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 6.9)
                 my_canvas.drawString(leftmargin + col * colwidth + 11.0, row * rowheight - 3.5, "1")
@@ -497,7 +497,7 @@ for i in range(len(raceevents)):
             result = raceevent.summary.split("(")
             result = result[0][:-1]
             renderPDF.draw(scaleSVG("SVG/dateom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth, row * rowheight - 36.9)
-            print(raceevent.day)
+            my_canvas.drawString(leftmargin + col * colwidth + 3.0, row * rowheight - 30.9, str(raceevent.day))
             if result[:10] == "Practice 3":
                 renderPDF.draw(scaleSVG("SVG/stopwatchom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 36.9)
                 my_canvas.drawString(leftmargin + col * colwidth + 11.0, row * rowheight - 33.5, "3")
