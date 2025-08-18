@@ -477,7 +477,15 @@ for i in range(len(raceevents)):
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
-                renderPDF.draw(scaleSVG("Clocks/" + startevent + "om.svg", 0.21), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 17.1)  
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "om.svg", 0.21), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 17.1)
+            elif result[:17] == "Sprint Qualifying":
+                renderPDF.draw(scaleSVG("SVG/flagom.svg", 0.21), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 17.9)
+                my_canvas.drawString(leftmargin + col * colwidth + 11.0, row * rowheight - 14.5, "S")
+                [hour,minute] = converttimetztolocalclock(raceevent.starttime)
+                strhour = "{:02d}".format(hour)
+                strminute = "{:02d}".format(minute)
+                startevent = strhour + strminute
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "om.svg", 0.21), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 17.1) 
             else:
                 my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 15, result)
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
