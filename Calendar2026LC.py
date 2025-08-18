@@ -451,9 +451,9 @@ for i in range(len(raceevents)):
             my_canvas.setFont(calfont, 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1]
-            if result[:8] == "Practice":
+            if result[:10] == "Practice 1":
                 renderPDF.draw(scaleSVG("SVG/stopwatchom.svg", 0.21), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 6.9)
-                my_canvas.drawString(leftmargin + col * colwidth + 11.0, row * rowheight - 3.5, result[9:])
+                my_canvas.drawString(leftmargin + col * colwidth + 11.0, row * rowheight - 3.5, "1")
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
                 strhour = str(hour)
                 if len(strhour) == 1:
