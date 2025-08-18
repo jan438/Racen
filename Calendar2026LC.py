@@ -508,12 +508,15 @@ for i in range(len(raceevents)):
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][:-1]
-            my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 45, result)
-            [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-            strhour = "{:02d}".format(hour)
-            strminute = "{:02d}".format(minute)
-            startevent = strhour + ":" + strminute
-            my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 45, startevent)
+            if result[:10] == "Qualifying":
+                renderPDF.draw(scaleSVG("SVG/flagom.svg", 0.21), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 47.9)
+            else:
+                my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 45, result)
+                [hour,minute] = converttimetztolocalclock(raceevent.starttime)
+                strhour = "{:02d}".format(hour)
+                strminute = "{:02d}".format(minute)
+                startevent = strhour + ":" + strminute
+                my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 45, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
