@@ -455,23 +455,15 @@ for i in range(len(raceevents)):
                 renderPDF.draw(scaleSVG("SVG/stopwatchom.svg", 0.21), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 6.9)
                 my_canvas.drawString(leftmargin + col * colwidth + 11.0, row * rowheight - 3.5, "1")
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-                strhour = str(hour)
-                if len(strhour) == 1:
-                    strhour = "0" + strhour
-                strminute = str(minute)
-                if len(strminute) == 1:
-                    strminute = "0" + strminute
+                strhour = "{:02d}".format(hour)
+                strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
                 renderPDF.draw(scaleSVG("Clocks/" + startevent + "om.svg", 0.21), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 6.1)
             else:
                 my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 4, result)
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-                strhour = str(hour)
-                if len(strhour) == 1:
-                    strhour = "0" + strhour
-                strminute = str(minute)
-                if len(strminute) == 1:
-                    strminute = "0" + strminute
+                strhour = "{:02d}".format(hour)
+                strminute = "{:02d}".format(minute)
                 startevent = strhour + ":" + strminute
                 my_canvas.drawString(leftmargin + col * colwidth + 105.9, row * rowheight - 4, startevent)
             i = i + 1
