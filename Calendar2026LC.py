@@ -452,7 +452,7 @@ for i in range(len(raceevents)):
             my_canvas.setFont(calfont, 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1]
-            renderPDF.draw(scaleSVG("SVG/dateom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + eventday_x, row * rowheight + eventday_y - 6.9)
+            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + eventday_x, row * rowheight + eventday_y - 6.9)
             my_canvas.drawString(leftmargin + col * colwidth + eventday_x + 3.0, row * rowheight + eventday_y - 3.0, str(raceevent.day))
             if result[:10] == "Practice 1":
                 renderPDF.draw(scaleSVG("SVG/stopwatchom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 6.9)
@@ -500,7 +500,7 @@ for i in range(len(raceevents)):
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][:-1]
-            renderPDF.draw(scaleSVG("SVG/dateom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth, row * rowheight - 36.9)
+            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth, row * rowheight - 36.9)
             my_canvas.drawString(leftmargin + col * colwidth + 3.0, row * rowheight - 33.0, str(raceevent.day))
             if result[:10] == "Practice 3":
                 renderPDF.draw(scaleSVG("SVG/stopwatchom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 36.9)
