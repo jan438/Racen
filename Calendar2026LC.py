@@ -29,6 +29,7 @@ raceevents = []
 circuitsdata = []
 weekdaycairo = [6, 0, 1, 2, 3, 4, 5]
 openmojiscaling = 0.21
+linescaling = 0.03
 outsidearea = "#9e9e9e"
 circuitarea = "#ffa981"
 text1 = "#696969"
@@ -480,7 +481,7 @@ for i in range(len(raceevents)):
                 startevent = strhour + strminute
                 renderPDF.draw(scaleSVG("Clocks/" + startevent + "om.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 17.1)
             elif result[:17] == "Sprint Qualifying":
-                renderPDF.draw(scaleSVG("SVG/flagom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 17.9)
+                renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 17.9)
                 my_canvas.drawString(leftmargin + col * colwidth + 11.0, row * rowheight - 14.5, "S")
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
                 strhour = "{:02d}".format(hour)
@@ -527,7 +528,7 @@ for i in range(len(raceevents)):
             result = raceevent.summary.split("(")
             result = result[0][:-1]
             if result[:10] == "Qualifying":
-                renderPDF.draw(scaleSVG("SVG/flagom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 47.9)
+                renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 47.9)
                 my_canvas.drawString(leftmargin + col * colwidth + 11.0, row * rowheight - 45.0, "R")
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
                 strhour = "{:02d}".format(hour)
