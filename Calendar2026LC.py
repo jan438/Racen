@@ -509,7 +509,7 @@ for i in range(len(raceevents)):
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
-                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 36.1)
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 36.1)
             elif result[:10] == "Sprint":
                 renderPDF.draw(scaleSVG("SVG/racecarom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 36.9)
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
