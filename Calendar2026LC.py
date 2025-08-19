@@ -29,6 +29,7 @@ raceevents = []
 circuitsdata = []
 weekdaycairo = [6, 0, 1, 2, 3, 4, 5]
 openmojiscaling = 0.21
+twitterscaling = 0.4
 linescaling = 0.03
 outsidearea = "#9e9e9e"
 circuitarea = "#ffa981"
@@ -460,7 +461,7 @@ for i in range(len(raceevents)):
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
-                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 6.1)
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 6.1)
             else:
                 my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 4, result)
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
@@ -479,7 +480,7 @@ for i in range(len(raceevents)):
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
-                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 17.1)
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 17.1)
             elif result[:17] == "Sprint Qualifying":
                 renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + col * colwidth + 5.9, row * rowheight - 17.9)
                 my_canvas.drawString(leftmargin + col * colwidth + 11.0, row * rowheight - 14.5, "S")
@@ -487,7 +488,7 @@ for i in range(len(raceevents)):
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
-                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 17.1) 
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 17.1) 
             else:
                 my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 15, result)
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
@@ -515,7 +516,7 @@ for i in range(len(raceevents)):
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
-                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 36.1)
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 36.1)
             else:
                 my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 34, result)
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
@@ -534,7 +535,7 @@ for i in range(len(raceevents)):
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
-                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 47.1) 
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + 18.0, row * rowheight - 47.1) 
             else:
                 my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 45, result)
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
