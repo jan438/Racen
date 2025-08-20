@@ -438,6 +438,8 @@ for i in range(len(raceevents)):
     if raceevent is not None:
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
+            eventday_x = 10
+            eventday_y = 0
             my_canvas.line(leftmargin + col * colwidth + 9.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 10.1, row * rowheight + 32.0)
             p = my_canvas.beginPath()
             p.arc(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0, leftmargin + col * colwidth - 0.1 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
@@ -498,6 +500,8 @@ for i in range(len(raceevents)):
                 startevent = strhour + ":" + strminute
                 my_canvas.drawString(leftmargin + col * colwidth + eventday_x + 105.9, row * rowheight + eventday_y - 15, startevent)
             i = i + 1
+            eventday_x = 10
+            eventday_y = 0
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][:-1]
