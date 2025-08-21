@@ -30,6 +30,7 @@ circuitsdata = []
 weekdaycairo = [6, 0, 1, 2, 3, 4, 5]
 openmojiscaling = 0.21
 stopwatchscaling = 0.023
+daycalscaling = 0.4
 twitterscaling = 0.45
 linescaling = 0.03
 outsidearea = "#9e9e9e"
@@ -437,7 +438,7 @@ for i in range(len(raceevents)):
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
             cx = lookupcircuit(raceevent.description)
-            print(cx, circuitsdata[cx][0], circuitsdata[cx][33])
+            print(cx, circuitsdata[cx][0], circuitsdata[cx][30], circuitsdata[cx][31], circuitsdata[cx][32], circuitsdata[cx][33])
             eventday_x = 10
             eventday_y = 0
             my_canvas.line(leftmargin + col * colwidth + 9.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 10.1, row * rowheight + 32.0)
@@ -455,7 +456,7 @@ for i in range(len(raceevents)):
             my_canvas.setFont(calfont, 11)
             result = raceevent.summary.split("(")
             result = result[0][:-1]
-            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + eventday_x, row * rowheight + eventday_y - 6.9)
+            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", daycalscaling), my_canvas, leftmargin + col * colwidth + eventday_x, row * rowheight + eventday_y - 6.9)
             my_canvas.drawString(leftmargin + col * colwidth + eventday_x + 3.0, row * rowheight + eventday_y - 3.0, str(raceevent.day))
             if result[:10] == "Practice 1":
                 renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + col * colwidth + eventday_x + event_dx, row * rowheight + eventday_y - 6.9)
@@ -505,7 +506,7 @@ for i in range(len(raceevents)):
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][:-1]
-            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + eventday_x, row * rowheight + eventday_y - 36.9)
+            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", daycalscaling), my_canvas, leftmargin + col * colwidth + eventday_x, row * rowheight + eventday_y - 36.9)
             my_canvas.drawString(leftmargin + col * colwidth + eventday_x + 3.0, row * rowheight + eventday_y - 33.0, str(raceevent.day))
             if result[:10] == "Practice 3":
                 renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + col * colwidth + eventday_x + event_dx, row * rowheight + eventday_y - 36.9)
