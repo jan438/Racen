@@ -437,6 +437,7 @@ for i in range(len(raceevents)):
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
             cx = lookupcircuit(raceevent.description)
+            print(cx, circuitsdata[cx][0], circuitsdata[cx][33])
             eventday_x = 10
             eventday_y = 0
             my_canvas.line(leftmargin + col * colwidth + 9.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 10.1, row * rowheight + 32.0)
