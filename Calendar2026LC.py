@@ -46,7 +46,7 @@ arcdim = 20.0
 calfont = "LiberationSerif"
 
 class RaceEvent:
-    def __init__(self, categories, summary, day, location, starttime, endtime, month, geo):
+    def __init__(self, categories, summary, day, location, starttime, endtime, month):
         self.categories = categories
         self.summary = summary
         self.day = day
@@ -54,7 +54,6 @@ class RaceEvent:
         self.starttime = starttime
         self.endtime = endtime
         self.month = month
-        self.geo = geo
 def weekDay(year, month, day):
     offset = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
     afterFeb = 1
@@ -81,11 +80,6 @@ def sortondate():
                 swapped = True
         if not swapped:
             break
-def lookuplocation(lat, lon):
-    location = geolocator.reverse(lat+","+lon)
-    address = location.raw['address']
-    code = address.get('country_code')
-    return code
 def converttimetztolocal(timetz):
     utc_string = timetz
     utc_format = "%Y%m%dT%H%M%S"
@@ -149,7 +143,6 @@ for i in range(len(alleventslines)):
     summaryeventpos = alleventslines[i].find("SUMMARY")
     locationeventpos = alleventslines[i].find("LOCATION")
     categorieseventpos = alleventslines[i].find("CATEGORIES")
-    geoeventpos = alleventslines[i].find("GEO")
     dtstarteventpos = alleventslines[i].find("DTSTART")
     dtendeventpos = alleventslines[i].find("DTEND")
     endeventpos = alleventslines[i].find("END:VEVENT")
@@ -160,7 +153,6 @@ for i in range(len(alleventslines)):
         endtime = 0
         month = 0
         categories = ""
-        geo = ""
     if dtstarteventpos == 0:
         eventdtstartstr = alleventslines[i][8:]
         datevaluepos = alleventslines[i].find("VALUE=DATE:")
@@ -180,16 +172,14 @@ for i in range(len(alleventslines)):
         categories = alleventslines[i][11:]
     if locationeventpos == 0:
         location = alleventslines[i][9:]
-    if geoeventpos == 0:
-        geo = alleventslines[i][4:]
     if endeventpos == 0:
-        raceevents.append(RaceEvent(categories, summary, day, location, starttime, endtime, month, geo))
+        raceevents.append(RaceEvent(categories, summary, day, location, starttime, endtime, month))
 print("Count race events", len(raceevents))
 raceevent = lookupraceevent(3, 8)
 if raceevent is not None:
     starttime = raceevent.starttime
     localtime = converttimetztolocal(starttime)
-    print(raceevent.summary, raceevent.location, starttime, raceevent.categories, raceevent.geo, starttime, localtime)
+    print(raceevent.summary, raceevent.location, starttime, raceevent.categories, starttime, localtime)
 else:
     print("Not found")
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
@@ -215,7 +205,6 @@ linky1 = 0
 linkx2 = 10
 linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
-geolocator = Nominatim(user_agent="my_geopy_app")
 colwidth = 147
 rowheight = 120
 my_canvas.setFont(calfont, 12)
