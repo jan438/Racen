@@ -117,7 +117,7 @@ def lookupcircuit(description):
     for j in range(len(circuitsdata)):
         if circuitsdata[j][0] == description:
             cx = j
-            print(j, circuitsdata[j][0], description)
+            print(j, cx, circuitsdata[j][0], description)
     return cx
 
 if sys.platform[0] == 'l':
