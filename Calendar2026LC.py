@@ -493,7 +493,7 @@ for i in range(len(raceevents)):
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
-                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + eventday_x + clock_dx, row * rowheight + eventday_y - 17.1) 
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + eventday_x + clock_dx, row * rowheight + eventday_y + event_dy - 17.1) 
             else:
                 my_canvas.drawString(leftmargin + col * colwidth + eventday_x + event_dx, row * rowheight + eventday_y - 15, result)
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
