@@ -113,8 +113,10 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
 def lookupcircuit(description):
-    print(len(circuitsdata))
-    cx = 0
+    cx = -1
+    for j in range(len(circuitsdata)):
+        if circuitsdata[j][0] == description:
+            cx = j
     return cx
 
 if sys.platform[0] == 'l':
