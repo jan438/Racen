@@ -480,15 +480,15 @@ for i in range(len(raceevents)):
             result = result[0][:-1]
             if result[:10] == "Practice 2":
                 renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + col * colwidth + eventday_x + event_dx, row * rowheight + eventday_y - 17.9)
-                my_canvas.drawString(leftmargin + col * colwidth + eventday_x + event_dx + 6.0, row * rowheight + eventday_y - 14.5, "2")
+                my_canvas.drawString(leftmargin + col * colwidth + eventday_x + event_dx + 6.0, row * rowheight + eventday_y + event_dy - 14.5, "2")
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
-                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + eventday_x + clock_dx, row * rowheight + eventday_y - 17.1)
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + eventday_x + clock_dx, row * rowheight + eventday_y + event_dy - 17.1)
             elif result[:17] == "Sprint Qualifying":
-                renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + col * colwidth + eventday_x + event_dx, row * rowheight + eventday_y - 17.9)
-                my_canvas.drawString(leftmargin + col * colwidth + eventday_x + event_dx + 5.0, row * rowheight + eventday_y - 14.5, "S")
+                renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + col * colwidth + eventday_x + event_dx, row * rowheight + eventday_y + event_dy - 17.9)
+                my_canvas.drawString(leftmargin + col * colwidth + eventday_x + event_dx + 5.0, row * rowheight + eventday_y + event_dy - 14.5, "S")
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
