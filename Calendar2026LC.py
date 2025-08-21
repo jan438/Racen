@@ -46,10 +46,11 @@ arcdim = 20.0
 calfont = "LiberationSerif"
 
 class RaceEvent:
-    def __init__(self, summary, day, location, starttime, endtime, month):
+    def __init__(self, summary, day, location, description, starttime, endtime, month):
         self.summary = summary
         self.day = day
         self.location = location
+        self.description = description
         self.starttime = starttime
         self.endtime = endtime
         self.month = month
@@ -171,15 +172,14 @@ for i in range(len(alleventslines)):
         location = alleventslines[i][9:]
     if descriptioneventpos == 0:
         description = alleventslines[i][12:]
-        print(description, len(description))
     if endeventpos == 0:
-        raceevents.append(RaceEvent(summary, day, location, starttime, endtime, month))
+        raceevents.append(RaceEvent(summary, day, location, description, starttime, endtime, month))
 print("Count race events", len(raceevents))
 raceevent = lookupraceevent(3, 8)
 if raceevent is not None:
     starttime = raceevent.starttime
     localtime = converttimetztolocal(starttime)
-    print(raceevent.summary, raceevent.location, starttime, starttime, localtime)
+    print(raceevent.summary, raceevent.location, description, starttime, starttime, localtime)
 else:
     print("Not found")
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
@@ -429,6 +429,7 @@ for i in range(len(raceevents)):
     if raceevent is not None:
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
+            print(raceevent.description)
             eventday_x = 10
             eventday_y = 0
             my_canvas.line(leftmargin + col * colwidth + 9.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 10.1, row * rowheight + 32.0)
