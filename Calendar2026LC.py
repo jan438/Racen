@@ -112,6 +112,10 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.height = drawing.height * scaling_y
     drawing.scale(scaling_x, scaling_y)
     return drawing
+def lookupcircuit(description):
+    print(len(circuitsdata))
+    cx = 0
+    return cx
 
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
@@ -429,7 +433,8 @@ for i in range(len(raceevents)):
     if raceevent is not None:
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
-            print(raceevent.description)
+            cx = lookupcircuit(raceevent.description)
+            print(raceevent.description, cx)
             eventday_x = 10
             eventday_y = 0
             my_canvas.line(leftmargin + col * colwidth + 9.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 10.1, row * rowheight + 32.0)
