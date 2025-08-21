@@ -118,7 +118,6 @@ def lookupcircuit(description):
     for j in range(len(circuitsdata)):
         if circuitsdata[j][0] == description:
             cx = j
-            print(j, cx, circuitsdata[j][0],  circuitsdata[j][33], description)
     return cx
 
 if sys.platform[0] == 'l':
@@ -439,7 +438,6 @@ for i in range(len(raceevents)):
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
             cx = lookupcircuit(raceevent.description)
-            print(cx, circuitsdata[cx][0], circuitsdata[cx][30], circuitsdata[cx][31], circuitsdata[cx][32], circuitsdata[cx][33])
             eventday_x = 10
             eventday_y = 0
             my_canvas.line(leftmargin + col * colwidth + 9.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 10.1, row * rowheight + 32.0)
