@@ -71,6 +71,11 @@ calendar-blank.svg  eventday1_y - 6.9
 stopwatchtw.svg     eventday1_y - 6.9
         drawString  eventday1_y - 3.5
 Clocks              eventday1_y - 6.1
+stopwatchtw.svg     eventday1_y + event_dy - 17.9
+Clocks              eventday1_y + event_dy - 17.1
+poleline.svg        eventday1_y + event_dy - 17.9
+         drawString eventday1_y + event_dy - 14.5
+Clocks              eventday1_y + event_dy - 17.1
 
 Coords startindex startsector2 startsector3 OpenStreetMap
 00 AlbertPark          len 148  two points added
