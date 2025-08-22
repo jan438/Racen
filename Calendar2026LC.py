@@ -472,13 +472,6 @@ for i in range(len(raceevents)):
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
                 renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + eventday1_x + clock_dx, row * rowheight + eventday1_y - 6.1)
-            else:
-                my_canvas.drawString(leftmargin + col * colwidth + eventday1_x + event_dx, row * rowheight + eventday1_y - 4, result)
-                [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-                strhour = "{:02d}".format(hour)
-                strminute = "{:02d}".format(minute)
-                startevent = strhour + ":" + strminute
-                my_canvas.drawString(leftmargin + col * colwidth + eventday1_x + 105.9, row * rowheight + eventday1_y - 4, startevent)
             i = i + 1
             raceevent = raceevents[i] 
             result = raceevent.summary.split("(")
@@ -499,13 +492,6 @@ for i in range(len(raceevents)):
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
                 renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + eventday1_x + clock_dx, row * rowheight + eventday1_y + event_dy - 17.1) 
-            else:
-                my_canvas.drawString(leftmargin + col * colwidth + eventday1_x + event_dx, row * rowheight + eventday1_y - 15, result)
-                [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-                strhour = "{:02d}".format(hour)
-                strminute = "{:02d}".format(minute)
-                startevent = strhour + ":" + strminute
-                my_canvas.drawString(leftmargin + col * colwidth + eventday1_x + 105.9, row * rowheight + eventday1_y - 15, startevent)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
