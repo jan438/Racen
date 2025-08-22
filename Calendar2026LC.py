@@ -443,6 +443,7 @@ for i in range(len(raceevents)):
             eventday2_x = 10
             eventday2_y = 0
             if raceevent.description == "Monza":
+                eventday1_x = float(circuitsdata[cx][30])
                 print(cx, raceevent.description, circuitsdata[cx][0], circuitsdata[cx][30])
             my_canvas.line(leftmargin + col * colwidth + 9.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 10.1, row * rowheight + 32.0)
             p = my_canvas.beginPath()
