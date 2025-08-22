@@ -72,6 +72,7 @@ stopwatchtw.svg     eventday1_y - 6.9
         drawString  eventday1_y - 3.5
 Clocks              eventday1_y - 6.1
 stopwatchtw.svg     eventday1_y + event_dy - 17.9
+        drawString  eventday1_x + event_dx + 6.0
 Clocks              eventday1_y + event_dy - 17.1
 poleline.svg        eventday1_y + event_dy - 17.9
          drawString eventday1_y + event_dy - 14.5
