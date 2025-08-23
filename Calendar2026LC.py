@@ -496,23 +496,23 @@ for i in range(len(raceevents)):
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
             result = result[0][:-1]
-            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", daycalscaling), my_canvas, leftmargin + col * colwidth + eventday2_x, row * rowheight + eventday2_y - 36.9)
-            my_canvas.drawString(leftmargin + col * colwidth + eventday2_x + 3.0, row * rowheight + eventday2_y - 33.0, str(raceevent.day))
+            renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", daycalscaling), my_canvas, leftmargin + col * colwidth + eventday2_x, row * rowheight + eventday2_y - 6.9)
+            my_canvas.drawString(leftmargin + col * colwidth + eventday2_x + 3.0, row * rowheight + eventday2_y - 3.0, str(raceevent.day))
             if result[:10] == "Practice 3":
-                renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + col * colwidth + eventday2_x + event_dx, row * rowheight + eventday2_y - 36.9)
-                my_canvas.drawString(leftmargin + col * colwidth + eventday2_x + event_dx + 6.0, row * rowheight + eventday2_y - 33.5, "3")
+                renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + col * colwidth + eventday2_x + event_dx, row * rowheight + eventday2_y - 6.9)
+                my_canvas.drawString(leftmargin + col * colwidth + eventday2_x + event_dx + 6.0, row * rowheight + eventday2_y - 3.5, "3")
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
-                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + eventday2_x + clock_dx, row * rowheight + eventday2_y - 36.1)
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + eventday2_x + clock_dx, row * rowheight + eventday2_y - 6.1)
             elif result[:10] == "Sprint":
-                renderPDF.draw(scaleSVG("SVG/racecarom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + eventday2_x + event_dx, row * rowheight + eventday2_y - 36.9)
+                renderPDF.draw(scaleSVG("SVG/racecarom.svg", openmojiscaling), my_canvas, leftmargin + col * colwidth + eventday2_x + event_dx, row * rowheight + eventday2_y - 6.9)
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
                 startevent = strhour + strminute
-                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + eventday2_x + clock_dx, row * rowheight + eventday2_y - 36.1)
+                renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + eventday2_x + clock_dx, row * rowheight + eventday2_y - 6.1)
             i = i + 1
             raceevent = raceevents[i]
             result = raceevent.summary.split("(")
