@@ -66,18 +66,6 @@ Table length linestrings
 22 YasMarina                             #9A6324  Brown
 23 Zandvoort                             #80FF80
 
-calendar-blank.svg  eventday1_y - 6.9
-        drawString  eventday1_y - 3.0
-stopwatchtw.svg     eventday1_y - 6.9
-        drawString  eventday1_y - 3.5
-Clocks              eventday1_y - 6.1
-stopwatchtw.svg     eventday1_y + event_dy - 17.9
-        drawString  eventday1_x + event_dx + 6.0
-Clocks              eventday1_y + event_dy - 17.1
-poleline.svg        eventday1_y + event_dy - 17.9
-         drawString eventday1_y + event_dy - 14.5
-Clocks              eventday1_y + event_dy - 17.1
-
 Coords startindex startsector2 startsector3 OpenStreetMap
 00 AlbertPark          len 148  two points added
 01 Bahrain             len 96   two points added
