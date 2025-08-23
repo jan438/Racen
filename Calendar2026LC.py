@@ -427,7 +427,7 @@ caloffsetx = 54.3
 caloffsety = 10
 clockoffsetx = 102.9
 clockoffsety = 88
-clock_dx = 25.0
+clock_dx = 26.5
 event_dx = 12.5
 event_dy = -5
 my_canvas.setStrokeColor(black)
