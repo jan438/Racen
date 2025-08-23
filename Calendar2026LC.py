@@ -519,7 +519,7 @@ for i in range(len(raceevents)):
             result = result[0][:-1]
             if result[:10] == "Qualifying":
                 renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + col * colwidth + eventday2_x + event_dx, row * rowheight + eventday2_y + event_dy - 17.9)
-                my_canvas.drawString(leftmargin + col * colwidth + eventday2_x + event_dx + 5.0, row * rowheight + eventday2_y + event_dy - 45.0, "R")
+                my_canvas.drawString(leftmargin + col * colwidth + eventday2_x + event_dx + 5.0, row * rowheight + eventday2_y + event_dy - 15.0, "R")
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
