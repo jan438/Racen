@@ -442,7 +442,8 @@ for i in range(len(raceevents)):
             eventday1_y = 0
             eventday2_x = 10
             eventday2_y = 0
-            if raceevent.description == "Monza":
+            if raceevent.description == "Monza" or raceevent.description == "Shanghai":
+                print(cx, raceevent.description)
                 eventday1_x = float(circuitsdata[cx][30])
                 eventday1_y = float(circuitsdata[cx][31])
                 eventday2_x = float(circuitsdata[cx][32])
