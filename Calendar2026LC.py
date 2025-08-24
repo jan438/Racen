@@ -440,16 +440,11 @@ for i in range(len(raceevents)):
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
             cx = lookupcircuit(raceevent.description)
-            eventday1_x = 10
-            eventday1_y = 0
-            eventday2_x = 10
-            eventday2_y = 0
-            if raceevent.description == "Monza" or raceevent.description == "Shanghai":
-                print(cx, raceevent.description)
-                eventday1_x = float(circuitsdata[cx][30])
-                eventday1_y = float(circuitsdata[cx][31])
-                eventday2_x = float(circuitsdata[cx][32])
-                eventday2_y = float(circuitsdata[cx][33])
+            print(cx, raceevent.description)
+            eventday1_x = float(circuitsdata[cx][30])
+            eventday1_y = float(circuitsdata[cx][31])
+            eventday2_x = float(circuitsdata[cx][32])
+            eventday2_y = float(circuitsdata[cx][33])
             my_canvas.line(leftmargin + col * colwidth + 9.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 10.1, row * rowheight + 32.0)
             p = my_canvas.beginPath()
             p.arc(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0, leftmargin + col * colwidth - 0.1 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
