@@ -393,9 +393,9 @@ image = "Circuits/Location/United_Arab_Emirates_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + leftmargin, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/AEtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 0 * rowheight + bottommargin + 10)
 my_canvas.circle(3 * colwidth + leftmargin + 85, 0 * rowheight + bottommargin + 10 + 65, 4.0, stroke = 0, fill = 1)
-circuit_x = 55
-circuit_y = 15
-renderPDF.draw(scaleSVG("SVG/YasMarinaLC.svg", circuitscale), my_canvas, circuit_x + 3 * colwidth + leftmargin, circuit_y + 0 * rowheight + bottommargin + 10)
+#circuit_x = 55
+#circuit_y = 15
+#renderPDF.draw(scaleSVG("SVG/YasMarinaLC.svg", circuitscale), my_canvas, circuit_x + 3 * colwidth + leftmargin, circuit_y + 0 * rowheight + bottommargin + 10)
 
 row = 6
 col = 0
@@ -441,6 +441,9 @@ for i in range(len(raceevents)):
         if subsummary == "Practice 1":
             cx = lookupcircuit(raceevent.description)
             print(cx, raceevent.description)
+            circuit_x = float(circuitsdata[cx][28])
+            circuit_y = float(circuitsdata[cx][29])
+            renderPDF.draw(scaleSVG("SVG/" + raceevent.description + "LC.svg", circuitscale), my_canvas, circuit_x + col * colwidth + leftmargin, circuit_y + (row - 1) * rowheight + bottommargin + 10)
             eventday1_x = float(circuitsdata[cx][30])
             eventday1_y = float(circuitsdata[cx][31])
             eventday2_x = float(circuitsdata[cx][32])
