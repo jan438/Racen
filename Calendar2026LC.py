@@ -278,30 +278,18 @@ image = "Circuits/Location/Hungary_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/HUtw.svg", 0.5), my_canvas, flagoffset_x + 0 * colwidth + leftmargin, flagoffset_y + 2 * rowheight + bottommargin + 10)
 my_canvas.circle(0 * colwidth + leftmargin + 58, 2 * rowheight + bottommargin + 10 + 60, 4.0, stroke = 0, fill = 1)
-circuit_x = 60
-circuit_y = 30
-renderPDF.draw(scaleSVG("SVG/HungaroringLC.svg", circuitscale), my_canvas, circuit_x + 0 * colwidth + leftmargin, circuit_y + 2 * rowheight + bottommargin + 10)
 image = "Circuits/Location/Netherlands_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/NLtw.svg", 0.5), my_canvas, flagoffset_x + 1 * colwidth + leftmargin, flagoffset_y + 2 * rowheight + bottommargin + 10)
 my_canvas.circle(1 * colwidth + leftmargin + 48, 2 * rowheight + bottommargin + 10 + 65, 4.0, stroke = 0, fill = 1)
-circuit_x = 60
-circuit_y = 30
-renderPDF.draw(scaleSVG("SVG/ZandvoortLC.svg", circuitscale), my_canvas, circuit_x + 1 * colwidth + leftmargin, circuit_y + 2 * rowheight + bottommargin + 10)
 image = "Circuits/Location/Italy_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/ITtw.svg", 0.5), my_canvas, flagoffset_x + 2 * colwidth + leftmargin, flagoffset_y + 2 * rowheight + bottommargin + 10)
 my_canvas.circle(2 * colwidth + leftmargin + 35, 2 * rowheight + bottommargin + 10 + 88, 4.0, stroke = 0, fill = 1)
-circuit_x = 25
-circuit_y = 50
-renderPDF.draw(scaleSVG("SVG/MonzaLC.svg", circuitscale), my_canvas, circuit_x + 2 * colwidth + leftmargin, circuit_y + 2 * rowheight + bottommargin + 10)
 image = "Circuits/Location/Spain_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 renderPDF.draw(scaleSVG("Flags/EStw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 2 * rowheight + bottommargin + 10)
 my_canvas.circle(3 * colwidth + leftmargin + 55, 2 * rowheight + bottommargin + 10 + 55, 4.0, stroke = 0, fill = 1)
-circuit_x = 60
-circuit_y = 30
-renderPDF.draw(scaleSVG("SVG/MadringLC.svg", circuitscale), my_canvas, circuit_x + 3 * colwidth + leftmargin, circuit_y + 2 * rowheight + bottommargin + 10)
 
 image = "Circuits/Location/Azerbaijan_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + leftmargin, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
