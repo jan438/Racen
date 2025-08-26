@@ -114,14 +114,13 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
         return
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
-    print("Startindexes", startindices[0], startindices[1], startindices[2])
+    print("Startfinish", round(offset_x), round(offset_y), "Scale", round(scale_x), round(scale_y))
     with open("SVG/" + svgfile + "LCC.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
         for feature in geojson_data['features']:
             geometry = feature['geometry']
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
-                print("Circuitsdata", circuitsdata[cx][0], circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
                 idx1 = int(circuitsdata[cx][12])
                 idx2 = int(circuitsdata[cx][13])
                 idx3 = int(circuitsdata[cx][14])  
