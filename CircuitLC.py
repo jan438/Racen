@@ -11,7 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 1.0
 flagcorrection = -5.0
-cx = 23
+cx = 0
 sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
@@ -124,103 +124,10 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                 print("Circuitsdata", circuitsdata[cx][0], circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
                 idx1 = int(circuitsdata[cx][12])
                 idx2 = int(circuitsdata[cx][13])
-                idx3 = int(circuitsdata[cx][14])
-                if cx == 0:
-                    cc = circuitcolors[0]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 1:
-                    cc = circuitcolors[1]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 2:
-                    cc = circuitcolors[2]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 3:
-                    cc = circuitcolors[3]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 4:
-                    cc = circuitcolors[4]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 14:
-                    cc = circuitcolors[14]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 5:
-                    cc = circuitcolors[5]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 6:
-                    cc = circuitcolors[6]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 7:
-                    cc = circuitcolors[7]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 8:
-                    cc = circuitcolors[8]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 9:
-                    cc = circuitcolors[9]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 10:
-                    cc = circuitcolors[10]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 11:
-                    cc = circuitcolors[11]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 12:
-                    cc = circuitcolors[12]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 13:
-                    cc = circuitcolors[13]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 15:
-                    cc = circuitcolors[15]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 16:
-                    cc = circuitcolors[16]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 17:
-                    cc = circuitcolors[17]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 18:
-                    cc = circuitcolors[18]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 19:
-                    cc = circuitcolors[19]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 20:
-                    cc = circuitcolors[20]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 21:
-                    cc = circuitcolors[21]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 22:
-                    cc = circuitcolors[22]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                elif cx == 23:
-                    cc = circuitcolors[23]
-                    path = coordinates_to_path([coords], scale, translate)
-                    f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
+                idx3 = int(circuitsdata[cx][14])  
+                cc = circuitcolors[cx]
+                path = coordinates_to_path([coords], scale, translate)
+                f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
         f.write('</svg>')    
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
