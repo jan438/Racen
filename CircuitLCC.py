@@ -127,7 +127,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                 cc = circuitcolors[cx]
                 path = coordinates_to_path([coords], scale, translate)
                 f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
-                f.write(f'<circle r="45" cx="50" cy="50" fill="red"/> \n')
+                f.write(f'<circle r="25" cx="{offset_x}" cy="{offset_y}" fill="red"/> \n')
         f.write('</svg>')    
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
