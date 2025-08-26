@@ -151,22 +151,23 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025LCC.pdf")
-my_canvas.setFont("Helvetica", 25)
-my_canvas.setTitle(circuitsdata[cx][0])
-bottom_margin = 5
-left_margin = 5
-drawing = svg2rlg('SVG/F1.svg')
-renderPDF.draw(drawing, my_canvas, 300, 750)
-name_x = 300
-name_y = 25
-[offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[cx][1], circuitsdata[cx][0])
-circuit_x = 0
-circuit_y = 0
-renderPDF.draw(scaleSVG("SVG/" + circuitsdata[cx][0] + "LCC.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
-my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[cx][0])
-flag_x = offset_x * circuitscale
-flag_y = offset_y * circuitscale
-renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
-my_canvas.save()
+for cx in range(len(circuitsdata)):
+    my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025LCC.pdf")
+    my_canvas.setFont("Helvetica", 25)
+    my_canvas.setTitle(circuitsdata[cx][0])
+    bottom_margin = 5
+    left_margin = 5
+    drawing = svg2rlg('SVG/F1.svg')
+    renderPDF.draw(drawing, my_canvas, 300, 750)
+    name_x = 300
+    name_y = 25
+    [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[cx][1], circuitsdata[cx][0])
+    circuit_x = 0
+    circuit_y = 0
+    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[cx][0] + "LCC.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
+    my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[cx][0])
+    flag_x = offset_x * circuitscale
+    flag_y = offset_y * circuitscale
+    renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
+    my_canvas.save()
 key = input("Wait")
