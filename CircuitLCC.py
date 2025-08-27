@@ -153,8 +153,6 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for cx in range(len(circuitsdata)):
-    if cx == 1:
-        break
     my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025LCC.pdf")
     my_canvas.setFont("Helvetica", 25)
     my_canvas.setTitle(circuitsdata[cx][0])
