@@ -235,10 +235,9 @@ my_canvas.drawImage(image, 3 * colwidth + leftmargin, 5 * rowheight + bottommarg
 
 image = "Circuits/Location/Saudi_Arabia_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-#my_canvas.circle(0 * colwidth + leftmargin + 17, 4 * rowheight + bottommargin + 10 + 35, 4.0, stroke = 0, fill = 1)
 image = "Circuits/Location/USA_Florida_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-my_canvas.circle(1 * colwidth + leftmargin + 130, 4 * rowheight + bottommargin + 10 + 25, 4.0, stroke = 0, fill = 1)
+#my_canvas.circle(1 * colwidth + leftmargin + 130, 4 * rowheight + bottommargin + 10 + 25, 4.0, stroke = 0, fill = 1)
 image = "Circuits/Location/Canada_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 my_canvas.circle(2 * colwidth + leftmargin + 99, 4 * rowheight + bottommargin + 10 + 15, 4.0, stroke = 0, fill = 1)
