@@ -217,25 +217,6 @@ circuitscale = 0.06
 eventwidth = 137
 eventheight = 112
 
-row = 6
-col = 0
-my_canvas.setFillColor(HexColor(outsidearea))
-my_canvas.setStrokeColor(HexColor(outsidearea))
-my_canvas.setLineWidth(1)
-for i in range(24):
-    p = my_canvas.beginPath()
-    p.arc(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0, leftmargin + col * colwidth - 0.1 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
-    p.lineTo(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0 + arcdim)
-    my_canvas.drawPath(p, fill=1, stroke=0)
-    p = my_canvas.beginPath()
-    p.arc(leftmargin + col * colwidth + 117.9, row * rowheight - 80.0, leftmargin + col * colwidth + 137.9, row * rowheight - 60.0, startAng = 270, extent = 90)
-    p.lineTo(leftmargin + col * colwidth + 137.9, row * rowheight - 80.0)
-    my_canvas.drawPath(p, fill = 1, stroke = 0)
-    col += 1
-    if col == 4:
-        col = 0
-        row -= 1
-
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.setFont(calfont, 30)
