@@ -387,6 +387,7 @@ for i in range(24):
     p.arc(leftmargin + col * colwidth + 117.9, row * rowheight - 80.0, leftmargin + col * colwidth + 137.9, row * rowheight - 60.0, startAng = 270, extent = 90)
     p.lineTo(leftmargin + col * colwidth + 137.9, row * rowheight - 80.0)
     my_canvas.drawPath(p, fill = 1, stroke = 0)
+    my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight + 32.0, leftmargin + col * colwidth + 8.0, row * rowheight + 32.0)
     col += 1
     if col == 4:
         col = 0
