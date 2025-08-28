@@ -238,10 +238,9 @@ image = "Circuits/Location/USA_Florida_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 image = "Circuits/Location/Canada_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-#my_canvas.circle(2 * colwidth + leftmargin + 99, 4 * rowheight + bottommargin + 10 + 15, 4.0, stroke = 0, fill = 1)
 image = "Circuits/Location/Monaco_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-my_canvas.circle(3 * colwidth + leftmargin + 60, 4 * rowheight + bottommargin + 10 + 55, 4.0, stroke = 0, fill = 1)
+#my_canvas.circle(3 * colwidth + leftmargin + 60, 4 * rowheight + bottommargin + 10 + 55, 4.0, stroke = 0, fill = 1)
 
 image = "Circuits/Location/Spain_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + leftmargin, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
