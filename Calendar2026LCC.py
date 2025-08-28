@@ -256,10 +256,9 @@ image = "Circuits/Location/Netherlands_location_map.png"
 my_canvas.drawImage(image, 1 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 image = "Circuits/Location/Italy_location_map.png"
 my_canvas.drawImage(image, 2 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-#my_canvas.circle(2 * colwidth + leftmargin + 35, 2 * rowheight + bottommargin + 10 + 88, 4.0, stroke = 0, fill = 1)
 image = "Circuits/Location/Spain_location_map.png"
 my_canvas.drawImage(image, 3 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-my_canvas.circle(3 * colwidth + leftmargin + 55, 2 * rowheight + bottommargin + 10 + 55, 4.0, stroke = 0, fill = 1)
+#my_canvas.circle(3 * colwidth + leftmargin + 55, 2 * rowheight + bottommargin + 10 + 55, 4.0, stroke = 0, fill = 1)
 
 image = "Circuits/Location/Azerbaijan_location_map.png"
 my_canvas.drawImage(image, 0 * colwidth + leftmargin, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
