@@ -222,60 +222,6 @@ row = 5
 col = 0
 eventwidth = 137
 eventheight = 112
-my_canvas.setFillColor(HexColor(circuitarea))
-image = "Circuits/Location/Australia_location_map.png"
-my_canvas.drawImage(image, 0 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/China_location_map.png"
-my_canvas.drawImage(image, 1 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Japan_location_map.png"
-my_canvas.drawImage(image, 2 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Bahrain_location_map.png"
-my_canvas.drawImage(image, 3 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-
-image = "Circuits/Location/Saudi_Arabia_location_map.png"
-my_canvas.drawImage(image, 0 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/USA_Florida_location_map.png"
-my_canvas.drawImage(image, 1 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Canada_location_map.png"
-my_canvas.drawImage(image, 2 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Monaco_location_map.png"
-my_canvas.drawImage(image, 3 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-
-image = "Circuits/Location/Spain_location_map.png"
-my_canvas.drawImage(image, 0 * colwidth + leftmargin, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Austria_location_map.png"
-my_canvas.drawImage(image, 1 * colwidth + leftmargin, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/United_Kingdom_location_map.png"
-my_canvas.drawImage(image, 2 * colwidth + leftmargin, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Belgium_location_map.png"
-my_canvas.drawImage(image, 3 * colwidth + leftmargin, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-
-image = "Circuits/Location/Hungary_location_map.png"
-my_canvas.drawImage(image, 0 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Netherlands_location_map.png"
-my_canvas.drawImage(image, 1 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Italy_location_map.png"
-my_canvas.drawImage(image, 2 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Spain_location_map.png"
-my_canvas.drawImage(image, 3 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-
-image = "Circuits/Location/Azerbaijan_location_map.png"
-my_canvas.drawImage(image, 0 * colwidth + leftmargin, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Singapore_location_map.png"
-my_canvas.drawImage(image, 1 * colwidth + leftmargin, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/USA_Texas_location_map.png"
-my_canvas.drawImage(image, 2 * colwidth + leftmargin, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Mexico_location_map.png"
-my_canvas.drawImage(image, 3 * colwidth + leftmargin, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-
-image = "Circuits/Location/Brazil_location_map.png"
-my_canvas.drawImage(image, 0 * colwidth + leftmargin, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/USA_Nevada_location_map.png"
-my_canvas.drawImage(image, 1 * colwidth + leftmargin, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/Qatar_location_map.png"
-my_canvas.drawImage(image, 2 * colwidth + leftmargin, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-image = "Circuits/Location/United_Arab_Emirates_location_map.png"
-my_canvas.drawImage(image, 3 * colwidth + leftmargin, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 
 row = 6
 col = 0
@@ -321,6 +267,9 @@ for i in range(len(raceevents)):
         if subsummary == "Practice 1":
             cx = lookupcircuit(raceevent.description)
             print(cx, raceevent.description)
+            locationmap = circuitsdata[cx][5]
+            image = "Circuits/Location/" + locationmap + "_location_map.png"
+            my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
             countrycode = circuitsdata[cx][1][:2]
             countrycode = countrycode.upper()
             renderPDF.draw(scaleSVG("Flags/" + countrycode + "tw.svg", 0.5), my_canvas, flagoffset_x + col * colwidth + leftmargin, flagoffset_y + (row - 1) * rowheight + bottommargin + 10)
