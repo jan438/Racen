@@ -388,6 +388,7 @@ for i in range(24):
     p.lineTo(leftmargin + col * colwidth + 137.9, row * rowheight - 80.0)
     my_canvas.drawPath(p, fill = 1, stroke = 0)
     my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight + 32.0, leftmargin + col * colwidth + 8.0, row * rowheight + 32.0)
+    my_canvas.line(leftmargin + col * colwidth + 132, row * rowheight - 80, leftmargin + col * colwidth + 140.9, row * rowheight - 80)
     col += 1
     if col == 4:
         col = 0
