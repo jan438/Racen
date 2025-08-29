@@ -390,6 +390,9 @@ for i in range(24):
     my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight + 32.0, leftmargin + col * colwidth + 8.0, row * rowheight + 32.0)
     my_canvas.line(leftmargin + col * colwidth + 132, row * rowheight - 80, leftmargin + col * colwidth + 140.9, row * rowheight - 80)
     my_canvas.setStrokeColor(black)
+    p = my_canvas.beginPath()
+    p.arc(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0, leftmargin + col * colwidth - 0.1 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
+    my_canvas.drawPath(p, fill = 0, stroke = 1)
     col += 1
     if col == 4:
         col = 0
