@@ -376,9 +376,9 @@ for i in range(len(raceevents)):
 row = 6
 col = 0
 my_canvas.setFillColor(HexColor(outsidearea))
-my_canvas.setStrokeColor(HexColor(outsidearea))
 my_canvas.setLineWidth(1)
 for i in range(24):
+    my_canvas.setStrokeColor(HexColor(outsidearea))
     p = my_canvas.beginPath()
     p.arc(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0, leftmargin + col * colwidth - 0.1 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
     p.lineTo(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0 + arcdim)
@@ -389,6 +389,7 @@ for i in range(24):
     my_canvas.drawPath(p, fill = 1, stroke = 0)
     my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight + 32.0, leftmargin + col * colwidth + 8.0, row * rowheight + 32.0)
     my_canvas.line(leftmargin + col * colwidth + 132, row * rowheight - 80, leftmargin + col * colwidth + 140.9, row * rowheight - 80)
+    my_canvas.setStrokeColor(black)
     col += 1
     if col == 4:
         col = 0
