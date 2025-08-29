@@ -393,6 +393,9 @@ for i in range(24):
     p = my_canvas.beginPath()
     p.arc(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0, leftmargin + col * colwidth - 0.1 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
     my_canvas.drawPath(p, fill = 0, stroke = 1)
+    p = my_canvas.beginPath()
+    p.arc(leftmargin + col * colwidth + 117.9, row * rowheight - 80.0, leftmargin + col * colwidth + 137.9, row * rowheight - 60.0, startAng = 270, extent = 90)
+    my_canvas.drawPath(p, fill = 0, stroke = 1)
     col += 1
     if col == 4:
         col = 0
