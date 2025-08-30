@@ -367,6 +367,9 @@ for i in range(len(raceevents)):
                 row = row - 1
                 if row < 0:
                     break
+
+renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + 0.0, 0.0)
+
 row = 6
 col = 0
 my_canvas.setFillColor(HexColor(outsidearea))
