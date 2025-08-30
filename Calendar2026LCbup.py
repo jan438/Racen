@@ -193,12 +193,16 @@ pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf')
 pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-BoldItalic.ttf'))
-my_canvas = canvas.Canvas("PDF/Calendar2026LCC.pdf")
+my_canvas = canvas.Canvas("PDF/Calendar2026LC.pdf")
 my_canvas.setFillColor(HexColor(outsidearea))
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFont(calfont, 25)
 my_canvas.setTitle("Calendar 2026")
 
+row = 0
+col = 2
+flagoffset_x = 81
+flagoffset_y = 90
 circuit_x = 10
 circuit_y = 10
 eventday1_x = 20
@@ -214,8 +218,131 @@ my_canvas.setFont(calfont, 12)
 bottommargin = 30
 leftmargin = 8.0
 circuitscale = 0.06
+row = 5
+col = 0
 eventwidth = 137
 eventheight = 112
+my_canvas.setFillColor(HexColor(circuitarea))
+image = "Circuits/Location/Australia_location_map.png"
+my_canvas.drawImage(image, 0 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/AUtw.svg", 0.5), my_canvas, flagoffset_x + 0 * colwidth + leftmargin, flagoffset_y + 5 * rowheight + bottommargin + 10)
+my_canvas.circle(0 * colwidth + leftmargin + 105, 5 * rowheight + bottommargin + 10 + 20, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/China_location_map.png"
+my_canvas.drawImage(image, 1 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/CNtw.svg", 0.5), my_canvas, flagoffset_x + 1 * colwidth + leftmargin, flagoffset_y + 5 * rowheight + bottommargin + 10)
+my_canvas.circle(1 * colwidth + leftmargin + 90, 5 * rowheight + bottommargin + 20 + 35, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Japan_location_map.png"
+my_canvas.drawImage(image, 2 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/JPtw.svg", 0.5), my_canvas, flagoffset_x + 2 * colwidth + leftmargin, flagoffset_y + 5 * rowheight + bottommargin + 10)
+my_canvas.circle(2 * colwidth + leftmargin + 73, 5 * rowheight + bottommargin + 10 + 45, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Bahrain_location_map.png"
+my_canvas.drawImage(image, 3 * colwidth + leftmargin, 5 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/BHtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 5 * rowheight + bottommargin + 10)
+my_canvas.circle(3 * colwidth + leftmargin + 55, 5 * rowheight + bottommargin + 10 + 56, 4.0, stroke = 0, fill = 1)
+
+image = "Circuits/Location/Saudi_Arabia_location_map.png"
+my_canvas.drawImage(image, 0 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/SAtw.svg", 0.5), my_canvas, flagoffset_x + 0 * colwidth + leftmargin, flagoffset_y + 4 * rowheight + bottommargin + 10)
+my_canvas.circle(0 * colwidth + leftmargin + 17, 4 * rowheight + bottommargin + 10 + 35, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/USA_Florida_location_map.png"
+my_canvas.drawImage(image, 1 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/UStw.svg", 0.5), my_canvas, flagoffset_x + 1 * colwidth + leftmargin, flagoffset_y + 4 * rowheight + bottommargin + 10)
+my_canvas.circle(1 * colwidth + leftmargin + 130, 4 * rowheight + bottommargin + 10 + 25, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Canada_location_map.png"
+my_canvas.drawImage(image, 2 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/CAtw.svg", 0.5), my_canvas, flagoffset_x + 2 * colwidth + leftmargin, flagoffset_y + 4 * rowheight + bottommargin + 10)
+my_canvas.circle(2 * colwidth + leftmargin + 99, 4 * rowheight + bottommargin + 10 + 15, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Monaco_location_map.png"
+my_canvas.drawImage(image, 3 * colwidth + leftmargin, 4 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/MCtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 4 * rowheight + bottommargin + 10)
+my_canvas.circle(3 * colwidth + leftmargin + 60, 4 * rowheight + bottommargin + 10 + 55, 4.0, stroke = 0, fill = 1)
+
+image = "Circuits/Location/Spain_location_map.png"
+my_canvas.drawImage(image, 0 * colwidth + leftmargin, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/EStw.svg", 0.5), my_canvas, flagoffset_x + 0 * colwidth + leftmargin, flagoffset_y + 3 * rowheight + bottommargin + 10)
+my_canvas.circle(0 * colwidth + leftmargin + 115, 3 * rowheight + bottommargin + 10 + 75, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Austria_location_map.png"
+my_canvas.drawImage(image, 1 * colwidth + leftmargin, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/ATtw.svg", 0.5), my_canvas, flagoffset_x + 1 * colwidth + leftmargin, flagoffset_y + 3 * rowheight + bottommargin + 10)
+my_canvas.circle(1 * colwidth + leftmargin + 85, 3 * rowheight + bottommargin + 10 + 40, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/United_Kingdom_location_map.png"
+my_canvas.drawImage(image, 2 * colwidth + leftmargin, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/GBtw.svg", 0.5), my_canvas, flagoffset_x + 2 * colwidth + leftmargin, flagoffset_y + 3 * rowheight + bottommargin + 10)
+my_canvas.circle(2 * colwidth + leftmargin + 105, 3 * rowheight + bottommargin + 40 + 5, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Belgium_location_map.png"
+my_canvas.drawImage(image, 3 * colwidth + leftmargin, 3 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/BEtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 3 * rowheight + bottommargin + 10)
+my_canvas.circle(3 * colwidth + leftmargin + 105, 3 * rowheight + bottommargin + 10 + 59, 4.0, stroke = 0, fill = 1)
+
+image = "Circuits/Location/Hungary_location_map.png"
+my_canvas.drawImage(image, 0 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/HUtw.svg", 0.5), my_canvas, flagoffset_x + 0 * colwidth + leftmargin, flagoffset_y + 2 * rowheight + bottommargin + 10)
+my_canvas.circle(0 * colwidth + leftmargin + 58, 2 * rowheight + bottommargin + 10 + 60, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Netherlands_location_map.png"
+my_canvas.drawImage(image, 1 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/NLtw.svg", 0.5), my_canvas, flagoffset_x + 1 * colwidth + leftmargin, flagoffset_y + 2 * rowheight + bottommargin + 10)
+my_canvas.circle(1 * colwidth + leftmargin + 48, 2 * rowheight + bottommargin + 10 + 65, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Italy_location_map.png"
+my_canvas.drawImage(image, 2 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/ITtw.svg", 0.5), my_canvas, flagoffset_x + 2 * colwidth + leftmargin, flagoffset_y + 2 * rowheight + bottommargin + 10)
+my_canvas.circle(2 * colwidth + leftmargin + 35, 2 * rowheight + bottommargin + 10 + 88, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Spain_location_map.png"
+my_canvas.drawImage(image, 3 * colwidth + leftmargin, 2 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/EStw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 2 * rowheight + bottommargin + 10)
+my_canvas.circle(3 * colwidth + leftmargin + 55, 2 * rowheight + bottommargin + 10 + 55, 4.0, stroke = 0, fill = 1)
+
+image = "Circuits/Location/Azerbaijan_location_map.png"
+my_canvas.drawImage(image, 0 * colwidth + leftmargin, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/AZtw.svg", 0.5), my_canvas, flagoffset_x + 0 * colwidth + leftmargin, flagoffset_y + 1 * rowheight + bottommargin + 10)
+my_canvas.circle(0 * colwidth + leftmargin + 100, 1 * rowheight + bottommargin + 10 + 55, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Singapore_location_map.png"
+my_canvas.drawImage(image, 1 * colwidth + leftmargin, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/SGtw.svg", 0.5), my_canvas, flagoffset_x + 1 * colwidth + leftmargin, flagoffset_y + 1 * rowheight + bottommargin + 10)
+my_canvas.circle(1 * colwidth + leftmargin + 75, 1 * rowheight + bottommargin + 10 + 45, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/USA_Texas_location_map.png"
+my_canvas.drawImage(image, 2 * colwidth + leftmargin, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/UStw.svg", 0.5), my_canvas, flagoffset_x + 2 * colwidth + leftmargin, flagoffset_y + 1 * rowheight + bottommargin + 10)
+my_canvas.circle(2 * colwidth + leftmargin + 85, 1 * rowheight + bottommargin + 10 + 42, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Mexico_location_map.png"
+my_canvas.drawImage(image, 3 * colwidth + leftmargin, 1 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/MXtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 1 * rowheight + bottommargin + 10)
+my_canvas.circle(3 * colwidth + leftmargin + 75, 1 * rowheight + bottommargin + 10 + 55, 4.0, stroke = 0, fill = 1)
+
+image = "Circuits/Location/Brazil_location_map.png"
+my_canvas.drawImage(image, 0 * colwidth + leftmargin, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/BRtw.svg", 0.5), my_canvas, flagoffset_x + 0 * colwidth + leftmargin, flagoffset_y + 0 * rowheight + bottommargin + 10)
+my_canvas.circle(0 * colwidth + leftmargin + 92, 0 * rowheight + bottommargin + 10 + 33, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/USA_Nevada_location_map.png"
+my_canvas.drawImage(image, 1 * colwidth + leftmargin, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/UStw.svg", 0.5), my_canvas, flagoffset_x + 1 * colwidth + leftmargin, flagoffset_y + 0 * rowheight + bottommargin + 10)
+my_canvas.circle(1 * colwidth + leftmargin + 115, 0 * rowheight + bottommargin + 10 + 15, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/Qatar_location_map.png"
+my_canvas.drawImage(image, 2 * colwidth + leftmargin, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/QAtw.svg", 0.5), my_canvas, flagoffset_x + 2 * colwidth + leftmargin, flagoffset_y + 0 * rowheight + bottommargin + 10)
+my_canvas.circle(2 * colwidth + leftmargin + 75, 0 * rowheight + bottommargin + 10 + 65, 4.0, stroke = 0, fill = 1)
+image = "Circuits/Location/United_Arab_Emirates_location_map.png"
+my_canvas.drawImage(image, 3 * colwidth + leftmargin, 0 * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+renderPDF.draw(scaleSVG("Flags/AEtw.svg", 0.5), my_canvas, flagoffset_x + 3 * colwidth + leftmargin, flagoffset_y + 0 * rowheight + bottommargin + 10)
+my_canvas.circle(3 * colwidth + leftmargin + 85, 0 * rowheight + bottommargin + 10 + 65, 4.0, stroke = 0, fill = 1)
+
+row = 6
+col = 0
+my_canvas.setFillColor(HexColor(outsidearea))
+my_canvas.setStrokeColor(HexColor(outsidearea))
+my_canvas.setLineWidth(1)
+for i in range(24):
+    p = my_canvas.beginPath()
+    p.arc(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0, leftmargin + col * colwidth - 0.1 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
+    p.lineTo(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0 + arcdim)
+    my_canvas.drawPath(p, fill=1, stroke=0)
+    p = my_canvas.beginPath()
+    p.arc(leftmargin + col * colwidth + 117.9, row * rowheight - 80.0, leftmargin + col * colwidth + 137.9, row * rowheight - 60.0, startAng = 270, extent = 90)
+    p.lineTo(leftmargin + col * colwidth + 137.9, row * rowheight - 80.0)
+    my_canvas.drawPath(p, fill = 1, stroke = 0)
+    col += 1
+    if col == 4:
+        col = 0
+        row -= 1
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
@@ -224,13 +351,11 @@ my_canvas.setFillColor(HexColor("#000000"))
 my_canvas.drawString(100, 775, "2026 Calendar")
 row = 6
 col = 0
-caloffsetx = 64.3
+caloffsetx = 54.3
 caloffsety = 10
 calblank_dy = -7.0
 calday_dy = -6.0
-flagoffset_x = 91
-flagoffset_y = 90
-clockoffsetx = 112.9
+clockoffsetx = 102.9
 clockoffsety = 88
 clock_dx = 26.5
 event_dx = 12.5
@@ -244,27 +369,23 @@ for i in range(len(raceevents)):
         if subsummary == "Practice 1":
             cx = lookupcircuit(raceevent.description)
             print(cx, raceevent.description)
-            locationmap = circuitsdata[cx][5]
-            image = "Circuits/Location/" + locationmap + "_location_map.png"
-            my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-            countrycode = circuitsdata[cx][1][:2]
-            countrycode = countrycode.upper()
-            renderPDF.draw(scaleSVG("Flags/" + countrycode + "tw.svg", 0.5), my_canvas, flagoffset_x + col * colwidth + leftmargin, flagoffset_y + (row - 1) * rowheight + bottommargin + 10)
-            circle_x = float(circuitsdata[cx][26])
-            circle_y = float(circuitsdata[cx][27])
-            my_canvas.setFillColor(HexColor(circuitarea))
-            my_canvas.circle(col * colwidth + leftmargin + circle_x, (row - 1) * rowheight + bottommargin + 10 + circle_y, 4.0, stroke = 0, fill = 1)
             circuit_x = float(circuitsdata[cx][28])
             circuit_y = float(circuitsdata[cx][29])
-            renderPDF.draw(scaleSVG("SVG/" + raceevent.description + "LCC.svg", circuitscale), my_canvas, circuit_x + col * colwidth + leftmargin, circuit_y + (row - 1) * rowheight + bottommargin + 10)
+            renderPDF.draw(scaleSVG("SVG/" + raceevent.description + "LC.svg", circuitscale), my_canvas, circuit_x + col * colwidth + leftmargin, circuit_y + (row - 1) * rowheight + bottommargin + 10)
             eventday1_x = float(circuitsdata[cx][30])
             eventday1_y = float(circuitsdata[cx][31])
             eventday2_x = float(circuitsdata[cx][32])
             eventday2_y = float(circuitsdata[cx][33])
             my_canvas.line(leftmargin + col * colwidth + 9.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 10.1, row * rowheight + 32.0)
+            p = my_canvas.beginPath()
+            p.arc(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0, leftmargin + col * colwidth - 0.1 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
+            my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight - 80.0, leftmargin + col * colwidth - 0.1, row * rowheight + 22.0)   
             my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight - 80, leftmargin + col * colwidth + 127.9, row * rowheight - 80)
+            p = my_canvas.beginPath()
+            p.arc(leftmargin + col * colwidth + 117.9, row * rowheight - 80.0, leftmargin + col * colwidth + 137.9, row * rowheight - 60.0, startAng = 270, extent = 90)
+            my_canvas.drawPath(p, fill = 0, stroke = 1)
             my_canvas.line(leftmargin + col * colwidth + 137.9, row * rowheight + 32, leftmargin + col * colwidth + 137.9, row * rowheight - 70.0)
             renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", 0.65), my_canvas, leftmargin + caloffsetx + col * colwidth, caloffsety + row * rowheight)
             my_canvas.setFont(calfont, 11)
@@ -367,32 +488,5 @@ for i in range(len(raceevents)):
                 row = row - 1
                 if row < 0:
                     break
-row = 6
-col = 0
-my_canvas.setFillColor(HexColor(outsidearea))
-my_canvas.setLineWidth(1)
-for i in range(24):
-    my_canvas.setStrokeColor(HexColor(outsidearea))
-    p = my_canvas.beginPath()
-    p.arc(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0, leftmargin + col * colwidth - 0.1 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
-    p.lineTo(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0 + arcdim)
-    my_canvas.drawPath(p, fill=1, stroke=0)
-    p = my_canvas.beginPath()
-    p.arc(leftmargin + col * colwidth + 117.9, row * rowheight - 80.0, leftmargin + col * colwidth + 137.9, row * rowheight - 60.0, startAng = 270, extent = 90)
-    p.lineTo(leftmargin + col * colwidth + 137.9, row * rowheight - 80.0)
-    my_canvas.drawPath(p, fill = 1, stroke = 0)
-    my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight + 32.0, leftmargin + col * colwidth + 8.0, row * rowheight + 32.0)
-    my_canvas.line(leftmargin + col * colwidth + 132, row * rowheight - 80, leftmargin + col * colwidth + 140.9, row * rowheight - 80)
-    my_canvas.setStrokeColor(black)
-    p = my_canvas.beginPath()
-    p.arc(leftmargin + col * colwidth - 0.1, row * rowheight + 12.0, leftmargin + col * colwidth - 0.1 + arcdim, row * rowheight + 12.0 + arcdim, startAng = 90, extent = 90)
-    my_canvas.drawPath(p, fill = 0, stroke = 1)
-    p = my_canvas.beginPath()
-    p.arc(leftmargin + col * colwidth + 117.9, row * rowheight - 80.0, leftmargin + col * colwidth + 137.9, row * rowheight - 60.0, startAng = 270, extent = 90)
-    my_canvas.drawPath(p, fill = 0, stroke = 1)
-    col += 1
-    if col == 4:
-        col = 0
-        row -= 1
 my_canvas.save()
 key = input("Wait")
