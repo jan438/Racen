@@ -367,7 +367,9 @@ for i in range(len(raceevents)):
                 row = row - 1
                 if row < 0:
                     break
-
+                    
+my_canvas.setFillColor(HexColor("#cecece"))                    
+my_canvas.rect(10.0, 5.0, 400.0, 20.0, fill=1)
 my_canvas.setFillColor(HexColor(text1))
 renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + 0.0, 10.0)
 my_canvas.drawString(leftmargin + 20.0, 10.0, "Practice")
