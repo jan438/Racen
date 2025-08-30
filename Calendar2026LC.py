@@ -368,15 +368,17 @@ for i in range(len(raceevents)):
                 if row < 0:
                     break
 
+my_canvas.setFillColor(HexColor(text1))
 renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + 0.0, 10.0)
-my_canvas.drawString(leftmargin + 30.0, 10.0, "Practice")
+my_canvas.drawString(leftmargin + 20.0, 10.0, "Practice")
 renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + 100, 10.0)
-my_canvas.drawString(leftmargin + 130.0, 10.0, "Qualifying")
+my_canvas.drawString(leftmargin + 120.0, 10.0, "Qualifying")
 renderPDF.draw(scaleSVG("SVG/racecarom.svg", openmojiscaling), my_canvas, leftmargin + 200.0, 10.0)
-my_canvas.drawString(leftmargin + 230.0, 10.0, "Sprint")
+my_canvas.drawString(leftmargin + 220.0, 10.0, "Sprint")
 my_canvas.setFillColor(HexColor(circuitarea))
 my_canvas.circle(leftmargin + 300.0, 10.0, 4.0, stroke = 0, fill = 1)
-my_canvas.drawString(leftmargin + 330.0, 10.0, "Location")
+my_canvas.setFillColor(HexColor(text1))
+my_canvas.drawString(leftmargin + 320.0, 10.0, "Location")
 
 row = 6
 col = 0
