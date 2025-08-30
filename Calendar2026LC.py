@@ -370,8 +370,8 @@ for i in range(len(raceevents)):
 
 renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + 0.0, 10.0)
 my_canvas.drawString(leftmargin + 30.0, 10.0, "Practice")
-renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + 30, 10.0)
-my_canvas.drawString(leftmargin + 60.0, 10.0, "Qualifying")
+renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + 100, 10.0)
+my_canvas.drawString(leftmargin + 130.0, 10.0, "Qualifying")
 
 row = 6
 col = 0
