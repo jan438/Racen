@@ -372,6 +372,8 @@ renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, lef
 my_canvas.drawString(leftmargin + 30.0, 10.0, "Practice")
 renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + 100, 10.0)
 my_canvas.drawString(leftmargin + 130.0, 10.0, "Qualifying")
+renderPDF.draw(scaleSVG("SVG/racecarom.svg", openmojiscaling), my_canvas, leftmargin + 200.0, 10.0)
+my_canvas.drawString(leftmargin + 230.0, 10.0, "Sprint")
 
 row = 6
 col = 0
