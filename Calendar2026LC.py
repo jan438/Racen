@@ -374,6 +374,9 @@ renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin 
 my_canvas.drawString(leftmargin + 130.0, 10.0, "Qualifying")
 renderPDF.draw(scaleSVG("SVG/racecarom.svg", openmojiscaling), my_canvas, leftmargin + 200.0, 10.0)
 my_canvas.drawString(leftmargin + 230.0, 10.0, "Sprint")
+my_canvas.setFillColor(HexColor(circuitarea))
+my_canvas.circle(leftmargin + 300.0, 10.0, 4.0, stroke = 0, fill = 1)
+my_canvas.drawString(leftmargin + 330.0, 10.0, "Location")
 
 row = 6
 col = 0
