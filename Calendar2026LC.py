@@ -368,7 +368,8 @@ for i in range(len(raceevents)):
                 if row < 0:
                     break
 
-renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + 0.0, 0.0)
+renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + 0.0, 10.0)
+my_canvas.drawString(leftmargin + 30.0, 10.0, "Practice")
 
 row = 6
 col = 0
