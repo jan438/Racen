@@ -237,6 +237,8 @@ event_dx = 12.5
 event_dy = -5
 stopwatchdigit_x = 5.8
 stopwatchdigit_y = -3.5
+polelineletter_x = 5.0
+polelineletter_y = -15.0
 my_canvas.setStrokeColor(black)
 my_canvas.setLineWidth(1)
 for i in range(len(raceevents)):
@@ -297,7 +299,7 @@ for i in range(len(raceevents)):
                 renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", twitterscaling), my_canvas, leftmargin + col * colwidth + eventday1_x + clock_dx, row * rowheight + eventday1_y + event_dy - 17.1)
             elif result[:17] == "Sprint Qualifying":
                 renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + col * colwidth + eventday1_x + event_dx, row * rowheight + eventday1_y + event_dy - 17.9)
-                my_canvas.drawString(leftmargin + col * colwidth + eventday1_x + event_dx + 5.0, row * rowheight + eventday1_y + event_dy - 15.0, "S")
+                my_canvas.drawString(leftmargin + col * colwidth + eventday1_x + event_dx + polelineletter_x, row * rowheight + eventday1_y + event_dy + polelineletter_y, "S")
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
@@ -330,7 +332,7 @@ for i in range(len(raceevents)):
             result = result[0][:-1]
             if result[:10] == "Qualifying":
                 renderPDF.draw(scaleSVG("SVG/poleline.svg", linescaling), my_canvas, leftmargin + col * colwidth + eventday2_x + event_dx, row * rowheight + eventday2_y + event_dy - 17.9)
-                my_canvas.drawString(leftmargin + col * colwidth + eventday2_x + event_dx + 5.0, row * rowheight + eventday2_y + event_dy - 15.0, "R")
+                my_canvas.drawString(leftmargin + col * colwidth + eventday2_x + event_dx + 5.0, row * rowheight + eventday2_y + event_dy + polelineletter_y, "R")
                 [hour,minute] = converttimetztolocalclock(raceevent.starttime)
                 strhour = "{:02d}".format(hour)
                 strminute = "{:02d}".format(minute)
