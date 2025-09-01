@@ -235,7 +235,7 @@ clockoffsety = 88
 clock_dx = 26.5
 event_dx = 12.5
 event_dy = -5
-stopwatchdigit_x = 6.0
+stopwatchdigit_x = 5.8
 stopwatchdigit_y = -3.5
 my_canvas.setStrokeColor(black)
 my_canvas.setLineWidth(1)
