@@ -40,7 +40,7 @@ def get_angle(point1, point2):
     angle_degrees = math.degrees(angle_radians)
     normalized_angle = angle_degrees % 360
     return normalized_angle
-def GeoJSON_to_SVG(geojsonfile, svgfile):
+def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
     def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
         for LineString in coordinates:
@@ -358,7 +358,7 @@ for i in range(len(circuitsdata)):
         renderPDF.draw(drawing, my_canvas, 300, 750)
         name_x = 300
         name_y = 25
-        [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[cx][1], circuitsdata[cx][0])
+        [offset_x, offset_y] = GeoJSON_to_SVG(cx, circuitsdata[cx][1], circuitsdata[cx][0])
         circuit_x = 0
         circuit_y = 0
         renderPDF.draw(scaleSVG("SVG/" + circuitsdata[cx][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
