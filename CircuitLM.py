@@ -69,7 +69,7 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
     with open("Data/" + geojsonfile + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
     features = geojson_data['features']
-    print("Count features", len(features))
+    print(cx, "Count features", len(features))
     startindices = []
     startfinishindex = 0
     for feature in features:
