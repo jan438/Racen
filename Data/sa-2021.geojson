@@ -5,13 +5,39 @@
         {
             "type": "Feature",
             "properties": {
-                "Location": "Jeddah",
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.10274935088,
+                    21.63588903992
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.10310190394,
+                    21.64655425323
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "firstgp": "2021",
-                "length": "6175",
+                "Location": "Jeddah",
                 "altitude": "12",
+                "length": "6175",
                 "id": "sa-2021",
-                "Name": "Jeddah Corniche Circuit",
-                "opened": "2021"
+                "opened": "2021",
+                "Name": "Jeddah Corniche Circuit"
             },
             "geometry": {
                 "type": "LineString",
@@ -609,10 +635,6 @@
                         21.62671100000
                     ],
                     [
-                        39.10592677924,
-                        21.62846020064
-                    ],
-                    [
                         39.10588500000,
                         21.62864700000
                     ],
@@ -634,39 +656,13 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startsector"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    39.10317660455,
-                    21.64707363076
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "place": "startfinish"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    39.10507600000,
-                    21.63105300000
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "place": "startsector"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    39.10286639412,
-                    21.63426286401
+                    39.10573002674,
+                    21.62954316223
                 ]
             }
         }
