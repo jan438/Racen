@@ -117,11 +117,9 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
         return
     else:
         offset_x0 = (start_x[0] - min_x) * scale_x
-        offset_y0 = (start_y[0] - min_x) * scale_x
-        print(0, "x", round(offset_x0), "y", round(offset_y0))
+        print(0, "x", round(offset_x0))
         offset_x1 = (start_x[1] - min_x) * scale_x
-        offset_y1 = (start_y[1] - min_x) * scale_x
-        print(1, "x", round(offset_x1), "y", round(offset_y1))
+        print(1, "x", round(offset_x1))
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
     print("Startindexes", startindices[0], startindices[1], startindices[2])
