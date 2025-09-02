@@ -71,6 +71,9 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
     features = geojson_data['features']
     print(cx, "Count features", len(features))
     startindices = []
+    start_x = []
+    start_y = []
+    start_a = []
     startfinishindex = 0
     for feature in features:
         geometry = feature["geometry"]
@@ -106,6 +109,9 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
             coordinates = geometry["coordinates"]
             npoint = nearestpoint(coordinates, coords)
             startindices.append(npoint)
+            start_x.append(0)
+            start_y.append(0)
+            start_a.append(0)
     if len(startindices) < 3:
         print("Insufficient startindices", startindices)
         return
