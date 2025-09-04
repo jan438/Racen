@@ -110,10 +110,10 @@ for i in range(count):
     d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], font = formule1font, fontSize = 16, fillColor = colors.black))
     #img = "Teams/" + formule1data[i][1] + ".png"
     #d.add(Image(path = img, width = 270, height = 89, x = 10 + col * colwidth, y = row * rowheight, mask = None))
-    img = "Teams/" + formule1data[i][7] + ".png"
-    d.add(Image(path = img, width = 27, height = 27, x = 160 + col * colwidth, y = 125 + row * rowheight, mask = None))
-    img = "Teams/" + formule1data[i][3] + ".png"
-    d.add(Image(path = img, width = 27, height = 27, x = 188 + col * colwidth, y = 125 + row * rowheight, mask = None))
+    #img = "Teams/" + formule1data[i][7] + ".png"
+    #d.add(Image(path = img, width = 27, height = 27, x = 160 + col * colwidth, y = 125 + row * rowheight, mask = None))
+    #img = "Teams/" + formule1data[i][3] + ".png"
+    #d.add(Image(path = img, width = 27, height = 27, x = 188 + col * colwidth, y = 125 + row * rowheight, mask = None))
     # logo
     svg_root = load_svg_file("Logos/" + formule1data[i][1] + ".svg")
     svgwidth = svg_root.attrib.get('width')
