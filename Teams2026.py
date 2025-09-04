@@ -122,12 +122,12 @@ for i in range(count):
     d.add(transform_svg("Logos/" + formule1data[i][1] + ".svg", logox - 0.5 * float(formule1data[i][10]) + col * colwidth, logoy -  0.5 * float(formule1data[i][11]) + row * rowheight, float(formule1data[i][12]), float(formule1data[i][13])))
     #
     #land1 5
-    landcode = formule1data[i][5]
-    d.add(transform_svg(lookupflag(landcode), col * colwidth + halfcolwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
+    #landcode = formule1data[i][5]
+    #d.add(transform_svg(lookupflag(landcode), col * colwidth + halfcolwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
     #land2 9
-    landcode = formule1data[i][9]
-    d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
-    d.add(Line(col * colwidth, row * rowheight + 155, col * colwidth + colwidth - 11, row * rowheight + 155, strokeColor=colors.black, strokeWidth = 2))
+    #landcode = formule1data[i][9]
+    #d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
+    #d.add(Line(col * colwidth, row * rowheight + 155, col * colwidth + colwidth - 11, row * rowheight + 155, strokeColor=colors.black, strokeWidth = 2))
     d.add(upperrightcorner(col * colwidth + colwidth - 11, row * rowheight + 145, 10.0, 2, colors.black))
     d.add(Line(col * colwidth + colwidth - 1, row * rowheight + 145, col * colwidth + colwidth - 1, row * rowheight + 135, strokeColor=colors.black, strokeWidth = 2))
     d.add(Line(col * colwidth, row * rowheight + 82, col * colwidth + halfcolwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
