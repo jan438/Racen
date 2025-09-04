@@ -76,8 +76,8 @@ pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf')
 formule1font = "LiberationSerif"
 score_font_size = 18
 d.add(transform_svg("SVG/F1.svg", 297.5 - 60, 800, 1.1, 1.1))
-rowheight = 160
-colwidth = 297.5
+rowheight = 120
+colwidth = 200
 halfcolwidth = 148.75
 logox = 256
 logoy = 135
@@ -140,7 +140,7 @@ for i in range(count):
     #d.add(Line(col * colwidth + logox - 0.5 * logowidth, row * rowheight + logoy, col * colwidth + logox + 0.5 * logowidth, row * rowheight + logoy, strokeColor=colors.blue, strokeWidth=1))
     #d.add(Line(col * colwidth + logox, row * rowheight + logoy - 0.5 * logoheight, col * colwidth + logox, row * rowheight + logoy + 0.5 * logoheight, strokeColor=colors.blue, strokeWidth=1))
     col = col + 1
-    if col == 2:
+    if col == 3:
         col = 0
         row = row - 1
 #d.add(Line(595,0,595,842, strokeColor=colors.blue, strokeWidth=1))
