@@ -78,7 +78,7 @@ score_font_size = 18
 d.add(transform_svg("SVG/F1.svg", 297.5 - 60, 800, 1.1, 1.1))
 rowheight = 120
 colwidth = 199
-halfcolwidth = 148.75
+halfcolwidth = 99.5
 logox = 256
 logoy = 135
 logowidth = 25
