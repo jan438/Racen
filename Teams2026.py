@@ -86,28 +86,31 @@ logoheight = 25
 row = 4
 col = 0
 flagx = 115
+leftmargin = 10
+rightmargin = 10
+#3 * colwidth + leftmarin + rightmargin
 maxscorewidth = 27.0
 d.add(String(150, 815,"Scores", fontSize = 25, textAnchor="middle"))
 d.add(String(420, 815,"2026", fontSize = 25, textAnchor="middle"))
 for i in range(count):
     #team 0
-    d.add(String(10 + col * colwidth, row * rowheight + 135, formule1data[i][0], font = formule1font, fontSize = 22, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth, row * rowheight + 135, formule1data[i][0], font = formule1font, fontSize = 22, fillColor = colors.black))
     #name2 7
-    d.add(String(10 + col * colwidth, row * rowheight + 95, formule1data[i][7], font = formule1font, fontSize = 18, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth, row * rowheight + 95, formule1data[i][7], font = formule1font, fontSize = 18, fillColor = colors.black))
     #score2 8
     score = formule1data[i][8]
     scorewidth = pdfmetrics.stringWidth(score, formule1font, score_font_size)
     d.add(String(col * colwidth + halfcolwidth - 34 + (maxscorewidth - scorewidth), row * rowheight + 95, formule1data[i][8], font = formule1font, fontSize = 18, fillColor = colors.black))
     #surname2 6
-    d.add(String(10 + col * colwidth, row * rowheight + 110, formule1data[i][6], font = formule1font, fontSize = 16, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth, row * rowheight + 110, formule1data[i][6], font = formule1font, fontSize = 16, fillColor = colors.black))
     #name1 3
-    d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], font = formule1font, fontSize = 18, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], font = formule1font, fontSize = 18, fillColor = colors.black))
     #score1 4
     score = formule1data[i][4]
     scorewidth = pdfmetrics.stringWidth(score, formule1font, score_font_size)
     d.add(String((col + 1) * colwidth - 34 + (maxscorewidth - scorewidth), row * rowheight + 95, score, font = formule1font, fontSize = score_font_size, fillColor = colors.black))
     #surname1 2
-    d.add(String(col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], font = formule1font, fontSize = 16, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], font = formule1font, fontSize = 16, fillColor = colors.black))
     #img = "Teams/" + formule1data[i][1] + ".png"
     #d.add(Image(path = img, width = 270, height = 89, x = 10 + col * colwidth, y = row * rowheight, mask = None))
     #img = "Teams/" + formule1data[i][7] + ".png"
@@ -128,16 +131,16 @@ for i in range(count):
     #landcode = formule1data[i][9]
     #d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
     #d.add(Line(col * colwidth, row * rowheight + 155, col * colwidth + colwidth - 11, row * rowheight + 155, strokeColor=colors.black, strokeWidth = 2))
-    d.add(upperrightcorner(col * colwidth + colwidth - 11, row * rowheight + 145, 10.0, 2, colors.black))
-    d.add(Line(col * colwidth + colwidth - 1, row * rowheight + 145, col * colwidth + colwidth - 1, row * rowheight + 135, strokeColor=colors.black, strokeWidth = 2))
-    d.add(Line(col * colwidth, row * rowheight + 82, col * colwidth + halfcolwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
-    d.add(bottomrightcorner(col * colwidth + halfcolwidth - 8.0 - 4, row * rowheight + 90, 8.0, 1, colors.black))
-    d.add(Line(col * colwidth + halfcolwidth - 4, row * rowheight + 90, col * colwidth + halfcolwidth - 4, row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
-    d.add(Line(col * colwidth + halfcolwidth, row * rowheight + 82, col * colwidth + colwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
-    d.add(bottomrightcorner(col * colwidth + colwidth - 8.0 -4, row * rowheight + 90, 8.0, 1, colors.black))
-    d.add(Line(col * colwidth + colwidth - 4, row * rowheight + 90, col * colwidth + colwidth - 4, row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
+    d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 11, row * rowheight + 145, 10.0, 2, colors.black))
+    d.add(Line(leftmargin + col * colwidth + colwidth - 1, row * rowheight + 145, col * colwidth + colwidth - 1, row * rowheight + 135, strokeColor=colors.black, strokeWidth = 2))
+    d.add(Line(leftmargin + col * colwidth, row * rowheight + 82, col * colwidth + halfcolwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
+    d.add(bottomrightcorner(leftmargin + col * colwidth + halfcolwidth - 8.0 - 4, row * rowheight + 90, 8.0, 1, colors.black))
+    d.add(Line(leftmargin + col * colwidth + halfcolwidth - 4, row * rowheight + 90, col * colwidth + halfcolwidth - 4, row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
+    d.add(Line(leftmargin + col * colwidth + halfcolwidth, row * rowheight + 82, col * colwidth + colwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
+    d.add(bottomrightcorner(leftmargin + col * colwidth + colwidth - 8.0 -4, row * rowheight + 90, 8.0, 1, colors.black))
+    d.add(Line(leftmargin + col * colwidth + colwidth - 4, row * rowheight + 90, col * colwidth + colwidth - 4, row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
     # logomiddle
-    #d.add(Line(col * colwidth + logox - 0.5 * logowidth, row * rowheight + logoy, col * colwidth + logox + 0.5 * logowidth, row * rowheight + logoy, strokeColor=colors.blue, strokeWidth=1))
+    #d.add(Line(leftmargin + col * colwidth + logox - 0.5 * logowidth, row * rowheight + logoy, col * colwidth + logox + 0.5 * logowidth, row * rowheight + logoy, strokeColor=colors.blue, strokeWidth=1))
     #d.add(Line(col * colwidth + logox, row * rowheight + logoy - 0.5 * logoheight, col * colwidth + logox, row * rowheight + logoy + 0.5 * logoheight, strokeColor=colors.blue, strokeWidth=1))
     col = col + 1
     if col == 3:
