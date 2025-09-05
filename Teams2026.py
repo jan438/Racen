@@ -86,9 +86,9 @@ logoheight = 25
 row = 4
 col = 0
 flagx = 115
-leftmargin = 2
-rightmargin = 2
-#3 * colwidth + leftmarin + rightmargin = 4 +  3 * 198
+leftmargin = 1.5
+rightmargin = 1.5
+#3 * colwidth + leftmarin + rightmargin = 3 +  3 * 198
 maxscorewidth = 27.0
 d.add(String(150, 815,"Scores", fontSize = 25, textAnchor="middle"))
 d.add(String(420, 815,"2026", fontSize = 25, textAnchor="middle"))
