@@ -95,7 +95,7 @@ for i in range(count):
     #team 0
     d.add(String(leftmargin + col * colwidth, row * rowheight + 135, formule1data[i][0], font = formule1font, fontSize = 22, fillColor = colors.black))
     #name2 7
-    d.add(String(leftmargin + col * colwidth, row * rowheight + 95, formule1data[i][7], font = formule1font, fontSize = 17, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth, row * rowheight + 95, formule1data[i][7], font = formule1font, fontSize = 16, fillColor = colors.black))
     #score2 8
     score = formule1data[i][8]
     scorewidth = pdfmetrics.stringWidth(score, formule1font, score_font_size)
@@ -103,7 +103,7 @@ for i in range(count):
     #surname2 6
     d.add(String(leftmargin + col * colwidth, row * rowheight + 110, formule1data[i][6], font = formule1font, fontSize = 15, fillColor = colors.black))
     #name1 3
-    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], font = formule1font, fontSize = 17, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], font = formule1font, fontSize = 16, fillColor = colors.black))
     #score1 4
     score = formule1data[i][4]
     scorewidth = pdfmetrics.stringWidth(score, formule1font, score_font_size)
