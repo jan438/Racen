@@ -95,21 +95,21 @@ for i in range(count):
     #team 0
     d.add(String(leftmargin + col * colwidth, row * rowheight + 135, formule1data[i][0], font = formule1font, fontSize = 22, fillColor = colors.black))
     #name2 7
-    d.add(String(leftmargin + col * colwidth, row * rowheight + 95, formule1data[i][7], font = formule1font, fontSize = 18, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth, row * rowheight + 95, formule1data[i][7], font = formule1font, fontSize = 17, fillColor = colors.black))
     #score2 8
     score = formule1data[i][8]
     scorewidth = pdfmetrics.stringWidth(score, formule1font, score_font_size)
     d.add(String(col * colwidth + halfcolwidth - 34 + (maxscorewidth - scorewidth), row * rowheight + 95, formule1data[i][8], font = formule1font, fontSize = 18, fillColor = colors.black))
     #surname2 6
-    d.add(String(leftmargin + col * colwidth, row * rowheight + 110, formule1data[i][6], font = formule1font, fontSize = 16, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth, row * rowheight + 110, formule1data[i][6], font = formule1font, fontSize = 15, fillColor = colors.black))
     #name1 3
-    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], font = formule1font, fontSize = 18, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], font = formule1font, fontSize = 17, fillColor = colors.black))
     #score1 4
     score = formule1data[i][4]
     scorewidth = pdfmetrics.stringWidth(score, formule1font, score_font_size)
     d.add(String((col + 1) * colwidth - 34 + (maxscorewidth - scorewidth), row * rowheight + 95, score, font = formule1font, fontSize = score_font_size, fillColor = colors.black))
     #surname1 2
-    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], font = formule1font, fontSize = 16, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], font = formule1font, fontSize = 15, fillColor = colors.black))
     # cars
     #img = "Teams/" + formule1data[i][1] + ".png"
     #d.add(Image(path = img, width = 270, height = 89, x = 10 + col * colwidth, y = row * rowheight, mask = None))
