@@ -79,7 +79,7 @@ d.add(transform_svg("SVG/F1.svg", 100, 800, 1, 1))
 rowheight = 150
 colwidth = 198
 halfcolwidth = 99.0
-logox = 150
+logox = 175
 logoy = 135
 logowidth = 25
 logoheight = 25
