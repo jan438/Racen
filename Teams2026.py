@@ -129,7 +129,7 @@ for i in range(count):
     #land2 9
     #landcode = formule1data[i][9]
     #d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
-    #d.add(Line(col * colwidth, row * rowheight + 155, col * colwidth + colwidth - 11, row * rowheight + 155, strokeColor=colors.black, strokeWidth = 2))
+    d.add(Line(col * colwidth, row * rowheight + 155, col * colwidth + colwidth - 11, row * rowheight + 155, strokeColor=colors.black, strokeWidth = 2))
     d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 11, row * rowheight + 145, 10.0, 2, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 1, row * rowheight + 145, leftmargin + col * colwidth + colwidth - 1, row * rowheight + 135, strokeColor=colors.black, strokeWidth = 2))
     d.add(Line(leftmargin + col * colwidth, row * rowheight + 82, leftmargin + col * colwidth + halfcolwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
