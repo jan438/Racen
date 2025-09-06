@@ -110,8 +110,10 @@ for i in range(count):
     d.add(String((col + 1) * colwidth - 34 + (maxscorewidth - scorewidth), row * rowheight + 95, score, font = formule1font, fontSize = score_font_size, fillColor = colors.black))
     #surname1 2
     d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], font = formule1font, fontSize = 16, fillColor = colors.black))
+    # cars
     #img = "Teams/" + formule1data[i][1] + ".png"
     #d.add(Image(path = img, width = 270, height = 89, x = 10 + col * colwidth, y = row * rowheight, mask = None))
+    # coureurs
     #img = "Teams/" + formule1data[i][7] + ".png"
     #d.add(Image(path = img, width = 27, height = 27, x = 160 + col * colwidth, y = 125 + row * rowheight, mask = None))
     #img = "Teams/" + formule1data[i][3] + ".png"
@@ -139,8 +141,8 @@ for i in range(count):
     d.add(bottomrightcorner(leftmargin + col * colwidth + colwidth - 8.0 -4, row * rowheight + 90, 8.0, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, row * rowheight + 90, leftmargin + col * colwidth + colwidth - 4, row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
     # logomiddle
-    #d.add(Line(leftmargin + col * colwidth + logox - 0.5 * logowidth, row * rowheight + logoy, col * colwidth + logox + 0.5 * logowidth, row * rowheight + logoy, strokeColor=colors.blue, strokeWidth=1))
-    #d.add(Line(col * colwidth + logox, row * rowheight + logoy - 0.5 * logoheight, col * colwidth + logox, row * rowheight + logoy + 0.5 * logoheight, strokeColor=colors.blue, strokeWidth=1))
+    d.add(Line(leftmargin + col * colwidth + logox - 0.5 * logowidth, row * rowheight + logoy, col * colwidth + logox + 0.5 * logowidth, row * rowheight + logoy, strokeColor=colors.blue, strokeWidth=1))
+    d.add(Line(col * colwidth + logox, row * rowheight + logoy - 0.5 * logoheight, col * colwidth + logox, row * rowheight + logoy + 0.5 * logoheight, strokeColor=colors.blue, strokeWidth=1))
     col = col + 1
     if col == 3:
         col = 0
