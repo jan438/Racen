@@ -90,8 +90,7 @@ leftmargin = 1.5
 rightmargin = 1.5
 #3 * colwidth + leftmarin + rightmargin = 3 +  3 * 198
 maxscorewidth = 27.0
-d.add(String(150, 815,"Scores", fontSize = 25, textAnchor="middle"))
-d.add(String(420, 815,"2026", fontSize = 25, textAnchor="middle"))
+d.add(String(100, 775,"Teams", fontSize = 30, fillColor = colors.black))
 for i in range(count):
     #team 0
     d.add(String(leftmargin + col * colwidth, row * rowheight + 135, formule1data[i][0], font = formule1font, fontSize = 22, fillColor = colors.black))
