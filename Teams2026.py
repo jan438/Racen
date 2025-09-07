@@ -111,11 +111,13 @@ for i in range(count):
     #
     # birthday1
     d.add(transform_svg("SVG/calendar-blank.svg", col * colwidth + halfcolwidth + flagx, row * rowheight + 150, 0.5 , 0.5))
+    d.add(String(col * colwidth + flagx, row * rowheight + 150,"11-02-1954", fontSize = 8, fillColor = colors.black))
     #land1 5
     landcode = formule1data[i][5]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + halfcolwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
     #birthday2
     d.add(transform_svg("SVG/calendar-blank.svg", col * colwidth + flagx, row * rowheight + 150, 0.5 , 0.5))
+    d.add(String(col * colwidth + flagx, row * rowheight + 150,"11-02-1954", fontSize = 8, fillColor = colors.black))
     #land2 9
     landcode = formule1data[i][9]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
