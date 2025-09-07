@@ -86,7 +86,7 @@ logoheight = 25
 row = 4
 col = 0
 flagx = 73.4
-leftmargin = 1.5
+leftmargin = 4.0
 rightmargin = 1.5
 #3 * colwidth + leftmarin + rightmargin = 3 +  3 * 198
 maxscorewidth = 27.0
@@ -123,7 +123,7 @@ for i in range(count):
     #land2 9
     landcode = formule1data[i][9]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
-    d.add(Line(col * colwidth, row * rowheight + 155, col * colwidth + colwidth - 12, row * rowheight + 155, strokeColor=colors.black, strokeWidth = 2))
+    d.add(Line(leftmargin + col * colwidth, row * rowheight + 155, col * colwidth + colwidth - 12, row * rowheight + 155, strokeColor=colors.black, strokeWidth = 2))
     d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 14, row * rowheight + 145, 10.0, 2, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, row * rowheight + 145, leftmargin + col * colwidth + colwidth - 4, row * rowheight + 105, strokeColor=colors.black, strokeWidth = 2))
     d.add(Line(leftmargin + col * colwidth, row * rowheight + 82, leftmargin + col * colwidth + halfcolwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
