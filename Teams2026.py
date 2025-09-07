@@ -110,12 +110,12 @@ for i in range(count):
     d.add(transform_svg("Logos/" + formule1data[i][1] + ".svg", logox - 0.5 * float(formule1data[i][10]) + col * colwidth, logoy -  0.5 * float(formule1data[i][11]) + row * rowheight, float(formule1data[i][12]), float(formule1data[i][13])))
     #
     # birthday1
-    d.add(transform_svg("SVG/calendar-blank.svg", col * colwidth + halfcolwidth + flagx, row * rowheight + 100, 0.3 , 0.3))
+    d.add(transform_svg("SVG/calendar-blank.svg", col * colwidth + halfcolwidth + flagx, row * rowheight + 150, 0.5 , 0.5))
     #land1 5
     landcode = formule1data[i][5]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + halfcolwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
     #birthday2
-    d.add(transform_svg("SVG/calendar-blank.svg", col * colwidth + flagx, row * rowheight + 100, 0.3 , 0.3))
+    d.add(transform_svg("SVG/calendar-blank.svg", col * colwidth + flagx, row * rowheight + 150, 0.5 , 0.5))
     #land2 9
     landcode = formule1data[i][9]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
