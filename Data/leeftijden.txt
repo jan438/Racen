@@ -17,6 +17,6 @@ Esteban Ocon	Haas	17 september 1996	28
 Alexander Albon	Williams	23 maart 1996	29
 Pierre Gasly	Alpine	7 februari 1996	29
 Carlos Sainz	Williams	1 september 1994	30
-Nico Hülkenberg	Kick Sauber	19 augustus 1987	37
-Lewis Hamilton	Ferrari	7 januari 1985	40
+Nico Hülkenberg	Kick Sauber	19 augustus 1987	37 *
+Lewis Hamilton	Ferrari	7 januari 1985	40 *
 Fernando Alonso	Aston Martin	29 juli 1981	43 *
