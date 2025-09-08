@@ -86,6 +86,7 @@ logoheight = 25
 row = 4
 col = 0
 flagx = 73.4
+birthday = 20
 leftmargin = 4.0
 rightmargin = 1.5
 #3 * colwidth + leftmarin + rightmargin = 3 +  3 * 198
@@ -110,16 +111,16 @@ for i in range(count):
     d.add(transform_svg("Logos/" + formule1data[i][1] + ".svg", logox - 0.5 * float(formule1data[i][10]) + col * colwidth, logoy -  0.5 * float(formule1data[i][11]) + row * rowheight, float(formule1data[i][12]), float(formule1data[i][13])))
     #
     # birthday1
-    d.add(transform_svg("SVG/calendar-blank.svg", col * colwidth + flagx, row * rowheight + 150, 0.5 , 0.5))
-    d.add(String(col * colwidth + flagx, row * rowheight + 155,"15-02", fontSize = 8, fillColor = colors.black))
-    d.add(String(col * colwidth + flagx, row * rowheight + 150,"1974", fontSize = 8, fillColor = colors.black))
+    d.add(transform_svg("SVG/calendar-blank.svg", col * colwidth + birthday, row * rowheight + 150, 0.5 , 0.5))
+    d.add(String(col * colwidth + birthday, row * rowheight + 155,"15-02", fontSize = 8, fillColor = colors.black))
+    d.add(String(col * colwidth + birthday, row * rowheight + 150,"1974", fontSize = 8, fillColor = colors.black))
     #land1 5
     landcode = formule1data[i][5]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + halfcolwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
     #birthday2
-    d.add(transform_svg("SVG/calendar-blank.svg", col * colwidth + halfcolwidth + flagx, row * rowheight + 150, 0.5 , 0.5))
-    d.add(String(col * colwidth + halfcolwidth + flagx, row * rowheight + 155,"15-02", fontSize = 8, fillColor = colors.black))
-    d.add(String(col * colwidth + halfcolwidth + flagx, row * rowheight + 150,"1984", fontSize = 8, fillColor = colors.black))
+    d.add(transform_svg("SVG/calendar-blank.svg", col * colwidth + halfcolwidth + birthday, row * rowheight + 150, 0.5 , 0.5))
+    d.add(String(col * colwidth + halfcolwidth + birthday, row * rowheight + 155,"15-02", fontSize = 8, fillColor = colors.black))
+    d.add(String(col * colwidth + halfcolwidth + birthday, row * rowheight + 150,"1984", fontSize = 8, fillColor = colors.black))
     #land2 9
     landcode = formule1data[i][9]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
