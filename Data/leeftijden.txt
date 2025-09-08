@@ -6,9 +6,9 @@ Isack Hadjar	Racing Bulls	28 september 2004	20
 Franco Colapinto	Alpine	27 mei 2003	22
 Jack Doohan	Alpine	20 januari 2003	22
 Liam Lawson	Racing Bulls	11 februari 2002	23
-Oscar Piastri	McLaren	6 april 2001	24
+Oscar Piastri	McLaren	6 april 2001	24 *
 Yuki Tsunoda	Red Bull Racing	11 mei 2000	25
-Lando Norris	McLaren	13 november 1999	25
+Lando Norris	McLaren	13 november 1999	25 *
 Lance Stroll	Aston Martin	29 oktober 1998	26
 George Russell	Mercedes	15 februari 1998	27
 Charles Leclerc	Ferrari	16 oktober 1997	27
