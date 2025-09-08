@@ -13,7 +13,7 @@ Lance Stroll	Aston Martin	29 oktober 1998	26
 George Russell	Mercedes	15 februari 1998	27
 Charles Leclerc	Ferrari	16 oktober 1997	27
 Max Verstappen	Red Bull Racing	30 september 1997	27 *
-Esteban Ocon	Haas	17 september 1996	28
+Esteban Ocon	Haas	17 september 1996	28 *
 Alexander Albon	Williams	23 maart 1996	29 *
 Pierre Gasly	Alpine	7 februari 1996	29 *
 Carlos Sainz	Williams	1 september 1994 *	30
