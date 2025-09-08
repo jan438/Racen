@@ -120,9 +120,10 @@ for i in range(count):
     landcode = formule1data[i][5]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + halfcolwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
     #birthday2
+    birthday = formule1data[i][8]
     d.add(transform_svg("SVG/calendar-blank.svg", leftmargin + col * colwidth + halfcolwidth + birthdayx, row * rowheight + birthdayy, 0.5 , 0.5))
-    d.add(String(leftmargin + col * colwidth + halfcolwidth + birthdayx, row * rowheight + birthdayy + 5,"15-02", fontSize = 8, fillColor = colors.black))
-    d.add(String(leftmargin + col * colwidth + halfcolwidth + birthdayx, row * rowheight + birthdayy,"1984", fontSize = 8, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + halfcolwidth + birthdayx, row * rowheight + birthdayy + 5, birthday[:5], fontSize = 8, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + halfcolwidth + birthdayx, row * rowheight + birthdayy, birthday[6:10], fontSize = 8, fillColor = colors.black))
     #land2 9
     landcode = formule1data[i][9]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
