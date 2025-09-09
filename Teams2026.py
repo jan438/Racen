@@ -77,8 +77,8 @@ formule1font = "LiberationSerif"
 d.add(transform_svg("SVG/F1.svg", 100, 800, 1, 1))
 rowheight = 150
 colwidth = 198
-logox = 175
-logoy = 135
+logox = 170
+logoy = 140
 namey = 90
 surname = 103
 logowidth = 25
