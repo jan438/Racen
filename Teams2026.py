@@ -80,6 +80,7 @@ colwidth = 198
 logox = 175
 logoy = 135
 namey = 90
+surname = 103
 logowidth = 25
 logoheight = 25
 row = 4
@@ -96,11 +97,11 @@ for i in range(count):
     #name2 7
     d.add(String(leftmargin + col * colwidth, row * rowheight + namey, formule1data[i][7], font = formule1font, fontSize = 15, fillColor = colors.black))
     #surname2 6
-    d.add(String(leftmargin + col * colwidth, row * rowheight + 103, formule1data[i][6], font = formule1font, fontSize = 14, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth, row * rowheight + surname, formule1data[i][6], font = formule1font, fontSize = 14, fillColor = colors.black))
     #name1 3
     d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + namey, formule1data[i][3], font = formule1font, fontSize = 15, fillColor = colors.black))
     #surname1 2
-    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 103, formule1data[i][2], font = formule1font, fontSize = 14, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + surname, formule1data[i][2], font = formule1font, fontSize = 14, fillColor = colors.black))
     # logo
     svg_root = load_svg_file("Logos/" + formule1data[i][1] + ".svg")
     svgwidth = svg_root.attrib.get('width')
