@@ -83,7 +83,8 @@ logowidth = 25
 logoheight = 25
 row = 4
 col = 0
-flagx = 73.4
+flagx = 29.5
+flagy = 115
 birthdayx = 0
 birthdayy = 115
 leftmargin = 4.0
@@ -113,7 +114,7 @@ for i in range(count):
     d.add(String(leftmargin + col * colwidth + birthdayx, row * rowheight + birthdayy, birthday[6:10], fontSize = 8, fillColor = colors.black))
     #land1 5
     landcode = formule1data[i][5]
-    d.add(transform_svg(lookupflag(landcode), col * colwidth + 0.5 * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
+    d.add(transform_svg(lookupflag(landcode), col * colwidth + 0.5 * colwidth + flagx, row * rowheight + flagy, 0.3 , 0.3))
     #birthday2
     birthday = formule1data[i][4]
     d.add(transform_svg("SVG/calendar-blank.svg", leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, row * rowheight + birthdayy, 0.5 , 0.5))
@@ -121,7 +122,7 @@ for i in range(count):
     d.add(String(leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, row * rowheight + birthdayy, birthday[6:10], fontSize = 8, fillColor = colors.black))
     #land2 9
     landcode = formule1data[i][9]
-    d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
+    d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + flagy, 0.3 , 0.3))
     d.add(Line(leftmargin + col * colwidth, row * rowheight + 155, col * colwidth + colwidth - 10, row * rowheight + 155, strokeColor=colors.black, strokeWidth = 1))
     d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 14, row * rowheight + 145, 10.0, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, row * rowheight + 145, leftmargin + col * colwidth + colwidth - 4, row * rowheight + 105, strokeColor=colors.black, strokeWidth = 1))
