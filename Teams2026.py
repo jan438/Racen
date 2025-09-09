@@ -74,7 +74,6 @@ print("Count:", count)
 d = Drawing(210*mm, 297*mm)
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 formule1font = "LiberationSerif"
-score_font_size = 17
 d.add(transform_svg("SVG/F1.svg", 100, 800, 1, 1))
 rowheight = 150
 colwidth = 198
