@@ -92,13 +92,13 @@ for i in range(count):
     #team name
     d.add(String(leftmargin + col * colwidth, row * rowheight + 135, formule1data[i][0], font = formule1font, fontSize = 20, fillColor = colors.black))
     #name2 7
-    d.add(String(leftmargin + col * colwidth, row * rowheight + 95, formule1data[i][7], font = formule1font, fontSize = 15, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth, row * rowheight + 90, formule1data[i][7], font = formule1font, fontSize = 15, fillColor = colors.black))
     #surname2 6
-    d.add(String(leftmargin + col * colwidth, row * rowheight + 110, formule1data[i][6], font = formule1font, fontSize = 14, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth, row * rowheight + 105, formule1data[i][6], font = formule1font, fontSize = 14, fillColor = colors.black))
     #name1 3
-    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 95, formule1data[i][3], font = formule1font, fontSize = 15, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 90, formule1data[i][3], font = formule1font, fontSize = 15, fillColor = colors.black))
     #surname1 2
-    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 110, formule1data[i][2], font = formule1font, fontSize = 14, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 105, formule1data[i][2], font = formule1font, fontSize = 14, fillColor = colors.black))
     # logo
     svg_root = load_svg_file("Logos/" + formule1data[i][1] + ".svg")
     svgwidth = svg_root.attrib.get('width')
