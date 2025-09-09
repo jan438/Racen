@@ -87,9 +87,6 @@ flagx = 73.4
 birthdayx = 20
 birthdayy = 140
 leftmargin = 4.0
-rightmargin = 1.5
-#3 * colwidth + leftmarin + rightmargin = 3 +  3 * 198
-maxscorewidth = 27.0
 d.add(String(100, 775,"2026 Teams", fontSize = 30, fillColor = colors.black))
 for i in range(count):
     #team 0
