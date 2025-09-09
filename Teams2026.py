@@ -84,8 +84,8 @@ logoheight = 25
 row = 4
 col = 0
 flagx = 73.4
-birthdayx = 20
-birthdayy = 140
+birthdayx = 0
+birthdayy = 120
 leftmargin = 4.0
 d.add(String(100, 775,"2026 Teams", fontSize = 30, fillColor = colors.black))
 for i in range(count):
