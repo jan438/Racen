@@ -54,7 +54,7 @@ def transform_svg(svgfile, tx, ty, sx, sy):
     gimg.scale(sx, sy)
     return gimg
 def lookupflag(flagcode):
-    flagimage = "Flags/" + flagcode + ".svg"
+    flagimage = "Flags/" + flagcode + "tw.svg"
     return flagimage
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
@@ -117,7 +117,7 @@ for i in range(count):
     d.add(String(leftmargin + col * colwidth + birthdayx, bottommargin + row * rowheight + birthdayy, birthday[6:10], fontSize = 8, fillColor = colors.black))
     #land1 5
     landcode = formule1data[i][5]
-    d.add(transform_svg(lookupflag(landcode), col * colwidth + 0.5 * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.3 , 0.3))
+    d.add(transform_svg(lookupflag(landcode), col * colwidth + 0.5 * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.5 , 0.5))
     #birthday2
     birthday = formule1data[i][4]
     d.add(transform_svg("SVG/calendar-blank.svg", leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, bottommargin + row * rowheight + birthdayy, 0.5 , 0.5))
@@ -125,7 +125,7 @@ for i in range(count):
     d.add(String(leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, bottommargin + row * rowheight + birthdayy, birthday[6:10], fontSize = 8, fillColor = colors.black))
     #land2 9
     landcode = formule1data[i][9]
-    d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.3 , 0.3))
+    d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.5 , 0.5))
     d.add(Line(leftmargin + col * colwidth, bottommargin + row * rowheight + 155, col * colwidth + colwidth - 10, bottommargin + row * rowheight + 155, strokeColor=colors.black, strokeWidth = 1))
     d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 14, bottommargin + row * rowheight + 145, 10.0, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 145, leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 105, strokeColor=colors.black, strokeWidth = 1))
