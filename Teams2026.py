@@ -77,7 +77,6 @@ formule1font = "LiberationSerif"
 d.add(transform_svg("SVG/F1.svg", 100, 800, 1, 1))
 rowheight = 150
 colwidth = 198
-halfcolwidth = 99.0
 logox = 175
 logoy = 135
 logowidth = 25
@@ -117,22 +116,22 @@ for i in range(count):
     d.add(String(leftmargin + col * colwidth + birthdayx, row * rowheight + birthdayy, birthday[6:10], fontSize = 8, fillColor = colors.black))
     #land1 5
     landcode = formule1data[i][5]
-    d.add(transform_svg(lookupflag(landcode), col * colwidth + halfcolwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
+    d.add(transform_svg(lookupflag(landcode), col * colwidth + 0.5 * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
     #birthday2
     birthday = formule1data[i][4]
-    d.add(transform_svg("SVG/calendar-blank.svg", leftmargin + col * colwidth + halfcolwidth + birthdayx, row * rowheight + birthdayy, 0.5 , 0.5))
-    d.add(String(leftmargin + col * colwidth + halfcolwidth + birthdayx, row * rowheight + birthdayy + 5, birthday[:5], fontSize = 8, fillColor = colors.black))
-    d.add(String(leftmargin + col * colwidth + halfcolwidth + birthdayx, row * rowheight + birthdayy, birthday[6:10], fontSize = 8, fillColor = colors.black))
+    d.add(transform_svg("SVG/calendar-blank.svg", leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, row * rowheight + birthdayy, 0.5 , 0.5))
+    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, row * rowheight + birthdayy + 5, birthday[:5], fontSize = 8, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, row * rowheight + birthdayy, birthday[6:10], fontSize = 8, fillColor = colors.black))
     #land2 9
     landcode = formule1data[i][9]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, row * rowheight + 90, 0.3 , 0.3))
     d.add(Line(leftmargin + col * colwidth, row * rowheight + 155, col * colwidth + colwidth - 10, row * rowheight + 155, strokeColor=colors.black, strokeWidth = 1))
     d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 14, row * rowheight + 145, 10.0, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, row * rowheight + 145, leftmargin + col * colwidth + colwidth - 4, row * rowheight + 105, strokeColor=colors.black, strokeWidth = 1))
-    d.add(Line(leftmargin + col * colwidth, row * rowheight + 82, leftmargin + col * colwidth + halfcolwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
-    d.add(bottomrightcorner(leftmargin + col * colwidth + halfcolwidth - 8.0 - 4, row * rowheight + 90, 8.0, 1, colors.black))
-    d.add(Line(leftmargin + col * colwidth + halfcolwidth - 4, row * rowheight + 90, leftmargin + col * colwidth + halfcolwidth - 4, row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
-    d.add(Line(leftmargin + col * colwidth + halfcolwidth, row * rowheight + 82, leftmargin + col * colwidth + colwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
+    d.add(Line(leftmargin + col * colwidth, row * rowheight + 82, leftmargin + col * colwidth + 0.5 * colwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
+    d.add(bottomrightcorner(leftmargin + col * colwidth + 0.5 * colwidth - 8.0 - 4, row * rowheight + 90, 8.0, 1, colors.black))
+    d.add(Line(leftmargin + col * colwidth + 0.5 * colwidth - 4, row * rowheight + 90, leftmargin + col * colwidth + 0.5 * colwidth - 4, row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
+    d.add(Line(leftmargin + col * colwidth + 0.5 * colwidth, row * rowheight + 82, leftmargin + col * colwidth + colwidth - 8.0 - 4, row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
     d.add(bottomrightcorner(leftmargin + col * colwidth + colwidth - 8.0 -4, row * rowheight + 90, 8.0, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, row * rowheight + 90, leftmargin + col * colwidth + colwidth - 4, row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
     # logomiddle
