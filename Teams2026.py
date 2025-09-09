@@ -85,7 +85,7 @@ row = 4
 col = 0
 flagx = 73.4
 birthdayx = 0
-birthdayy = 120
+birthdayy = 115
 leftmargin = 4.0
 d.add(String(100, 775,"2026 Teams", fontSize = 30, fillColor = colors.black))
 for i in range(count):
@@ -109,7 +109,7 @@ for i in range(count):
     # birthday1
     birthday = formule1data[i][8]
     d.add(transform_svg("SVG/calendar-blank.svg", leftmargin + col * colwidth + birthdayx, row * rowheight + birthdayy, 0.5 , 0.5))
-    d.add(String(leftmargin + col * colwidth + birthdayx, row * rowheight + birthdayy + 5, birthday[:5], fontSize = 8, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + birthdayx, row * rowheight + birthdayy + 6, birthday[:5], fontSize = 8, fillColor = colors.black))
     d.add(String(leftmargin + col * colwidth + birthdayx, row * rowheight + birthdayy, birthday[6:10], fontSize = 8, fillColor = colors.black))
     #land1 5
     landcode = formule1data[i][5]
@@ -117,7 +117,7 @@ for i in range(count):
     #birthday2
     birthday = formule1data[i][4]
     d.add(transform_svg("SVG/calendar-blank.svg", leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, row * rowheight + birthdayy, 0.5 , 0.5))
-    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, row * rowheight + birthdayy + 5, birthday[:5], fontSize = 8, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, row * rowheight + birthdayy + 6, birthday[:5], fontSize = 8, fillColor = colors.black))
     d.add(String(leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, row * rowheight + birthdayy, birthday[6:10], fontSize = 8, fillColor = colors.black))
     #land2 9
     landcode = formule1data[i][9]
