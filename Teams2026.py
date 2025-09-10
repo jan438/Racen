@@ -78,7 +78,7 @@ d = Drawing(210*mm, 297*mm)
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 formule1font = "LiberationSerif"
 d.add(transform_svg("SVG/F1.svg", 100, 800, 1, 1))
-rowheight = 170
+rowheight = 180
 colwidth = 195
 logox = 170
 logoy = 140
@@ -94,7 +94,7 @@ flagy = 115
 birthdayx = 0
 birthdayy = 115
 leftmargin = 4.0
-bottommargin = -80.0
+bottommargin = -120.0
 d.add(String(100, 775,"2026 Teams", fontSize = 30, fillColor = colors.black))
 for i in range(count):
     d.add(Rect(leftmargin + col * colwidth, bottommargin + row * rowheight, colwidth - 5, 75, strokeColor = teamcolors[i], fillColor = teamcolors[i]))
