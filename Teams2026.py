@@ -94,6 +94,7 @@ leftmargin = 4.0
 bottommargin = -80.0
 d.add(String(100, 775,"2026 Teams", fontSize = 30, fillColor = colors.black))
 for i in range(count):
+    d.add(Rect(leftmargin + col * colwidth, bottommargin + row * rowheight, 300, 100, fillColor=colors.yellow))
     #team name
     d.add(String(leftmargin + col * colwidth, bottommargin + row * rowheight + teamy, formule1data[i][0], font = formule1font, fontSize = 18, fillColor = colors.black))
     #name2 7
