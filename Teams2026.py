@@ -30,7 +30,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from PIL import Image as PILImage
 
 styles = getSampleStyleSheet()
-teamcolors = ["#88255F", "#DB4035", "#FF9933", "#FAD000", "#AFB83B", "#AFB83B", "#7ECC49", "#E7E84F", "#299438", "#A8A202", "#158FAD"]
+teamcolors = ["#005081", "#00482C",   "#FF9933", "#FAD000", "#AFB83B", "#AFB83B", "#7ECC49", "#E7E84F", "#299438", "#A8A202", "#158FAD"]
 
 def mycorner(x, y, radius, startdegree, smooth, width, color):
     step = 90 / smooth
