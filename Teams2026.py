@@ -79,7 +79,7 @@ pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf')
 formule1font = "LiberationSerif"
 d.add(transform_svg("SVG/F1.svg", 100, 800, 1, 1))
 rowheight = 170
-colwidth = 198
+colwidth = 195
 logox = 170
 logoy = 140
 namey = 90
