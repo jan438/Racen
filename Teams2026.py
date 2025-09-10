@@ -94,7 +94,7 @@ bottommargin = -80.0
 d.add(String(100, 775,"2026 Teams", fontSize = 30, fillColor = colors.black))
 for i in range(count):
     #team name
-    d.add(String(leftmargin + col * colwidth, bottommargin + row * rowheight + 135, formule1data[i][0], font = formule1font, fontSize = 20, fillColor = colors.black))
+    d.add(String(leftmargin + col * colwidth, bottommargin + row * rowheight + 135, formule1data[i][0], font = formule1font, fontSize = 18, fillColor = colors.black))
     #name2 7
     d.add(String(leftmargin + col * colwidth, bottommargin + row * rowheight + namey, formule1data[i][7], font = formule1font, fontSize = 15, fillColor = colors.black))
     #surname2 6
