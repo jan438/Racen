@@ -30,6 +30,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from PIL import Image as PILImage
 
 styles = getSampleStyleSheet()
+teamcolors = ["#88255F", "#DB4035", "#FF9933", "#FAD000", "#AFB83B", "#AFB83B", "#7ECC49", "#E7E84F", "#299438", "#A8A202", "#158FAD"]
 
 def mycorner(x, y, radius, startdegree, smooth, width, color):
     step = 90 / smooth
@@ -94,7 +95,7 @@ leftmargin = 4.0
 bottommargin = -80.0
 d.add(String(100, 775,"2026 Teams", fontSize = 30, fillColor = colors.black))
 for i in range(count):
-    d.add(Rect(leftmargin + col * colwidth, bottommargin + row * rowheight, colwidth, 75, fillColor=colors.yellow))
+    d.add(Rect(leftmargin + col * colwidth, bottommargin + row * rowheight, colwidth, 75, fillColor = teamcolors[i]))
     #team name
     d.add(String(leftmargin + col * colwidth, bottommargin + row * rowheight + teamy, formule1data[i][0], font = formule1font, fontSize = 18, fillColor = colors.black))
     #name2 7
