@@ -33,6 +33,12 @@ styles = getSampleStyleSheet()
 teamcolors = ["#005081", "#00482C", "#FFFFFF", "#FFFFFF", 
               "#710006", "#4D5052", "#863400", "#007560", 
               "#2345AB", "#003282", "#000681"]
+teamcolours = ["#005081", "#00482C", "#FFFFFF", "#FFFFFF", 
+              "#710006", "#4D5052", "#863400", "#007560", 
+              "#2345AB", "#003282", "#000681"]     
+accessiblecolours = ["#005081", "#00482C", "#FFFFFF", "#FFFFFF", 
+              "#710006", "#4D5052", "#863400", "#007560", 
+              "#2345AB", "#003282", "#000681"]                  
 
 def mycorner(x, y, radius, startdegree, smooth, width, color):
     step = 90 / smooth
