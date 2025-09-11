@@ -93,11 +93,11 @@ flagx = 25.0
 flagy = 115
 birthdayx = 0
 birthdayy = 115
-leftmargin = 4.0
+leftmargin = 5.0
 bottommargin = -120.0
 d.add(String(100, 775,"2026 Teams", fontSize = 30, fillColor = colors.black))
 for i in range(count):
-    d.add(Rect(leftmargin + col * colwidth, bottommargin + row * rowheight - 10, colwidth - 5, 85, strokeColor = teamcolors[i], fillColor = teamcolors[i]))
+    d.add(Rect(leftmargin + col * colwidth, bottommargin + row * rowheight - 10, colwidth, 85, strokeColor = teamcolors[i], fillColor = teamcolors[i]))
     #team name
     d.add(String(leftmargin + col * colwidth, bottommargin + row * rowheight + teamy, formule1data[i][0], font = formule1font, fontSize = 18, fillColor = colors.black))
     #name2 7
