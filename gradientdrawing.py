@@ -50,6 +50,6 @@ col = 0
 birthdayy = 115
 leftmargin = 5.0
 bottommargin = -120.0
-d.add(Rect(leftmargin + col * colwidth, bottommargin + row * rowheight - 10, colwidth, 85, strokeColor = teamcolors[0], fillColor = teamcolors[0]))
+d.add(Rect(leftmargin + col * colwidth, bottommargin + row * rowheight - 10, colwidth, 85, fillColor = red))
 renderPDF.drawToFile(d, 'PDF/gradientdrawing.pdf') 
 key = input("Wait")
