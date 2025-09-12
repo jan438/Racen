@@ -30,10 +30,10 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from PIL import Image as PILImage
 
 styles = getSampleStyleSheet()
-teamcolors = ["#005081", "#00482C", "#006300", "#FFFFFF", 
+teamcolors = ["#005081", "#00482C", "#006300", "#551A8B", 
               "#710006", "#4D5052", "#863400", "#007560", 
               "#2345AB", "#003282", "#000681"]
-teamcolors2 = ["#00A1E8", "#229971", "#01C00E", "#9D52F5",
+teamcolors2 = ["#00A1E8", "#229971", "#01C00E", "#B452CD",
                "#ED1131", "#9C9FA2", "#F47600", "#00D7B6",
                "#6C98FF", "#4781D7", "#1868DB"]             
 
