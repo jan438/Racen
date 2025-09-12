@@ -1,0 +1,21 @@
+Williams 000681
+Aston Martin 00482C
+Haas 4D5052
+Ferrari 710006
+McLaren 863400
+Mercedes 007560
+Red Bull Racing 003282
+Racing Bulls 2345AB
+Alpine 005081
+
+
+* williams team-colour #1868DB  accessible-colour #000681
+* aston team-colour #229971  accessible-colour #00482C
+* mercedes team-colour #00D7B6  accessible-colour #007560
+* haas     team-colour #9C9FA2  accessible-colour #4D5052
+* sauber   team-colour #01C00E  accessible-colour #006300
+* alpine team-colour #00A1E8  accessible-colour #005081
+* racingbulls  team-colour #6C98FF  accessible-colour #2345AB
+* ferrari  team-colour #ED1131  accessible-colour #710006
+* mcclaren team-colour #F47600  accessible-colour #863400
+* red bull team-colour #4781D7  accessible-colour #003282
