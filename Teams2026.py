@@ -144,9 +144,9 @@ for i in range(count):
     d.add(bottomrightcorner(leftmargin + col * colwidth + colwidth - 8.0 -4, bottommargin + row * rowheight + 90, 8.0, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 90, leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
     # logomiddle
-    d.add(Line(leftmargin + col * colwidth + logox - 0.5 * logowidth, bottommargin + row * rowheight + logoy, col * colwidth + logox + 0.5 * logowidth, bottommargin + row * rowheight + logoy, strokeColor=colors.blue, strokeWidth=1))
-    d.add(Line(col * colwidth + logox, bottommargin + row * rowheight + logoy - 0.5 * logoheight, col * colwidth + logox, bottommargin + row * rowheight + logoy + 0.5 * logoheight, strokeColor=colors.blue, strokeWidth = 1))
-    d.add(Circle(leftmargin + col * colwidth + logox,bottommargin + row * rowheight + logoy, 5, strokeColor=colors.blue, strokeWidth = 1, fillColor = None))
+    d.add(Line(leftmargin + col * colwidth + logox - 0.5 * logowidth, bottommargin + row * rowheight + logoy, leftmargin + col * colwidth + logox + 0.5 * logowidth, bottommargin + row * rowheight + logoy, strokeColor=colors.blue, strokeWidth=1))
+    d.add(Line(leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy - 0.5 * logoheight, leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy + 0.5 * logoheight, strokeColor=colors.blue, strokeWidth = 1))
+    d.add(Circle(leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy, 5, strokeColor=colors.blue, strokeWidth = 1, fillColor = None))
     col = col + 1
     if col == 3:
         col = 0
