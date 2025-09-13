@@ -146,7 +146,7 @@ for i in range(count):
     # logomiddle
     d.add(Line(leftmargin + col * colwidth + logox - 0.5 * logowidth, bottommargin + row * rowheight + logoy, leftmargin + col * colwidth + logox + 0.5 * logowidth, bottommargin + row * rowheight + logoy, strokeColor=colors.blue, strokeWidth=1))
     d.add(Line(leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy - 0.5 * logoheight, leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy + 0.5 * logoheight, strokeColor=colors.blue, strokeWidth = 1))
-    d.add(Circle(leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy, 5, strokeColor=colors.blue, strokeWidth = 1, fillColor = None))
+    d.add(Circle(leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy, 0.5 * logowidth, strokeColor = colors.blue, strokeWidth = 1, fillColor = None))
     col = col + 1
     if col == 3:
         col = 0
