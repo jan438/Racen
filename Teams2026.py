@@ -153,8 +153,5 @@ for i in range(count):
     if col == 3:
         col = 0
         row = row - 1
-#d.add(Line(595,0,595,842, strokeColor=colors.blue, strokeWidth=1))
-#for i in range(5):
-    #d.add(Line(0,i*rowheight+logoy,595,i*rowheight+logoy, strokeColor=colors.blue, strokeWidth=1))
 renderPDF.drawToFile(d, 'PDF/Teams2026.pdf') 
 key = input("Wait")
