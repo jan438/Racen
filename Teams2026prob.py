@@ -87,6 +87,7 @@ logox = 163
 logoy = 140
 avatarx = 70
 avatary = 85
+avatars = 0.05
 namey = 90
 teamy = 140
 surname = 103
@@ -131,7 +132,7 @@ for i in range(count):
     svg_root = load_svg_file("Teams/Verstappen.svg")
     svgwidth = svg_root.attrib.get('width')
     svgheight = svg_root.attrib.get('height')
-    d.add(transform_svg("Teams/Verstappen.svg", leftmargin + avatarx + col * colwidth, bottommargin + avatary + row * rowheight, 0.06, 0.06))
+    d.add(transform_svg("Teams/Verstappen.svg", leftmargin + avatarx + col * colwidth, bottommargin + avatary + row * rowheight, avatars, avatars))
     #birthday2
     birthday = formule1data[i][4]
     d.add(transform_svg("SVG/calendar-blank.svg", leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, bottommargin + row * rowheight + birthdayy, 0.5 , 0.5))
@@ -143,7 +144,7 @@ for i in range(count):
     svg_root = load_svg_file("Teams/Verstappen.svg")
     svgwidth = svg_root.attrib.get('width')
     svgheight = svg_root.attrib.get('height')
-    d.add(transform_svg("Teams/Verstappen.svg", leftmargin + avatarx + col * colwidth + 0.5 * colwidth, bottommargin + avatary + row * rowheight, 0.06, 0.06))
+    d.add(transform_svg("Teams/Verstappen.svg", leftmargin + avatarx + col * colwidth + 0.5 * colwidth, bottommargin + avatary + row * rowheight, avatars, avatars))
     d.add(Line(leftmargin + col * colwidth, bottommargin + row * rowheight + 155, col * colwidth + colwidth - 9, bottommargin + row * rowheight + 155, strokeColor=colors.black, strokeWidth = 1))
     d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 14, bottommargin + row * rowheight + 145, 10.0, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 145, leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 105, strokeColor=colors.black, strokeWidth = 1))
