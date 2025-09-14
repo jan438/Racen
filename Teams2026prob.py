@@ -87,7 +87,7 @@ logox = 163
 logoy = 140
 avatarx = 70
 avatary = 85
-avatars = 0.05
+avatars = 0.04
 namey = 90
 teamy = 140
 surname = 103
@@ -129,6 +129,7 @@ for i in range(count):
     #land1 5
     landcode = formule1data[i][5]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + 0.5 * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.5 , 0.5))
+    d.add(Circle(leftmargin + col * colwidth + avatarx, bottommargin + row * rowheight + avatary, 0.5 * logowidth, strokeColor = colors.blue, strokeWidth = 1, fillColor = teamcolors2[i]))
     svg_root = load_svg_file("Teams/Verstappen.svg")
     svgwidth = svg_root.attrib.get('width')
     svgheight = svg_root.attrib.get('height')
@@ -141,6 +142,7 @@ for i in range(count):
     #land2 9
     landcode = formule1data[i][9]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.5 , 0.5))
+    d.add(Circle(leftmargin + col * colwidth + 0.5 * colwidth + avatarx, bottommargin + row * rowheight + avatary, 0.5 * logowidth, strokeColor = colors.blue, strokeWidth = 1, fillColor = teamcolors2[i]))
     svg_root = load_svg_file("Teams/Verstappen.svg")
     svgwidth = svg_root.attrib.get('width')
     svgheight = svg_root.attrib.get('height')
