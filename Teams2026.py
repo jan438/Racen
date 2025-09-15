@@ -85,13 +85,18 @@ rowheight = 180
 colwidth = 195
 logox = 163
 logoy = 140
-avatarx = 80
-avatary = 100
+avatarx = 64
+avatary = 82
+avatars = 0.04
 namey = 90
 teamy = 140
 surname = 103
 logowidth = 25
 logoheight = 25
+avatarwidth = 30
+avatarheight = 30
+avatardx = 7
+avatardy = 3
 row = 4
 col = 0
 flagx = 25.0
@@ -128,6 +133,8 @@ for i in range(count):
     #land1 5
     landcode = formule1data[i][5]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + 0.5 * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.5 , 0.5))
+    d.add(Circle(leftmargin + col * colwidth + avatarx + 0.5 * avatarwidth, bottommargin + row * rowheight + avatary + 0.5 * avatarwidth, 0.5 * avatarwidth, strokeColor = None, strokeWidth = 0, fillColor = teamcolors2[i]))
+    d.add(transform_svg("Teams/Verstappen.svg", leftmargin + avatarx + avatardx + col * colwidth, bottommargin + avatary + avatardy + row * rowheight, avatars, avatars))
     #birthday2
     birthday = formule1data[i][4]
     d.add(transform_svg("SVG/calendar-blank.svg", leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, bottommargin + row * rowheight + birthdayy, 0.5 , 0.5))
@@ -136,15 +143,17 @@ for i in range(count):
     #land2 9
     landcode = formule1data[i][9]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.5 , 0.5))
+    d.add(Circle(leftmargin + col * colwidth + 0.5 * colwidth + avatarx + 0.5 * avatarwidth, bottommargin + row * rowheight + avatary + 0.5 * avatarwidth, 0.5 * avatarwidth, strokeColor = None, strokeWidth = 0, fillColor = teamcolors2[i]))
+    d.add(transform_svg("Teams/Verstappen.svg", leftmargin + avatarx + avatardx + col * colwidth + 0.5 * colwidth, bottommargin + avatary + avatardy + row * rowheight, avatars, avatars))
     d.add(Line(leftmargin + col * colwidth, bottommargin + row * rowheight + 155, col * colwidth + colwidth - 9, bottommargin + row * rowheight + 155, strokeColor=colors.black, strokeWidth = 1))
     d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 14, bottommargin + row * rowheight + 145, 10.0, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 145, leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 105, strokeColor=colors.black, strokeWidth = 1))
-    d.add(Line(leftmargin + col * colwidth, bottommargin + row * rowheight + 82, leftmargin + col * colwidth + 0.5 * colwidth - 8.0 - 4, bottommargin + row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
-    d.add(bottomrightcorner(leftmargin + col * colwidth + 0.5 * colwidth - 8.0 - 4, bottommargin + row * rowheight + 90, 8.0, 1, colors.black))
-    d.add(Line(leftmargin + col * colwidth + 0.5 * colwidth - 4, bottommargin + row * rowheight + 90, leftmargin + col * colwidth + 0.5 * colwidth - 4, bottommargin + row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
-    d.add(Line(leftmargin + col * colwidth + 0.5 * colwidth, bottommargin + row * rowheight + 82, leftmargin + col * colwidth + colwidth - 8.0 - 4, bottommargin + row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
-    d.add(bottomrightcorner(leftmargin + col * colwidth + colwidth - 8.0 -4, bottommargin + row * rowheight + 90, 8.0, 1, colors.black))
-    d.add(Line(leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 90, leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
+    d.add(Line(leftmargin + col * colwidth, bottommargin + row * rowheight + 82, leftmargin + col * colwidth + 0.5 * colwidth - 19, bottommargin + row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
+    d.add(bottomrightcorner(leftmargin + col * colwidth + 0.5 * colwidth - 19, bottommargin + row * rowheight + 97, 0.5 * avatarwidth, 1, colors.black))
+    d.add(Line(leftmargin + col * colwidth + 0.5 * colwidth - 4, bottommargin + row * rowheight + 97, leftmargin + col * colwidth + 0.5 * colwidth - 4, bottommargin + row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
+    d.add(Line(leftmargin + col * colwidth + 0.5 * colwidth, bottommargin + row * rowheight + 82, leftmargin + col * colwidth + colwidth - 19, bottommargin + row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
+    d.add(bottomrightcorner(leftmargin + col * colwidth + colwidth - 19, bottommargin + row * rowheight + 97, 0.5 * avatarwidth, 1, colors.black))
+    d.add(Line(leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 97, leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
     # logomiddle
     d.add(Line(leftmargin + col * colwidth + logox - 0.5 * logowidth, bottommargin + row * rowheight + logoy, leftmargin + col * colwidth + logox + 0.5 * logowidth, bottommargin + row * rowheight + logoy, strokeColor=colors.blue, strokeWidth=1))
     d.add(Line(leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy - 0.5 * logoheight, leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy + 0.5 * logoheight, strokeColor=colors.blue, strokeWidth = 1))
