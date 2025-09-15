@@ -95,6 +95,8 @@ logowidth = 25
 logoheight = 25
 avatarwidth = 30
 avatarheight = 30
+avatardx = 5
+avatardy = 5
 row = 4
 col = 0
 flagx = 25.0
@@ -132,7 +134,7 @@ for i in range(count):
     landcode = formule1data[i][5]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + 0.5 * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.5 , 0.5))
     d.add(Circle(leftmargin + col * colwidth + avatarx + 0.5 * avatarwidth, bottommargin + row * rowheight + avatary + 0.5 * avatarwidth, 0.5 * avatarwidth, strokeColor = None, strokeWidth = 0, fillColor = teamcolors2[i]))
-    d.add(transform_svg("Teams/Verstappen.svg", leftmargin + avatarx + col * colwidth, bottommargin + avatary + row * rowheight, avatars, avatars))
+    d.add(transform_svg("Teams/Verstappen.svg", leftmargin + avatarx + avatardx + col * colwidth, bottommargin + avatary + avatardy + row * rowheight, avatars, avatars))
     #birthday2
     birthday = formule1data[i][4]
     d.add(transform_svg("SVG/calendar-blank.svg", leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, bottommargin + row * rowheight + birthdayy, 0.5 , 0.5))
