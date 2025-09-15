@@ -131,7 +131,7 @@ for i in range(count):
     #land1 5
     landcode = formule1data[i][5]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + 0.5 * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.5 , 0.5))
-    d.add(Circle(leftmargin + col * colwidth + avatarx, bottommargin + row * rowheight + avatary, 0.5 * avatarwidth, strokeColor = None, strokeWidth = 0, fillColor = teamcolors2[i]))
+    d.add(Circle(leftmargin + col * colwidth + avatarx + 0.5 * avatarwidth, bottommargin + row * rowheight + avatary + 0.5 * avatarwidth, 0.5 * avatarwidth, strokeColor = None, strokeWidth = 0, fillColor = teamcolors2[i]))
     d.add(transform_svg("Teams/Verstappen.svg", leftmargin + avatarx + col * colwidth, bottommargin + avatary + row * rowheight, avatars, avatars))
     #birthday2
     birthday = formule1data[i][4]
@@ -141,7 +141,7 @@ for i in range(count):
     #land2 9
     landcode = formule1data[i][9]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.5 , 0.5))
-    d.add(Circle(leftmargin + col * colwidth + 0.5 * colwidth + avatarx, bottommargin + row * rowheight + avatary, 0.5 * avatarwidth, strokeColor = None, strokeWidth = 0, fillColor = teamcolors2[i]))
+    d.add(Circle(leftmargin + col * colwidth + 0.5 * colwidth + avatarx + 0.5 * avatarwidth, bottommargin + row * rowheight + avatary + 0.5 * avatarwidth, 0.5 * avatarwidth, strokeColor = None, strokeWidth = 0, fillColor = teamcolors2[i]))
     d.add(transform_svg("Teams/Verstappen.svg", leftmargin + avatarx + col * colwidth + 0.5 * colwidth, bottommargin + avatary + row * rowheight, avatars, avatars))
     d.add(Line(leftmargin + col * colwidth, bottommargin + row * rowheight + 155, col * colwidth + colwidth - 9, bottommargin + row * rowheight + 155, strokeColor=colors.black, strokeWidth = 1))
     d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 14, bottommargin + row * rowheight + 145, 10.0, 1, colors.black))
