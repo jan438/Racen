@@ -148,10 +148,10 @@ for i in range(count):
     d.add(Line(leftmargin + col * colwidth, bottommargin + row * rowheight + 155, col * colwidth + colwidth - 9, bottommargin + row * rowheight + 155, strokeColor=colors.black, strokeWidth = 1))
     d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 14, bottommargin + row * rowheight + 145, 10.0, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 145, leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 105, strokeColor=colors.black, strokeWidth = 1))
-    d.add(Line(leftmargin + col * colwidth, bottommargin + row * rowheight + 82, leftmargin + col * colwidth + 0.5 * colwidth - 14, bottommargin + row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
+    d.add(Line(leftmargin + col * colwidth, bottommargin + row * rowheight + 82, leftmargin + col * colwidth + 0.5 * colwidth - 17, bottommargin + row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
     d.add(bottomrightcorner(leftmargin + col * colwidth + 0.5 * colwidth - 19, bottommargin + row * rowheight + 97, 0.5 * avatarwidth, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + 0.5 * colwidth - 4, bottommargin + row * rowheight + 90, leftmargin + col * colwidth + 0.5 * colwidth - 4, bottommargin + row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
-    d.add(Line(leftmargin + col * colwidth + 0.5 * colwidth, bottommargin + row * rowheight + 82, leftmargin + col * colwidth + colwidth - 14, bottommargin + row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
+    d.add(Line(leftmargin + col * colwidth + 0.5 * colwidth, bottommargin + row * rowheight + 82, leftmargin + col * colwidth + colwidth - 17, bottommargin + row * rowheight + 82, strokeColor=colors.black, strokeWidth = 1))
     d.add(bottomrightcorner(leftmargin + col * colwidth + colwidth - 19, bottommargin + row * rowheight + 97, 0.5 * avatarwidth, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 90, leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
     # logomiddle
