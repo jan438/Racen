@@ -134,7 +134,9 @@ for i in range(count):
     landcode = formule1data[i][5]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + 0.5 * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.5 , 0.5))
     d.add(Circle(leftmargin + col * colwidth + avatarx + 0.5 * avatarwidth, bottommargin + row * rowheight + avatary + 0.5 * avatarwidth, 0.5 * avatarwidth, strokeColor = None, strokeWidth = 0, fillColor = teamcolors2[i]))
-    d.add(transform_svg("Teams/" + formule1data[i][6][0] + formule1data[i][7][0] + ".svg", leftmargin + avatarx + avatardx + col * colwidth, bottommargin + avatary + avatardy + row * rowheight, avatars, avatars))
+    initials = formule1data[i][6][0] + formule1data[i][7][0]
+    if initials != "TT":
+        d.add(transform_svg("Teams/" + initials + ".svg", leftmargin + avatarx + avatardx + col * colwidth, bottommargin + avatary + avatardy + row * rowheight, avatars, avatars))
     #birthday2
     birthday = formule1data[i][4]
     d.add(transform_svg("SVG/calendar-blank.svg", leftmargin + col * colwidth + 0.5 * colwidth + birthdayx, bottommargin + row * rowheight + birthdayy, 0.5 , 0.5))
@@ -144,7 +146,9 @@ for i in range(count):
     landcode = formule1data[i][9]
     d.add(transform_svg(lookupflag(landcode), col * colwidth + flagx, bottommargin + row * rowheight + flagy, 0.5 , 0.5))
     d.add(Circle(leftmargin + col * colwidth + 0.5 * colwidth + avatarx + 0.5 * avatarwidth, bottommargin + row * rowheight + avatary + 0.5 * avatarwidth, 0.5 * avatarwidth, strokeColor = None, strokeWidth = 0, fillColor = teamcolors2[i]))
-    d.add(transform_svg("Teams/" + formule1data[i][2][0] + formule1data[i][3][0] + ".svg", leftmargin + avatarx + avatardx + col * colwidth + 0.5 * colwidth, bottommargin + avatary + avatardy + row * rowheight, avatars, avatars))
+    initials =  formule1data[i][2][0] + formule1data[i][3][0]
+    if initials != "TT":
+        d.add(transform_svg("Teams/" + initials + ".svg", leftmargin + avatarx + avatardx + col * colwidth + 0.5 * colwidth, bottommargin + avatary + avatardy + row * rowheight, avatars, avatars))
     d.add(Line(leftmargin + col * colwidth, bottommargin + row * rowheight + 155, col * colwidth + colwidth - 9, bottommargin + row * rowheight + 155, strokeColor=colors.black, strokeWidth = 1))
     d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 14, bottommargin + row * rowheight + 145, 10.0, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 145, leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 105, strokeColor=colors.black, strokeWidth = 1))
