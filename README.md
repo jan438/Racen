@@ -1,7 +1,7 @@
 This repository is used to create a PDF-document of 3 pages with the 2026 Formule 1 calendar, circuit-diagrams and team information.
 
 Many thanks to Tomislav Bacinger who provided the geo data to create the circuit-diagrams.
-Tools used ReportLab, OpenStreetMap, Gimp, Inkscape Ubuntu, New Calendar Android.
+Tools used ReportLab, OpenStreetMap, Gimp, Inkscape, Potrace Ubuntu, New Calendar Android.
 
 MIT License
 
