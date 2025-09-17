@@ -1,0 +1,152 @@
+Australia
+08-03 fp1 12:30
+      fp2 16:00
+      fp3 12:30
+      qua 16:00
+      rac 15:00
+China
+15-03 fp1 11:30
+      spq 15:30
+      spr 11:00
+      qua 15:00
+      rac 15:00
+Japan
+29-03 fp1 11:30
+      fp2 15:00
+      fp3 11:30
+      qua 15:00
+      rac 14:00
+Bahrain
+12-04 fp1 14:30
+      fp2 18:00
+      fp3 15:30
+      qua 19:00
+      rac 18:00
+Saudi Arabia
+19-04 fp1 16:30
+      fp2 20:00
+      fp3 16:30
+      qua 20:00
+      rac 20:00
+Miami
+13-05 fp1 12:30
+      spq 16:30
+      spr 12:00
+      qua 16:00
+      rac 16:00
+Canada
+24-05 fp1 12:30
+      spq 16:30
+      spr 12:00
+      qua 16:00
+      rac 16:00
+Monaco
+07-06 fp1 13:00
+      fp2 17:00
+      fp3 12:30
+      qua 16:00
+      rac 15:00
+Cataluna
+14-06 fp1 13:30
+      fp2 17:00
+      fp3 12:30
+      qua 16:00
+      rac 15:00
+Austria
+28-06 fp1 13:30
+      fp2 17:00
+      fp3 12:30
+      qua 16:00
+      rac 15:00
+Britain
+05-07 fp1 12:30
+      spq 16:30
+      spr 12:00
+      qua 16:00
+      rac 15:00
+Belgium
+19-07 fp1 13:30
+      fp2 17:00
+      fp3 12:30
+      qua 16:00
+      rac 15:00
+Hungary
+26-07 fp1 13:30
+      fp2 17:00
+      fp3 12:30
+      qua 16:00
+      rac 15:00
+Netherlands
+23-08 fp1 12:00
+      spq 16:30
+      spr 12:00
+      qua 16:00
+      rac 15:00
+Italy
+06-09 fp1 12:30
+      fp2 16:00
+      fp3 12:30
+      qua 16:00
+      rac 15:00
+Spain
+13-09 fp1 13:30
+      fp2 17:00
+      fp3 12:30
+      qua 16:00
+      rac 15:00
+Azerbaijan
+26-09 fp1 12:30
+      fp2 16:00
+      fp3 12:30
+      qua 16:00
+      rac 15:00
+Singapore
+11-10 fp1 17:30
+      spq 20:30
+      spr 17:00
+      qua 21:00
+      rac 20:00
+States
+25-10 fp1 12:30
+      fp2 16:00
+      fp3 12:30
+      qua 16:00
+      rac 15:00
+Mexico
+01-11 fp1 12:30
+      fp2 16:00
+      fp3 11:30
+      qua 15:00
+      rac 14:00
+Sao Paulo
+08-11 fp1 12:30
+      fp2 16:00
+      fp3 11:30
+      qua 15:00
+      rac 14:00
+Las Vegas
+21-11 fp1 16:30
+      fp2 20:00
+      fp3 16:30
+      qua 20:00
+      rac 20:00
+Qatar
+29-11 fp1 16:30
+      fp2 20:00
+      fp3 17:30
+      qua 21:00
+      rac 19:00
+Abu Dhabi
+06-12 fp1 13:30
+      fp2 17:00
+      fp3 14:30
+      qua 18:00
+      rac 17:00      
+
+            
+      
+      
+             
+          
+      
+      
