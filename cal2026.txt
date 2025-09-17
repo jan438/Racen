@@ -1,142 +1,142 @@
-Australia
+Australia      UTC+10
 08-03 fp1 12:30
       fp2 16:00
       fp3 12:30
       qua 16:00
       rac 15:00
-China
+China          UTC+8
 15-03 fp1 11:30
       spq 15:30
       spr 11:00
       qua 15:00
       rac 15:00
-Japan
+Japan          UTC+9
 29-03 fp1 11:30
       fp2 15:00
       fp3 11:30
       qua 15:00
       rac 14:00
-Bahrain
+Bahrain        UTC+3
 12-04 fp1 14:30
       fp2 18:00
       fp3 15:30
       qua 19:00
       rac 18:00
-Saudi Arabia
+Saudi Arabia   UTC+3
 19-04 fp1 16:30
       fp2 20:00
       fp3 16:30
       qua 20:00
       rac 20:00
-Miami
+Miami          UTC-4
 13-05 fp1 12:30
       spq 16:30
       spr 12:00
       qua 16:00
       rac 16:00
-Canada
+Canada         UTC-4
 24-05 fp1 12:30
       spq 16:30
       spr 12:00
       qua 16:00
       rac 16:00
-Monaco
+Monaco         UTC+2 
 07-06 fp1 13:00
       fp2 17:00
       fp3 12:30
       qua 16:00
       rac 15:00
-Cataluna
+Cataluna       UTC+2
 14-06 fp1 13:30
       fp2 17:00
       fp3 12:30
       qua 16:00
       rac 15:00
-Austria
+Austria        UTC+2
 28-06 fp1 13:30
       fp2 17:00
       fp3 12:30
       qua 16:00
       rac 15:00
-Britain
+Britain        UTC+1
 05-07 fp1 12:30
       spq 16:30
       spr 12:00
       qua 16:00
       rac 15:00
-Belgium
+Belgium        UTC+2
 19-07 fp1 13:30
       fp2 17:00
       fp3 12:30
       qua 16:00
       rac 15:00
-Hungary
+Hungary        UTC+2
 26-07 fp1 13:30
       fp2 17:00
       fp3 12:30
       qua 16:00
       rac 15:00
-Netherlands
+Netherlands    UTC+2
 23-08 fp1 12:00
       spq 16:30
       spr 12:00
       qua 16:00
       rac 15:00
-Italy
+Italy          UTC+2
 06-09 fp1 12:30
       fp2 16:00
       fp3 12:30
       qua 16:00
       rac 15:00
-Spain
+Spain          UTC+2
 13-09 fp1 13:30
       fp2 17:00
       fp3 12:30
       qua 16:00
       rac 15:00
-Azerbaijan
+Azerbaijan     UTC+4
 26-09 fp1 12:30
       fp2 16:00
       fp3 12:30
       qua 16:00
       rac 15:00
-Singapore
+Singapore      UTC+8
 11-10 fp1 17:30
       spq 20:30
       spr 17:00
       qua 21:00
       rac 20:00
-States
+States         UTC-5
 25-10 fp1 12:30
       fp2 16:00
       fp3 12:30
       qua 16:00
       rac 15:00
-Mexico
+Mexico         UTC-6
 01-11 fp1 12:30
       fp2 16:00
       fp3 11:30
       qua 15:00
       rac 14:00
-Sao Paulo
+Sao Paulo      UTC-3
 08-11 fp1 12:30
       fp2 16:00
       fp3 11:30
       qua 15:00
       rac 14:00
-Las Vegas
+Las Vegas      UTC-7
 21-11 fp1 16:30
       fp2 20:00
       fp3 16:30
       qua 20:00
       rac 20:00
-Qatar
+Qatar          UTC+3
 29-11 fp1 16:30
       fp2 20:00
       fp3 17:30
       qua 21:00
       rac 19:00
-Abu Dhabi
+Abu Dhabi      UTC+4
 06-12 fp1 13:30
       fp2 17:00
       fp3 14:30
