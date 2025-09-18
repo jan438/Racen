@@ -133,7 +133,6 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-sortondate()
 eventcal = "Calendar/Formule12026LT.ics"
 in_file = open(os.path.join(path, eventcal), 'r')
 count = 0
