@@ -93,7 +93,8 @@ def converttimetztolocalclock(timetz):
     utc_format = "%Y%m%dT%H%M%S"
     local_tz = pytz.timezone('Europe/Amsterdam')
     utc_dt = datetime.strptime(utc_string, utc_format)
-    local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
+    #local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
+    local_dt = utc_dt
     hour = local_dt.hour
     minute = local_dt.minute
     return [hour, minute]
