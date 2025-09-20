@@ -1,29 +1,29 @@
 Hoe laat begint F1 in 2026 Nederlandse tijd:
-Grand Prix	Datum	Start kwalificatie (CET)	Start race (CET)
-Australia Australië	6-8 maart	06.00u	05.00u
-China China	13-15 maart	08.00u	08.00u
-Japan Japan	27-29 maart	07.00u	07.00u
-Bahrain Bahrein	10-12 april	18.00u	17.00u
-Saudi Arabia Saudi-Arabië	17-19 april	19.00u	19.00u
-United States Miami	1-3 mei	22.00u	22.00u
-Canada Canada	22-24 mei	22.00u	22.00u
-Monaco Monaco	5-7 juni	16.00u	15.00u
-Spain Spanje	12-14 juni	16.00u	15.00u
-Austria Oostenrijk	26-28 juni	16.00u	15.00u
-United Kingdom Groot-Brittannië	3-5 juli	17.00u	16.00u
-Belgium België	17-19 juli	16.00u	15.00u
-Hungary Hongarije	24-26 juli	16.00u	15.00u
-Netherlands Nederland	21-23 augustus	16.00u	15.00u
-Italy Italië	4-6 september	16.00u	15.00u
-Spain Madrid	11-13 september	16.00u	15.00u
-Azerbaijan Azerbeidzjan*	24-26  september	14.00u	13.00u
-Singapore Singapore	9-11 oktober	15.00u	14.00u
-United States Verenigde Staten	23-25 oktober	23.00u	21.00u
-Mexico Mexico	30 oktober - 1 november	22.00u	21.00u
-Brazil Brazilië	6-8 november	19.00u	18.00u
-United States Las Vegas	19-21 november	05.00u	05.00u
-Qatar Qatar	27-29 november	19.00u	17.00u
-United Arab Emirates Abu Dhabi	4-6 december	15.00u	14.00u
+Grand Prix	Datum	        kwal    race
+Australia       06-08 maart	06.00u  05.00u vt1 vt2 vt3
+China           13-15 maart	08.00u	08.00u
+Japan           27-29 maart	07.00u	07.00u
+Bahrain         10-12 april	18.00u	17.00u
+Saudi Arabia    17-19 april	19.00u	19.00u
+US Miami        01-03 mei	22.00u	22.00u
+Canada          22-24 mei	22.00u	22.00u
+Monaco          05-07 juni	16.00u	15.00u
+Spain           12-14 juni	16.00u	15.00u
+Austria         26-28 juni	16.00u	15.00u
+United Kingdom  03-05 juli	17.00u	16.00u
+Belgium         17-19 juli	16.00u	15.00u
+Hungary         24-26 juli	16.00u	15.00u
+Netherlands     21-23 augustus	16.00u	15.00u
+Italy           04-06 september	16.00u	15.00u
+Spain Madrid    11-13 september	16.00u	15.00u
+Azerbaijan      24-26 september 14.00u	13.00u
+Singapore       09-11 oktober	15.00u	14.00u
+United States   23-25 oktober	23.00u	21.00u
+Mexico          30-01 november	22.00u	21.00u
+Brazil          06-08 november	19.00u	18.00u
+US Las Vegas	19-21 november	05.00u	05.00u
+Qatar           27-29 november	19.00u	17.00u
+ArabEm AbuDhabi 04-06 december	15.00u	14.00u
 
 Grand Prix	Datum	Start sprint kwalificatie (CET)	Start sprintrace (CET)
 China China	13-15 maart	08.30u	04.00u
