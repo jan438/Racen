@@ -12,10 +12,10 @@ Spain           12-14 juni	16.00*	15.00*
 Austria         26-28 juni	16.00*	15.00*
 United Kingdom  03-05 juli	17.00*	16.00*
 Belgium         17-19 juli	16.00*	15.00*
-Hungary         24-26 juli	16.00u	15.00u
-Netherlands     21-23 augustus	16.00u	15.00u
-Italy           04-06 september	16.00u	15.00u
-Spain Madrid    11-13 september	16.00u	15.00u
+Hungary         24-26 juli	16.00*	15.00*
+Netherlands     21-23 augustus	16.00*	15.00*
+Italy           04-06 september	16.00*	15.00*
+Spain Madrid    11-13 september	16.00*	15.00*
 Azerbaijan      24-26 september 14.00u	13.00u
 Singapore       09-11 oktober	15.00u	14.00u
 United States   23-25 oktober	23.00u	21.00u
