@@ -17,8 +17,8 @@ Netherlands     21-23 augustus	16.00*	15.00*
 Italy           04-06 september	16.00*	15.00*
 Spain Madrid    11-13 september	16.00*	15.00*
 Azerbaijan      24-26 september 14.00*	13.00*
-Singapore       09-11 oktober	15.00-X	13:00 naar 15:00  14.00*
-United States   23-25 oktober	23.00-X	22:00 naar 23:00  21.00*
+Singapore       09-11 oktober	15:00*  14.00*
+United States   23-25 oktober	23:00*  21.00*
 Mexico          30-01 november	22.00*	21.00*
 Brazil          06-08 november	19.00*	18.00*
 US Las Vegas	19-21 november	05.00*	05.00*
