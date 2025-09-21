@@ -1,6 +1,6 @@
 Hoe laat begint F1 in 2026 Nederlandse tijd:
 Grand Prix	Datum	        kwal    race
-Australia       06-08 maart	06.00*  05.00* vt1 vt2 vt3
+Australia       06-08 maart	06.00*  05.00* dif-10 vt1 02:30 vt2 06:00 vt3 02:30
 China           13-15 maart	08.00*	08.00*
 Japan           27-29 maart	07.00*	07.00*
 Bahrain         10-12 april	18.00*	17.00*
