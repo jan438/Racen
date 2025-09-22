@@ -354,10 +354,10 @@ for i in range(len(raceevents)):
             my_canvas.setFont(calfont, 12)
             my_canvas.drawString(leftmargin + col * colwidth + 5.9, row * rowheight - 75, result)
             [hour,minute] = converttimetztolocalclock(raceevent.starttime)
-            strhour = str(hour)
-            if len(strhour) == 1:
-                strhour = "0" + strhour
-            renderPDF.draw(scaleSVG("Clocks/" + strhour + "00" + "tw.svg", 0.5), my_canvas, leftmargin + clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
+            strhour = "{:02d}".format(hour)
+            strminute = "{:02d}".format(minute)
+            startevent = strhour + strminute
+            renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", 0.5), my_canvas, leftmargin + clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
             my_canvas.setFont(calfont, 8)
             my_canvas.setFillColor(HexColor("#ffffff"))
             my_canvas.drawString(leftmargin + caloffsetx + 3.5 + col * colwidth, caloffsety + 16.2 + row * rowheight, monthnames[raceevent.month - 1])
