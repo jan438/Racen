@@ -233,7 +233,7 @@ flagoffset_x = 91
 flagoffset_y = 90
 clockoffsetx = 112.9
 clockoffsety = 88
-halfmoonoffsetx = 114.0
+halfmoonoffsetx = 120.0
 halfmoonoffsety = 88
 clock_dx = 26.5
 event_dx = 12.5
@@ -362,7 +362,7 @@ for i in range(len(raceevents)):
             startevent = strhour + strminute
             renderPDF.draw(scaleSVG("Clocks/" + startevent + "tw.svg", 0.5), my_canvas, leftmargin + clockoffsetx + col * colwidth, clockoffsety + row * rowheight - 75)
             if hour < 12:
-                renderPDF.draw(scaleSVG("Clocks/halfmoontw.svg", 0.5), my_canvas, leftmargin + halfmoonoffsetx + col * colwidth, halfmoonoffsety + row * rowheight - 75)
+                renderPDF.draw(scaleSVG("Clocks/halfmoontw.svg", 0.3), my_canvas, leftmargin + halfmoonoffsetx + col * colwidth, halfmoonoffsety + row * rowheight - 75)
             my_canvas.setFont(calfont, 8)
             my_canvas.setFillColor(HexColor("#ffffff"))
             my_canvas.drawString(leftmargin + caloffsetx + 3.5 + col * colwidth, caloffsety + 16.2 + row * rowheight, monthnames[raceevent.month - 1])
