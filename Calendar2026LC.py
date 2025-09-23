@@ -30,6 +30,7 @@ raceevents = []
 circuitsdata = []
 weekdaycairo = [6, 0, 1, 2, 3, 4, 5]
 openmojiscaling = 0.21
+halfmoonlegendascaling = 0.25
 stopwatchscaling = 0.021
 daycalscaling = 0.4
 twitterscaling = 0.45
@@ -392,7 +393,7 @@ my_canvas.setFillColor(HexColor(circuitarea))
 my_canvas.circle(leftmargin + 310.0, 15.0, 4.0, stroke = 0, fill = 1)
 my_canvas.setFillColor(HexColor(text1))
 my_canvas.drawString(leftmargin + 330.0, 10.0, "Location")
-renderPDF.draw(scaleSVG("Clocks/halfmoontw.svg", openmojiscaling), my_canvas, leftmargin + 410.0, 10.0)
+renderPDF.draw(scaleSVG("Clocks/halfmoontw.svg", halfmoonlegendascaling), my_canvas, leftmargin + 410.0, 10.0)
 my_canvas.drawString(leftmargin + 430.0, 10.0, "Race A.M.")
 
 row = 6
