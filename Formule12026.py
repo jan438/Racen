@@ -16,11 +16,13 @@ from reportlab.graphics.shapes import *
 from pypdf import PdfReader, PdfWriter
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
+version = "LT"
+
 def processreport():
     merger = PdfWriter()
 
-    if os.path.isfile("PDF/Calendar2026LC.pdf"):
-        inputpdf = open("PDF/Calendar2026LC.pdf", "rb")
+    if os.path.isfile("PDF/Calendar2026" + version + ".pdf"):
+        inputpdf = open("PDF/Calendar2026" + version + ".pdf", "rb")
         merger.append(inputpdf)
         inputpdf.close()
     if os.path.isfile("PDF/Circuits2026LM.pdf"):
@@ -31,7 +33,7 @@ def processreport():
         inputpdf = open("PDF/Teams2026.pdf", "rb")
         merger.append(inputpdf)
         inputpdf.close()
-    output = open("PDF/F1Totaal2026.pdf", "wb")
+    output = open("PDF/F1Totaal2026" + version + ".pdf", "wb")
     merger.write(output)
     merger.close()
     output.close()
