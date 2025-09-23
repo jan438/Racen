@@ -380,7 +380,7 @@ for i in range(len(raceevents)):
                     break
                     
 my_canvas.setFillColor(HexColor("#cecece"))                    
-my_canvas.rect(10.0, 5.0, 400.0, 25.0, fill=1)
+my_canvas.rect(10.0, 5.0, 500.0, 25.0, fill=1)
 my_canvas.setFillColor(HexColor(text1))
 renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + 10.0, 10.0)
 my_canvas.drawString(leftmargin + 30.0, 10.0, "Practice")
@@ -392,6 +392,8 @@ my_canvas.setFillColor(HexColor(circuitarea))
 my_canvas.circle(leftmargin + 310.0, 15.0, 4.0, stroke = 0, fill = 1)
 my_canvas.setFillColor(HexColor(text1))
 my_canvas.drawString(leftmargin + 330.0, 10.0, "Location")
+renderPDF.draw(scaleSVG("Clocks/halfmoontw.svg", openmojiscaling), my_canvas, leftmargin + 410.0, 10.0)
+my_canvas.drawString(leftmargin + 430.0, 10.0, "Race A.M.")
 
 row = 6
 col = 0
