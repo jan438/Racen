@@ -16,7 +16,7 @@ from reportlab.graphics.shapes import *
 from pypdf import PdfReader, PdfWriter
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
-version = "LT"
+version = "NL"
 
 def processreport():
     merger = PdfWriter()
