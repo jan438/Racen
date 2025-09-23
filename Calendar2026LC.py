@@ -133,7 +133,7 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-eventcal = "Calendar/Formule12026LT.ics"
+eventcal = "Calendar/Formule12026NL.ics"
 in_file = open(os.path.join(path, eventcal), 'r')
 count = 0
 lastpos = 0
@@ -193,11 +193,11 @@ pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf')
 pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-BoldItalic.ttf'))
-my_canvas = canvas.Canvas("PDF/Calendar2026LC.pdf")
+my_canvas = canvas.Canvas("PDF/Calendar2026NL.pdf")
 my_canvas.setFillColor(HexColor(outsidearea))
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFont(calfont, 25)
-my_canvas.setTitle("Calendar 2026")
+my_canvas.setTitle("Calendar 2026 NL")
 
 circuit_x = 10
 circuit_y = 10
@@ -221,7 +221,7 @@ drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.setFont(calfont, 30)
 my_canvas.setFillColor(HexColor("#000000"))
-my_canvas.drawString(100, 775, "2026 Calendar")
+my_canvas.drawString(100, 775, "2026 Calendar NL")
 row = 6
 col = 0
 caloffsetx = 64.3
