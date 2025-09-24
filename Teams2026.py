@@ -118,10 +118,7 @@ for i in range(count):
     d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, bottommargin + row * rowheight + namey, formule1data[i][3], font = formule1font, fontSize = 14, fillColor = colors.black))
     #surname1 2
     d.add(String(leftmargin + col * colwidth + 0.5 * colwidth, bottommargin + row * rowheight + surname, formule1data[i][2], font = formule1font, fontSize = 13, fillColor = colors.black))
-    # logo
-    svg_root = load_svg_file("Logos/" + formule1data[i][1] + ".svg")
-    svgwidth = svg_root.attrib.get('width')
-    svgheight = svg_root.attrib.get('height')
+    # logo data x 10 greater more to left data y 11 greater more to below
     d.add(transform_svg("Logos/" + formule1data[i][1] + ".svg", logox - 0.5 * float(formule1data[i][10]) + col * colwidth, logoy -  0.5 * float(formule1data[i][11]) + bottommargin + row * rowheight, float(formule1data[i][12]), float(formule1data[i][13])))
     #
     # birthday1
