@@ -122,7 +122,6 @@ for i in range(count):
     svg_root = load_svg_file("Logos/" + formule1data[i][1] + ".svg")
     svgwidth = svg_root.attrib.get('width')
     svgheight = svg_root.attrib.get('height')
-    print(formule1data[i][1] + ".svg", "SVGWidth", svgwidth, "SVGHeight", svgheight, "Logowidth", float(formule1data[i][10]), "Logoheight", float(formule1data[i][11]), "Scalingx", float(formule1data[i][12]), "Scalingy", float(formule1data[i][13]))
     d.add(transform_svg("Logos/" + formule1data[i][1] + ".svg", logox - 0.5 * float(formule1data[i][10]) + col * colwidth, logoy -  0.5 * float(formule1data[i][11]) + bottommargin + row * rowheight, float(formule1data[i][12]), float(formule1data[i][13])))
     #
     # birthday1
