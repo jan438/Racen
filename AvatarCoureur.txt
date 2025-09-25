@@ -1,0 +1,19 @@
+1. Open photo in Gimp
+2. Select transparancy layer add a alpha channel
+3. Select Elipse tool
+4. Draw with mouse an elipse
+5. Size elipse to circle equal width and height keyed in
+6. Position circle keyed in coodinates
+7. Select invert
+8. Edit clear
+9. Select crop tool
+10. Draw rectangle precise around circle
+11. Select Fuzzy tool
+12. Select area with mouse to clear
+13. Select Edit Clear
+14. Repeat this to convience
+15. Export the result to png file
+16. Open this png file in Gimp
+17. Scale image to standard size
+17. Export to bmp file with advanced options RGB 24 bits
+18. Convert bmp file with potrace to svg file on command line
