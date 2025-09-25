@@ -155,7 +155,7 @@ for i in range(count):
     d.add(bottomrightcorner(leftmargin + col * colwidth + colwidth - 19, bottommargin + row * rowheight + 97, 0.5 * avatarwidth, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 97, leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 120, strokeColor=colors.black, strokeWidth = 1))
     # logomiddle
-    if i == 7:
+    if i == 8:
         d.add(Line(leftmargin + col * colwidth + logox - 0.5 * logowidth, bottommargin + row * rowheight + logoy, leftmargin + col * colwidth + logox + 0.5 * logowidth, bottommargin + row * rowheight + logoy, strokeColor=colors.blue, strokeWidth=1))
         d.add(Line(leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy - 0.5 * logoheight, leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy + 0.5 * logoheight, strokeColor=colors.blue, strokeWidth = 1))
         d.add(Circle(leftmargin + col * colwidth + logox, bottommargin + row * rowheight + logoy, 0.5 * logowidth, strokeColor = colors.blue, strokeWidth = 1, fillColor = None))
