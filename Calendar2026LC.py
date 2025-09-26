@@ -375,7 +375,10 @@ for i in range(len(raceevents)):
             strraceday = str(raceevent.day)
             daywidth = pdfmetrics.stringWidth(strraceday, calfont, 14)
             print("daywidth", strraceday, daywidth, "len", len(strraceday))
-            my_canvas.drawString(leftmargin + caloffsetx + 1.8 + col * colwidth, caloffsety + 3.0 + row * rowheight, strraceday)
+            dayxoffset = 0
+            if raceevent.day < 10:
+                dayxoffset = 0.5 * daywidth
+            my_canvas.drawString(leftmargin + caloffsetx + 1.8 + col * colwidth + dayxoffset, caloffsety + 3.0 + row * rowheight, strraceday)
             col += 1
             if col == 4:
                 col = 0
