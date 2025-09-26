@@ -281,7 +281,12 @@ for i in range(len(raceevents)):
             result = raceevent.summary.split("(")
             result = result[0][:-1]
             renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", daycalscaling), my_canvas, leftmargin + col * colwidth + eventday1_x, row * rowheight + eventday1_y + calblank_dy)
-            my_canvas.drawString(leftmargin + col * colwidth + eventday1_x + 2.1, row * rowheight + eventday1_y + calday_dy, str(raceevent.day))
+            strraceday = str(raceevent.day)
+            daywidth = pdfmetrics.stringWidth(strraceday, calfont, 13)
+            dayxoffset = 0
+            if raceevent.day < 10:
+                dayxoffset = 0.5 * daywidth
+            my_canvas.drawString(leftmargin + col * colwidth + eventday1_x + 2.1 + dayxoffset, row * rowheight + eventday1_y + calday_dy, strraceday)
             if result[:10] == "Practice 1":
                 renderPDF.draw(scaleSVG("SVG/stopwatchtw.svg", stopwatchscaling), my_canvas, leftmargin + col * colwidth + eventday1_x + event_dx, row * rowheight + eventday1_y - 6.9)
                 my_canvas.drawString(leftmargin + col * colwidth + eventday1_x + event_dx + stopwatchdigit_x, row * rowheight + eventday1_y + stopwatchdigit_y, "1")
