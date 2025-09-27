@@ -440,6 +440,8 @@ if rastermode:
     for i in range(24):
         for j in range(13):
             my_canvas.line(leftmargin + col * colwidth + (j + 1) * 10, row * rowheight, leftmargin + col * colwidth + (j + 1) * 10, (row + 1) * rowheight)
+        for j in range(10):
+            my_canvas.line(leftmargin + col * colwidth, row * rowheight + (j + 1) * 10, leftmargin + (col + 1) * colwidth, row * rowheight + (j + 1) * 10)
         col += 1
         if col == 4:
             col = 0
