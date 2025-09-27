@@ -282,7 +282,7 @@ for i in range(len(raceevents)):
             result = result[0][:-1]
             renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", daycalscaling), my_canvas, leftmargin + col * colwidth + eventday1_x, row * rowheight + eventday1_y + calblank_dy)
             strraceday = str(raceevent.day)
-            daywidth = pdfmetrics.stringWidth(strraceday, calfont, 13)
+            daywidth = pdfmetrics.stringWidth(strraceday, calfont, 11)
             dayxoffset = 0
             if raceevent.day < 10:
                 dayxoffset = 0.5 * daywidth
@@ -321,7 +321,7 @@ for i in range(len(raceevents)):
             result = result[0][:-1]
             renderPDF.draw(scaleSVG("SVG/calendar-blank.svg", daycalscaling), my_canvas, leftmargin + col * colwidth + eventday2_x, row * rowheight + eventday2_y + calblank_dy)
             strraceday = str(raceevent.day)
-            daywidth = pdfmetrics.stringWidth(strraceday, calfont, 13)
+            daywidth = pdfmetrics.stringWidth(strraceday, calfont, 11)
             dayxoffset = 0
             if raceevent.day < 10:
                 dayxoffset = 0.5 * daywidth
