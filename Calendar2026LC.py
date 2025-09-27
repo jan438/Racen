@@ -47,6 +47,7 @@ width = A4_width
 height = A4_height
 arcdim = 20.0
 calfont = "LiberationSerif"
+rastermode = True
 
 class RaceEvent:
     def __init__(self, summary, day, location, description, starttime, endtime, month):
@@ -263,7 +264,8 @@ for i in range(len(raceevents)):
             circle_y = float(circuitsdata[cx][27])
             my_canvas.setFillColor(HexColor(circuitarea))
             my_canvas.circle(col * colwidth + leftmargin + circle_x, (row - 1) * rowheight + bottommargin + 10 + circle_y, 4.0, stroke = 0, fill = 1)
-            #my_canvas.circle(col * colwidth + leftmargin + circle_x, (row - 1) * rowheight + bottommargin + 10 + circle_y, 10.0, stroke = 1, fill = 0)
+            if rastermode:
+                my_canvas.circle(col * colwidth + leftmargin + circle_x, (row - 1) * rowheight + bottommargin + 10 + circle_y, 10.0, stroke = 1, fill = 0)
             circuit_x = float(circuitsdata[cx][28])
             circuit_y = float(circuitsdata[cx][29])
             renderPDF.draw(scaleSVG("SVG/" + raceevent.description + "LCC.svg", circuitscale), my_canvas, circuit_x + col * colwidth + leftmargin, circuit_y + (row - 1) * rowheight + bottommargin + 10)
