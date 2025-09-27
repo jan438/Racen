@@ -433,5 +433,17 @@ for i in range(24):
     if col == 4:
         col = 0
         row -= 1
+
+row = 6
+col = 0        
+if rastermode:
+    for i in range(24):
+        for j in range(13):
+            my_canvas.line(leftmargin + col * colwidth + (j + 1) * 10, row * rowheight, leftmargin + col * colwidth + (j + 1) * 10, (row + 1) * rowheight)
+        col += 1
+        if col == 4:
+            col = 0
+            row -= 1
+
 my_canvas.save()
 key = input("Wait")
