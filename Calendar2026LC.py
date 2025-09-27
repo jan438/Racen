@@ -440,10 +440,10 @@ if rastermode:
     for i in range(24):
         # vertical lines
         for j in range(13):
-            my_canvas.line(leftmargin + col * colwidth + (j + 1) * 10, row * rowheight, leftmargin + col * colwidth + (j + 1) * 10, (row + 1) * rowheight)
+            my_canvas.line(leftmargin + col * colwidth + (j + 1) * 10, bottommargin + row * rowheight, leftmargin + col * colwidth + (j + 1) * 10, bottommargin + (row + 1) * rowheight)
         # horizontal lines
         for j in range(10):
-            my_canvas.line(leftmargin + col * colwidth, row * rowheight + (j + 1) * 10, leftmargin + (col + 1) * colwidth, row * rowheight + (j + 1) * 10)
+            my_canvas.line(leftmargin + col * colwidth, bottommargin + row * rowheight + (j + 1) * 10, leftmargin + (col + 1) * colwidth, bottommargin + row * rowheight + (j + 1) * 10)
         col += 1
         if col == 4:
             col = 0
