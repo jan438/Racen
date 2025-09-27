@@ -434,12 +434,14 @@ for i in range(24):
         col = 0
         row -= 1
 
-row = 6
+row = 5
 col = 0        
 if rastermode:
     for i in range(24):
+        # vertical lines
         for j in range(13):
             my_canvas.line(leftmargin + col * colwidth + (j + 1) * 10, row * rowheight, leftmargin + col * colwidth + (j + 1) * 10, (row + 1) * rowheight)
+        # horizontal lines
         for j in range(10):
             my_canvas.line(leftmargin + col * colwidth, row * rowheight + (j + 1) * 10, leftmargin + (col + 1) * colwidth, row * rowheight + (j + 1) * 10)
         col += 1
