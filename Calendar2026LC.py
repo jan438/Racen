@@ -47,7 +47,7 @@ width = A4_width
 height = A4_height
 arcdim = 20.0
 calfont = "LiberationSerif"
-rastermode = False
+rastermode = True
 
 class RaceEvent:
     def __init__(self, summary, day, location, description, starttime, endtime, month):
