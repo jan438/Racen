@@ -271,7 +271,7 @@ for i in range(len(raceevents)):
             circuitlayout = scaleSVG("SVG/" + raceevent.description + "LCC.svg", circuitscale)
             renderPDF.draw(circuitlayout, my_canvas, circuit_x + col * colwidth + leftmargin, circuit_y + (row - 1) * rowheight + bottommargin + 10)
             if rastermode:
-                my_canvas.rect(col * colwidth + leftmargin + circuit_x, (row - 1) * rowheight + bottommargin + 10 + circuit_y, 100.0, 100.0, stroke = 1, fill = 0)
+                my_canvas.rect(col * colwidth + leftmargin + circuit_x, (row - 1) * rowheight + bottommargin + 10 + circuit_y, circuitlayout.width, circuitlayout.height, stroke = 1, fill = 0)
             eventday1_x = float(circuitsdata[cx][30])
             eventday1_y = float(circuitsdata[cx][31])
             eventday2_x = float(circuitsdata[cx][32])
