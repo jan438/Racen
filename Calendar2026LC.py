@@ -47,7 +47,7 @@ width = A4_width
 height = A4_height
 arcdim = 20.0
 calfont = "LiberationSerif"
-rastermode = False
+rastermode = True
 
 class RaceEvent:
     def __init__(self, summary, day, location, description, starttime, endtime, month):
@@ -439,11 +439,11 @@ col = 0
 if rastermode:
     for i in range(24):
         # vertical lines
-        for j in range(13):
-            my_canvas.line(leftmargin + col * colwidth + (j + 1) * 10, bottommargin + 10 + row * rowheight, leftmargin + col * colwidth + (j + 1) * 10, bottommargin + 10 + (row + 1) * rowheight)
+        for j in range(1,14):
+            my_canvas.line(leftmargin + col * colwidth + j * 10, bottommargin + 10 + row * rowheight, leftmargin + col * colwidth + j * 10, bottommargin + 10 + (row + 1) * rowheight)
         # horizontal lines
-        for j in range(11):
-            my_canvas.line(leftmargin + col * colwidth, bottommargin + 10 + row * rowheight + (j + 1) * 10, leftmargin + (col + 1) * colwidth, bottommargin + 10 + row * rowheight + (j + 1) * 10)
+        for j in range(1,12):
+            my_canvas.line(leftmargin + col * colwidth, bottommargin + 10 + row * rowheight + j * 10, leftmargin + (col + 1) * colwidth, bottommargin + 10 + row * rowheight + j * 10)
         col += 1
         if col == 4:
             col = 0
