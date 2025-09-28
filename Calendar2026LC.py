@@ -444,14 +444,14 @@ if rastermode:
                 my_canvas.setLineWidth(1)
             else:
                 my_canvas.setLineWidth(0.5)
-            my_canvas.line(leftmargin + col * colwidth + j * 10, bottommargin + 10 + row * rowheight, leftmargin + col * colwidth + j * 10, bottommargin + 10 + (row + 1) * rowheight)
+            my_canvas.line(leftmargin + col * colwidth + j * 10, bottommargin + 10 + row * rowheight, leftmargin + col * colwidth + j * 10, bottommargin + 10 + (row + 1) * rowheight - 10)
         # horizontal lines
         for j in range(1,12):
             if j == 5 or j == 10:
                 my_canvas.setLineWidth(1)
             else:
                 my_canvas.setLineWidth(0.5)
-            my_canvas.line(leftmargin + col * colwidth, bottommargin + 10 + row * rowheight + j * 10, leftmargin + (col + 1) * colwidth, bottommargin + 10 + row * rowheight + j * 10)
+            my_canvas.line(leftmargin + col * colwidth, bottommargin + 10 + row * rowheight + j * 10, leftmargin + (col + 1) * colwidth - 10, bottommargin + 10 + row * rowheight + j * 10)
         col += 1
         if col == 4:
             col = 0
