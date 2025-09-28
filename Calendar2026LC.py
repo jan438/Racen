@@ -273,7 +273,7 @@ for i in range(len(raceevents)):
             eventday1_y = float(circuitsdata[cx][31])
             eventday2_x = float(circuitsdata[cx][32])
             eventday2_y = float(circuitsdata[cx][33])
-            my_canvas.line(leftmargin + col * colwidth + 9.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 10.1, row * rowheight + 32.0)
+            my_canvas.line(leftmargin + col * colwidth + 9.9, row * rowheight + 32.0, leftmargin + col * colwidth + colwidth - 8.5, row * rowheight + 32.0)
             my_canvas.setFillColor(HexColor(text1))
             my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight - 80.0, leftmargin + col * colwidth - 0.1, row * rowheight + 22.0)   
             my_canvas.line(leftmargin + col * colwidth - 0.1, row * rowheight - 80, leftmargin + col * colwidth + 127.9, row * rowheight - 80)
