@@ -1,1 +1,26 @@
-Melbourne   5 apr -1 hour    4 oct +1 hour 
+Starttijden Formule 1 Grands Prix 2026
+Datum 		GP 			Start kwali 	Start race
+8 maart		Australië 	      	06:00 uur 	05:00 uur
+15 maart 	China (S) 		08:00 uur 	08:00 uur
+29 maart 	Japan 	        	08:00 uur 	07:00 uur
+12 april 	Bahrein 		18:00 uur 	17:00 uur
+19 april 	Saoedi-Arabië 		19:00 uur 	19:00 uur
+3 mei 	        Miami (S) 		22:00 uur 	22:00 uur
+24 mei 	        Canada (S) 		22:00 uur 	22:00 uur
+7 juni 	        Monaco 	        	16:00 uur 	15:00 uur
+14 juni 	Barcelona 		16:00 uur 	15:00 uur
+28 juni 	Oostenrijk 		16:00 uur 	15:00 uur
+5 juli 	        Groot-Brittannië (S) 	17:00 uur 	16:00 uur
+19 juli 	België 			16:00 uur 	15:00 uur
+26 juli 	Hongarije 		16:00 uur 	15:00 uur
+23 augustus 	Nederland (S) 		16:00 uur 	15:00 uur
+6 september 	Italië 			16:00 uur 	15:00 uur
+13 september 	Spanje 			16:00 uur 	15:00 uur
+26 september 	Azerbeidzjan 		14:00 uur 	13:00 uur
+11 oktober 	Singapore (S) 		15:00 uur 	14:00 uur
+25 oktober 	Verenigde Staten 	23:00 uur 	21:00 uur
+1 november 	Mexico 			22:00 uur 	21:00 uur
+8 november 	Brazilië 		19:00 uur 	18:00 uur
+21 november 	Las Vegas 		05:00 uur 	05:00 uur
+29 november 	Qatar 			19:00 uur 	17:00 uur
+6 december 	Abu Dhabi 		15:00 uur 	14:00 uur 
