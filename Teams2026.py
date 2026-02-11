@@ -145,6 +145,8 @@ for i in range(count):
     initials =  formule1data[i][2][0] + formule1data[i][3][0]
     if initials != "TT":
         d.add(transform_svg("Teams/" + initials + ".svg", leftmargin + avatarx + avatardx + col * colwidth + 0.5 * colwidth, bottommargin + avatary + avatardy + row * rowheight, avatars, avatars))
+    #img = "Photos/Posters/" + legendsdata[i][0] + ".png"
+    #d.add(Image(path = img, width = 159, height = 138, x = leftmargin + float(legendsdata[i][1]) - 5.0 - dx - 0.5 * dy, y = bottommargin + float(legendsdata[i][2]) - 69, mask = None))
     d.add(Line(leftmargin + col * colwidth, bottommargin + row * rowheight + 155, col * colwidth + colwidth - 9, bottommargin + row * rowheight + 155, strokeColor=colors.black, strokeWidth = 1))
     d.add(upperrightcorner(leftmargin + col * colwidth + colwidth - 14, bottommargin + row * rowheight + 145, 10.0, 1, colors.black))
     d.add(Line(leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 145, leftmargin + col * colwidth + colwidth - 4, bottommargin + row * rowheight + 105, strokeColor=colors.black, strokeWidth = 1))
