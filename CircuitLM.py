@@ -368,7 +368,7 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][0] == "Miami":
+    if circuitsdata[i][0] == "Madring":
         cx = i
         my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2025LM.pdf")
         my_canvas.setFont("Helvetica", 25)
