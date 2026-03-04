@@ -18,19 +18,6 @@
         {
             "type": "Feature",
             "properties": {
-                "place": "startsector"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -3.62288491227,
-                    40.47397789092
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "Name": "Circuito de Madring",
                 "altitude": "646",
                 "id": "es-2026",
@@ -523,6 +510,19 @@
                 "coordinates": [
                     -3.62487801147,
                     40.47368253594
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.62215328163,
+                    40.47305957377
                 ]
             }
         }
