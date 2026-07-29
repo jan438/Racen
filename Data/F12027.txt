@@ -6,14 +6,14 @@ Arabie saoudite	Djeddah		Arabie saoudite
 Miami		Miami		États-Unis
 Canada		Montréal	Canada
 Monaco		Monte-Carlo	Monaco
-Portugal	Portimão	Portugal
+Portugal	Portimão	Portugal     ****** pt-2008
 Autriche	Spielberg	Autriche
 Grande-Bretagne	Silverstone	Royaume-Uni
 Belgique	Spa-Francorchamps	Belgique
 Hongrie		Budapest	Hongrie
 Italie		Monza		Italie
 Espagne		Madrid		Espagne
-Turquie		Istanbul Park	Turquie
+Turquie		Istanbul Park	Turquie        *****  tr-2005
 Azerbaïdjan	Bakou		Azerbaïdjan
 Singapour	Marina Bay	Singapour
 États-Unis	Austin		États-Unis
@@ -26,8 +26,6 @@ Abu Dhabi	Yas Marina	Émirats arabes unis
 out:
 Zandvoort
 Catalonie
-
-Oostenrijk?
 
 AlbertPark;au-1953;UTC+10;302.1;22.2;Australia;0.061;8.0;10.0;c;70;55;146;44;91;198;139;a;125;471;a070;308;178;a130;Albert Park;Australia;105;19;90;25;10;5;10;-30;*****
 Bahrain;bh-2002;UTC+03;210.2;92.3;Bahrain;0.069;28.0;9.55;c;70;0;25;76;94;8;210;a;373;345;a220;342;195;a120;Bahrain;Bahrain;55;55;22;39;85;-5;85;-40;*****
