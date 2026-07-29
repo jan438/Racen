@@ -1,0 +1,24 @@
+Australie	Melbourne	Australie
+Chine		Shanghai	Chine
+Japon		Suzuka	Japon
+Bahreïn		Sakhir	Bahreïn
+Arabie saoudite	Djeddah	Arabie saoudite
+Miami		Miami	États-Unis
+Canada		Montréal	Canada
+Monaco		Monte-Carlo	Monaco
+Portugal	Portimão	Portugal
+Autriche	Spielberg	Autriche
+Grande-Bretagne	Silverstone	Royaume-Uni
+Belgique	Spa-Francorchamps	Belgique
+Hongrie		Budapest	Hongrie
+Italie		Monza	Italie
+Espagne		Madrid	Espagne
+Turquie		Istanbul Park	Turquie
+Azerbaïdjan	Bakou	Azerbaïdjan
+Singapour	Marina Bay	Singapour
+États-Unis	Austin	États-Unis
+Mexique	Mexico	Mexique
+São Paulo	Interlagos	Brésil
+Las Vegas	Las Vegas	États-Unis
+Qatar	Lusail	Qatar
+Abu Dhabi	Yas Marina	Émirats arabes unis
