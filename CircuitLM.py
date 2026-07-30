@@ -369,7 +369,7 @@ with open(file_to_open, 'r') as file:
         count += 1
 for i in range(len(circuitsdata)):
     if circuitsdata[i][0] == "Portimão":
-        print("Portimão")
+        print(i, "Portimão")
         cx = i
         my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2027LM.pdf")
         my_canvas.setFont("Helvetica", 25)
