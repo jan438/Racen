@@ -10,8 +10,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -8.62740666514,
-                    37.23434043643
+                    -8.62916311786,
+                    37.23239372450
                 ]
             }
         },
@@ -21,10 +21,10 @@
                 "opened": "2008",
                 "firstgp": "2020",
                 "Name": "Autódromo Internacional do Algarve",
-                "altitude": "44",
                 "Location": "Portimão",
-                "length": "4653",
-                "id": "pt-2008"
+                "altitude": "44",
+                "id": "pt-2008",
+                "length": "4653"
             },
             "geometry": {
                 "type": "LineString",
@@ -218,10 +218,6 @@
                         37.23500600000
                     ],
                     [
-                        -8.62740666514,
-                        37.23434043643
-                    ],
-                    [
                         -8.62704800000,
                         37.23237300000
                     ],
@@ -276,6 +272,10 @@
                     [
                         -8.62455800000,
                         37.23009900000
+                    ],
+                    [
+                        -8.62494219122,
+                        37.23000556028
                     ],
                     [
                         -8.62628900000,
@@ -451,6 +451,19 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.62494219122,
+                    37.23000556028
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "place": "startfinish"
             },
             "geometry": {
@@ -458,19 +471,6 @@
                 "coordinates": [
                     -8.62997482636,
                     37.22980790277
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "place": "startsector"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -8.62916311786,
-                    37.23239372450
                 ]
             }
         }
