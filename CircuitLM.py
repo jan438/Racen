@@ -276,7 +276,7 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
                 elif cx == 16:
                     print("Portugal")
                     ## 47 101 23
-                    path = coordinates_to_path([coords[:idx3]], scale, translate)
+                    path = coordinates_to_path([coords[:idx3 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                     path = coordinates_to_path([coords[idx3:idx1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
