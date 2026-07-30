@@ -368,7 +368,6 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for i in range(len(circuitsdata)):
-    print(circuitsdata[i][0])
     if circuitsdata[i][0] == "Portimão":
         print("Portimão")
         cx = i
