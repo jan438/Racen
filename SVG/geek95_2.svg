@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="700pt" height="700pt" viewBox="0 0 700 700" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="350" y2="0" >
+<stop offset="0.05" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.075" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.1" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.125" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.15" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.175" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.2" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.225" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.25" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.275" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.3" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.325" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.35" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.375" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.4" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.425" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.45" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.475" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.5" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.525" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.55" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.575" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.6" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.625" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.65" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.675" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.7" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.725" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.75" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.775" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.8" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.825" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.85" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.875" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="0.9" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="0.925" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+</linearGradient>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 20 20 L 320 20 L 320 120 L 20 120 Z M 20 20 "/>
+</g>
+</svg>
