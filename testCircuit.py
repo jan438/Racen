@@ -3,6 +3,7 @@ import sys
 import csv
 import geojson
 import math
+import random
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch, mm
@@ -14,6 +15,14 @@ flagcorrection = -5.0
 sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
+
+class rand():
+    def __str__(self):
+        return str(random.randint(0, 100))
+
+class rgbset():
+    def __str__(self):
+        return str(random.randint(0, 255))
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -162,6 +171,16 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
+ran = rand()
+rgb = rgbset()
+svg1 = '<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1400 400">\n<rect width="1400" height="400"/>\n<defs>\n'
+svg2 = '<linearGradient id="a" x1="'+str(ran)+'%" y1="'+str(ran)+'%" x2="'+str(ran)+'%" y2="'+str(ran)+'%">\n'
+svg3 = '<stop offset="0%" style="stop-color:rgb('+str(rgb)+','+str(rgb)+','+str(rgb)+');stop-opacity:1" />\n'
+svg4 = '<stop offset="100%" style="stop-color:rgb('+str(rgb)+','+str(rgb)+','+str(rgb)+');stop-opacity:1" />\n'
+svg5 = '</linearGradient>\n</defs>\n<rect fill="url(#a)" width="1400" height="400"/>\n</svg>'
+file = open("SVG/grad.svg", "w")
+file.writelines("%s%s%s%s%s" % (svg1,svg2,svg3,svg4,svg5))
+file.close()
 circuitsdata = []
 svgfile = "SVG/testCircuit.svg"
 file_to_open = "Data/testCircuit.csv"
