@@ -185,7 +185,7 @@ for i in range(len(alleventslines)):
     if endeventpos == 0:
         raceevents.append(RaceEvent(summary, day, location, description, starttime, endtime, month))
 print("Count race events", len(raceevents))
-raceevent = lookupraceevent(3, 8)
+raceevent = lookupraceevent(3, 14)
 if raceevent is not None:
     starttime = raceevent.starttime
     localtime = converttimetztolocal(starttime)
