@@ -11,6 +11,7 @@ from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 1.0
+testscale = 0.2
 flagcorrection = -5.0
 sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
@@ -211,6 +212,6 @@ for i in range(len(circuitsdata)):
         flag_x = offset_x * circuitscale
         flag_y = offset_y * circuitscale
         renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
-        renderPDF.draw(scaleSVG("SVG/grad.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
+        renderPDF.draw(scaleSVG("SVG/grad.svg", testscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
         my_canvas.save()
 key = input("Wait")
