@@ -146,7 +146,6 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
                 idx1 = int(circuitsdata[cx][12])
                 idx2 = int(circuitsdata[cx][13])
                 idx3 = int(circuitsdata[cx][14])
-                print("Turkey")
                 # idx1 68 idx2 35 idx3 86
                 path = coordinates_to_path([coords[:idx2 + 1]], scale, translate)
                 f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
