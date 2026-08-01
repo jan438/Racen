@@ -40,7 +40,7 @@
 <stop offset="0.925" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
 </linearGradient>
 </defs>
-<g id="surface1">
+<g id="surface6">
 <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 20 20 L 320 20 L 320 120 L 20 120 Z M 20 20 "/>
 </g>
 </svg>
