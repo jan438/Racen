@@ -191,9 +191,9 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][0] == "Istanbul":
+    if circuitsdata[i][0] == "testCircuit":
         cx = i
-        print(cx, "Istanbul")
+        print(cx, "testCircuit")
         my_canvas = canvas.Canvas("PDF/testCircuit.pdf")
         my_canvas.setFont("Helvetica", 25)
         my_canvas.setTitle("testCircuit")
