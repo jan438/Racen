@@ -7,5 +7,5 @@
             </linearGradient>
         </defs>
         <path d="M50 10  A40 40 0 1 0 90 50"
-            stroke="url(#grad1)" stroke-width="10" fill="transparent"/>
+            stroke="url(#grad1)" stroke-width="10" fill="url(#grad1)"/>
 </svg>
