@@ -139,7 +139,7 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
     print("Startindexes", startindices[0], startindices[1], startindices[2])
     with open(svgfile, 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
-        f.write(f'<defs><linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="red" /><stop offset="100%" stop-color="blue" /></linearGradient></defs>">\n')
+        f.write(f'<defs><linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="red" /><stop offset="100%" stop-color="blue" /></linearGradient><linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="yellow" /><stop offset="100%" stop-color="green" /></linearGradient></defs>">\n')
         for feature in geojson_data['features']:
             geometry = feature['geometry']
             coords = geometry['coordinates']
@@ -150,9 +150,9 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
                 idx3 = int(circuitsdata[cx][14])
                 # idx1 68 idx2 35 idx3 86
                 path = coordinates_to_path([coords[:idx2 + 1]], scale, translate)
-                f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
-                path = coordinates_to_path([coords[idx2:idx1 + 1]], scale, translate)
                 f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="url(#gradient1)"/>\n')
+                path = coordinates_to_path([coords[idx2:idx1 + 1]], scale, translate)
+                f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="url(#gradient2)"/>\n')
                 path = coordinates_to_path([coords[idx1:idx3 + 1]], scale, translate)
                 f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
                 path = coordinates_to_path([coords[idx3:]], scale, translate)
