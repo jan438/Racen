@@ -215,5 +215,6 @@ for i in range(len(circuitsdata)):
         renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
         renderPDF.draw(scaleSVG("SVG/grad.svg", testscale), my_canvas, left_margin, 500)
         renderPDF.draw(scaleSVG("SVG/gradpath1.svg", 5 * testscale), my_canvas, left_margin + 300, 500)
+        renderPDF.draw(scaleSVG("SVG/gradpath2.svg", 5 * testscale), my_canvas, left_margin + 450, 500)
         my_canvas.save()
 key = input("Wait")
