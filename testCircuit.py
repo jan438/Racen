@@ -145,18 +145,11 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
                 print("Circuitsdata", svgfile, circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
-                idx1 = int(circuitsdata[cx][12])
-                idx2 = int(circuitsdata[cx][13])
-                idx3 = int(circuitsdata[cx][14])
+                idx1 = 0
+                idx2 = 88
                 # idx1 68 idx2 35 idx3 86
-                path = coordinates_to_path([coords[:idx2 + 1]], scale, translate)
-                f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="url(#gradient1)"/>\n')
-                path = coordinates_to_path([coords[idx2:idx1 + 1]], scale, translate)
-                f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="url(#gradient2)"/>\n')
-                path = coordinates_to_path([coords[idx1:idx3 + 1]], scale, translate)
-                f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
-                path = coordinates_to_path([coords[idx3:]], scale, translate)
-                f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                path = coordinates_to_path([coords[:idx2]], scale, translate)
+                f.write(f'<path d="{path}" fill="url(#gradient1)"/>\n')
         f.write('</svg>')    
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
