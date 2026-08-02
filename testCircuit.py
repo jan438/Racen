@@ -59,6 +59,7 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
                 y = (point[1] - translate[1]) * scale[1]
                 command = "M" if i == 0 else "L"
                 path_data += f"{command}{x},{height - y} "
+        path_data += "Z"
         return path_data.strip()
     def nearestpoint(coordinates, coords):
         np = -1
