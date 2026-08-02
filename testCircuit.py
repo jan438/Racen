@@ -150,7 +150,7 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
                 idx2 = 88
                 # idx1 68 idx2 35 idx3 86
                 path = coordinates_to_path([coords[:idx2]], scale, translate)
-                f.write(f'<path d="{path}" fill="url(#gradient1)"/>\n')
+                f.write(f'<path d="{path}" stroke="red" stroke-width="10" fill="url(#gradient1)"/>\n')
         f.write('</svg>')    
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
