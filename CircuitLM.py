@@ -354,14 +354,6 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
         f.write('</svg>')    
     return [offset_x, offset_y]
-def transform_svg(svgfile, tx, ty, sx, sy): 
-    svg_root = load_svg_file(svgfile)
-    svgRenderer = SvgRenderer(svgfile)
-    df1 = svgRenderer.render(svg_root)
-    gimg = df1.asGroup()
-    gimg.translate(tx, ty)
-    gimg.scale(sx, sy)
-    return gimg
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
 if sys.platform[0] == 'w':
