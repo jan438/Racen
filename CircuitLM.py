@@ -208,6 +208,14 @@ def GeoJSON_to_SVG(cx, geojsonfile, circuit):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                     path = coordinates_to_path([coords[:idx1 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                elif cx == 5 and circuit == "Hungaroring":
+                    print("Hungary")
+                    path = coordinates_to_path([coords[idx1:idx2 + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                    path = coordinates_to_path([coords[idx2 - 1:idx3 + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
+                    path = coordinates_to_path([coords[idx3 - 1:]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
                 elif cx == 6 and circuit == "Istanbul":
                     print("Turkey")
                     # idx1 68 idx2 35 idx3 86
@@ -373,7 +381,7 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][0] == "HermanosRodríguez":
+    if circuitsdata[i][0] == "Hungaroring":
         cx = i
         print(cx, circuitsdata[i][0])
         my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2027LM.pdf")
