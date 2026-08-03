@@ -40,7 +40,7 @@ def get_angle(point1, point2):
     angle_degrees = math.degrees(angle_radians)
     normalized_angle = angle_degrees % 360
     return normalized_angle
-def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
+def GeoJSON_to_SVG(cx, geojsonfile, circuit):
     def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
         for LineString in coordinates:
@@ -127,7 +127,7 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
     offset_x = (startfinish_x - min_x) * scale_x
     offset_y = (startfinish_y - min_y) * scale_y
     print("Startindexes", startindices[0], startindices[1], startindices[2])
-    with open("SVG/" + svgfile + "LM.svg", 'w') as f:
+    with open("SVG/" + circuit + "LM.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
         f.write(f'<defs><linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#000000" /><stop offset="100%" stop-color="#6d6d6d" /></linearGradient></defs>">\n')
         for feature in geojson_data['features']:
