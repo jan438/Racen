@@ -203,7 +203,7 @@ def GeoJSON_to_SVG(cx, geojsonfile, circuit):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                     path = coordinates_to_path([coords[:idx1 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
-                elif cx == 6:
+                elif cx == 6 and circuit == "Istanbul":
                     print("Turkey")
                     # idx1 68 idx2 35 idx3 86
                     path = coordinates_to_path([coords[:idx2 + 1]], scale, translate)
