@@ -136,7 +136,7 @@ def GeoJSON_to_SVG(cx, geojsonfile, svgfile):
             if geometry['type'] == 'LineString':
                 print("Circuitsdata", circuitsdata[cx][0], circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
                 path = coordinates_to_path([coords[:len(coords)]], scale, translate)
-                f.write(f'<path d="{path}" stroke="red" stroke-width="10" fill="url(#gradient1)"/>\n')
+                f.write(f'<path d="{path}" stroke="none" fill="url(#gradient1)"/>\n')
                 idx1 = int(circuitsdata[cx][12])
                 idx2 = int(circuitsdata[cx][13])
                 idx3 = int(circuitsdata[cx][14])
