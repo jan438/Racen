@@ -301,6 +301,16 @@ def GeoJSON_to_SVG(cx, geojsonfile, circuit):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                     path = coordinates_to_path([coords[:idx3 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                elif cx == 15 and circuit == "Monza":
+                    print("Italy")
+                    path = coordinates_to_path([coords[:idx3 + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
+                    path = coordinates_to_path([coords[idx3 - 1:idx2 + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
+                    path = coordinates_to_path([coords[idx2 - 1:idx1 + 1]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
+                    path = coordinates_to_path([coords[idx1 - 1:]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                 elif cx == 16 and circuit == "Portimão":
                     print("Portugal")
                     path = coordinates_to_path([coords[:idx3 + 1]], scale, translate)
@@ -391,7 +401,7 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][0] == "Monaco":
+    if circuitsdata[i][0] == "Monza":
         cx = i
         print(cx, circuitsdata[i][0])
         my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2027LM.pdf")
