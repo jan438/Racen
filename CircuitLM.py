@@ -317,8 +317,8 @@ def GeoJSON_to_SVG(cx, geojsonfile, circuit):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                     path = coordinates_to_path([coords[:idx3]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
-                    #path = coordinates_to_path([coords[idx3 - 1:]], scale, translate)
-                    #f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
+                    path = coordinates_to_path([coords[idx3:idx2]], scale, translate)
+                    f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
                 elif cx == 919:
                     path = coordinates_to_path([coords[:idx2 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
