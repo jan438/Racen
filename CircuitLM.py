@@ -281,7 +281,8 @@ def GeoJSON_to_SVG(cx, geojsonfile, circuit):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
                     path = coordinates_to_path([coords[:idx3 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec3color}"/>\n')
-                elif cx == 13:  #Miami
+                elif cx == 13 and circuit == "Miami":
+                    print("USA_Florida")
                     path = coordinates_to_path([coords[idx1:idx2 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
                     path = coordinates_to_path([coords[idx2:idx3 + 1]], scale, translate)
@@ -389,7 +390,7 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][0] == "MarinaBay":
+    if circuitsdata[i][0] == "Miami":
         cx = i
         print(cx, circuitsdata[i][0])
         my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2027LM.pdf")
