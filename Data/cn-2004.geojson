@@ -5,10 +5,49 @@
         {
             "type": "Feature",
             "properties": {
+                "place": "startfinish"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.22057410412,
+                    31.33730473513
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.22095040834,
+                    31.34328275477
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.21551281226,
+                    31.34058305100
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "Location": "Shanghai",
-                "altitude": "14",
-                "length": "5451",
                 "Name": "Shanghai International Circuit",
+                "length": "5451",
+                "altitude": "14",
                 "opened": "2004",
                 "firstgp": "2004",
                 "id": "cn-2004"
@@ -393,6 +432,10 @@
                         31.34245800000
                     ],
                     [
+                        121.22106263954,
+                        31.34317532375
+                    ],
+                    [
                         121.22091300000,
                         31.34338200000
                     ],
@@ -577,48 +620,13 @@
                         31.33776300000
                     ],
                     [
+                        121.22075299800,
+                        31.33731634369
+                    ],
+                    [
                         121.21838000000,
                         31.33683500000
                     ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "place": "startsector"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    121.21551281226,
-                    31.34058305100
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "place": "startfinish"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    121.22057410412,
-                    31.33730473513
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "place": "startsector"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    121.22095040834,
-                    31.34328275477
                 ]
             }
         }
