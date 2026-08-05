@@ -10,8 +10,21 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -1.01379639392,
-                    52.07443616698
+                    -1.01191624908,
+                    52.06893120699
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "place": "startsector"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.01692716513,
+                    52.07612417347
                 ]
             }
         },
@@ -35,9 +48,9 @@
                 "Name": "Silverstone Circuit",
                 "opened": "1948",
                 "Location": "Silverstone",
-                "id": "gb-1948",
+                "altitude": "196",
                 "firstgp": "1950",
-                "altitude": "196"
+                "id": "gb-1948"
             },
             "geometry": {
                 "type": "LineString",
@@ -467,6 +480,10 @@
                         52.07319000000
                     ],
                     [
+                        -1.01692263139,
+                        52.07614932024
+                    ],
+                    [
                         -1.01840300000,
                         52.07698000000
                     ],
@@ -582,19 +599,6 @@
                         -1.01534900000,
                         52.07879000000
                     ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "place": "startsector"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -1.01191624908,
-                    52.06893120699
                 ]
             }
         }
