@@ -1,8 +1,8 @@
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="red" />
-      <stop offset="100%" stop-color="blue" />
+      <stop offset="0%" stop-color="white" />
+      <stop offset="100%" stop-color="black" />
     </radialGradient>
   </defs>
   <!-- Applied to a circle -->
