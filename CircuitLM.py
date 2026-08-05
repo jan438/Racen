@@ -40,6 +40,8 @@ def get_angle(point1, point2):
     angle_degrees = math.degrees(angle_radians)
     normalized_angle = angle_degrees % 360
     return normalized_angle
+def info_Orig_file(geojsonfile):
+    print(geojsonfile + ".geojson")
 def GeoJSON_to_SVG(cx, geojsonfile, circuit):
     def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
@@ -395,6 +397,7 @@ for i in range(len(circuitsdata)):
     #if circuitsdata[i][0] == "":
     if True:
         cx = i
+        info_Orig_file(str(circuitsdata[cx][1]))
         print(cx, circuitsdata[i][0])
         my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2027LM.pdf")
         my_canvas.setFont("Helvetica", 25)
