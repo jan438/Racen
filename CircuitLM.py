@@ -398,7 +398,6 @@ for i in range(len(circuitsdata)):
     if True:
         cx = i
         info_Orig_file(str(circuitsdata[cx][1]))
-        print(cx, circuitsdata[i][0])
         my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2027LM.pdf")
         my_canvas.setFont("Helvetica", 25)
         my_canvas.setTitle(circuitsdata[cx][0])
@@ -408,7 +407,7 @@ for i in range(len(circuitsdata)):
         renderPDF.draw(drawing, my_canvas, 300, 750)
         name_x = 300
         name_y = 25
-        print("GeoJSON_to_SVG", circuitsdata[cx][1], circuitsdata[cx][0])
+        print(cx, "GeoJSON_to_SVG", circuitsdata[cx][1], circuitsdata[cx][0])
         [offset_x, offset_y] = GeoJSON_to_SVG(cx, circuitsdata[cx][1], circuitsdata[cx][0])
         circuit_x = 0
         circuit_y = 0
