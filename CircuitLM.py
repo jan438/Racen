@@ -339,7 +339,8 @@ def GeoJSON_to_SVG(cx, geojsonfile, circuit):
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
                     path = coordinates_to_path([coords[idx1 - 1:idx1 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec1color}"/>\n')
-                elif cx == 921:  #theAmericas
+                elif cx == 22 and circuit == "theAmericas":
+                    print("USA_Texas")
                     path = coordinates_to_path([coords[idx2:idx1 + 1]], scale, translate)
                     f.write(f'<path d="{path}" fill="none" stroke-width="7" stroke="{sec2color}"/>\n')
                     path = coordinates_to_path([coords[idx1:idx3 + 1]], scale, translate)
@@ -385,7 +386,7 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][0] == "Shanghai":
+    if circuitsdata[i][0] == "theAmericas":
     #if True:
         cx = i
         print(cx, circuitsdata[i][0])
