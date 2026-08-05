@@ -31,6 +31,7 @@ height = A4_height
 arrowscale = 0.0075
 arrow_x = 0.0
 arrow_y = 0.0
+circlescale = 0.1
 rulerscale = 0.034
 clockwisescale = 0.010
 altitudescale = 0.010
@@ -225,7 +226,7 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectiony * circuitscale)
     renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
     renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
-    renderPDF.draw(scaleSVG("SVG/circle.svg", rulerscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
+    renderPDF.draw(scaleSVG("SVG/circle.svg", circlescale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
     renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
     my_canvas.setFont(cirfont, 8)
     my_canvas.setFillColorRGB(170,255,127)
