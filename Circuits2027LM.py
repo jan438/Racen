@@ -39,6 +39,7 @@ worldmapscale = 0.45
 worldmap_x = 125
 worldmap_y = 325
 cirfont = "LiberationSerif"
+info_dx = 18
   
 circuitcolors = ["#88255F", "#DB4035", "#FF9933", "#FAD000", "#AFB83B", "#7ECC49", "#E7E84F", "#299438", "#A8A202", "#158FAD", "#14AAF5", "#CD0027", "#4073FF", "#D38895", "#884DFF", "#AF38EB", "#EB96EB", "#E05194", "#FF8D85", "#808080", "#FFE001", "#CCAC93", "#9A6324", "#80FF80"]
 
@@ -229,9 +230,9 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/circle.svg", circlescale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
     my_canvas.setFont(cirfont, 8)
     my_canvas.setFillColorRGB(170,255,127)
-    my_canvas.drawString(circuit_x + left_margin + int(circuitsdata[i][10]) + 15, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 20, f"{length}")
+    my_canvas.drawString(circuit_x + left_margin + int(circuitsdata[i][10]) + info_dx, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 20, f"{length}")
     my_canvas.setFont(cirfont, 7)
-    my_canvas.drawString(circuit_x + left_margin + int(circuitsdata[i][10]) + 15, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 12, f"{altitude}")
+    my_canvas.drawString(circuit_x + left_margin + int(circuitsdata[i][10]) + info_dx, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 12, f"{altitude}")
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
