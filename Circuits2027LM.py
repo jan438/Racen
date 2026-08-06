@@ -230,7 +230,7 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/circle.svg", circlescale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
     my_canvas.setFont(cirfont, 7)
     my_canvas.setFillColorRGB(170,255,127)
-    my_canvas.drawString(circuit_x + left_margin + int(circuitsdata[i][10]) + info_dx, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 23, f"{length}" + "m")
+    my_canvas.drawString(circuit_x + left_margin + int(circuitsdata[i][10]) + info_dx, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 24, f"{length}" + "m")
     renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]) + 25, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 18)
     my_canvas.drawString(circuit_x + left_margin + int(circuitsdata[i][10]) + info_dx, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 13, f"{altitude}" + "m")
     renderPDF.draw(scaleSVG("SVG/altitude2.svg", arrowscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]) + 34, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 13)
