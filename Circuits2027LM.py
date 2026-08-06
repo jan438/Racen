@@ -210,40 +210,40 @@ for i in range(count):
     if i == 11 or i == 13:
         col = col + 3
     [startfinish_offset_x, startfinish_offset_y, sect2_offset_x, sect2_offset_y, sect2_angle, sect3_offset_x, sect3_offset_y, sect3_angle, length, altitude] = GeoJSON_to_Canvas(i)
-    circuit_x = col * colwidth
+    circuit_x = left_margin + col * colwidth
     circuit_y = row * rowheight
-    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
+    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x, circuit_y + bottom_margin)
     my_canvas.setFont(cirfont, 9)
     my_canvas.setFillColorRGB(255,170,0)
     displayname = circuitsdata[i][24]
     namewidth = pdfmetrics.stringWidth(displayname, "Helvetica", 9)
-    my_canvas.drawString(circuit_x + (left_margin + colwidth - namewidth) / 2, circuit_y + bottom_margin - 12, displayname)
+    my_canvas.drawString(circuit_x + (colwidth - namewidth) / 2, circuit_y + bottom_margin - 12, displayname)
     flag_x = startfinish_offset_x * circuitscale
     flag_y = startfinish_offset_y * circuitscale
     arrow1_x = sect2_offset_x * circuitscale
     arrow1_y = sect2_offset_y * circuitscale
     arrow2_x = sect3_offset_x * circuitscale
     arrow2_y = sect3_offset_y * circuitscale
-    renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectiony * circuitscale)
-    renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
-    renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
-    renderPDF.draw(scaleSVG("SVG/circle.svg", circlescale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
+    renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + flag_x + flagcorrectionx * circuitscale, circuit_y + bottom_margin + flag_y + flagcorrectiony * circuitscale)
+    renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow1_x, circuit_y + bottom_margin + arrow1_y)
+    renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow2_x, circuit_y + bottom_margin + arrow2_y)
+    renderPDF.draw(scaleSVG("SVG/circle.svg", circlescale), my_canvas, circuit_x + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
     my_canvas.setFont(cirfont, 7)
     my_canvas.setFillColorRGB(170,255,127)
-    my_canvas.drawString(circuit_x + left_margin + int(circuitsdata[i][10]) + info_dx, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 24, f"{length}" + "m")
-    renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]) + 20, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 11.5)
-    my_canvas.drawString(circuit_x + left_margin + int(circuitsdata[i][10]) + info_dx, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 14, f"{altitude}" + "m")
-    renderPDF.draw(scaleSVG("SVG/altitude.svg", arrowscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]) + 27, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 9.2)
+    my_canvas.drawString(circuit_x + int(circuitsdata[i][10]) + info_dx, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 24, f"{length}" + "m")
+    renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + int(circuitsdata[i][10]) + 20, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 11.5)
+    my_canvas.drawString(circuit_x + int(circuitsdata[i][10]) + info_dx, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 14, f"{altitude}" + "m")
+    renderPDF.draw(scaleSVG("SVG/altitude.svg", arrowscale), my_canvas, circuit_x + int(circuitsdata[i][10]) + 27, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 9.2)
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
     my_canvas.setStrokeColor(HexColor("#000000"))
     my_canvas.circle(worldlocx, worldlocy, 1.75, stroke = 0, fill = 1)
-    my_canvas.circle(circuit_x + left_margin + (left_margin + colwidth - namewidth) / 2 - 22, circuit_y + bottom_margin - 9, 2.8, stroke = 0, fill = 1)
+    my_canvas.circle(circuit_x + (colwidth - namewidth) / 2 - 22, circuit_y + bottom_margin - 9, 2.8, stroke = 0, fill = 1)
     if circuitsdata[i][9] == "a":
-        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-left.svg", clockwisescale), my_canvas, circuit_x + left_margin + (left_margin + colwidth - namewidth) / 2 - 18 + namewidth, circuit_y + bottom_margin - 12)
+        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-left.svg", clockwisescale), my_canvas, circuit_x +  (colwidth - namewidth) / 2 - 18 + namewidth, circuit_y + bottom_margin - 12)
     else:
-        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-right.svg", clockwisescale), my_canvas, circuit_x + left_margin + (left_margin + colwidth - namewidth) / 2 - 18 + namewidth, circuit_y + bottom_margin - 12)
+        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-right.svg", clockwisescale), my_canvas, circuit_x + (colwidth - namewidth) / 2 - 18 + namewidth, circuit_y + bottom_margin - 12)
     legend_x = worldmap_x + 30 + legendcol * 52
     legend_y = worldmap_y - 40 + legendrow * 10
     my_canvas.circle(legend_x, legend_y, 2.8, stroke = 0, fill = 1)
