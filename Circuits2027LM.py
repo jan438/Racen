@@ -227,15 +227,15 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow1_x, circuit_y + bottom_margin + arrow1_y)
     renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + left_margin + arrow2_x, circuit_y + bottom_margin + arrow2_y)
     renderPDF.draw(scaleSVG("SVG/circle.svg", circlescale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
-    renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
+    #renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]))
     my_canvas.setFont(cirfont, 8)
     my_canvas.setFillColorRGB(170,255,127)
     my_canvas.drawString(circuit_x + left_margin + 5 + int(circuitsdata[i][10]), circuit_y + bottom_margin + 7 + int(circuitsdata[i][11]) + 10, f"{length}")
-    if circuitsdata[i][9] == "a":
-        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-left.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 1)
-    else:
-        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-right.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 1)
-    renderPDF.draw(scaleSVG("SVG/altitude.svg", altitudescale), my_canvas, circuit_x + 6 + left_margin + 6 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 1)
+    #if circuitsdata[i][9] == "a":
+        #renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-left.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 1)
+    #else:
+        #renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-right.svg", clockwisescale), my_canvas, circuit_x + left_margin + 3 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 1)
+    #renderPDF.draw(scaleSVG("SVG/altitude.svg", altitudescale), my_canvas, circuit_x + 6 + left_margin + 6 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 1)
     my_canvas.setFont(cirfont, 7)
     my_canvas.drawString(circuit_x + left_margin + 20 + int(circuitsdata[i][10]), circuit_y + bottom_margin + int(circuitsdata[i][11]) + 3, f"{altitude}")
     worldlocx = worldmap_x + float(circuitsdata[i][3])
