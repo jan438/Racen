@@ -235,7 +235,7 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/leftarrow.svg", arrowscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]) + 25, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 18)
     renderPDF.draw(scaleSVG("SVG/rightarrow.svg", arrowscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]) + 30, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 18)
     my_canvas.drawString(circuit_x + left_margin + int(circuitsdata[i][10]) + info_dx, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 13, f"{altitude}" + "m")
-    renderPDF.draw(scaleSVG("SVG/altitude2.svg", arrowscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]) + 33, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 13)
+    renderPDF.draw(scaleSVG("SVG/altitude2.svg", arrowscale), my_canvas, circuit_x + left_margin + int(circuitsdata[i][10]) + 34, circuit_y + bottom_margin + int(circuitsdata[i][11]) + 13)
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
