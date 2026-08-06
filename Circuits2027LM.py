@@ -39,7 +39,7 @@ worldmapscale = 0.45
 worldmap_x = 125
 worldmap_y = 325
 cirfont = "LiberationSerif"
-info_dx = 18
+info_dx = 22
   
 circuitcolors = ["#88255F", "#DB4035", "#FF9933", "#FAD000", "#AFB83B", "#7ECC49", "#E7E84F", "#299438", "#A8A202", "#158FAD", "#14AAF5", "#CD0027", "#4073FF", "#D38895", "#884DFF", "#AF38EB", "#EB96EB", "#E05194", "#FF8D85", "#808080", "#FFE001", "#CCAC93", "#9A6324", "#80FF80"]
 
