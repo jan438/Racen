@@ -249,6 +249,8 @@ for i in range(count):
     my_canvas.circle(legend_x, legend_y, 2.8, stroke = 0, fill = 1)
     my_canvas.setFillColor(HexColor("#FFFFFF"))
     my_canvas.drawString(legend_x + 5, legend_y - 2, circuitsdata[i][25])
+    my_canvas.setLineWidth(1)
+    my_canvas.rect(circuit_x, circuit_y, colwidth, rowheight, stroke=1, fill=0)  
     legendcol += 1
     if legendcol == 6:
         legendrow = legendrow + 1
