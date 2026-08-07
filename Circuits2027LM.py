@@ -213,7 +213,9 @@ for i in range(count):
     [startfinish_offset_x, startfinish_offset_y, sect2_offset_x, sect2_offset_y, sect2_angle, sect3_offset_x, sect3_offset_y, sect3_angle, length, altitude] = GeoJSON_to_Canvas(i)
     circuit_x = left_margin + col * colwidth
     circuit_y = row * rowheight
-    renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale), my_canvas, circuit_x, circuit_y + bottom_margin)
+    circuitsvg = "SVG/" + circuitsdata[i][0] + "LM.svg"
+    circuitdrawing = scaleSVG(circuitsvg, circuitscale)
+    renderPDF.draw(circuitdrawing, my_canvas, circuit_x, circuit_y + bottom_margin)
     my_canvas.setFont(cirfont, 9)
     my_canvas.setFillColorRGB(255,170,0)
     displayname = circuitsdata[i][24]
