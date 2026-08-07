@@ -218,7 +218,6 @@ for i in range(count):
     my_canvas.setFillColorRGB(255,170,0)
     displayname = circuitsdata[i][24]
     namewidth = pdfmetrics.stringWidth(displayname, cirfont, 9)
-    print(namewidth, max_namewidth)
     my_canvas.drawString(circuit_x + (colwidth - namewidth) / 2, circuit_y + bottom_margin - 12, displayname)
     flag_x = startfinish_offset_x * circuitscale
     flag_y = startfinish_offset_y * circuitscale
