@@ -39,7 +39,6 @@ worldmapscale = 0.45
 worldmap_x = 125
 worldmap_y = 325
 cirfont = "LiberationSerif"
-info_dx = 22
   
 circuitcolors = ["#88255F", "#DB4035", "#FF9933", "#FAD000", "#AFB83B", "#7ECC49", "#E7E84F", "#299438", "#A8A202", "#158FAD", "#14AAF5", "#CD0027", "#4073FF", "#D38895", "#884DFF", "#AF38EB", "#EB96EB", "#E05194", "#FF8D85", "#808080", "#FFE001", "#CCAC93", "#9A6324", "#80FF80"]
 
@@ -227,16 +226,18 @@ for i in range(count):
     arrow1_y = sect2_offset_y * circuitscale
     arrow2_x = sect3_offset_x * circuitscale
     arrow2_y = sect3_offset_y * circuitscale
+    info_x = int(circuitsdata[i][10])
+    info_y = int(circuitsdata[i][11])
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + flag_x + flagcorrectionx * circuitscale, circuit_y + flag_y + flagcorrectiony * circuitscale)
     renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow1_x, circuit_y + arrow1_y)
     renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow2_x, circuit_y + arrow2_y)
-    renderPDF.draw(scaleSVG("SVG/circle.svg", circlescale), my_canvas, circuit_x + int(circuitsdata[i][10]), circuit_y + int(circuitsdata[i][11]))
+    renderPDF.draw(scaleSVG("SVG/circle.svg", circlescale), my_canvas, circuit_x + info_x, circuit_y + info_y)
     my_canvas.setFont(cirfont, 7)
     my_canvas.setFillColorRGB(170,255,127)
-    my_canvas.drawString(circuit_x + int(circuitsdata[i][10]) + info_dx, circuit_y + int(circuitsdata[i][11]) + 24, f"{length}" + "m")
-    renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + int(circuitsdata[i][10]) + 20, circuit_y + int(circuitsdata[i][11]) + 9.9)
-    my_canvas.drawString(circuit_x + int(circuitsdata[i][10]) + info_dx, circuit_y + int(circuitsdata[i][11]) + 14, f"{altitude}" + "m")
-    renderPDF.draw(scaleSVG("SVG/altitude.svg", arrowscale), my_canvas, circuit_x + int(circuitsdata[i][10]) + 27, circuit_y + int(circuitsdata[i][11]) + 9.2)
+    my_canvas.drawString(circuit_x + info_x, circuit_y + info_y + 24, f"{length}" + "m")
+    renderPDF.draw(scaleSVG("SVG/ruler.svg", rulerscale), my_canvas, circuit_x + info_x + 20, circuit_y + info_y + 9.9)
+    my_canvas.drawString(circuit_x + info_x, circuit_y + info_y + 14, f"{altitude}" + "m")
+    renderPDF.draw(scaleSVG("SVG/altitude.svg", arrowscale), my_canvas, circuit_x + info_x + 27, circuit_y + info_y + 9.2)
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
