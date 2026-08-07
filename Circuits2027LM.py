@@ -215,7 +215,7 @@ for i in range(count):
     circuit_y = bottom_margin + row * rowheight
     circuitsvg = "SVG/" + circuitsdata[i][0] + "LM.svg"
     circuitdrawing = scaleSVG(circuitsvg, circuitscale)
-    renderPDF.draw(circuitdrawing, my_canvas, circuit_x + (colwidth - circuitdrawing.width) / 2, circuit_y)
+    renderPDF.draw(circuitdrawing, my_canvas, circuit_x + (colwidth - circuitdrawing.width) / 2, circuit_y + (rowheight - circuitdrawing.height) / 2)
     my_canvas.setFont(cirfont, 9)
     my_canvas.setFillColorRGB(255,170,0)
     displayname = circuitsdata[i][24]
