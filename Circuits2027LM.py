@@ -242,9 +242,9 @@ for i in range(count):
     my_canvas.circle(worldlocx, worldlocy, 1.75, stroke = 0, fill = 1)
     my_canvas.circle(circuit_x + (colwidth - namewidth) / 2 - 5, circuit_y + bottom_margin - 9, 2.8, stroke = 0, fill = 1)
     if circuitsdata[i][9] == "a":
-        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-left.svg", clockwisescale), my_canvas, circuit_x +  (colwidth - namewidth) / 2 - 2 + namewidth, circuit_y + bottom_margin - 12)
+        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-left.svg", clockwisescale), my_canvas, circuit_x +  (colwidth - namewidth) / 2 + namewidth + 2, circuit_y + bottom_margin - 12)
     else:
-        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-right.svg", clockwisescale), my_canvas, circuit_x + (colwidth - namewidth) / 2 - 2 + namewidth, circuit_y + bottom_margin - 12)
+        renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-right.svg", clockwisescale), my_canvas, circuit_x + (colwidth - namewidth) / 2 + namewidth + 2, circuit_y + bottom_margin - 12)
     legend_x = worldmap_x + 30 + legendcol * 52
     legend_y = worldmap_y - 40 + legendrow * 10
     my_canvas.circle(legend_x, legend_y, 2.8, stroke = 0, fill = 1)
