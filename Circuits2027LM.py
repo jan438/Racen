@@ -238,7 +238,7 @@ for i in range(count):
     renderPDF.draw(rulerdrawing, my_canvas, circuit_x + info_x - rulerdrawing.width / 2, circuit_y + info_y - rulerdrawing.height / 2)
     my_canvas.drawString(circuit_x + info_x + 27, circuit_y + info_y + 14, f"{altitude}" + "m")
     altitudedrawing = scaleSVG("SVG/altitude.svg", arrowscale)
-    renderPDF.draw(altitudedrawing, my_canvas, circuit_x + info_x - altitudedrawing.width / 2, circuit_y + info_y - altitudedrawing.height / 2)
+    renderPDF.draw(altitudedrawing, my_canvas, circuit_x + info_x - altitudedrawing.width / 2, circuit_y + info_y - altitudedrawing.height / 2 - 10)
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
