@@ -205,9 +205,6 @@ row = 5
 col = 0
 legendcol = 0
 legendrow = 0
-max_namewidth = 76.73
-circlewidth = 63.0
-circleheight = 42.0
 for i in range(count):
     if i == 11 or i == 13:
         col = col + 3
@@ -235,7 +232,7 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow2_x, circuit_y + arrow2_y)
     circlesvg = "SVG/circle.svg"
     circledrawing = scaleSVG(circlesvg, circlescale)
-    renderPDF.draw(circledrawing, my_canvas, circuit_x + info_x - circlewidth / 2, circuit_y + info_y - circleheight / 2)
+    renderPDF.draw(circledrawing, my_canvas, circuit_x + info_x - circledrawing.width / 2, circuit_y + info_y - circledrawing.height / 2)
     my_canvas.setFont(cirfont, 7)
     my_canvas.setFillColorRGB(170,255,127)
     my_canvas.drawString(circuit_x + info_x + 27, circuit_y + info_y + 24, f"{length}" + "m")
