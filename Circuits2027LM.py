@@ -234,7 +234,7 @@ for i in range(count):
     my_canvas.setFont(cirfont, 7)
     my_canvas.setFillColorRGB(170,255,127)
     lengthstr = f"{length}" + "m"
-    my_canvas.drawString(circuit_x + info_x - pdfmetrics.stringWidth(lengthstr, cirfont, 7) / 2, circuit_y + info_y + 8, lengthstr)
+    my_canvas.drawString(circuit_x + info_x - pdfmetrics.stringWidth(lengthstr, cirfont, 7) / 2, circuit_y + info_y + 4, lengthstr)
     rulerdrawing = scaleSVG("SVG/ruler.svg", rulerscale)
     renderPDF.draw(rulerdrawing, my_canvas, circuit_x + info_x - rulerdrawing.width / 2, circuit_y + info_y - rulerdrawing.height / 2)
     altitudestr = f"{altitude}" + "m"
