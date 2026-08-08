@@ -36,7 +36,7 @@ def Altitude_to_SVG(geojsonfile, svgfile):
             for linestring in coords:
                print(geojsonfile, "len", len(linestring))
                for point in linestring:
-                    x, y = point
+                    x, y, a = point
                     min_x = min(min_x, x)
                     max_x = max(max_x, x)
                     min_y = min(min_y, y)
