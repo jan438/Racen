@@ -211,8 +211,7 @@ for i in range(count):
     [startfinish_offset_x, startfinish_offset_y, sect2_offset_x, sect2_offset_y, sect2_angle, sect3_offset_x, sect3_offset_y, sect3_angle, length, altitude] = GeoJSON_to_Canvas(i)
     circuit_x = left_margin + col * colwidth
     circuit_y = bottom_margin + row * rowheight
-    circuitsvg = "SVG/" + circuitsdata[i][0] + "LM.svg"
-    circuitdrawing = scaleSVG(circuitsvg, circuitscale)
+    circuitdrawing = scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale)
     renderPDF.draw(circuitdrawing, my_canvas, circuit_x + (colwidth - circuitdrawing.width) / 2, circuit_y + (rowheight - circuitdrawing.height) / 2)
     my_canvas.setFont(cirfont, 9)
     my_canvas.setFillColorRGB(255,170,0)
@@ -230,8 +229,7 @@ for i in range(count):
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + flag_x + flagcorrectionx * circuitscale, circuit_y + flag_y + flagcorrectiony * circuitscale)
     renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow1_x, circuit_y + arrow1_y)
     renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow2_x, circuit_y + arrow2_y)
-    circlesvg = "SVG/circle.svg"
-    circledrawing = scaleSVG(circlesvg, circlescale)
+    circledrawing = scaleSVG("SVG/circle.svg", circlescale)
     renderPDF.draw(circledrawing, my_canvas, circuit_x + info_x - circledrawing.width / 2, circuit_y + info_y - circledrawing.height / 2)
     my_canvas.setFont(cirfont, 7)
     my_canvas.setFillColorRGB(170,255,127)
