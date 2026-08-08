@@ -237,7 +237,8 @@ for i in range(count):
     my_canvas.drawString(circuit_x + info_x - pdfmetrics.stringWidth(lengthstr, cirfont, 7), circuit_y + info_y + 8, lengthstr)
     rulerdrawing = scaleSVG("SVG/ruler.svg", rulerscale)
     renderPDF.draw(rulerdrawing, my_canvas, circuit_x + info_x - rulerdrawing.width / 2, circuit_y + info_y - rulerdrawing.height / 2)
-    my_canvas.drawString(circuit_x + info_x + 27, circuit_y + info_y + 14, f"{altitude}" + "m")
+    altitudestr = f"{altitude}" + "m"
+    my_canvas.drawString(circuit_x + info_x - pdfmetrics.stringWidth(altitudestr, cirfont, 7), circuit_y + info_y - 1, altitudestr)
     altitudedrawing = scaleSVG("SVG/altitude.svg", arrowscale)
     renderPDF.draw(altitudedrawing, my_canvas, circuit_x + info_x - altitudedrawing.width / 2, circuit_y + info_y - altitudedrawing.height / 2 - 10)
     worldlocx = worldmap_x + float(circuitsdata[i][3])
