@@ -50,7 +50,7 @@ def Altitude_to_SVG(geojsonfile, svgfile):
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
                 print("To write elevation")
-        f.write('<path d="M 100 100 L 300 100 L 200 300 Z" fill="red" stroke="blue" stroke-width="3" />')
+        f.write('<path d="M 100 50 L 300 50 L 200 100 Z" fill="red" stroke="blue" stroke-width="3" />')
         f.write('</svg>')    
     return
 if sys.platform[0] == 'l':
