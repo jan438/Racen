@@ -224,8 +224,8 @@ for i in range(count):
     arrow1_y = sect2_offset_y * circuitscale
     arrow2_x = sect3_offset_x * circuitscale
     arrow2_y = sect3_offset_y * circuitscale
-    info_x = int(circuitsdata[i][10])
-    info_y = int(circuitsdata[i][11])
+    info_x = float(circuitsdata[i][10])
+    info_y = float(circuitsdata[i][11])
     renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + flag_x + flagcorrectionx * circuitscale, circuit_y + flag_y + flagcorrectiony * circuitscale)
     renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow1_x, circuit_y + arrow1_y)
     renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow2_x, circuit_y + arrow2_y)
