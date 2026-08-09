@@ -1,6 +1,5 @@
-Here’s a complete, runnable Python example that sends a POST request to the Open-Elevation API to get elevation data for one or more coordinates.
-The POST method is preferred when you have many coordinates, as it avoids URL length limits.
-Pythonimport requests
+import requests
+import json
 
 def get_elevations(locations):
     """
@@ -41,12 +40,5 @@ if __name__ == "__main__":
     elevations = get_elevations(coords)
     for lat, lon, elev in elevations:
         print(f"Lat: {lat}, Lon: {lon} → Elevation: {elev} m")
-
-How it works:
-
-Endpoint: https://api.open-elevation.com/api/v1/lookup
-POST Payload: JSON with a "locations" array of {latitude, longitude} objects.
-Error Handling: Catches network errors, timeouts, and invalid responses.
-Timeout: Set to 10 seconds to avoid hanging requests.
-
-
+        
+key = input("Wait")
