@@ -1,13 +1,6 @@
 import requests
 import json
 
-response = requests.get("https://www.geeksforgeeks.org/")
-print(response.status_code)
-
-# Source - https://stackoverflow.com/a/72914207
-# Posted by Bruno Robert
-# Retrieved 2026-08-09, License - CC BY-SA 4.0
-
 response = requests.post(
             url="https://api.open-elevation.com/api/v1/lookup",
             headers={
