@@ -2,6 +2,14 @@ import requests
 import json
 import sys
 import os
+import geojson
+
+def readgeojsonfile(geojsonfile):
+    with open("Data/" + geojsonfile + ".geojson", 'r') as file:
+        geojson_data = geojson.load(file)
+    features = geojson_data['features']
+    print(features)
+    return
 
 #response = requests.post(
 #            url="https://api.open-elevation.com/api/v1/lookup",
@@ -31,5 +39,7 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
+
+readgeojsonfile("be-1925")
 
 key = input("Wait")
