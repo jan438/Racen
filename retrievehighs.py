@@ -6,7 +6,8 @@ import geojson
 
 selectioncoords = []
 
-def readgeojsonfile(geojsonfile):
+def readgeojsonfile(geojsonfile, min, max):
+    index = 0
     with open("Data/" + geojsonfile + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
     features = geojson_data['features']
@@ -21,7 +22,9 @@ def readgeojsonfile(geojsonfile):
                print(geojsonfile, "len", len(linestring))
                for point in linestring:
                     x, y = point
-                    selectioncoords.append([x, y])
+                    if index >= min and index < max:
+                        selectioncoords.append([x, y])
+                    index += 1
     return selectioncoords
 
 #response = requests.post(
@@ -53,7 +56,7 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 
-selectedcoords = readgeojsonfile("be-1925")
+selectedcoords = readgeojsonfile("be-1925", 0, 10)
 print(len(selectedcoords))
 
 key = input("Wait")
