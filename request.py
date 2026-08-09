@@ -10,12 +10,12 @@ response = requests.post(
             data=json.dumps({
                 "locations": [
                     {
-                        "longitude": 10,
-                        "latitude": 10
+                        "longitude": 5.96502000000,
+                        "latitude": 50.44425100000
                     },
                     {
-                        "longitude": 20,
-                        "latitude": 20
+                        "longitude": 5.96341900000,
+                        "latitude": 50.44603300000
                     }
                 ]
             })
