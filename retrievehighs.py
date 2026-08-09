@@ -9,6 +9,16 @@ def readgeojsonfile(geojsonfile):
         geojson_data = geojson.load(file)
     features = geojson_data['features']
     print("Count features", len(features))
+    for feature in features:
+        geometry = feature["geometry"]
+        properties = feature['properties']
+        if geometry['type'] == 'LineString':
+            coordinates = geometry["coordinates"]
+            coords = [coordinates]
+            for linestring in coords:
+               print(geojsonfile, "len", len(linestring))
+               for point in linestring:
+                    x, y = point
     return
 
 #response = requests.post(
