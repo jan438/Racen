@@ -4,6 +4,8 @@ import sys
 import os
 import geojson
 
+selectioncoords = []
+
 def readgeojsonfile(geojsonfile):
     with open("Data/" + geojsonfile + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
@@ -19,7 +21,8 @@ def readgeojsonfile(geojsonfile):
                print(geojsonfile, "len", len(linestring))
                for point in linestring:
                     x, y = point
-    return
+                    selectioncoords.append([x, y])
+    return selectioncoords
 
 #response = requests.post(
 #            url="https://api.open-elevation.com/api/v1/lookup",
@@ -50,6 +53,7 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 
-readgeojsonfile("be-1925")
+selectedcoords = readgeojsonfile("be-1925")
+print(len(selectedcoords))
 
 key = input("Wait")
