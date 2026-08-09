@@ -50,9 +50,6 @@ def lookuphighs():
         )
     return response
 
-#print('Response HTTP Status Code: {status_code}'.format(status_code=response.status_code))
-#print('Response HTTP Response Body: {content}'.format(content=response.content))
-
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
 if sys.platform[0] == 'w':
