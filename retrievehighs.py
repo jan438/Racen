@@ -63,6 +63,4 @@ resp = lookuphighs()
 print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
 print('Response HTTP Response Body: {content}'.format(content=resp.content))
 
-print(resp)
-
 key = input("Wait")
