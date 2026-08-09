@@ -5,6 +5,7 @@ import os
 import geojson
 
 selectioncoords = []
+resp = requests.Response
 
 def readgeojsonfile(geojsonfile, min, max):
     index = 0
@@ -58,5 +59,7 @@ os.chdir(path)
 
 selectedcoords = readgeojsonfile("be-1925", 0, 10)
 print(len(selectedcoords))
+
+print(resp)
 
 key = input("Wait")
