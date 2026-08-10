@@ -29,6 +29,16 @@ def readgeojsonfile(geojsonfile, min, max):
     return selectioncoords
     
 def lookuphighs(selectedcoords):
+    line_items = []
+    for q in selectedcoords:
+        longtitude = q[0]
+        latitude = q[1]
+        myjson = {
+                'longtitude': longtitude,
+                'latitude': latitude
+            }
+        line_items.append(myjson)
+    print(json.dumps(line_items))
     response = requests.post(
             url="https://api.open-elevation.com/api/v1/lookup",
             headers={
