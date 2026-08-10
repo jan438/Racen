@@ -44,19 +44,22 @@ def lookuphighs(selectedcoords):
         line_items.append(myjson)
     locsstr = json.dumps(line_items)
     print("locstr", locsstr)
-    lon00 = float(selectedcoords[0][0])
+    lon0 = float(selectedcoords[0][0])
+    lat0 = float(selectedcoords[0][1])
+    lon1 = float(selectedcoords[1][0])
+    lat1 = float(selectedcoords[1][1])
     response = requests.post(
             url = urlstr,
             headers = headersarr,
             data=json.dumps({
                 "locations": [
                     {
-                        "longitude": lon00,
-                        "latitude": 50.44425100000
+                        "longitude": lon0,
+                        "latitude": lat0
                     },
                     {
-                        "longitude": 5.96341900000,
-                        "latitude": 50.44603300000
+                        "longitude": lon1,
+                        "latitude": lat1
                     }
                 ]
             })
