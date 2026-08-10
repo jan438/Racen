@@ -44,7 +44,7 @@ def lookuphighs(selectedcoords):
         line_items.append(myjson)
     locsstr = json.dumps(line_items)
     print("locstr", locsstr)
-    lon00 = 5.96502000000
+    lon00 = float(selectedcoords[0][0])
     response = requests.post(
             url = urlstr,
             headers = headersarr,
