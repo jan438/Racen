@@ -121,13 +121,13 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 
-selectedcoords = readgeojsonfile("be-1925", 0, 10)
+selectedcoords = readgeojsonfile("be-1925", 10, 20)
 print(len(selectedcoords))
 
 resp = lookuphighs(selectedcoords)
 print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
 highs = resp.content
-with open("Data/be-1925-000-009", 'w') as f:
+with open("Data/be-1925-010-029", 'w') as f:
     f.write(str(resp.content))
 
 key = input("Wait")
