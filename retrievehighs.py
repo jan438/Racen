@@ -56,6 +56,14 @@ def lookuphighs(selectedcoords):
     lat4 = float(selectedcoords[4][1])
     lon5 = float(selectedcoords[5][0])
     lat5 = float(selectedcoords[5][1])
+    lon6 = float(selectedcoords[6][0])
+    lat6 = float(selectedcoords[6][1])
+    lon7 = float(selectedcoords[7][0])
+    lat7 = float(selectedcoords[7][1])
+    lon8 = float(selectedcoords[8][0])
+    lat8 = float(selectedcoords[8][1])
+    lon9 = float(selectedcoords[9][0])
+    lat9 = float(selectedcoords[9][1])
     response = requests.post(
             url = urlstr,
             headers = headersarr,
@@ -84,7 +92,24 @@ def lookuphighs(selectedcoords):
                     {
                         "longitude": lon5,
                         "latitude": lat5
+                    },
+                    {
+                        "longitude": lon6,
+                        "latitude": lat6
+                    },
+                    {
+                        "longitude": lon7,
+                        "latitude": lat7
+                    },
+                    {
+                        "longitude": lon8,
+                        "latitude": lat8
+                    },
+                    {
+                        "longitude": lon9,
+                        "latitude": lat9
                     }
+                    
                 ]
             })
         )
@@ -96,7 +121,7 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 
-selectedcoords = readgeojsonfile("be-1925", 0, 6)
+selectedcoords = readgeojsonfile("be-1925", 0, 10)
 print(len(selectedcoords))
 
 resp = lookuphighs(selectedcoords)
