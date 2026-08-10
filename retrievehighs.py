@@ -126,6 +126,8 @@ print(len(selectedcoords))
 
 resp = lookuphighs(selectedcoords)
 print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
-print('Response HTTP Response Body: {content}'.format(content=resp.content))
+highs = resp.content
+with open("Data/be-1925-000-009", 'w') as f:
+    f.write(str(resp.content))
 
 key = input("Wait")
