@@ -33,7 +33,6 @@ def lookuphighs(selectedcoords):
     headersarr = {
                 "Accept": "application/json",
                 "Content-Type": "application/json; charset=utf-8"}     
-    req = ""
     line_items = []
     for q in selectedcoords:
         longtitude = q[0]
