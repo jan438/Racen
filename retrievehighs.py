@@ -28,7 +28,7 @@ def readgeojsonfile(geojsonfile, min, max):
                     index += 1
     return selectioncoords
     
-def lookuphighs():
+def lookuphighs(selectedcoords):
     response = requests.post(
             url="https://api.open-elevation.com/api/v1/lookup",
             headers={
@@ -56,10 +56,10 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 
-selectedcoords = readgeojsonfile("be-1925", 0, 10)
+selectedcoords = readgeojsonfile("be-1925", 0, 2)
 print(len(selectedcoords))
 
-resp = lookuphighs()
+resp = lookuphighs(selectedcoords)
 print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
 print('Response HTTP Response Body: {content}'.format(content=resp.content))
 
