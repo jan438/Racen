@@ -7,7 +7,9 @@ try:
 except (FileNotFoundError, json.decoder.JSONDecodeError):
     existing_data = []
 
-url = "https://api.open-elevation.com/api/v1/lookup?locations=41.161758,-8.583933"
+latitude = "41.161758"
+longitude = "-8.583933"
+url = "https://api.open-elevation.com/api/v1/lookup?locations=" + latitude + "," + longitude
 response = requests.get(url)
 
 if response.status_code == 200:
