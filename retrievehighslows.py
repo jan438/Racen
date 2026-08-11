@@ -50,7 +50,8 @@ print(len(selectedcoords))
 resp = lookuphighs(selectedcoords)
 print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
 highslows = resp.content
-print(highslows)
-
+data = json.loads(highslows.decode('utf-8'))
+with open('PDF/highslows.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=4)
 
 key = input("Wait")
