@@ -44,7 +44,7 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 
-selectedcoords = readgeojsonfile("be-1925", 10, 20)
+selectedcoords = readgeojsonfile("be-1925", 0, 514)
 print(len(selectedcoords))
 
 resp = lookuphighs(selectedcoords)
