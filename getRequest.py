@@ -1,13 +1,12 @@
 import requests
 
-# https://api.open-elevation.com/api/v1/lookup?locations=41.161758,-8.583933
-# The API endpoint
 url = "https://api.open-elevation.com/api/v1/lookup?locations=41.161758,-8.583933"
 
-# A GET request to the API
-response = requests.get(url)
+try:
+    response = requests.get(url)
+    print(response.json())
 
-# Print the response
-print(response.json())
+except:
+	print("Exception")
 
 key = input("Wait")
