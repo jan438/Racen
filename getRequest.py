@@ -12,8 +12,9 @@ response = requests.get(url)
 
 if response.status_code == 200:
     new_data = response.json()
+    existing_data.update(new_data)
     with open("PDF/data.json", "w") as json_file:
-        json.dump(new_data, json_file, indent=4)
+        json.dump(existing_data, json_file, indent=4)
         print("Data appended to data.json file.")
 else:
     print("Failed to retrieve data from the API. Status code:", response.status_code)
