@@ -44,14 +44,15 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 
-selectedcoords = readgeojsonfile("be-1925", 0, 514)
+circuitname = "au-1953"
+selectedcoords = readgeojsonfile(circuitname, 0, 514)
 print(len(selectedcoords))
 
 resp = lookuphighs(selectedcoords)
 print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
 highslows = resp.content
 data = json.loads(highslows.decode('utf-8'))
-with open('PDF/highslows.json', 'w', encoding='utf-8') as f:
+with open('Data/' + circuitname + '.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=4)
 
 key = input("Wait")
