@@ -18,7 +18,9 @@ def Altitude_to_SVG(jsonfile, svgfile):
             latitude = item["latitude"]
             elevation = item["elevation"]
             if i == 0:
-                path_data = [f"M {longitude} {elevation}"]   
+                path_data = [f"M {longitude} {elevation}"]
+            else:
+                path_data += [f"L {longitude} {elevation}"]
             i += 1
         print(path_data)
         return path_data
