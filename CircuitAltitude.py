@@ -19,16 +19,16 @@ def Altitude_to_SVG(jsonfile):
             latitude = item["latitude"]
             elevation = item["elevation"]
             if i == 0:
-                path_data = [f"M {longitude} {elevation}"]
+                path_data = f"M {longitude} {elevation}"
             else:
-                path_data += [f"L {longitude} {elevation}"]
+                path_data += f" L {longitude} {elevation}"
             i += 1
         print(path_data)
         return path_data
     with open("Data/" + jsonfile + ".json", 'r') as file:
         data = json.load(file)
         coords = data["results"]
-        coordinates_to_path(coords)
+        path_data = coordinates_to_path(coords)
         dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('200px', '200px'))
         path_data = "M 10, 150 L 100, 10 L 190, 150 Z"
         path = dwg.path(d=path_data, fill='lightblue', stroke='blue', stroke_width=3)
