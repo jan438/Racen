@@ -25,8 +25,6 @@ def Altitude_to_SVG(jsonfile):
             i += 1
         print(path_data)
         return path_data
-    width = "500"
-    height = "500"
     with open("Data/" + jsonfile + ".json", 'r') as file:
         data = json.load(file)
         coords = data["results"]
