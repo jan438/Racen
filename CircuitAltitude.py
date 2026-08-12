@@ -12,8 +12,13 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 def Altitude_to_SVG(jsonfile, svgfile):
     def coordinates_to_path(coordinates):
         path_data = ""
+        i = 0
         for item in coordinates:
-            print(item["longitude"])
+            longitude = item["longitude"]
+            latitude = item["latitude"]
+            elevation = item["elevation"]
+            print(i, longitude, latitude, elevation)
+            i += 1
         return path_data
     with open("Data/" + jsonfile + ".json", 'r') as file:
         data = json.load(file)
