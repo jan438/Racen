@@ -20,8 +20,12 @@ def Altitude_to_SVG(jsonfile, svgfile):
                 path_data += f"{command}{x},{height - y} "
         return path_data.strip()
     with open("Data/" + jsonfile + ".json", 'r') as file:
-        json_data = json.load(file)
-        print(json_data)
+        data = json.load(file)
+        x =  '{ "name":"John", "age":30, "city":"New York"}'
+        # parse x:
+        y = json.loads(x)
+        # the result is a Python dictionary:
+        print(y["age"])
 #    with open("SVG/" + svgfile + "A.svg", 'w') as f:
 #        f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
 #        for feature in geojson_data['features']:
