@@ -13,7 +13,7 @@ def Altitude_to_SVG(jsonfile, svgfile):
     def coordinates_to_path(coordinates):
         path_data = ""
         for item in coordinates:
-            print(item)
+            print(item["longitude"])
         return path_data
     with open("Data/" + jsonfile + ".json", 'r') as file:
         data = json.load(file)
