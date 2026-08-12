@@ -10,19 +10,15 @@ from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 def Altitude_to_SVG(jsonfile, svgfile):
-    def coordinates_to_path(coordinates, scale, translate):
+    def coordinates_to_path(coordinates):
         path_data = ""
-        for LineString in coordinates:
-            for i, point in enumerate(LineString):
-                x = (point[0] - translate[0]) * scale[0]
-                y = (point[1] - translate[1]) * scale[1]
-                command = "M" if i == 0 else "L"
-                path_data += f"{command}{x},{height - y} "
-        return path_data.strip()
+        for item in coordinates:
+            print(item)
+        return path_data
     with open("Data/" + jsonfile + ".json", 'r') as file:
         data = json.load(file)
         coords = data["results"]
-        print(len(coords))
+        coordinates_to_path(coords)
 #    with open("SVG/" + svgfile + "A.svg", 'w') as f:
 #        f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
 #        for feature in geojson_data['features']:
