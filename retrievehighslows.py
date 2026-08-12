@@ -44,7 +44,7 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 
-circuitname = "gb-1948"
+circuitname = "jp-1962"
 selectedcoords = readgeojsonfile(circuitname, 0, 514)
 print(len(selectedcoords))
 
