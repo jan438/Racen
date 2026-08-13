@@ -12,8 +12,13 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 def Altitude_to_SVG(jsonfile):
     def coordinates_to_path(coordinates):
-        mina = -math.inf
-        maxa = math.inf
+        mina = math.inf
+        maxa = -math.inf
+        for item in coordinates:
+            elevation = item["elevation"]
+            if elevation > maxa:
+                maxa = elevation
+        print("maxa", maxa) 
         l = 0
         path_data = ""
         i = 0
