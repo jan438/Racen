@@ -13,23 +13,21 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 def Altitude_to_SVG(jsonfile):
     def coordinates_to_path(coordinates):
         l = 0
-        x = 0
-        y = 0
         path_data = ""
         i = 0
         for item in coordinates:
-            longitude = item["longitude"]
-            latitude = item["latitude"]
+            lon = item["longitude"]
+            lat = item["latitude"]
             elevation = item["elevation"]
             a = elevation
             if i == 0:
                 path_data = f"M {l} {a}"
             else:
-                d = sqrt(abs(longitude - x)**2 + abs(latitude - y)**2)
+                d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
                 l = l + d
                 path_data += f" L {l} {a}"
-                x = longitude
-                y = latitude
+            plon = lon
+            plat = lat
             print(i, "length", l, "altitude", a)
             i += 1
             if i == 3:
