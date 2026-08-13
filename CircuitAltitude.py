@@ -29,7 +29,8 @@ def Altitude_to_SVG(jsonfile):
                 l = l + d
                 path_data += f" L {l} {a}"
                 x = longitude
-                y = latitude 
+                y = latitude
+            print(i, "length", l, "altitude", a)
             i += 1
             if i == 3:
                  break
