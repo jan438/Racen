@@ -30,8 +30,6 @@ def Altitude_to_SVG(jsonfile):
             plat = lat
             print(i, "length", l, "altitude", a)
             i += 1
-            if i == 3:
-                 break
         print(path_data)
         return path_data
     with open("Data/" + jsonfile + ".json", 'r') as file:
