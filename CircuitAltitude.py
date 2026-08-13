@@ -28,7 +28,6 @@ def Altitude_to_SVG(jsonfile):
                 path_data += f" L {l} {a}"
             plon = lon
             plat = lat
-            print(i, "length", l, "altitude", a)
             i += 1
         print(path_data)
         return path_data
