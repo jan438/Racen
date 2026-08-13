@@ -44,7 +44,7 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-circuit = "bh-2002"
+circuit = "az-2016"
 Altitude_to_SVG(circuit)
 
 key = input("Wait")
