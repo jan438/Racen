@@ -12,25 +12,33 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 def Altitude_to_SVG(jsonfile):
     def coordinates_to_path(coordinates):
+        l = 0
+        x = 0
+        y = 0
         path_data = ""
         i = 0
         for item in coordinates:
             longitude = item["longitude"]
             latitude = item["latitude"]
             elevation = item["elevation"]
+            a = elevation
             if i == 0:
-                path_data = f"M {longitude} {elevation}"
+                path_data = f"M {l} {a}"
             else:
-                path_data += f" L {longitude} {elevation}"
+                d = sqrt(abs(longitude - x)**2 + abs(latitude - y)**2)
+                l = l + d
+                path_data += f" L {l} {a}"
+                x = longitude
+                y = latitude 
             i += 1
+            if i == 3:
+                 break
         print(path_data)
         return path_data
     with open("Data/" + jsonfile + ".json", 'r') as file:
         data = json.load(file)
-        coords = data["results"]
-        path_data = coordinates_to_path(coords)
-        dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('200px', '200px'))
-        path_data = "M 10, 150 L 100, 10 L 190, 150 Z"
+        path_data = coordinates_to_path(data["results"])
+        dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('1000px', '500px'))
         path = dwg.path(d=path_data, fill='lightblue', stroke='blue', stroke_width=3)
         dwg.add(path)
         dwg.save()
