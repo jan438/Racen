@@ -18,7 +18,9 @@ def Altitude_to_SVG(jsonfile):
             elevation = item["elevation"]
             if elevation > maxa:
                 maxa = elevation
-        print("maxa", maxa) 
+            if elevation < mina:
+                mina = elevation
+        print("maxa", maxa, "mina", mina) 
         l = 0
         path_data = ""
         i = 0
