@@ -12,6 +12,8 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 def Altitude_to_SVG(jsonfile):
     def coordinates_to_path(coordinates):
+        mina = -math.inf
+        maxa = math.inf
         l = 0
         path_data = ""
         i = 0
@@ -44,7 +46,7 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-circuit = "ca-1978"
+circuit = "be-1925"
 Altitude_to_SVG(circuit)
 
 key = input("Wait")
