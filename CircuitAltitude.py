@@ -24,7 +24,7 @@ def Altitude_to_SVG(jsonfile):
                 path_data = f"M {l} {a}"
             else:
                 d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
-                l = l + d
+                l = l + d * 10000
                 path_data += f" L {l} {a}"
             plon = lon
             plat = lat
