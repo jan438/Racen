@@ -64,6 +64,7 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("circuitsdata", count)        
         
-#Altitude_to_SVG(circuit)
+index = 0
+Altitude_to_SVG(circuitsdata[index][1])
 
 key = input("Wait")
