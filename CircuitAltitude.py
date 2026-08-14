@@ -54,7 +54,16 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-circuit = "be-1925"
-Altitude_to_SVG(circuit)
+circuitsdata = []
+file_to_open = "Data/Circuits2027.csv"
+with open(file_to_open, 'r') as file:
+    csvreader = csv.reader(file, delimiter = ';')
+    count = 0
+    for row in csvreader:
+        circuitsdata.append(row)
+        count += 1
+print("circuitsdata", count)        
+        
+#Altitude_to_SVG(circuit)
 
 key = input("Wait")
