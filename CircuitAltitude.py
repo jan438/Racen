@@ -45,7 +45,7 @@ def Altitude_to_SVG(jsonfile):
         data = json.load(file)
         path_data = coordinates_to_path(data["results"])
         dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('1000px', '200px'))
-        path = dwg.path(d=path_data, fill='none', stroke='blue', stroke_width=3)
+        path = dwg.path(d=path_data, fill='none', stroke='white', stroke_width=3)
         dwg.add(path)
         dwg.save()
     return
