@@ -64,7 +64,7 @@ def Altitude_to_SVG(jsonfile):
         grad.add_stop_color(offset=1.0, color='blue', opacity=1)
         # 3. Add the gradient to the drawing definitions
         dwg.defs.add(grad)
-        path = dwg.path(d=path_data, fill='white', stroke='white', stroke_width=3)
+        path = dwg.path(d=path_data, fill="url(#my-gradient)", stroke='white', stroke_width=3)
         dwg.add(path)
         dwg.save()
     return
