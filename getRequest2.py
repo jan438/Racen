@@ -9,7 +9,8 @@ except (FileNotFoundError, json.decoder.JSONDecodeError):
 
 latitude = "41.161758"
 longitude = "-8.583933"
-url = "https://api.opentopodata.org/v1/eudem25m?locations=" + latitude + "," + longitude
+url = "https://api.opentopodata.org/v1/srtm90m?locations=" + latitude + "," + longitude
+#url = "https://api.opentopodata.org/v1/eudem25m?locations=" + latitude + "," + longitude
 #url = "https://api.open-elevation.com/api/v1/lookup?locations=" + latitude + "," + longitude
 response = requests.get(url)
 
