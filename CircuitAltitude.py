@@ -26,7 +26,7 @@ def Altitude_to_SVG(jsonfile):
                 mina = elevation
             la = elevation
         diff = maxa - mina
-#        print("maxa", maxa, "mina", mina, "diff", diff) 
+        print("maxa", maxa, "mina", mina, "diff", diff) 
         l = 0
         path_data = ""
         i = 0
@@ -75,5 +75,6 @@ print("circuitsdata", count)
 for j in range(count):
     Altitude_to_SVG(circuitsdata[j][1])
     print(circuitsdata[j][0])
+    break
 
 key = input("Wait")
