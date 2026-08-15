@@ -30,7 +30,7 @@ def readgeojsonfile(geojsonfile, min, max):
     
 def lookuphighs(selectedcoords):
     #https://api.opentopodata.org/v1/eudem25m?locations=57.728905,11.949309
-    url = 'https://api.opentopodata.org/v1/srtm90m?locations='
+    url = 'https://api.opentopodata.org/v1/srtm90m?locations='   # invalid request
     #https://api.opentopodata.org/v1/srtm90m?locations=-43.5,172.5%7C27.6,1.98&interpolation=cubic
     fileToSend = {"locations": []}
     for q in selectedcoords:
