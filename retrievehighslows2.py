@@ -29,8 +29,9 @@ def readgeojsonfile(geojsonfile, min, max):
     return selectioncoords
     
 def lookuphighs(selectedcoords):
+    url = 'https://api.opentopodata.org/v1/eudem25m?'
     #https://api.opentopodata.org/v1/srtm90m?locations=-43.5,172.5%7C27.6,1.98&interpolation=cubic
-    url = "https://api.open-elevation.com/api/v1/lookup"
+    #url = "https://api.open-elevation.com/api/v1/lookup"
     fileToSend = {"locations": []}
     for q in selectedcoords:
         longtitude = float(q[0])
