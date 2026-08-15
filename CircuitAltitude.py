@@ -44,9 +44,10 @@ def Altitude_to_SVG(jsonfile):
             plon = lon
             plat = lat
             i += 1
-#        path_data += f" L {l} {mina}"
-#        path_data += f" L 0.0 {mina}"
-#        path_data += f" L 0.0 {fa}"
+        mina = 100
+        path_data += f" L {l} {mina}"
+        path_data += f" L 0.0 {mina}"
+        path_data += f" L 0.0 {fa}"
 #        print(path_data)
         return path_data
     with open("Data/" + jsonfile + ".json", 'r') as file:
@@ -75,6 +76,6 @@ print("circuitsdata", count)
 for j in range(count):
     Altitude_to_SVG(circuitsdata[j][1])
     print(circuitsdata[j][0])
-#    break
+    break
 
 key = input("Wait")
