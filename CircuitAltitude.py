@@ -45,6 +45,7 @@ def Altitude_to_SVG(jsonfile):
             plat = lat
             i += 1
         mina = 100
+        fa = maxa - fa
         path_data += f" L {l} {mina}"
         path_data += f" L 0.0 {mina}"
         path_data += f" L 0.0 {fa}"
