@@ -18,9 +18,10 @@ def Altitude_to_SVG(jsonfile):
         la = -1
         for item in coordinates:
             elevation = item["elevation"]
+            if fa == -1:
+                fa = elevation
             if elevation > maxa:
                 maxa = elevation
-                fa = elevation
             if elevation < mina:
                 mina = elevation
             la = elevation
@@ -43,13 +44,16 @@ def Altitude_to_SVG(jsonfile):
             plon = lon
             plat = lat
             i += 1
+        path_data += f" L {l} {mina}"
+        path_data += f" L 0.0 {mina}"
+        path_data += f" L 0.0 {fa}"
 #        print(path_data)
         return path_data
     with open("Data/" + jsonfile + ".json", 'r') as file:
         data = json.load(file)
         path_data = coordinates_to_path(data["results"])
-        dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('1000px', '200px'))
-        path = dwg.path(d=path_data, fill='none', stroke='white', stroke_width=3)
+        dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('1000px', '300px'))
+        path = dwg.path(d=path_data, fill='white', stroke='white', stroke_width=3)
         dwg.add(path)
         dwg.save()
     return
