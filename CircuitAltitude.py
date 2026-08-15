@@ -14,12 +14,16 @@ def Altitude_to_SVG(jsonfile):
     def coordinates_to_path(coordinates):
         mina = math.inf
         maxa = -math.inf
+        fa = -1
+        la = -1
         for item in coordinates:
             elevation = item["elevation"]
             if elevation > maxa:
                 maxa = elevation
+                fa = elevation
             if elevation < mina:
                 mina = elevation
+            la = elevation
         diff = maxa - mina
 #        print("maxa", maxa, "mina", mina, "diff", diff) 
         l = 0
