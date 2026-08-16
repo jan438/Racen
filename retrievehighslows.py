@@ -46,13 +46,14 @@ os.chdir(path)
 
 circuitname = "ae-2009"
 selectedcoords = readgeojsonfile(circuitname, 0, 514)
-print(len(selectedcoords))
-
+print("len selected coords", len(selectedcoords))
 resp = lookuphighs(selectedcoords)
 print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
-highslows = resp.content
-data = json.loads(highslows.decode('utf-8'))
-with open('Data/' + circuitname + '.json', 'w', encoding='utf-8') as f:
-    json.dump(data, f, ensure_ascii=False, indent=4)
-
+if resp.status_code == 200:
+    highslows = resp.content
+    data = json.loads(highslows.decode('utf-8'))
+    with open('Data/' + circuitname + '.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+else:
+    print("Invalid request")
 key = input("Wait")
