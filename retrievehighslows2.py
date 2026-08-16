@@ -30,14 +30,11 @@ def readgeojsonfile(geojsonfile, min, max):
     
 def lookuphighs(selectedcoords):
     url = "https://api.opentopodata.org/v1/srtm90m"
-    data = {   
-       "locations": [],    
-       "interpolation": "cubic"
-    }
+    data = {"locations": []}
     for q in selectedcoords:
         longtitude = float(q[0])
         latitude = float(q[1])
-        data["locations"].append({"latitude": latitude, "longitude": longtitude})
+        data["locations"].append([latitude, longtitude])
     response = requests.post(url, data=data)
     print(data)
     return response
