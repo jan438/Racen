@@ -61,7 +61,7 @@ if sys.platform[0] == 'w':
 os.chdir(path)
 
 circuitname = "ae-2009"
-selectedcoords = readgeojsonfile(circuitname, 0, 2)
+selectedcoords = readgeojsonfile(circuitname, 0, 100)
 print("len selected coords", len(selectedcoords))
 resp = lookuphighs(selectedcoords)
 print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
@@ -71,7 +71,7 @@ if resp.status_code == 200:
     with open('Data/' + circuitname + '-2-1.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
         time.sleep(2.0)
-        selectedcoords = readgeojsonfile(circuitname, 100, 102)
+        selectedcoords = readgeojsonfile(circuitname, 100, 200)
         print("len selected coords", len(selectedcoords))
         resp = lookuphighs(selectedcoords)
         print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
