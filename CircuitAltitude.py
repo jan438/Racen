@@ -10,6 +10,9 @@ from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
+lengthscale = 10000.0
+altitudescale = 0.5
+
 def Altitude_to_SVG(jsonfile):
     def coordinates_to_path(coordinates):
         mina = math.inf
@@ -34,12 +37,13 @@ def Altitude_to_SVG(jsonfile):
             lon = item["longitude"]
             lat = item["latitude"]
             elevation = item["elevation"]
-            a = maxa - elevation 
+            a = maxa - elevation
+            a = altitudescale * a
             if i == 0:
                 path_data = f"M {l} {a}"
             else:
                 d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
-                l = l + d * 10000
+                l = l + d * lengthscale
                 path_data += f" L {l} {a}"
             plon = lon
             plat = lat
@@ -81,6 +85,5 @@ print("circuitsdata", count)
 for j in range(count):
     Altitude_to_SVG(circuitsdata[j][1])
     print(circuitsdata[j][0])
-    break
 
 key = input("Wait")
