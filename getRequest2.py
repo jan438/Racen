@@ -1,5 +1,14 @@
 import requests
 import json
+import sys
+import os
+
+
+if sys.platform[0] == 'l':
+    path = '/home/jan/git/Racen'
+if sys.platform[0] == 'w':
+    path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
+os.chdir(path)
 
 try:
     with open("PDF/data.json", "r") as json_file:
