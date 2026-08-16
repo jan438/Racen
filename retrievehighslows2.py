@@ -5,11 +5,11 @@ import os
 import geojson
 import time
 
-selectioncoords = []
 resp = requests.Response
 
 def readgeojsonfile(geojsonfile, min, max):
     index = 0
+    selectioncoords = []
     with open("Data/" + geojsonfile + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
     features = geojson_data['features']
@@ -58,9 +58,20 @@ print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_
 if resp.status_code == 200:
     highslows = resp.content
     data = json.loads(highslows.decode('utf-8'))
-    with open('Data/' + circuitname + '-2.json', 'w', encoding='utf-8') as f:
+    with open('Data/' + circuitname + '-2-1.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
-        time.sleep(2.0)
+        time.sleep(20.0)
+        selectedcoords = readgeojsonfile(circuitname, 100, 120)
+        print("len selected coords", len(selectedcoords))
+        resp = lookuphighs(selectedcoords)
+        print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
+        if resp.status_code == 200:
+            highslows = resp.content
+            data = json.loads(highslows.decode('utf-8'))
+            with open('Data/' + circuitname + '-2-2.json', 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=4)
+        else:
+            print("Invalid request")
 else:
     print("Invalid request")
 key = input("Wait")
