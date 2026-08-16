@@ -3,6 +3,7 @@ import json
 import sys
 import os
 import geojson
+import time
 
 selectioncoords = []
 resp = requests.Response
@@ -59,6 +60,7 @@ if resp.status_code == 200:
     data = json.loads(highslows.decode('utf-8'))
     with open('Data/' + circuitname + '-2.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
+        time.sleep(2.0)
 else:
     print("Invalid request")
 key = input("Wait")
