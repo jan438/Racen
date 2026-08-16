@@ -55,14 +55,9 @@ def Altitude_to_SVG(jsonfile):
         data = json.load(file)
         path_data = coordinates_to_path(data["results"])
         dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('1000px', '300px'))
-        # 1. Define the linear gradient (from left to right: start at 0,0 and end at 1,0)
-        # Coordinates act as fractions/percentages by default (0 to 1)
-        grad = dwg.linearGradient(start=(0, 0), end=(1, 0), id='my-gradient')
-        # 2. Add color stops
-        grad.add_stop_color(offset=0.0, color='red', opacity=1)
-        grad.add_stop_color(offset=0.5, color='yellow', opacity=1)
-        grad.add_stop_color(offset=1.0, color='blue', opacity=1)
-        # 3. Add the gradient to the drawing definitions
+        grad = dwg.linearGradient(start=(0, 0), end=(0, 1), id='my-gradient')
+        grad.add_stop_color(offset=0.0, color='#000000', opacity=1)
+        grad.add_stop_color(offset=1.0, color='#6d6d6d', opacity=1)
         dwg.defs.add(grad)
         path = dwg.path(d=path_data, fill="url(#my-gradient)", stroke='white', stroke_width=3)
         dwg.add(path)
@@ -86,5 +81,6 @@ print("circuitsdata", count)
 for j in range(count):
     Altitude_to_SVG(circuitsdata[j][1])
     print(circuitsdata[j][0])
+    break
 
 key = input("Wait")
