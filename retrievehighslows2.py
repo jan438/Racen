@@ -61,7 +61,7 @@ if resp.status_code == 200:
     with open('Data/' + circuitname + '-2-1.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
         time.sleep(20.0)
-        selectedcoords = readgeojsonfile(circuitname, 100, 120)
+        selectedcoords = readgeojsonfile(circuitname, 100, 200)
         print("len selected coords", len(selectedcoords))
         resp = lookuphighs(selectedcoords)
         print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
