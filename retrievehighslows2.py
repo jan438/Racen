@@ -11,8 +11,8 @@ def merge_json_files(file_paths, output_file):
     merged_data = []
     for path in file_paths:
         with open(path, 'r') as file:
-             print("merge:", path)
-#            data = json.load(file)
+            print("merge:", path)
+            data = json.load(file)
 #            merged_data.append(data)
 #    with open(output_file, 'w') as outfile:
 #        json.dump(merged_data, outfile)
@@ -61,7 +61,7 @@ if sys.platform[0] == 'w':
 os.chdir(path)
 
 circuitname = "ae-2009"
-selectedcoords = readgeojsonfile(circuitname, 0, 100)
+selectedcoords = readgeojsonfile(circuitname, 0, 2)
 print("len selected coords", len(selectedcoords))
 resp = lookuphighs(selectedcoords)
 print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
@@ -70,8 +70,8 @@ if resp.status_code == 200:
     data = json.loads(highslows.decode('utf-8'))
     with open('Data/' + circuitname + '-2-1.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
-        time.sleep(20.0)
-        selectedcoords = readgeojsonfile(circuitname, 100, 200)
+        time.sleep(2.0)
+        selectedcoords = readgeojsonfile(circuitname, 100, 102)
         print("len selected coords", len(selectedcoords))
         resp = lookuphighs(selectedcoords)
         print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
@@ -82,7 +82,6 @@ if resp.status_code == 200:
                 json.dump(data, f, ensure_ascii=False, indent=4)
                 file1 = "Data/" + circuitname + "-2-1.json"
                 file2 = "Data/" + circuitname + "-2-2.json"
-                print(file1, file2)
                 file_paths = [file1, file2]
                 output_file = "Data/" + circuitname + '-2.json'
                 merge_json_files(file_paths, output_file)
