@@ -21,9 +21,11 @@ def Altitude_to_SVG(jsonfile):
         return path_data
     with open("Data/" + jsonfile + "-2.json", 'r') as file:
         data = json.load(file)
-        data0 = data[0]
-        data1 = data[1]
-        print("len data" , len(data), data[1])
+        data1 = data[0]
+        data2 = data[1]
+        print("len data" , len(data))
+        print("data1" , len(data1), data1)
+        print("data2" , len(data2), data2)
         return
         path_data = coordinates_to_path(res)
         dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A2.svg', size=('1000px', '300px'))
