@@ -34,6 +34,21 @@ def Altitude_to_SVG(jsonfile):
             coord = [elevation, lon, lat]
             totalcoords.append(coord)
         print("total", len(totalcoords))
+        mina = math.inf
+        maxa = -math.inf
+        fa = -1
+        la = -1
+        for i in range(len(totalcoords)):
+            elevation = totalcoords[i][0]
+            if fa == -1:
+                fa = elevation
+            if elevation > maxa:
+                maxa = elevation
+            if elevation < mina:
+                mina = elevation
+            la = elevation
+        diff = maxa - mina
+        print("maxa", maxa, "mina", mina, "diff", diff)   
         path_data = ""
         return path_data
     with open("Data/" + jsonfile + "-2.json", 'r') as file:
