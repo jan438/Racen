@@ -4,7 +4,7 @@ import sys
 import os
 import time
 
-circuit = "az-2016"
+circuit = "mx-1962"
 with open("Data/" + circuit + "-2-1.json", 'r') as file1:
     data1 = json.load(file1)
 with open("Data/" + circuit + "-2-2.json", 'r') as file2:
@@ -15,7 +15,7 @@ merged_data.append(data2)
 with open("Data/" + circuit + "-2.json", 'w') as outfile:
     json.dump(merged_data, outfile)
 
-os.remove(file1)
-os.remove(file2)
+os.remove("Data/" + circuit + "-2-1.json")
+os.remove("Data/" + circuit + "-2-2.json")
 
 key = input("Wait")
