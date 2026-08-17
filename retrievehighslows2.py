@@ -7,16 +7,6 @@ import time
 
 resp = requests.Response
 
-def merge_json_files(file_paths, output_file):
-    merged_data = []
-    for path in file_paths:
-        with open(path, 'r') as file:
-            print("merge:", path)
-            data = json.load(file)
-#            merged_data.append(data)
-#    with open(output_file, 'w') as outfile:
-#        json.dump(merged_data, outfile)
-
 def readgeojsonfile(geojsonfile, min, max):
     index = 0
     selectioncoords = []
@@ -60,7 +50,7 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 
-circuitname = "ae-2009"
+circuitname = "be-1925"
 selectedcoords = readgeojsonfile(circuitname, 0, 100)
 print("len selected coords", len(selectedcoords))
 resp = lookuphighs(selectedcoords)
@@ -80,12 +70,6 @@ if resp.status_code == 200:
             data = json.loads(highslows.decode('utf-8'))
             with open('Data/' + circuitname + '-2-2.json', 'w', encoding='utf-8') as f:
                 json.dump(data, f, ensure_ascii=False, indent=4)
-                file1 = "Data/" + circuitname + "-2-1.json"
-                file2 = "Data/" + circuitname + "-2-2.json"
-                file_paths = [file1, file2]
-                output_file = "Data/" + circuitname + '-2.json'
-                merge_json_files(file_paths, output_file)
-                print(f"Merged data written to '{output_file}'")
         else:
             print("Invalid request")
 else:
