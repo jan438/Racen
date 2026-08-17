@@ -16,6 +16,7 @@ altitudescale = 0.5
 def Altitude_to_SVG(jsonfile):
     def coordinates_to_path(dat1, dat2):
         total = 0
+        totalcoords = []
         res1 = dat1["results"]
         res2 = dat2["results"]
         for item in res1:
@@ -24,17 +25,15 @@ def Altitude_to_SVG(jsonfile):
             lon = location["lng"]
             lat = location["lat"]
             coord = [elevation, lon, lat]
-            total += 1
-            print(elevation, lon, lat)
+            totalcoords.append(coord)
         for item in res2:
             elevation = item["elevation"]
             location = item["location"]
             lon = location["lng"]
             lat = location["lat"]
             coord = [elevation, lon, lat]
-            total += 1
-            print(elevation, lon, lat)
-        print("total", total)
+            totalcoords.append(coord)
+        print("total", len(totalcoords))
         path_data = ""
         return path_data
     with open("Data/" + jsonfile + "-2.json", 'r') as file:
