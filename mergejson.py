@@ -4,7 +4,7 @@ import sys
 import os
 import time
 
-circuit = "be-1925"
+circuit = "au-1953"
 with open("Data/" + circuit + "-2-1.json", 'r') as file1:
     data1 = json.load(file1)
 with open("Data/" + circuit + "-2-2.json", 'r') as file2:
