@@ -48,8 +48,28 @@ def Altitude_to_SVG(jsonfile):
                 mina = elevation
             la = elevation
         diff = maxa - mina
-        print("maxa", maxa, "mina", mina, "diff", diff)   
+        l = 0
         path_data = ""
+        for i in range(len(totalcoords)):
+            elevation = totalcoords[i][0]
+            lon = totalcoords[i][1]
+            lat = totalcoords[i][2]
+            a = maxa - elevation
+            a = altitudescale * a
+            if i == 0:
+                path_data = f"M {l} {a}"
+            else:
+                d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
+                l = l + d * lengthscale
+                path_data += f" L {l} {a}"
+            plon = lon
+            plat = lat
+        mina = 100
+        fa = maxa - fa
+        path_data += f" L {l} {mina}"
+        path_data += f" L 0.0 {mina}"
+        path_data += f" L 0.0 {fa}"
+        print(path_data)
         return path_data
     with open("Data/" + jsonfile + "-2.json", 'r') as file:
         data = json.load(file)
