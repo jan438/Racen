@@ -22,20 +22,19 @@ def Altitude_to_SVG(jsonfile):
             location = item["location"]
             lon = location["lng"]
             lat = location["lat"]
+            print(elevation, lon, lat)
         for item in res2:
             elevation = item["elevation"]
             location = item["location"]
             lon = location["lng"]
-            lat = location["lat"]  
+            lat = location["lat"]
+            print(elevation, lon, lat)
         path_data = ""
         return path_data
     with open("Data/" + jsonfile + "-2.json", 'r') as file:
         data = json.load(file)
         data1 = data[0]
         data2 = data[1]
-        print("len data" , len(data))
-        print("data1" , len(data1), data1)
-        print("data2" , len(data2), data2)
         path_data = coordinates_to_path(data1, data2)
         return
         dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A2.svg', size=('1000px', '300px'))
