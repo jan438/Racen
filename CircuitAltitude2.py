@@ -15,7 +15,10 @@ altitudescale = 0.5
 
 def Altitude_to_SVG(jsonfile):
     def coordinates_to_path(dat1, dat2):
-        print(type(dat1))
+        res1 = dat1["results"]
+        res2 = dat2["results"]
+        for item in res1:
+            print(item)
         path_data = ""
         return path_data
     with open("Data/" + jsonfile + "-2.json", 'r') as file:
