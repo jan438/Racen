@@ -23,6 +23,7 @@ def Altitude_to_SVG(jsonfile):
             location = item["location"]
             lon = location["lng"]
             lat = location["lat"]
+            coord = [elevation, lon, lat]
             total += 1
             print(elevation, lon, lat)
         for item in res2:
@@ -30,6 +31,7 @@ def Altitude_to_SVG(jsonfile):
             location = item["location"]
             lon = location["lng"]
             lat = location["lat"]
+            coord = [elevation, lon, lat]
             total += 1
             print(elevation, lon, lat)
         print("total", total)
