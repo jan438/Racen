@@ -50,7 +50,7 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 
-circuitname = "mx-1962"
+circuitname = "hu-1986"
 selectedcoords = readgeojsonfile(circuitname, 0, 100)
 print("len selected coords", len(selectedcoords))
 resp = lookuphighs(selectedcoords)
@@ -63,15 +63,19 @@ if resp.status_code == 200:
         time.sleep(2.0)
         selectedcoords = readgeojsonfile(circuitname, 100, 200)
         print("len selected coords", len(selectedcoords))
-        resp = lookuphighs(selectedcoords)
-        print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
-        if resp.status_code == 200:
-            highslows = resp.content
-            data = json.loads(highslows.decode('utf-8'))
-            with open('Data/' + circuitname + '-2-2.json', 'w', encoding='utf-8') as f:
-                json.dump(data, f, ensure_ascii=False, indent=4)
+        if len(selectedcoords) > 0:
+            resp = lookuphighs(selectedcoords)
+            print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
+            if resp.status_code == 200:
+                highslows = resp.content
+                data = json.loads(highslows.decode('utf-8'))
+                with open('Data/' + circuitname + '-2-2.json', 'w', encoding='utf-8') as f:
+                    json.dump(data, f, ensure_ascii=False, indent=4)
+            else:
+                print("Invalid request")
         else:
-            print("Invalid request")
+            print("One request enough")
+        
 else:
     print("Invalid request")
 key = input("Wait")
