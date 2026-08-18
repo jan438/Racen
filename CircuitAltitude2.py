@@ -82,7 +82,7 @@ def Altitude_to_SVG(jsonfile):
             else:
                 data2 = None
             [path_data, l] = coordinates_to_path(data1, data2)
-            dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('1000px', '300px'))
+            dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('1000px', '200px'))
             grad = dwg.linearGradient(start=(0, 0), end=(0, 1), id='my-gradient')
             grad.add_stop_color(offset=0.0, color='#ffff7f', opacity=1)
             grad.add_stop_color(offset=0.2, color='#cccc66', opacity=1)

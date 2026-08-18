@@ -212,7 +212,7 @@ for i in range(count):
     circuit_x = left_margin + col * colwidth
     circuit_y = bottom_margin + row * rowheight
     circuitdrawing = scaleSVG("SVG/" + circuitsdata[i][1] + "A.svg", circuitscale)
-    renderPDF.draw(circuitdrawing, my_canvas, circuit_x + 0, circuit_y + rowheight - 55)
+    renderPDF.draw(circuitdrawing, my_canvas, circuit_x + 0, circuit_y + rowheight - 50)
     circuitdrawing = scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale)
     renderPDF.draw(circuitdrawing, my_canvas, circuit_x + (colwidth - circuitdrawing.width) / 2, circuit_y + (rowheight - circuitdrawing.height) / 2)
     my_canvas.setFont(cirfont, 9)
