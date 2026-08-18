@@ -1,0 +1,85 @@
+{
+    "results": [
+        {
+            "dataset": "srtm90m",
+            "elevation": 15.0,
+            "location": {
+                "lat": 25.48707,
+                "lng": 51.45546
+            }
+        },
+        {
+            "dataset": "srtm90m",
+            "elevation": 12.0,
+            "location": {
+                "lat": 25.484096,
+                "lng": 51.453766
+            }
+        },
+        {
+            "dataset": "srtm90m",
+            "elevation": 12.0,
+            "location": {
+                "lat": 25.483954,
+                "lng": 51.45363
+            }
+        },
+        {
+            "dataset": "srtm90m",
+            "elevation": 13.0,
+            "location": {
+                "lat": 25.483868,
+                "lng": 51.453476
+            }
+        },
+        {
+            "dataset": "srtm90m",
+            "elevation": 13.0,
+            "location": {
+                "lat": 25.483835,
+                "lng": 51.453253
+            }
+        },
+        {
+            "dataset": "srtm90m",
+            "elevation": 13.0,
+            "location": {
+                "lat": 25.483852,
+                "lng": 51.453084
+            }
+        },
+        {
+            "dataset": "srtm90m",
+            "elevation": 13.0,
+            "location": {
+                "lat": 25.483915,
+                "lng": 51.452919
+            }
+        },
+        {
+            "dataset": "srtm90m",
+            "elevation": 14.0,
+            "location": {
+                "lat": 25.484047,
+                "lng": 51.452751
+            }
+        },
+        {
+            "dataset": "srtm90m",
+            "elevation": 13.0,
+            "location": {
+                "lat": 25.487943,
+                "lng": 51.450373
+            }
+        },
+        {
+            "dataset": "srtm90m",
+            "elevation": 12.0,
+            "location": {
+                "lat": 25.489077,
+                "lng": 51.449681
+            }
+        }
+    ],
+    "status": "OK"
+}
