@@ -70,6 +70,8 @@ def Altitude_to_SVG(jsonfile):
         path_data += f" L 0.0 {mina}"
         path_data += f" L 0.0 {fa}"
         return path_data
+    file1 = "Data/" + jsonfile + "-2-1.json"
+    print(os.path.exists(file1))
     with open("Data/" + jsonfile + "-2.json", 'r') as file:
         data = json.load(file)
         data1 = data[0]
