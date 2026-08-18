@@ -88,7 +88,7 @@ def Altitude_to_SVG(jsonfile):
             dwg.defs.add(grad)
             path = dwg.path(d=path_data, fill="url(#my-gradient)", stroke='black', stroke_width=3)
             dwg.add(path)
-            dwg.add(dwg.text(str(l), insert=(55, 60), stroke='none', fill='#ffff7f', font_size='30px', font_weight="bold", font_family="Arial"))
+            dwg.add(dwg.text(str(round(l, 1)), insert=(55, 60), stroke='none', fill='#ffff7f', font_size='30px', font_weight="bold", font_family="Arial"))
             dwg.save()
     return
 if sys.platform[0] == 'l':
