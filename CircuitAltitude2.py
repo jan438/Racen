@@ -19,7 +19,6 @@ def Altitude_to_SVG(jsonfile):
         total = 0
         totalcoords = []
         res1 = dat1["results"]
-        res2 = dat2["results"]
         for item in res1:
             elevation = item["elevation"]
             location = item["location"]
@@ -27,13 +26,15 @@ def Altitude_to_SVG(jsonfile):
             lat = location["lat"]
             coord = [elevation, lon, lat]
             totalcoords.append(coord)
-        for item in res2:
-            elevation = item["elevation"]
-            location = item["location"]
-            lon = location["lng"]
-            lat = location["lat"]
-            coord = [elevation, lon, lat]
-            totalcoords.append(coord)
+        if dat2 is not None:
+            res2 = dat2["results"]
+            for item in res2:
+                elevation = item["elevation"]
+                location = item["location"]
+                lon = location["lng"]
+                lat = location["lat"]
+                coord = [elevation, lon, lat]
+                totalcoords.append(coord)
         print("total", len(totalcoords))
         mina = math.inf
         maxa = -math.inf
@@ -109,6 +110,6 @@ print("circuitsdata", count)
 #for j in range(count):
 #    Altitude_to_SVG(circuitsdata[j][1])
 #    print(circuitsdata[j][0])
-Altitude_to_SVG("hu-1986")
+Altitude_to_SVG("tr-2005")
 
 key = input("Wait")
