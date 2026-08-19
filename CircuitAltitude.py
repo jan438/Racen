@@ -40,6 +40,8 @@ def Altitude_to_SVG(jsonfile):
         maxa = -math.inf
         fa = -1
         la = -1
+        maxal = -1
+        minal = -1
         for i in range(len(totalcoords)):
             elevation = totalcoords[i][0]
             if fa == -1:
@@ -49,7 +51,6 @@ def Altitude_to_SVG(jsonfile):
             if elevation < mina:
                 mina = elevation
             la = elevation
-        diff = maxa - mina
         l = 0
         for i in range(len(totalcoords)):
             elevation = totalcoords[i][0]
@@ -63,6 +64,10 @@ def Altitude_to_SVG(jsonfile):
                 d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
                 l = l + d * lengthscale
                 path_data += f" L {l} {a}"
+            if elevation == maxa:
+                maxal = l
+            if elevation == mina:
+                minal = l
             plon = lon
             plat = lat
         mina = 100
@@ -70,7 +75,7 @@ def Altitude_to_SVG(jsonfile):
         path_data += f" L {l} {mina}"
         path_data += f" L 0.0 {mina}"
         path_data += f" L 0.0 {fa}"
-        return [path_data, l, maxa, mina]
+        return [path_data, l, maxa, mina, maxal, minal]
     print(jsonfile)
     file1str = "Data/" + jsonfile + "-2-1.json"
     file2str = "Data/" + jsonfile + "-2-2.json"
@@ -82,7 +87,7 @@ def Altitude_to_SVG(jsonfile):
                     data2 = json.load(file2)
             else:
                 data2 = None
-            [path_data, l, maxa, mina] = coordinates_to_path(data1, data2)
+            [path_data, l, maxa, mina, maxal, minal] = coordinates_to_path(data1, data2)
             dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('1000px', '200px'))
             grad = dwg.linearGradient(start=(0, 0), end=(0, 1), id='my-gradient')
             grad.add_stop_color(offset=0.0, color='#ffff7f', opacity=1)
@@ -111,9 +116,9 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("circuitsdata", count)        
 
-for j in range(count):
-    Altitude_to_SVG(circuitsdata[j][1])
-    print(circuitsdata[j][0])
-#Altitude_to_SVG("be-1925")
+#for j in range(count):
+#    Altitude_to_SVG(circuitsdata[j][1])
+#    print(circuitsdata[j][0])
+Altitude_to_SVG("be-1925")
 
 key = input("Wait")
