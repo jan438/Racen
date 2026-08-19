@@ -96,7 +96,6 @@ def Altitude_to_SVG(jsonfile):
             dwg.add(path)
             high = dwg.circle(center=(maxal, 0), r=10, fill='red', stroke='black', stroke_width=3)
             dwg.add(high)
-            print("difference ", jsonfile, maxa - mina, 'max', maxa, "mina", mina)
             low = dwg.circle(center=(minal, 60), r=10, fill='green', stroke='black', stroke_width=3)
             dwg.add(low)
             dwg.add(dwg.text(str(round(l, 1)), insert=(50, 60), stroke='none', fill='#ffaa00', font_size='30px', font_weight="bold", font_family="Arial"))
