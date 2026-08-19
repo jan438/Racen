@@ -18,7 +18,7 @@ from reportlab.lib.colors import HexColor
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
-circuitscale = 0.23
+circuitscale = 0.24
 flagscale = 0.015
 flagcorrectionx = -30.0
 flagcorrectiony = -30.0
