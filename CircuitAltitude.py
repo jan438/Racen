@@ -96,6 +96,8 @@ def Altitude_to_SVG(jsonfile):
             dwg.defs.add(grad)
             path = dwg.path(d=path_data, fill="url(#my-gradient)", stroke='black', stroke_width=3)
             dwg.add(path)
+            top = dwg.circle(center=(maxal, 100), r=50, fill='red', stroke='black', stroke_width=3)
+            dwg.add(top)
             dwg.add(dwg.text(str(round(l, 1)), insert=(50, 60), stroke='none', fill='#ffaa00', font_size='30px', font_weight="bold", font_family="Arial"))
             dwg.add(dwg.text(str(round(maxa, 1)), insert=(150, 60), stroke='none', fill='#ffaa00', font_size='30px', font_weight="bold", font_family="Arial"))
             dwg.add(dwg.text(str(round(maxa - mina, 1)), insert=(250, 60), stroke='none', fill='#ffaa00', font_size='30px', font_weight="bold", font_family="Arial"))
