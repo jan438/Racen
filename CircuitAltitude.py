@@ -10,7 +10,7 @@ from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
-lengthscale = 10000.0
+lengthscale = 9300.0
 altitudescale = 0.5
 
 def Altitude_to_SVG(jsonfile):
