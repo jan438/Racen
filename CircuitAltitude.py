@@ -75,6 +75,7 @@ def Altitude_to_SVG(jsonfile):
         path_data += f" L 0.0 100"
         path_data += f" L 0.0 {fa}"
         return [path_data, l, maxa, mina, maxal, minal]
+    print(jsonfile)
     file1str = "Data/" + jsonfile + "-2-1.json"
     file2str = "Data/" + jsonfile + "-2-2.json"
     if os.path.exists(file1str):
