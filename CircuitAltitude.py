@@ -13,7 +13,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 lengthscale = 9300.0
 altitudescale = 0.5
 
-def Altitude_to_SVG(jsonfile):
+def Altitude_to_SVG(jsonfile, startindex):
     def coordinates_to_path(dat1, dat2):
         path_data = ""
         total = 0
@@ -75,7 +75,7 @@ def Altitude_to_SVG(jsonfile):
         path_data += f" L 0.0 100"
         path_data += f" L 0.0 {fa}"
         return [path_data, l, maxa, mina, maxal, minal]
-    print(jsonfile)
+    print("jsonfile", jsonfile, "startindex", startindex)
     file1str = "Data/" + jsonfile + "-2-1.json"
     file2str = "Data/" + jsonfile + "-2-2.json"
     if os.path.exists(file1str):
@@ -120,8 +120,6 @@ with open(file_to_open, 'r') as file:
 print("circuitsdata", count)        
 
 for j in range(count):
-    Altitude_to_SVG(circuitsdata[j][1])
-
-#Altitude_to_SVG("be-1925")
+    Altitude_to_SVG(circuitsdata[j][1], circuitsdata[j][12])
 
 key = input("Wait")
