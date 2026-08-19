@@ -70,7 +70,8 @@ def Altitude_to_SVG(jsonfile):
         path_data += f" L {l} {mina}"
         path_data += f" L 0.0 {mina}"
         path_data += f" L 0.0 {fa}"
-        return [path_data, l]
+        return [path_data, l, maxa, mina]
+    print(jsonfile)
     file1str = "Data/" + jsonfile + "-2-1.json"
     file2str = "Data/" + jsonfile + "-2-2.json"
     if os.path.exists(file1str):
@@ -81,7 +82,7 @@ def Altitude_to_SVG(jsonfile):
                     data2 = json.load(file2)
             else:
                 data2 = None
-            [path_data, l] = coordinates_to_path(data1, data2)
+            [path_data, l, maxa, mina] = coordinates_to_path(data1, data2)
             dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('1000px', '200px'))
             grad = dwg.linearGradient(start=(0, 0), end=(0, 1), id='my-gradient')
             grad.add_stop_color(offset=0.0, color='#ffff7f', opacity=1)
@@ -90,7 +91,9 @@ def Altitude_to_SVG(jsonfile):
             dwg.defs.add(grad)
             path = dwg.path(d=path_data, fill="url(#my-gradient)", stroke='black', stroke_width=3)
             dwg.add(path)
-            dwg.add(dwg.text(str(round(l, 1)), insert=(55, 60), stroke='none', fill='#ffaa00', font_size='30px', font_weight="bold", font_family="Arial"))
+            dwg.add(dwg.text(str(round(l, 1)), insert=(60, 60), stroke='none', fill='#ffaa00', font_size='30px', font_weight="bold", font_family="Arial"))
+            dwg.add(dwg.text(str(round(maxa, 1)), insert=(80, 60), stroke='none', fill='#ffaa00', font_size='30px', font_weight="bold", font_family="Arial"))
+            dwg.add(dwg.text(str(round(maxa - mina, 1)), insert=(100, 60), stroke='none', fill='#ffaa00', font_size='30px', font_weight="bold", font_family="Arial"))
             dwg.save()
     return
 if sys.platform[0] == 'l':
