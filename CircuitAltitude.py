@@ -13,8 +13,8 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 lengthscale = 9300.0
 altitudescale = 0.5
 
-def Altitude_to_SVG(jsonfile, startindex):
-    def coordinates_to_path(dat1, dat2, startindex):
+def Altitude_to_SVG(jsonfile, startindex, ac):
+    def coordinates_to_path(dat1, dat2, startindex, ac):
         path_data = ""
         total = 0
         totalcoords = []
@@ -76,7 +76,7 @@ def Altitude_to_SVG(jsonfile, startindex):
         path_data += f" L 0.0 100"
         path_data += f" L 0.0 {fa}"
         return [path_data, l, maxa, mina, maxal, minal]
-    print("jsonfile", jsonfile, "startindex", startindex)
+    print("jsonfile", jsonfile, "startindex", startindex, "clockwise", ac)
     file1str = "Data/" + jsonfile + "-2-1.json"
     file2str = "Data/" + jsonfile + "-2-2.json"
     if os.path.exists(file1str):
@@ -87,7 +87,7 @@ def Altitude_to_SVG(jsonfile, startindex):
                     data2 = json.load(file2)
             else:
                 data2 = None
-            [path_data, l, maxa, mina, maxal, minal] = coordinates_to_path(data1, data2, startindex)
+            [path_data, l, maxa, mina, maxal, minal] = coordinates_to_path(data1, data2, startindex, ac)
             dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('1000px', '200px'))
             grad = dwg.linearGradient(start=(0, 0), end=(0, 1), id='my-gradient')
             grad.add_stop_color(offset=0.0, color='#ffff7f', opacity=1)
@@ -121,10 +121,10 @@ with open(file_to_open, 'r') as file:
 print("circuitsdata", count)        
 
 #for j in range(count):
-#    Altitude_to_SVG(circuitsdata[j][1], int(circuitsdata[j][12]))
+#    Altitude_to_SVG(circuitsdata[j][1], int(circuitsdata[j][12]), circuitsdata[j][9])
 
 for j in range(count):
     if circuitsdata[j][1] == "be-1925":
-        Altitude_to_SVG(circuitsdata[j][1], int(circuitsdata[j][12]))
+        Altitude_to_SVG(circuitsdata[j][1], int(circuitsdata[j][12]), circuitsdata[j][9])
 
 key = input("Wait")
