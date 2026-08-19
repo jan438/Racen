@@ -3,12 +3,13 @@ import json
 import sys
 import os
 import geojson
+import time
 
-selectioncoords = []
 resp = requests.Response
 
 def readgeojsonfile(geojsonfile, min, max):
     index = 0
+    selectioncoords = []
     with open("Data/" + geojsonfile + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
     features = geojson_data['features']
@@ -29,13 +30,18 @@ def readgeojsonfile(geojsonfile, min, max):
     return selectioncoords
     
 def lookuphighs(selectedcoords):
-    url = "https://api.open-elevation.com/api/v1/lookup"
-    fileToSend = {"locations": []}
+    url = "https://api.opentopodata.org/v1/srtm90m"
+    locsstr = ""
     for q in selectedcoords:
-        longtitude = float(q[0])
-        latitude = float(q[1])
-        fileToSend["locations"].append({"latitude": latitude, "longitude": longtitude})
-    response = requests.post(url, json=fileToSend)
+        longtitude = str(float(q[0]))
+        latitude = str(float(q[1]))
+        locsstr += latitude + "," + longtitude + "|"
+    data = {
+     "locations": locsstr,
+     "interpolation": "cubic",
+    }
+    response = requests.post(url, json=data)
+    print(data)
     return response
 
 if sys.platform[0] == 'l':
@@ -44,16 +50,32 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
 
-circuitname = "ae-2009"
-selectedcoords = readgeojsonfile(circuitname, 0, 514)
+circuitname = "be-1925"
+selectedcoords = readgeojsonfile(circuitname, 0, 100)
 print("len selected coords", len(selectedcoords))
 resp = lookuphighs(selectedcoords)
 print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
 if resp.status_code == 200:
     highslows = resp.content
     data = json.loads(highslows.decode('utf-8'))
-    with open('Data/' + circuitname + '.json', 'w', encoding='utf-8') as f:
+    with open('Data/' + circuitname + '-2-1.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
+        time.sleep(2.0)
+        selectedcoords = readgeojsonfile(circuitname, 100, 200)
+        print("len selected coords", len(selectedcoords))
+        if len(selectedcoords) > 0:
+            resp = lookuphighs(selectedcoords)
+            print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_code))
+            if resp.status_code == 200:
+                highslows = resp.content
+                data = json.loads(highslows.decode('utf-8'))
+                with open('Data/' + circuitname + '-2-2.json', 'w', encoding='utf-8') as f:
+                    json.dump(data, f, ensure_ascii=False, indent=4)
+            else:
+                print("Invalid request")
+        else:
+            print("One request enough")
+        
 else:
     print("Invalid request")
 key = input("Wait")
