@@ -96,7 +96,7 @@ def Altitude_to_SVG(jsonfile):
             dwg.defs.add(grad)
             path = dwg.path(d=path_data, fill="url(#my-gradient)", stroke='black', stroke_width=3)
             dwg.add(path)
-            top = dwg.circle(center=(maxal, 100), r=50, fill='red', stroke='black', stroke_width=3)
+            top = dwg.circle(center=(maxal, 0), r=10, fill='red', stroke='black', stroke_width=3)
             dwg.add(top)
             dwg.add(dwg.text(str(round(l, 1)), insert=(50, 60), stroke='none', fill='#ffaa00', font_size='30px', font_weight="bold", font_family="Arial"))
             dwg.add(dwg.text(str(round(maxa, 1)), insert=(150, 60), stroke='none', fill='#ffaa00', font_size='30px', font_weight="bold", font_family="Arial"))
@@ -118,9 +118,9 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("circuitsdata", count)        
 
-#for j in range(count):
-#    Altitude_to_SVG(circuitsdata[j][1])
-#    print(circuitsdata[j][0])
-Altitude_to_SVG("be-1925")
+for j in range(count):
+    Altitude_to_SVG(circuitsdata[j][1])
+    print(circuitsdata[j][0])
+#Altitude_to_SVG("be-1925")
 
 key = input("Wait")
