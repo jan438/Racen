@@ -36,6 +36,7 @@ def Altitude_to_SVG(jsonfile, startindex):
                 coord = [elevation, lon, lat]
                 totalcoords.append(coord)
         print("total", len(totalcoords), "startindex", startindex)
+        totalcoords = totalcoords[startindex:] + totalcoords[:startindex - 1]
         mina = math.inf
         maxa = -math.inf
         fa = -1
@@ -119,7 +120,11 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("circuitsdata", count)        
 
+#for j in range(count):
+#    Altitude_to_SVG(circuitsdata[j][1], int(circuitsdata[j][12]))
+
 for j in range(count):
-    Altitude_to_SVG(circuitsdata[j][1], circuitsdata[j][12])
+    if circuitsdata[j][1] == "be-1925":
+        Altitude_to_SVG(circuitsdata[j][1], int(circuitsdata[j][12]))
 
 key = input("Wait")
