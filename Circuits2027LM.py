@@ -19,6 +19,7 @@ from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 0.24
+altitudescale = 0.24
 flagscale = 0.015
 flagcorrectionx = -30.0
 flagcorrectiony = -30.0
@@ -34,7 +35,6 @@ arrow_y = 0.0
 circlescale = 0.35
 rulerscale = 0.034
 clockwisescale = 0.010
-altitudescale = 0.010
 worldmapscale = 0.45
 worldmap_x = 125
 worldmap_y = 325
@@ -211,8 +211,8 @@ for i in range(count):
     [startfinish_offset_x, startfinish_offset_y, sect2_offset_x, sect2_offset_y, sect2_angle, sect3_offset_x, sect3_offset_y, sect3_angle, length, altitude] = GeoJSON_to_Canvas(i)
     circuit_x = left_margin + col * colwidth
     circuit_y = bottom_margin + row * rowheight
-    circuitdrawing = scaleSVG("SVG/" + circuitsdata[i][1] + "A.svg", circuitscale)
-    renderPDF.draw(circuitdrawing, my_canvas, circuit_x + 0, circuit_y + rowheight - 40)
+    altitudedrawing = scaleSVG("SVG/" + circuitsdata[i][1] + "A.svg", altitudescale)
+    renderPDF.draw(altitudedrawing, my_canvas, circuit_x + 0, circuit_y + rowheight - 40)
     circuitdrawing = scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale)
     renderPDF.draw(circuitdrawing, my_canvas, circuit_x + (colwidth - circuitdrawing.width) / 2, circuit_y + (rowheight - circuitdrawing.height) / 2 - 10)
     my_canvas.setFont(cirfont, 9)
