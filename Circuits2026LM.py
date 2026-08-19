@@ -51,24 +51,6 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.height = drawing.height * scaling_y
     drawing.scale(scaling_x, scaling_y)
     return drawing
-def rotatescaleSVG(svgfile, angle, scaling_factor):
-    svg_root = load_svg_file(svgfile)
-    svgRenderer = SvgRenderer(svgfile)
-    namespace = {'svg': 'http://www.w3.org/2000/svg'}
-    paths = svg_root.findall('.//svg:path', namespaces=namespace)
-    path_data = [path.attrib.get('d') for path in paths if 'd' in path.attrib]
-    print("Before", path_data[0])
-    path_data[0] = rotate_path(path_data[0], angle)
-    print("After", path_data[0])
-    drawing = svgRenderer.render(svg_root)
-    scaling_x = scaling_factor
-    scaling_y = scaling_factor
-    drawing.width = drawing.minWidth() * scaling_x
-    drawing.height = drawing.height * scaling_y
-    drawing.scale(scaling_x, scaling_y)
-    return drawing
-def rotate_path(path, angle_degrees):
-    return path
 def dms_to_decimal(degrees, minutes, seconds, direction):
     decimal = degrees + (minutes / 60) + (seconds / 3600)
     if direction in ['S', 'W']:
