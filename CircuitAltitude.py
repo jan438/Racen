@@ -35,7 +35,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                 lat = location["lat"]
                 coord = [elevation, lon, lat]
                 totalcoords.append(coord)
-        print("total", len(totalcoords), "startindex", startindex)
+#        print("total", len(totalcoords), "startindex", startindex)
         totalcoords = totalcoords[startindex:] + totalcoords[:startindex - 1]
         mina = math.inf
         maxa = -math.inf
@@ -75,6 +75,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
         path_data += f" L {l} 100"
         path_data += f" L 0.0 100"
         path_data += f" L 0.0 {fa}"
+        print("lengte", l, "jsonfile", jsonfile)
         return [path_data, l, maxa, mina, maxal, minal]
     print("jsonfile", jsonfile, "startindex", startindex, "clockwise", ac)
     file1str = "Data/" + jsonfile + "-1.json"
@@ -88,7 +89,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
             else:
                 data2 = None
             [path_data, l, maxa, mina, maxal, minal] = coordinates_to_path(data1, data2, startindex, ac)
-            dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=('1000px', '200px'))
+            dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'{l*10}px', '200px'))
             grad = dwg.linearGradient(start=(0, 0), end=(0, 1), id='my-gradient')
             grad.add_stop_color(offset=0.0, color='#ffff7f', opacity=1)
             grad.add_stop_color(offset=0.2, color='#cccc66', opacity=1)
