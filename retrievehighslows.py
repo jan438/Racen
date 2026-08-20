@@ -30,7 +30,7 @@ def readgeojsonfile(geojsonfile, min, max):
     return selectioncoords
     
 def lookuphighs(selectedcoords):
-    url = "https://api.opentopodata.org/v1/srtm90m"
+    url = "https://api.opentopodata.org/v1/srtm30m"
     locsstr = ""
     for q in selectedcoords:
         longtitude = str(float(q[0]))
@@ -58,7 +58,7 @@ print('Response HTTP Status Code: {status_code}'.format(status_code=resp.status_
 if resp.status_code == 200:
     highslows = resp.content
     data = json.loads(highslows.decode('utf-8'))
-    with open('Data/' + circuitname + '-2-1.json', 'w', encoding='utf-8') as f:
+    with open('Data/' + circuitname + '-1.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
         time.sleep(2.0)
         selectedcoords = readgeojsonfile(circuitname, 100, 200)
@@ -69,7 +69,7 @@ if resp.status_code == 200:
             if resp.status_code == 200:
                 highslows = resp.content
                 data = json.loads(highslows.decode('utf-8'))
-                with open('Data/' + circuitname + '-2-2.json', 'w', encoding='utf-8') as f:
+                with open('Data/' + circuitname + '-2.json', 'w', encoding='utf-8') as f:
                     json.dump(data, f, ensure_ascii=False, indent=4)
             else:
                 print("Invalid request")
