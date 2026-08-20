@@ -77,8 +77,8 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
         path_data += f" L 0.0 {fa}"
         return [path_data, l, maxa, mina, maxal, minal]
     print("jsonfile", jsonfile, "startindex", startindex, "clockwise", ac)
-    file1str = "Data/" + jsonfile + "-2-1.json"
-    file2str = "Data/" + jsonfile + "-2-2.json"
+    file1str = "Data/" + jsonfile + "-1.json"
+    file2str = "Data/" + jsonfile + "-2.json"
     if os.path.exists(file1str):
         with open(file1str, 'r') as file1:
             data1 = json.load(file1)
@@ -121,8 +121,8 @@ with open(file_to_open, 'r') as file:
 print("circuitsdata", count)        
 
 for j in range(count):
-#    if circuitsdata[j][1] == "be-1925":
-    if True:
+    if circuitsdata[j][1] == "be-1925":
+#    if True:
         Altitude_to_SVG(circuitsdata[j][1], int(circuitsdata[j][12]), circuitsdata[j][9])
 
 key = input("Wait")
