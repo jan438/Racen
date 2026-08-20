@@ -1,0 +1,37 @@
+{
+    "results": [
+        {
+            "dataset": "srtm30m",
+            "elevation": 94.0,
+            "location": {
+                "lat": 37.226867,
+                "lng": -8.628909
+            }
+        },
+        {
+            "dataset": "srtm30m",
+            "elevation": 104.0,
+            "location": {
+                "lat": 37.229808,
+                "lng": -8.629975
+            }
+        },
+        {
+            "dataset": "srtm30m",
+            "elevation": 98.0,
+            "location": {
+                "lat": 37.232024,
+                "lng": -8.630778
+            }
+        },
+        {
+            "dataset": "srtm30m",
+            "elevation": 98.0,
+            "location": {
+                "lat": 37.232113,
+                "lng": -8.63081
+            }
+        }
+    ],
+    "status": "OK"
+}
