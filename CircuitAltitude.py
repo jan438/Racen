@@ -101,7 +101,6 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
             dwg.add(high)
             low = dwg.circle(center=(minal, 60), r=10, fill='green', stroke='black', stroke_width=3)
             dwg.add(low)
-            dwg.add(dwg.text(str(round(l, 1)), insert=(50, 60), stroke='none', fill='#ffaa00', font_size='30px', font_weight="bold", font_family="Arial"))
             dwg.add(dwg.text(str(round(maxa, 1)), insert=(maxal, 30), stroke='none', fill='#ff0000', font_size='30px', font_weight="bold", font_family="Arial"))
             dwg.add(dwg.text(str(round(maxa - mina, 1)), insert=(minal, 90), stroke='none', fill='#00ff00', font_size='30px', font_weight="bold", font_family="Arial"))
             dwg.save()
