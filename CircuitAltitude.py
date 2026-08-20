@@ -45,6 +45,13 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
         minal = -1
         for i in range(len(totalcoords)):
             elevation = totalcoords[i][0]
+            if i > 0 and i < len(totalcoords) - 1:
+                pa = totalcoords[i-1][0]
+                na = totalcoords[i+1][0]
+                if pa - elevation == - 1 and na - elevation == -1:
+                    print("hobbel")
+                if pa - elevation == 1 and na - elevation == 1:
+                    print("hobbel")
             if fa == -1:
                 fa = elevation
             if elevation > maxa:
