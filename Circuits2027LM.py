@@ -214,7 +214,7 @@ for i in range(count):
     altitudedrawing = scaleSVG("SVG/" + circuitsdata[i][1] + "A.svg", altitudescale)
     renderPDF.draw(altitudedrawing, my_canvas, circuit_x + 0, circuit_y + 3)
     circuitdrawing = scaleSVG("SVG/" + circuitsdata[i][0] + "LM.svg", circuitscale)
-    renderPDF.draw(circuitdrawing, my_canvas, circuit_x + (colwidth - circuitdrawing.width) / 2, circuit_y + (rowheight - circuitdrawing.height) / 2 - 10)
+    renderPDF.draw(circuitdrawing, my_canvas, circuit_x + (colwidth - circuitdrawing.width) / 2, circuit_y + (rowheight - circuitdrawing.height) / 2)
     my_canvas.setFont(cirfont, 9)
     my_canvas.setFillColorRGB(255,170,0)
     displayname = circuitsdata[i][24]
