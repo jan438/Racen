@@ -189,7 +189,7 @@ my_canvas.setTitle("Circuits2027")
 my_canvas.setFillColorRGB(0,0,0)
 my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFillColorRGB(255,170,0)
-bottom_margin = 10
+bottom_margin = 20
 left_margin = 10
 renderPDF.draw(scaleSVG("SVG/WorldMap.svg", worldmapscale), my_canvas, worldmap_x, worldmap_y)
 drawing = svg2rlg('SVG/F1.svg')
