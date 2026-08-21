@@ -19,7 +19,7 @@ from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 0.23
-altitudescale = 0.24
+altitudescale = 0.15
 flagscale = 0.015
 flagcorrectionx = -30.0
 flagcorrectiony = -30.0
