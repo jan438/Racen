@@ -11,6 +11,7 @@ from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 lengthscale = 8000.0
+total_lengthscale = 100.0
 altitudescale = 0.5
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -81,7 +82,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                 path_data = f"M {l} {a}"
             else:
                 total_d = haversine(plat, plon, lat, lon)
-                total_l += total_d
+                total_l += total_d * total_lengthscale
                 d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
                 l += d * lengthscale
                 print("total_distance", total_l, "l", l)
