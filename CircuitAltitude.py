@@ -83,6 +83,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                 total_distance += haversine(plat, plon, lat, lon)
                 d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
                 l = l + d * lengthscale
+                print("total_distance", total_distance, "l", l)
                 path_data += f" L {l} {a}"
             if elevation == maxa:
                 maxal = l
