@@ -70,7 +70,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                 mina = elevation
             la = elevation
         l = 0
-        total_distance = 0
+        total_l = 0
         for i in range(len(totalcoords)):
             elevation = totalcoords[i][0]
             lon = totalcoords[i][1]
@@ -80,10 +80,11 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
             if i == 0:
                 path_data = f"M {l} {a}"
             else:
-                total_distance += haversine(plat, plon, lat, lon)
+                total_d = haversine(plat, plon, lat, lon)
+                total_l += total_d
                 d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
-                l = l + d * lengthscale
-                print("total_distance", total_distance, "l", l)
+                l += d * lengthscale
+                print("total_distance", total_l, "l", l)
                 path_data += f" L {l} {a}"
             if elevation == maxa:
                 maxal = l
