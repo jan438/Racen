@@ -1,6 +1,55 @@
+In haversine py file
+
 Length: 144.11 1.7140 km las vegas 4.76 0.0601 km monaco 3.93 0.0355 km
 
-nu in pdf berekend                          961                   258
+nu berekend haversine zoder scale in print in CircuitAltitude
 
-verhouding                                  1.6
-
+circuitsdata 24
+jsonfile au-1953 startindex 146 clockwise c
+lengte 4.880665015992717 jsonfile au-1953
+jsonfile bh-2002 startindex 25 clockwise c
+lengte 5.381186053648798 jsonfile bh-2002
+jsonfile az-2016 startindex 27 clockwise a
+lengte 5.895323019163776 jsonfile az-2016
+jsonfile ca-1978 startindex 3 clockwise c
+lengte 4.221962663273702 jsonfile ca-1978
+jsonfile mx-1962 startindex 24 clockwise c
+lengte 3.8760967406057727 jsonfile mx-1962
+jsonfile hu-1986 startindex 141 clockwise c
+lengte 4.171438392295281 jsonfile hu-1986
+jsonfile tr-2005 startindex 68 clockwise a
+lengte 4.8901881847378155 jsonfile tr-2005
+jsonfile sa-2021 startindex 108 clockwise a
+lengte 6.115306911288961 jsonfile sa-2021
+jsonfile br-1940 startindex 0 clockwise a
+lengte 8.53251758227604 jsonfile br-1940
+jsonfile us-2023 startindex 0 clockwise a
+lengte 12.015538423081564 jsonfile us-2023
+jsonfile qa-2004 startindex 34 clockwise c
+lengte 5.331102184300928 jsonfile qa-2004
+jsonfile es-2026 startindex 1 clockwise c
+lengte 5.321662406135118 jsonfile es-2026
+jsonfile sg-2008 startindex 115 clockwise a
+lengte 4.669247440050627 jsonfile sg-2008
+jsonfile us-2022 startindex 36 clockwise a
+lengte 5.365770821181057 jsonfile us-2022
+jsonfile mc-1929 startindex 122 clockwise c
+lengte 3.2326198761032505 jsonfile mc-1929
+jsonfile it-1922 startindex 122 clockwise c
+lengte 5.665175983015737 jsonfile it-1922
+jsonfile pt-2008 startindex 61 clockwise c
+lengte 4.603954183437773 jsonfile pt-2008
+jsonfile at-1969 startindex 0 clockwise c
+lengte 8.30883027954131 jsonfile at-1969
+jsonfile cn-2004 startindex 141 clockwise c
+lengte 5.020860023598094 jsonfile cn-2004
+jsonfile gb-1948 startindex 34 clockwise c
+lengte 5.749042897048233 jsonfile gb-1948
+jsonfile be-1925 startindex 152 clockwise c
+lengte 6.7335473813464475 jsonfile be-1925
+jsonfile jp-1962 startindex 172 clockwise c
+lengte 5.50389876509178 jsonfile jp-1962
+jsonfile us-2012 startindex 107 clockwise a
+lengte 5.424862472825307 jsonfile us-2012
+jsonfile ae-2009 startindex 115 clockwise a
+lengte 5.114754199033798 jsonfile ae-2009

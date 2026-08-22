@@ -80,7 +80,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                 path_data = f"M {l} {a}"
             else:
                 d = haversine(plat, plon, lat, lon)
-                l += d * lengthscale
+                l += d
                 path_data += f" L {l} {a}"
             if elevation == maxa:
                 maxal = l
