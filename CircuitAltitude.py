@@ -10,8 +10,7 @@ from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
-lengthscale = 8000.0
-total_lengthscale = 100.0
+lengthscale = 100.0
 altitudescale = 0.5
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -71,7 +70,6 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                 mina = elevation
             la = elevation
         l = 0
-        total_l = 0
         for i in range(len(totalcoords)):
             elevation = totalcoords[i][0]
             lon = totalcoords[i][1]
@@ -81,12 +79,9 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
             if i == 0:
                 path_data = f"M {l} {a}"
             else:
-                total_d = haversine(plat, plon, lat, lon)
-                total_l += total_d * total_lengthscale
-                d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
+                d = haversine(plat, plon, lat, lon)
                 l += d * lengthscale
-                print("total_distance", total_l, "l", l)
-                path_data += f" L {total_l} {a}"
+                path_data += f" L {l} {a}"
             if elevation == maxa:
                 maxal = l
             if elevation == mina:
