@@ -13,6 +13,23 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 lengthscale = 8000.0
 altitudescale = 0.5
 
+def haversine(lat1, lon1, lat2, lon2):
+    """
+    Calculate the great-circle distance between two points on Earth.
+    Inputs are in decimal degrees.
+    Returns distance in kilometers.
+    """
+    # Convert decimal degrees to radians
+    lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
+
+    # Haversine formula
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+    a = math.sin(dlat / 2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2)**2
+    c = 2 * math.asin(math.sqrt(a))
+    r = 6371.0088  # Earth's radius in kilometers
+    return r * c
+
 def Altitude_to_SVG(jsonfile, startindex, ac):
     def coordinates_to_path(dat1, dat2, startindex, ac):
         path_data = ""
@@ -62,6 +79,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
             if i == 0:
                 path_data = f"M {l} {a}"
             else:
+            #   l += math.sqrt(abs(lon2 - lon1)**2 + abs(lat2 - lat1)**2)
                 d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
                 l = l + d * lengthscale
                 path_data += f" L {l} {a}"
@@ -121,8 +139,8 @@ with open(file_to_open, 'r') as file:
 print("circuitsdata", count)        
 
 for j in range(count):
-#    if circuitsdata[j][1] == "be-1925":
-    if True:
+    if circuitsdata[j][1] == "us-2023":
+#    if True:
         Altitude_to_SVG(circuitsdata[j][1], int(circuitsdata[j][12]), circuitsdata[j][9])
 
 key = input("Wait")
