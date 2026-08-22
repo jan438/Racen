@@ -79,7 +79,8 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
             if i == 0:
                 path_data = f"M {l} {a}"
             else:
-            #   l += math.sqrt(abs(lon2 - lon1)**2 + abs(lat2 - lat1)**2)
+                #total_distance += haversine(lat1, lon1, lat2, lon2)
+                #l += math.sqrt(abs(lon2 - lon1)**2 + abs(lat2 - lat1)**2)
                 d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
                 l = l + d * lengthscale
                 path_data += f" L {l} {a}"
