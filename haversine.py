@@ -276,7 +276,7 @@ if __name__ == "__main__":
     try:
         [total_km, l] = path_length(coordinates)
         [total_lvkm, lvl] = path_length(lvcoordinates)
-        print(f"Length: {total_km:.2f} {l:.4f} km {total_lvkm:.2f} {lvl:.4f} km")
+        print(f"Length: {total_km:.2f} {l:.4f} km las vegas {total_lvkm:.2f} {lvl:.4f} km")
     except Exception as e:
         print(f"Error calculating path length: {e}")
         
