@@ -86,7 +86,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                 d = sqrt(abs(lon - plon)**2 + abs(lat - plat)**2)
                 l += d * lengthscale
                 print("total_distance", total_l, "l", l)
-                path_data += f" L {l} {a}"
+                path_data += f" L {total_l} {a}"
             if elevation == maxa:
                 maxal = l
             if elevation == mina:
@@ -111,7 +111,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
             else:
                 data2 = None
             [path_data, l, maxa, mina, maxal, minal] = coordinates_to_path(data1, data2, startindex, ac)
-            dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'{l*10}px', '200px'))
+            dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'{l*5}px', '200px'))
             grad = dwg.linearGradient(start=(0, 0), end=(0, 1), id='my-gradient')
             grad.add_stop_color(offset=0.0, color='#ffff7f', opacity=1)
             grad.add_stop_color(offset=0.2, color='#cccc66', opacity=1)
