@@ -1,2 +1,6 @@
 Length: 144.11 1.7140 km las vegas 4.76 0.0601 km monaco 3.93 0.0355 km
 
+nu in pdf berekend                          961                   258
+
+verhouding                                  1.6
+
