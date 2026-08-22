@@ -120,6 +120,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
             dwg.add(low)
             dwg.add(dwg.text(str(round(maxa, 1)), insert=(maxal, 60), stroke='none', fill='#ff0000', font_size='50px', font_weight="bold", font_family="Arial"))
             dwg.add(dwg.text(str(round(maxa - mina, 1)), insert=(minal, 120), stroke='none', fill='#00ff00', font_size='50px', font_weight="bold", font_family="Arial"))
+            dwg.add(dwg.text(str(round(l, 1)), insert=(100, 120), stroke='none', fill='#00ff00', font_size='50px', font_weight="bold", font_family="Arial"))
             dwg.save()
     return
 if sys.platform[0] == 'l':
