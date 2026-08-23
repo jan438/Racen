@@ -34,6 +34,10 @@ def path_length(coords):
         lat2, lon2 = coords[i + 1]
         haver += haversine(lat1, lon1, lat2, lon2)
         mathl += math.sqrt(abs(lon2 - lon1)**2 + abs(lat2 - lat1)**2)
+        kolkata = (lon1, lat1)
+        delhi = (lon2, lat2)
+        print("Geodesic", geodesic(kolkata, delhi).km)
+        print("Great circle", great_circle(kolkata, delhi).km)
     return [haver, mathl]
 
 if __name__ == "__main__":
