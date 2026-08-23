@@ -937,7 +937,8 @@ if __name__ == "__main__":
     try:
         [haverlv, lvl, lvgdesic, lvgcircle] = path_length(lvcoordinates)
         [havermc, mcl, mcgdesic, mcgcircle] = path_length(mccoordinates)
-        print("las Vegas", "haver", haverlv, "math", lvl, "lvgdesic", lvgdesic, "lvgcircle", lvgcircle)
+        print("Las Vegas", "haver", haverlv, "math", lvl, "lvgdesic", lvgdesic, "lvgcircle", lvgcircle)
+        print("Monaco", "haver", havermc, "math", mcl, "mcgdesic", mcgdesic, "mcgcircle", mcgcircle)
     except Exception as e:
         print(f"Error calculating path length: {e}")
         
