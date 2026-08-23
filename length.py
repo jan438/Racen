@@ -1,5 +1,6 @@
 import math
 import json
+from geopy.distance import geodesic
 
 def haversine(lat1, lon1, lat2, lon2):
     """
