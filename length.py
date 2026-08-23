@@ -930,8 +930,8 @@ if __name__ == "__main__":
     try:
         [haver, l] = path_length(coordinates)
         [haverlv, lvl] = path_length(lvcoordinates)
-        [total_mckm, mcl] = path_length(mccoordinates)
-        print(f"amrole: {haver:.2f} {l:.4f} lv {haverlv:.2f} {lvl:.4f} km monaco {total_mckm:.2f} {mcl:.4f} km")
+        [havermc, mcl] = path_length(mccoordinates)
+        print(f"amrole: {haver:.2f} {l:.4f} lv {haverlv:.2f} {lvl:.4f} mc {havermc:.2f} {mcl:.4f}")
     except Exception as e:
         print(f"Error calculating path length: {e}")
         
