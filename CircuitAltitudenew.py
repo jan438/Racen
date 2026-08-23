@@ -1,0 +1,148 @@
+import os
+import sys
+import csv
+import json
+import math
+import svgwrite
+from reportlab.graphics import renderPDF
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import inch, mm
+from reportlab.graphics.shapes import *
+from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
+
+lengthscale = 80.0
+altitudescale = 0.5
+
+def haversine(lat1, lon1, lat2, lon2):
+    """
+    Calculate the great-circle distance between two points on Earth.
+    Inputs are in decimal degrees.
+    Returns distance in kilometers.
+    """
+    # Convert decimal degrees to radians
+    lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
+
+    # Haversine formula
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+    a = math.sin(dlat / 2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2)**2
+    c = 2 * math.asin(math.sqrt(a))
+    r = 6371.0088  # Earth's radius in kilometers
+    return r * c
+
+def Altitude_to_SVG(jsonfile, startindex, ac):
+    def coordinates_to_path(dat1, dat2, startindex, ac):
+        path_data = ""
+        total = 0
+        totalcoords = []
+        res1 = dat1["results"]
+        for item in res1:
+            elevation = item["elevation"]
+            location = item["location"]
+            lon = location["lng"]
+            lat = location["lat"]
+            coord = [elevation, lon, lat]
+            totalcoords.append(coord)
+        if dat2 is not None:
+            res2 = dat2["results"]
+            for item in res2:
+                elevation = item["elevation"]
+                location = item["location"]
+                lon = location["lng"]
+                lat = location["lat"]
+                coord = [elevation, lon, lat]
+                totalcoords.append(coord)
+#        print("total", len(totalcoords), "startindex", startindex)
+        totalcoords = totalcoords[startindex:] + totalcoords[:startindex - 1]
+        mina = math.inf
+        maxa = -math.inf
+        fa = -1
+        la = -1
+        maxal = -1
+        minal = -1
+        for i in range(len(totalcoords)):
+            elevation = totalcoords[i][0]
+            if fa == -1:
+                fa = elevation
+            if elevation > maxa:
+                maxa = elevation
+            if elevation < mina:
+                mina = elevation
+            la = elevation
+        l = 0
+        sl = 0
+        for i in range(len(totalcoords)):
+            elevation = totalcoords[i][0]
+            lon = totalcoords[i][1]
+            lat = totalcoords[i][2]
+            a = maxa - elevation
+            a = altitudescale * a
+            if i == 0:
+                path_data = f"M {sl} {a}"
+            else:
+                d = haversine(plat, plon, lat, lon)
+                l += d
+                sd = haversine(plat, plon, lat, lon) * lengthscale
+                sl += sd
+                path_data += f" L {sl} {a}"
+            if elevation == maxa:
+                maxal = sl
+            if elevation == mina:
+                minal = sl
+            plon = lon
+            plat = lat
+        fa = maxa - fa
+        path_data += f" L {sl} 100"
+        path_data += f" L 0.0 100"
+        path_data += f" L 0.0 {fa}"
+        print("length", l, "scaledlength", sl, "jsonfile", jsonfile)
+        return [path_data, sl, maxa, mina, maxal, minal]
+    print("jsonfile", jsonfile, "startindex", startindex, "clockwise", ac)
+    file1str = "Data/" + jsonfile + "-1.json"
+    file2str = "Data/" + jsonfile + "-2.json"
+    if os.path.exists(file1str):
+        with open(file1str, 'r') as file1:
+            data1 = json.load(file1)
+            if os.path.exists(file2str):
+                with open(file2str, 'r') as file2:
+                    data2 = json.load(file2)
+            else:
+                data2 = None
+            [path_data, sl, maxa, mina, maxal, minal] = coordinates_to_path(data1, data2, startindex, ac)
+            dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'9500px', '200px'))
+            grad = dwg.linearGradient(start=(0, 0), end=(0, 1), id='my-gradient')
+            grad.add_stop_color(offset=0.0, color='#ffff7f', opacity=1)
+            grad.add_stop_color(offset=0.2, color='#cccc66', opacity=1)
+            grad.add_stop_color(offset=1.0, color='#000000', opacity=1)
+            dwg.defs.add(grad)
+            path = dwg.path(d=path_data, fill="url(#my-gradient)", stroke='black', stroke_width=3)
+            dwg.add(path)
+            high = dwg.circle(center=(maxal, 0), r=10, fill='red', stroke='black', stroke_width=3)
+            dwg.add(high)
+            low = dwg.circle(center=(minal, 60), r=10, fill='green', stroke='black', stroke_width=3)
+            dwg.add(low)
+            dwg.add(dwg.text(str(round(maxa, 1)), insert=(maxal, 60), stroke='none', fill='#ff0000', font_size='50px', font_weight="bold", font_family="Arial"))
+            dwg.add(dwg.text(str(round(maxa - mina, 1)), insert=(minal, 120), stroke='none', fill='#00ff00', font_size='50px', font_weight="bold", font_family="Arial"))
+            dwg.save()
+    return
+if sys.platform[0] == 'l':
+    path = '/home/jan/git/Racen'
+if sys.platform[0] == 'w':
+    path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
+os.chdir(path)
+circuitsdata = []
+file_to_open = "Data/Circuits2027.csv"
+with open(file_to_open, 'r') as file:
+    csvreader = csv.reader(file, delimiter = ';')
+    count = 0
+    for row in csvreader:
+        circuitsdata.append(row)
+        count += 1
+print("circuitsdata", count)        
+
+for j in range(count):
+    if circuitsdata[j][1] == "us-2023":
+#    if True:
+        Altitude_to_SVG(circuitsdata[j][1], int(circuitsdata[j][12]), circuitsdata[j][9])
+
+key = input("Wait")
