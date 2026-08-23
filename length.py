@@ -27,13 +27,13 @@ def path_length(coords):
         return 0.0  # No distance if less than 2 points
 
     haver = 0.0
-    l = 0.0
+    mathl = 0.0
     for i in range(len(coords) - 1):
         lat1, lon1 = coords[i]
         lat2, lon2 = coords[i + 1]
         haver += haversine(lat1, lon1, lat2, lon2)
-        l += math.sqrt(abs(lon2 - lon1)**2 + abs(lat2 - lat1)**2)
-    return [haver, l]
+        mathl += math.sqrt(abs(lon2 - lon1)**2 + abs(lat2 - lat1)**2)
+    return [haver, mathl]
 
 if __name__ == "__main__":
     # Example coordinates: (lat, lon)
