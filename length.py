@@ -1,6 +1,7 @@
 import math
 import json
 from geopy.distance import geodesic
+from geopy.distance import great_circle
 
 def haversine(lat1, lon1, lat2, lon2):
     """
@@ -932,6 +933,9 @@ if __name__ == "__main__":
         [haverlv, lvl] = path_length(lvcoordinates)
         [havermc, mcl] = path_length(mccoordinates)
         print(f"amrole: h {haver:.2f} l {l:.4f} lv h {haverlv:.2f} l {lvl:.4f} mc h {havermc:.2f} l {mcl:.4f}")
+        kolkata = (22.5726, 88.3639)
+        delhi = (28.7041, 77.1025)
+        print("Great circle", great_circle(kolkata, delhi).km)
     except Exception as e:
         print(f"Error calculating path length: {e}")
         
