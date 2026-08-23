@@ -39,10 +39,8 @@ def path_length(coords):
         kolkata = (lon1, lat1)
         delhi = (lon2, lat2)
         gdesic += geodesic(kolkata, delhi).km
-        print("Geodesic", gdesic)
         gcircle += great_circle(kolkata, delhi).km
-        print("Great circle", gcircle)
-    return [haver, mathl]
+    return [haver, mathl, gdesic, gcircle]
 
 if __name__ == "__main__":
     # Example coordinates: (lat, lon)
@@ -937,14 +935,9 @@ if __name__ == "__main__":
                     ]
     ]
     try:
-        [haver, l] = path_length(coordinates)
-        [haverlv, lvl] = path_length(lvcoordinates)
-        [havermc, mcl] = path_length(mccoordinates)
-        print(f"amrole: haverl {haver:.2f} mathl {l:.4f} lasvegas haverl {haverlv:.2f} mathl {lvl:.4f} monaco haverl {havermc:.2f} mathl {mcl:.4f}")
-        kolkata = (22.5726, 88.3639)
-        delhi = (28.7041, 77.1025)
-        print("Geodesic", geodesic(kolkata, delhi).km)
-        print("Great circle", great_circle(kolkata, delhi).km)
+        [haverlv, lvl, lvgdesic, lvgcircle] = path_length(lvcoordinates)
+        [havermc, mcl, mcgdesic, mcgcircle] = path_length(mccoordinates)
+        print("las Vegas", "haver", haverlv, "math", lvl, "lvgdesic", lvgdesic, "lvgcircle", lvgcircle)
     except Exception as e:
         print(f"Error calculating path length: {e}")
         
