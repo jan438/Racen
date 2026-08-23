@@ -1,7 +1,43 @@
 import math
 import json
+import os
+import sys
 from geopy.distance import geodesic
 from geopy.distance import great_circle
+
+def readjson(jsonfile):
+    totalcoords = []
+    def coordinates_to_array(dat1, dat2):
+        totalcoords = []
+        res1 = dat1["results"]
+        for item in res1:
+            location = item["location"]
+            lon = location["lng"]
+            lat = location["lat"]
+            coord = [lon, lat]
+            totalcoords.append(coord)
+        if dat2 is not None:
+            res2 = dat2["results"]
+            for item in res2:
+                location = item["location"]
+                lon = location["lng"]
+                lat = location["lat"]
+                coord = [lon, lat]
+                totalcoords.append(coord)
+        return totalcoords
+    print("jsonfile", jsonfile)
+    file1str = "Data/" + jsonfile + "-1.json"
+    file2str = "Data/" + jsonfile + "-2.json"
+    if os.path.exists(file1str):
+        with open(file1str, 'r') as file1:
+            data1 = json.load(file1)
+            if os.path.exists(file2str):
+                with open(file2str, 'r') as file2:
+                    data2 = json.load(file2)
+            else:
+                data2 = None
+            totalcoords = coordinates_to_array(data1, data2)
+    return totalcoords
 
 def haversine(lat1, lon1, lat2, lon2):
     """
@@ -934,6 +970,7 @@ if __name__ == "__main__":
                         43.73940400000
                     ]
     ]
+    readjson("us-2023")
     try:
         [haverlv, lvl, lvgdesic, lvgcircle] = path_length(lvcoordinates)
         [havermc, mcl, mcgdesic, mcgcircle] = path_length(mccoordinates)
