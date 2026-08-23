@@ -973,6 +973,8 @@ if __name__ == "__main__":
     coords = readjson("us-2023")
     print(len(coords))
     try:
+        [haverlv, lvl, lvgdesic, lvgcircle] = path_length(coords)
+        print("Las Vegas", "haver", haverlv, "math", lvl, "lvgdesic", lvgdesic, "lvgcircle", lvgcircle)
         [haverlv, lvl, lvgdesic, lvgcircle] = path_length(lvcoordinates)
         [havermc, mcl, mcgdesic, mcgcircle] = path_length(mccoordinates)
         print("Las Vegas", "haver", haverlv, "math", lvl, "lvgdesic", lvgdesic, "lvgcircle", lvgcircle)
