@@ -932,7 +932,7 @@ if __name__ == "__main__":
         [haver, l] = path_length(coordinates)
         [haverlv, lvl] = path_length(lvcoordinates)
         [havermc, mcl] = path_length(mccoordinates)
-        print(f"amrole: haverl {haver:.2f} mathl {l:.4f} lv haverl {haverlv:.2f} mathl {lvl:.4f} mc haverl {havermc:.2f} mathl {mcl:.4f}")
+        print(f"amrole: haverl {haver:.2f} mathl {l:.4f} lasvegas haverl {haverlv:.2f} mathl {lvl:.4f} monaco haverl {havermc:.2f} mathl {mcl:.4f}")
         kolkata = (22.5726, 88.3639)
         delhi = (28.7041, 77.1025)
         print("Geodesic", geodesic(kolkata, delhi).km)
