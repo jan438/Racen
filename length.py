@@ -970,7 +970,8 @@ if __name__ == "__main__":
                         43.73940400000
                     ]
     ]
-    readjson("us-2023")
+    coords = readjson("us-2023")
+    print(len(coords))
     try:
         [haverlv, lvl, lvgdesic, lvgcircle] = path_length(lvcoordinates)
         [havermc, mcl, mcgdesic, mcgcircle] = path_length(mccoordinates)
