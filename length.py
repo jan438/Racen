@@ -929,9 +929,9 @@ if __name__ == "__main__":
     ]
     try:
         [haver, l] = path_length(coordinates)
-        [total_lvkm, lvl] = path_length(lvcoordinates)
+        [haverlv, lvl] = path_length(lvcoordinates)
         [total_mckm, mcl] = path_length(mccoordinates)
-        print(f"amrole: {haver:.2f} {l:.4f} km las vegas {total_lvkm:.2f} {lvl:.4f} km monaco {total_mckm:.2f} {mcl:.4f} km")
+        print(f"amrole: {haver:.2f} {l:.4f} lv {haverlv:.2f} {lvl:.4f} km monaco {total_mckm:.2f} {mcl:.4f} km")
     except Exception as e:
         print(f"Error calculating path length: {e}")
         
