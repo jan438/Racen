@@ -46,10 +46,7 @@ def haversine(lat1, lon1, lat2, lon2):
     Inputs are in decimal degrees.
     Returns distance in kilometers.
     """
-    # Convert decimal degrees to radians
     lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
-
-    # Haversine formula
     dlat = lat2 - lat1
     dlon = lon2 - lon1
     a = math.sin(dlat / 2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2)**2
@@ -61,9 +58,6 @@ def path_length(coords):
     """
     Calculate total path length from a list of (lat, lon) tuples.
     """
-    if not coords or len(coords) < 2:
-        return 0.0  # No distance if less than 2 points
-
     haver = 0.0
     mathl = 0.0
     gdesic = 0.0
