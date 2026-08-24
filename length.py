@@ -88,7 +88,7 @@ if __name__ == "__main__":
         print(len(coordinates))
         try:
             [haver, l, gdesic, gcircle] = path_length(coordinates)
-            print(f'{circuitsdata[i][0]}, haver, {haver}, math, {l}, gdesic, {gdesic}, gcircle, {gcircle}')
+            print(f'{circuitsdata[i][0]}, haver, {haver:.3f}, math, {l}, gdesic, {gdesic}, gcircle, {gcircle}')
         except Exception as e:
             print(f"Error calculating path length: {e}")
         
