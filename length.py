@@ -74,6 +74,11 @@ def path_length(coords):
     return [haver, mathl, gdesic, gcircle]
 
 if __name__ == "__main__":
+    if sys.platform[0] == 'l':
+        path = '/home/jan/git/Racen'
+    if sys.platform[0] == 'w':
+        path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
+    os.chdir(path)
     circuitsdata = []
     file_to_open = "Data/Circuits2027.csv"
     with open(file_to_open, 'r') as file:
