@@ -83,75 +83,51 @@ spa aangepaste file 154
 
 circuitsdata count 24
 jsonfile au-1953
-148
-AlbertPark, haver, 5.428, math, 0.053, gdesic, 5.273, gcircle, 5.273
+AlbertPark, len coordinates, 148, gcircle, 5.273
 jsonfile bh-2002
-96
-Bahrain, haver, 4.570, math, 0.051, gdesic, 5.411, gcircle, 5.418
+Bahrain, len coordinates, 96, gcircle, 5.418
 jsonfile az-2016
-89
-BakuCity, haver, 6.359, math, 0.064, gdesic, 5.947, gcircle, 5.942
+BakuCity, len coordinates, 89, gcircle, 5.942
 jsonfile ca-1978
-103
-GillesVilleneuve, haver, 2.482, math, 0.043, gdesic, 4.366, gcircle, 4.365
+GillesVilleneuve, len coordinates, 103, gcircle, 4.365
 jsonfile mx-1962
-104
-HermanosRodríguez, haver, 3.348, math, 0.040, gdesic, 4.299, gcircle, 4.302
+HermanosRodríguez, len coordinates, 104, gcircle, 4.302
 jsonfile hu-1986
-143
-Hungaroring, haver, 5.272, math, 0.048, gdesic, 4.382, gcircle, 4.376
+Hungaroring, len coordinates, 143, gcircle, 4.376
 jsonfile tr-2005
-88
-Istanbul, haver, 6.216, math, 0.058, gdesic, 5.314, gcircle, 5.307
+Istanbul, len coordinates, 88, gcircle, 5.307
 jsonfile sa-2021
-152
-JeddahCorniche, haver, 5.165, math, 0.056, gdesic, 6.177, gcircle, 6.196
+JeddahCorniche, len coordinates, 152, gcircle, 6.196
 jsonfile br-1940
-171
-JoseCarlosPace, haver, 3.661, math, 0.040, gdesic, 4.290, gcircle, 4.298
+JoseCarlosPace, len coordinates, 171, gcircle, 4.298
 jsonfile us-2023
-57
-LasVegas, haver, 4.764, math, 0.060, gdesic, 6.090, gcircle, 6.092
+LasVegas, len coordinates, 57, gcircle, 6.092
 jsonfile qa-2004
-110
-Lusail, haver, 4.774, math, 0.051, gdesic, 5.415, gcircle, 5.421
+Lusail, len coordinates, 110, gcircle, 5.421
 jsonfile es-2026
-117
-Madring, haver, 6.145, math, 0.055, gdesic, 5.432, gcircle, 5.430
+Madring, len coordinates, 117, gcircle, 5.430
 jsonfile sg-2008
-116
-MarinaBay, haver, 3.249, math, 0.044, gdesic, 4.931, gcircle, 4.943
+MarinaBay, len coordinates, 116, gcircle, 4.943
 jsonfile us-2022
-112
-Miami, haver, 5.308, math, 0.053, gdesic, 5.430, gcircle, 5.426
+Miami, len coordinates, 112, gcircle, 5.426
 jsonfile mc-1929
-163
-Monaco, haver, 3.930, math, 0.035, gdesic, 3.327, gcircle, 3.324
+Monaco, len coordinates, 163, gcircle, 3.324
 jsonfile it-1922
-125
-Monza, haver, 6.621, math, 0.060, gdesic, 5.790, gcircle, 5.786
+Monza, len coordinates, 125, gcircle, 5.786
 jsonfile pt-2008
-104
-Portimão, haver, 5.005, math, 0.045, gdesic, 4.649, gcircle, 4.652
+Portimão, len coordinates, 104, gcircle, 4.652
 jsonfile at-1969
-81
-RedBullRing, haver, 5.705, math, 0.052, gdesic, 4.311, gcircle, 4.302
+RedBullRing, len coordinates, 81, gcircle, 4.302
 jsonfile cn-2004
-143
-Shanghai, haver, 4.730, math, 0.053, gdesic, 5.445, gcircle, 5.448
+Shanghai, len coordinates, 143, gcircle, 5.448
 jsonfile gb-1948
-136
-Silverstone, haver, 7.618, math, 0.069, gdesic, 5.888, gcircle, 5.878
+Silverstone, len coordinates, 136, gcircle, 5.878
 jsonfile be-1925
-154
-SpaFrancorchamps, haver, 8.465, math, 0.076, gdesic, 6.988, gcircle, 6.978
+SpaFrancorchamps, len coordinates, 154, gcircle, 6.978
 jsonfile jp-1962
-173
-Suzuka, haver, 5.917, math, 0.059, gdesic, 5.813, gcircle, 5.812
+Suzuka, len coordinates, 173, gcircle, 5.812
 jsonfile us-2012
-173
-theAmericas, haver, 4.889, math, 0.055, gdesic, 5.520, gcircle, 5.520
+theAmericas, len coordinates, 173, gcircle, 5.520
 jsonfile ae-2009
-133
-YasMarina, haver, 4.366, math, 0.050, gdesic, 5.285, gcircle, 5.293
+YasMarina, len coordinates, 133, gcircle, 5.293
 

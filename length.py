@@ -26,7 +26,7 @@ def readjson(jsonfile):
                 coord = [lon, lat]
                 totalcoords.append(coord)
         return totalcoords
-    print("jsonfile", jsonfile)
+#    print("jsonfile", jsonfile)
     file1str = "Data/" + jsonfile + "-1.json"
     file2str = "Data/" + jsonfile + "-2.json"
     if os.path.exists(file1str):
@@ -89,7 +89,7 @@ if __name__ == "__main__":
         try:
             [haver, l, gdesic, gcircle] = path_length(coordinates)
 #            print(f'{circuitsdata[i][0]}, haver, {haver:.3f}, math, {l:.3f}, gdesic, {gdesic:.3f}, gcircle, {gcircle:.3f}')
-            print(f'{circuitsdata[i][0]}, len coordinates, {len(coordinates)}, gcircle, {gcircle:.3f}')
+            print(f'{circuitsdata[i][0]}, {circuitsdata[i][1]}, len coordinates, {len(coordinates)}, gcircle, {gcircle:.3f}')
         except Exception as e:
             print(f"Error calculating path length: {e}")
         
