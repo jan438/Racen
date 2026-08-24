@@ -115,5 +115,5 @@ circuitsdata 24
 es-2026, len coordinates, 117, gcircle, 6.145
 mc-1929, len coordinates, 163, gcircle, 3.930
 
-mc-1929 tot 10 length.py            CircuitAltitudeGeoCircle.py
+mc-1929 tot 10 length.py  gcircle, 0.227  CircuitAltitudeGeoCircle.py   gcircle, 0.256
 
