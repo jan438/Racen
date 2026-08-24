@@ -37,7 +37,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                 lat = location["lat"]
                 coord = [elevation, lon, lat]
                 totalcoords.append(coord)
-#        totalcoords = totalcoords[startindex:] + totalcoords[:startindex - 1]
+        totalcoords = totalcoords[:10]
         lencoords = len(totalcoords)
         mina = math.inf
         maxa = -math.inf
