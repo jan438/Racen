@@ -83,16 +83,13 @@ if __name__ == "__main__":
             circuitsdata.append(row)
             count += 1
     print("circuitsdata count", count)    
-    lvcoordinates = readjson("us-2023")
-    print(len(lvcoordinates))
-    mccoordinates = readjson("mc-1929")
-    print(len(mccoordinates))
-    try:
-        [haverlv, lvl, lvgdesic, lvgcircle] = path_length(lvcoordinates)
-        print("Las Vegas", "haver", haverlv, "math", lvl, "lvgdesic", lvgdesic, "lvgcircle", lvgcircle)
-        [havermc, mcl, mcgdesic, mcgcircle] = path_length(mccoordinates)
-        print("Monaco", "haver", havermc, "math", mcl, "mcgdesic", mcgdesic, "mcgcircle", mcgcircle)
-    except Exception as e:
-        print(f"Error calculating path length: {e}")
+    for i in range(count):
+        coordinates = readjson("us-2023")
+        print(len(coordinates))
+        try:
+            [haver, l, gdesic, gcircle] = path_length(coordinates)
+            print("Las Vegas", "haver", haver, "math", l, "gdesic", gdesic, "gcircle", gcircle)
+        except Exception as e:
+            print(f"Error calculating path length: {e}")
         
 key = input("Wait")
