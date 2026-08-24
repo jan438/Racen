@@ -82,52 +82,28 @@ Coords startindex startsector2 startsector3 OpenStreetMap
 spa aangepaste file 154
 
 circuitsdata count 24
-jsonfile au-1953
-AlbertPark, len coordinates, 148, gcircle, 5.273
-jsonfile bh-2002
-Bahrain, len coordinates, 96, gcircle, 5.418
-jsonfile az-2016
-BakuCity, len coordinates, 89, gcircle, 5.942
-jsonfile ca-1978
-GillesVilleneuve, len coordinates, 103, gcircle, 4.365
-jsonfile mx-1962
-HermanosRodríguez, len coordinates, 104, gcircle, 4.302
-jsonfile hu-1986
-Hungaroring, len coordinates, 143, gcircle, 4.376
-jsonfile tr-2005
-Istanbul, len coordinates, 88, gcircle, 5.307
-jsonfile sa-2021
-JeddahCorniche, len coordinates, 152, gcircle, 6.196
-jsonfile br-1940
-JoseCarlosPace, len coordinates, 171, gcircle, 4.298
-jsonfile us-2023
-LasVegas, len coordinates, 57, gcircle, 6.092
-jsonfile qa-2004
-Lusail, len coordinates, 110, gcircle, 5.421
-jsonfile es-2026
-Madring, len coordinates, 117, gcircle, 5.430
-jsonfile sg-2008
-MarinaBay, len coordinates, 116, gcircle, 4.943
-jsonfile us-2022
-Miami, len coordinates, 112, gcircle, 5.426
-jsonfile mc-1929
-Monaco, len coordinates, 163, gcircle, 3.324
-jsonfile it-1922
-Monza, len coordinates, 125, gcircle, 5.786
-jsonfile pt-2008
-Portimão, len coordinates, 104, gcircle, 4.652
-jsonfile at-1969
-RedBullRing, len coordinates, 81, gcircle, 4.302
-jsonfile cn-2004
-Shanghai, len coordinates, 143, gcircle, 5.448
-jsonfile gb-1948
-Silverstone, len coordinates, 136, gcircle, 5.878
-jsonfile be-1925
-SpaFrancorchamps, len coordinates, 154, gcircle, 6.978
-jsonfile jp-1962
-Suzuka, len coordinates, 173, gcircle, 5.812
-jsonfile us-2012
-theAmericas, len coordinates, 173, gcircle, 5.520
-jsonfile ae-2009
-YasMarina, len coordinates, 133, gcircle, 5.293
+AlbertPark, au-1953, len coordinates, 148, gcircle, 5.273
+Bahrain, bh-2002, len coordinates, 96, gcircle, 5.418
+BakuCity, az-2016, len coordinates, 89, gcircle, 5.942
+GillesVilleneuve, ca-1978, len coordinates, 103, gcircle, 4.365
+HermanosRodríguez, mx-1962, len coordinates, 104, gcircle, 4.302
+Hungaroring, hu-1986, len coordinates, 143, gcircle, 4.376
+Istanbul, tr-2005, len coordinates, 88, gcircle, 5.307
+JeddahCorniche, sa-2021, len coordinates, 152, gcircle, 6.196
+JoseCarlosPace, br-1940, len coordinates, 171, gcircle, 4.298
+LasVegas, us-2023, len coordinates, 57, gcircle, 6.092
+Lusail, qa-2004, len coordinates, 110, gcircle, 5.421
+Madring, es-2026, len coordinates, 117, gcircle, 5.430
+MarinaBay, sg-2008, len coordinates, 116, gcircle, 4.943
+Miami, us-2022, len coordinates, 112, gcircle, 5.426
+Monaco, mc-1929, len coordinates, 163, gcircle, 3.324
+Monza, it-1922, len coordinates, 125, gcircle, 5.786
+Portimão, pt-2008, len coordinates, 104, gcircle, 4.652
+RedBullRing, at-1969, len coordinates, 81, gcircle, 4.302
+Shanghai, cn-2004, len coordinates, 143, gcircle, 5.448
+Silverstone, gb-1948, len coordinates, 136, gcircle, 5.878
+SpaFrancorchamps, be-1925, len coordinates, 154, gcircle, 6.978
+Suzuka, jp-1962, len coordinates, 173, gcircle, 5.812
+theAmericas, us-2012, len coordinates, 173, gcircle, 5.520
+YasMarina, ae-2009, len coordinates, 133, gcircle, 5.293
 
