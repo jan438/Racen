@@ -79,12 +79,6 @@ def path_length(coords):
     return [haver, mathl, gdesic, gcircle]
 
 if __name__ == "__main__":
-    # Example coordinates: (lat, lon)
-    coordinates = [
-        (52.370216, 4.895168),  # Amsterdam
-        (51.924419, 4.477733),  # Rotterdam
-        (51.441642, 5.469722)   # Eindhoven
-    ]
     lvcoordinates = readjson("us-2023")
     print(len(lvcoordinates))
     mccoordinates = readjson("mc-1929")
