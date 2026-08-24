@@ -92,7 +92,7 @@ if __name__ == "__main__":
         z = 88
         if circuitsdata[i][1] == "mc-1929":
             coordinates = readjson(circuitsdata[i][1])
-#            print(len(coordinates))
+            coordinates = coordinates[:10]
             try:
                 [haver, l, gdesic, gcircle] = path_length(coordinates)
 #               print(f'{circuitsdata[i][0]}, haver, {haver:.3f}, math, {l:.3f}, gdesic, {gdesic:.3f}, gcircle, {gcircle:.3f}')
