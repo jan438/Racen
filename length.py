@@ -85,10 +85,11 @@ if __name__ == "__main__":
     print("circuitsdata count", count)    
     for i in range(count):
         coordinates = readjson(circuitsdata[i][1])
-        print(len(coordinates))
+#        print(len(coordinates))
         try:
             [haver, l, gdesic, gcircle] = path_length(coordinates)
-            print(f'{circuitsdata[i][0]}, haver, {haver:.3f}, math, {l:.3f}, gdesic, {gdesic:.3f}, gcircle, {gcircle:.3f}')
+#            print(f'{circuitsdata[i][0]}, haver, {haver:.3f}, math, {l:.3f}, gdesic, {gdesic:.3f}, gcircle, {gcircle:.3f}')
+            print(f'{circuitsdata[i][0]}, len coordinates, {len(coordinates)}, gcircle, {gcircle:.3f}')
         except Exception as e:
             print(f"Error calculating path length: {e}")
         
