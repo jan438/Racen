@@ -2,6 +2,7 @@ import math
 import json
 import os
 import sys
+import csv
 from geopy.distance import geodesic
 from geopy.distance import great_circle
 
@@ -79,6 +80,15 @@ def path_length(coords):
     return [haver, mathl, gdesic, gcircle]
 
 if __name__ == "__main__":
+    circuitsdata = []
+    file_to_open = "Data/Circuits2027.csv"
+    with open(file_to_open, 'r') as file:
+        csvreader = csv.reader(file, delimiter = ';')
+        count = 0
+        for row in csvreader:
+            circuitsdata.append(row)
+            count += 1
+    print("circuitsdata count", count)    
     lvcoordinates = readjson("us-2023")
     print(len(lvcoordinates))
     mccoordinates = readjson("mc-1929")
