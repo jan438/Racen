@@ -37,7 +37,6 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                 lat = location["lat"]
                 coord = [elevation, lon, lat]
                 totalcoords.append(coord)
-#        print("total", len(totalcoords), "startindex", startindex)
         totalcoords = totalcoords[startindex:] + totalcoords[:startindex - 1]
         mina = math.inf
         maxa = -math.inf
@@ -81,7 +80,8 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
         path_data += f" L {sl} 100"
         path_data += f" L 0.0 100"
         path_data += f" L 0.0 {fa}"
-        print("length", l, "scaledlength", sl, "jsonfile", jsonfile)
+#        print(f'{jsonfile}, len coordinates, {len(totalcoords}, gcircle, {l:.3f}')
+        print(f'{jsonfile}')
         return [path_data, sl, maxa, mina, maxal, minal, l]
 #    print("jsonfile", jsonfile, "startindex", startindex, "clockwise", ac)
     file1str = "Data/" + jsonfile + "-1.json"
