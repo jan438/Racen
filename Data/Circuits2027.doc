@@ -81,6 +81,8 @@ Coords startindex startsector2 startsector3 OpenStreetMap
 
 spa aangepaste file 154
 
+length.py
+
 circuitsdata count 24
 AlbertPark, au-1953, len coordinates, 148, gcircle, 5.273
 Bahrain, bh-2002, len coordinates, 96, gcircle, 5.418
@@ -106,4 +108,10 @@ SpaFrancorchamps, be-1925, len coordinates, 154, gcircle, 6.978
 Suzuka, jp-1962, len coordinates, 173, gcircle, 5.812
 theAmericas, us-2012, len coordinates, 173, gcircle, 5.520
 YasMarina, ae-2009, len coordinates, 133, gcircle, 5.293
+
+CircuitAltitudeGeoCircle.py
+
+circuitsdata 24
+es-2026, len coordinates, 116, gcircle, 6.003
+mc-1929, len coordinates, 162, gcircle, 3.839
 
