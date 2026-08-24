@@ -4,6 +4,8 @@ import csv
 import json
 import math
 import svgwrite
+from geopy.distance import geodesic
+from geopy.distance import great_circle
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch, mm
