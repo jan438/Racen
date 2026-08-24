@@ -83,7 +83,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
         path_data += f" L 0.0 {fa}"
         print("length", l, "scaledlength", sl, "jsonfile", jsonfile)
         return [path_data, sl, maxa, mina, maxal, minal, l]
-    print("jsonfile", jsonfile, "startindex", startindex, "clockwise", ac)
+#    print("jsonfile", jsonfile, "startindex", startindex, "clockwise", ac)
     file1str = "Data/" + jsonfile + "-1.json"
     file2str = "Data/" + jsonfile + "-2.json"
     if os.path.exists(file1str):
