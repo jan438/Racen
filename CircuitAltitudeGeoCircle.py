@@ -136,9 +136,9 @@ with open(file_to_open, 'r') as file:
         count += 1
 print("circuitsdata", count)        
 
-for j in range(count):
-    if circuitsdata[j][1] == "mc-1929":
+for i in range(count):
+    if circuitsdata[i][1] == "mc-1929":
 #    if True:
-        Altitude_to_SVG(circuitsdata[j][1], int(circuitsdata[j][12]), circuitsdata[j][9])
+        Altitude_to_SVG(circuitsdata[i][1], int(circuitsdata[i][12]), circuitsdata[i][9])
 
 key = input("Wait")
