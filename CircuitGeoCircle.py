@@ -32,7 +32,6 @@ def readjson(jsonfile):
                 coord = [lon, lat]
                 totalcoords.append(coord)
         return totalcoords
-#    print("jsonfile", jsonfile)
     file1str = "Data/" + jsonfile + "-1.json"
     file2str = "Data/" + jsonfile + "-2.json"
     if os.path.exists(file1str):
