@@ -84,30 +84,30 @@ spa aangepaste file 154
 length.py
 
 circuitsdata count 24
-AlbertPark, au-1953, len coordinates, 148, gcircle, 5.273
-Bahrain, bh-2002, len coordinates, 96, gcircle, 5.418
-BakuCity, az-2016, len coordinates, 89, gcircle, 5.942
-GillesVilleneuve, ca-1978, len coordinates, 103, gcircle, 4.365
-HermanosRodríguez, mx-1962, len coordinates, 104, gcircle, 4.302
-Hungaroring, hu-1986, len coordinates, 143, gcircle, 4.376
-Istanbul, tr-2005, len coordinates, 88, gcircle, 5.307
-JeddahCorniche, sa-2021, len coordinates, 152, gcircle, 6.196
-JoseCarlosPace, br-1940, len coordinates, 171, gcircle, 4.298
-LasVegas, us-2023, len coordinates, 57, gcircle, 6.092
-Lusail, qa-2004, len coordinates, 110, gcircle, 5.421
-Madring, es-2026, len coordinates, 117, gcircle, 5.430
-MarinaBay, sg-2008, len coordinates, 116, gcircle, 4.943
-Miami, us-2022, len coordinates, 112, gcircle, 5.426
-Monaco, mc-1929, len coordinates, 163, gcircle, 3.324
-Monza, it-1922, len coordinates, 125, gcircle, 5.786
-Portimão, pt-2008, len coordinates, 104, gcircle, 4.652
-RedBullRing, at-1969, len coordinates, 81, gcircle, 4.302
-Shanghai, cn-2004, len coordinates, 143, gcircle, 5.448
-Silverstone, gb-1948, len coordinates, 136, gcircle, 5.878
-SpaFrancorchamps, be-1925, len coordinates, 154, gcircle, 6.978
-Suzuka, jp-1962, len coordinates, 173, gcircle, 5.812
-theAmericas, us-2012, len coordinates, 173, gcircle, 5.520
-YasMarina, ae-2009, len coordinates, 133, gcircle, 5.293
+AlbertPark, au-1953, len coordinates, 148, gcircle, 5.346
+Bahrain, bh-2002, len coordinates, 96, gcircle, 5.614
+BakuCity, az-2016, len coordinates, 89, gcircle, 6.106
+GillesVilleneuve, ca-1978, len coordinates, 103, gcircle, 4.459
+HermanosRodríguez, mx-1962, len coordinates, 104, gcircle, 4.361
+Hungaroring, hu-1986, len coordinates, 143, gcircle, 4.641
+Istanbul, tr-2005, len coordinates, 88, gcircle, 5.541
+JeddahCorniche, sa-2021, len coordinates, 152, gcircle, 6.319
+JoseCarlosPace, br-1940, len coordinates, 171, gcircle, 4.361
+LasVegas, us-2023, len coordinates, 57, gcircle, 6.261
+Lusail, qa-2004, len coordinates, 110, gcircle, 5.565
+Madring, es-2026, len coordinates, 117, gcircle, 5.811
+MarinaBay, sg-2008, len coordinates, 116, gcircle, 5.096
+Miami, us-2022, len coordinates, 112, gcircle, 5.457
+Monaco, mc-1929, len coordinates, 163, gcircle, 3.337
+Monza, it-1922, len coordinates, 125, gcircle, 5.880
+Portimão, pt-2008, len coordinates, 104, gcircle, 4.662
+RedBullRing, at-1969, len coordinates, 81, gcircle, 4.598
+Shanghai, cn-2004, len coordinates, 143, gcircle, 5.680
+Silverstone, gb-1948, len coordinates, 136, gcircle, 6.049
+SpaFrancorchamps, be-1925, len coordinates, 154, gcircle, 7.049
+Suzuka, jp-1962, len coordinates, 173, gcircle, 6.082
+theAmericas, us-2012, len coordinates, 173, gcircle, 5.836
+YasMarina, ae-2009, len coordinates, 133, gcircle, 5.552
 
 First two points Monaco length.py
 

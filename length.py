@@ -72,12 +72,12 @@ def path_length(coords):
         gdesic += geodesic(coord1, coord2).km
         d = great_circle(coord1, coord2).km
         gcircle += d
-        print(i, lat1, lon1, lat2, lon2, d, gcircle)
+#        print(i, lat1, lon1, lat2, lon2, d, gcircle)
     lat1, lon1 = coords[len(coords) - 1]    
     lat2, lon2 = coords[0]
     d = great_circle(coord1, coord2).km
     gcircle += d
-    print(len(coords) - 1, lat1, lon1, lat2, lon2, d, gcircle)
+#    print(len(coords) - 1, lat1, lon1, lat2, lon2, d, gcircle)
     return [haver, mathl, gdesic, gcircle]
 
 if __name__ == "__main__":
@@ -96,8 +96,8 @@ if __name__ == "__main__":
             count += 1
     print("circuitsdata count", count)    
     for i in range(count):
-        if circuitsdata[i][1] == "mc-1929":
-#        if True:
+#        if circuitsdata[i][1] == "mc-1929":
+        if True:
             coordinates = readjson(circuitsdata[i][1])
 #            coordinates = coordinates[:10]
             try:
