@@ -55,6 +55,7 @@ def Altitude_to_SVG(jsonfile):
             la = elevation
         l = 0
         sl = 0
+        print(jsonfile)
         return [path_data, sl, maxa, mina, maxal, minal, l]
         for i in range(lencoords):
             elevation = totalcoords[i][0]
