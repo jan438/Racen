@@ -45,10 +45,8 @@ def readjson(jsonfile):
             totalcoords = coordinates_to_array(data1, data2)
     return totalcoords
 
-def path_length(coords):
-    """
-    Calculate total path length from a list of (lat, lon) tuples.
-    """
+def path_length(jsonfile, coords):
+    dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'9500px', '200px'))
     gcircle = 0.0
     for i in range(len(coords) - 1):
         lat1, lon1 = coords[i]
@@ -61,6 +59,7 @@ def path_length(coords):
     lat2, lon2 = coords[0]
     d = great_circle(coord1, coord2).km
     gcircle += d
+    dwg.save()
     return [gcircle]
 
 if __name__ == "__main__":
@@ -81,9 +80,10 @@ if __name__ == "__main__":
     for i in range(count):
         if circuitsdata[i][1] == "us-2023":
 #        if True:
-            coordinates = readjson(circuitsdata[i][1])
+            jsonfile = circuitsdata[i][1]
+            coordinates = readjson(jsonfile)
             try:
-                [gcircle] = path_length(coordinates)
+                [gcircle] = path_length(jsonfile, coordinates)
                 print(f'{circuitsdata[i][0]}, {circuitsdata[i][1]}, len coordinates, {len(coordinates)}, gcircle, {gcircle:.3f}')
             except Exception as e:
                 print(f"Error calculating path length: {e}")
