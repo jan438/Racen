@@ -3,8 +3,14 @@ import json
 import os
 import sys
 import csv
+import svgwrite
 from geopy.distance import geodesic
 from geopy.distance import great_circle
+from reportlab.graphics import renderPDF
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import inch, mm
+from reportlab.graphics.shapes import *
+from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 def readjson(jsonfile):
     totalcoords = []
