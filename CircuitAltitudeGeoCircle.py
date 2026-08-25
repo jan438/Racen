@@ -77,6 +77,15 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                 minal = sl
             plon = lon
             plat = lat
+        lon = totalcoords[0][1]
+        lat = totalcoords[0][2]
+        coord1 = (plon, plat)
+        coord2 = (lon, lat)
+        d = great_circle(coord1, coord2).km
+        l += d
+        print(i, plon, plat, lon, lat, d, l)
+        sl += d * lengthscale
+        path_data += f" L {sl} {a}"
         fa = maxa - fa
         path_data += f" L {sl} 100"
         path_data += f" L 0.0 100"
