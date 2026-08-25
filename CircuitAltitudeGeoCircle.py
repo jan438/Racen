@@ -69,7 +69,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                 coord2 = (lon, lat)
                 d = great_circle(coord1, coord2).km
                 l += d
-                print(i, plat, plon, lat, lon, d, l)
+                print(i, plon, plat, lon, lat, d, l)
                 sl += d * lengthscale
                 path_data += f" L {sl} {a}"
             if elevation == maxa:
