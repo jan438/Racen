@@ -15,8 +15,8 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 lengthscale = 80.0
 altitudescale = 0.5
 
-def Altitude_to_SVG(jsonfile, startindex, ac):
-    def coordinates_to_path(dat1, dat2, startindex, ac):
+def Altitude_to_SVG(jsonfile):
+    def coordinates_to_path(dat1, dat2):
         path_data = ""
         total = 0
         totalcoords = []
@@ -92,7 +92,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
         path_data += f" L 0.0 {fa}"
         print(f'{jsonfile}, len coordinates, {lencoords}, gcircle, {l:.3f}')
         return [path_data, sl, maxa, mina, maxal, minal, l]
-#    print("jsonfile", jsonfile, "startindex", startindex, "clockwise", ac)
+#    print("jsonfile", jsonfile)
     file1str = "Data/" + jsonfile + "-1.json"
     file2str = "Data/" + jsonfile + "-2.json"
     if os.path.exists(file1str):
@@ -103,7 +103,7 @@ def Altitude_to_SVG(jsonfile, startindex, ac):
                     data2 = json.load(file2)
             else:
                 data2 = None
-            [path_data, sl, maxa, mina, maxal, minal, l] = coordinates_to_path(data1, data2, startindex, ac)
+            [path_data, sl, maxa, mina, maxal, minal, l] = coordinates_to_path(data1, data2)
             dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'9500px', '200px'))
             grad = dwg.linearGradient(start=(0, 0), end=(0, 1), id='my-gradient')
             grad.add_stop_color(offset=0.0, color='#ffff7f', opacity=1)
@@ -139,6 +139,6 @@ print("circuitsdata", count)
 for i in range(count):
     if circuitsdata[i][1] == "mc-1929":
 #    if True:
-        Altitude_to_SVG(circuitsdata[i][1], int(circuitsdata[i][12]), circuitsdata[i][9])
+        Altitude_to_SVG(circuitsdata[i][1])
 
 key = input("Wait")
