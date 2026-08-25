@@ -55,6 +55,7 @@ def Altitude_to_SVG(jsonfile):
             la = elevation
         l = 0
         sl = 0
+        return [path_data, sl, maxa, mina, maxal, minal, l]
         for i in range(lencoords):
             elevation = totalcoords[i][0]
             lon = totalcoords[i][1]
@@ -104,6 +105,7 @@ def Altitude_to_SVG(jsonfile):
             else:
                 data2 = None
             [path_data, sl, maxa, mina, maxal, minal, l] = coordinates_to_path(data1, data2)
+            return
             dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'9500px', '200px'))
             grad = dwg.linearGradient(start=(0, 0), end=(0, 1), id='my-gradient')
             grad.add_stop_color(offset=0.0, color='#ffff7f', opacity=1)
@@ -137,7 +139,7 @@ with open(file_to_open, 'r') as file:
 print("circuitsdata", count)        
 
 for i in range(count):
-    if circuitsdata[i][1] == "mc-1929":
+    if circuitsdata[i][1] == "us-2023":
 #    if True:
         Altitude_to_SVG(circuitsdata[i][1])
 
