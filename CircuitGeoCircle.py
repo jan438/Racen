@@ -46,45 +46,23 @@ def readjson(jsonfile):
             totalcoords = coordinates_to_array(data1, data2)
     return totalcoords
 
-def haversine(lat1, lon1, lat2, lon2):
-    """
-    Calculate the great-circle distance between two points on Earth.
-    Inputs are in decimal degrees.
-    Returns distance in kilometers.
-    """
-    lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
-    dlat = lat2 - lat1
-    dlon = lon2 - lon1
-    a = math.sin(dlat / 2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2)**2
-    c = 2 * math.asin(math.sqrt(a))
-    r = 6371.0088  # Earth's radius in kilometers
-    return r * c
-
 def path_length(coords):
     """
     Calculate total path length from a list of (lat, lon) tuples.
     """
-    haver = 0.0
-    mathl = 0.0
-    gdesic = 0.0
     gcircle = 0.0
     for i in range(len(coords) - 1):
         lat1, lon1 = coords[i]
         lat2, lon2 = coords[i + 1]
-        haver += haversine(lat1, lon1, lat2, lon2)
-        mathl += math.sqrt(abs(lon2 - lon1)**2 + abs(lat2 - lat1)**2)
         coord1 = (lon1, lat1)
         coord2 = (lon2, lat2)
-        gdesic += geodesic(coord1, coord2).km
         d = great_circle(coord1, coord2).km
         gcircle += d
-#        print(i, lat1, lon1, lat2, lon2, d, gcircle)
     lat1, lon1 = coords[len(coords) - 1]    
     lat2, lon2 = coords[0]
     d = great_circle(coord1, coord2).km
     gcircle += d
-#    print(len(coords) - 1, lat1, lon1, lat2, lon2, d, gcircle)
-    return [haver, mathl, gdesic, gcircle]
+    return [gcircle]
 
 if __name__ == "__main__":
     if sys.platform[0] == 'l':
@@ -105,10 +83,8 @@ if __name__ == "__main__":
 #        if circuitsdata[i][1] == "mc-1929":
         if True:
             coordinates = readjson(circuitsdata[i][1])
-#            coordinates = coordinates[:10]
             try:
-                [haver, l, gdesic, gcircle] = path_length(coordinates)
-#               print(f'{circuitsdata[i][0]}, haver, {haver:.3f}, math, {l:.3f}, gdesic, {gdesic:.3f}, gcircle, {gcircle:.3f}')
+                [gcircle] = path_length(coordinates)
                 print(f'{circuitsdata[i][0]}, {circuitsdata[i][1]}, len coordinates, {len(coordinates)}, gcircle, {gcircle:.3f}')
             except Exception as e:
                 print(f"Error calculating path length: {e}")
