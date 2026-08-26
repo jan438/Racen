@@ -65,8 +65,8 @@ def path_length(jsonfile, coords):
         gcircle += d
         sd = d * lscale
         sl += sd
-        a1 = (maxa - alt1) * ascale
-        a2 = (maxa - alt2) * ascale
+        a1 = round((maxa - alt1) * ascale, 3)
+        a2 = round((maxa - alt2) * ascale, 3)
         if i == 0:
             path_data = f"M 0 {a1}"
             path_data += f" L {sl} {a2}"
@@ -80,7 +80,7 @@ def path_length(jsonfile, coords):
     gcircle += d
     sd = d * lscale
     sl += sd
-    a2 = (maxa - alt2) * ascale
+    a2 = round((maxa - alt2) * ascale, 3)
     path_data += f" L {sl} {a2}"
     dwg.save()
     print(path_data, gcircle)
