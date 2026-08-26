@@ -44,6 +44,8 @@ def readjson(jsonfile):
 def path_length(jsonfile, coords):
     mina = math.inf
     maxa = -math.inf
+    maxal = -1
+    minal = -1
     for i in range(len(coords)):
         lat, lon, alt = coords[i]
         if alt > maxa:
@@ -67,6 +69,10 @@ def path_length(jsonfile, coords):
         sl += sd
         a1 = (maxa - alt1) * ascale
         a2 = (maxa - alt2) * ascale
+        if alt2 == maxa:
+            maxal = sl
+        if alt2 == mina:
+            minal = sl  
         if i == 0:
             path_data = f"M 0 {a1}"
             path_data += f" L {sl} {a2}"
@@ -81,9 +87,17 @@ def path_length(jsonfile, coords):
     sd = d * lscale
     sl += sd
     a2 = (maxa - alt2) * ascale
+    if alt2 == maxa:
+        maxal = sl
+    if alt2 == mina:
+        minal = sl  
     path_data += f" L {sl} {a2}"
     path = dwg.path(d=path_data, fill="none", stroke='green', stroke_width=10)
     dwg.add(path)
+    high = dwg.circle(center=(maxal, 0), r=7, fill='red', stroke='none')
+    dwg.add(high)
+    low = dwg.circle(center=(minal, 0), r=7, fill='blue', stroke='none')
+    dwg.add(low)
     dwg.save()
     print("gcircle:", gcircle)
     return [gcircle]
