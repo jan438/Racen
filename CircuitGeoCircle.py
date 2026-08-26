@@ -1,16 +1,10 @@
-import math
 import json
 import os
 import sys
 import csv
 import svgwrite
-from geopy.distance import geodesic
+import math
 from geopy.distance import great_circle
-from reportlab.graphics import renderPDF
-from reportlab.pdfgen import canvas
-from reportlab.lib.units import inch, mm
-from reportlab.graphics.shapes import *
-from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 def readjson(jsonfile):
     totalcoords = []
@@ -18,18 +12,20 @@ def readjson(jsonfile):
         totalcoords = []
         res1 = dat1["results"]
         for item in res1:
+            alt = item["elevation"]
             location = item["location"]
             lon = location["lng"]
             lat = location["lat"]
-            coord = [lon, lat]
+            coord = [lon, lat, alt]
             totalcoords.append(coord)
         if dat2 is not None:
             res2 = dat2["results"]
             for item in res2:
+                alt = item["elevation"]
                 location = item["location"]
                 lon = location["lng"]
                 lat = location["lat"]
-                coord = [lon, lat]
+                coord = [lon, lat, alt]
                 totalcoords.append(coord)
         return totalcoords
     file1str = "Data/" + jsonfile + "-1.json"
@@ -46,20 +42,48 @@ def readjson(jsonfile):
     return totalcoords
 
 def path_length(jsonfile, coords):
-    dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'9500px', '200px'))
+    mina = math.inf
+    maxa = -math.inf
+    for i in range(len(coords)):
+        lat, lon, alt = coords[i]
+        if alt > maxa:
+            maxa = alt
+        if alt < mina:
+            mina = alt
+    print("max altitude", maxa, "min altitude", mina)
+    lscale = 100
+    ascale = 0.5
+    dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'950px', '20px'))
     gcircle = 0.0
+    sl = 0.0
     for i in range(len(coords) - 1):
-        lat1, lon1 = coords[i]
-        lat2, lon2 = coords[i + 1]
+        lat1, lon1, alt1 = coords[i]
+        lat2, lon2, alt2 = coords[i + 1]
         coord1 = (lon1, lat1)
         coord2 = (lon2, lat2)
         d = great_circle(coord1, coord2).km
         gcircle += d
-    lat1, lon1 = coords[len(coords) - 1]    
-    lat2, lon2 = coords[0]
+        sd = d * lscale
+        sl += sd
+        a1 = round((maxa - alt1) * ascale, 3)
+        a2 = round((maxa - alt2) * ascale, 3)
+        if i == 0:
+            path_data = f"M 0 {a1}"
+            path_data += f" L {sl} {a2}"
+        else:
+            path_data += f" L {sl} {a2}"
+    lat1, lon1, alt1 = coords[len(coords) - 1]    
+    lat2, lon2, alt2 = coords[0]
+    coord1 = (lon1, lat1)
+    coord2 = (lon2, lat2)
     d = great_circle(coord1, coord2).km
     gcircle += d
+    sd = d * lscale
+    sl += sd
+    a2 = round((maxa - alt2) * ascale, 3)
+    path_data += f" L {sl} {a2}"
     dwg.save()
+    print(path_data, gcircle)
     return [gcircle]
 
 if __name__ == "__main__":
