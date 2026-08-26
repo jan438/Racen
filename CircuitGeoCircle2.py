@@ -56,8 +56,6 @@ def path_length(jsonfile, coords):
         sl += sd
         if i == 0:
             path_data = f"M 0 {alt1}"
-            print(path_data)
-            key = input("Wait")
             path_data += f" L {sl} {alt2}"
         else:
             path_data += f" L {sl} {alt2}"
@@ -71,6 +69,7 @@ def path_length(jsonfile, coords):
     sl += sd
     path_data += f" L {sl} {alt2}"
     dwg.save()
+    print(path_data)
     return [gcircle]
 
 if __name__ == "__main__":
