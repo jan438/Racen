@@ -104,8 +104,8 @@ if __name__ == "__main__":
             count += 1
     print("circuitsdata count", count)    
     for i in range(count):
-        if circuitsdata[i][1] == "us-2023":
-#        if True:
+#        if circuitsdata[i][1] == "us-2023":
+        if True:
             jsonfile = circuitsdata[i][1]
             coordinates = readjson(jsonfile)
             try:
