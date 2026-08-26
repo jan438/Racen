@@ -98,7 +98,7 @@ def path_length(jsonfile, coords):
     dwg.add(high)
     low = dwg.circle(center=(minal, 0), r=7, fill='blue', stroke='none')
     dwg.add(low)
-    dwg.add(dwg.text(str(round(gcircle, 1)), insert=(800, 20), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
+    dwg.add(dwg.text(str(round(gcircle * 1000, 0)), insert=(800, 20), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     dwg.save()
     print("gcircle:", gcircle)
     return [gcircle]
