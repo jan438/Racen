@@ -55,9 +55,11 @@ def path_length(jsonfile, coords):
         sd = d * lscale
         sl += sd
         if i == 0:
-            path_data = f"M {0} {alt1}"
+            path_data = f"M 0 {alt1}"
+            print(path_data)
+            key = input("Wait")
             path_data += f" L {sl} {alt2}"
-        else:	
+        else:
             path_data += f" L {sl} {alt2}"
     lat1, lon1, alt1 = coords[len(coords) - 1]    
     lat2, lon2, alt2 = coords[0]
