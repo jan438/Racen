@@ -41,7 +41,7 @@ def readjson(jsonfile):
     return totalcoords
 
 def path_length(jsonfile, coords):
-	lscale = 100
+    lscale = 100
     dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'950px', '20px'))
     gcircle = 0.0
     sl = 0.0
