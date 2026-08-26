@@ -52,6 +52,7 @@ def path_length(jsonfile, coords):
             mina = alt
     print("max altitude", maxa, "min altitude", mina)
     lscale = 100
+    ascale = 0.5
     dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'950px', '20px'))
     gcircle = 0.0
     sl = 0.0
@@ -64,9 +65,11 @@ def path_length(jsonfile, coords):
         gcircle += d
         sd = d * lscale
         sl += sd
+        a1 = (maxa - alt1) * ascale
+        a2 = (maxa - alt2) * ascale
         if i == 0:
-            path_data = f"M 0 {alt1}"
-            path_data += f" L {sl} {alt2}"
+            path_data = f"M 0 {a1}"
+            path_data += f" L {sl} {2}"
         else:
             path_data += f" L {sl} {alt2}"
     lat1, lon1, alt1 = coords[len(coords) - 1]    
@@ -79,7 +82,7 @@ def path_length(jsonfile, coords):
     sl += sd
     path_data += f" L {sl} {alt2}"
     dwg.save()
-    print(path_data)
+    print(path_data, gcircle)
     return [gcircle]
 
 if __name__ == "__main__":
