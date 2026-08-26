@@ -82,6 +82,8 @@ def path_length(jsonfile, coords):
     sl += sd
     a2 = round((maxa - alt2) * ascale, 3)
     path_data += f" L {sl} {a2}"
+    path = dwg.path(d=path_data, fill="none", stroke='green', stroke_width=5)
+    dwg.add(path)
     dwg.save()
     print(path_data, gcircle)
     return [gcircle]
