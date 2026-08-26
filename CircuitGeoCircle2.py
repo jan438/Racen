@@ -3,6 +3,7 @@ import os
 import sys
 import csv
 import svgwrite
+import math
 from geopy.distance import great_circle
 
 def readjson(jsonfile):
@@ -41,6 +42,15 @@ def readjson(jsonfile):
     return totalcoords
 
 def path_length(jsonfile, coords):
+    mina = math.inf
+    maxa = -math.inf
+    for i in range(len(coords)):
+        lat, lon, alt = coords[i]
+        if alt > maxa:
+            maxa = alt
+        if alt < mina:
+            mina = alt
+    print("max altitude", maxa, "min altitude", mina)
     lscale = 100
     dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'950px', '20px'))
     gcircle = 0.0
