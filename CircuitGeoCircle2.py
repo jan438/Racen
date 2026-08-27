@@ -56,7 +56,8 @@ def path_length(jsonfile, coords):
     lscale = 100
     ascale = 0.5
     gcircle = 0.0
-    sl = 0.0
+    sl0 = 20.0
+    sl = sl0
     for i in range(len(coords) - 1):
         lat1, lon1, alt1 = coords[i]
         lat2, lon2, alt2 = coords[i + 1]
@@ -73,7 +74,7 @@ def path_length(jsonfile, coords):
         if alt2 == mina:
             minal = sl  
         if i == 0:
-            path_data = f"M 0 {a1}"
+            path_data = f"M {sl0} {a1}"
             path_data += f" L {sl} {a2}"
         else:
             path_data += f" L {sl} {a2}"
@@ -119,8 +120,8 @@ if __name__ == "__main__":
             count += 1
     print("circuitsdata count", count)    
     for i in range(count):
-#        if circuitsdata[i][1] == "us-2023":
-        if True:
+        if circuitsdata[i][1] == "us-2023":
+#        if True:
             jsonfile = circuitsdata[i][1]
             coordinates = readjson(jsonfile)
             try:
