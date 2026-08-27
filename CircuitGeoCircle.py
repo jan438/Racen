@@ -56,7 +56,7 @@ def path_length(jsonfile, coords):
     lscale = 100
     ascale = 0.5
     gcircle = 0.0
-    sl0 = 100.0
+    sl0 = 150.0
     sl = sl0
     for i in range(len(coords) - 1):
         lat1, lon1, alt1 = coords[i]
