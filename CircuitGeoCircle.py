@@ -95,7 +95,7 @@ def path_length(jsonfile, coords):
     dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'950px', '20px'))
     path = dwg.path(d=path_data, fill="none", stroke='green', stroke_width=10)
     dwg.add(path)
-    points = [(-20, 0), (20, 0), (0, -100)]
+    points = [(-20, 0), (20, 0), (0, -40)]
     dwg.add(dwg.polygon(points, fill='white', stroke='none'))
     dwg.add(dwg.text(str(round(maxa)), insert=(20, 0), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     dwg.add(dwg.text(str(round(mina)), insert=(20, 60), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
