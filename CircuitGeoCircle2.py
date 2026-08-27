@@ -98,8 +98,8 @@ def path_length(jsonfile, coords):
     path_data = f'M6 10V5M6 5L4 7M6 5L8 7M6 14V19M6 19L8 17M6 19L4 17'
     path = dwg.path(d=path_data, fill="none", stroke="white")
     dwg.add(path)
-    dwg.add(dwg.text(str(round(maxa)), insert=(40, 0), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
-    dwg.add(dwg.text("88", insert=(40, 90), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
+    dwg.add(dwg.text(str(round(maxa)), insert=(20, 0), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
+    dwg.add(dwg.text(str(round(mina)), insert=(20, 60), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     high = dwg.circle(center=(maxal, 0), r=7, fill='red', stroke='none')
     dwg.add(high)
     low = dwg.circle(center=(minal, 0), r=7, fill='blue', stroke='none')
