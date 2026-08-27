@@ -56,7 +56,8 @@ def path_length(jsonfile, coords):
     lscale = 100
     ascale = 0.5
     gcircle = 0.0
-    sl = 0.0
+    sl0 = 100.0
+    sl = sl0
     for i in range(len(coords) - 1):
         lat1, lon1, alt1 = coords[i]
         lat2, lon2, alt2 = coords[i + 1]
@@ -73,7 +74,7 @@ def path_length(jsonfile, coords):
         if alt2 == mina:
             minal = sl  
         if i == 0:
-            path_data = f"M 0 {a1}"
+            path_data = f"M {sl0} {a1}"
             path_data += f" L {sl} {a2}"
         else:
             path_data += f" L {sl} {a2}"
@@ -94,6 +95,11 @@ def path_length(jsonfile, coords):
     dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'950px', '20px'))
     path = dwg.path(d=path_data, fill="none", stroke='green', stroke_width=10)
     dwg.add(path)
+    path_data = f'M6 10V5M6 5L4 7M6 5L8 7M6 14V19M6 19L8 17M6 19L4 17'
+    path = dwg.path(d=path_data, fill="none", stroke="white")
+    dwg.add(path)
+    dwg.add(dwg.text(str(round(maxa)), insert=(20, 0), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
+    dwg.add(dwg.text(str(round(mina)), insert=(20, 60), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     high = dwg.circle(center=(maxal, 0), r=7, fill='red', stroke='none')
     dwg.add(high)
     low = dwg.circle(center=(minal, 0), r=7, fill='blue', stroke='none')
@@ -119,8 +125,8 @@ if __name__ == "__main__":
             count += 1
     print("circuitsdata count", count)    
     for i in range(count):
-#        if circuitsdata[i][1] == "us-2023":
-        if True:
+        if circuitsdata[i][1] == "us-2023":
+#        if True:
             jsonfile = circuitsdata[i][1]
             coordinates = readjson(jsonfile)
             try:
