@@ -96,7 +96,7 @@ def path_length(jsonfile, coords):
     path = dwg.path(d=path_data, fill="none", stroke='green', stroke_width=10)
     dwg.add(path)
     points = [(0, 300), (300, 300), (150, 0)]
-    dwg.add(dwg.polygon(points, fill='green', stroke='black', stroke_width=2))
+    dwg.add(dwg.polygon(points, fill='white', stroke='none'))
     dwg.add(dwg.text(str(round(maxa)), insert=(20, 0), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     dwg.add(dwg.text(str(round(mina)), insert=(20, 60), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     high = dwg.circle(center=(maxal, 0), r=7, fill='red', stroke='none')
