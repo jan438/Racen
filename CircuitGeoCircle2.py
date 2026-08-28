@@ -43,7 +43,7 @@ def readjson(jsonfile):
             totalcoords = coordinates_to_array(data1, data2)
     return totalcoords
 
-def path_length(jsonfile, coords):
+def path_to_svg(jsonfile, coords):
     mina = math.inf
     maxa = -math.inf
     maxal = -1
@@ -132,7 +132,7 @@ if __name__ == "__main__":
             jsonfile = circuitsdata[i][1]
             coordinates = readjson(jsonfile)
             try:
-                [gcircle] = path_length(jsonfile, coordinates)
+                [gcircle] = path_to_svg(jsonfile, coordinates)
                 print(f'{circuitsdata[i][0]}, {circuitsdata[i][1]}, len coordinates, {len(coordinates)}, gcircle, {gcircle:.3f}')
             except Exception as e:
                 print(f"Error calculating path length: {e}")
