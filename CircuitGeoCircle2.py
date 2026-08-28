@@ -53,7 +53,12 @@ def max_dif_altitude():
         coordinates = readjson(jsonfile)
         for j in range(len(coordinates)):
             lat, lon, alt = coordinates[j]
+            if alt > maxa:
+                maxa = alt
+            if alt < mina:
+                mina = alt
         print("gcircle", jsonfile, gcircle, "lencoords", len(coordinates))
+    print("maxdifa", maxa - mina)
     return
 
 def path_to_svg(jsonfile, coords):
