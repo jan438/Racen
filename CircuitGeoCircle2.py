@@ -45,9 +45,10 @@ def readjson(jsonfile):
     return totalcoords
     
 def max_dif_altitude():
-    mina = math.inf
-    maxa = -math.inf
+    maxdifa = -1 
     for i in range(len(circuitsdata)):
+        mina = math.inf
+        maxa = -math.inf
         gcircle = 0.0
         jsonfile = circuitsdata[i][1]
         coordinates = readjson(jsonfile)
@@ -57,8 +58,11 @@ def max_dif_altitude():
                 maxa = alt
             if alt < mina:
                 mina = alt
+        difa = maxa - mina
+        if difa > maxdifa:
+            maxdifa = difa
         print("gcircle", jsonfile, gcircle, "lencoords", len(coordinates))
-    print("maxdifa", maxa - mina)
+    print("maxdifa", maxdifa)
     return
 
 def path_to_svg(jsonfile, coords):
