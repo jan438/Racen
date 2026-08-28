@@ -7,6 +7,7 @@ import math
 from geopy.distance import great_circle
 
 circuitsdata = []
+maxdifa = -1
 
 def readjson(jsonfile):
     totalcoords = []
@@ -42,6 +43,11 @@ def readjson(jsonfile):
                 data2 = None
             totalcoords = coordinates_to_array(data1, data2)
     return totalcoords
+    
+def max_dif_altitude():
+    gcircle = 0.0
+    print("gcircle", gcircle)
+    return
 
 def path_to_svg(jsonfile, coords):
     mina = math.inf
@@ -125,7 +131,9 @@ if __name__ == "__main__":
         for row in csvreader:
             circuitsdata.append(row)
             count += 1
-    print("circuitsdata count", count)    
+    print("circuitsdata count", count)
+    max_dif_altitude()
+    print("maxdifa", maxdifa)
     for i in range(count):
         if circuitsdata[i][1] == "us-2023":
 #        if True:
