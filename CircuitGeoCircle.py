@@ -147,7 +147,6 @@ def path_to_svg(jsonfile, coords, maxdifa):
     dwg.add(low)
     dwg.add(dwg.text(str(round(gcircle * 1000)), insert=(sl + 30, 20), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     dwg.save()
-    print("gcircle:", gcircle)
     return [gcircle]
 
 if __name__ == "__main__":
