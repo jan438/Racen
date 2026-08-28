@@ -51,6 +51,8 @@ def max_dif_altitude():
         gcircle = 0.0
         jsonfile = circuitsdata[i][1]
         coordinates = readjson(jsonfile)
+        for j in range(len(coordinates)):
+            lat, lon, alt = coordinates[j]
         print("gcircle", jsonfile, gcircle, "lencoords", len(coordinates))
     return
 
