@@ -145,7 +145,6 @@ if __name__ == "__main__":
             count += 1
     print("circuitsdata count", count)
     max_dif_altitude()
-    print("maxdifa", maxdifa)
     for i in range(len(circuitsdata)):
         if circuitsdata[i][1] == "us-2023":
 #        if True:
