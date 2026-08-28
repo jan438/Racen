@@ -45,7 +45,7 @@ def readjson(jsonfile):
     return totalcoords
     
 def max_dif_altitude():
-    maxdifa = -1 
+    maxdifa = -1
     for i in range(len(circuitsdata)):
         mina = math.inf
         maxa = -math.inf
@@ -63,9 +63,9 @@ def max_dif_altitude():
             maxdifa = difa
         print("gcircle", jsonfile, gcircle, "lencoords", len(coordinates))
     print("maxdifa", maxdifa)
-    return
+    return maxdifa
 
-def path_to_svg(jsonfile, coords):
+def path_to_svg(jsonfile, coords, maxdifa):
     mina = math.inf
     maxa = -math.inf
     maxal = -1
@@ -76,7 +76,8 @@ def path_to_svg(jsonfile, coords):
             maxa = alt
         if alt < mina:
             mina = alt
-    print(jsonfile, "max altitude", maxa, "min altitude", mina)
+    dy = maxdifa - (maxa - mina)
+    print(jsonfile, "max altitude", maxa, "min altitude", mina, "dy", dy, "maxdifa", maxdifa)
     lscale = 100
     ascale = 0.5
     gcircle = 0.0
@@ -91,8 +92,8 @@ def path_to_svg(jsonfile, coords):
         gcircle += d
         sd = d * lscale
         sl += sd
-        a1 = (maxa - alt1) * ascale
-        a2 = (maxa - alt2) * ascale
+        a1 = (maxa - alt1 + dy) * ascale
+        a2 = (maxa - alt2 + dy) * ascale
         if alt2 == maxa:
             maxal = sl
         if alt2 == mina:
@@ -110,7 +111,7 @@ def path_to_svg(jsonfile, coords):
     gcircle += d
     sd = d * lscale
     sl += sd
-    a2 = (maxa - alt2) * ascale
+    a2 = (maxa - alt2 + dy) * ascale
     if alt2 == maxa:
         maxal = sl
     if alt2 == mina:
@@ -148,14 +149,14 @@ if __name__ == "__main__":
             circuitsdata.append(row)
             count += 1
     print("circuitsdata count", count)
-    max_dif_altitude()
+    maxdifa = max_dif_altitude()
     for i in range(len(circuitsdata)):
         if circuitsdata[i][1] == "us-2023":
 #        if True:
             jsonfile = circuitsdata[i][1]
             coordinates = readjson(jsonfile)
             try:
-                [gcircle] = path_to_svg(jsonfile, coordinates)
+                [gcircle] = path_to_svg(jsonfile, coordinates, maxdifa)
                 print(f'{circuitsdata[i][0]}, {circuitsdata[i][1]}, len coordinates, {len(coordinates)}, gcircle, {gcircle:.3f}')
             except Exception as e:
                 print(f"Error calculating path length: {e}")
