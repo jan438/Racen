@@ -72,7 +72,7 @@ def path_to_svg(jsonfile, coords):
             maxa = alt
         if alt < mina:
             mina = alt
-    print("max altitude", maxa, "min altitude", mina)
+    print(jsonfile, "max altitude", maxa, "min altitude", mina)
     lscale = 100
     ascale = 0.5
     gcircle = 0.0
