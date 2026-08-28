@@ -46,7 +46,8 @@ def readjson(jsonfile):
     
 def max_dif_altitude():
     gcircle = 0.0
-    print("gcircle", gcircle)
+    for i in range(len(circuitsdata)):
+        print("gcircle", gcircle)
     return
 
 def path_to_svg(jsonfile, coords):
