@@ -78,7 +78,6 @@ def path_length(coords):
     coord2 = (lon2, lat2)
     d = great_circle(coord1, coord2).km
     gcircle += d
-#    print(len(coords) - 1, lat1, lon1, lat2, lon2, d, gcircle)
     return [haver, mathl, gdesic, gcircle]
 
 if __name__ == "__main__":
