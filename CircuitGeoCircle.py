@@ -61,7 +61,6 @@ def max_dif_altitude():
         difa = maxa - mina
         if difa > maxdifa:
             maxdifa = difa
-        print("gcircle", jsonfile, gcircle, "lencoords", len(coordinates))
     for i in range(len(circuitsdata)):
         gcircle = 0.0
         jsonfile = circuitsdata[i][1]
@@ -79,7 +78,6 @@ def max_dif_altitude():
         coord2 = (lon2, lat2)
         d = great_circle(coord1, coord2).km
         gcircle += d
-        print("gcircle",jsonfile,  gcircle)
     print("maxdifa", maxdifa)
     return maxdifa
 
@@ -95,7 +93,6 @@ def path_to_svg(jsonfile, coords, maxdifa):
         if alt < mina:
             mina = alt
     dy = maxdifa - (maxa - mina)
-    print(jsonfile, "max altitude", maxa, "min altitude", mina, "dy", dy, "maxdifa", maxdifa)
     lscale = 100
     ascale = 0.5
     gcircle = 0.0
