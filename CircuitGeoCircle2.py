@@ -62,6 +62,24 @@ def max_dif_altitude():
         if difa > maxdifa:
             maxdifa = difa
         print("gcircle", jsonfile, gcircle, "lencoords", len(coordinates))
+    for i in range(len(circuitsdata)):
+        gcircle = 0.0
+        jsonfile = circuitsdata[i][1]
+        coords = readjson(jsonfile)
+        for j in range(len(coords) - 1):
+            lat1, lon1, alt1 = coords[j]
+            lat2, lon2, alt2 = coords[j + 1]
+            coord1 = (lon1, lat1)
+            coord2 = (lon2, lat2)
+            d = great_circle(coord1, coord2).km
+            gcircle += d
+        lat1, lon1, alt1 = coords[len(coords) - 1]    
+        lat2, lon2, alt2 = coords[0]
+        coord1 = (lon1, lat1)
+        coord2 = (lon2, lat2)
+        d = great_circle(coord1, coord2).km
+        gcircle += d
+        print("gcircle",jsonfile,  gcircle)
     print("maxdifa", maxdifa)
     return maxdifa
 
@@ -151,8 +169,8 @@ if __name__ == "__main__":
     print("circuitsdata count", count)
     maxdifa = max_dif_altitude()
     for i in range(len(circuitsdata)):
-#        if circuitsdata[i][1] == "us-2023":
-        if True:
+        if circuitsdata[i][1] == "us-2023":
+#        if True:
             jsonfile = circuitsdata[i][1]
             coordinates = readjson(jsonfile)
             try:
