@@ -6,6 +6,8 @@ import svgwrite
 import math
 from geopy.distance import great_circle
 
+circuitsdata = []
+
 def readjson(jsonfile):
     totalcoords = []
     def coordinates_to_array(dat1, dat2):
@@ -116,7 +118,6 @@ if __name__ == "__main__":
     if sys.platform[0] == 'w':
         path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
     os.chdir(path)
-    circuitsdata = []
     file_to_open = "Data/Circuits2027.csv"
     with open(file_to_open, 'r') as file:
         csvreader = csv.reader(file, delimiter = ';')
@@ -126,8 +127,8 @@ if __name__ == "__main__":
             count += 1
     print("circuitsdata count", count)    
     for i in range(count):
-#        if circuitsdata[i][1] == "us-2023":
-        if True:
+        if circuitsdata[i][1] == "us-2023":
+#        if True:
             jsonfile = circuitsdata[i][1]
             coordinates = readjson(jsonfile)
             try:
