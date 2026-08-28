@@ -142,23 +142,19 @@ def path_to_svg(jsonfile, coords, maxdifa):
     maxa = round(maxa)
     if maxa >= 1000:
         altx = 20
-        dwg.add(dwg.text(str(maxa), insert=(altx, 0), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     elif maxa >= 100:
         altx = 40
-        dwg.add(dwg.text(str(maxa), insert=(altx, 0), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     else:
         altx = 60
-        dwg.add(dwg.text(str(maxa), insert=(altx, 0), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
+    dwg.add(dwg.text(str(maxa), insert=(altx, 0), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     mina = round(mina)
     if mina >= 1000:
          altx = 20
-         dwg.add(dwg.text(str(mina), insert=(altx, 60), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     elif mina >= 100:
         altx = 40
-        dwg.add(dwg.text(str(mina), insert=(altx, 60), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     else:
         altx = 60
-        dwg.add(dwg.text(str(mina), insert=(altx, 60), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
+    dwg.add(dwg.text(str(mina), insert=(altx, 60), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     high = dwg.circle(center=(maxal, 0), r=7, fill='red', stroke='none')
     dwg.add(high)
     low = dwg.circle(center=(minal, 0), r=7, fill='blue', stroke='none')
