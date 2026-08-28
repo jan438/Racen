@@ -134,7 +134,7 @@ if __name__ == "__main__":
     print("circuitsdata count", count)
     max_dif_altitude()
     print("maxdifa", maxdifa)
-    for i in range(count):
+    for i in range(len(circuitsdata)):
         if circuitsdata[i][1] == "us-2023":
 #        if True:
             jsonfile = circuitsdata[i][1]
