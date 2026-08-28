@@ -45,6 +45,8 @@ def readjson(jsonfile):
     return totalcoords
     
 def max_dif_altitude():
+    mina = math.inf
+    maxa = -math.inf
     for i in range(len(circuitsdata)):
         gcircle = 0.0
         jsonfile = circuitsdata[i][1]
