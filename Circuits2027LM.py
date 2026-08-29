@@ -232,7 +232,7 @@ for i in range(count):
 #    renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow1_x, circuit_y + arrow1_y)
 #    renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow2_x, circuit_y + arrow2_y)
     circledrawing = scaleSVG("SVG/circle.svg", circlescale)
-    renderPDF.draw(circledrawing, my_canvas, circuit_x + info_x - circledrawing.width / 2, circuit_y + info_y - circledrawing.height / 2)
+ #   renderPDF.draw(circledrawing, my_canvas, circuit_x + info_x - circledrawing.width / 2, circuit_y + info_y - circledrawing.height / 2)
     my_canvas.setFont(cirfont, 7)
     my_canvas.setFillColorRGB(170,255,127)
 #    lengthstr = f"{length}" + "m"
