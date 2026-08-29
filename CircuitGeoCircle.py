@@ -53,6 +53,7 @@ def max_dif_altitude():
         maxa = -math.inf
         gcircle = 0.0
         jsonfile = circuitsdata[i][1]
+        sfindex = int(circuitsdata[i][12])
         coordinates = readjson(jsonfile)
         for j in range(len(coordinates)):
             lat, lon, alt = coordinates[j]
@@ -185,6 +186,7 @@ if __name__ == "__main__":
         if circuitsdata[i][1] == "be-1925":
 #        if True:
             jsonfile = circuitsdata[i][1]
+            sfindex = int(circuitsdata[i][12])
             coordinates = readjson(jsonfile)
             try:
                 [gcircle] = path_to_svg(jsonfile, coordinates, maxdifa)
