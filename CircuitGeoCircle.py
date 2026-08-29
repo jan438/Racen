@@ -42,6 +42,8 @@ def readjson(jsonfile):
             else:
                 data2 = None
             totalcoords = coordinates_to_array(data1, data2)
+#   array splisten to startfinish sec1 index 12
+    totalcoords = totalcoords[12:] + totalcoords[:12]
     return totalcoords
     
 def max_dif_altitude():
