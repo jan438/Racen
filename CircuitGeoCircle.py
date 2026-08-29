@@ -136,7 +136,7 @@ def path_to_svg(jsonfile, coords, maxdifa):
         minal = sl  
     path_data += f" L {sl} {a2}"
     dwg = svgwrite.Drawing('SVG/' + jsonfile + 'A.svg', size=(f'950px', '20px'))
-    path = dwg.path(d=path_data, fill="none", stroke='green', stroke_width=10)
+    path = dwg.path(d=path_data, fill="none", stroke='#00aa00', stroke_width=10)
     dwg.add(path)
     maxa = round(maxa)
     if maxa >= 1000:
