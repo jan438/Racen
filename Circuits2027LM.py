@@ -231,11 +231,13 @@ for i in range(count):
 #    renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + flag_x + flagcorrectionx * circuitscale, circuit_y + flag_y + flagcorrectiony * circuitscale)
 #    renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow1_x, circuit_y + arrow1_y)
 #    renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow2_x, circuit_y + arrow2_y)
-    circledrawing = scaleSVG("SVG/circle.svg", circlescale)
     if info_x > 0:
+        circledrawing = scaleSVG("SVG/circle.svg", circlescale)
         renderPDF.draw(circledrawing, my_canvas, circuit_x + info_x - circledrawing.width / 2, circuit_y + info_y - circledrawing.height / 2)
-    my_canvas.setFont(cirfont, 7)
-    my_canvas.setFillColorRGB(170,255,127)
+        my_canvas.setFont(cirfont, 7)
+        my_canvas.setFillColorRGB(170,255,127)
+        lapsstr = "58"
+        my_canvas.drawString(circuit_x + info_x - pdfmetrics.stringWidth(lapsstr, cirfont, 7) / 2, circuit_y + info_y + 4, lapsstr)
 #    lengthstr = f"{length}" + "m"
 #    my_canvas.drawString(circuit_x + info_x - pdfmetrics.stringWidth(lengthstr, cirfont, 7) / 2, circuit_y + info_y + 4, lengthstr)
 #    rulerdrawing = scaleSVG("SVG/ruler.svg", rulerscale)
