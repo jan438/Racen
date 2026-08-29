@@ -9,7 +9,7 @@ from geopy.distance import great_circle
 circuitsdata = []
 maxdifa = -1
 
-def readjson(jsonfile):
+def readjson(jsonfile, sfindex):
     totalcoords = []
     def coordinates_to_array(dat1, dat2):
         totalcoords = []
@@ -42,8 +42,7 @@ def readjson(jsonfile):
             else:
                 data2 = None
             totalcoords = coordinates_to_array(data1, data2)
-#   array splisten to startfinish sec1 index 12
-    totalcoords = totalcoords[12:] + totalcoords[:12]
+    totalcoords = totalcoords[sfindex:] + totalcoords[:sfindex]
     return totalcoords
     
 def max_dif_altitude():
@@ -54,7 +53,7 @@ def max_dif_altitude():
         gcircle = 0.0
         jsonfile = circuitsdata[i][1]
         sfindex = int(circuitsdata[i][12])
-        coordinates = readjson(jsonfile)
+        coordinates = readjson(jsonfile, sfindex)
         for j in range(len(coordinates)):
             lat, lon, alt = coordinates[j]
             if alt > maxa:
@@ -67,7 +66,8 @@ def max_dif_altitude():
     for i in range(len(circuitsdata)):
         gcircle = 0.0
         jsonfile = circuitsdata[i][1]
-        coords = readjson(jsonfile)
+        sfindex = int(circuitsdata[i][12])
+        coords = readjson(jsonfile, sfindex)
         for j in range(len(coords) - 1):
             lat1, lon1, alt1 = coords[j]
             lat2, lon2, alt2 = coords[j + 1]
@@ -187,7 +187,7 @@ if __name__ == "__main__":
 #        if True:
             jsonfile = circuitsdata[i][1]
             sfindex = int(circuitsdata[i][12])
-            coordinates = readjson(jsonfile)
+            coordinates = readjson(jsonfile, sfindex)
             try:
                 [gcircle] = path_to_svg(jsonfile, coordinates, maxdifa)
                 print(f'{circuitsdata[i][0]}, {circuitsdata[i][1]}, len coordinates, {len(coordinates)}, gcircle, {gcircle:.3f}')
