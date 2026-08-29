@@ -142,7 +142,7 @@ def path_to_svg(jsonfile, coords, maxdifa):
         altx = 40
     else:
         altx = 60
-    dwg.add(dwg.text(str(maxa), insert=(altx, 0), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
+#    dwg.add(dwg.text(str(maxa), insert=(altx, 0), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     mina = round(mina)
     if mina >= 1000:
          altx = 20
@@ -150,17 +150,17 @@ def path_to_svg(jsonfile, coords, maxdifa):
         altx = 40
     else:
         altx = 60
-    dwg.add(dwg.text(str(mina), insert=(altx, 60), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
+#    dwg.add(dwg.text(str(mina), insert=(altx, 60), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     altx -= 30
     points = [(altx - 20, 0), (altx + 20, 0), (altx + 0, -40)]
-    dwg.add(dwg.polygon(points, fill='white', stroke='none'))
+#    dwg.add(dwg.polygon(points, fill='white', stroke='none'))
     points = [(altx - 20, 20), (altx + 20, 20), (altx + 0, 60)]
-    dwg.add(dwg.polygon(points, fill='white', stroke='none'))
-    high = dwg.circle(center=(maxal, 0), r=7, fill='red', stroke='none')
+#    dwg.add(dwg.polygon(points, fill='white', stroke='none'))
+    high = dwg.circle(center=(maxal, 0), r=10, fill='red', stroke='none')
     dwg.add(high)
-    low = dwg.circle(center=(minal, 0), r=7, fill='blue', stroke='none')
+    low = dwg.circle(center=(minal, 0), r=10, fill='blue', stroke='none')
     dwg.add(low)
-    dwg.add(dwg.text(str(round(gcircle * 1000)), insert=(sl + 30, 20), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
+#    dwg.add(dwg.text(str(round(gcircle * 1000)), insert=(sl + 30, 20), stroke='none', fill='#ffff7f', font_size='50px', font_weight="bold", font_family="Arial"))
     dwg.save()
     return [gcircle]
 
@@ -180,8 +180,8 @@ if __name__ == "__main__":
     print("circuitsdata count", count)
     maxdifa = max_dif_altitude()
     for i in range(len(circuitsdata)):
-#        if circuitsdata[i][1] == "us-2023":
-        if True:
+        if circuitsdata[i][1] == "be-1925":
+#        if True:
             jsonfile = circuitsdata[i][1]
             coordinates = readjson(jsonfile)
             try:
