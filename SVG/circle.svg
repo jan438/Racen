@@ -7,5 +7,5 @@
     </radialGradient>
   </defs>
 
-  <circle cx="120" cy="80" r="58" stroke="#ffff00" stroke-width="2" fill="url(#hi)" />
+  <circle cx="120" cy="80" r="30" stroke="#ffffff" stroke-width="2" fill="url(#hi)" />
 </svg>
