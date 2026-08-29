@@ -237,8 +237,6 @@ for i in range(count):
         my_canvas.setFont(cirfont, 7)
         my_canvas.setFillColorRGB(170,255,127)
         lapsstr = circuitsdata[i][2]
-        print(lapsstr)
-        lapsstr = "58"
         my_canvas.drawString(circuit_x + info_x - 2, circuit_y + info_y - 2, lapsstr)
 #    lengthstr = f"{length}" + "m"
 #    my_canvas.drawString(circuit_x + info_x - pdfmetrics.stringWidth(lengthstr, cirfont, 7) / 2, circuit_y + info_y + 4, lengthstr)
