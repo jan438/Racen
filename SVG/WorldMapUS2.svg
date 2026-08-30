@@ -10008,31 +10008,6 @@
          style="fill:#cccccc" />
     </g>
     <g
-       fill="silver"
-       stroke="silver"
-       text-rendering="optimizeLegibility"
-       id="g3175"
-       style="fill:#cccccc">
-      <path
-         d="M759.5625 185.6259 L759.5532 185.6259 L759.5458 185.6194 L759.5625 185.6259 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3177"
-         style="fill:#cccccc" />
-      <path
-         d="M760.7495 186.471 L760.735 186.4661 L760.7129 186.4323 L760.7495 186.471 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3179"
-         style="fill:#cccccc" />
-      <path
-         d="M758.1757 187.0717 L758.1491 187.0331 L758.1807 187.0599 L758.1757 187.0717 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3181"
-         style="fill:#cccccc" />
-    </g>
-    <g
        fill="white"
        stroke="white"
        stroke-linecap="butt"
