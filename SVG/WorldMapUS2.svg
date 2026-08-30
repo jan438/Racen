@@ -91,8 +91,6 @@
     </defs>
     <g
        fill="silver"
-       stroke="silver"
-
        id="g23"
        style="fill:#cccccc">
       <path
@@ -104,10 +102,6 @@
     <g
        fill="white"
        stroke="white"
-
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
-
        id="g27"
        style="fill:#cccccc">
       <path
@@ -119,8 +113,6 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
-
        id="g31"
        style="fill:#cccccc">
       <path
@@ -150,7 +142,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g41"
        style="fill:#cccccc">
@@ -164,8 +156,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g45"
        style="fill:#cccccc">
@@ -178,7 +169,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g49"
        style="fill:#cccccc">
@@ -192,8 +183,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g53"
        style="fill:#cccccc">
@@ -206,7 +196,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g57"
        style="fill:#cccccc">
@@ -221,8 +211,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g61"
        style="fill:#cccccc">
@@ -236,7 +225,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g65"
        style="fill:#cccccc">
@@ -659,8 +648,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g205"
        style="fill:#cccccc">
@@ -673,7 +661,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g209"
        style="fill:#cccccc">
@@ -687,8 +675,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g213"
        style="fill:#cccccc">
@@ -701,7 +688,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g217"
        style="fill:#cccccc">
@@ -1878,7 +1865,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g613"
        style="fill:#cccccc">
@@ -1892,8 +1879,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g617"
        style="fill:#cccccc">
@@ -1906,7 +1892,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g621"
        style="fill:#cccccc">
@@ -1920,8 +1906,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g625"
        style="fill:#cccccc">
@@ -1934,7 +1919,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g629"
        style="fill:#cccccc">
@@ -1948,8 +1933,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g633"
        style="fill:#cccccc">
@@ -1962,7 +1946,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g637"
        style="fill:#cccccc">
@@ -1977,8 +1961,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g641"
        style="fill:#cccccc">
@@ -1992,7 +1975,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g645"
        style="fill:#cccccc">
@@ -2006,8 +1989,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g649"
        style="fill:#cccccc">
@@ -2020,7 +2002,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g653"
        style="fill:#cccccc">
@@ -2035,8 +2017,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g657"
        style="fill:#cccccc">
@@ -2050,7 +2031,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g661"
        style="fill:#cccccc">
@@ -2064,8 +2045,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g665"
        style="fill:#cccccc">
@@ -2078,7 +2058,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g669"
        style="fill:#cccccc">
@@ -2129,8 +2109,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g685"
        style="fill:#cccccc">
@@ -2143,7 +2122,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g689"
        style="fill:#cccccc">
@@ -2344,8 +2323,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g755"
        style="fill:#cccccc">
@@ -2358,7 +2336,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g759"
        style="fill:#cccccc">
@@ -2372,8 +2350,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g763"
        style="fill:#cccccc">
@@ -2386,7 +2363,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g767"
        style="fill:#cccccc">
@@ -2398,7 +2375,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g775"
        style="fill:#cccccc">
@@ -2431,8 +2408,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g785"
        style="fill:#cccccc">
@@ -2445,7 +2421,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g789"
        style="fill:#cccccc">
@@ -2459,8 +2435,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g793"
        style="fill:#cccccc">
@@ -2473,7 +2448,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g797"
        style="fill:#cccccc">
@@ -2487,8 +2462,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g801"
        style="fill:#cccccc">
@@ -2501,7 +2475,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g805"
        style="fill:#cccccc">
@@ -2515,8 +2489,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g809"
        style="fill:#cccccc">
@@ -2529,7 +2502,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g813"
        style="fill:#cccccc">
@@ -2550,8 +2523,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g819"
        style="fill:#cccccc">
@@ -2564,7 +2536,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g823"
        style="fill:#cccccc">
@@ -2578,8 +2550,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g827"
        style="fill:#cccccc">
@@ -2592,7 +2563,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g831"
        style="fill:#cccccc">
@@ -2691,8 +2662,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g863"
        style="fill:#cccccc">
@@ -2705,7 +2675,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g867"
        style="fill:#cccccc">
@@ -2719,8 +2689,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g871"
        style="fill:#cccccc">
@@ -2733,7 +2702,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g875"
        style="fill:#cccccc">
@@ -3010,7 +2979,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g971"
        style="fill:#cccccc">
@@ -3024,8 +2993,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g975"
        style="fill:#cccccc">
@@ -3038,7 +3006,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g979"
        style="fill:#cccccc">
@@ -3167,8 +3135,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1021"
        style="fill:#cccccc">
@@ -3181,7 +3148,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1025"
        style="fill:#cccccc">
@@ -3195,8 +3162,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1029"
        style="fill:#cccccc">
@@ -3209,7 +3175,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1033"
        style="fill:#cccccc">
@@ -3223,8 +3189,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1037"
        style="fill:#cccccc">
@@ -3237,7 +3202,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1041"
        style="fill:#cccccc">
@@ -3252,8 +3217,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1045"
        style="fill:#cccccc">
@@ -3267,7 +3231,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1049"
        style="fill:#cccccc">
@@ -3281,8 +3245,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1053"
        style="fill:#cccccc">
@@ -3295,7 +3258,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1057"
        style="fill:#cccccc">
@@ -3310,8 +3273,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1061"
        style="fill:#cccccc">
@@ -3325,7 +3287,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1065"
        style="fill:#cccccc">
@@ -3339,14 +3301,13 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1069"
        style="fill:#cccccc" />
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1073"
        style="fill:#cccccc">
@@ -4171,8 +4132,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1347"
        style="fill:#cccccc">
@@ -4185,7 +4145,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1351"
        style="fill:#cccccc">
@@ -4200,8 +4160,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1355"
        style="fill:#cccccc">
@@ -4215,7 +4174,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1359"
        style="fill:#cccccc">
@@ -4242,8 +4201,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1367"
        style="fill:#cccccc">
@@ -4256,7 +4214,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1371"
        style="fill:#cccccc">
@@ -4270,8 +4228,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1375"
        style="fill:#cccccc">
@@ -4284,7 +4241,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1379"
        style="fill:#cccccc">
@@ -4321,7 +4278,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1395"
        style="fill:#cccccc">
@@ -4335,8 +4292,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1399"
        style="fill:#cccccc">
@@ -4349,7 +4305,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1403"
        style="fill:#cccccc">
@@ -4363,8 +4319,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1407"
        style="fill:#cccccc">
@@ -4377,7 +4332,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1411"
        style="fill:#cccccc">
@@ -4392,8 +4347,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1415"
        style="fill:#cccccc">
@@ -4407,7 +4361,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1419"
        style="fill:#cccccc">
@@ -4428,8 +4382,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1425"
        style="fill:#cccccc">
@@ -4442,7 +4395,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1429"
        style="fill:#cccccc">
@@ -4463,8 +4416,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1435"
        style="fill:#cccccc">
@@ -4477,7 +4429,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1439"
        style="fill:#cccccc">
@@ -4491,14 +4443,13 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1443"
        style="fill:#cccccc" />
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1447"
        style="fill:#cccccc">
@@ -4591,8 +4542,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1477"
        style="fill:#cccccc">
@@ -4605,7 +4555,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1481"
        style="fill:#cccccc">
@@ -4626,8 +4576,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1487"
        style="fill:#cccccc">
@@ -4640,7 +4589,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1491"
        style="fill:#cccccc">
@@ -4654,8 +4603,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1495"
        style="fill:#cccccc">
@@ -4668,7 +4616,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1499"
        style="fill:#cccccc">
@@ -4689,8 +4637,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1505"
        style="fill:#cccccc">
@@ -4703,7 +4650,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1509"
        style="fill:#cccccc">
@@ -4717,8 +4664,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1513"
        style="fill:#cccccc">
@@ -4731,7 +4677,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1517"
        style="fill:#cccccc">
@@ -4745,8 +4691,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1521"
        style="fill:#cccccc">
@@ -4759,7 +4704,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1525"
        style="fill:#cccccc">
@@ -4930,8 +4875,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1581"
        style="fill:#cccccc">
@@ -4944,7 +4888,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1585"
        style="fill:#cccccc">
@@ -4965,8 +4909,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1591"
        style="fill:#cccccc">
@@ -4979,7 +4922,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1595"
        style="fill:#cccccc">
@@ -4994,8 +4937,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1599"
        style="fill:#cccccc">
@@ -5009,7 +4951,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1603"
        style="fill:#cccccc">
@@ -5023,8 +4965,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1607"
        style="fill:#cccccc">
@@ -5037,7 +4978,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1611"
        style="fill:#cccccc">
@@ -5052,8 +4993,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1615"
        style="fill:#cccccc">
@@ -5067,7 +5007,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1619"
        style="fill:#cccccc">
@@ -5088,8 +5028,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1625"
        style="fill:#cccccc">
@@ -5102,7 +5041,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1629"
        style="fill:#cccccc">
@@ -5116,8 +5055,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1633"
        style="fill:#cccccc">
@@ -5130,7 +5068,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1637"
        style="fill:#cccccc">
@@ -5144,8 +5082,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1641"
        style="fill:#cccccc">
@@ -5158,7 +5095,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1645"
        style="fill:#cccccc">
@@ -5172,8 +5109,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1649"
        style="fill:#cccccc">
@@ -5186,7 +5122,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1653"
        style="fill:#cccccc">
@@ -5207,8 +5143,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1659"
        style="fill:#cccccc">
@@ -5221,7 +5156,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1663"
        style="fill:#cccccc">
@@ -5235,8 +5170,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1667"
        style="fill:#cccccc">
@@ -5249,7 +5183,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1671"
        style="fill:#cccccc">
@@ -5263,8 +5197,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1675"
        style="fill:#cccccc">
@@ -5277,7 +5210,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1679"
        style="fill:#cccccc">
@@ -5291,8 +5224,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1683"
        style="fill:#cccccc">
@@ -5305,7 +5237,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1687"
        style="fill:#cccccc">
@@ -5398,8 +5330,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1717"
        style="fill:#cccccc">
@@ -5412,7 +5343,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1721"
        style="fill:#cccccc">
@@ -5529,8 +5460,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1759"
        style="fill:#cccccc">
@@ -5543,7 +5473,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1763"
        style="fill:#cccccc">
@@ -5576,8 +5506,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1773"
        style="fill:#cccccc">
@@ -5590,7 +5519,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1777"
        style="fill:#cccccc">
@@ -5604,8 +5533,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1781"
        style="fill:#cccccc">
@@ -5618,7 +5546,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1785"
        style="fill:#cccccc">
@@ -5632,8 +5560,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1789"
        style="fill:#cccccc">
@@ -5646,7 +5573,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1793"
        style="fill:#cccccc">
@@ -5661,8 +5588,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1797"
        style="fill:#cccccc">
@@ -5676,7 +5602,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1801"
        style="fill:#cccccc">
@@ -5688,7 +5614,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1809"
        style="fill:#cccccc">
@@ -5721,8 +5647,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1819"
        style="fill:#cccccc">
@@ -5735,7 +5660,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g1823"
        style="fill:#cccccc">
@@ -5768,8 +5693,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g1833"
        style="fill:#cccccc">
@@ -5782,7 +5706,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2097"
        style="fill:#cccccc">
@@ -5796,8 +5720,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2101"
        style="fill:#cccccc">
@@ -5810,7 +5733,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2105"
        style="fill:#cccccc">
@@ -5835,7 +5758,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2117"
        style="fill:#cccccc">
@@ -5849,8 +5772,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2121"
        style="fill:#cccccc">
@@ -5863,7 +5785,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2125"
        style="fill:#cccccc">
@@ -5877,8 +5799,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2129"
        style="fill:#cccccc">
@@ -5891,7 +5812,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2133"
        style="fill:#cccccc">
@@ -5905,8 +5826,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2137"
        style="fill:#cccccc">
@@ -5919,7 +5839,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2141"
        style="fill:#cccccc">
@@ -5931,7 +5851,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2149"
        style="fill:#cccccc">
@@ -5952,8 +5872,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2155"
        style="fill:#cccccc">
@@ -5966,7 +5885,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2159"
        style="fill:#cccccc">
@@ -5980,8 +5899,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2163"
        style="fill:#cccccc">
@@ -5994,7 +5912,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2167"
        style="fill:#cccccc">
@@ -6009,8 +5927,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2171"
        style="fill:#cccccc">
@@ -6024,7 +5941,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2175"
        style="fill:#cccccc">
@@ -6036,7 +5953,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2183"
        style="fill:#cccccc">
@@ -6057,8 +5974,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2189"
        style="fill:#cccccc">
@@ -6071,7 +5987,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2193"
        style="fill:#cccccc">
@@ -6085,8 +6001,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2197"
        style="fill:#cccccc">
@@ -6099,7 +6014,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2201"
        style="fill:#cccccc">
@@ -6126,8 +6041,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2209"
        style="fill:#cccccc">
@@ -6140,7 +6054,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2213"
        style="fill:#cccccc">
@@ -6189,7 +6103,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2233"
        style="fill:#cccccc">
@@ -6203,8 +6117,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2237"
        style="fill:#cccccc">
@@ -6217,7 +6130,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2241"
        style="fill:#cccccc">
@@ -6242,7 +6155,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2253"
        style="fill:#cccccc">
@@ -6287,8 +6200,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2267"
        style="fill:#cccccc">
@@ -6301,7 +6213,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2271"
        style="fill:#cccccc">
@@ -6346,8 +6258,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2285"
        style="stroke-width:0.1:none;fill:#ffaa00">
@@ -6360,7 +6271,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2289"
        style="fill:#cccccc">
@@ -6374,8 +6285,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2293"
        style="fill:#cccccc">
@@ -6388,7 +6298,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2297"
        style="fill:#cccccc">
@@ -6415,8 +6325,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2305"
        style="fill:#cccccc">
@@ -6429,7 +6338,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2309"
        style="fill:#cccccc">
@@ -6480,8 +6389,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2325"
        style="fill:#cccccc">
@@ -6494,7 +6402,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2329"
        style="fill:#cccccc">
@@ -6515,8 +6423,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2335"
        style="fill:#cccccc">
@@ -6529,7 +6436,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2339"
        style="fill:#cccccc">
@@ -6543,8 +6450,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2343"
        style="fill:#cccccc">
@@ -6557,7 +6463,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2347"
        style="fill:#cccccc">
@@ -6571,8 +6477,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2351"
        style="fill:#cccccc">
@@ -6585,7 +6490,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2355"
        style="fill:#cccccc">
@@ -6599,8 +6504,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2359"
        style="fill:#cccccc">
@@ -6613,7 +6517,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2363"
        style="fill:#cccccc">
@@ -6627,8 +6531,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2367"
        style="fill:#cccccc">
@@ -6641,7 +6544,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2371"
        style="fill:#cccccc">
@@ -6655,8 +6558,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2375"
        style="fill:#cccccc">
@@ -6669,7 +6571,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2379"
        style="fill:#cccccc">
@@ -6683,8 +6585,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2383"
        style="fill:#cccccc">
@@ -6697,7 +6598,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2387"
        style="fill:#cccccc">
@@ -6709,7 +6610,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2395"
        style="fill:#cccccc">
@@ -6723,8 +6624,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2399"
        style="fill:#cccccc">
@@ -6737,7 +6637,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2403"
        style="fill:#cccccc">
@@ -6752,8 +6652,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2407"
        style="fill:#cccccc">
@@ -6767,7 +6666,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2411"
        style="fill:#cccccc">
@@ -6781,8 +6680,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2415"
        style="fill:#cccccc">
@@ -6795,7 +6693,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2419"
        style="fill:#cccccc">
@@ -6816,8 +6714,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2425"
        style="fill:#cccccc">
@@ -6830,7 +6727,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2429"
        style="fill:#cccccc">
@@ -6851,8 +6748,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2435"
        style="fill:#cccccc">
@@ -6865,7 +6761,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2439"
        style="fill:#cccccc">
@@ -6904,8 +6800,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2451"
        style="fill:#cccccc">
@@ -6918,7 +6813,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2455"
        style="fill:#cccccc">
@@ -6930,7 +6825,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2463"
        style="fill:#cccccc">
@@ -6944,8 +6839,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2467"
        style="fill:#cccccc">
@@ -6958,7 +6852,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2471"
        style="fill:#cccccc">
@@ -6973,8 +6867,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2475"
        style="fill:#cccccc">
@@ -6988,7 +6881,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2479"
        style="fill:#cccccc">
@@ -7015,8 +6908,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2487"
        style="fill:#cccccc">
@@ -7029,7 +6921,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2491"
        style="fill:#cccccc">
@@ -7041,7 +6933,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2499"
        style="fill:#cccccc">
@@ -7055,8 +6947,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2503"
        style="fill:#cccccc">
@@ -7069,7 +6960,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2507"
        style="fill:#cccccc">
@@ -7083,8 +6974,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2511"
        style="fill:#cccccc">
@@ -7097,7 +6987,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2515"
        style="fill:#cccccc">
@@ -7112,8 +7002,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2519"
        style="fill:#cccccc">
@@ -7127,7 +7016,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2523"
        style="fill:#cccccc">
@@ -7148,8 +7037,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2529"
        style="fill:#cccccc">
@@ -7162,7 +7050,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2533"
        style="fill:#cccccc">
@@ -7201,8 +7089,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2545"
        style="fill:#cccccc">
@@ -7215,7 +7102,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2549"
        style="fill:#cccccc">
@@ -7236,8 +7123,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2555"
        style="fill:#cccccc">
@@ -7250,7 +7136,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2559"
        style="fill:#cccccc">
@@ -7264,8 +7150,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2563"
        style="fill:#cccccc">
@@ -7278,7 +7163,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2567"
        style="fill:#cccccc">
@@ -7299,8 +7184,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2573"
        style="fill:#cccccc">
@@ -7313,7 +7197,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2577"
        style="fill:#cccccc">
@@ -7325,7 +7209,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2585"
        style="fill:#cccccc">
@@ -7346,8 +7230,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2591"
        style="fill:#cccccc">
@@ -7360,7 +7243,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2595"
        style="fill:#cccccc">
@@ -7399,8 +7282,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2607"
        style="fill:#cccccc">
@@ -7413,7 +7295,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2611"
        style="fill:#cccccc">
@@ -7452,8 +7334,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2623"
        style="fill:#cccccc">
@@ -7466,7 +7347,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2627"
        style="fill:#cccccc">
@@ -7625,8 +7506,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2679"
        style="fill:#cccccc">
@@ -7639,7 +7519,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2683"
        style="fill:#cccccc">
@@ -7660,8 +7540,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2689"
        style="fill:#cccccc">
@@ -7676,7 +7555,7 @@
 
        id="g2693"
        style="fill:#cccccc"
-       stroke="silver"
+
        fill="silver">
       <path
          d="M205.5909 112.5373 L198.4688 112.537 L196.3417 112.5381 L195.4318 112.5365 L194.3194 112.5365 L193.486 112.5365 L192.4146 112.5365 L191.4611 112.5365 L192.4442 110.609 L192.9693 109.6701 L193.4986 108.732 L194.2202 107.4651 L194.9958 106.562 L194.7305 105.7659 L195.6685 104.8497 L196.7966 103.8961 L197.7129 103.0027 L198.5408 102.0296 L198.0899 101.5007 L198.4226 100.4964 L198.7703 99.5427 L199.717 97.951 L200.6595 96.3865 L202.9217 92.7291 L205.1991 92.7014 L203.547 95.3771 L203.5778 96.1975 L203.5105 97.0093 L203.8418 97.6479 L204.1403 98.472 L204.4661 99.3331 L205.1745 99.3454 L204.519 100.1565 L203.7907 101.1047 L202.9816 102.475 L203.8966 102.4608 L204.6752 102.383 L204.389 103.1955 L204.5838 104.0265 L204.9184 104.8234 L204.7279 105.6089 L205.5407 105.4726 L206.426 105.3829 L207.1953 105.3591 L208.1365 105.3293 L209.1084 104.8716 L209.0226 106.1052 L208.5617 106.9491 L208.0784 107.841 L207.0473 109.7632 L206.3748 111.0311 L205.7359 112.2545 L205.5909 112.5373 ZZ"
@@ -7688,8 +7567,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2697"
        style="fill:#cccccc">
@@ -7702,7 +7580,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2701"
        style="fill:#cccccc">
@@ -7751,7 +7629,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2721"
        style="fill:#cccccc">
@@ -7765,8 +7643,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2725"
        style="fill:#cccccc">
@@ -7779,7 +7656,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2729"
        style="fill:#cccccc">
@@ -7804,7 +7681,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2741"
        style="fill:#cccccc">
@@ -7819,8 +7696,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2745"
        style="fill:#cccccc">
@@ -7834,7 +7710,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2749"
        style="fill:#cccccc">
@@ -7849,8 +7725,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2753"
        style="fill:#cccccc">
@@ -7864,7 +7739,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2757"
        style="fill:#cccccc">
@@ -7883,7 +7758,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2767"
        style="fill:#cccccc">
@@ -7904,8 +7779,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2773"
        style="fill:#cccccc">
@@ -7918,7 +7792,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2777"
        style="fill:#cccccc">
@@ -7943,7 +7817,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2789"
        style="fill:#cccccc">
@@ -7970,8 +7844,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2797"
        style="fill:#cccccc">
@@ -7984,7 +7857,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2801"
        style="fill:#cccccc">
@@ -7998,8 +7871,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2805"
        style="fill:#cccccc">
@@ -8012,7 +7884,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2809"
        style="fill:#cccccc">
@@ -8026,8 +7898,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2813"
        style="stroke-width:0.1:none;fill:#ffaa00">
@@ -8040,7 +7911,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2817"
        style="fill:#cccccc">
@@ -8054,8 +7925,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2821"
        style="fill:#cccccc">
@@ -8068,7 +7938,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2825"
        style="fill:#cccccc">
@@ -8082,8 +7952,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2829"
        style="fill:#cccccc">
@@ -8096,7 +7965,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2833"
        style="fill:#cccccc">
@@ -8111,8 +7980,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2837"
        style="fill:#cccccc">
@@ -8126,7 +7994,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2841"
        style="fill:#cccccc">
@@ -8138,7 +8006,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2849"
        style="fill:#cccccc">
@@ -8152,8 +8020,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2853"
        style="fill:#cccccc">
@@ -8166,7 +8033,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2857"
        style="fill:#cccccc">
@@ -8180,8 +8047,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2861"
        style="fill:#cccccc">
@@ -8194,7 +8060,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2865"
        style="fill:#cccccc">
@@ -8208,8 +8074,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2869"
        style="fill:#cccccc">
@@ -8222,7 +8087,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2873"
        style="fill:#cccccc">
@@ -8243,8 +8108,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2879"
        style="fill:#cccccc">
@@ -8257,7 +8121,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2883"
        style="fill:#cccccc">
@@ -8278,8 +8142,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2889"
        style="fill:#cccccc">
@@ -8292,7 +8155,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2893"
        style="fill:#cccccc">
@@ -8306,8 +8169,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2897"
        style="fill:#cccccc">
@@ -8320,7 +8182,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2901"
        style="fill:#cccccc">
@@ -8334,8 +8196,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2905"
        style="fill:#cccccc">
@@ -8348,7 +8209,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2909"
        style="fill:#cccccc">
@@ -8362,8 +8223,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2913"
        style="fill:#cccccc">
@@ -8376,7 +8236,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2917"
        style="fill:#cccccc">
@@ -8390,8 +8250,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2921"
        style="fill:#cccccc">
@@ -8404,7 +8263,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2925"
        style="fill:#cccccc">
@@ -8418,8 +8277,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2929"
        style="fill:#cccccc">
@@ -8432,7 +8290,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2933"
        style="fill:#cccccc">
@@ -8489,8 +8347,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2951"
        style="fill:#cccccc">
@@ -8503,7 +8360,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2955"
        style="fill:#cccccc">
@@ -8524,8 +8381,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2961"
        style="fill:#cccccc">
@@ -8538,7 +8394,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2965"
        style="fill:#cccccc">
@@ -8563,7 +8419,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2977"
        style="fill:#cccccc">
@@ -8584,8 +8440,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2983"
        style="fill:#cccccc">
@@ -8598,7 +8453,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2987"
        style="fill:#cccccc">
@@ -8612,8 +8467,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2991"
        style="fill:#cccccc">
@@ -8626,7 +8480,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g2995"
        style="fill:#cccccc">
@@ -8641,8 +8495,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g2999"
        style="fill:#cccccc">
@@ -8656,7 +8509,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3003"
        style="fill:#cccccc">
@@ -8701,8 +8554,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3017"
        style="fill:#cccccc">
@@ -8715,7 +8567,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3021"
        style="fill:#cccccc">
@@ -8730,8 +8582,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3025"
        style="fill:#cccccc">
@@ -8745,7 +8596,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3029"
        style="fill:#cccccc">
@@ -8759,8 +8610,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3033"
        style="fill:#cccccc">
@@ -8773,7 +8623,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3037"
        style="fill:#cccccc">
@@ -8787,8 +8637,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3041"
        style="fill:#cccccc">
@@ -8801,7 +8650,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3045"
        style="fill:#cccccc">
@@ -8822,8 +8671,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3051"
        style="fill:#cccccc">
@@ -8836,7 +8684,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3055"
        style="fill:#cccccc">
@@ -8850,8 +8698,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3059"
        style="fill:#cccccc">
@@ -8864,7 +8711,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3063"
        style="fill:#cccccc">
@@ -8878,8 +8725,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3067"
        style="fill:#cccccc">
@@ -8892,7 +8738,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3071"
        style="fill:#cccccc">
@@ -8961,8 +8807,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3093"
        style="fill:#cccccc">
@@ -8975,7 +8820,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3097"
        style="fill:#cccccc">
@@ -8989,8 +8834,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3101"
        style="fill:#cccccc">
@@ -9003,7 +8847,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3105"
        style="fill:#cccccc">
@@ -9017,8 +8861,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3109"
        style="fill:#cccccc">
@@ -9031,7 +8874,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3113"
        style="fill:#cccccc">
@@ -9052,8 +8895,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3119"
        style="fill:#cccccc">
@@ -9066,7 +8908,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3123"
        style="fill:#cccccc">
@@ -9105,8 +8947,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3135"
        style="fill:#cccccc">
@@ -9119,7 +8960,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3139"
        style="fill:#cccccc">
@@ -9131,7 +8972,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3147"
        style="fill:#cccccc">
@@ -9206,8 +9047,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3171"
        style="fill:#cccccc">
@@ -9222,8 +9062,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3183"
        style="fill:#cccccc">
@@ -9236,7 +9075,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3187"
        style="fill:#cccccc">
@@ -9257,8 +9096,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3193"
        style="fill:#cccccc">
@@ -9271,7 +9109,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3197"
        style="fill:#cccccc">
@@ -9283,7 +9121,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3205"
        style="fill:#cccccc">
@@ -9296,7 +9134,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3213"
        style="fill:#cccccc">
@@ -9383,8 +9221,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3297"
        style="stroke-width:0.1:none;fill:#ffaa00">
@@ -9397,7 +9234,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3301"
        style="fill:#cccccc">
@@ -9411,8 +9248,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3305"
        style="fill:#cccccc">
@@ -9425,7 +9261,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3309"
        style="fill:#cccccc">
@@ -9437,7 +9273,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3317"
        style="fill:#cccccc">
@@ -9451,8 +9287,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3321"
        style="fill:#cccccc">
@@ -9465,7 +9300,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3325"
        style="fill:#cccccc">
@@ -9514,7 +9349,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3345"
        style="fill:#cccccc">
@@ -9528,8 +9363,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3349"
        style="fill:#cccccc">
@@ -9542,7 +9376,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3353"
        style="fill:#cccccc">
@@ -9556,8 +9390,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3357"
        style="fill:#cccccc">
@@ -9570,7 +9403,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3361"
        style="fill:#cccccc">
@@ -9584,8 +9417,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3365"
        style="fill:#cccccc">
@@ -9598,7 +9430,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3369"
        style="fill:#cccccc">
@@ -9617,7 +9449,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3379"
        style="fill:#cccccc">
@@ -9629,7 +9461,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3387"
        style="fill:#cccccc">
@@ -9644,8 +9476,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3391"
        style="fill:#cccccc">
@@ -9659,7 +9490,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3395"
        style="fill:#cccccc">
@@ -9674,8 +9505,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3399"
        style="fill:#cccccc">
@@ -9689,7 +9519,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3403"
        style="fill:#cccccc">
@@ -9703,8 +9533,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3407"
        style="fill:#cccccc">
@@ -9717,7 +9546,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3411"
        style="fill:#cccccc">
@@ -10320,14 +10149,13 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3611"
        style="fill:#cccccc" />
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3615"
        style="fill:#cccccc">
@@ -10348,8 +10176,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3621"
        style="fill:#cccccc">
@@ -10362,7 +10189,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3625"
        style="fill:#cccccc">
@@ -10401,8 +10228,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3637"
        style="fill:#cccccc">
@@ -10415,7 +10241,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3641"
        style="fill:#cccccc">
@@ -10476,7 +10302,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3665"
        style="fill:#cccccc">
@@ -10491,8 +10317,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3669"
        style="fill:#cccccc">
@@ -10506,7 +10331,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3673"
        style="fill:#cccccc">
@@ -10557,8 +10382,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3689"
        style="fill:#cccccc">
@@ -10571,7 +10395,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3693"
        style="fill:#cccccc">
@@ -10604,8 +10428,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3703"
        style="fill:#cccccc">
@@ -10618,7 +10441,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3707"
        style="fill:#cccccc">
@@ -10632,8 +10455,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3711"
        style="fill:#cccccc">
@@ -10646,7 +10468,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3715"
        style="fill:#cccccc">
@@ -10691,8 +10513,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3729"
        style="fill:#cccccc">
@@ -10705,7 +10526,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3733"
        style="fill:#cccccc">
@@ -10720,8 +10541,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3737"
        style="fill:#cccccc">
@@ -10735,7 +10555,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3741"
        style="fill:#cccccc">
@@ -10768,8 +10588,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3751"
        style="fill:#cccccc">
@@ -10782,7 +10601,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3755"
        style="fill:#cccccc">
@@ -10796,8 +10615,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3759"
        style="fill:#cccccc">
@@ -10810,7 +10628,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3763"
        style="fill:#cccccc">
@@ -10824,8 +10642,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g3767"
        style="fill:#cccccc">
@@ -10838,7 +10655,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3771"
        style="fill:#cccccc">
@@ -10869,7 +10686,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g3785"
        style="fill:#cccccc">
@@ -11736,8 +11553,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4075"
        style="fill:#cccccc">
@@ -11750,7 +11566,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4079"
        style="fill:#cccccc">
@@ -11775,7 +11591,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4091"
        style="fill:#cccccc">
@@ -11844,8 +11660,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4113"
        style="fill:#cccccc">
@@ -11858,7 +11673,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4117"
        style="fill:#cccccc">
@@ -11879,8 +11694,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4123"
        style="fill:#cccccc">
@@ -11893,7 +11707,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4127"
        style="fill:#cccccc">
@@ -11998,8 +11812,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4161"
        style="fill:#cccccc">
@@ -12012,7 +11825,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4165"
        style="fill:#cccccc">
@@ -12027,8 +11840,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4169"
        style="fill:#cccccc">
@@ -12042,7 +11854,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4173"
        style="fill:#cccccc">
@@ -12063,8 +11875,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4179"
        style="fill:#cccccc">
@@ -12077,7 +11888,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4183"
        style="fill:#cccccc">
@@ -12128,8 +11939,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4199"
        style="fill:#cccccc">
@@ -12142,7 +11952,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4203"
        style="fill:#cccccc">
@@ -12156,8 +11966,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4207"
        style="fill:#cccccc">
@@ -12170,7 +11979,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4211"
        style="fill:#cccccc">
@@ -12189,7 +11998,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4221"
        style="fill:#cccccc">
@@ -12203,8 +12012,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4225"
        style="fill:#cccccc">
@@ -12217,7 +12025,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4229"
        style="fill:#cccccc">
@@ -12229,7 +12037,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4237"
        style="fill:#cccccc">
@@ -12244,8 +12052,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4241"
        style="fill:#cccccc">
@@ -12259,7 +12066,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4245"
        style="fill:#cccccc">
@@ -12286,8 +12093,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4253"
        style="fill:#cccccc">
@@ -12300,7 +12106,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4257"
        style="fill:#cccccc">
@@ -12314,8 +12120,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4261"
        style="fill:#cccccc">
@@ -12328,7 +12133,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4265"
        style="fill:#cccccc">
@@ -12343,8 +12148,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4269"
        style="fill:#cccccc">
@@ -12358,7 +12162,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4273"
        style="fill:#cccccc">
@@ -12385,8 +12189,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4313"
        style="fill:#cccccc">
@@ -12399,7 +12202,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4317"
        style="fill:#cccccc">
@@ -12420,8 +12223,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4323"
        style="fill:#cccccc">
@@ -12434,7 +12236,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4343"
        style="fill:#cccccc">
@@ -12519,7 +12321,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4375"
        style="fill:#cccccc">
@@ -12533,8 +12335,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4379"
        style="fill:#cccccc">
@@ -12547,7 +12348,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4383"
        style="fill:#cccccc">
@@ -12586,8 +12387,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4395"
        style="fill:#cccccc">
@@ -12600,7 +12400,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4399"
        style="fill:#cccccc">
@@ -12627,8 +12427,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4407"
        style="fill:#cccccc">
@@ -12641,7 +12440,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4411"
        style="fill:#cccccc">
@@ -12822,7 +12621,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4475"
        style="fill:#cccccc">
@@ -12879,8 +12678,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4493"
        style="fill:#cccccc">
@@ -12893,7 +12691,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4497"
        style="fill:#cccccc">
@@ -12907,8 +12705,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4501"
        style="fill:#cccccc">
@@ -12921,7 +12718,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4505"
        style="fill:#cccccc">
@@ -12935,8 +12732,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4509"
        style="fill:#cccccc">
@@ -12949,7 +12745,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4513"
        style="fill:#cccccc">
@@ -12963,8 +12759,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4517"
        style="fill:#cccccc">
@@ -12977,7 +12772,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4521"
        style="fill:#cccccc">
@@ -12991,8 +12786,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4525"
        style="fill:#cccccc">
@@ -13005,7 +12799,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4529"
        style="fill:#cccccc">
@@ -13026,8 +12820,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4535"
        style="fill:#cccccc">
@@ -13040,7 +12833,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4539"
        style="fill:#cccccc">
@@ -13061,8 +12854,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4545"
        style="fill:#cccccc">
@@ -13075,7 +12867,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4549"
        style="fill:#cccccc">
@@ -13089,8 +12881,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4553"
        style="fill:#cccccc">
@@ -13103,7 +12894,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4557"
        style="fill:#cccccc">
@@ -13196,8 +12987,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4587"
        style="fill:#cccccc">
@@ -13210,7 +13000,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4591"
        style="fill:#cccccc">
@@ -13224,8 +13014,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4595"
        style="fill:#cccccc">
@@ -13238,7 +13027,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4599"
        style="fill:#cccccc">
@@ -13259,8 +13048,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4605"
        style="fill:#cccccc">
@@ -13273,7 +13061,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4609"
        style="fill:#cccccc">
@@ -13324,8 +13112,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4625"
        style="fill:#cccccc">
@@ -13338,7 +13125,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4629"
        style="fill:#cccccc">
@@ -13352,8 +13139,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4633"
        style="fill:#cccccc">
@@ -13366,7 +13152,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4637"
        style="fill:#cccccc">
@@ -13387,8 +13173,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4643"
        style="fill:#cccccc">
@@ -13401,7 +13186,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4647"
        style="fill:#cccccc">
@@ -13416,8 +13201,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4651"
        style="fill:#cccccc">
@@ -13431,7 +13215,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4655"
        style="fill:#cccccc">
@@ -13445,8 +13229,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4659"
        style="fill:#cccccc">
@@ -13459,7 +13242,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4663"
        style="fill:#cccccc">
@@ -13564,8 +13347,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4697"
        style="fill:#cccccc">
@@ -13578,7 +13360,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4701"
        style="fill:#cccccc">
@@ -13605,8 +13387,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4709"
        style="fill:#cccccc">
@@ -13619,7 +13400,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4713"
        style="fill:#cccccc">
@@ -13633,8 +13414,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4717"
        style="fill:#cccccc">
@@ -13647,7 +13427,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4721"
        style="fill:#cccccc">
@@ -13776,8 +13556,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4763"
        style="fill:#cccccc">
@@ -13790,7 +13569,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4767"
        style="fill:#cccccc">
@@ -13829,8 +13608,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4779"
        style="stroke-width:0.1:none;fill:#ffaa00">
@@ -13843,7 +13621,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4783"
        style="fill:#cccccc">
@@ -13864,8 +13642,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4789"
        style="fill:#cccccc">
@@ -13878,7 +13655,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4793"
        style="fill:#cccccc">
@@ -13890,7 +13667,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4801"
        style="fill:#cccccc">
@@ -13902,7 +13679,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4809"
        style="fill:#cccccc">
@@ -13916,8 +13693,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4813"
        style="fill:#cccccc">
@@ -13930,7 +13706,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4817"
        style="fill:#cccccc">
@@ -13945,8 +13721,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4821"
        style="fill:#cccccc">
@@ -13960,7 +13735,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4825"
        style="fill:#cccccc">
@@ -13974,8 +13749,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4829"
        style="fill:#cccccc">
@@ -13988,7 +13762,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4833"
        style="fill:#cccccc">
@@ -14195,8 +13969,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4905"
        style="fill:#cccccc">
@@ -14209,7 +13982,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4909"
        style="fill:#cccccc">
@@ -14236,8 +14009,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4917"
        style="fill:#cccccc">
@@ -14250,7 +14022,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4921"
        style="fill:#cccccc">
@@ -14269,7 +14041,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4931"
        style="fill:#cccccc">
@@ -14348,7 +14120,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4961"
        style="fill:#cccccc">
@@ -14362,8 +14134,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g4965"
        style="fill:#cccccc">
@@ -14376,7 +14147,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g4969"
        style="fill:#cccccc">
@@ -15123,8 +14894,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5217"
        style="fill:#cccccc">
@@ -15137,7 +14907,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5221"
        style="fill:#cccccc">
@@ -15194,8 +14964,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5239"
        style="fill:#cccccc">
@@ -15208,7 +14977,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5243"
        style="fill:#cccccc">
@@ -15295,8 +15064,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5271"
        style="fill:#cccccc">
@@ -15309,7 +15077,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5275"
        style="fill:#cccccc">
@@ -15336,8 +15104,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5283"
        style="fill:#cccccc">
@@ -15350,7 +15117,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5287"
        style="fill:#cccccc">
@@ -15369,7 +15136,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5297"
        style="fill:#cccccc">
@@ -15396,8 +15163,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5305"
        style="fill:#cccccc">
@@ -15410,7 +15176,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5309"
        style="fill:#cccccc">
@@ -15449,8 +15215,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5321"
        style="fill:#cccccc">
@@ -15463,7 +15228,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5325"
        style="fill:#cccccc">
@@ -15477,8 +15242,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5329"
        style="fill:#cccccc">
@@ -15491,7 +15255,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5333"
        style="fill:#cccccc">
@@ -15524,8 +15288,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5343"
        style="fill:#cccccc">
@@ -15538,7 +15301,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5347"
        style="fill:#cccccc">
@@ -15589,8 +15352,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5363"
        style="fill:#cccccc">
@@ -15603,7 +15365,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5367"
        style="fill:#cccccc">
@@ -15617,8 +15379,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5371"
        style="fill:#cccccc">
@@ -15631,7 +15392,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5375"
        style="fill:#cccccc">
@@ -15645,8 +15406,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5379"
        style="fill:#cccccc">
@@ -15659,7 +15419,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5383"
        style="fill:#cccccc">
@@ -15680,8 +15440,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5389"
        style="fill:#cccccc">
@@ -15694,7 +15453,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5393"
        style="fill:#cccccc">
@@ -15708,8 +15467,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5397"
        style="fill:#cccccc">
@@ -15722,7 +15480,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5401"
        style="fill:#cccccc">
@@ -15734,7 +15492,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5409"
        style="fill:#cccccc">
@@ -15785,8 +15543,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5425"
        style="fill:#cccccc">
@@ -15799,7 +15556,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5429"
        style="fill:#cccccc">
@@ -15813,8 +15570,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5433"
        style="fill:#cccccc">
@@ -15827,7 +15583,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5437"
        style="fill:#cccccc">
@@ -15841,8 +15597,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5441"
        style="fill:#cccccc">
@@ -15855,7 +15610,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5445"
        style="fill:#cccccc">
@@ -15996,8 +15751,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5491"
        style="fill:#cccccc">
@@ -16010,7 +15764,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5495"
        style="fill:#cccccc">
@@ -16037,8 +15791,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5503"
        style="fill:#cccccc">
@@ -16051,7 +15804,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5507"
        style="fill:#cccccc">
@@ -16065,8 +15818,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5511"
        style="fill:#cccccc">
@@ -16079,7 +15831,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5515"
        style="fill:#cccccc">
@@ -16093,8 +15845,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5519"
        style="fill:#cccccc">
@@ -16107,7 +15858,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5523"
        style="fill:#cccccc">
@@ -16122,8 +15873,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5527"
        style="fill:#cccccc">
@@ -16137,7 +15887,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5531"
        style="fill:#cccccc">
@@ -16158,8 +15908,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5537"
        style="fill:#cccccc">
@@ -16172,7 +15921,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5541"
        style="fill:#cccccc">
@@ -16186,8 +15935,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5545"
        style="fill:#cccccc">
@@ -16200,7 +15948,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5549"
        style="fill:#cccccc">
@@ -16214,8 +15962,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5553"
        style="fill:#cccccc">
@@ -16228,7 +15975,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5557"
        style="fill:#cccccc">
@@ -16242,8 +15989,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g5561"
        style="fill:#cccccc">
@@ -16256,7 +16002,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g5565"
        style="fill:#cccccc">
@@ -17969,8 +17715,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g6135"
        style="fill:#cccccc">
@@ -17988,7 +17733,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g6139"
        style="fill:#cccccc">
@@ -18009,8 +17754,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g6145"
        style="fill:#cccccc">
@@ -18023,7 +17767,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g6149"
        style="fill:#cccccc">
@@ -18037,8 +17781,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g6153"
        style="fill:#cccccc">
@@ -18051,7 +17794,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g6157"
        style="fill:#cccccc">
@@ -18066,8 +17809,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g6161"
        style="fill:#cccccc">
@@ -18081,7 +17823,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g6165"
        style="fill:#cccccc">
@@ -18096,8 +17838,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g6169"
        style="fill:#cccccc">
@@ -18111,7 +17852,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g6173"
        style="fill:#cccccc">
@@ -18132,8 +17873,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g6179"
        style="fill:#cccccc">
@@ -18146,7 +17886,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g6183"
        style="fill:#cccccc">
@@ -18160,8 +17900,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g6187"
        style="fill:#cccccc">
@@ -18174,7 +17913,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g6191"
        style="fill:#cccccc">
@@ -18188,8 +17927,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g6195"
        style="fill:#cccccc">
@@ -18202,7 +17940,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g6199"
        style="fill:#cccccc">
@@ -18216,8 +17954,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g6203"
        style="fill:#cccccc">
@@ -18230,7 +17967,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g6207"
        style="fill:#cccccc">
@@ -18257,8 +17994,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g6215"
        style="fill:#cccccc">
@@ -18271,7 +18007,7 @@
     </g>
     <g
        fill="silver"
-       stroke="silver"
+
 
        id="g6219"
        style="fill:#cccccc">
@@ -18286,8 +18022,7 @@
        fill="white"
        stroke="white"
 
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
+
 
        id="g6223"
        style="fill:#cccccc">
