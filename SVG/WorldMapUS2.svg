@@ -12384,102 +12384,6 @@
          stroke="none"
          id="path4279"
          style="fill:#cccccc" />
-      <path
-         d="M660.0731 217.6058 L660.0689 217.6418 L660.0621 217.5992 L660.0731 217.6058 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4281"
-         style="fill:#cccccc" />
-      <path
-         d="M661.2982 218.2801 L661.2975 218.3121 L661.269 218.3633 L661.2982 218.2801 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4283"
-         style="fill:#cccccc" />
-      <path
-         d="M661.9465 219.2102 L661.9672 219.2369 L661.9567 219.3004 L661.9465 219.2102 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4285"
-         style="fill:#cccccc" />
-      <path
-         d="M660.3002 220.7343 L660.2724 220.7845 L660.2903 220.7214 L660.3002 220.7343 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4287"
-         style="fill:#cccccc" />
-      <path
-         d="M660.2827 222.0667 L660.2955 222.0946 L660.2818 222.1221 L660.2827 222.0667 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4289"
-         style="fill:#cccccc" />
-      <path
-         d="M661.7139 222.8243 L661.7356 222.8294 L661.7346 222.8632 L661.7139 222.8243 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4291"
-         style="fill:#cccccc" />
-      <path
-         d="M662.0014 225.1669 L662.0099 225.1612 L662.02 225.1596 L662.0014 225.1669 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4293"
-         style="fill:#cccccc" />
-      <path
-         d="M660.4397 225.9366 L660.452 225.935 L660.4579 225.9423 L660.4397 225.9366 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4295"
-         style="fill:#cccccc" />
-      <path
-         d="M660.1678 226.3478 L660.1738 226.3788 L660.15 226.3553 L660.1678 226.3478 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4297"
-         style="fill:#cccccc" />
-      <path
-         d="M662.0364 226.3697 L662.015 226.4008 L662.0344 226.3582 L662.0364 226.3697 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4299"
-         style="fill:#cccccc" />
-      <path
-         d="M661.4638 227.8979 L661.4885 227.9392 L661.5027 227.9841 L661.4638 227.8979 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4301"
-         style="fill:#cccccc" />
-      <path
-         d="M662.0089 229.3687 L662.0117 229.4059 L662.0032 229.4687 L662.0089 229.3687 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4303"
-         style="fill:#cccccc" />
-      <path
-         d="M661.9502 233.87 L661.9412 233.8913 L661.9354 233.8623 L661.9502 233.87 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4305"
-         style="fill:#cccccc" />
-      <path
-         d="M660.8599 234.3354 L660.8748 234.3322 L660.8893 234.3759 L660.8599 234.3354 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4307"
-         style="fill:#cccccc" />
-      <path
-         d="M661.7465 235.8264 L661.7653 235.8343 L661.7745 235.8888 L661.7465 235.8264 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4309"
-         style="fill:#cccccc" />
-      <path
-         d="M660.8652 236.7565 L660.8917 236.8067 L660.9064 236.8698 L660.8652 236.7565 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4311"
-         style="fill:#cccccc" />
     </g>
     <g
        fill="white"
@@ -12530,36 +12434,6 @@
          fill="none"
          opacity="0.5"
          id="path4325"
-         style="fill:#cccccc" />
-    </g>
-    <g
-       fill="silver"
-       stroke="silver"
-       text-rendering="optimizeLegibility"
-       id="g4335"
-       style="fill:#cccccc">
-      <path
-         d="M463.9282 91.5004 L463.9317 91.2572 L464.313 91.2572 L463.9282 91.5004 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4337"
-         style="fill:#cccccc" />
-    </g>
-    <g
-       fill="white"
-       stroke="white"
-       stroke-linecap="butt"
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
-       text-rendering="optimizeLegibility"
-       id="g4339"
-       style="fill:#cccccc">
-      <path
-         d="M463.9282 91.5004 L463.9317 91.2572 L464.313 91.2572 L463.9282 91.5004 Z"
-         fill="none"
-         fill-rule="evenodd"
-         opacity="0.5"
-         id="path4341"
          style="fill:#cccccc" />
     </g>
     <g
