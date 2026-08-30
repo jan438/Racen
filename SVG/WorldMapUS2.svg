@@ -10084,23 +10084,6 @@
          style="fill:#cccccc" />
     </g>
     <g
-       fill="white"
-       stroke="white"
-       stroke-linecap="butt"
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
-       text-rendering="optimizeLegibility"
-       id="g3209"
-       style="fill:#cccccc">
-      <path
-         d="M52.1089 236.1599 L52.1084 236.0907 L52.2016 236.0907 L52.1089 236.1599 Z"
-         fill="none"
-         fill-rule="evenodd"
-         opacity="0.5"
-         id="path3211"
-         style="fill:#cccccc" />
-    </g>
-    <g
        fill="silver"
        stroke="silver"
        text-rendering="optimizeLegibility"
@@ -10111,72 +10094,6 @@
          fill-rule="evenodd"
          stroke="none"
          id="path3215"
-         style="fill:#cccccc" />
-      <path
-         d="M338.2165 228.8296 L338.1854 228.8215 L338.0907 228.7357 L338.2165 228.8296 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3217"
-         style="fill:#cccccc" />
-      <path
-         d="M338.4182 229.5217 L338.3689 229.4929 L338.3435 229.4602 L338.4182 229.5217 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3219"
-         style="fill:#cccccc" />
-      <path
-         d="M339.3884 232.2908 L339.2581 232.2471 L339.2587 232.141 L339.3884 232.2908 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3221"
-         style="fill:#cccccc" />
-      <path
-         d="M338.8098 232.8315 L338.7601 232.8177 L338.7432 232.7837 L338.8098 232.8315 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3223"
-         style="fill:#cccccc" />
-      <path
-         d="M338.7819 234.0036 L339.2495 233.1043 L338.8254 233.9777 L338.7819 234.0036 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3225"
-         style="fill:#cccccc" />
-      <path
-         d="M338.2929 234.5014 L338.2912 233.5883 L338.0946 234.4431 L338.2929 234.5014 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3227"
-         style="fill:#cccccc" />
-      <path
-         d="M339.4626 235.2137 L338.5719 234.9535 L339.3582 234.1319 L340.1635 234.0181 L339.7955 234.8527 L339.4626 235.2137 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3229"
-         style="fill:#cccccc" />
-      <path
-         d="M338.1353 235.0963 L338.0925 235.0939 L338.0352 235.0684 L338.1353 235.0963 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3231"
-         style="fill:#cccccc" />
-      <path
-         d="M340.2418 235.4557 L341.0517 235.0826 L339.895 235.3096 L340.2418 235.4557 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3233"
-         style="fill:#cccccc" />
-      <path
-         d="M337.0727 235 L337.0937 234.9725 L337.1742 234.8988 L337.0727 235 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3235"
-         style="fill:#cccccc" />
-      <path
-         d="M337.2054 235.8248 L337.5902 235.0215 L337.1212 235.7755 L337.2054 235.8248 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path3237"
          style="fill:#cccccc" />
       <path
          d="M342.3965 239.3354 L341.0775 239.8 L340.2047 240.0634 L339.3279 239.9785 L338.4955 240.3492 L337.6219 239.5928 L337.4168 238.3568 L337.4031 236.9338 L337.6375 236.0466 L338.5255 235.2938 L339.9388 235.5877 L340.9894 235.6374 L342.0427 235.4501 L343.0207 235.6557 L343.4643 236.506 L343.3036 237.4866 L342.7055 238.5907 L342.3965 239.3354 Z"
