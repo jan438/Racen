@@ -12536,36 +12536,6 @@
        fill="silver"
        stroke="silver"
        text-rendering="optimizeLegibility"
-       id="g4327"
-       style="fill:#cccccc">
-      <path
-         d="M892.0925 319.7485 L892.1942 319.5141 L892.4152 319.5141 L892.0925 319.7485 Z"
-         fill-rule="evenodd"
-         stroke="none"
-         id="path4329"
-         style="fill:#cccccc" />
-    </g>
-    <g
-       fill="white"
-       stroke="white"
-       stroke-linecap="butt"
-       stroke-miterlimit="1"
-       stroke-width="0.5001"
-       text-rendering="optimizeLegibility"
-       id="g4331"
-       style="fill:#cccccc">
-      <path
-         d="M892.0925 319.7485 L892.1942 319.5141 L892.4152 319.5141 L892.0925 319.7485 Z"
-         fill="none"
-         fill-rule="evenodd"
-         opacity="0.5"
-         id="path4333"
-         style="fill:#cccccc" />
-    </g>
-    <g
-       fill="silver"
-       stroke="silver"
-       text-rendering="optimizeLegibility"
        id="g4335"
        style="fill:#cccccc">
       <path
