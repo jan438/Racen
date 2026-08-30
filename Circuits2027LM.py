@@ -191,7 +191,7 @@ my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
 my_canvas.setFillColorRGB(255,170,0)
 bottom_margin = 20
 left_margin = 10
-renderPDF.draw(scaleSVG("SVG/WorldMapUS.svg", worldmapscale), my_canvas, worldmap_x, worldmap_y)
+renderPDF.draw(scaleSVG("SVG/WorldMapUS2.svg", worldmapscale), my_canvas, worldmap_x, worldmap_y)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.setFillColorRGB(255, 255, 255)
