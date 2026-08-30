@@ -58,8 +58,8 @@
      id="namedview6457"
      showgrid="false"
      inkscape:zoom="2.9800845"
-     inkscape:cx="287.74352"
-     inkscape:cy="416.43114"
+     inkscape:cx="540.75648"
+     inkscape:cy="174.82726"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -2445,7 +2445,7 @@
          fill="none"
          opacity="0.5"
          id="path787"
-         style="fill:#cccccc" />
+         style="fill:#ffaa00;fill-opacity:1" />
     </g>
     <g
        fill="silver"
@@ -4605,7 +4605,7 @@
          fill="none"
          opacity="0.5"
          id="path1479"
-         style="fill:#cccccc" />
+         style="fill:#ffaa00;fill-opacity:1" />
     </g>
     <g
        fill="silver"
@@ -4731,7 +4731,7 @@
          fill="none"
          opacity="0.5"
          id="path1515"
-         style="fill:#cccccc" />
+         style="fill:#ffaa00;fill-opacity:1" />
     </g>
     <g
        fill="silver"
@@ -5994,7 +5994,7 @@
          fill="none"
          opacity="0.5"
          id="path2165"
-         style="fill:#cccccc" />
+         style="fill:#ffaa00;fill-opacity:1" />
     </g>
     <g
        fill="silver"
@@ -10428,7 +10428,7 @@
          fill-rule="evenodd"
          stroke="none"
          id="path3643"
-         style="fill:#cccccc" />
+         style="fill:#ffaa00;fill-opacity:1" />
       <path
          d="M394.6399 120.1332 L394.5822 120.1332 L394.5363 120.1265 L394.6399 120.1332 Z"
          fill-rule="evenodd"
@@ -15578,7 +15578,7 @@
          fill="none"
          opacity="0.5"
          id="path5307"
-         style="fill:#cccccc" />
+         style="fill:#ffaa00;fill-opacity:1" />
     </g>
     <g
        fill="silver"
