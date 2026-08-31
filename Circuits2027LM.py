@@ -37,7 +37,7 @@ rulerscale = 0.034
 clockwisescale = 0.010
 worldmapscale = 0.6
 worldmap_x = 118
-worldmap_y = 275
+worldmap_y = 285
 cirfont = "LiberationSerif"
   
 circuitcolors = ["#88255F", "#DB4035", "#FF9933", "#FAD000", "#AFB83B", "#7ECC49", "#E7E84F", "#299438", "#A8A202", "#158FAD", "#14AAF5", "#CD0027", "#4073FF", "#D38895", "#884DFF", "#AF38EB", "#EB96EB", "#E05194", "#FF8D85", "#808080", "#FFE001", "#CCAC93", "#9A6324", "#80FF80"]
@@ -250,7 +250,7 @@ for i in range(count):
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
     my_canvas.setStrokeColor(HexColor("#000000"))
-    my_canvas.circle(worldlocx, worldlocy, 1.75, stroke = 0, fill = 1)
+#    my_canvas.circle(worldlocx, worldlocy, 1.75, stroke = 0, fill = 1)
     my_canvas.circle(circuit_x + (colwidth - namewidth) / 2 - 5, circuit_y + 3, 2.8, stroke = 0, fill = 1)
     if circuitsdata[i][9] == "a":
         renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-left.svg", clockwisescale), my_canvas, circuit_x +  (colwidth - namewidth) / 2 + namewidth + 2, circuit_y)
