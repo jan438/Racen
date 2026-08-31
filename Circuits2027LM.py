@@ -258,9 +258,9 @@ for i in range(count):
         renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-right.svg", clockwisescale), my_canvas, circuit_x + (colwidth - namewidth) / 2 + namewidth + 2, circuit_y)
     legend_x = worldmap_x + 30 + legendcol * 52
     legend_y = worldmap_y - 40 + legendrow * 10
-    my_canvas.circle(legend_x, legend_y, 2.8, stroke = 0, fill = 1)
+#    my_canvas.circle(legend_x, legend_y, 2.8, stroke = 0, fill = 1)
     my_canvas.setFillColor(HexColor("#FFFFFF"))
-    my_canvas.drawString(legend_x + 5, legend_y - 2, circuitsdata[i][25])
+#    my_canvas.drawString(legend_x + 5, legend_y - 2, circuitsdata[i][25])
     my_canvas.setLineWidth(1)
     my_canvas.setStrokeColor(HexColor("#ffffff"))
 #    my_canvas.rect(circuit_x, circuit_y, colwidth, rowheight, stroke=1, fill=0)
