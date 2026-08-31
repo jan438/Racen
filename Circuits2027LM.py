@@ -250,7 +250,8 @@ for i in range(count):
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
     my_canvas.setStrokeColor(HexColor("#000000"))
-    if worldlocx > 0:
+    if worldlocx > worldmap_x:
+        print("niet nul", i, worldlocx)
         my_canvas.circle(worldlocx, worldlocy, 20, stroke = 0, fill = 1)
     my_canvas.circle(circuit_x + (colwidth - namewidth) / 2 - 5, circuit_y + 3, 2.8, stroke = 0, fill = 1)
     if circuitsdata[i][9] == "a":
