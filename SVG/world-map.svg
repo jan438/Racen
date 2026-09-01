@@ -18,8 +18,8 @@
 </desc>
   <defs>
     <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
-      <stop offset="0%" stop-color="#e8e874" />
-      <stop offset="100%" stop-color="#ffff7f" />
+      <stop offset="0%" stop-color="#679C86" />
+      <stop offset="100%" stop-color="#9EC4B0" />
     </linearGradient>
   </defs>
 <g>
