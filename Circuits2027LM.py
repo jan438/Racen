@@ -56,7 +56,7 @@ def scaleSVG(svgfile, scaling_factor):
 def scalecolorSVG(svgfile, scaling_factor, color):
     print(color)
     svg_root = load_svg_file(svgfile)
-    print(dir(svg_root))
+    print(svg_root.getroottree)
     svgRenderer = SvgRenderer(svgfile)
     drawing = svgRenderer.render(svg_root)
     scaling_x = scaling_factor
