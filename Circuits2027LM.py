@@ -211,9 +211,6 @@ for i in range(count):
     arrow2_y = sect3_offset_y * circuitscale
     info_x = float(circuitsdata[i][10])
     info_y = float(circuitsdata[i][11])
-#    renderPDF.draw(scaleSVG("SVG/racingflag.svg", flagscale), my_canvas, circuit_x + flag_x + flagcorrectionx * circuitscale, circuit_y + flag_y + flagcorrectiony * circuitscale)
-#    renderPDF.draw(scaleSVG("SVG/a" + sect2_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow1_x, circuit_y + arrow1_y)
-#    renderPDF.draw(scaleSVG("SVG/a" + sect3_angle + ".svg", arrowscale), my_canvas, circuit_x + arrow2_x, circuit_y + arrow2_y)
     if info_x > 0:
         circledrawing = scaleSVG("SVG/circle.svg", circlescale)
         renderPDF.draw(circledrawing, my_canvas, circuit_x + info_x - circledrawing.width / 2, circuit_y + info_y - circledrawing.height / 2)
@@ -221,14 +218,6 @@ for i in range(count):
         my_canvas.setFillColorRGB(170,255,127)
         lapsstr = circuitsdata[i][2]
         my_canvas.drawString(circuit_x + info_x - 4, circuit_y + info_y - 2, lapsstr)
-#    lengthstr = f"{length}" + "m"
-#    my_canvas.drawString(circuit_x + info_x - pdfmetrics.stringWidth(lengthstr, cirfont, 7) / 2, circuit_y + info_y + 4, lengthstr)
-#    rulerdrawing = scaleSVG("SVG/ruler.svg", rulerscale)
-#    renderPDF.draw(rulerdrawing, my_canvas, circuit_x + info_x - rulerdrawing.width / 2, circuit_y + info_y - rulerdrawing.height / 2)
-#    altitudestr = f"{altitude}" + "m"
-#    my_canvas.drawString(circuit_x + info_x - pdfmetrics.stringWidth(altitudestr, cirfont, 7) / 2, circuit_y + info_y - 6, altitudestr)
-#    altitudedrawing = scaleSVG("SVG/altitude.svg", arrowscale)
-#    renderPDF.draw(altitudedrawing, my_canvas, circuit_x + info_x - altitudedrawing.width / 2, circuit_y + info_y - altitudedrawing.height / 2 - 8)
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
@@ -242,9 +231,7 @@ for i in range(count):
         renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-right.svg", clockwisescale), my_canvas, circuit_x + (colwidth - namewidth) / 2 + namewidth + 2, circuit_y)
     legend_x = worldmap_x + 30 + legendcol * 52
     legend_y = worldmap_y - 40 + legendrow * 10
-#    my_canvas.circle(legend_x, legend_y, 2.8, stroke = 0, fill = 1)
     my_canvas.setFillColor(HexColor("#FFFFFF"))
-#    my_canvas.drawString(legend_x + 5, legend_y - 2, circuitsdata[i][25])
     my_canvas.setLineWidth(1)
     my_canvas.setStrokeColor(HexColor("#ffffff"))
 #    my_canvas.rect(circuit_x, circuit_y, colwidth, rowheight, stroke=1, fill=0)
