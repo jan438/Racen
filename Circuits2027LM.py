@@ -17,6 +17,7 @@ from reportlab.lib.units import inch, mm
 from reportlab.lib.colors import HexColor
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
+import xml.etree.ElementTree as ET
 
 circuitscale = 0.23
 altitudescale = 0.15
@@ -54,9 +55,11 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
 def scalecolorSVG(svgfile, scaling_factor, color):
+    tree = ET.parse(svgfile)
+    root = tree.getroot()
+    attrib = root.attrib
     print(color)
     svg_root = load_svg_file(svgfile)
-    print(dir(svg_root.getroottree))
     svgRenderer = SvgRenderer(svgfile)
     drawing = svgRenderer.render(svg_root)
     scaling_x = scaling_factor
