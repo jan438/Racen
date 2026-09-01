@@ -53,6 +53,17 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.height = drawing.height * scaling_y
     drawing.scale(scaling_x, scaling_y)
     return drawing
+def scalecolorSVG(svgfile, scaling_factor, color):
+    print(color)
+    svg_root = load_svg_file(svgfile)
+    svgRenderer = SvgRenderer(svgfile)
+    drawing = svgRenderer.render(svg_root)
+    scaling_x = scaling_factor
+    scaling_y = scaling_factor
+    drawing.width = drawing.minWidth() * scaling_x
+    drawing.height = drawing.height * scaling_y
+    drawing.scale(scaling_x, scaling_y)
+    return drawing
 def dms_to_decimal(degrees, minutes, seconds, direction):
     decimal = degrees + (minutes / 60) + (seconds / 3600)
     if direction in ['S', 'W']:
@@ -223,7 +234,7 @@ for i in range(count):
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
     my_canvas.setStrokeColor(HexColor("#000000"))
     if worldlocx > worldmap_x:
-        renderPDF.draw(scaleSVG("SVG/location.svg", locationscale), my_canvas, worldlocx, worldlocy)
+        renderPDF.draw(scalecolorSVG("SVG/location.svg", locationscale, '#ff0000'), my_canvas, worldlocx, worldlocy)
     my_canvas.circle(circuit_x + (colwidth - namewidth) / 2 - 5, circuit_y + 3, 2.8, stroke = 0, fill = 1)
     if circuitsdata[i][9] == "a":
         renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-left.svg", clockwisescale), my_canvas, circuit_x +  (colwidth - namewidth) / 2 + namewidth + 2, circuit_y)
