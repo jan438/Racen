@@ -21,6 +21,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 circuitscale = 0.23
 altitudescale = 0.15
 flagscale = 0.015
+locationscale = 0.015
 flagcorrectionx = -30.0
 flagcorrectiony = -30.0
 A4_height = A4[1]
@@ -251,7 +252,8 @@ for i in range(count):
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
     my_canvas.setStrokeColor(HexColor("#000000"))
     if worldlocx > worldmap_x:
-        my_canvas.circle(worldlocx, worldlocy, 2.8, stroke = 0, fill = 1)
+        renderPDF.draw(scaleSVG("SVG/location.svg", locationscale), my_canvas, worldlocx, worldlocy)
+        #my_canvas.circle(worldlocx, worldlocy, 2.8, stroke = 0, fill = 1)
     my_canvas.circle(circuit_x + (colwidth - namewidth) / 2 - 5, circuit_y + 3, 2.8, stroke = 0, fill = 1)
     if circuitsdata[i][9] == "a":
         renderPDF.draw(scaleSVG("SVG/arrow-shape-turn-left.svg", clockwisescale), my_canvas, circuit_x +  (colwidth - namewidth) / 2 + namewidth + 2, circuit_y)
