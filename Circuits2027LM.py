@@ -22,7 +22,7 @@ import xml.etree.ElementTree as ET
 circuitscale = 0.23
 altitudescale = 0.15
 flagscale = 0.015
-locationscale = 0.015
+locationscale = 0.012
 flagcorrectionx = -30.0
 flagcorrectiony = -30.0
 A4_height = A4[1]
@@ -55,11 +55,8 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
 def scalecolorSVG(svgfile, scaling_factor, color):
-    print(color)
     svg_root = load_svg_file(svgfile)
-    fillvalue = svg_root.get("fill")
     svg_root.set("fill", color)
-    print(fillvalue)
     svgRenderer = SvgRenderer(svgfile)
     drawing = svgRenderer.render(svg_root)
     scaling_x = scaling_factor
