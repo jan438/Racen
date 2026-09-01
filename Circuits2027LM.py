@@ -57,6 +57,8 @@ def scaleSVG(svgfile, scaling_factor):
 def scalecolorSVG(svgfile, scaling_factor, color):
     print(color)
     svg_root = load_svg_file(svgfile)
+    fill = svg_root.get("fill")
+    print("fill attr")
     attrib = svg_root.attrib
     for name, value in attrib.items():
         if name == "fill":
