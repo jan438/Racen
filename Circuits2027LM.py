@@ -59,7 +59,7 @@ def scalecolorSVG(svgfile, scaling_factor, color):
     root = tree.getroot()
     attrib = root.attrib
     for name, value in attrib.items():
-        if name == "viewBox":
+        if name == "fill":
             print('{0}="{1}"'.format(name, value))
     print(color)
     svg_root = load_svg_file(svgfile)
