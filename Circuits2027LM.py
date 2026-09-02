@@ -238,9 +238,9 @@ for i in range(count):
         renderPDF.draw(scalecolorSVG("SVG/location.svg", locationscale, circuitcolors[i]), my_canvas, worldlocx, worldlocy)
 #    my_canvas.circle(circuit_x + (colwidth - namewidth) / 2 - 5, circuit_y + 3, 2.8, stroke = 0, fill = 1)
     if circuitsdata[i][9] == "a":
-        renderPDF.draw(scalecolorSVG("SVG/turnleft.svg", clockwisescale, circuitcolors[i]), my_canvas, circuit_x +  (colwidth - namewidth) / 2 + namewidth + 2, circuit_y)
+        renderPDF.draw(scalecolorSVG("SVG/turnleft.svg", clockwisescale, circuitcolors[i]), my_canvas, circuit_x +  (colwidth - namewidth) / 2 - 5, circuit_y)
     else:
-        renderPDF.draw(scalecolorSVG("SVG/turnright.svg", clockwisescale, circuitcolors[i]), my_canvas, circuit_x + (colwidth - namewidth) / 2 + namewidth + 2, circuit_y)
+        renderPDF.draw(scalecolorSVG("SVG/turnright.svg", clockwisescale, circuitcolors[i]), my_canvas, circuit_x + (colwidth - namewidth) / 2 - 5, circuit_y)
     legend_x = worldmap_x + 30 + legendcol * 52
     legend_y = worldmap_y - 40 + legendrow * 10
     my_canvas.setFillColor(HexColor("#FFFFFF"))
