@@ -176,8 +176,8 @@ if __name__ == "__main__":
     print("circuitsdata count", count)
     maxdifa = max_dif_altitude()
     for i in range(len(circuitsdata)):
-        if circuitsdata[i][1] == "be-1925":
-#        if True:
+#        if circuitsdata[i][1] == "be-1925":
+        if True:
             jsonfile = circuitsdata[i][1]
             sfindex = int(circuitsdata[i][12])
             coordinates = readjson(jsonfile, sfindex)
