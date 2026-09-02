@@ -236,7 +236,7 @@ for i in range(count):
     my_canvas.setStrokeColor(HexColor("#000000"))
     if worldlocx > worldmap_x:
         renderPDF.draw(scalecolorSVG("SVG/location.svg", locationscale, circuitcolors[i]), my_canvas, worldlocx, worldlocy)
-    my_canvas.circle(circuit_x + (colwidth - namewidth) / 2 - 5, circuit_y + 3, 2.8, stroke = 0, fill = 1)
+#    my_canvas.circle(circuit_x + (colwidth - namewidth) / 2 - 5, circuit_y + 3, 2.8, stroke = 0, fill = 1)
     if circuitsdata[i][9] == "a":
         renderPDF.draw(scalecolorSVG("SVG/turnleft.svg", clockwisescale, circuitcolors[i]), my_canvas, circuit_x +  (colwidth - namewidth) / 2 + namewidth + 2, circuit_y)
     else:
