@@ -14,6 +14,8 @@ def readjson(jsonfile):
     def coordinates_to_array(dat):
         minlon = math.inf
         maxlon = -math.inf
+        minlat = math.inf
+        maxlat = -math.inf
         totalcoords = []
         for item in dat:
             lon = item["lon"]
@@ -22,10 +24,14 @@ def readjson(jsonfile):
                 maxlon = lon
             if lon < minlon:
                 minlon = lon
+            if lat > maxlat:
+                maxlat = lat
+            if lat < minlat:
+                minlat = lat         
             loc = item["location"]
             coord = [lon, lat]
             totalcoords.append(coord)
-            print(loc, lon, lat, "minlon", minlon, "maxlon", maxlon)
+            print(loc, lon, lat, "minlon", minlon, "maxlon", maxlon, "minlat", minlat, "maxlat", maxlat)
         return totalcoords
     if os.path.exists(jsonfile):
         with open(jsonfile, 'r') as file:
