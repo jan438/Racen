@@ -17,6 +17,8 @@ def readjson(jsonfile):
             lon = item["lon"]
             lat = item["lat"]
             loc = item["location"]
+            coord = [lon, lat]
+            totalcoords.append(coord)
             print(loc, lon, lat)
         return totalcoords
     if os.path.exists(jsonfile):
