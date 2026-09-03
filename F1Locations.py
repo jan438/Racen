@@ -13,8 +13,10 @@ def readjson(jsonfile):
     totalcoords = []
     def coordinates_to_array(dat):
         totalcoords = []
-        res = dat["results"]
-        for item in res1:
+        res = dat[0]
+        print(res)
+        return totalcoords
+        for item in res:
             location = item["location"]
             lon = location["lng"]
             lat = location["lat"]
@@ -24,7 +26,7 @@ def readjson(jsonfile):
     if os.path.exists(jsonfile):
         with open(jsonfile, 'r') as file:
             data = json.load(file)
-#            totalcoords = coordinates_to_array(data)
+            totalcoords = coordinates_to_array(data)
     return totalcoords
 
 if __name__ == "__main__":
