@@ -14,8 +14,9 @@ def readjson(jsonfile):
     def coordinates_to_array(dat):
         totalcoords = []
         for item in dat:
+            lon = item["lon"]
             lat = item["lat"]
-            print(lat)
+            print(lon, lat)
         return totalcoords
     if os.path.exists(jsonfile):
         with open(jsonfile, 'r') as file:
