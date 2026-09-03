@@ -12,14 +12,20 @@ maxdifa = -1
 def readjson(jsonfile):
     totalcoords = []
     def coordinates_to_array(dat):
+        minlon = math.inf
+        maxlon = -math.inf
         totalcoords = []
         for item in dat:
             lon = item["lon"]
             lat = item["lat"]
+            if lon > maxlon:
+                maxlon = lon
+            if lon < minlon:
+                minlon = lon
             loc = item["location"]
             coord = [lon, lat]
             totalcoords.append(coord)
-            print(loc, lon, lat)
+            print(loc, lon, lat, "minlon", minlon, "maxlon", maxlon)
         return totalcoords
     if os.path.exists(jsonfile):
         with open(jsonfile, 'r') as file:
