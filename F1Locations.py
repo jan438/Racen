@@ -37,7 +37,7 @@ def readjson(jsonfile):
         with open(jsonfile, 'r') as file:
             data = json.load(file)
             [totalcoords, minlon, maxlon, minlat, minlat] = coordinates_to_array(data)
-            print("minlon", minlon)
+            print("minlon", minlon, "maxlon", maxlon)
     return totalcoords
 
 if __name__ == "__main__":
