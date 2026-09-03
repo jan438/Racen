@@ -32,11 +32,12 @@ def readjson(jsonfile):
             coord = [lon, lat]
             totalcoords.append(coord)
             print(loc, lon, lat, "minlon", minlon, "maxlon", maxlon, "minlat", minlat, "maxlat", maxlat)
-        return totalcoords
+        return [totalcoords, minlon, maxlon, minlat, maxlat]
     if os.path.exists(jsonfile):
         with open(jsonfile, 'r') as file:
             data = json.load(file)
-            totalcoords = coordinates_to_array(data)
+            [totalcoords, minlon, maxlon, minlat, minlat] = coordinates_to_array(data)
+            print("minlon", minlon)
     return totalcoords
 
 if __name__ == "__main__":
