@@ -15,14 +15,13 @@ def readjson(jsonfile):
         totalcoords = []
         for i in range(len(dat)):
             res = dat[i]
-            print(res)
-            return totalcoords
-        for item in res:
-            location = item["location"]
-            lon = location["lng"]
-            lat = location["lat"]
-            coord = [lon, lat, alt]
-            totalcoords.append(coord)
+            print(i, res)
+            #for item in res:
+                #location = item["location"]
+                #lon = location["lng"]
+                #lat = location["lat"]
+                #coord = [lon, lat, alt]
+                #totalcoords.append(coord)
         return totalcoords
     if os.path.exists(jsonfile):
         with open(jsonfile, 'r') as file:
