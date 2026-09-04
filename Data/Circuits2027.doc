@@ -81,43 +81,45 @@ Coords startindex startsector2 startsector3 OpenStreetMap
 
 spa aangepaste file 154
 
-Austin -97.633 30.135
-Baku 49.842 40.369
-Barcelona 2.259 41.569
-Buenos Aires -58.459 -34.694
-Budapest 19.25 47.583
-Dix -76.927 42.337
-Estoril -9.394 38.751
-Hockenheim 8.572 49.33
-Imola 11.713 44.341
-Indianapolis -86.236 39.795
-Istanbul 29.412 40.958
-Jacarepaguá -43.395 -22.976
-Jeddah 39.104 21.632
-Johannesburg 28.069 -25.998
-Las Vegas -115.168 36.116
-Le Castellet 5.791 43.253
-Lusail 51.454 25.49
-Madrid -3.62 40.471
-Magny-Cours 3.164 46.863
-Melbourne 144.97 -37.846
-Mexico City -99.091 19.402
-Miami -80.239 25.958
-Monaco 7.429 43.737
-Montreal -73.525 45.506
-Monza 9.29 45.621
-Nürburg 6.943 50.334
-Portimão -8.628 37.232
-Sakhir 50.512 26.031
-Sao Paulo -46.698 -23.702
-Scarperia e San Piero 11.372 43.998
-Sepang 101.738 2.761
-Shanghai 121.221 31.34
-Silverstone -1.017 52.072
-Singapore 103.859 1.291
-Sochi 39.96 43.407
-Spa Francorchamps 5.971 50.436
-Spielberg 14.761 47.223
-Suzuka 136.534 34.844
-Yas Marina 54.601 24.471
-Zandvoort 4.541 52.389
+Austin -97.633 30.135 us-2012
+Baku 49.842 40.369 az-2016
+Barcelona 2.259 41.569 es-1991
+Buenos Aires -58.459 -34.694 ar-1952
+Budapest 19.25 47.583 hu-1986
+Dix -76.927 42.337 us-1956
+Estoril -9.394 38.751 pt-1972
+Hockenheim 8.572 49.33 de-1932
+Imola 11.713 44.341 it-1953
+Indianapolis -86.236 39.795 us-1909
+Istanbul 29.412 40.958 tr-2005
+Jacarepaguá -43.395 -22.976 br-1977
+Jeddah 39.104 21.632 sa-2021
+Johannesburg 28.069 -25.998 za-1961
+Las Vegas -115.168 36.116 us-2023
+Le Castellet 5.791 43.253 fr-1969
+Lusail 51.454 25.49 qa-2004
+Madrid -3.62 40.471 es-2026
+Magny-Cours 3.164 46.863 fr-1960
+Melbourne 144.97 -37.846 au-1953
+Mexico City -99.091 19.402 mx-1962
+Miami -80.239 25.958 us-2022
+Monaco 7.429 43.737 mc-1929
+Montreal -73.525 45.506 ca-1978
+Monza 9.29 45.621 it-1922
+Nürburg 6.943 50.334 de-1927
+Portimão -8.628 37.232 pt-2008
+Sakhir 50.512 26.031 bh-2002
+Sao Paulo -46.698 -23.702 br-1940
+Scarperia e San Piero 11.372 43.998 it-1914
+Sepang 101.738 2.761 my-1999
+Shanghai 121.221 31.34 cn-2004
+Silverstone -1.017 52.072 gb-1948
+Singapore 103.859 1.291 sg-2008
+Sochi 39.96 43.407 ru-2014
+Spa Francorchamps 5.971 50.436 be-1925
+Spielberg 14.761 47.223 at-1969
+Suzuka 136.534 34.844 jp-1962
+Yas Marina 54.601 24.471 ae-2009
+Zandvoort 4.541 52.389 nl-1948
+
+minlon -115.168 maxlon 144.97 minlat -37.846 maxlat 52.389
