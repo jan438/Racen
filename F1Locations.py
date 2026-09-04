@@ -9,6 +9,9 @@ from geopy.distance import great_circle
 circuitsdata = []
 # be-1925 pdf 171.0  137.0   geo 5.971 50.436
 # sg-2008 pdf 278.0  76.5    geo 103.859 1.291
+# londen
+# las vegas
+# melbourne
 
 def readjson(jsonfile):
     totalcoords = []
