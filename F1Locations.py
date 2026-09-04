@@ -13,8 +13,8 @@ circuitsdata = []
 # us-2023 pdf 48.0   120.0   geo -115.168 36.116
 # au-1953 pdf 315.0  17.5    geo 144.97 -37.846
 #
-# dx ratio pdf geo las vegas melbourne pdf  48.0 315.0 geo -115.168 144.97
-# dy ratio pdf geo london    melbourne pdf 138.0  17.5 geo   52.072  -37.846
+# dx ratio las vegas melbourne pdf  48.0 315.0 geo -115.168 144.97
+# dy ratio london    melbourne pdf 138.0  17.5 geo   52.072 -37.846
 
 def readjson(jsonfile):
     totalcoords = []
