@@ -7,7 +7,8 @@ import math
 from geopy.distance import great_circle
 
 circuitsdata = []
-maxdifa = -1
+# be-1925 pdf 171.0  137.0
+# sg-2008 pdf 278.0  76.5
 
 def readjson(jsonfile):
     totalcoords = []
