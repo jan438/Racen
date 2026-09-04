@@ -30,9 +30,10 @@ def readjson(jsonfile):
             if lat < minlat:
                 minlat = lat         
             loc = item["location"]
+            id = item["id"]
             coord = [lon, lat]
             totalcoords.append(coord)
-            print(loc, lon, lat)
+            print(loc, lon, lat, id)
         return [totalcoords, minlon, maxlon, minlat, maxlat]
     if os.path.exists(jsonfile):
         with open(jsonfile, 'r') as file:
