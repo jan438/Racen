@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-
 <svg
    width="800px"
    height="800px"
@@ -24,14 +22,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.8575"
-     inkscape:cx="399.41691"
+     inkscape:cx="398.83382"
      inkscape:cy="400"
      inkscape:window-width="1210"
      inkscape:window-height="933"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g2" />
+     inkscape:current-layer="g2"
+     showgrid="false" />
   <title
      id="title1">Pin-location-2</title>
   <defs
@@ -45,9 +44,17 @@
        fill="#434343"
        id="g2">
       <path
-         d="m 6,0.031 c -2.717,0 -4.92,2.119 -4.92,4.733 0,0.675 0.15,1.317 0.414,1.898 l 4.59,7.321 4.422,-7.321 C 10.771,6.081 10.918,5.438 10.918,4.764 10.918,2.15 8.717,0.031 6,0.031 Z m 0,8.09 C 4.295,8.121 2.915,6.734 2.915,5.023 2.915,3.314 4.295,1.926 6,1.926 c 1.703,0 3.086,1.388 3.086,3.097 0,1.711 -1.383,3.098 -3.086,3.098 z" fill="red"
+         d="m 6,0.031 c -2.717,0 -4.92,2.119 -4.92,4.733 0,0.675 0.15,1.317 0.414,1.898 l 4.59,7.321 4.422,-7.321 C 10.771,6.081 10.918,5.438 10.918,4.764 10.918,2.15 8.717,0.031 6,0.031 Z m 0,8.09 C 4.295,8.121 2.915,6.734 2.915,5.023 2.915,3.314 4.295,1.926 6,1.926 c 1.703,0 3.086,1.388 3.086,3.097 0,1.711 -1.383,3.098 -3.086,3.098 z"
+         fill="red"
          id="path1"
          sodipodi:nodetypes="sscccsssssss" />
+      <ellipse
+         style="fill:#0000ff"
+         id="path2"
+         cx="6.0000005"
+         cy="5.0262394"
+         rx="1.5873455"
+         ry="1.668978" />
     </g>
   </g>
 </svg>
