@@ -17,7 +17,6 @@
      id="defs1" />
   <g
      stroke="none"
-     stroke-width="1"
      id="g3">
     <g
        transform="translate(2.000000, 0.000000)"
@@ -30,9 +29,9 @@
       <ellipse
          id="path2"
          cx="6.09"
-         cy="4.9380188"
-         rx="3.1750333"
-         ry="3.3378899"
+         cy="4.94"
+         rx="3.175"
+         ry="3.338"
          transform="matrix(0.99989216,0.01468555,-0.02795013,0.99960932,0,0)" />
     </g>
   </g>
