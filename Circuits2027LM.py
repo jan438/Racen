@@ -22,7 +22,7 @@ import xml.etree.ElementTree as ET
 circuitscale = 0.23
 altitudescale = 0.15
 flagscale = 0.015
-locationscale = 0.012
+locationscale = 0.017
 flagcorrectionx = -30.0
 flagcorrectiony = -30.0
 A4_height = A4[1]
@@ -237,7 +237,7 @@ for i in range(count):
     my_canvas.setStrokeColor(HexColor("#000000"))
     if worldlocx > worldmap_x:
         renderPDF.draw(scalecolorSVG("SVG/pinlocation.svg", locationscale, circuitcolors[i]), my_canvas, worldlocx, worldlocy)
-        my_canvas.circle(worldlocx + 3.6, worldlocy + 4.6, 1.75, stroke = 0, fill = 1)
+#        my_canvas.circle(worldlocx + 3.6, worldlocy + 4.6, 1.75, stroke = 0, fill = 1)
     if circuitsdata[i][9] == "a":
         renderPDF.draw(scalecolorSVG("SVG/turnleft.svg", turnscale, circuitcolors[i]), my_canvas, circuit_x +  (colwidth - namewidth) / 2 - 15, circuit_y)
     else:
@@ -247,7 +247,6 @@ for i in range(count):
     my_canvas.setFillColor(HexColor("#FFFFFF"))
     my_canvas.setLineWidth(1)
     my_canvas.setStrokeColor(HexColor("#ffffff"))
-#    my_canvas.rect(circuit_x, circuit_y, colwidth, rowheight, stroke=1, fill=0)
     legendcol += 1
     if legendcol == 6:
         legendrow = legendrow + 1
