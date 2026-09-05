@@ -229,7 +229,7 @@ for i in range(count):
         renderPDF.draw(circledrawing, my_canvas, circuit_x + info_x - circledrawing.width / 2, circuit_y + info_y - circledrawing.height / 2)
         my_canvas.setFont(cirfont, 7)
         my_canvas.setFillColorRGB(170,255,127)
-        lapsstr = circuitsdata[i][30]
+        lapsstr = circuitsdata[i][31]
         my_canvas.drawString(circuit_x + info_x - 4, circuit_y + info_y - 2, lapsstr)
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
