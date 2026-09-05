@@ -1,17 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="si-glyph si-glyph-pin-location-2">
-    
-    <title>Pin-location-2</title>
-    
-    <defs>
-</defs>
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(2.000000, 0.000000)" fill="#434343">
-            <path d="M6,0.031 C3.283,0.031 1.08,2.15 1.08,4.764 C1.08,5.439 1.23,6.081 1.494,6.662 L6.084,13.983 L10.506,6.662 C10.771,6.081 10.918,5.438 10.918,4.764 C10.918,2.15 8.717,0.031 6,0.031 L6,0.031 Z M6,8.121 C4.295,8.121 2.915,6.734 2.915,5.023 C2.915,3.314 4.295,1.926 6,1.926 C7.703,1.926 9.086,3.314 9.086,5.023 C9.086,6.734 7.703,8.121 6,8.121 L6,8.121 Z M7.977,4.983 C7.977,6.08 7.091,6.968 5.999,6.968 C4.908,6.968 4.022,6.079 4.022,4.983 C4.022,3.888 4.908,3 5.999,3 C7.091,3 7.977,3.889 7.977,4.983 L7.977,4.983 Z" class="si-glyph-fill">
-</path>
-            <path d="M3.29899999,11.8232422 C1.58199999,12.1872422 0.869751004,12.6649999 0.869751004,13.2019999 C0.869751004,13.9709999 2.7,15.031 5.985,15.031 C9.27,15.031 11.1014406,13.9709999 11.1014406,13.2019999 C11.1014406,12.6669999 10.393,12.2032422 8.70000002,11.8232422 L8.7,11.003 C10.565,11.369 11.954,12.104 11.954,13.202 C11.954,14.786 8.87799986,15.9729004 5.98499986,15.9729004 C3.09199986,15.9729004 0.0160000001,14.786 0.0160000001,13.202 C0.0160000001,12.102 1.414,11.353 3.289,11 L3.29899999,11.8232422 Z" class="si-glyph-fill">
-</path>
-        </g>
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 16 16"
+   version="1.1"
+   class="si-glyph si-glyph-pin-location-2"
+   id="svg3"
+   sodipodi:docname="pinlocation.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.8575"
+     inkscape:cx="399.41691"
+     inkscape:cy="400"
+     inkscape:window-width="1210"
+     inkscape:window-height="933"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g2" />
+  <title
+     id="title1">Pin-location-2</title>
+  <defs
+     id="defs1" />
+  <g
+     stroke="none"
+     stroke-width="1"
+     fill="red"
+     fill-rule="evenodd"
+     id="g3">
+    <g
+       transform="translate(2.000000, 0.000000)"
+       fill="#434343"
+       id="g2">
+      <path
+         d="m 6,0.031 c -2.717,0 -4.92,2.119 -4.92,4.733 0,0.675 0.15,1.317 0.414,1.898 l 4.59,7.321 4.422,-7.321 C 10.771,6.081 10.918,5.438 10.918,4.764 10.918,2.15 8.717,0.031 6,0.031 Z m 0,8.09 C 4.295,8.121 2.915,6.734 2.915,5.023 2.915,3.314 4.295,1.926 6,1.926 c 1.703,0 3.086,1.388 3.086,3.097 0,1.711 -1.383,3.098 -3.086,3.098 z"
+         id="path1"
+         sodipodi:nodetypes="sscccsssssss" />
     </g>
+  </g>
 </svg>
