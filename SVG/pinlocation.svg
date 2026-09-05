@@ -12,6 +12,24 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.8575"
+     inkscape:cx="399.41691"
+     inkscape:cy="400"
+     inkscape:window-width="1210"
+     inkscape:window-height="933"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g2" />
   <title
      id="title1">Pin-location-2</title>
   <defs
@@ -30,12 +48,13 @@
          id="path1"
          sodipodi:nodetypes="sscccsssssss" />
       <ellipse
-         style="fill:#0000ff"
+         style="fill:#0000ff;stroke-width:2.00008"
          id="path2"
-         cx="6.0000005"
-         cy="5.0262394"
-         rx="1.5873455"
-         ry="1.668978" />
+         cx="6.1386805"
+         cy="4.9380188"
+         rx="3.1750333"
+         ry="3.3378899"
+         transform="matrix(0.99989216,0.01468555,-0.02795013,0.99960932,0,0)" />
     </g>
   </g>
 </svg>
