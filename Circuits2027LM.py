@@ -261,6 +261,6 @@ for i in range(count):
         col = 0
 for i in range(len(circuitcolors)):
     locationdrawing = scalecolorSVG("SVG/pinlocation.svg", locationscale, circuitcolors[i])
-    renderPDF.draw(locationdrawing, my_canvas, 340, 460 + i * 10)
+    renderPDF.draw(locationdrawing, my_canvas, 340 + i * 10, 460 + (i % 10) * 10)
 my_canvas.save()
 key = input("Wait")
