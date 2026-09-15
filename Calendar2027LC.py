@@ -222,8 +222,6 @@ my_canvas.drawString(100, 775, "2027 Calendar " + version)
 row = 6
 col = 0
 for i in range(len(raceevents)):
-    if i == 12:
-        break
     raceevent = raceevents[i]
     partindex = summary.find(" (")
     event = summary[:partindex]
