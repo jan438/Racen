@@ -186,13 +186,6 @@ for i in range(len(alleventslines)):
         raceevents.append(RaceEvent(summary, day, location, description, starttime, endtime, month))
         print(i, "summary", summary, "description", description)
 print("Count race events", len(raceevents))
-raceevent = lookupraceevent(3, 14)
-if raceevent is not None:
-    starttime = raceevent.starttime
-    localtime = converttimetztolocal(starttime)
-    print(raceevent.summary, raceevent.location, description, starttime, starttime, localtime)
-else:
-    print("Not found")
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
@@ -236,7 +229,7 @@ for i in range(len(raceevents)):
         #locationmap = circuitsdata[cx][5]
         locationmap = "Bahrein"
         image = "Circuits/Location/" + locationmap + "_location_map.png"
-        print(cx, raceevent.description)
+        print(cx, locationmap, image)
         my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 my_canvas.save()
 key = input("Wait")
