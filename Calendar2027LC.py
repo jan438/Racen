@@ -184,6 +184,7 @@ for i in range(len(alleventslines)):
         description = alleventslines[i][12:]
     if endeventpos == 0:
         raceevents.append(RaceEvent(summary, day, location, description, starttime, endtime, month))
+        print(i, "summary", summary, "description", description)
 print("Count race events", len(raceevents))
 raceevent = lookupraceevent(3, 14)
 if raceevent is not None:
