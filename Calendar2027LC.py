@@ -223,7 +223,7 @@ row = 6
 col = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
-    subsummary = raceevent.summary[:10]
+    subsummary = raceevent.summary[:len(raceevent.summary)]
     print(i, subsummary)
     if subsummary == "Race":
         #cx = lookupcircuit(raceevent.description)
