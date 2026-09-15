@@ -224,6 +224,7 @@ col = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     subsummary = raceevent.summary[:10]
+    print(i, subsummary)
     if subsummary == "Race":
         #cx = lookupcircuit(raceevent.description)
         #locationmap = circuitsdata[cx][5]
