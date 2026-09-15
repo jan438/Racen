@@ -223,13 +223,13 @@ row = 6
 col = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
-    print(i, raceevent.summary)
     partindex = summary.find(" (")
     event = summary[:partindex]
-    print(event)
     if event == "Race":
         #cx = lookupcircuit(raceevent.description)
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
+        state = raceevent.summary[stateindex:len(raceevent.summary) - 1]
+        print(state)
         #locationmap = circuitsdata[cx][5]
         locationmap = "Bahrain"
         image = "Circuits/Location/" + locationmap + "_location_map.png"
