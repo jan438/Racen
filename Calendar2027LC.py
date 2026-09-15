@@ -222,17 +222,16 @@ my_canvas.drawString(100, 775, "2027 Calendar " + version)
 row = 6
 col = 0
 for i in range(len(raceevents)):
+    if i == 5:
+        break
     raceevent = raceevents[i]
     partindex = summary.find(" (")
     event = summary[:partindex]
     if event == "Race":
-        #cx = lookupcircuit(raceevent.description)
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
         print(state)
-        #locationmap = circuitsdata[cx][5]
-        locationmap = "Bahrain"
-        image = "Circuits/Location/" + locationmap + "_location_map.png"
+        image = "Circuits/Location/" + state + "_location_map.png"
 #        print(cx, locationmap, image, stateindex)
         my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 my_canvas.save()
