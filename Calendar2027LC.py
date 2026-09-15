@@ -228,6 +228,20 @@ my_canvas.setFillColor(HexColor("#000000"))
 my_canvas.drawString(100, 775, "2027 Calendar " + version)
 row = 6
 col = 0
+for i in range(len(raceevents)):
+    raceevent = raceevents[i]
+    subsummary = raceevent.summary[:10]
+    if subsummary == "Race":
+        cx = lookupcircuit(raceevent.description)
+        print(cx, raceevent.description)
+        locationmap = circuitsdata[cx][5]
+        image = "Circuits/Location/" + locationmap + "_location_map.png"
+        my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+my_canvas.save()
+key = input("Wait")
+exit
+row = 6
+col = 0
 caloffsetx = 64.3
 caloffsety = 10
 calblank_dy = -7.0
@@ -254,10 +268,8 @@ for i in range(len(raceevents)):
         subsummary = raceevent.summary[:10]
         if subsummary == "Practice 1":
             cx = lookupcircuit(raceevent.description)
-            print(cx, raceevent.description)
+#            print(cx, raceevent.description)
             locationmap = circuitsdata[cx][5]
-            image = "Circuits/Location/" + locationmap + "_location_map.png"
-            my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
             countrycode = circuitsdata[cx][1][:2]
             countrycode = countrycode.upper()
             renderPDF.draw(scaleSVG("Flags/" + countrycode + "tw.svg", 0.5), my_canvas, flagoffset_x + col * colwidth + leftmargin, flagoffset_y + (row - 1) * rowheight + bottommargin + 10)
