@@ -232,10 +232,11 @@ for i in range(len(raceevents)):
     raceevent = raceevents[i]
     subsummary = raceevent.summary[:10]
     if subsummary == "Race":
-        cx = lookupcircuit(raceevent.description)
-        print(cx, raceevent.description)
-        locationmap = circuitsdata[cx][5]
+        #cx = lookupcircuit(raceevent.description)
+        #locationmap = circuitsdata[cx][5]
+        locationmap = "Bahrein"
         image = "Circuits/Location/" + locationmap + "_location_map.png"
+        print(cx, raceevent.description)
         my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 my_canvas.save()
 key = input("Wait")
