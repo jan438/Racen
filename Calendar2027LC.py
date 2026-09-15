@@ -232,7 +232,10 @@ for i in range(len(raceevents)):
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
         print(state)
         image = "Circuits/Location/" + state + "_location_map.png"
-#        print(cx, locationmap, image, stateindex)
         my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
+        col += 1
+        if col == 4:
+            col = 0
+            row = row - 1
 my_canvas.save()
 key = input("Wait")
