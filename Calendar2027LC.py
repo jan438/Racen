@@ -223,14 +223,17 @@ row = 6
 col = 0
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
-    subsummary = raceevent.summary[:len(raceevent.summary)]
-    print(i, subsummary)
-    if subsummary == "Race":
+    print(i, raceevent.summary)
+    partindex = summary.find(" (")
+    event = summary[:partindex]
+    print(event)
+    if event == "Race":
         #cx = lookupcircuit(raceevent.description)
+        stateindex = raceevent.summary.find("Race (Grand Prix of ")
         #locationmap = circuitsdata[cx][5]
-        locationmap = "Bahrein"
+        locationmap = "Bahrain"
         image = "Circuits/Location/" + locationmap + "_location_map.png"
-        print(cx, locationmap, image)
+#        print(cx, locationmap, image, stateindex)
         my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
 my_canvas.save()
 key = input("Wait")
