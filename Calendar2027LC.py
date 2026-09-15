@@ -228,7 +228,7 @@ for i in range(len(raceevents)):
     if event == "Race":
         #cx = lookupcircuit(raceevent.description)
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
-        state = raceevent.summary[stateindex:len(raceevent.summary) - 1]
+        state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
         print(state)
         #locationmap = circuitsdata[cx][5]
         locationmap = "Bahrain"
