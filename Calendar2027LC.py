@@ -205,7 +205,6 @@ linky1 = 0
 linkx2 = 10
 linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
-my_canvas.setFont(calfont, 12)
 headerheight = 100
 bottommargin = 10
 leftmargin = 8.0
@@ -223,6 +222,7 @@ my_canvas.setFillColor(HexColor("#000000"))
 my_canvas.drawString(100, 775, "2027 Calendar " + version)
 row = 6
 col = 0
+my_canvas.setFont(calfont, 12)
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     partindex = summary.find(" (")
