@@ -232,8 +232,8 @@ for i in range(len(raceevents)):
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
         print(state)
         image = "Circuits/Location/" + state + "_location_map.png"
-        my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 10, width=eventwidth, height=eventheight, mask=None)
-        my_canvas.drawString(100, 100, "hallo")
+        my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin, width=eventwidth, height=eventheight, mask=None)
+        my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 20, state)
         col += 1
         if col == 4:
             col = 0
