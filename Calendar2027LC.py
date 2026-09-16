@@ -230,10 +230,10 @@ for i in range(len(raceevents)):
     if event == "Race":
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
-        print(state)
         image = "Circuits/Location/" + state + "_location_map.png"
         my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin, width=eventwidth, height=eventheight, mask=None)
-        my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 20, state)
+        my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 20, raceevents[i].location)
+        my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 10, state)
         col += 1
         if col == 4:
             col = 0
