@@ -206,13 +206,14 @@ linkx2 = 10
 linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
 my_canvas.setFont(calfont, 12)
-bottommargin = 30
+headerheight = 100
+bottommargin = 25
 leftmargin = 8.0
 circuitscale = 0.06
 eventwidth = (width - 2 * leftmargin) / 4
-eventheight = 112
+eventheight = (height - bottommargin - headerheight) / 6
 colwidth = eventwidth
-rowheight = 120
+rowheight = eventheight
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
