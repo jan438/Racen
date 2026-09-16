@@ -207,10 +207,11 @@ linky2 = 10
 linkarea = (linkx1, linky1, linkx2, linky2)
 my_canvas.setFont(calfont, 12)
 headerheight = 100
-bottommargin = 25
+bottommargin = 10
 leftmargin = 8.0
+rightmargin = 8.0
 circuitscale = 0.06
-eventwidth = (width - 2 * leftmargin) / 4
+eventwidth = (width - leftmargin - rightmargin) / 4
 eventheight = (height - bottommargin - headerheight) / 6
 colwidth = eventwidth
 rowheight = eventheight
