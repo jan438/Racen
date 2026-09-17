@@ -232,9 +232,7 @@ for i in range(len(raceevents)):
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
         #image = "Circuits/Location/" + state + "_location_map.png"
-        #drawing = svg2rlg('Location/USA Nevada.svg')
-        #renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin)
-        drawing = scaleSVG('Location/USA Nevada.svg', 0.005)
+        drawing = scaleSVG('Location/USA Nevada.svg', 0.05)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin)
         my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 20, raceevents[i].location)
         my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 10, state)
