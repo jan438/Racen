@@ -228,13 +228,11 @@ for i in range(len(raceevents)):
     summary = raceevents[i].summary
     partindex = summary.find(" (")
     event = summary[:partindex]
-    #print("summary", summary, "event", event)
     if event == "Race":
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
         image = "Circuits/Location/" + state + "_location_map.png"
-        print("state", state)
-        #my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin, width=eventwidth, height=eventheight, mask=None)
+        my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin, width=eventwidth, height=eventheight, mask=None)
         my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 20, raceevents[i].location)
         my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 10, state)
         col += 1
