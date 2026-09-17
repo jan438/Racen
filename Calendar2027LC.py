@@ -184,7 +184,7 @@ for i in range(len(alleventslines)):
         description = alleventslines[i][12:]
     if endeventpos == 0:
         raceevents.append(RaceEvent(summary, day, location, description, starttime, endtime, month))
-        print(i, "summary", summary, "description", description)
+#        print(i, "summary", summary, "description", description)
 print("Count race events", len(raceevents))
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
@@ -227,11 +227,13 @@ for i in range(len(raceevents)):
     raceevent = raceevents[i]
     partindex = summary.find(" (")
     event = summary[:partindex]
+    print("event", event)
     if event == "Race":
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
         image = "Circuits/Location/" + state + "_location_map.png"
-        my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin, width=eventwidth, height=eventheight, mask=None)
+        print("state", state)
+        #my_canvas.drawImage(image, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin, width=eventwidth, height=eventheight, mask=None)
         my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 20, raceevents[i].location)
         my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 10, state)
         col += 1
