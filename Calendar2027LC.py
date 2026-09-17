@@ -225,9 +225,11 @@ col = 0
 my_canvas.setFont(calfont, 12)
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
+    summary = raceevents[i].summary
     partindex = summary.find(" (")
     event = summary[:partindex]
-    print("event", event)
+    print("summary", summary, "event", event)
+    break
     if event == "Race":
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
