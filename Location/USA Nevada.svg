@@ -29,8 +29,8 @@
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     inkscape:window-height="869"
-     inkscape:window-width="1150"
+     inkscape:window-height="870"
+     inkscape:window-width="1104"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      guidetolerance="10.0"
@@ -39,9 +39,9 @@
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
-     inkscape:zoom="3.684687"
-     inkscape:cx="18.861846"
-     inkscape:cy="57.535416"
+     inkscape:zoom="14.738749"
+     inkscape:cx="47.595629"
+     inkscape:cy="20.456282"
      inkscape:window-x="26"
      inkscape:window-y="23"
      inkscape:current-layer="svg3010"
@@ -61,7 +61,7 @@
      id="defs3016" />
   <path
      style="font-size:12px;fill:#d0d0d0;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none"
-     d="m 57.962499,12.246657 1.167,0.184 1.411,0.284 2.47,0.559 2.028,0.401 2.244,0.442 -2.438,12.67 -2.204,11.257 C 55.28722,34.321851 45.050564,15.965631 39.496499,8.2476581 l 3.642,0.8339997 1.082,0.248 13.742,2.9169992"
+     d="m 57.962499,12.246657 1.167,0.184 1.411,0.284 2.47,0.559 2.028,0.401 2.244,0.442 -2.438,12.67 -2.204,11.257 C 52.339448,30.681479 46.646487,18.417611 39.496499,8.2476581 l 3.642,0.8339997 1.082,0.248 13.742,2.9169992"
      id="Elko"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cccccccccccc" />
@@ -102,27 +102,29 @@
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cccc" />
   <path
-     style="font-size:12px;fill:#d0d0d0;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none"
-     d="m 2.4354988,37.877657 1.176,0.297 1.127,0.47 0.027,0.202 1.938,0.483 2.303,0.608 -0.284,1.173 -0.384,0 -0.518,-0.127 -0.275,0.315 -0.414,0.868 -0.095,0.372 0.05,1.18 0.09,0.415 0.207,0.757 -0.112,1.248 -0.163,0.682 -1.924,-2.88 -2.375,-3.562 -0.51,-1.933 0.136,-0.568"
+     style="font-size:12px;fill:#d0d0d0;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none"
+     d="m 2.4354988,37.877657 c 0,0 5.1129732,5.214958 4.673,8.943 l -1.924,-2.88 -2.375,-3.562 -0.51,-1.933 0.136,-0.568"
      id="Douglas"
-     inkscape:connector-curvature="0" />
-  <path
-     style="font-size:12px;fill:#d0d0d0;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none"
-     d="m 2.5974988,37.205657 3.078,-0.351 0.162,0.595 0.275,0.261 0.834,0.208 0.005,0.067 -0.208,1.294 -0.04,0.05 -1.938,-0.483 -0.027,-0.202 -1.127,-0.47 -1.176,-0.297 0.162,-0.672"
-     id="Carson City"
-     inkscape:connector-curvature="0" />
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccccc" />
   <path
      style="font-size:12px;fill:#d0d0d0;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none"
-     d="m 11.151499,48.095657 -0.316,1.253 -2.4330002,-0.601 -1.294,-1.927 0.163,-0.682 0.112,-1.248 -0.207,-0.757 -0.09,-0.415"
+     d="m 2.5974988,37.205657 c 0.9668297,0.945428 1.3134926,1.044637 -0.162,0.672 l 0.162,-0.672"
+     id="Carson City"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="font-size:12px;fill:#d0d0d0;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none"
+     d="m 8.4024988,48.747657 -1.294,-1.927 0.163,-0.682 0.112,-1.248 -0.207,-0.757 -0.09,-0.415"
      id="Lyon NV"
      inkscape:connector-curvature="0"
-     sodipodi:nodetypes="cccccccc" />
+     sodipodi:nodetypes="cccccc" />
   <path
      style="font-size:12px;fill:#d0d0d0;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none"
-     d="m 17.740499,3.1416588 0.33,0.085 C 15.892561,11.586555 2.5974988,37.205657 2.5974988,37.205657 l 0.482,-1.897 0.437,-1.618 0.92,-3.484 0.198,-0.735 0.973,-3.65 0.631,-2.399 0.005,-0.013 0.185,-0.726 0.581,-2.248 1.158,-4.611 1.028,-4.002 2.6370002,-10.1859982 5.908,1.505"
+     d="M 17.740499,3.1416588 2.5974988,37.205657 l 0.482,-1.897 0.437,-1.618 0.92,-3.484 0.198,-0.735 0.973,-3.65 0.631,-2.399 0.005,-0.013 0.185,-0.726 0.581,-2.248 1.158,-4.611 1.028,-4.002 2.6370002,-10.1859982 5.908,1.505"
      id="Washoe"
      inkscape:connector-curvature="0"
-     sodipodi:nodetypes="cccccccccccccccc" />
+     sodipodi:nodetypes="ccccccccccccccc" />
   <path
      style="font-size:12px;fill:#d0d0d0;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none"
      d="m 18.070499,3.2266588 5.061,1.276 5.395,1.24 10.898,2.4779993 0.072,0.027 -21.426,-5.0209993"
