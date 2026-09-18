@@ -231,8 +231,8 @@ for i in range(len(raceevents)):
     if event == "Race":
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
-        #   Austria     Belgium   Hungary   Italy      Spain      Singapore  Mexico      Brazil
-        if i == 11 or i == 12 or i == 13 or i == 14 or i == 15 or i == 18 or i == 20 or i == 21:
+        #   GreatBrit  Austria     Belgium   Hungary     Italy      Spain      Singapore  Mexico   Brazil
+        if i == 10 or i == 11 or i == 12 or i == 13 or i == 14 or i == 15 or i == 18 or i == 20 or i == 21:
             print(state)
         else:
             state = "Belgium"
