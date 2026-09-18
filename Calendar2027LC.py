@@ -232,10 +232,9 @@ for i in range(len(raceevents)):
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
         if i == 20:
-            state = 'Belgium'
             print("Belgium", state)
         else:
-            state = 'Belgium'
+            state = "Belgium"
             print("else", state)
         drawing = scaleSVG('Location/' + state + '.svg', 0.1)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 50, (row - 1) * rowheight + bottommargin + 50)
