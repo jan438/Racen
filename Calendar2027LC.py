@@ -185,7 +185,7 @@ for i in range(len(alleventslines)):
     if endeventpos == 0:
         raceevents.append(RaceEvent(summary, day, location, description, starttime, endtime, month))
 #        print(i, "summary", summary, "description", description)
-#print("Count race events", len(raceevents))
+print("Count race events", len(raceevents))
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
