@@ -117,10 +117,10 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.height = drawing.height * scaling_y
     drawing.scale(scaling_x, scaling_y)
     return drawing
-def lookupcircuit(description):
+def lookupcircuit(state):
     cx = -1
     for j in range(len(circuitsdata)):
-        if circuitsdata[j][0] == description:
+        if circuitsdata[j][25] == state:
             cx = j
     return cx
 
@@ -135,7 +135,6 @@ with open(file_to_open, 'r') as file:
     count = 0
     for row in csvreader:
         circuitsdata.append(row)
-        print(row[35])
         count += 1
 eventcal = "Calendar/Formule12027" + version + ".ics"
 in_file = open(os.path.join(path, eventcal), 'r')
@@ -148,7 +147,7 @@ for line in in_file:
     alleventslines.append(lastsubstring)
     count += 1
 in_file.close()
-print("Count eventslines", len(alleventslines))
+#print("Count eventslines", len(alleventslines))
 for i in range(len(alleventslines)):
     neweventpos = alleventslines[i].find("BEGIN:VEVENT")
     summaryeventpos = alleventslines[i].find("SUMMARY")
@@ -186,7 +185,7 @@ for i in range(len(alleventslines)):
     if endeventpos == 0:
         raceevents.append(RaceEvent(summary, day, location, description, starttime, endtime, month))
 #        print(i, "summary", summary, "description", description)
-print("Count race events", len(raceevents))
+#print("Count race events", len(raceevents))
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
@@ -232,6 +231,8 @@ for i in range(len(raceevents)):
     if event == "Race":
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
+        cx = lookupcircuit(state)
+        print(i, "lookedup", circuitsdata[cx][0], circuitsdata[cx][25], circuitsdata[cx][35])
         drawing = scaleSVG('Location/' + state + '.svg', 0.1)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 50, (row - 1) * rowheight + bottommargin + 50)
         my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 20, raceevents[i].location)
