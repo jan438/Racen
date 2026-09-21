@@ -25,15 +25,6 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
 def SVG_to_RSVG(svgfile):
-    dwg = svgwrite.Drawing('Location/svgwrite-example.svg', profile='tiny')
-    vert_grad = svgwrite.gradients.LinearGradient(start=(0, 0), end=(0,1), id="vert_lin_grad")
-    vert_grad.add_stop_color(offset='0%', color='blue', opacity=None)
-    vert_grad.add_stop_color(offset='50%', color='green', opacity=None)
-    vert_grad.add_stop_color(offset='100%', color='yellow', opacity=None)
-    dwg.defs.add(vert_grad)
-    dwg.add(dwg.rect((10, 10), (300, 200), stroke=svgwrite.rgb(10, 10, 16, '%'), fill='url(#vert_lin_grad)'))
-    dwg.add(dwg.path( d='M470,240 C490,290, 550,290, 570,240', stroke="#000", fill='url(#vert_lin_grad)', stroke_width=12))
-    dwg.save()
     tree = etree.parse('Location/Belgium.svg')
     id = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@id')[0]
     d = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@d')[0]
@@ -44,6 +35,15 @@ def SVG_to_RSVG(svgfile):
     root = tree.getroot()
     et = etree.ElementTree(root)
     et.write('Location/Belgiumtodo.svg', pretty_print=True)
+    dwg = svgwrite.Drawing('Location/svgwrite-example.svg', profile='tiny')
+    vert_grad = svgwrite.gradients.LinearGradient(start=(0, 0), end=(0,1), id="vert_lin_grad")
+    vert_grad.add_stop_color(offset='0%', color='blue', opacity=None)
+    vert_grad.add_stop_color(offset='50%', color='green', opacity=None)
+    vert_grad.add_stop_color(offset='100%', color='yellow', opacity=None)
+    dwg.defs.add(vert_grad)
+    dwg.add(dwg.rect((10, 10), (300, 200), stroke=svgwrite.rgb(10, 10, 16, '%'), fill='url(#vert_lin_grad)'))
+    dwg.add(dwg.path( d='M470,240 C490,290, 550,290, 570,240', stroke="#000", fill='url(#vert_lin_grad)', stroke_width=12))
+    dwg.save()
     return
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
