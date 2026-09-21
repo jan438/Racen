@@ -1,6 +1,6 @@
 <svg id="mapSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" style="overflow: hidden; enable-background:new -345 257 100 100;" xml:space="preserve" xmlns:ev="http://www.w3.org/2001/xml-events" width="360" height="360" viewBox="0 0 360 360"><g id="viewport-20260918041749703" class="svg-pan-zoom_viewport" transform="matrix(3.6,0,0,3.6,1242,-925.2)" style="transform: matrix(3.6, 0, 0, 3.6, 1242, -925.2);">
   <defs>
-    <radialGradient id="grad3" cx="25%" cy="25%">
+    <radialGradient id="grad3" cx="80%" cy="60%">
       <stop offset="0%" stop-color="red" />
       <stop offset="100%" stop-color="blue" />
     </radialGradient>
