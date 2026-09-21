@@ -26,7 +26,12 @@ def scaleSVG(svgfile, scaling_factor):
     return drawing
 def SVG_to_RSVG(svgfile):
     dwg = svgwrite.Drawing('Location/svgwrite-example.svg', profile='tiny')
-    dwg.add(dwg.rect((10, 10), (300, 200), stroke=svgwrite.rgb(10, 10, 16, '%'), fill='red'))
+    vert_grad = svgwrite.gradients.LinearGradient(start=(0, 0), end=(0,1), id="vert_lin_grad")
+    vert_grad.add_stop_color(offset='0%', color='blue', opacity=None)
+    vert_grad.add_stop_color(offset='50%', color='green', opacity=None)
+    vert_grad.add_stop_color(offset='100%', color='yellow', opacity=None)
+    dwg.defs.add(vert_grad)
+    dwg.add(dwg.rect((10, 10), (300, 200), stroke=svgwrite.rgb(10, 10, 16, '%'), fill='url(#vert_lin_grad)'))
     dwg.save()
     tree = etree.parse('Location/Belgium.svg')
     id = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@id')[0]
