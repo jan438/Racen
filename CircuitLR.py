@@ -28,7 +28,7 @@ def SVG_to_RSVG(svgfile):
     root = tree.getroot()
     children = root.getchildren()
     for child in children:
-        print(child.tag)
+        print(child.tag, child.values)
     et = etree.ElementTree(root)
     et.write('Location/BelgiumR.svg', pretty_print=True)
     return
