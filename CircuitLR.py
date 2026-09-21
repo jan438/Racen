@@ -29,9 +29,10 @@ def SVG_to_RSVG(svgfile):
     f = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@fill')[0]
     print(f)
     e = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]')[0]
+    e.set("fill", "#ff00000")
     root = tree.getroot()
     et = etree.ElementTree(root)
-    et.write('Location/BelgiumR.svg', pretty_print=True)
+    et.write('Location/Belgiumtodo.svg', pretty_print=True)
     return
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
@@ -46,9 +47,9 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-my_canvas = canvas.Canvas("PDF/BelgiumR.pdf")
+my_canvas = canvas.Canvas("PDF/Belgiumtodo.pdf")
 my_canvas.setFont("Helvetica", 25)
-my_canvas.setTitle("BelgiumR")
+my_canvas.setTitle("Belgiumtodo")
 bottom_margin = 5
 left_margin = 5
 SVG_to_RSVG("Belgium.svg")
