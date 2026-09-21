@@ -228,11 +228,12 @@ for i in range(len(raceevents)):
     summary = raceevents[i].summary
     partindex = summary.find(" (")
     event = summary[:partindex]
+    print(i, event, summary)
     if event == "Race":
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
         cx = lookupcircuit(state)
-        print(i, "lookedup", circuitsdata[cx][0], circuitsdata[cx][25], circuitsdata[cx][35])
+        print(i, "lookedup", circuitsdata[cx][0], circuitsdata[cx][25])
         sc = float(circuitsdata[cx][35])
         drawing = scaleSVG('Location/' + state + '.svg', sc)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 50, (row - 1) * rowheight + bottommargin + 50)
