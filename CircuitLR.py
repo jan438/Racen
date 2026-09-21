@@ -8,6 +8,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
+import svgwrite
 
 circuitscale = 1.0
 cx = 0
