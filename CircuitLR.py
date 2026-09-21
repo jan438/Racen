@@ -3,6 +3,7 @@ import sys
 import csv
 import geojson
 import math
+import svgwrite
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch, mm
