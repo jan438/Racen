@@ -8,7 +8,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch, mm
 from reportlab.graphics.shapes import *
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
-import svgwrite
+from lxml import etree
 
 circuitscale = 1.0
 cx = 0
@@ -24,10 +24,10 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
 def SVG_to_RSVG(svgfile):
-    with open("Location/Belgium.svg", 'r') as filei:
-        svg_data = filei.read()
-    with open("Location/BelgiumR.svg", 'w') as fileo:
-        fileo.write(svg_data)
+    tree = etree.parse('Location/Belgium.svg')
+    root = tree.getroot()
+    et = etree.ElementTree(root)
+    et.write('Location/BelgiumR.svg', pretty_print=True)
     return
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
