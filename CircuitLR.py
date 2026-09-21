@@ -36,6 +36,7 @@ def SVG_to_RSVG(svgfile):
     dwg.save()
     tree = etree.parse('Location/Belgium.svg')
     id = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@id')[0]
+    d = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@d')[0]
     f = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@fill')[0]
     print(f)
     e = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]')[0]
