@@ -26,7 +26,8 @@ def scaleSVG(svgfile, scaling_factor):
     return drawing
 def SVG_to_RSVG(svgfile):
     root = etree.Element("svg")
-    print(root)
+    svg = etree.tostring(root,pretty_print=True)
+    print(svg)
     tree = etree.parse('Location/Belgium.svg')
     id = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@id')[0]
     d = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@d')[0]
