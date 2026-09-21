@@ -43,6 +43,7 @@ def SVG_to_RSVG(svgfile):
     dwg.defs.add(vert_grad)
     dwg.add(dwg.rect((10, 10), (300, 200), stroke=svgwrite.rgb(10, 10, 16, '%'), fill='url(#vert_lin_grad)'))
     dwg.add(dwg.path( d='M470,240 C490,290, 550,290, 570,240', stroke="#000", fill='url(#vert_lin_grad)', stroke_width=12))
+    dwg.add(dwg.path( d={d}, stroke="#000", fill='url(#vert_lin_grad)', stroke_width=12))
     dwg.save()
     return
 if sys.platform[0] == 'l':
