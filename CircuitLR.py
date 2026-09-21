@@ -26,6 +26,9 @@ def scaleSVG(svgfile, scaling_factor):
 def SVG_to_RSVG(svgfile):
     tree = etree.parse('Location/Belgium.svg')
     root = tree.getroot()
+    children = root.getchildren()
+    for child in children:
+        print(child.tag)
     et = etree.ElementTree(root)
     et.write('Location/BelgiumR.svg', pretty_print=True)
     return
