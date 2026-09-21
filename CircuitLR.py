@@ -28,6 +28,7 @@ def SVG_to_RSVG(svgfile):
     id = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@id')[0]
     f = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@fill')[0]
     print(f)
+    e = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]')[0]
     root = tree.getroot()
     et = etree.ElementTree(root)
     et.write('Location/BelgiumR.svg', pretty_print=True)
