@@ -11,7 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from lxml import etree
 
 circuitscale = 1.0
-cx = 0
+cx = 20
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -56,7 +56,7 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-print(circuitsdata[cx])
+print(circuitsdata[cx][25])
 my_canvas = canvas.Canvas("PDF/BelgiumR.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle("BelgiumR")
