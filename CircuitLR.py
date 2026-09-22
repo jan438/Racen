@@ -56,6 +56,7 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
+print(circuitsdata[cx])
 my_canvas = canvas.Canvas("PDF/BelgiumR.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle("BelgiumR")
