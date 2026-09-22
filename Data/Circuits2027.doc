@@ -36,6 +36,8 @@ AlbertPark;au-1953;0316;330.0;240.0;Australia;0.061;8.0;10.0;c;70;50;0;44;93;198
 33 day2 y
 34 laps
 35 scale cal location
+36 cx radial
+37 cy radial
 
 Viewbox = 115 * 125
 Circuitbox = 95 * 85
