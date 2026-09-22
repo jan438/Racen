@@ -35,8 +35,8 @@ def SVG_to_RSVG(svgfile):
     else:
         print("Found existing <defs> element.")
     radial_gradient = etree.SubElement(defs, f"{{{SVG_NS}}}radialGradient", id="grad1")
-    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="0%", style="stop-color:blue;stop-opacity:1")
-    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="100%", style="stop-color:red;stop-opacity:1")
+    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="0%", style="stop-color:#b1b100;stop-opacity:1")
+    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="100%", style="stop-color:#555500;stop-opacity:1")
     ns = {"svg": "http://www.w3.org/2000/svg"}
     paths = tree.xpath('//svg:path',namespaces=ns) 
     if paths:
