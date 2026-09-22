@@ -23,10 +23,10 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.height = drawing.height * scaling_y
     drawing.scale(scaling_x, scaling_y)
     return drawing
-def SVG_to_RSVG(svgfile):
+def SVG_to_RSVG(state):
     SVG_NS = "http://www.w3.org/2000/svg"
     NSMAP = {None: SVG_NS}
-    tree = etree.parse('Location/Belgium.svg')
+    tree = etree.parse("Location/" + state + ".svg")
     root = tree.getroot()
     defs = root.find(f"{{{SVG_NS}}}defs")
     if defs is None:
@@ -41,7 +41,7 @@ def SVG_to_RSVG(svgfile):
     paths = tree.xpath('//svg:path',namespaces=ns) 
     if paths:
         paths[0].set('fill', "url(#grad1)")
-    tree.write('Location/BelgiumR.svg', pretty_print=True, xml_declaration=True, encoding="UTF-8")
+    tree.write("Location/" + state + "R.svg", pretty_print=True, xml_declaration=True, encoding="UTF-8")
     return
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
@@ -56,18 +56,19 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-print(circuitsdata[cx][25])
-my_canvas = canvas.Canvas("PDF/BelgiumR.pdf")
+state = circuitsdata[cx][25]
+print(state)
+my_canvas = canvas.Canvas("PDF/" + state + "R.pdf")
 my_canvas.setFont("Helvetica", 25)
-my_canvas.setTitle("BelgiumR")
+my_canvas.setTitle(state + "R")
 bottom_margin = 5
 left_margin = 5
-SVG_to_RSVG("Belgium.svg")
+SVG_to_RSVG(state)
 circuit_x = 0
 circuit_y = 0
 name_x = 10
 name_y = 10
-renderPDF.draw(scaleSVG("Location/BelgiumR.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
-my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, "Belgium")
+renderPDF.draw(scaleSVG("Location/" + state + "R.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
+my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, state)
 my_canvas.save()
 key = input("Wait")
