@@ -135,6 +135,7 @@ with open(file_to_open, 'r') as file:
     count = 0
     for row in csvreader:
         circuitsdata.append(row)
+        print(circuitsdata[count][35])
         count += 1
 eventcal = "Calendar/Formule12027" + version + ".ics"
 in_file = open(os.path.join(path, eventcal), 'r')
