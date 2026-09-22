@@ -24,17 +24,24 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
 def SVG_to_RSVG(svgfile):
+    SVG_NS = "http://www.w3.org/2000/svg"
+    NSMAP = {None: SVG_NS}
     tree = etree.parse('Location/Belgium.svg')
-    svg = tree.xpath('//*[local-name()="svg"]')[0]
-    id = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@id')[0]
-    d = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@d')[0]
-    f = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@fill')[0]
-    print(f)
-    e = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]')[0]
-    e.set("fill", "#ff00000")
     root = tree.getroot()
-    et = etree.ElementTree(root)
-    et.write('Location/Belgiumtodo.svg', pretty_print=True)
+    defs = root.find(f"{{{SVG_NS}}}defs")
+    if defs is None:
+        defs = etree.SubElement(root, f"{{{SVG_NS}}}defs")
+        print("Created new <defs> element.")
+    else:
+        print("Found existing <defs> element.")
+    linear_gradient = etree.SubElement(defs, f"{{{SVG_NS}}}linearGradient", id="grad1")
+    etree.SubElement(linear_gradient, f"{{{SVG_NS}}}stop", offset="0%", style="stop-color:blue;stop-opacity:1")
+    etree.SubElement(linear_gradient, f"{{{SVG_NS}}}stop", offset="100%", style="stop-color:red;stop-opacity:1")
+    ns = {"svg": "http://www.w3.org/2000/svg"}
+    paths = tree.xpath('//svg:path',namespaces=ns) 
+    if paths:
+        paths[0].set('fill', "url(#grad1)")
+    tree.write('Location/Belgiumtodo.svg', pretty_print=True, xml_declaration=True, encoding="UTF-8")
     return
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
