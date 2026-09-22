@@ -235,7 +235,7 @@ for i in range(len(raceevents)):
         cx = lookupcircuit(state)
         print(i, "lookedup", circuitsdata[cx][0], circuitsdata[cx][25])
         sc = float(circuitsdata[cx][35])
-        drawing = scaleSVG('Location/' + state + '.svg', sc)
+        drawing = scaleSVG('Location/' + state + 'R.svg', sc)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 50, (row - 1) * rowheight + bottommargin + 50)
         my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 20, raceevents[i].location)
         my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 10, state)
