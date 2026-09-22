@@ -56,9 +56,9 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-my_canvas = canvas.Canvas("PDF/Belgiumtodo.pdf")
+my_canvas = canvas.Canvas("PDF/BelgiumR.pdf")
 my_canvas.setFont("Helvetica", 25)
-my_canvas.setTitle("Belgiumtodo")
+my_canvas.setTitle("BelgiumR")
 bottom_margin = 5
 left_margin = 5
 SVG_to_RSVG("Belgium.svg")
@@ -66,7 +66,7 @@ circuit_x = 0
 circuit_y = 0
 name_x = 10
 name_y = 10
-#renderPDF.draw(scaleSVG("Location/BelgiumLR.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
+renderPDF.draw(scaleSVG("Location/BelgiumR.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
 my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, "Belgium")
 my_canvas.save()
 key = input("Wait")
