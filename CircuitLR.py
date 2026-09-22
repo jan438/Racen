@@ -3,7 +3,6 @@ import sys
 import csv
 import geojson
 import math
-import svgwrite
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch, mm
@@ -25,27 +24,24 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
 def SVG_to_RSVG(svgfile):
+    SVG_NS = "http://www.w3.org/2000/svg"
+    NSMAP = {None: SVG_NS}
     tree = etree.parse('Location/Belgium.svg')
-    svg = tree.xpath('//*[local-name()="svg"]')[0]
-    id = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@id')[0]
-    d = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@d')[0]
-    f = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]/*[local-name()="path"]/@fill')[0]
-    print(f)
-    e = tree.xpath('//*[local-name()="svg"]//*[local-name()="g"]')[0]
-    e.set("fill", "#ff00000")
     root = tree.getroot()
-    et = etree.ElementTree(root)
-    et.write('Location/Belgiumtodo.svg', pretty_print=True)
-    dwg = svgwrite.Drawing('Location/svgwrite-example.svg', profile='tiny')
-    vert_grad = svgwrite.gradients.LinearGradient(start=(0, 0), end=(0,1), id="vert_lin_grad")
-    vert_grad.add_stop_color(offset='0%', color='blue', opacity=None)
-    vert_grad.add_stop_color(offset='50%', color='green', opacity=None)
-    vert_grad.add_stop_color(offset='100%', color='yellow', opacity=None)
-    dwg.defs.add(vert_grad)
-    dwg.add(dwg.rect((10, 10), (300, 200), stroke=svgwrite.rgb(10, 10, 16, '%'), fill='url(#vert_lin_grad)'))
-    dwg.add(dwg.path( d='M470,240 C490,290, 550,290, 570,240', stroke="#000", fill='url(#vert_lin_grad)', stroke_width=12))
-    dwg.add(dwg.path( d={d}, stroke="#000", fill='url(#vert_lin_grad)', stroke_width=12))
-    dwg.save()
+    defs = root.find(f"{{{SVG_NS}}}defs")
+    if defs is None:
+        defs = etree.SubElement(root, f"{{{SVG_NS}}}defs")
+        print("Created new <defs> element.")
+    else:
+        print("Found existing <defs> element.")
+    radial_gradient = etree.SubElement(defs, f"{{{SVG_NS}}}radialGradient", id="grad1", cx="80%", cy="60%")
+    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="0%", style="stop-color:#b1b100;stop-opacity:1")
+    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="100%", style="stop-color:#555500;stop-opacity:1")
+    ns = {"svg": "http://www.w3.org/2000/svg"}
+    paths = tree.xpath('//svg:path',namespaces=ns) 
+    if paths:
+        paths[0].set('fill', "url(#grad1)")
+    tree.write('Location/BelgiumR.svg', pretty_print=True, xml_declaration=True, encoding="UTF-8")
     return
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
