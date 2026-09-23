@@ -11,7 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from lxml import etree
 
 circuitscale = 1.0
-index = 20
+index = 0
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
