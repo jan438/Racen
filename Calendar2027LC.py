@@ -215,7 +215,7 @@ eventwidth = (width - leftmargin - rightmargin) / 4
 eventheight = (height - bottommargin - headerheight) / 6
 colwidth = eventwidth
 rowheight = eventheight
-flagscale = 0.8
+flagscale = 1.0
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
@@ -230,7 +230,6 @@ for i in range(len(raceevents)):
     summary = raceevents[i].summary
     partindex = summary.find(" (")
     event = summary[:partindex]
-    print(i, event, summary)
     if event == "Race":
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
@@ -238,10 +237,9 @@ for i in range(len(raceevents)):
         sc = float(circuitsdata[cx][35])
         drawing = scaleSVG('Location/' + state + 'R.svg', sc)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 50, (row - 1) * rowheight + bottommargin + 50)
-        my_canvas.drawString(col * colwidth + leftmargin + 100, (row - 1) * rowheight + bottommargin + 20, raceevents[i].location)
-        my_canvas.drawString(col * colwidth + leftmargin + 100, (row - 1) * rowheight + bottommargin + 10, state)
+        my_canvas.drawString(col * colwidth + leftmargin + 32, (row - 1) * rowheight + bottommargin + 20, raceevents[i].location)
+        my_canvas.drawString(col * colwidth + leftmargin + 32, (row - 1) * rowheight + bottommargin + 10, state)
         landcode = circuitsdata[cx][1][:2].upper()
-        print(i, landcode)
         drawing = scaleSVG('Flags/' + landcode + 'tw.svg', flagscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 10)
         col += 1
