@@ -23,7 +23,8 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.height = drawing.height * scaling_y
     drawing.scale(scaling_x, scaling_y)
     return drawing
-def SVG_to_RSVG(state):
+def SVG_to_RSVG(state, cx, cy):
+    print(cx, cy)
     SVG_NS = "http://www.w3.org/2000/svg"
     NSMAP = {None: SVG_NS}
     tree = etree.parse("Location/" + state + ".svg")
@@ -57,13 +58,15 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 state = circuitsdata[index][25]
+cx = circuitsdata[index][36]
+cy = circuitsdata[index][37]
 print(state)
 my_canvas = canvas.Canvas("PDF/" + state + "R.pdf")
 my_canvas.setFont("Helvetica", 25)
 my_canvas.setTitle(state + "R")
 bottom_margin = 5
 left_margin = 5
-SVG_to_RSVG(state)
+SVG_to_RSVG(state, cx, cy)
 circuit_x = 0
 circuit_y = 0
 name_x = 10
