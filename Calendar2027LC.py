@@ -239,7 +239,7 @@ for i in range(len(raceevents)):
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 50, (row - 1) * rowheight + bottommargin + 50)
         my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 20, raceevents[i].location)
         my_canvas.drawString(col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 10, state)
-        landcode = circuitsdata[cx][1][:2]
+        landcode = circuitsdata[cx][1][:2].upper()
         print(i, landcode)
         col += 1
         if col == 4:
