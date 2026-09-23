@@ -24,7 +24,6 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
 def SVG_to_RSVG(state, cx, cy):
-    print(cx, cy)
     SVG_NS = "http://www.w3.org/2000/svg"
     NSMAP = {None: SVG_NS}
     tree = etree.parse("Location/" + state + ".svg")
@@ -35,7 +34,7 @@ def SVG_to_RSVG(state, cx, cy):
         print("Created new <defs> element.")
     else:
         print("Found existing <defs> element.")
-    radial_gradient = etree.SubElement(defs, f"{{{SVG_NS}}}radialGradient", id="grad1", cx="80%", cy="60%")
+    radial_gradient = etree.SubElement(defs, f"{{{SVG_NS}}}radialGradient", id="grad1", cx=f"{cx}%", cy=f"{cy}%")
     etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="0%", style="stop-color:#b1b100;stop-opacity:1")
     etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="100%", style="stop-color:#555500;stop-opacity:1")
     ns = {"svg": "http://www.w3.org/2000/svg"}
