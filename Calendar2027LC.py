@@ -250,7 +250,7 @@ for i in range(len(raceevents)):
         drawing = scaleSVG('Clocks/1530om.svg', clockscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 14, (row - 1) * rowheight + bottommargin + 50)
         drawing = scaleSVG('SVG/PortimãoLC.svg', 0.05)
-        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 50)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 60, (row - 1) * rowheight + bottommargin + 50)
         col += 1
         if col == 4:
             col = 0
