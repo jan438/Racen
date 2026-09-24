@@ -216,7 +216,7 @@ eventheight = (height - bottommargin - headerheight) / 6
 colwidth = eventwidth
 rowheight = eventheight
 flagscale = 1.0
-calscale = 0.1
+calscale = 0.06
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
@@ -239,13 +239,13 @@ for i in range(len(raceevents)):
         drawing = scaleSVG('Location/' + state + 'R.svg', sc)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 50, (row - 1) * rowheight + bottommargin + 50)
         my_canvas.setFillColor(HexColor("#ffffff"))
-        my_canvas.drawString(col * colwidth + leftmargin + 35, (row - 1) * rowheight + bottommargin + 20, raceevents[i].location)
-        my_canvas.drawString(col * colwidth + leftmargin + 35, (row - 1) * rowheight + bottommargin + 10, state)
+        my_canvas.drawString(col * colwidth + leftmargin + 35, (row - 1) * rowheight + bottommargin + 15, raceevents[i].location)
+        my_canvas.drawString(col * colwidth + leftmargin + 35, (row - 1) * rowheight + bottommargin + 5, state)
         landcode = circuitsdata[cx][1][:2].upper()
         drawing = scaleSVG('Flags/' + landcode + 'tw.svg', flagscale)
-        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 10)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 5)
         drawing = scaleSVG('SVG/calendar.svg', calscale)
-        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 80)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 50)
         col += 1
         if col == 4:
             col = 0
