@@ -243,9 +243,11 @@ for i in range(len(raceevents)):
         my_canvas.drawString(col * colwidth + leftmargin + 35, (row - 1) * rowheight + bottommargin + 5, state)
         landcode = circuitsdata[cx][1][:2].upper()
         drawing = scaleSVG('Flags/' + landcode + 'tw.svg', flagscale)
-        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 5)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 0)
         drawing = scaleSVG('SVG/calendar.svg', calscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 50)
+        drawing = scaleSVG('Clocks/1530om.svg', calscale)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 14, (row - 1) * rowheight + bottommargin + 50)
         col += 1
         if col == 4:
             col = 0
