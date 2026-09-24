@@ -221,7 +221,7 @@ calscale = 0.06
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.setFont(calfont, 30)
-my_canvas.setFillColor(HexColor("#000000"))
+my_canvas.setFillColor(HexColor("#ffffff"))
 my_canvas.drawString(100, 775, "2027 Calendar " + version)
 row = 6
 col = 0
