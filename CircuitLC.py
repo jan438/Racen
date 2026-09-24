@@ -117,7 +117,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     print("Startindexes", startindices[0], startindices[1], startindices[2])
     with open("SVG/" + svgfile + "LC.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">')
-        f.write(f'"<defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" stop-color="red" /><stop offset="100%" stop-color="blue" /></radialGradient></defs>>"')
+        f.write(f'"<defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" stop-color="#b1b100" /><stop offset="100%" stop-color="#555500" /></radialGradient></defs>>"')
         for feature in geojson_data['features']:
             geometry = feature['geometry']
             coords = geometry['coordinates']
