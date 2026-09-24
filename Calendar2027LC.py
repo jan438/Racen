@@ -238,6 +238,7 @@ for i in range(len(raceevents)):
         sc = float(circuitsdata[cx][35])
         drawing = scaleSVG('Location/' + state + 'R.svg', sc)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 50, (row - 1) * rowheight + bottommargin + 50)
+        my_canvas.setFillColor(HexColor("#ffffff"))
         my_canvas.drawString(col * colwidth + leftmargin + 35, (row - 1) * rowheight + bottommargin + 20, raceevents[i].location)
         my_canvas.drawString(col * colwidth + leftmargin + 35, (row - 1) * rowheight + bottommargin + 10, state)
         landcode = circuitsdata[cx][1][:2].upper()
