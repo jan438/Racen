@@ -116,7 +116,8 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     offset_y = (startfinish_y - min_y) * scale_y
     print("Startindexes", startindices[0], startindices[1], startindices[2])
     with open("SVG/" + svgfile + "LC.svg", 'w') as f:
-        f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n')
+        f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">')
+        f.write(f'"<defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" stop-color="red" /><stop offset="100%" stop-color="blue" /></radialGradient></defs>>"')
         for feature in geojson_data['features']:
             geometry = feature['geometry']
             coords = geometry['coordinates']
@@ -125,9 +126,9 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
                 idx1 = int(circuitsdata[cx][12])
                 idx2 = int(circuitsdata[cx][13])
                 idx3 = int(circuitsdata[cx][14])  
-                cc = circuitcolors[cx]
+                #cc = circuitcolors[cx]
                 path = coordinates_to_path([coords], scale, translate)
-                f.write(f'<path d="{path}" fill="{cc}" stroke="none"/>\n')
+                f.write(f'<path d="{path}" fill="url(#grad1)" stroke="none"/>\n')
         f.write('</svg>')    
     return [offset_x, offset_y]
 def transform_svg(svgfile, tx, ty, sx, sy): 
