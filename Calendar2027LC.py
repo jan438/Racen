@@ -216,6 +216,7 @@ eventheight = (height - bottommargin - headerheight) / 6
 colwidth = eventwidth
 rowheight = eventheight
 flagscale = 1.0
+calscale = 0.2
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
@@ -242,6 +243,8 @@ for i in range(len(raceevents)):
         landcode = circuitsdata[cx][1][:2].upper()
         drawing = scaleSVG('Flags/' + landcode + 'tw.svg', flagscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 10)
+        drawing = scaleSVG('SVG/calendar.svg', calscale)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 200)
         col += 1
         if col == 4:
             col = 0
