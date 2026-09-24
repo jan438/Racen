@@ -217,6 +217,7 @@ colwidth = eventwidth
 rowheight = eventheight
 flagscale = 1.0
 calscale = 0.06
+clockscale = 1.0
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
@@ -246,7 +247,7 @@ for i in range(len(raceevents)):
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 0)
         drawing = scaleSVG('SVG/calendar.svg', calscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 50)
-        drawing = scaleSVG('Clocks/1530om.svg', calscale)
+        drawing = scaleSVG('Clocks/1530om.svg', clockscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 14, (row - 1) * rowheight + bottommargin + 50)
         col += 1
         if col == 4:
