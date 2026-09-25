@@ -16,6 +16,9 @@ sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
 strokecolor = "#000000"   #black
+silverhead = '#4b6777'
+rustedgold = '#ce9e62'
+
 circuitcolors = ["#88255F", "#DB4035", "#FF9933", "#FAD000", "#AFB83B", "#7ECC49", "#E7E84F", "#299438", "#A8A202", "#158FAD", "#14AAF5", "#CD0027", "#4073FF", "#D38895", "#884DFF", "#AF38EB", "#EB96EB", "#E05194", "#FF8D85", "#808080", "#FFE001", "#CCAC93", "#9A6324", "#80FF80"]
 
 def scaleSVG(svgfile, scaling_factor):
@@ -117,7 +120,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     print("Startindexes", startindices[0], startindices[1], startindices[2])
     with open("SVG/" + svgfile + "LC.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">')
-        f.write(f'"<defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" stop-color="#b1b100" /><stop offset="100%" stop-color="#555500" /></radialGradient></defs>>"')
+        f.write(f'"<defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" stop-color="{rustedgold}" /><stop offset="100%" stop-color="{silverhead}" /></radialGradient></defs>>"')
         for feature in geojson_data['features']:
             geometry = feature['geometry']
             coords = geometry['coordinates']
