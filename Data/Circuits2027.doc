@@ -26,18 +26,18 @@ AlbertPark;au-1953;0316;330.0;240.0;Australia;0.061;8.0;10.0;c;70;50;0;44;93;198
 23 a sector3
 24 Display Name
 25 State name
-26 circle x
-27 circle y
-28 layout x
-29 layout y
-30 day1 x
-31 day1 y
-32 day2 x
-33 day2 y
-34 laps
-35 scale cal location
-36 cx radial
-37 cy radial
+26 location x 
+27 location y 
+28 circuit x 
+29 circuit y 
+30 location cx 
+31 location cy 
+32 circuit cx 
+33 circuit cy 
+34 laps 
+35 scale cal location 
+36 scale cal circuit
+
 
 Viewbox = 115 * 125
 Circuitbox = 95 * 85
