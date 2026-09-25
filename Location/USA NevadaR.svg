@@ -7,7 +7,7 @@
         fill-rule: evenodd;
       }
     </style>
-  <radialGradient id="grad1" cx="88%" cy="99%"><stop offset="0%" style="stop-color:#b1b100;stop-opacity:1"/><stop offset="100%" style="stop-color:#555500;stop-opacity:1"/></radialGradient></defs>
+  <radialGradient id="grad1" cx="88%" cy="99%"><stop offset="0%" style="stop-color:#ce9e62;stop-opacity:1"/><stop offset="100%" style="stop-color:#c1432e;stop-opacity:1"/></radialGradient></defs>
   <g id="viewport-20260919020428224" class="svg-pan-zoom_viewport" transform="matrix(3.6,0,0,3.6,0,0)" style="transform: matrix(3.6, 0, 0, 3.6, 0, 0);">
     <!-- © Copyright FreeSVGMaps.com, Striped Candy LLC All rights reserved -->
     <g id="mapGroup">

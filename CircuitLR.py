@@ -11,6 +11,8 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from lxml import etree
 
 circuitscale = 1.0
+dustyred = "#c1432e"
+rustedgold = "#ce9e62"
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -34,8 +36,8 @@ def SVG_to_RSVG(state, cx, cy):
     else:
         print("Found existing <defs> element.")
     radial_gradient = etree.SubElement(defs, f"{{{SVG_NS}}}radialGradient", id="grad1", cx=f"{cx}%", cy=f"{cy}%")
-    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="0%", style="stop-color:#b1b100;stop-opacity:1")
-    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="100%", style="stop-color:#555500;stop-opacity:1")
+    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="0%", style=f"stop-color:{rustedgold};stop-opacity:1")
+    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="100%", style=f"stop-color:{dustyred};stop-opacity:1")
     ns = {"svg": "http://www.w3.org/2000/svg"}
     paths = tree.xpath('//svg:path',namespaces=ns) 
     if paths:
