@@ -165,8 +165,8 @@ renderPDF.draw(drawing, my_canvas, 300, 750)
 name_x = 300
 name_y = 25
 for i in range(count):
-    cx = 60
-    cy = 50
+    cx = int(circuitsdata[i][32])
+    cy = int(circuitsdata[i][33])
     [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[i][1], circuitsdata[i][0], cx, cy)
     circuit_x = 0
     circuit_y = 0
