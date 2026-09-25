@@ -237,8 +237,11 @@ for i in range(len(raceevents)):
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
         cx = lookupcircuit(state)
         sc = float(circuitsdata[cx][35])
+        locx = int(circuitsdata[cx][26])
+        locy = int(circuitsdata[cx][27])
+        print(state, locx, locy)
         drawing = scaleSVG('Location/' + state + 'R.svg', sc)
-        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 50, (row - 1) * rowheight + bottommargin + 50)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + locx, (row - 1) * rowheight + bottommargin + locy)
         my_canvas.setFillColor(HexColor("#ffffff"))
         my_canvas.drawString(col * colwidth + leftmargin + 35, (row - 1) * rowheight + bottommargin + 15, raceevents[i].location)
         my_canvas.drawString(col * colwidth + leftmargin + 35, (row - 1) * rowheight + bottommargin + 5, state)
