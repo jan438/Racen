@@ -210,7 +210,6 @@ headerheight = 50
 bottommargin = 10
 leftmargin = 8.0
 rightmargin = 8.0
-circuitscale = 0.06
 eventwidth = (width - leftmargin - rightmargin) / 4
 eventheight = (height - bottommargin - headerheight) / 6
 colwidth = eventwidth
@@ -218,6 +217,7 @@ rowheight = eventheight
 flagscale = 1.0
 calscale = 0.06
 clockscale = 0.6
+circuitscale = 0.1
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
@@ -249,8 +249,8 @@ for i in range(len(raceevents)):
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 50)
         drawing = scaleSVG('Clocks/1530om.svg', clockscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 16, (row - 1) * rowheight + bottommargin + 50)
-        drawing = scaleSVG('SVG/' + circuitsdata[cx][0] + 'LC.svg', 0.05)
-        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 60, (row - 1) * rowheight + bottommargin + 50)
+        drawing = scaleSVG('SVG/' + circuitsdata[cx][0] + 'LC.svg', circuitscale)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 90, (row - 1) * rowheight + bottommargin + 50)
         col += 1
         if col == 4:
             col = 0
