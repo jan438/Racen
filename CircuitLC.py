@@ -11,7 +11,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 circuitscale = 1.0
 flagcorrection = -5.0
-cx = 3
+i = 3
 sec1color = "#db4a25"   #red
 sec2color = "#58fdff"   #blue
 sec3color = "#fae44a"   #yellow
@@ -46,7 +46,7 @@ def get_angle(point1, point2):
     angle_degrees = math.degrees(angle_radians)
     normalized_angle = angle_degrees % 360
     return normalized_angle
-def GeoJSON_to_SVG(geojsonfile, svgfile):
+def GeoJSON_to_SVG(geojsonfile, svgfile, cx, cy):
     def coordinates_to_path(coordinates, scale, translate):
         path_data = ""
         for LineString in coordinates:
@@ -120,16 +120,16 @@ def GeoJSON_to_SVG(geojsonfile, svgfile):
     print("Startindexes", startindices[0], startindices[1], startindices[2])
     with open("SVG/" + svgfile + "LC.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">')
-        f.write(f'"<defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" stop-color="{rustedgold}" /><stop offset="100%" stop-color="{silverhead}" /></radialGradient></defs>>"')
+        f.write(f'"<defs><radialGradient id="grad1" cx="{cx}%" cy="{cy}%" r="50%" fx="50%" fy="50%"><stop offset="0%" stop-color="{rustedgold}" /><stop offset="100%" stop-color="{silverhead}" /></radialGradient></defs>>"')
         for feature in geojson_data['features']:
             geometry = feature['geometry']
             coords = geometry['coordinates']
             if geometry['type'] == 'LineString':
-                print("Circuitsdata", circuitsdata[cx][0], circuitsdata[cx][12], circuitsdata[cx][13], circuitsdata[cx][14])
-                idx1 = int(circuitsdata[cx][12])
-                idx2 = int(circuitsdata[cx][13])
-                idx3 = int(circuitsdata[cx][14])  
-                #cc = circuitcolors[cx]
+                print("Circuitsdata", circuitsdata[i][0], circuitsdata[i][12], circuitsdata[i][13], circuitsdata[i][14])
+                idx1 = int(circuitsdata[i][12])
+                idx2 = int(circuitsdata[i][13])
+                idx3 = int(circuitsdata[i][14])  
+                #cc = circuitcolors[i]
                 path = coordinates_to_path([coords], scale, translate)
                 f.write(f'<path d="{path}" fill="url(#grad1)" stroke="none"/>\n')
         f.write('</svg>')    
@@ -155,20 +155,22 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2027LC.pdf")
+my_canvas = canvas.Canvas("PDF/" + circuitsdata[i][0] + "2027LC.pdf")
 my_canvas.setFont("Helvetica", 25)
-my_canvas.setTitle(circuitsdata[cx][0])
+my_canvas.setTitle(circuitsdata[i][0])
 bottom_margin = 5
 left_margin = 5
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 300, 750)
 name_x = 300
 name_y = 25
-[offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[cx][1], circuitsdata[cx][0])
+cx = 60
+cy = 50
+[offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[i][1], circuitsdata[i][0], cx, cy)
 circuit_x = 0
 circuit_y = 0
-renderPDF.draw(scaleSVG("SVG/" + circuitsdata[cx][0] + "LC.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
-my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[cx][0])
+renderPDF.draw(scaleSVG("SVG/" + circuitsdata[i][0] + "LC.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
+my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, circuitsdata[i][0])
 flag_x = offset_x * circuitscale
 flag_y = offset_y * circuitscale
 renderPDF.draw(scaleSVG("SVG/finishflag.svg", circuitscale), my_canvas, circuit_x + left_margin + flag_x + flagcorrection * circuitscale, circuit_y + bottom_margin + flag_y)
