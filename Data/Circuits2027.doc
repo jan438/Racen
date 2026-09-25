@@ -44,31 +44,10 @@ Circuitbox = 95 * 85
 
 worldcolor ="#9BD5C1"
 
-Table length linestrings
-00 AlbertPark 146 len orig file          #88255F  Barry Red
-01 Bahrain 94 len orig file              #DB4035  Red
-02 BakuCity 86 len orig file             #FF9933  Orange 
-03 Catalunya 150 len orig file           #FAD000  Yellow
-04 GillesVilleneuve 102 len orig file    #AFB83B  Olive Green
-05 HermanosRodríguez 101 len orig file   #7ECC49  Lime Green
-06 Hungaroring 141 len orig file         #E7E84F  Pear
-07 JeddahCorniche 152 len orig file      #299438  Green
-08 JoseCarlosPace                        #A8A202
-09 LasVegas                              #158FAD  Teal
-10 Lusail 107 len orig file              #14AAF5  Sky Blue
-11 Madring                               #CD0027
-12 MarinaBay                             #4073FF  Blue
-13 Miami 109 len orig file               #D38895
-14 Monaco                                #884DFF  Grape
-15 Monza                                 #AF38EB  Violet
-16 RedBullRing                           #EB96EB  Lavender
-17 Shanghai                              #E05194  Magenta
-18 Silverstone                           #FF8D85  Salmon
-19 SpaFrancorchamps                      #808080  Charcoal
-20 Suzuka                                #FFE001
-21 theAmericas 171 len orig file         #CCAC93  Taupe
-22 YasMarina                             #9A6324  Brown
-23 Zandvoort                             #80FF80
+deep rusted red c1432e
+silver head-dress  4b6777
+rusted gold ce9e62
+black 2c2c2c
 
 Coords startindex startsector2 startsector3 OpenStreetMap
 00 AlbertPark          len 148  two points added
