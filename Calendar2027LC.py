@@ -226,13 +226,13 @@ my_canvas.setFillColor(HexColor("#ffffff"))
 my_canvas.drawString(100, 775, "2027 Calendar " + version)
 row = 6
 col = 0
-my_canvas.setFont(calfont, 12)
 for i in range(len(raceevents)):
     raceevent = raceevents[i]
     summary = raceevents[i].summary
     partindex = summary.find(" (")
     event = summary[:partindex]
     if event == "Race":
+        my_canvas.setFont(calfont, 12)
         stateindex = raceevent.summary.find("Race (Grand Prix of ")
         state = raceevent.summary[stateindex + 20:len(raceevent.summary) - 1]
         cx = lookupcircuit(state)
@@ -255,6 +255,9 @@ for i in range(len(raceevents)):
         drawing = scaleSVG('SVG/' + circuitsdata[cx][0] + 'LC.svg', circuitscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 90, (row - 1) * rowheight + bottommargin + 50)
         print(raceevent.day, raceevent.month)
+        my_canvas.setFont(calfont, 12)
+        my_canvas.drawString(col * colwidth + leftmargin + 10, (row - 1) * rowheight + bottommargin + 45, str(raceevent.day))
+        my_canvas.drawString(col * colwidth + leftmargin + 10, (row - 1) * rowheight + bottommargin + 55, str(raceevent.month))
         col += 1
         if col == 4:
             col = 0
