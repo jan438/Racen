@@ -218,6 +218,8 @@ flagscale = 1.0
 calscale = 0.06
 clockscale = 0.6
 circuitscale = 0.1
+calx = 0
+caly = 50
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
@@ -242,7 +244,6 @@ for i in range(len(raceevents)):
         locy = int(circuitsdata[cx][27])
         cirx = int(circuitsdata[cx][28])
         ciry = int(circuitsdata[cx][29])
-        print(state, locx, locy)
         drawing = scaleSVG('Location/' + state + 'R.svg', sc)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + locx, (row - 1) * rowheight + bottommargin + locy)
         my_canvas.setFillColor(HexColor("#ffffff"))
@@ -252,16 +253,16 @@ for i in range(len(raceevents)):
         drawing = scaleSVG('Flags/' + landcode + 'tw.svg', flagscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 0)
         drawing = scaleSVG('SVG/calendar.svg', calscale)
-        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin, (row - 1) * rowheight + bottommargin + 50)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + calx, (row - 1) * rowheight + bottommargin + caly)
         drawing = scaleSVG('Clocks/1530om.svg', clockscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 50)
         drawing = scaleSVG('SVG/' + circuitsdata[cx][0] + 'LC.svg', circuitscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + cirx, (row - 1) * rowheight + bottommargin + ciry)
         my_canvas.setFont(calfont, 12)
         my_canvas.setFillColor(HexColor("#000000"))
-        my_canvas.drawString(col * colwidth + leftmargin + 10, (row - 1) * rowheight + bottommargin + 55, str(raceevent.day))
+        my_canvas.drawString(col * colwidth + leftmargin + calx + 10, (row - 1) * rowheight + bottommargin + caly + 5, str(raceevent.day))
         my_canvas.setFillColor(HexColor("#ffffff"))
-        my_canvas.drawString(col * colwidth + leftmargin + 10, (row - 1) * rowheight + bottommargin + 75, monthnames[raceevent.month - 1])
+        my_canvas.drawString(col * colwidth + leftmargin + calx + 10, (row - 1) * rowheight + bottommargin + caly + 25, monthnames[raceevent.month - 1])
         col += 1
         if col == 4:
             col = 0
