@@ -254,6 +254,7 @@ for i in range(len(raceevents)):
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 20, (row - 1) * rowheight + bottommargin + 50)
         drawing = scaleSVG('SVG/' + circuitsdata[cx][0] + 'LC.svg', circuitscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 90, (row - 1) * rowheight + bottommargin + 50)
+        print(raceevent.day, raceevent.month)
         col += 1
         if col == 4:
             col = 0
