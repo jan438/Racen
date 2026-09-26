@@ -259,7 +259,7 @@ for i in range(len(raceevents)):
         my_canvas.setFillColor(HexColor("#000000"))
         my_canvas.drawString(col * colwidth + leftmargin + 10, (row - 1) * rowheight + bottommargin + 55, str(raceevent.day))
         my_canvas.setFillColor(HexColor("#ffffff"))
-        my_canvas.drawString(col * colwidth + leftmargin + 10, (row - 1) * rowheight + bottommargin + 75, str(raceevent.month))
+        my_canvas.drawString(col * colwidth + leftmargin + 10, (row - 1) * rowheight + bottommargin + 75, monthnames[raceevent.month - 1])
         col += 1
         if col == 4:
             col = 0
