@@ -59,8 +59,8 @@ with open(file_to_open, 'r') as file:
         count += 1
 for i in range(len(circuitsdata)):
     state = circuitsdata[i][25]
-    cx = circuitsdata[i][36]
-    cy = circuitsdata[i][37]
+    cx = circuitsdata[i][30]
+    cy = circuitsdata[i][31]
     print(state)
     my_canvas = canvas.Canvas("PDF/" + state + "R.pdf")
     my_canvas.setFont("Helvetica", 25)

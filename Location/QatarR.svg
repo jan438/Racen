@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" id="mapSVG" version="1.1" x="0px" y="0px" style="overflow: hidden; enable-background:new -461 335 100 100;" xml:space="preserve" width="360" height="360" viewBox="0 0 360 360" sodipodi:docname="Qatar.svg" inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)">
   <defs id="defs1">
-    <radialGradient id="grad1" cx="88%" cy="99%">
+    <radialGradient id="grad1" cx="10%" cy="5%">
       <stop offset="0%" style="stop-color:#ce9e62;stop-opacity:1"/>
       <stop offset="100%" style="stop-color:#c1432e;stop-opacity:1"/>
     </radialGradient>
