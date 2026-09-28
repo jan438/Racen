@@ -218,7 +218,7 @@ calscale = 0.06
 clockscale = 0.6
 circuitscale = 0.1
 calx = 0
-caly = 80
+caly = 50
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
