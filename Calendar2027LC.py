@@ -218,7 +218,7 @@ calscale = 0.06
 clockscale = 0.6
 circuitscale = 0.1
 calx = 0
-caly = 50
+caly = 80
 
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
@@ -254,7 +254,7 @@ for i in range(len(raceevents)):
         drawing = scaleSVG('SVG/calendar.svg', calscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + calx, (row - 1) * rowheight + bottommargin + caly)
         drawing = scaleSVG('Clocks/1530om.svg', clockscale)
-        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 5, (row - 1) * rowheight + bottommargin + 25)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 5, (row - 1) * rowheight + bottommargin + caly - 25)
         drawing = scaleSVG('SVG/' + circuitsdata[cx][0] + 'LC.svg', circuitscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + cirx, (row - 1) * rowheight + bottommargin + ciry)
         my_canvas.setFont(calfont, 17)
