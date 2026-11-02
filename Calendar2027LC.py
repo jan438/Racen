@@ -263,6 +263,8 @@ for i in range(len(raceevents)):
         my_canvas.setFont(calfont, 15)
         my_canvas.setFillColor(HexColor("#ffffff"))
         my_canvas.drawString(col * colwidth + leftmargin + calx + 10, (row - 1) * rowheight + bottommargin + caly + 25, monthnames[raceevent.month - 1])
+    elif event == "Sprint":
+        print(event)
         col += 1
         if col == 4:
             col = 0
