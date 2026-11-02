@@ -217,7 +217,7 @@ flagscale = 1.0
 calscale = 0.06
 clockscale = 0.6
 circuitscale = 0.1
-sprintscale = 0.5
+sprintscale = 0.02
 calx = 0
 caly = 50
 
