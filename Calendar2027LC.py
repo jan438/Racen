@@ -217,6 +217,7 @@ flagscale = 1.0
 calscale = 0.06
 clockscale = 0.6
 circuitscale = 0.1
+sprintscale = 0.5
 calx = 0
 caly = 50
 
@@ -236,6 +237,8 @@ for i in range(len(raceevents)):
         my_canvas.setFont(calfont, 12)
         my_canvas.setFillColor(HexColor("#ffffff"))
         my_canvas.drawString(col * colwidth + leftmargin + 95, (row - 1) * rowheight + bottommargin + 15, str(raceevent.day) + " " + raceevent.starttime[9:11] + ":" + raceevent.starttime[12:14])
+        drawing = scaleSVG('SVG/sprint.svg', sprintscale)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 85, (row - 1) * rowheight + bottommargin + 15)
     elif event == "Race":
         my_canvas.setFont(calfont, 12)
         my_canvas.setFillColor(HexColor("#ffffff"))
