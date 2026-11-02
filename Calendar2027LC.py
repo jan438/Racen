@@ -235,8 +235,7 @@ for i in range(len(raceevents)):
     if event == "Sprint":
         my_canvas.setFont(calfont, 12)
         my_canvas.setFillColor(HexColor("#ffffff"))
-        my_canvas.drawString(col * colwidth + leftmargin + 95, (row - 1) * rowheight + bottommargin + 15, "Sprint")
-        print(event)
+        my_canvas.drawString(col * colwidth + leftmargin + 95, (row - 1) * rowheight + bottommargin + 15, str(raceevent.day))
     elif event == "Race":
         my_canvas.setFont(calfont, 12)
         my_canvas.setFillColor(HexColor("#ffffff"))
