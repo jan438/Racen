@@ -9,7 +9,7 @@
 </g>
   <text id="svgAttribution" x="5" y="355" font-size="6px" fill="#000000" text-anchor="start" dominant-baseline="baseline">© FreeSVGMaps.com</text>
   <defs>
-    <radialGradient id="grad1" cx="10%" cy="5%">
+    <radialGradient id="grad1" cx="80%" cy="70%">
       <stop offset="30%" style="stop-color:#ce9e62;stop-opacity:1"/>
       <stop offset="100%" style="stop-color:#c1432e;stop-opacity:1"/>
     </radialGradient>
