@@ -394,8 +394,8 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for i in range(len(circuitsdata)):
-    #if circuitsdata[i][0] == "":
-    if True:
+    if circuitsdata[i][0] == "Sakhir":
+    #if True:
         cx = i
         info_Orig_file(str(circuitsdata[cx][1]))
         my_canvas = canvas.Canvas("PDF/" + circuitsdata[cx][0] + "2027LM.pdf")
