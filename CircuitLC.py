@@ -120,7 +120,7 @@ def GeoJSON_to_SVG(geojsonfile, svgfile, cx, cy):
     print("Startindexes", startindices[0], startindices[1], startindices[2])
     with open("SVG/" + svgfile + "LC.svg", 'w') as f:
         f.write(f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">')
-        f.write(f'"<defs><radialGradient id="grad1" cx="{cx}%" cy="{cy}%" r="30%" fx="50%" fy="50%"><stop offset="0%" stop-color="{rustedgold}" /><stop offset="100%" stop-color="{silverhead}" /></radialGradient></defs>>"')
+        f.write(f'"<defs><radialGradient id="grad1" cx="{cx}%" cy="{cy}%" r="50%" fx="50%" fy="50%"><stop offset="0%" stop-color="{rustedgold}" /><stop offset="100%" stop-color="{silverhead}" /></radialGradient></defs>>"')
         for feature in geojson_data['features']:
             geometry = feature['geometry']
             coords = geometry['coordinates']
@@ -165,8 +165,8 @@ renderPDF.draw(drawing, my_canvas, 300, 750)
 name_x = 300
 name_y = 25
 for i in range(count):
-    if circuitsdata[i][0] == "BahrainInternational":
-    #if True:
+    #if circuitsdata[i][0] == "BahrainInternational":
+    if True:
         cx = int(circuitsdata[i][32])
         cy = int(circuitsdata[i][33])
         [offset_x, offset_y] = GeoJSON_to_SVG(circuitsdata[i][1], circuitsdata[i][0], cx, cy)
