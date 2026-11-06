@@ -264,7 +264,7 @@ for i in range(len(raceevents)):
         drawing = scaleSVG('Clocks/1530om.svg', clockscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 2, (row - 1) * rowheight + bottommargin + caly - 27.5)
         drawing = scaleSVG('SVG/' + circuitsdata[cx][0] + 'LC.svg', circuitscale)
-        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + cirx, (row - 1) * rowheight + bottommargin + ciry)
+        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + locx + cirx, (row - 1) * rowheight + bottommargin + locy + ciry)
         my_canvas.setFont(calfont, 17)
         my_canvas.setFillColor(HexColor("#000000"))
         my_canvas.drawString(col * colwidth + leftmargin + calx + 10, (row - 1) * rowheight + bottommargin + caly + 5, str(raceevent.day))
