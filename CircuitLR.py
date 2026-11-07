@@ -58,8 +58,8 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][0] == "Madring":
-    #if True:
+    #if circuitsdata[i][0] == "Madring":
+    if True:
         state = circuitsdata[i][25]
         cx = circuitsdata[i][30]
         cy = circuitsdata[i][31]
