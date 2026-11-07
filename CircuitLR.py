@@ -35,8 +35,8 @@ def SVG_to_RSVG(state, cx, cy):
         print("Created new <defs> element.")
     else:
         print("Found existing <defs> element.")
-    radial_gradient = etree.SubElement(defs, f"{{{SVG_NS}}}radialGradient", id="grad1", cx=f"{cx}%", cy=f"{cy}%")
-    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="30%", style=f"stop-color:{rustedgold};stop-opacity:1")
+    radial_gradient = etree.SubElement(defs, f"{{{SVG_NS}}}radialGradient", id="grad1", cx=f"{cx}%", cy=f"{cy}%", r="30%")
+    etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="0%", style=f"stop-color:{rustedgold};stop-opacity:1")
     etree.SubElement(radial_gradient, f"{{{SVG_NS}}}stop", offset="100%", style=f"stop-color:{dustyred};stop-opacity:1")
     ns = {"svg": "http://www.w3.org/2000/svg"}
     paths = tree.xpath('//svg:path',namespaces=ns) 
@@ -58,21 +58,22 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for i in range(len(circuitsdata)):
-    state = circuitsdata[i][25]
-    cx = circuitsdata[i][30]
-    cy = circuitsdata[i][31]
-    print(state)
-    my_canvas = canvas.Canvas("PDF/" + state + "R.pdf")
-    my_canvas.setFont("Helvetica", 25)
-    my_canvas.setTitle(state + "R")
-    bottom_margin = 5
-    left_margin = 5
-    SVG_to_RSVG(state, cx, cy)
-    circuit_x = 0
-    circuit_y = 0
-    name_x = 10
-    name_y = 10
-    renderPDF.draw(scaleSVG("Location/" + state + "R.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
-    my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, state)
+    if circuitsdata[i][0] == "Madring":
+    #if True:
+        state = circuitsdata[i][25]
+        cx = circuitsdata[i][30]
+        cy = circuitsdata[i][31]
+        my_canvas = canvas.Canvas("PDF/" + state + "R.pdf")
+        my_canvas.setFont("Helvetica", 25)
+        my_canvas.setTitle(state + "R")
+        bottom_margin = 5
+        left_margin = 5
+        SVG_to_RSVG(state, cx, cy)
+        circuit_x = 0
+        circuit_y = 0
+        name_x = 10
+        name_y = 10
+        renderPDF.draw(scaleSVG("Location/" + state + "R.svg", circuitscale), my_canvas, circuit_x + left_margin, circuit_y + bottom_margin)
+        my_canvas.drawString(circuit_x + left_margin + name_x, circuit_y + bottom_margin + name_y, state)
 my_canvas.save()
 key = input("Wait")
