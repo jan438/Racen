@@ -273,11 +273,11 @@ for i in range(len(raceevents)):
              my_canvas.drawString(col * colwidth + leftmargin + calx + (caldrawing.width - daywidth) / 2, (row - 1) * rowheight + bottommargin + caly + 5, daystr)
         if len(daystr) == 2:
              my_canvas.drawString(col * colwidth + leftmargin + calx + (caldrawing.width - daywidth) / 2, (row - 1) * rowheight + bottommargin + caly + 5, daystr)
-        my_canvas.setFont(calfont, 10)
+        my_canvas.setFont(calfont, 15)
         my_canvas.setFillColor(HexColor("#ffffff"))
         monthstr = monthnames[raceevent.month - 1]
-        monthwidth = pdfmetrics.stringWidth(monthstr, calfont, 10)
-        my_canvas.drawString(col * colwidth + leftmargin + calx + (caldrawing.width - monthwidth) / 2, (row - 1) * rowheight + bottommargin + caly + 25, monthstr)
+        monthwidth = pdfmetrics.stringWidth(monthstr, calfont, 15)
+        my_canvas.drawString(col * colwidth + leftmargin + calx + (caldrawing.width - monthwidth) / 2, (row - 1) * rowheight + bottommargin + caly + 22, monthstr)
         col += 1
         if col == 4:
             col = 0
