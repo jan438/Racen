@@ -272,7 +272,7 @@ for i in range(len(raceevents)):
         if len(daystr) == 1:
              my_canvas.drawString(col * colwidth + leftmargin + calx + 10, (row - 1) * rowheight + bottommargin + caly + 5, daystr)
         if len(daystr) == 2:
-             my_canvas.drawString(col * colwidth + leftmargin + calx + 10, (row - 1) * rowheight + bottommargin + caly + 5, daystr)
+             my_canvas.drawString(col * colwidth + leftmargin + calx + 10 - daywidth / 2, (row - 1) * rowheight + bottommargin + caly + 5, daystr)
         my_canvas.setFont(calfont, 10)
         my_canvas.setFillColor(HexColor("#ffffff"))
         my_canvas.drawString(col * colwidth + leftmargin + calx + 10, (row - 1) * rowheight + bottommargin + caly + 25, monthnames[raceevent.month - 1])
