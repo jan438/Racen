@@ -36,9 +36,6 @@ daycalscaling = 0.4
 twitterscaling = 0.45
 linescaling = 0.03
 outsidearea = "#2c2c2c"
-circuitarea = "#ffa981"
-text1 = "#696969"
-text2 = "#808080"
 left_padding = 0
 bottom_padding = 0
 A4_width = A4[0]
@@ -274,7 +271,7 @@ for i in range(len(raceevents)):
         if len(daystr) == 2:
              my_canvas.drawString(col * colwidth + leftmargin + calx + (caldrawing.width - daywidth) / 2, (row - 1) * rowheight + bottommargin + caly + 5, daystr)
         my_canvas.setFont(calfont, 15)
-        my_canvas.setFillColor(HexColor("#ffffff"))
+        my_canvas.setFillColor(HexColor('#000000'))
         monthstr = monthnames[raceevent.month - 1]
         monthwidth = pdfmetrics.stringWidth(monthstr, calfont, 15)
         my_canvas.drawString(col * colwidth + leftmargin + calx + (caldrawing.width - monthwidth) / 2, (row - 1) * rowheight + bottommargin + caly + 22, monthstr)
