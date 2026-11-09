@@ -259,8 +259,8 @@ for i in range(len(raceevents)):
         landcode = circuitsdata[cx][1][:2].upper()
         drawing = scaleSVG('Flags/' + landcode + 'tw.svg', flagscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 4, (row - 1) * rowheight + bottommargin + 0)
-        drawing = scaleSVG('SVG/calendar.svg', calscale)
-        renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + calx, (row - 1) * rowheight + bottommargin + caly)
+        caldrawing = scaleSVG('SVG/calendar.svg', calscale)
+        renderPDF.draw(caldrawing, my_canvas, col * colwidth + leftmargin + calx, (row - 1) * rowheight + bottommargin + caly)
         drawing = scaleSVG('Clocks/1530om.svg', clockscale)
         renderPDF.draw(drawing, my_canvas, col * colwidth + leftmargin + 2, (row - 1) * rowheight + bottommargin + caly - 27.5)
         drawing = scaleSVG('SVG/' + circuitsdata[cx][0] + 'LC.svg', circuitscale)
@@ -270,9 +270,9 @@ for i in range(len(raceevents)):
         daystr = str(raceevent.day)
         daywidth = pdfmetrics.stringWidth(daystr, calfont, 17)
         if len(daystr) == 1:
-             my_canvas.drawString(col * colwidth + leftmargin + calx + 25 - daywidth, (row - 1) * rowheight + bottommargin + caly + 5, daystr)
+             my_canvas.drawString(col * colwidth + leftmargin + calx + (caldrawing.width - daywidth) / 2, (row - 1) * rowheight + bottommargin + caly + 5, daystr)
         if len(daystr) == 2:
-             my_canvas.drawString(col * colwidth + leftmargin + calx + 25 - daywidth, (row - 1) * rowheight + bottommargin + caly + 5, daystr)
+             my_canvas.drawString(col * colwidth + leftmargin + calx + (caldrawing.width - daywidth) / 2, (row - 1) * rowheight + bottommargin + caly + 5, daystr)
         my_canvas.setFont(calfont, 10)
         my_canvas.setFillColor(HexColor("#ffffff"))
         my_canvas.drawString(col * colwidth + leftmargin + calx + 10, (row - 1) * rowheight + bottommargin + caly + 25, monthnames[raceevent.month - 1])
