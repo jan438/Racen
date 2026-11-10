@@ -226,13 +226,12 @@ for i in range(count):
     arrow2_y = sect3_offset_y * circuitscale
     info_x = float(circuitsdata[i][10])
     info_y = float(circuitsdata[i][11])
-    if info_x > 0:
-        circledrawing = scaleSVG("SVG/circle.svg", circlescale)
-        renderPDF.draw(circledrawing, my_canvas, circuit_x + info_x - circledrawing.width / 2, circuit_y + info_y - circledrawing.height / 2)
-        my_canvas.setFont(cirfont, 7)
-        my_canvas.setFillColorRGB(170,255,127)
-        lapsstr = circuitsdata[i][34]
-        my_canvas.drawString(circuit_x + info_x - 4, circuit_y + info_y - 2, lapsstr)
+    circledrawing = scaleSVG("SVG/circle.svg", circlescale)
+    renderPDF.draw(circledrawing, my_canvas, circuit_x + info_x - circledrawing.width / 2, circuit_y + info_y - circledrawing.height / 2)
+    my_canvas.setFont(cirfont, 7)
+    my_canvas.setFillColorRGB(170,255,127)
+    lapsstr = circuitsdata[i][34]
+    my_canvas.drawString(circuit_x + info_x - 4, circuit_y + info_y - 2, lapsstr)
     worldlocx = worldmap_x + float(circuitsdata[i][3])
     worldlocy = worldmap_y + float(circuitsdata[i][4])
     my_canvas.setFillColor(HexColor(circuitcolors[i]))
