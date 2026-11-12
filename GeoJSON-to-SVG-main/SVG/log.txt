@@ -1,7 +1,0 @@
-ERROR 1: DXF layer does not support arbitrary field creation, field 'id' not created.
-ERROR 1: DXF layer does not support arbitrary field creation, field 'Location' not created.
-ERROR 1: DXF layer does not support arbitrary field creation, field 'Name' not created.
-ERROR 1: DXF layer does not support arbitrary field creation, field 'opened' not created.
-ERROR 1: DXF layer does not support arbitrary field creation, field 'firstgp' not created.
-ERROR 1: DXF layer does not support arbitrary field creation, field 'length' not created.
-ERROR 1: DXF layer does not support arbitrary field creation, field 'altitude' not created.
