@@ -204,6 +204,7 @@ row = 5
 col = 0
 legendcol = 0
 legendrow = 0
+circuitsdata = sorted(circuitsdata, key=operator.itemgetter(24))    
 for i in range(count):
     if i == 11 or i == 13:
         col = col + 3
