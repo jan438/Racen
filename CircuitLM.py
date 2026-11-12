@@ -394,7 +394,7 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][0] == "Bahrain":
+    if circuitsdata[i][0] == "GillesVilleneuve":
     #if True:
         cx = i
         info_Orig_file(str(circuitsdata[cx][1]))
