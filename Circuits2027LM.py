@@ -4,6 +4,7 @@ import csv
 import geojson
 import random
 import math
+import operator
 from math import radians, cos, sin
 from ics import Calendar, Event
 from reportlab.graphics import renderPDF
