@@ -95,7 +95,6 @@ def GeoJSON_to_SVG(cx, geojsonfile, circuit):
     height = 500               
     dx = abs(max_x - min_x)
     dy = abs(max_y - min_y)
-    print("min_x", min_x, "min_y", min_y, "max_x", max_x, "max_y", max_y, "dx",  dx, "dy", dy)
     scale_x = width / (max_x - min_x)
     scale_y = height / (max_y - min_y)
     scale = (scale_x, scale_y)
