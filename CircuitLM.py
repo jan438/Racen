@@ -66,8 +66,6 @@ def GeoJSON_to_SVG(cx, geojsonfile, circuit):
         return np
     def calculate_distance(x1, y1, x2, y2):
         return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-    width = 500
-    height = 500
     with open("Data/" + geojsonfile + ".geojson", 'r') as file:
         geojson_data = geojson.load(file)
     features = geojson_data['features']
@@ -93,6 +91,8 @@ def GeoJSON_to_SVG(cx, geojsonfile, circuit):
                     max_x = max(max_x, x)
                     min_y = min(min_y, y)
                     max_y = max(max_y, y)
+    width = 500
+    height = 500               
     dx = abs(max_x - min_x)
     dy = abs(max_y - min_y)
     print("min_x", min_x, "min_y", min_y, "max_x", max_x, "max_y", max_y, "dx",  dx, "dy", dy)
