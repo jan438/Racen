@@ -5,6 +5,9 @@ import os
 import csv
 from enum import Enum
 
+def GPX_to_SVG(cx, gpxfile, circuit):
+    print(gpxfile)
+
 def mercatorProjection(coord):
     """Calculate the Mercator projection of a coordinate pair"""
 
@@ -37,4 +40,10 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 print(count)
+for i in range(len(circuitsdata)):
+    if circuitsdata[i][0] == "GillesVilleneuve":
+    #if True:
+        cx = i
+        print(cx, "GPX_to_SVG", circuitsdata[cx][1], circuitsdata[cx][0])
+        GPX_to_SVG(cx, circuitsdata[cx][1], circuitsdata[cx][0])
 key = input("Wait")
