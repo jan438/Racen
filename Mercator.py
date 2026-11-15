@@ -30,7 +30,6 @@ def parseGpx(gpxFile):
                 gpsData.append(trackSegData)
     return gpsData
 def calcProjection(gpsData):
-    """Calculate a plane projection for a GPS dataset"""
     projectedData = []
     for segment in gpsData:
         projectedSegment = []
@@ -38,6 +37,79 @@ def calcProjection(gpsData):
             projectedSegment.append(mercatorProjection(coord))
         projectedData.append(projectedSegment)
     return projectedData
+def writeSvgData(gpsData, width, height):
+    maxPixels = 500
+    dropSinglePoints = True
+    outfile = "SVG/out.svg"
+    scaleFactor = 1.0
+    if scaleFactor == None:
+        if width <= maxPixels and height <= maxPixels:
+            scale = 1
+        elif width > height:
+            scale = maxPixels / width
+        else:
+            scale = maxPixels / height
+    else:
+        scale = 1.0 / scaleFactor
+    if outfile != '/dev/stdout':
+        try:
+            fp = open(outfile, 'w')
+        except IOError as error:
+            print("Can't open output file: {}. Terminating.".format(error), file = sys.stderr)
+            sys.exit(1)
+    else:
+        fp = sys.stdout
+    fp.write( '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
+    fp.write(('<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" '
+              '"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n'))
+    fp.write( '<!-- Created with gpx2svg {} -->\n'.format(__version__))
+    if scaleFactor == None:
+        unit = 'px'
+    else:
+        unit = 'mm'
+    fp.write(('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" '
+              'width="{width}{unit}" height="{height}{unit}" '
+              'viewBox="0 0 {width} {height}">\n').format(unit = unit,
+                                                          width = width * scale,
+                                                          height = height * scale))
+    circularSegments, straightSegments = searchCircularSegments(gpsData)
+    realCircularSegments = []
+    singlePoints = []
+    for segment in circularSegments:
+        segment.pop()
+        if len(segment) == 1:
+            if dropSinglePoints == False:
+                singlePoints.append(segment)
+        else:
+            realCircularSegments.append(segment)
+    circularSegments = realCircularSegments
+    if len(singlePoints) > 0:
+        fp.write('<g>\n')
+        for segment in singlePoints:
+            x, y = scaleCoords(segment[0], height, scale)
+            fp.write(
+                '<circle cx="{}" cy="{}" r="0.5" style="stroke:none;fill:black"/>\n'.format(x, y)
+            )
+        fp.write('</g>\n')
+    if len(circularSegments) > 0:
+        fp.write('<g>\n')
+        for segment in circularSegments:
+            fp.write('<path d="M')
+            for x, y in generateScaledSegment(segment, height, scale):
+                fp.write(' {} {}'.format(x, y))
+            fp.write(' Z" style="fill:none;stroke:black"/>\n')
+        fp.write('</g>\n')
+    if len(straightSegments) > 0:
+        fp.write('<g>\n')
+        for segment in straightSegments:
+            fp.write('<path d="M')
+            for x, y in generateScaledSegment(segment, height, scale):
+                fp.write(' {} {}'.format(x, y))
+            fp.write('" style="fill:none;stroke:black"/>\n')
+        fp.write('</g>\n')
+    fp.write('</svg>\n')
+    if fp != sys.stdout:
+        fp.close()
 def GPX_to_SVG(cx, gpxfile, circuit):
     print(gpxfile)
     gpsData = parseGpx("Data/" + gpxfile + ".gpx")
@@ -46,30 +118,15 @@ def GPX_to_SVG(cx, gpxfile, circuit):
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
     #gpsData = combineSegments(gpsData)
-    # Calculate a plane projection for a GPS dataset
-    # At the moment, we only have the Mercator projection
-    gpsData = calcProjection(gpsData)
-    print("after calcProjection", gpsData)
-    # Move the projected data to the 0,0 origin of a cartesial coordinate system
-    # and get the raw width and height of the resulting vector data
+    #gpsData = calcProjection(gpsData)
+    #print("after calcProjection", gpsData)
     #gpsData, width, height = moveProjectedData(gpsData)
-    # Write the resulting SVG data to the requested output file or STDOUT
-    #writeSvgData(gpsData, width, height, cmdArgs)
+    #writeSvgData(gpsData, width, height)
     return
 def mercatorProjection(coord):
-    """Calculate the Mercator projection of a coordinate pair"""
-
-    # Assuming we're on earth, we have (according to GRS 80):
     r = 6378137.0
-
-    # As long as meridian = 0 and can't be changed, we don't need:
-    #    meridian = meridian * math.pi / 180.0
-    #    x = r * ((coord[0] * math.pi / 180.0) - meridian)
-
-    # Instead, we use this simplified version:
     x = r * coord[0] * math.pi / 180.0
     y = r * math.log(math.tan((math.pi / 4.0) + ((coord[1] * math.pi / 180.0) / 2.0)))
-
     return x, y
 
 if sys.platform[0] == 'l':
