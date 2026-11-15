@@ -20,10 +20,11 @@ def mercatorProjection(coord):
 
     return x, y
 
+if sys.platform[0] == 'l':
+    path = '/home/jan/git/Racen'
 if sys.platform[0] == "w":
-    print("windows")
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
     os.chdir(path)
-    cwd = os.getcwd()
-    print(cwd)
+cwd = os.getcwd()
+print(cwd)
 key = input("Wait")
