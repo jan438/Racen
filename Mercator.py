@@ -59,10 +59,10 @@ def moveProjectedData(gpsData):
         movedGpsData.append(movedSegment)
     return movedGpsData, maxX - minX, maxY - minY
 def writeSvgData(gpsData, width, height):
-    maxPixels = 500
-    dropSinglePoints = True
+    maxPixels = 3000
+    dropSinglePoints = False
     outfile = "SVG/out.svg"
-    scaleFactor = 1.0
+    scaleFactor = None
     if scaleFactor == None:
         if width <= maxPixels and height <= maxPixels:
             scale = 1
