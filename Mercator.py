@@ -134,7 +134,7 @@ def writeSvgData(gpsData, width, height):
 def GPX_to_SVG(cx, gpxfile, circuit):
     print(gpxfile)
     gpsData = parseGpx("Data/" + gpxfile + ".gpx")
-    print("gpsData", gpsData)
+    print("gpsData na parse", gpsData)
     if gpsData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
