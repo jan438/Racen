@@ -1,7 +1,7 @@
 import sys
 import math
 from xml.dom.minidom import parse as parseXml
-from os.path import abspath
+import os
 from enum import Enum
 
 def mercatorProjection(coord):
@@ -22,4 +22,8 @@ def mercatorProjection(coord):
 
 if sys.platform[0] == "w":
     print("windows")
+    path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
+    os.chdir(path)
+    cwd = os.getcwd()
+    print(cwd)
 key = input("Wait")
