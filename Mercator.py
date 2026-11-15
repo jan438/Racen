@@ -5,9 +5,26 @@ import os
 import csv
 from enum import Enum
 
+def parseGpx(gpxFile):
+    """Get the latitude and longitude data of all track segments in a GPX file"""
+    # Get the XML information
+    try:
+        gpx = parseXml(gpxFile)
+    except IOError as error:
+        print('Error while reading file: {}. Terminating.'.format(error), file = sys.stderr)
+        sys.exit(1)
+    except:
+        print('Error while parsing XML data:', file = sys.stderr)
+        print(sys.exc_info(), file = sys.stderr)
+        print('Terminating.', file = sys.stderr)
+        sys.exit(1)
+    # Iterate over all tracks, track segments and points
+    gpsData = []
+    return gpsData
 def GPX_to_SVG(cx, gpxfile, circuit):
     print(gpxfile)
-
+    gpsData = parseGpx("Data/" + gpxfile + ".gpx")
+    print("gpsData", gpsData)
 def mercatorProjection(coord):
     """Calculate the Mercator projection of a coordinate pair"""
 
