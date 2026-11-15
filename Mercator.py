@@ -20,6 +20,16 @@ def parseGpx(gpxFile):
         sys.exit(1)
     # Iterate over all tracks, track segments and points
     gpsData = []
+    for track in gpx.getElementsByTagName('trk'):
+        for trackseg in track.getElementsByTagName('trkseg'):
+            trackSegData = []
+            for point in trackseg.getElementsByTagName('trkpt'):
+                trackSegData.append(
+                    (float(point.attributes['lon'].value), float(point.attributes['lat'].value))
+                )
+            # Leave out empty segments
+            if(trackSegData != []):
+                gpsData.append(trackSegData)
     return gpsData
 def GPX_to_SVG(cx, gpxfile, circuit):
     print(gpxfile)
