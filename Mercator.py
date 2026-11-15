@@ -20,5 +20,5 @@ def mercatorProjection(coord):
 
     return x, y
 
-
+print(sys.platform[0])
 key = input("Wait")
