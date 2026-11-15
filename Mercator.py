@@ -29,6 +29,15 @@ def parseGpx(gpxFile):
             if(trackSegData != []):
                 gpsData.append(trackSegData)
     return gpsData
+def calcProjection(gpsData):
+    """Calculate a plane projection for a GPS dataset"""
+    projectedData = []
+    for segment in gpsData:
+        projectedSegment = []
+        for coord in segment:
+            projectedSegment.append(mercatorProjection(coord))
+        projectedData.append(projectedSegment)
+    return projectedData
 def GPX_to_SVG(cx, gpxfile, circuit):
     print(gpxfile)
     gpsData = parseGpx("Data/" + gpxfile + ".gpx")
@@ -39,7 +48,8 @@ def GPX_to_SVG(cx, gpxfile, circuit):
     #gpsData = combineSegments(gpsData)
     # Calculate a plane projection for a GPS dataset
     # At the moment, we only have the Mercator projection
-    #gpsData = calcProjection(gpsData, projection)
+    gpsData = calcProjection(gpsData)
+    print("after calcProjection", gpsData)
     # Move the projected data to the 0,0 origin of a cartesial coordinate system
     # and get the raw width and height of the resulting vector data
     #gpsData, width, height = moveProjectedData(gpsData)
