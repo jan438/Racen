@@ -118,8 +118,8 @@ def GPX_to_SVG(cx, gpxfile, circuit):
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
     #gpsData = combineSegments(gpsData)
-    #gpsData = calcProjection(gpsData)
-    #print("after calcProjection", gpsData)
+    gpsData = calcProjection(gpsData)
+    print("after calcProjection", gpsData)
     #gpsData, width, height = moveProjectedData(gpsData)
     #writeSvgData(gpsData, width, height)
     return
