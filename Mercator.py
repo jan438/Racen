@@ -2,6 +2,7 @@ import sys
 import math
 from xml.dom.minidom import parse as parseXml
 import os
+import csv
 from enum import Enum
 
 def mercatorProjection(coord):
@@ -27,4 +28,13 @@ if sys.platform[0] == "w":
     os.chdir(path)
 cwd = os.getcwd()
 print(cwd)
+circuitsdata = []
+file_to_open = "Data/Circuits2027.csv"
+with open(file_to_open, 'r') as file:
+    csvreader = csv.reader(file, delimiter = ';')
+    count = 0
+    for row in csvreader:
+        circuitsdata.append(row)
+        count += 1
+print(count)
 key = input("Wait")
