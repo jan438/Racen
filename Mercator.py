@@ -141,7 +141,7 @@ def GPX_to_SVG(cx, gpxfile, circuit):
     #gpsData = combineSegments(gpsData)
     gpsData = calcProjection(gpsData)
     print("after calcProjection", gpsData)
-    #gpsData, width, height = moveProjectedData(gpsData)
+    gpsData, width, height = moveProjectedData(gpsData)
     #writeSvgData(gpsData, width, height)
     return
 def mercatorProjection(coord):
