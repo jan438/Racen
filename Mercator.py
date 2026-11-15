@@ -20,5 +20,6 @@ def mercatorProjection(coord):
 
     return x, y
 
-print(sys.platform[0])
+if sys.platform[0] == "w":
+    print("windows")
 key = input("Wait")
