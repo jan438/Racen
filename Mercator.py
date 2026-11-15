@@ -37,6 +37,29 @@ def calcProjection(gpsData):
             projectedSegment.append(mercatorProjection(coord))
         projectedData.append(projectedSegment)
     return projectedData
+def extentOfProjectedData(gpsData):
+    minX = maxX = gpsData[0][0][0]
+    minY = maxY = gpsData[0][0][1]
+    for segment in gpsData:
+        for coord in segment:
+            if coord[0] < minX:
+                minX = coord[0]
+            if coord[0] > maxX:
+                maxX = coord[0]
+            if coord[1] < minY:
+                minY = coord[1]
+            if coord[1] > maxY:
+                maxY = coord[1]
+    return minX, maxX, minY, maxY
+def moveProjectedData(gpsData):
+    minX, maxX, minY, maxY = extentOfProjectedData(gpsData)
+    movedGpsData = []
+    for segment in gpsData:
+        movedSegment = []
+        for coord in segment:
+            movedSegment.append((coord[0] - minX, coord[1] - minY))
+        movedGpsData.append(movedSegment)
+    return movedGpsData, maxX - minX, maxY - minY
 def writeSvgData(gpsData, width, height):
     maxPixels = 500
     dropSinglePoints = True
