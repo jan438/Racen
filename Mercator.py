@@ -6,8 +6,6 @@ import csv
 from enum import Enum
 
 def parseGpx(gpxFile):
-    """Get the latitude and longitude data of all track segments in a GPX file"""
-    # Get the XML information
     try:
         gpx = parseXml(gpxFile)
     except IOError as error:
