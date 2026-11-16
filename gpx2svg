@@ -20,24 +20,13 @@ class Projection(Enum):
     WGS84 = 1
 
 def parseGpx(gpxFile):
-    """Get the latitude and longitude data of all track segments in a GPX file"""
 
-    if gpxFile == '/dev/stdin':
-        gpxFile = sys.stdin
-
-    # Get the XML information
     try:
         gpx = parseXml(gpxFile)
-    except IOError as error:
-        print('Error while reading file: {}. Terminating.'.format(error), file = sys.stderr)
-        sys.exit(1)
     except:
-        print('Error while parsing XML data:', file = sys.stderr)
-        print(sys.exc_info(), file = sys.stderr)
         print('Terminating.', file = sys.stderr)
         sys.exit(1)
 
-    # Iterate over all tracks, track segments and points
     gpsData = []
     for track in gpx.getElementsByTagName('trk'):
         for trackseg in track.getElementsByTagName('trkseg'):

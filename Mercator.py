@@ -8,12 +8,7 @@ from enum import Enum
 def parseGpx(gpxFile):
     try:
         gpx = parseXml(gpxFile)
-    except IOError as error:
-        print('Error while reading file: {}. Terminating.'.format(error), file = sys.stderr)
-        sys.exit(1)
     except:
-        print('Error while parsing XML data:', file = sys.stderr)
-        print(sys.exc_info(), file = sys.stderr)
         print('Terminating.', file = sys.stderr)
         sys.exit(1)
     gpsData = []
