@@ -408,9 +408,6 @@ def main():
     # Get the latitude and longitude data from the given GPX file or STDIN
     gpsData = parseGpx(cmdArgs.i)
 
-    print("gpsData na parse", gpsData)
-
-    # Check if we actually _have_ data
     if gpsData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
