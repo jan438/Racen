@@ -156,7 +156,7 @@ with open(file_to_open, 'r') as file:
         count += 1
 print(count)
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][1] == "hu-1986":
+    if circuitsdata[i][1] == "tr-2005":
     #if True:
         cx = i
         print(cx, "GPX_to_SVG", circuitsdata[cx][1])
