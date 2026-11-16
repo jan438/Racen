@@ -109,8 +109,7 @@ def writeSvgData(gpsData, width, height):
             fp.write('" style="fill:none;stroke:black"/>\n')
         fp.write('</g>\n')
     fp.write('</svg>\n')
-    if fp != sys.stdout:
-        fp.close()
+    fp.close()
 def GPX_to_SVG(cx, gpxfile, circuit):
     print(gpxfile)
     gpsData = parseGpx("Data/" + gpxfile + ".gpx")
