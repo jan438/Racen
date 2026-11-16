@@ -63,16 +63,11 @@ def writeSvgData(gpsData, width, height):
         scale = maxPixels / width
     else:
         scale = maxPixels / height
-
     fp = open(outfile, 'w')
     fp.write( '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
     fp.write(('<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" '
               '"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n'))
-    fp.write( '<!-- Created with gpx2svg {} -->\n'.format(__version__))
-    if scaleFactor == None:
-        unit = 'px'
-    else:
-        unit = 'mm'
+    unit = 'px'
     fp.write(('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" '
               'width="{width}{unit}" height="{height}{unit}" '
               'viewBox="0 0 {width} {height}">\n').format(unit = unit,
