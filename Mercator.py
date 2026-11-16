@@ -62,6 +62,11 @@ def searchCircularSegments(gpsData):
         else:
             straightSegments.append(segment)
     return circularSegments, straightSegments
+def scaleCoords(coord, height, scale):
+    return coord[0] * scale, (coord[1] * -1 + height) * scale
+def generateScaledSegment(segment, height, scale):
+    for coord in segment:
+        yield scaleCoords(coord, height, scale)
 def writeSvgData(gpsData, width, height):
     maxPixels = 3000
     dropSinglePoints = False
