@@ -16,7 +16,6 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import inch, mm
 from reportlab.lib.colors import HexColor
-#from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 import xml.etree.ElementTree as ET
 
 if sys.platform[0] == 'l':
@@ -24,7 +23,6 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
 os.chdir(path)
-key = input("Wait")
 circuitsdata = []
 file_to_open = "Data/Circuits2027.csv"
 with open(file_to_open, 'r') as file:
