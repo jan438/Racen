@@ -67,10 +67,9 @@ def scaleCoords(coord, height, scale):
 def generateScaledSegment(segment, height, scale):
     for coord in segment:
         yield scaleCoords(coord, height, scale)
-def writeSvgData(gpsData, width, height):
+def writeSvgData(gpsData, width, height, outfile):
     maxPixels = 3000
     dropSinglePoints = False
-    outfile = "SVG/out.svg"
     if width <= maxPixels and height <= maxPixels:
         scale = 1
     elif width > height:
@@ -132,7 +131,7 @@ def GPX_to_SVG(cx, gpxfile, circuit):
         sys.exit(1)
     gpsData = calcProjection(gpsData)
     gpsData, width, height = moveProjectedData(gpsData)
-    writeSvgData(gpsData, width, height)
+    writeSvgData(gpsData, width, height, "SVG/" + gpxfile + "x.svg")
     return
 def mercatorProjection(coord):
     r = 6378137.0
