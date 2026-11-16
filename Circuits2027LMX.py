@@ -12,10 +12,10 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics  
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
-#from reportlab.pdfbase.ttfonts import TTFont
-#from reportlab.lib.pagesizes import A4
-#from reportlab.lib.units import inch, mm
-#from reportlab.lib.colors import HexColor
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.units import inch, mm
+from reportlab.lib.colors import HexColor
 #from reportlab.graphics.shapes import *
 #from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 #import xml.etree.ElementTree as ET
