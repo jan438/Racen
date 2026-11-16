@@ -123,7 +123,7 @@ def writeSvgData(gpsData, width, height, outfile):
         fp.write('</g>\n')
     fp.write('</svg>\n')
     fp.close()
-def GPX_to_SVG(cx, gpxfile, circuit):
+def GPX_to_SVG(cx, gpxfile):
     print(gpxfile)
     gpsData = parseGpx("Data/" + gpxfile + ".gpx")
     if gpsData == []:
@@ -159,6 +159,6 @@ for i in range(len(circuitsdata)):
     if circuitsdata[i][0] == "GillesVilleneuve":
     #if True:
         cx = i
-        print(cx, "GPX_to_SVG", circuitsdata[cx][1], circuitsdata[cx][0])
-        GPX_to_SVG(cx, circuitsdata[cx][1], circuitsdata[cx][0])
+        print(cx, "GPX_to_SVG", circuitsdata[cx][1])
+        GPX_to_SVG(cx, circuitsdata[cx][1])
 key = input("Wait")
