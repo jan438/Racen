@@ -425,11 +425,13 @@ def main():
     # At the moment, we only have the Mercator projection
     gpsData = calcProjection(gpsData, projection)
 
-    print("gpsData na calc", gpsData)
+    print("na calc", gpsData)
 
     # Move the projected data to the 0,0 origin of a cartesial coordinate system
     # and get the raw width and height of the resulting vector data
     gpsData, width, height = moveProjectedData(gpsData)
+
+    print("na move", gpsData)
 
     # Write the resulting SVG data to the requested output file or STDOUT
     writeSvgData(gpsData, width, height, cmdArgs)
