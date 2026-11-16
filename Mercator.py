@@ -57,24 +57,14 @@ def writeSvgData(gpsData, width, height):
     maxPixels = 3000
     dropSinglePoints = False
     outfile = "SVG/out.svg"
-    scaleFactor = None
-    if scaleFactor == None:
-        if width <= maxPixels and height <= maxPixels:
-            scale = 1
-        elif width > height:
-            scale = maxPixels / width
-        else:
-            scale = maxPixels / height
+    if width <= maxPixels and height <= maxPixels:
+        scale = 1
+    elif width > height:
+        scale = maxPixels / width
     else:
-        scale = 1.0 / scaleFactor
-    if outfile != '/dev/stdout':
-        try:
-            fp = open(outfile, 'w')
-        except IOError as error:
-            print("Can't open output file: {}. Terminating.".format(error), file = sys.stderr)
-            sys.exit(1)
-    else:
-        fp = sys.stdout
+        scale = maxPixels / height
+
+    fp = open(outfile, 'w')
     fp.write( '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
     fp.write(('<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" '
               '"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n'))
