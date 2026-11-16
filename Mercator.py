@@ -134,7 +134,6 @@ def GPX_to_SVG(cx, gpxfile, circuit):
         sys.exit(1)
     #gpsData = combineSegments(gpsData)
     gpsData = calcProjection(gpsData)
-    print("after calc", gpsData)
     gpsData, width, height = moveProjectedData(gpsData)
     print("ater move", gpsData)
     #writeSvgData(gpsData, width, height)
