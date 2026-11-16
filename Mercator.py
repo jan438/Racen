@@ -53,6 +53,15 @@ def moveProjectedData(gpsData):
             movedSegment.append((coord[0] - minX, coord[1] - minY))
         movedGpsData.append(movedSegment)
     return movedGpsData, maxX - minX, maxY - minY
+def searchCircularSegments(gpsData):
+    circularSegments = []
+    straightSegments = []
+    for segment in gpsData:
+        if segment[0] == segment[len(segment) - 1]:
+            circularSegments.append(segment)
+        else:
+            straightSegments.append(segment)
+    return circularSegments, straightSegments
 def writeSvgData(gpsData, width, height):
     maxPixels = 3000
     dropSinglePoints = False
