@@ -130,10 +130,8 @@ def GPX_to_SVG(cx, gpxfile, circuit):
     if gpsData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
-    #gpsData = combineSegments(gpsData)
     gpsData = calcProjection(gpsData)
     gpsData, width, height = moveProjectedData(gpsData)
-    print("ater move", gpsData)
     writeSvgData(gpsData, width, height)
     return
 def mercatorProjection(coord):
