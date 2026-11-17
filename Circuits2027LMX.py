@@ -19,6 +19,8 @@ from reportlab.lib.colors import HexColor
 import xml.etree.ElementTree as ET
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
+cirfont = "LiberationSerif"
+
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
 if sys.platform[0] == 'w':
@@ -32,4 +34,5 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
+pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 key = input("Wait")
