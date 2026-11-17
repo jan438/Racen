@@ -17,6 +17,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import inch, mm
 from reportlab.lib.colors import HexColor
 import xml.etree.ElementTree as ET
+from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Racen'
