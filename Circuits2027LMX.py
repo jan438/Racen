@@ -48,10 +48,13 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
+circuitsdata = sorted(circuitsdata, key=operator.itemgetter(24))    
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 my_canvas = canvas.Canvas('PDF/Circuits2027LMX.pdf')
 renderPDF.draw(scaleSVG("SVG/world-map.svg", worldmapscale), my_canvas, worldmap_x, worldmap_y)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
+#circuitdrawing = scaleSVG("SVG/" + circuitsdata[0][1] + "x.svg", circuitscale)
+print(circuitsdata[0][1] + "x.svg")
 my_canvas.save()
 key = input("Wait")
