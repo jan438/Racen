@@ -56,5 +56,6 @@ renderPDF.draw(scaleSVG("SVG/world-map.svg", worldmapscale), my_canvas, worldmap
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
 circuitdrawing = scaleSVG("SVG/" + circuitsdata[0][1] + "x.svg", circuitscale)
+renderPDF.draw(circuitdrawing, my_canvas, 100, 500)
 my_canvas.save()
 key = input("Wait")
