@@ -35,4 +35,6 @@ with open(file_to_open, 'r') as file:
         circuitsdata.append(row)
         count += 1
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
+my_canvas = canvas.Canvas('PDF/Circuits2027LM.pdf')
+my_canvas.save()
 key = input("Wait")
