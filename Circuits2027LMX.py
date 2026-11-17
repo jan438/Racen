@@ -19,6 +19,7 @@ from reportlab.lib.colors import HexColor
 import xml.etree.ElementTree as ET
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
+circuitscale = 0.23
 worldmapscale = 0.6
 worldmap_x = 118
 worldmap_y = 285
@@ -54,7 +55,6 @@ my_canvas = canvas.Canvas('PDF/Circuits2027LMX.pdf')
 renderPDF.draw(scaleSVG("SVG/world-map.svg", worldmapscale), my_canvas, worldmap_x, worldmap_y)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
-#circuitdrawing = scaleSVG("SVG/" + circuitsdata[0][1] + "x.svg", circuitscale)
-print(circuitsdata[0][1] + "x.svg")
+circuitdrawing = scaleSVG("SVG/" + circuitsdata[0][1] + "x.svg", circuitscale)
 my_canvas.save()
 key = input("Wait")
