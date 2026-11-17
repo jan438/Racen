@@ -47,5 +47,7 @@ with open(file_to_open, 'r') as file:
         count += 1
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 my_canvas = canvas.Canvas('PDF/Circuits2027LMX.pdf')
+drawing = svg2rlg('SVG/F1.svg')
+renderPDF.draw(drawing, my_canvas, 100, 800)
 my_canvas.save()
 key = input("Wait")
