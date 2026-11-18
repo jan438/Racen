@@ -19,7 +19,7 @@ from reportlab.lib.colors import HexColor
 import xml.etree.ElementTree as ET
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 
-circuitscale = 0.23
+circuitscale = 0.08
 worldmapscale = 0.6
 worldmap_x = 118
 worldmap_y = 285
