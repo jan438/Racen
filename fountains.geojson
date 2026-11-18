@@ -1,0 +1,299 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.12537,
+          49.289977,
+          7
+        ]
+      },
+      "properties": {
+        "name": "Coal Harbour Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.123274,
+          49.2725,
+          7
+        ]
+      },
+      "properties": {
+        "name": "David Lam Park - South west of playgrounds"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.123781,
+          49.277097,
+          24
+        ]
+      },
+      "properties": {
+        "name": "Emery Barnes Park - Dog off-leash area"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.10356,
+          49.278057,
+          7
+        ]
+      },
+      "properties": {
+        "name": "Andy Livingstone Park - South of soccer fields"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.101806,
+          49.28476,
+          7
+        ]
+      },
+      "properties": {
+        "name": "CRAB Park at Portside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.125705,
+          49.271738,
+          8
+        ]
+      },
+      "properties": {
+        "name": "David Lam Park - South west of basketball courts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.124267,
+          49.276642,
+          18
+        ]
+      },
+      "properties": {
+        "name": "Emery Barnes Park - South west of playground"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.121679,
+          49.290107,
+          5
+        ]
+      },
+      "properties": {
+        "name": "Harbour Green Park - In front of washrooms"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.123255,
+          49.291334,
+          3
+        ]
+      },
+      "properties": {
+        "name": "Harbour Green Park - Viewpoint"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.10449,
+          49.281769,
+          9
+        ]
+      },
+      "properties": {
+        "name": "Pioneer Place (Pigeon Park)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.131579,
+          49.273334,
+          19
+        ]
+      },
+      "properties": {
+        "name": "Bottle Filling Station location  Granville St Pumping Station"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.123513,
+          49.279672,
+          35
+        ]
+      },
+      "properties": {
+        "name": "Fountain location Nelson & Howe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.106179,
+          49.278917,
+          6
+        ]
+      },
+      "properties": {
+        "name": "Andy Livingstone Park - North of basketball court"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.120924,
+          49.286025,
+          9
+        ]
+      },
+      "properties": {
+        "name": "Art Phillips Park (Discovery Square)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.113042,
+          49.273915,
+          10
+        ]
+      },
+      "properties": {
+        "name": "Coopers Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.114634,
+          49.272904,
+          5
+        ]
+      },
+      "properties": {
+        "name": "Coopers Park - underneath bridge"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.102994,
+          49.27437,
+          8
+        ]
+      },
+      "properties": {
+        "name": "Creekside Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.129778,
+          49.271908,
+          7
+        ]
+      },
+      "properties": {
+        "name": "George Wainborn Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.123165,
+          49.290645,
+          4
+        ]
+      },
+      "properties": {
+        "name": "Harbour Green Park - foot of Jervis Mews"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.110051,
+          49.281951,
+          13
+        ]
+      },
+      "properties": {
+        "name": "Victory Square"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.119937,
+          49.281542,
+          28
+        ]
+      },
+      "properties": {
+        "name": "Granville & Robson"
+      }
+    }
+  ]
+}
