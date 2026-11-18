@@ -70,8 +70,6 @@ for i in range(count):
     circuit_y = bottom_margin + row * rowheight
     circuitdrawing = scaleSVG("SVG/" + circuitsdata[i][1] + "x.svg", circuitscale)
     renderPDF.draw(circuitdrawing, my_canvas, circuit_x + (colwidth - circuitdrawing.width) / 2, circuit_y + (rowheight - circuitdrawing.height) / 2 + 8)
-    if i == 8:
-        break
     col += 1
     if col == colcount:
         row = row - 1
