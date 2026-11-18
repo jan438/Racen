@@ -55,7 +55,10 @@ my_canvas = canvas.Canvas('PDF/Circuits2027LMX.pdf')
 renderPDF.draw(scaleSVG("SVG/world-map.svg", worldmapscale), my_canvas, worldmap_x, worldmap_y)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
-circuitdrawing = scaleSVG("SVG/" + circuitsdata[0][1] + "x.svg", circuitscale)
-renderPDF.draw(circuitdrawing, my_canvas, 100, 500)
+for i in range(count):
+    circuitdrawing = scaleSVG("SVG/" + circuitsdata[i][1] + "x.svg", circuitscale)
+    renderPDF.draw(circuitdrawing, my_canvas, 100, 500)
+    if i == 0:
+        break
 my_canvas.save()
 key = input("Wait")
