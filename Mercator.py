@@ -102,7 +102,7 @@ def writeSvgData(gpsData, width, height, outfile):
         for segment in singlePoints:
             x, y = scaleCoords(segment[0], height, scale)
             fp.write(
-                '<circle cx="{}" cy="{}" r="0.5" style="stroke:none;fill:black"/>\n'.format(x, y)
+                '<circle cx="{}" cy="{}" r="0.5" style="stroke:none;fill:white"/>\n'.format(x, y)
             )
         fp.write('</g>\n')
     if len(circularSegments) > 0:
@@ -111,7 +111,7 @@ def writeSvgData(gpsData, width, height, outfile):
             fp.write('<path d="M')
             for x, y in generateScaledSegment(segment, height, scale):
                 fp.write(' {} {}'.format(x, y))
-            fp.write(' Z" style="fill:none;stroke:black"/>\n')
+            fp.write(' Z" style="fill:none;stroke:white"/>\n')
         fp.write('</g>\n')
     if len(straightSegments) > 0:
         fp.write('<g>\n')
@@ -119,7 +119,7 @@ def writeSvgData(gpsData, width, height, outfile):
             fp.write('<path d="M')
             for x, y in generateScaledSegment(segment, height, scale):
                 fp.write(' {} {}'.format(x, y))
-            fp.write('" style="fill:none;stroke:black"/>\n')
+            fp.write('" style="fill:none;stroke:white"/>\n')
         fp.write('</g>\n')
     fp.write('</svg>\n')
     fp.close()
