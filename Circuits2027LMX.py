@@ -24,6 +24,12 @@ worldmapscale = 0.6
 worldmap_x = 118
 worldmap_y = 285
 cirfont = "LiberationSerif"
+left_padding = 0
+bottom_padding = 0
+A4_height = A4[1]
+A4_width = A4[0]
+width = A4_width
+height = A4_height
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -60,6 +66,9 @@ left_margin = 10
 circuitsdata = sorted(circuitsdata, key=operator.itemgetter(24))    
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 my_canvas = canvas.Canvas('PDF/Circuits2027LMX.pdf')
+my_canvas.setFillColorRGB(0,0,0)
+my_canvas.rect(left_padding, bottom_padding, width, height, fill=1)
+my_canvas.setFillColorRGB(255,170,0)
 renderPDF.draw(scaleSVG("SVG/world-map.svg", worldmapscale), my_canvas, worldmap_x, worldmap_y)
 drawing = svg2rlg('SVG/F1.svg')
 renderPDF.draw(drawing, my_canvas, 100, 800)
