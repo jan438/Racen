@@ -70,6 +70,11 @@ for i in range(count):
     circuit_y = bottom_margin + row * rowheight
     circuitdrawing = scaleSVG("SVG/" + circuitsdata[i][1] + "x.svg", circuitscale)
     renderPDF.draw(circuitdrawing, my_canvas, circuit_x + (colwidth - circuitdrawing.width) / 2, circuit_y + (rowheight - circuitdrawing.height) / 2 + 8)
+    my_canvas.setFont(cirfont, 9)
+    my_canvas.setFillColorRGB(255,170,0)
+    displayname = circuitsdata[i][24]
+    namewidth = pdfmetrics.stringWidth(displayname, cirfont, 9)
+    my_canvas.drawString(circuit_x + (colwidth - namewidth) / 2, circuit_y, displayname)
     col += 1
     if col == colcount:
         row = row - 1
