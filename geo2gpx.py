@@ -16,7 +16,7 @@ print("Special Note: Polygon, if exists, its centroid is mapped to Waypoint ")
 custom_symbol = input( "Eenter an optional Garmin symbol, e.g. Information / Restroom / Flag, Red  : ")
 
 try:
-    with open(sys.argv[1] + '.geojson', 'r') as infile:
+    with open('Data/' + sys.argv[1] + '.geojson', 'r') as infile:
         data = json.load(infile)
 except FileNotFoundError:
     print(f"Error: File {sys.argv[1]}.geojson not found.")
