@@ -4,10 +4,8 @@
     <name>My Track</name>
     <trkseg>
       <trkpt lat="52.485" lon="4.815">
-        <ele>2.0</ele>
       </trkpt>
       <trkpt lat="52.486" lon="4.817">
-        <ele>2.5</ele>
       </trkpt>
     </trkseg>
   </trk>

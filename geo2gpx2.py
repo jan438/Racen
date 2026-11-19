@@ -12,8 +12,8 @@ gpx_segment = gpxpy.gpx.GPXTrackSegment()
 gpx_track.segments.append(gpx_segment)
 
 # Add track points (<trkpt>) to the segment
-gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(52.485, 4.815, elevation=2.0))
-gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(52.486, 4.817, elevation=2.5))
+gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(52.485, 4.815))
+gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(52.486, 4.817))
 
 # Write GPX XML to file
 with open("output.gpx", "w", encoding="utf-8") as f:
