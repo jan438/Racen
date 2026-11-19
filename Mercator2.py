@@ -147,7 +147,6 @@ def GeoJSON_to_SVG(cx, gpxfile):
         geom = feature['geometry']
         properties = feature['properties']
         process_geometry(geom, properties, custom_symbol, gpx)
-    print(gpx)
     with open('Circuits/GPX/ae-2009.gpx', 'w') as outfile:
         outfile.write( gpx.to_xml() )
     print(gpxfile)
