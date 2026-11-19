@@ -126,15 +126,8 @@ def writeSvgData(gpsData, width, height, outfile):
     fp.close()
 def GeoJSON_to_SVG(cx, gpxfile):
     custom_symbol = "Red"
-    try:
-        with open('Circuits/GeoJSON/ae-2009.geojson', 'r') as infile:
-            data = json.load(infile)
-    except FileNotFoundError:
-        print(f"Error: File {sys.argv[1]}.geojson not found.")
-        return
-    except json.JSONDecodeError:
-        print("Error: Failed to parse GeoJSON file.")
-        return
+    with open('Circuits/GeoJSON/ae-2009.geojson', 'r') as infile:
+        geodata = json.load(infile)
     print(gpxfile)
     gpsData = parseGpx("Data/" + gpxfile + ".gpx")
     if gpsData == []:
