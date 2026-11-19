@@ -4,6 +4,7 @@ from xml.dom.minidom import parse as parseXml
 import os
 import csv
 import json
+import gpxpy.gpx
 from enum import Enum
 
 def parseGpx(gpxFile):
@@ -128,6 +129,11 @@ def GeoJSON_to_SVG(cx, gpxfile):
     custom_symbol = "Red"
     with open('Circuits/GeoJSON/ae-2009.geojson', 'r') as infile:
         geodata = json.load(infile)
+    gpx = gpxpy.gpx.GPX()
+    for feature in geodata['features']:
+        geom = feature['geometry']
+        properties = feature['properties']
+        #process_geometry(geom, properties, custom_symbol, gpx)
     print(gpxfile)
     gpsData = parseGpx("Data/" + gpxfile + ".gpx")
     if gpsData == []:
