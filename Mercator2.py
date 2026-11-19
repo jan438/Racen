@@ -147,6 +147,7 @@ def GeoJSON_to_SVG(cx, gpxfile):
         geom = feature['geometry']
         properties = feature['properties']
         process_geometry(geom, properties, custom_symbol, gpx)
+    print(gpx)
     print(gpxfile)
     gpsData = parseGpx("Data/" + gpxfile + ".gpx")
     if gpsData == []:
