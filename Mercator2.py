@@ -7,11 +7,20 @@ import json
 import gpxpy.gpx
 from enum import Enum
 
+def get_property(properties, key, default='noname'):
+    return properties.get(key) or properties.get(key.capitalize(), default)
+def process_linestring(geom, properties, gpx):
+    node = geom['coordinates']
+    new_route = gpxpy.gpx.GPXRoute(get_property(properties, 'name'))
+    gpx.routes.append(new_route)
+    for coord in node:
+        print(coord)
+        new_route.points.append(gpxpy.gpx.GPXRoutePoint(coord[1], coord[0], coord[2] if len(coord) == 3 else None))
 def process_geometry(geom, properties, custom_symbol, gpx):
     geom_type = geom['type']
     if geom_type == 'LineString':
         print('LineString')
-        #process_linestring(geom, properties, gpx)
+        process_linestring(geom, properties, gpx)
     return
 def parseGpx(gpxFile):
     try:
