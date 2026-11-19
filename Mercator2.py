@@ -9,18 +9,18 @@ from enum import Enum
 
 def get_property(properties, key, default='noname'):
     return properties.get(key) or properties.get(key.capitalize(), default)
-def process_linestring(geom, properties, gpx):
+def process_linestring(geom, properties, gpx, circuit):
     node = geom['coordinates']
-    gpx_track = gpxpy.gpx.GPXTrack(name="My Track")
+    gpx_track = gpxpy.gpx.GPXTrack(name=circuit)
     gpx.tracks.append(gpx_track)
     gpx_segment = gpxpy.gpx.GPXTrackSegment()
     gpx_track.segments.append(gpx_segment)
     for coord in node:
         gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(coord[1],  coord[0]))
-def process_geometry(geom, properties, custom_symbol, gpx):
+def process_geometry(geom, properties, custom_symbol, gpx, circuit):
     geom_type = geom['type']
     if geom_type == 'LineString':
-        process_linestring(geom, properties, gpx)
+        process_linestring(geom, properties, gpx, circuit)
     return
 def parseGpx(gpxFile):
     try:
@@ -148,7 +148,7 @@ def GeoJSON_to_SVG(cx, circuit):
     for feature in geodata['features']:
         geom = feature['geometry']
         properties = feature['properties']
-        process_geometry(geom, properties, custom_symbol, gpx)
+        process_geometry(geom, properties, custom_symbol, gpx, circuit)
     with open('Circuits/GPX/ae-2009.gpx', 'w') as outfile:
         outfile.write( gpx.to_xml() )
     gpsData = parseGpx("Data/" + circuit + ".gpx")
