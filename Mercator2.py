@@ -17,7 +17,6 @@ def process_linestring(geom, properties, gpx):
     gpx_track.segments.append(gpx_segment)
     for coord in node:
         gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(coord[1],  coord[0]))
-        #new_route.points.append(gpxpy.gpx.GPXRoutePoint(coord[1], coord[0], coord[2] if len(coord) == 3 else None))
 def process_geometry(geom, properties, custom_symbol, gpx):
     geom_type = geom['type']
     if geom_type == 'LineString':
