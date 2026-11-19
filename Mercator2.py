@@ -3,6 +3,7 @@ import math
 from xml.dom.minidom import parse as parseXml
 import os
 import csv
+import json
 from enum import Enum
 
 def parseGpx(gpxFile):
@@ -123,7 +124,17 @@ def writeSvgData(gpsData, width, height, outfile):
         fp.write('</g>\n')
     fp.write('</svg>\n')
     fp.close()
-def GPX_to_SVG(cx, gpxfile):
+def GeoJSON_to_SVG(cx, gpxfile):
+    custom_symbol = "Red"
+    try:
+        with open('Circuits/GeoJSON/ae-2009.geojson', 'r') as infile:
+            data = json.load(infile)
+    except FileNotFoundError:
+        print(f"Error: File {sys.argv[1]}.geojson not found.")
+        return
+    except json.JSONDecodeError:
+        print("Error: Failed to parse GeoJSON file.")
+        return
     print(gpxfile)
     gpsData = parseGpx("Data/" + gpxfile + ".gpx")
     if gpsData == []:
@@ -160,5 +171,5 @@ for i in range(len(circuitsdata)):
     #if True:
         cx = i
         print(cx, "GPX_to_SVG", circuitsdata[cx][1])
-        GPX_to_SVG(cx, circuitsdata[cx][1])
+        GeoJSON_to_SVG(cx, circuitsdata[cx][1])
 key = input("Wait")
