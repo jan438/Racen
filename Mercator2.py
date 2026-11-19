@@ -140,9 +140,9 @@ def writeSvgData(gpsData, width, height, outfile):
         fp.write('</g>\n')
     fp.write('</svg>\n')
     fp.close()
-def GeoJSON_to_SVG(cx, gpxfile):
+def GeoJSON_to_SVG(cx, circuit):
     custom_symbol = "Red"
-    with open('Circuits/GeoJSON/ae-2009.geojson', 'r') as infile:
+    with open('Circuits/GeoJSON/' + circuit + '.geojson', 'r') as infile:
         geodata = json.load(infile)
     gpx = gpxpy.gpx.GPX()
     for feature in geodata['features']:
@@ -151,14 +151,13 @@ def GeoJSON_to_SVG(cx, gpxfile):
         process_geometry(geom, properties, custom_symbol, gpx)
     with open('Circuits/GPX/ae-2009.gpx', 'w') as outfile:
         outfile.write( gpx.to_xml() )
-    print(gpxfile)
-    gpsData = parseGpx("Data/" + gpxfile + ".gpx")
+    gpsData = parseGpx("Data/" + circuit + ".gpx")
     if gpsData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
     gpsData = calcProjection(gpsData)
     gpsData, width, height = moveProjectedData(gpsData)
-    writeSvgData(gpsData, width, height, "SVG/" + gpxfile + "x.svg")
+    writeSvgData(gpsData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
     r = 6378137.0
