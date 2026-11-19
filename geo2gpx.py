@@ -103,7 +103,7 @@ for feature in data['features']:
     properties = feature['properties']
     process_geometry(geom, properties, custom_symbol, gpx)
 
-with open(sys.argv[1]+'.gpx', 'w') as outfile:
+with open('Circuits/GPX/' + sys.argv[1] + '.gpx', 'w') as outfile:
     outfile.write( gpx.to_xml() )
 print ( f"File saved as {sys.argv[1]+'.gpx'}")
 key = input("Wait")
