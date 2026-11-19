@@ -3,8 +3,25 @@ import math
 from xml.dom.minidom import parse as parseXml
 import os
 import csv
+import json
+import gpxpy.gpx
 from enum import Enum
 
+def get_property(properties, key, default='noname'):
+    return properties.get(key) or properties.get(key.capitalize(), default)
+def process_linestring(geom, properties, gpx, circuit):
+    node = geom['coordinates']
+    gpx_track = gpxpy.gpx.GPXTrack(name=circuit)
+    gpx.tracks.append(gpx_track)
+    gpx_segment = gpxpy.gpx.GPXTrackSegment()
+    gpx_track.segments.append(gpx_segment)
+    for coord in node:
+        gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(coord[1],  coord[0]))
+def process_geometry(geom, properties, custom_symbol, gpx, circuit):
+    geom_type = geom['type']
+    if geom_type == 'LineString':
+        process_linestring(geom, properties, gpx, circuit)
+    return
 def parseGpx(gpxFile):
     try:
         gpx = parseXml(gpxFile)
@@ -123,15 +140,24 @@ def writeSvgData(gpsData, width, height, outfile):
         fp.write('</g>\n')
     fp.write('</svg>\n')
     fp.close()
-def GPX_to_SVG(cx, gpxfile):
-    print(gpxfile)
-    gpsData = parseGpx("Data/" + gpxfile + ".gpx")
+def GeoJSON_to_SVG(cx, circuit):
+    custom_symbol = "Red"
+    with open('Circuits/GeoJSON/' + circuit + '.geojson', 'r') as infile:
+        geodata = json.load(infile)
+    gpx = gpxpy.gpx.GPX()
+    for feature in geodata['features']:
+        geom = feature['geometry']
+        properties = feature['properties']
+        process_geometry(geom, properties, custom_symbol, gpx, circuit)
+    with open('Circuits/GPX/' + circuit + '.gpx', 'w') as outfile:
+        outfile.write( gpx.to_xml() )
+    gpsData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
     if gpsData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
     gpsData = calcProjection(gpsData)
     gpsData, width, height = moveProjectedData(gpsData)
-    writeSvgData(gpsData, width, height, "SVG/" + gpxfile + "x.svg")
+    writeSvgData(gpsData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
     r = 6378137.0
@@ -156,9 +182,9 @@ with open(file_to_open, 'r') as file:
         count += 1
 print(count)
 for i in range(len(circuitsdata)):
-    #if circuitsdata[i][1] == "ae-2009":
-    if True:
+    if circuitsdata[i][1] == "ae-2009":
+    #if True:
         cx = i
         print(cx, "GPX_to_SVG", circuitsdata[cx][1])
-        GPX_to_SVG(cx, circuitsdata[cx][1])
+        GeoJSON_to_SVG(cx, circuitsdata[cx][1])
 key = input("Wait")
