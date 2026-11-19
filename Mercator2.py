@@ -7,6 +7,12 @@ import json
 import gpxpy.gpx
 from enum import Enum
 
+def process_geometry(geom, properties, custom_symbol, gpx):
+    geom_type = geom['type']
+    if geom_type == 'LineString':
+        print('LineString')
+        #process_linestring(geom, properties, gpx)
+    return
 def parseGpx(gpxFile):
     try:
         gpx = parseXml(gpxFile)
@@ -133,7 +139,7 @@ def GeoJSON_to_SVG(cx, gpxfile):
     for feature in geodata['features']:
         geom = feature['geometry']
         properties = feature['properties']
-        #process_geometry(geom, properties, custom_symbol, gpx)
+        process_geometry(geom, properties, custom_symbol, gpx)
     print(gpxfile)
     gpsData = parseGpx("Data/" + gpxfile + ".gpx")
     if gpsData == []:
