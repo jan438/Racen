@@ -21,10 +21,23 @@ def process_linestring(geom, properties, gpx, circuit):
         gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(coord[1],  coord[0]))
         cnt += 1
     print(circuit, cnt)
+def process_point(geom, properties, custom_symbol, gpx):
+    node = geom['coordinates']
+    new_wpt = gpxpy.gpx.GPXWaypoint()
+    new_wpt.name = get_property(properties, 'name')
+    symbol = properties.get('sym')
+    if symbol is None and custom_symbol != "":
+        new_wpt.symbol = custom_symbol
+    else:
+        new_wpt.symbol = symbol
+    new_wpt.latitude, new_wpt.longitude = node[1], node[0]
+    gpx.waypoints.append(new_wpt)
 def process_geometry(geom, properties, custom_symbol, gpx, circuit):
     geom_type = geom['type']
     if geom_type == 'LineString':
         process_linestring(geom, properties, gpx, circuit)
+    elif geom_type == 'Point':
+        process_point(geom, properties, custom_symbol, gpx)
     return
 def parseGpx(gpxFile):
     try:
