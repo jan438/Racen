@@ -146,7 +146,7 @@ def writeSvgData(gpsData, width, height, outfile):
     fp.close()
 def GeoJSON_to_SVG(cx, circuit):
     custom_symbol = "Red"
-    with open('Circuits/GeoJSON/' + circuit + '.geojson', 'r') as infile:
+    with open('Circuits/GeoJSON/' + circuit + '2.geojson', 'r') as infile:
         geodata = json.load(infile)
     gpx = gpxpy.gpx.GPX()
     for feature in geodata['features']:
@@ -186,7 +186,7 @@ with open(file_to_open, 'r') as file:
         count += 1
 #print(count)
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][1] == "ae-2009":
+    if circuitsdata[i][1] == "sg-2008":
     #if True:
         cx = i
         #print(cx, "GPX_to_SVG", circuitsdata[cx][1])
