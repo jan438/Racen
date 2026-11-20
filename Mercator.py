@@ -159,6 +159,20 @@ def writeSvgData(gpsData, width, height, outfile):
     fp.write('</svg>\n')
     fp.close()
 def GeoJSON_to_SVG(cx, circuit):
+    def nearestpoint(coordinates, coords):
+        np = -1
+        dist = float('inf')
+        for linestring in coords:
+            counter = 0
+            for point in linestring:
+                d = calculate_distance(point[0], point[1], coordinates[0], coordinates[1])
+                if d < dist:
+                    dist = d
+                    np = counter
+                counter += 1
+        return np
+    def calculate_distance(x1, y1, x2, y2):
+        return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
     custom_symbol = "Red"
     with open('Circuits/GeoJSON/' + circuit + '2.geojson', 'r') as infile:
         geodata = json.load(infile)
