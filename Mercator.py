@@ -16,8 +16,11 @@ def process_linestring(geom, properties, gpx, circuit):
     gpx.tracks.append(gpx_track)
     gpx_segment = gpxpy.gpx.GPXTrackSegment()
     gpx_track.segments.append(gpx_segment)
+    cnt = 0
     for coord in node:
         gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(coord[1],  coord[0]))
+        cnt += 1
+    print(circuit, cnt)
 def process_geometry(geom, properties, custom_symbol, gpx, circuit):
     geom_type = geom['type']
     if geom_type == 'LineString':
@@ -172,7 +175,7 @@ if sys.platform[0] == "w":
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Racen"
     os.chdir(path)
 cwd = os.getcwd()
-print(cwd)
+#print(cwd)
 circuitsdata = []
 file_to_open = "Data/Circuits2027.csv"
 with open(file_to_open, 'r') as file:
@@ -181,11 +184,11 @@ with open(file_to_open, 'r') as file:
     for row in csvreader:
         circuitsdata.append(row)
         count += 1
-print(count)
+#print(count)
 for i in range(len(circuitsdata)):
     if circuitsdata[i][1] == "ae-2009":
     #if True:
         cx = i
-        print(cx, "GPX_to_SVG", circuitsdata[cx][1])
+        #print(cx, "GPX_to_SVG", circuitsdata[cx][1])
         GeoJSON_to_SVG(cx, circuitsdata[cx][1])
 key = input("Wait")
