@@ -5,6 +5,7 @@ import os
 import csv
 import json
 import gpxpy.gpx
+import io
 from enum import Enum
 
 def get_property(properties, key, default='noname'):
@@ -150,7 +151,11 @@ def GeoJSON_to_SVG(cx, circuit):
         properties = feature['properties']
         process_geometry(geom, properties, custom_symbol, gpx, circuit)
     with open('Circuits/GPX/' + circuit + '.gpx', 'w') as outfile:
-        outfile.write( gpx.to_xml() )
+        outfile.write( gpx.to_xml())
+    #output = io.StringIO()
+    #output.write('First line.\n')
+    #contents = output.getvalue()
+    #output.close()
     gpsData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
     if gpsData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
@@ -182,8 +187,8 @@ with open(file_to_open, 'r') as file:
         count += 1
 print(count)
 for i in range(len(circuitsdata)):
-    #if circuitsdata[i][1] == "ae-2009":
-    if True:
+    if circuitsdata[i][1] == "ae-2009":
+    #if True:
         cx = i
         print(cx, "GPX_to_SVG", circuitsdata[cx][1])
         GeoJSON_to_SVG(cx, circuitsdata[cx][1])
