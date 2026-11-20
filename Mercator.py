@@ -24,7 +24,7 @@ def process_linestring(geom, properties, gpx, circuit):
 def process_point(geom, properties, custom_symbol, gpx, circuit):
     node = geom['coordinates']
     new_wpt = gpxpy.gpx.GPXWaypoint()
-    new_wpt.name = get_property(properties, 'name')
+    new_wpt.name = get_property(properties, 'f1')
     symbol = properties.get('sym')
     if symbol is None and custom_symbol != "":
         new_wpt.symbol = custom_symbol
