@@ -65,6 +65,8 @@ def parseWpt(gpxFile):
         print('Terminating.', file = sys.stderr)
         sys.exit(1)
     wpts = []
+    for waypoint in gpw.getElementsByTagName('wpt'):
+        print(waypoint)
     return wpts
 def calcProjection(gpsData):
     projectedData = []
