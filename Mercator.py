@@ -184,12 +184,12 @@ def GeoJSON_to_SVG(cx, circuit):
     with open('Circuits/GPX/' + circuit + '.gpx', 'w') as outfile:
         outfile.write( gpx.to_xml())
     gpsData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
+    print("waypoint", gpsData)
     if gpsData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
     gpsData = calcProjection(gpsData)
     gpsData, width, height = moveProjectedData(gpsData)
-    print(gpsData)
     writeSvgData(gpsData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
