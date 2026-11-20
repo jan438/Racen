@@ -152,10 +152,6 @@ def GeoJSON_to_SVG(cx, circuit):
         process_geometry(geom, properties, custom_symbol, gpx, circuit)
     with open('Circuits/GPX/' + circuit + '.gpx', 'w') as outfile:
         outfile.write( gpx.to_xml())
-    #output = io.StringIO()
-    #output.write('First line.\n')
-    #contents = output.getvalue()
-    #output.close()
     gpsData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
     if gpsData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
