@@ -4,6 +4,7 @@ from xml.dom.minidom import parse as parseXml
 import os
 import csv
 import json
+import gpxpy
 import gpxpy.gpx
 import io
 from enum import Enum
