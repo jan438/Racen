@@ -189,6 +189,7 @@ def GeoJSON_to_SVG(cx, circuit):
         sys.exit(1)
     gpsData = calcProjection(gpsData)
     gpsData, width, height = moveProjectedData(gpsData)
+    print(gpsData)
     writeSvgData(gpsData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
