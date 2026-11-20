@@ -193,6 +193,7 @@ def GeoJSON_to_SVG(cx, circuit):
     with open('Circuits/GPX/' + circuit + '.gpx', 'w') as outfile:
         outfile.write( gpx.to_xml())
     wpts = parseWpt("Circuits/GPX/" + circuit + ".gpx")
+    print("len waypoints", len(wpts))
     gpsData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
     if gpsData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
