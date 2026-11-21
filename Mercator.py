@@ -170,7 +170,6 @@ def GeoJSON_to_SVG(cx, circuit):
     def nearestpoint(waypoint, coords):
         np = -1
         mind = float('inf')
-        maxd = float('-inf')
         print("waypoint", waypoint[0], "lon", waypoint[1], "lat", waypoint[2])
         for i in range(len(coords)):
             lon1 = waypoint[1]
@@ -180,9 +179,10 @@ def GeoJSON_to_SVG(cx, circuit):
             lat2 = coords[i][1]
             coord2 = (lat2, lon2)
             d = great_circle(coord1, coord2).km
-            mind = min(mind, d)
-            maxd = max(maxd, d)
-            print(i, "lon", coords[i][0], "lat", coords[i][1], "d", d, "min", round(mind, 5), "max", round(maxd, 5))
+            if d < mind:
+                mind = d
+                np = i
+            print(i, "lon", coords[i][0], "lat", coords[i][1], "d", d, "min", round(mind, 5), "np", np)
         return np
     custom_symbol = "Red"
     with open('Circuits/GeoJSON/' + circuit + '2.geojson', 'r') as infile:
