@@ -168,8 +168,12 @@ def writeSvgData(trkData, width, height, outfile):
     fp.close()
 def GeoJSON_to_SVG(cx, circuit):
     def nearestpoint(waypointa, waypointb, waypointc, coords):
-        np = -1
-        mind = float('inf')
+        np1 = -1
+        np2 = -1
+        np3 = -1
+        mind1 = float('inf')
+        mind2 = float('inf')
+        mind3 = float('inf')
         print("waypoints", waypointa[0], "lon", waypointa[1], "lat", waypointa[2])
         for i in range(len(coords)):
             lon1 = waypointa[1]
@@ -179,11 +183,31 @@ def GeoJSON_to_SVG(cx, circuit):
             lat2 = coords[i][1]
             coord2 = (lat2, lon2)
             d = great_circle(coord1, coord2).km
-            if d < mind:
-                mind = d
-                np = i
-            print(i, "lon", coords[i][0], "lat", coords[i][1], "d", d, "min", round(mind, 5), "np", np)
-        return np
+            if d < mind1:
+                mind1 = d
+                np1 = i
+            lon1 = waypointb[1]
+            lat1 = waypointb[2]
+            coord1 = (lat1, lon1)
+            lon2 = coords[i][0]
+            lat2 = coords[i][1]
+            coord2 = (lat2, lon2)
+            d = great_circle(coord1, coord2).km
+            if d < mind2:
+                mind2 = d
+                np2 = i
+            lon1 = waypointc[1]
+            lat1 = waypointc[2]
+            coord1 = (lat1, lon1)
+            lon2 = coords[i][0]
+            lat2 = coords[i][1]
+            coord2 = (lat2, lon2)
+            d = great_circle(coord1, coord2).km
+            if d < mind3:
+                mind3 = d
+                np3 = i
+            print(i, "lon", coords[i][0], "lat", coords[i][1], "d", d, "min1", round(mind1, 5), "np1", np1)
+        return np1, np2, np3
     custom_symbol = "Red"
     with open('Circuits/GeoJSON/' + circuit + '2.geojson', 'r') as infile:
         geodata = json.load(infile)
@@ -200,7 +224,7 @@ def GeoJSON_to_SVG(cx, circuit):
         sys.exit(1)
     trkData = calcProjection(origtrkData)
     trkData, width, height = moveProjectedData(trkData)
-    np = nearestpoint(wptData[0], wptData[1], wptData[2], origtrkData[0])
+    np1, np2, np3 = nearestpoint(wptData[0], wptData[1], wptData[2], origtrkData[0])
     writeSvgData(trkData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
