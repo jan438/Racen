@@ -58,7 +58,8 @@ def parseGpx(gpxFile):
             if(trackSegData != []):
                 gpsData.append(trackSegData)
     for wpt in gpx.getElementsByTagName('wpt'):
-        print(wpt)
+        name = wpt.getElementsByTagName('name')[0].firstChild.data
+        print(wpt, name)
     return gpsData
 def calcProjection(gpsData):
     projectedData = []
