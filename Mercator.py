@@ -47,7 +47,7 @@ def parseGpx(gpxFile):
     except:
         print('Terminating.', file = sys.stderr)
         sys.exit(1)
-    gpsData = []
+    trkData = []
     for track in gpx.getElementsByTagName('trk'):
         for trackseg in track.getElementsByTagName('trkseg'):
             trackSegData = []
@@ -56,24 +56,24 @@ def parseGpx(gpxFile):
                     (float(point.attributes['lon'].value), float(point.attributes['lat'].value))
                 )
             if(trackSegData != []):
-                gpsData.append(trackSegData)
+                trkData.append(trackSegData)
     for wpt in gpx.getElementsByTagName('wpt'):
         lon = wpt.attributes['lon'].value
         name = wpt.getElementsByTagName('name')[0].firstChild.data
         print(wpt, lon, name)
-    return gpsData
-def calcProjection(gpsData):
+    return trkData
+def calcProjection(trkData):
     projectedData = []
-    for segment in gpsData:
+    for segment in trkData:
         projectedSegment = []
         for coord in segment:
             projectedSegment.append(mercatorProjection(coord))
         projectedData.append(projectedSegment)
     return projectedData
-def extentOfProjectedData(gpsData):
-    minX = maxX = gpsData[0][0][0]
-    minY = maxY = gpsData[0][0][1]
-    for segment in gpsData:
+def extentOfProjectedData(trkData):
+    minX = maxX = trkData[0][0][0]
+    minY = maxY = trkData[0][0][1]
+    for segment in trkData:
         for coord in segment:
             if coord[0] < minX:
                 minX = coord[0]
@@ -84,19 +84,19 @@ def extentOfProjectedData(gpsData):
             if coord[1] > maxY:
                 maxY = coord[1]
     return minX, maxX, minY, maxY
-def moveProjectedData(gpsData):
-    minX, maxX, minY, maxY = extentOfProjectedData(gpsData)
-    movedGpsData = []
-    for segment in gpsData:
+def moveProjectedData(trkData):
+    minX, maxX, minY, maxY = extentOfProjectedData(trkData)
+    movedtrkData = []
+    for segment in trkData:
         movedSegment = []
         for coord in segment:
             movedSegment.append((coord[0] - minX, coord[1] - minY))
-        movedGpsData.append(movedSegment)
-    return movedGpsData, maxX - minX, maxY - minY
-def searchCircularSegments(gpsData):
+        movedtrkData.append(movedSegment)
+    return movedtrkData, maxX - minX, maxY - minY
+def searchCircularSegments(trkData):
     circularSegments = []
     straightSegments = []
-    for segment in gpsData:
+    for segment in trkData:
         if segment[0] == segment[len(segment) - 1]:
             circularSegments.append(segment)
         else:
@@ -107,7 +107,7 @@ def scaleCoords(coord, height, scale):
 def generateScaledSegment(segment, height, scale):
     for coord in segment:
         yield scaleCoords(coord, height, scale)
-def writeSvgData(gpsData, width, height, outfile):
+def writeSvgData(trkData, width, height, outfile):
     maxPixels = 3000
     dropSinglePoints = False
     if width <= maxPixels and height <= maxPixels:
@@ -126,7 +126,7 @@ def writeSvgData(gpsData, width, height, outfile):
               'viewBox="0 0 {width} {height}">\n').format(unit = unit,
                                                           width = width * scale,
                                                           height = height * scale))
-    circularSegments, straightSegments = searchCircularSegments(gpsData)
+    circularSegments, straightSegments = searchCircularSegments(trkData)
     realCircularSegments = []
     singlePoints = []
     for segment in circularSegments:
@@ -188,13 +188,13 @@ def GeoJSON_to_SVG(cx, circuit):
         process_geometry(geom, properties, custom_symbol, gpx, circuit)
     with open('Circuits/GPX/' + circuit + '.gpx', 'w') as outfile:
         outfile.write( gpx.to_xml())
-    gpsData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
-    if gpsData == []:
+    trkData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
+    if trkData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
-    gpsData = calcProjection(gpsData)
-    gpsData, width, height = moveProjectedData(gpsData)
-    writeSvgData(gpsData, width, height, "SVG/" + circuit + "x.svg")
+    trkData = calcProjection(trkData)
+    trkData, width, height = moveProjectedData(trkData)
+    writeSvgData(trkData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
     r = 6378137.0
