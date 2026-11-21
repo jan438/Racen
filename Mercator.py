@@ -60,8 +60,9 @@ def parseGpx(gpxFile):
     wptData = []
     for wpt in gpx.getElementsByTagName('wpt'):
         lon = wpt.attributes['lon'].value
+        lat = wpt.attributes['lat'].value
         name = wpt.getElementsByTagName('name')[0].firstChild.data
-        wptData.append((name, lon))
+        wptData.append((name, lon, lat))
     return trkData, wptData
 def calcProjection(trkData):
     projectedData = []
