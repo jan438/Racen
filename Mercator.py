@@ -167,13 +167,13 @@ def writeSvgData(trkData, width, height, outfile):
     fp.write('</svg>\n')
     fp.close()
 def GeoJSON_to_SVG(cx, circuit):
-    def nearestpoint(waypoint, coords):
+    def nearestpoint(waypointa, waypointb, waypointc, coords):
         np = -1
         mind = float('inf')
-        print("waypoint", waypoint[0], "lon", waypoint[1], "lat", waypoint[2])
+        print("waypoints", waypointa[0], "lon", waypointa[1], "lat", waypointa[2])
         for i in range(len(coords)):
-            lon1 = waypoint[1]
-            lat1 = waypoint[2]
+            lon1 = waypointa[1]
+            lat1 = waypointa[2]
             coord1 = (lat1, lon1)
             lon2 = coords[i][0]
             lat2 = coords[i][1]
@@ -200,7 +200,7 @@ def GeoJSON_to_SVG(cx, circuit):
         sys.exit(1)
     trkData = calcProjection(origtrkData)
     trkData, width, height = moveProjectedData(trkData)
-    np = nearestpoint(wptData[0], origtrkData[0])
+    np = nearestpoint(wptData[0], wptData[1], wptData[2], origtrkData[0])
     writeSvgData(trkData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
