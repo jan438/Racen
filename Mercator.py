@@ -57,11 +57,12 @@ def parseGpx(gpxFile):
                 )
             if(trackSegData != []):
                 trkData.append(trackSegData)
+    wptData = []
     for wpt in gpx.getElementsByTagName('wpt'):
         lon = wpt.attributes['lon'].value
         name = wpt.getElementsByTagName('name')[0].firstChild.data
-        print(wpt, lon, name)
-    return trkData
+        wptData.append((name, lon))
+    return trkData, wptData
 def calcProjection(trkData):
     projectedData = []
     for segment in trkData:
@@ -188,7 +189,8 @@ def GeoJSON_to_SVG(cx, circuit):
         process_geometry(geom, properties, custom_symbol, gpx, circuit)
     with open('Circuits/GPX/' + circuit + '.gpx', 'w') as outfile:
         outfile.write( gpx.to_xml())
-    trkData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
+    trkData, wptData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
+    print("len wptData", len(wptData))
     if trkData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
