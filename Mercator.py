@@ -223,7 +223,7 @@ def GeoJSON_to_SVG(cx, circuit):
     trkData = calcProjection(origtrkData)
     trkData, width, height = moveProjectedData(trkData)
     np1, np2, np3 = nearestpoint(wptData[0], wptData[1], wptData[2], origtrkData[0])
-    print("indices", np1, np2, np3)
+    print("indices", wptData[0][0], np1, wptData[1][0], np2, wptData[2][0], np3)
     writeSvgData(trkData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
