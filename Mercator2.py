@@ -8,6 +8,7 @@ import gpxpy
 import gpxpy.gpx
 import io
 from enum import Enum
+from geopy.distance import great_circle
 
 def get_property(properties, key, default='noname'):
     return properties.get(key) or properties.get(key.capitalize(), default)
@@ -172,8 +173,6 @@ def GeoJSON_to_SVG(cx, circuit):
         for i in range(len(coords)):
             print(i, "lon", coords[i][0], "lat", coords[i][1])
         return np
-    def calculate_distance(x1, y1, x2, y2):
-        return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
     custom_symbol = "Red"
     with open('Circuits/GeoJSON/' + circuit + '2.geojson', 'r') as infile:
         geodata = json.load(infile)
