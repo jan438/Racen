@@ -166,9 +166,9 @@ def writeSvgData(trkData, width, height, outfile):
     fp.write('</svg>\n')
     fp.close()
 def GeoJSON_to_SVG(cx, circuit):
-    def nearestpoint(coordinates, coords):
+    def nearestpoint(waypoint, coords):
         np = -1
-        print("waypoint", coordinates[0], "lon", coordinates[1], "lat", coordinates[2])
+        print("waypoint", waypoint[0], "lon", waypoint[1], "lat", waypoint[2])
         for i in range(len(coords)):
             print(i, "lon", coords[i][0], "lat", coords[i][1])
         return np
