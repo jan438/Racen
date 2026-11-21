@@ -178,7 +178,7 @@ def GeoJSON_to_SVG(cx, circuit):
             lat2 = coords[i][1]
             coord2 = (lat2, lon2)
             d = great_circle(coord1, coord2).km
-            print(i, "lon", coords[i][0], "lat", coords[i][1])
+            print(i, "lon", coords[i][0], "lat", coords[i][1], "distance", d)
         return np
     custom_symbol = "Red"
     with open('Circuits/GeoJSON/' + circuit + '2.geojson', 'r') as infile:
