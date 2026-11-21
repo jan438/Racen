@@ -176,25 +176,19 @@ def GeoJSON_to_SVG(cx, circuit):
         mind3 = float('inf')
         for i in range(len(coords)):
             coord1 = (waypointa[2], waypointa[1])
-            lon2 = coords[i][0]
-            lat2 = coords[i][1]
-            coord2 = (lat2, lon2)
+            coord2 = (coords[i][1], coords[i][0])
             d = great_circle(coord1, coord2).km
             if d < mind1:
                 mind1 = d
                 np1 = i
             coord1 = (waypointb[2], waypointb[1])
-            lon2 = coords[i][0]
-            lat2 = coords[i][1]
-            coord2 = (lat2, lon2)
+            coord2 = (coords[i][1], coords[i][0])
             d = great_circle(coord1, coord2).km
             if d < mind2:
                 mind2 = d
                 np2 = i
             coord1 = (waypointc[2], waypointc[1])
-            lon2 = coords[i][0]
-            lat2 = coords[i][1]
-            coord2 = (lat2, lon2)
+            coord2 = (coords[i][1], coords[i][0])
             d = great_circle(coord1, coord2).km
             if d < mind3:
                 mind3 = d
