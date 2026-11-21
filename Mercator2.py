@@ -168,15 +168,7 @@ def writeSvgData(trkData, width, height, outfile):
 def GeoJSON_to_SVG(cx, circuit):
     def nearestpoint(coordinates, coords):
         np = -1
-        dist = float('inf')
-        for linestring in coords:
-            counter = 0
-            for point in linestring:
-                d = calculate_distance(point[0], point[1], coordinates[0], coordinates[1])
-                if d < dist:
-                    dist = d
-                    np = counter
-                counter += 1
+        print("waypoint", coordinates[0], "lon", coordinates[1], "lat", coordinates[2])
         return np
     def calculate_distance(x1, y1, x2, y2):
         return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
@@ -196,8 +188,7 @@ def GeoJSON_to_SVG(cx, circuit):
         sys.exit(1)
     trkData = calcProjection(trkData)
     trkData, width, height = moveProjectedData(trkData)
-    print("len trkData0", len(trkData[0]))
-    print("len wptData", len(wptData))
+    np = nearestpoint(wptData[0], trkData[0])
     writeSvgData(trkData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
