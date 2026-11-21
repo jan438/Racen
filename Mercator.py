@@ -8,6 +8,7 @@ import gpxpy
 import gpxpy.gpx
 import io
 from enum import Enum
+from geopy.distance import great_circle
 
 def get_property(properties, key, default='noname'):
     return properties.get(key) or properties.get(key.capitalize(), default)
@@ -166,20 +167,23 @@ def writeSvgData(trkData, width, height, outfile):
     fp.write('</svg>\n')
     fp.close()
 def GeoJSON_to_SVG(cx, circuit):
-    def nearestpoint(coordinates, coords):
+    def nearestpoint(waypoint, coords):
         np = -1
-        dist = float('inf')
-        for linestring in coords:
-            counter = 0
-            for point in linestring:
-                d = calculate_distance(point[0], point[1], coordinates[0], coordinates[1])
-                if d < dist:
-                    dist = d
-                    np = counter
-                counter += 1
+        mind = float('inf')
+        maxd = float('-inf')
+        print("waypoint", waypoint[0], "lon", waypoint[1], "lat", waypoint[2])
+        for i in range(len(coords)):
+            lon1 = waypoint[1]
+            lat1 = waypoint[2]
+            coord1 = (lat1, lon1)
+            lon2 = coords[i][0]
+            lat2 = coords[i][1]
+            coord2 = (lat2, lon2)
+            d = great_circle(coord1, coord2).km
+            mind = min(mind, d)
+            maxd = max(maxd, d)
+            print(i, "lon", coords[i][0], "lat", coords[i][1], "d", d, "min", round(mind, 5), "max", round(maxd, 5))
         return np
-    def calculate_distance(x1, y1, x2, y2):
-        return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
     custom_symbol = "Red"
     with open('Circuits/GeoJSON/' + circuit + '2.geojson', 'r') as infile:
         geodata = json.load(infile)
@@ -190,13 +194,13 @@ def GeoJSON_to_SVG(cx, circuit):
         process_geometry(geom, properties, custom_symbol, gpx, circuit)
     with open('Circuits/GPX/' + circuit + '.gpx', 'w') as outfile:
         outfile.write( gpx.to_xml())
-    trkData, wptData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
-    print("len wptData", len(wptData))
-    if trkData == []:
+    origtrkData, wptData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
+    if origtrkData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
-    trkData = calcProjection(trkData)
+    trkData = calcProjection(origtrkData)
     trkData, width, height = moveProjectedData(trkData)
+    np = nearestpoint(wptData[0], origtrkData[0])
     writeSvgData(trkData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
