@@ -174,7 +174,6 @@ def GeoJSON_to_SVG(cx, circuit):
         mind1 = float('inf')
         mind2 = float('inf')
         mind3 = float('inf')
-        print("waypoints", waypointa[0], "lon", waypointa[1], "lat", waypointa[2])
         for i in range(len(coords)):
             lon1 = waypointa[1]
             lat1 = waypointa[2]
@@ -206,7 +205,6 @@ def GeoJSON_to_SVG(cx, circuit):
             if d < mind3:
                 mind3 = d
                 np3 = i
-            print(i, "lon", coords[i][0], "lat", coords[i][1], "d", d, "min1", round(mind1, 5), "np1", np1)
         return np1, np2, np3
     custom_symbol = "Red"
     with open('Circuits/GeoJSON/' + circuit + '2.geojson', 'r') as infile:
@@ -225,6 +223,7 @@ def GeoJSON_to_SVG(cx, circuit):
     trkData = calcProjection(origtrkData)
     trkData, width, height = moveProjectedData(trkData)
     np1, np2, np3 = nearestpoint(wptData[0], wptData[1], wptData[2], origtrkData[0])
+    print("indices", np1, np2, np3)
     writeSvgData(trkData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
