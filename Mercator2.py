@@ -171,10 +171,13 @@ def GeoJSON_to_SVG(cx, circuit):
         np = -1
         print("waypoint", waypoint[0], "lon", waypoint[1], "lat", waypoint[2])
         for i in range(len(coords)):
-            lon = waypoint[1]
-            lat = waypoint[2]
-            coord = (lat, lon)
-            d = great_circle(coord, coord).km
+            lon1 = waypoint[1]
+            lat1 = waypoint[2]
+            coord1 = (lat1, lon1)
+            lon2 = coords[i][0]
+            lat2 = coords[i][1]
+            coord2 = (lat2, lon2)
+            d = great_circle(coord1, coord2).km
             print(i, "lon", coords[i][0], "lat", coords[i][1])
         return np
     custom_symbol = "Red"
