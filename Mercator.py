@@ -168,38 +168,21 @@ def writeSvgData(trkData, width, height, outfile):
     fp.close()
 def GeoJSON_to_SVG(cx, circuit):
     def nearestpoint(wptData, coords):
-        np1 = -1
-        np2 = -1
-        np3 = -1
-        mind1 = float('inf')
-        mind2 = float('inf')
-        mind3 = float('inf')
-        for i in range(len(coords)):
-            coord1 = (wptData[0][2], wptData[0][1])
-            coord2 = (coords[i][1], coords[i][0])
-            d = great_circle(coord1, coord2).km
-            if d < mind1:
-                mind1 = d
-                np1 = i
-            coord1 = (wptData[1][2], wptData[1][1])
-            d = great_circle(coord1, coord2).km
-            if d < mind2:
-                mind2 = d
-                np2 = i
-            coord1 = (wptData[2][2], wptData[2][1])    
-            d = great_circle(coord1, coord2).km
-            if d < mind3:
-                mind3 = d
-                np3 = i
-        print("nearestpoints", np1, np2, np3)
         ind = []
         for j in range(3):
             if wptData[j][0] == "startfinish":
-               ind.append(np1)
-            elif wptData[j][0] == "sector1":
-                ind.append(np2)
-            elif wptData[j][0] == "sector2":
-                ind.append(np3)
+                np = -1
+                mind = float('inf')
+                for i in range(len(coords)):
+                    coord1 = (wptData[0][2], wptData[0][1])
+                    coord2 = (coords[i][1], coords[i][0])
+                    d = great_circle(coord1, coord2).km
+                    if d < mind:
+                        mind = d
+                        np = i
+                ind.append(np)
+                ind.append(np)
+                ind.append(np)
         return ind
     custom_symbol = "Red"
     with open('Circuits/GeoJSON/' + circuit + '2.geojson', 'r') as infile:
