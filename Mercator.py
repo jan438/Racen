@@ -168,6 +168,10 @@ def writeSvgTrk(trkData, width, height, outfile):
     fp.close()
 def writeSvgSec(trkData, width, height, outfile, ind):
     print("indices svg", ind[0], ind[1], ind[2])
+    if ind[0]<ind[1] and ind[0]<ind[2] and ind[1]<ind[2]:
+         print("123")
+    if ind[0]>ind[1] and ind[0]>ind[2] and ind[1]>ind[2]:
+         print("321")
     maxPixels = 3000
     dropSinglePoints = False
     if width <= maxPixels and height <= maxPixels:
