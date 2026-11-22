@@ -10,6 +10,10 @@ import io
 from enum import Enum
 from geopy.distance import great_circle
 
+sec1color = "#db4a25"   #red
+sec2color = "#58fdff"   #blue
+sec3color = "#fae44a"   #yellow
+
 def get_property(properties, key, default='noname'):
     return properties.get(key) or properties.get(key.capitalize(), default)
 def process_linestring(geom, properties, gpx, circuit):
