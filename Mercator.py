@@ -167,7 +167,7 @@ def writeSvgData(trkData, width, height, outfile):
     fp.write('</svg>\n')
     fp.close()
 def GeoJSON_to_SVG(cx, circuit):
-    def nearestpoint(waypointa, waypointb, waypointc, coords):
+    def nearestpoint(wptData, coords):
         np1 = -1
         np2 = -1
         np3 = -1
@@ -175,23 +175,31 @@ def GeoJSON_to_SVG(cx, circuit):
         mind2 = float('inf')
         mind3 = float('inf')
         for i in range(len(coords)):
-            coord1 = (waypointa[2], waypointa[1])
+            coord1 = (wptData[0][2], wptData[0][1])
             coord2 = (coords[i][1], coords[i][0])
             d = great_circle(coord1, coord2).km
             if d < mind1:
                 mind1 = d
                 np1 = i
-            coord1 = (waypointb[2], waypointb[1])
+            coord1 = (wptData[1][2], wptData[1][1])
             d = great_circle(coord1, coord2).km
             if d < mind2:
                 mind2 = d
                 np2 = i
-            coord1 = (waypointc[2], waypointc[1])
+            coord1 = (wptData[2][2], wptData[2][1])    
             d = great_circle(coord1, coord2).km
             if d < mind3:
                 mind3 = d
                 np3 = i
-        return np1, np2, np3
+        ind = []
+        for j in range(3):
+            if wptData[j][0] == "startfinish":
+               ind.append(np1)
+            elif wptData[j][0] == "sector1":
+                ind.append(np2)
+            elif wptData[j][0] == "sector2":
+                ind.append(np3)
+        return ind
     custom_symbol = "Red"
     with open('Circuits/GeoJSON/' + circuit + '2.geojson', 'r') as infile:
         geodata = json.load(infile)
@@ -208,8 +216,8 @@ def GeoJSON_to_SVG(cx, circuit):
         sys.exit(1)
     trkData = calcProjection(origtrkData)
     trkData, width, height = moveProjectedData(trkData)
-    np1, np2, np3 = nearestpoint(wptData[0], wptData[1], wptData[2], origtrkData[0])
-    print("indices", wptData[0][0], np1, wptData[1][0], np2, wptData[2][0], np3)
+    ind = nearestpoint(wptData, origtrkData[0])
+    print("indices", wptData[0][0], ind[0], wptData[1][0], ind[1], wptData[2][0], ind[2])
     writeSvgData(trkData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
