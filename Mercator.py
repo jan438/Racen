@@ -110,7 +110,63 @@ def scaleCoords(coord, height, scale):
 def generateScaledSegment(segment, height, scale):
     for coord in segment:
         yield scaleCoords(coord, height, scale)
-def writeSvgData(trkData, width, height, outfile):
+def writeSvgTrk(trkData, width, height, outfile):
+    maxPixels = 3000
+    dropSinglePoints = False
+    if width <= maxPixels and height <= maxPixels:
+        scale = 1
+    elif width > height:
+        scale = maxPixels / width
+    else:
+        scale = maxPixels / height
+    fp = open(outfile, 'w')
+    fp.write( '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
+    fp.write(('<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" '
+              '"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n'))
+    unit = 'px'
+    fp.write(('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" '
+              'width="{width}{unit}" height="{height}{unit}" '
+              'viewBox="0 0 {width} {height}">\n').format(unit = unit,
+                                                          width = width * scale,
+                                                          height = height * scale))
+    circularSegments, straightSegments = searchCircularSegments(trkData)
+    realCircularSegments = []
+    singlePoints = []
+    for segment in circularSegments:
+        segment.pop()
+        if len(segment) == 1:
+            if dropSinglePoints == False:
+                singlePoints.append(segment)
+        else:
+            realCircularSegments.append(segment)
+    circularSegments = realCircularSegments
+    if len(singlePoints) > 0:
+        fp.write('<g>\n')
+        for segment in singlePoints:
+            x, y = scaleCoords(segment[0], height, scale)
+            fp.write(
+                '<circle cx="{}" cy="{}" r="0.5" style="stroke:none;fill:white"/>\n'.format(x, y)
+            )
+        fp.write('</g>\n')
+    if len(circularSegments) > 0:
+        fp.write('<g>\n')
+        for segment in circularSegments:
+            fp.write('<path d="M')
+            for x, y in generateScaledSegment(segment, height, scale):
+                fp.write(' {} {}'.format(x, y))
+            fp.write(' Z" style="fill:none;stroke:white"/>\n')
+        fp.write('</g>\n')
+    if len(straightSegments) > 0:
+        fp.write('<g>\n')
+        for segment in straightSegments:
+            fp.write('<path d="M')
+            for x, y in generateScaledSegment(segment, height, scale):
+                fp.write(' {} {}'.format(x, y))
+            fp.write('" style="fill:none;stroke:white"/>\n')
+        fp.write('</g>\n')
+    fp.write('</svg>\n')
+    fp.close()
+def writeSvgSec(trkData, width, height, outfile):
     maxPixels = 3000
     dropSinglePoints = False
     if width <= maxPixels and height <= maxPixels:
@@ -225,7 +281,8 @@ def GeoJSON_to_SVG(cx, circuit):
     trkData, width, height = moveProjectedData(trkData)
     ind = nearestpoint(wptData, origtrkData[0])
     print("indices", ind[0], ind[1], ind[2])
-    writeSvgData(trkData, width, height, "SVG/" + circuit + "x.svg")
+    writeSvgTrk(trkData, width, height, "SVG/" + circuit + "x.svg")
+    writeSvgSec(trkData, width, height, "SVG/" + circuit + "s.svg")
     return
 def mercatorProjection(coord):
     r = 6378137.0
