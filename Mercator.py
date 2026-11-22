@@ -174,6 +174,8 @@ def writeSvgSec(trkData, width, height, outfile, ind):
     print("indices svg", ind[0], ind[1], ind[2])
     if ind[0]<ind[1] and ind[0]<ind[2] and ind[1]<ind[2]:
          print("123")
+    if ind[0]<ind[1] and ind[0]<ind[2] and ind[1]>ind[2]:
+         print("132")
     if ind[0]>ind[1] and ind[0]>ind[2] and ind[1]>ind[2]:
          print("321")
     maxPixels = 3000
