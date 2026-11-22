@@ -166,7 +166,8 @@ def writeSvgTrk(trkData, width, height, outfile):
         fp.write('</g>\n')
     fp.write('</svg>\n')
     fp.close()
-def writeSvgSec(trkData, width, height, outfile):
+def writeSvgSec(trkData, width, height, outfile, ind):
+    print("indices svg", ind[0], ind[1], ind[2])
     maxPixels = 3000
     dropSinglePoints = False
     if width <= maxPixels and height <= maxPixels:
@@ -282,7 +283,7 @@ def GeoJSON_to_SVG(cx, circuit):
     ind = nearestpoint(wptData, origtrkData[0])
     print("indices", ind[0], ind[1], ind[2])
     writeSvgTrk(trkData, width, height, "SVG/" + circuit + "x.svg")
-    writeSvgSec(trkData, width, height, "SVG/" + circuit + "s.svg")
+    writeSvgSec(trkData, width, height, "SVG/" + circuit + "s.svg", ind)
     return
 def mercatorProjection(coord):
     r = 6378137.0
