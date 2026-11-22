@@ -22,7 +22,7 @@ def process_linestring(geom, properties, gpx, circuit):
     for coord in node:
         gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(coord[1],  coord[0]))
         cnt += 1
-    print(circuit, "linestring", cnt)
+    #print(circuit, "linestring", cnt)
 def process_point(geom, properties, custom_symbol, gpx, circuit):
     node = geom['coordinates']
     new_wpt = gpxpy.gpx.GPXWaypoint()
@@ -34,7 +34,7 @@ def process_point(geom, properties, custom_symbol, gpx, circuit):
         new_wpt.symbol = symbol
     new_wpt.latitude, new_wpt.longitude = node[1], node[0]
     gpx.waypoints.append(new_wpt)
-    print(circuit, "point", new_wpt.name)
+    #print(circuit, "point", new_wpt.name)
 def process_geometry(geom, properties, custom_symbol, gpx, circuit):
     geom_type = geom['type']
     if geom_type == 'LineString':
@@ -191,6 +191,7 @@ def GeoJSON_to_SVG(cx, circuit):
             if d < mind3:
                 mind3 = d
                 np3 = i
+        print("nearestpoints", np1, np2, np3)
         ind = []
         for j in range(3):
             if wptData[j][0] == "startfinish":
@@ -214,10 +215,11 @@ def GeoJSON_to_SVG(cx, circuit):
     if origtrkData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
+    print("wptData", wptData[0][0], wptData[1][0], wptData[2][0])
     trkData = calcProjection(origtrkData)
     trkData, width, height = moveProjectedData(trkData)
     ind = nearestpoint(wptData, origtrkData[0])
-    print("indices", wptData[0][0], ind[0], wptData[1][0], ind[1], wptData[2][0], ind[2])
+    print("indices", ind[0], ind[1], ind[2])
     writeSvgData(trkData, width, height, "SVG/" + circuit + "x.svg")
     return
 def mercatorProjection(coord):
