@@ -181,6 +181,17 @@ def GeoJSON_to_SVG(cx, circuit):
                         mind = d
                         np = i
                 ind.append(np)
+        for j in range(3):
+            if wptData[j][0] == "sector1":
+                np = -1
+                mind = float('inf')
+                for i in range(len(coords)):
+                    coord1 = (wptData[1][2], wptData[1][1])
+                    coord2 = (coords[i][1], coords[i][0])
+                    d = great_circle(coord1, coord2).km
+                    if d < mind:
+                        mind = d
+                        np = i        
                 ind.append(np)
                 ind.append(np)
         return ind
