@@ -26,7 +26,7 @@ def process_linestring(geom, properties, gpx, circuit):
     for coord in node:
         gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(coord[1],  coord[0]))
         cnt += 1
-    #print(circuit, "linestring", cnt)
+    print(circuit, "linestring", cnt)
 def process_point(geom, properties, custom_symbol, gpx, circuit):
     node = geom['coordinates']
     new_wpt = gpxpy.gpx.GPXWaypoint()
