@@ -221,7 +221,7 @@ def writeSvgSec(trkData, width, height, outfile, ind):
         for segment in straightSegments:
             print("len segment", len(segment), "ind0", ind[0], "ind1", ind[1], "ind2", ind[2])
             sector1e = segment[ind[0]:]
-            sector1b = segment[:ind[1]]
+            sector1b = segment[:ind[2]+1]
             sector2 = segment[ind[1]:ind[0]+1]
             sector3 = segment[ind[2]:ind[1]+1]
             fp.write('<path d="M')
