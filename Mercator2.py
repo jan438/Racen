@@ -230,6 +230,7 @@ def writeSvgSec(trkData, width, height, outfile, ind):
             sector1e = segment[ind[0]:]
             sector1b = segment[:ind[2]]
             sector2 = segment[ind[2]:ind[1]]
+            sector3 = segment[ind[1]:ind[0]]
             fp.write('<path d="M')
             for x, y in generateScaledSegment(sector1e, height, scale):
                 fp.write(' {} {}'.format(x, y))
@@ -238,6 +239,10 @@ def writeSvgSec(trkData, width, height, outfile, ind):
             for x, y in generateScaledSegment(sector2, height, scale):
                 fp.write(' {} {}'.format(x, y))
             fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec2color))
+            fp.write('<path d="M')
+            for x, y in generateScaledSegment(sector3, height, scale):
+                fp.write(' {} {}'.format(x, y))
+            fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec3color))
         fp.write('</g>\n')
     fp.write('</svg>\n')
     fp.close()
