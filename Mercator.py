@@ -234,7 +234,7 @@ def writeSvgSec(trkData, width, height, outfile, ind):
             fp.write('<path d="M')
             for x, y in generateScaledSegment(segment, height, scale):
                 fp.write(' {} {}'.format(x, y))
-            fp.write(' Z" style="fill:none;stroke:{}"/>\n'.format(sec3color))
+            fp.write(' Z" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec3color))
         fp.write('</g>\n')
     fp.write('</svg>\n')
     fp.close()
