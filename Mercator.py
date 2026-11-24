@@ -334,9 +334,10 @@ with open(file_to_open, 'r') as file:
         count += 1
 #print(count)
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][1] == "sg-2008":
+    print(i, "GPX_to_SVG", circuitsdata[i][1])
+    if circuitsdata[i][1] == "mx-1962":
     #if True:
         cx = i
-        #print(cx, "GPX_to_SVG", circuitsdata[cx][1])
+        print(cx, "GPX_to_SVG", circuitsdata[cx][1])
         GeoJSON_to_SVG(cx, circuitsdata[cx][1])
 key = input("Wait")
