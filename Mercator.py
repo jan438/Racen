@@ -284,7 +284,7 @@ def GeoJSON_to_SVG(cx, circuit):
                 ind.append(np)
         return ind
     custom_symbol = "Red"
-    with open('Circuits/GeoJSON/' + circuit + '2.geojson', 'r') as infile:
+    with open('GeoJSON/' + circuit + 's.geojson', 'r') as infile:
         geodata = json.load(infile)
     gpx = gpxpy.gpx.GPX()
     for feature in geodata['features']:
