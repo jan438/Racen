@@ -115,7 +115,7 @@ def generateScaledSegment(segment, height, scale):
     for coord in segment:
         yield scaleCoords(coord, height, scale)
 def writeSvgTrk(trkData, width, height, outfile):
-    print("writeSvgTrk", len(trkData[0]))
+    print("writeSvgTrk1", len(trkData[0]))
     maxPixels = 3000
     dropSinglePoints = False
     if width <= maxPixels and height <= maxPixels:
@@ -134,7 +134,9 @@ def writeSvgTrk(trkData, width, height, outfile):
               'viewBox="0 0 {width} {height}">\n').format(unit = unit,
                                                           width = width * scale,
                                                           height = height * scale))
+    print("writeSvgTrk2", len(trkData[0]))
     circularSegments, straightSegments = searchCircularSegments(trkData)
+    print("writeSvgTrk3", len(trkData[0]))
     realCircularSegments = []
     singlePoints = []
     for segment in circularSegments:
@@ -144,7 +146,9 @@ def writeSvgTrk(trkData, width, height, outfile):
                 singlePoints.append(segment)
         else:
             realCircularSegments.append(segment)
+    print("writeSvgTrk4", len(trkData[0]))
     circularSegments = realCircularSegments
+    print("writeSvgTrk5", len(trkData[0]))
     if len(singlePoints) > 0:
         fp.write('<g>\n')
         for segment in singlePoints:
