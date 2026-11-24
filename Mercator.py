@@ -115,6 +115,7 @@ def generateScaledSegment(segment, height, scale):
     for coord in segment:
         yield scaleCoords(coord, height, scale)
 def writeSvgTrk(trkData, width, height, outfile):
+    print("writeSvgTrk", len(trkData[0]))
     maxPixels = 3000
     dropSinglePoints = False
     if width <= maxPixels and height <= maxPixels:
