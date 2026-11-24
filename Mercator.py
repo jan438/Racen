@@ -302,7 +302,6 @@ def GeoJSON_to_SVG(cx, circuit):
     print("wptData", wptData[0][0], wptData[1][0], wptData[2][0])
     trkData = calcProjection(origtrkData)
     trkData, width, height = moveProjectedData(trkData)
-    print("after move", len(trkData[0]))
     ind = nearestpoint(wptData, origtrkData[0])
     print("indices", ind[0], ind[1], ind[2])
     print("before SvgTrk", len(trkData[0]))
