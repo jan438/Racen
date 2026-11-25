@@ -137,6 +137,7 @@ def writeSvgTrk(trkData, width, height, outfile, ind):
     realCircularSegments = []
     singlePoints = []
     for segment in circularSegments:
+        # pop removed change trkData
         if len(segment) == 2:
             if dropSinglePoints == False:
                 singlePoints.append(segment)
