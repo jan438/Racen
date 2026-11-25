@@ -177,6 +177,8 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                 for x, y in generateScaledSegment(sector3, height, scale):
                     fp.write(' {} {}'.format(x, y))
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec3color))
+            if circuit =="mx-1962":
+                print("hallo")
         fp.write('</g>\n')
     if len(straightSegments) > 0:
         fp.write('<g>\n')
@@ -274,7 +276,7 @@ with open(file_to_open, 'r') as file:
         count += 1
 #print(count)
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][1] == "sg-2008":
+    if circuitsdata[i][1] == "mx-1962":
     #if True:
         cx = i
         print(cx, "GPX_to_SVG", circuitsdata[cx][1])
