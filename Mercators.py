@@ -114,7 +114,7 @@ def scaleCoords(coord, height, scale):
 def generateScaledSegment(segment, height, scale):
     for coord in segment:
         yield scaleCoords(coord, height, scale)
-def writeSvgTrk(trkData, width, height, outfile):
+def writeSvgTrk(trkData, width, height, outfile, ind):
     maxPixels = 3000
     dropSinglePoints = False
     if width <= maxPixels and height <= maxPixels:
@@ -155,10 +155,27 @@ def writeSvgTrk(trkData, width, height, outfile):
     if len(circularSegments) > 0:
         fp.write('<g>\n')
         for segment in circularSegments:
+            print("len segment", len(segment), "ind0", ind[0], "ind1", ind[1], "ind2", ind[2])
+            sector1e = segment[ind[0]:]
+            sector1b = segment[:ind[2]+1]
+            sector2 = segment[ind[1]:ind[0]+1]
+            sector3 = segment[ind[2]:ind[1]+1]
             fp.write('<path d="M')
-            for x, y in generateScaledSegment(segment, height, scale):
+            for x, y in generateScaledSegment(sector1e, height, scale):
                 fp.write(' {} {}'.format(x, y))
-            fp.write(' Z" style="fill:none;stroke:blue"/>\n')
+            fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec1color))
+            fp.write('<path d="M')
+            for x, y in generateScaledSegment(sector1b, height, scale):
+                fp.write(' {} {}'.format(x, y))
+            fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec1color))
+            fp.write('<path d="M')
+            for x, y in generateScaledSegment(sector2, height, scale):
+                fp.write(' {} {}'.format(x, y))
+            fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec2color))
+            fp.write('<path d="M')
+            for x, y in generateScaledSegment(sector3, height, scale):
+                fp.write(' {} {}'.format(x, y))
+            fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec3color))
         fp.write('</g>\n')
     if len(straightSegments) > 0:
         fp.write('<g>\n')
@@ -305,7 +322,7 @@ def GeoJSON_to_SVG(cx, circuit):
     ind = nearestpoint(wptData, origtrkData[0])
     print("indices", ind[0], ind[1], ind[2])
     print("before SvgTrk", len(trkData[0]))
-    writeSvgTrk(trkData, width, height, "SVG/" + circuit + "s.svg")
+    writeSvgTrk(trkData, width, height, "SVG/" + circuit + "s.svg", ind)
     return
 def mercatorProjection(coord):
     r = 6378137.0
