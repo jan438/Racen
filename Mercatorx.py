@@ -158,7 +158,7 @@ def writeSvgTrk(trkData, width, height, outfile):
             fp.write('<path d="M')
             for x, y in generateScaledSegment(segment, height, scale):
                 fp.write(' {} {}'.format(x, y))
-            fp.write(' Z" style="fill:none;stroke:blue"/>\n')
+            fp.write(' Z" style="fill:none;stroke-width:7;stroke:blue"/>\n')
         fp.write('</g>\n')
     if len(straightSegments) > 0:
         fp.write('<g>\n')
@@ -166,7 +166,7 @@ def writeSvgTrk(trkData, width, height, outfile):
             fp.write('<path d="M')
             for x, y in generateScaledSegment(segment, height, scale):
                 fp.write(' {} {}'.format(x, y))
-            fp.write('" style="fill:none;stroke:blue"/>\n')
+            fp.write('" style="fill:none;stroke-width:7;stroke:blue"/>\n')
         fp.write('</g>\n')
     fp.write('</svg>\n')
     fp.close()
