@@ -137,8 +137,7 @@ def writeSvgTrk(trkData, width, height, outfile, ind):
     realCircularSegments = []
     singlePoints = []
     for segment in circularSegments:
-        segment.pop()
-        if len(segment) == 1:
+        if len(segment) == 2:
             if dropSinglePoints == False:
                 singlePoints.append(segment)
         else:
@@ -155,7 +154,7 @@ def writeSvgTrk(trkData, width, height, outfile, ind):
     if len(circularSegments) > 0:
         fp.write('<g>\n')
         for segment in circularSegments:
-            print("len segment", len(segment), "ind0", ind[0], "ind1", ind[1], "ind2", ind[2])
+            print("len segment", len(segment), "ind0", ind[1], "ind2", ind[2])
             sector1e = segment[ind[0]:]
             sector1b = segment[:ind[2]+1]
             sector2 = segment[ind[1]:ind[0]+1]
