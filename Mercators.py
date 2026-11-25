@@ -180,10 +180,15 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
             if circuit =="mx-1962":
                 # 68 102 24
                 sector3 = segment[ind[0]:ind[1]+1]
+                sector = segment[:ind[2]+1]
                 fp.write('<path d="M')
                 for x, y in generateScaledSegment(sector3, height, scale):
                     fp.write(' {} {}'.format(x, y))
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec3color))
+                fp.write('<path d="M')
+                for x, y in generateScaledSegment(sector, height, scale):
+                    fp.write(' {} {}'.format(x, y))
+                fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec1color))
                 print("hallo")
         fp.write('</g>\n')
     if len(straightSegments) > 0:
