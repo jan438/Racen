@@ -114,7 +114,7 @@ def scaleCoords(coord, height, scale):
 def generateScaledSegment(segment, height, scale):
     for coord in segment:
         yield scaleCoords(coord, height, scale)
-def writeSvgTrk(trkData, width, height, outfile):
+def writeSvgTrk(trkData, width, height, circuit):
     maxPixels = 3000
     dropSinglePoints = False
     if width <= maxPixels and height <= maxPixels:
@@ -123,7 +123,7 @@ def writeSvgTrk(trkData, width, height, outfile):
         scale = maxPixels / width
     else:
         scale = maxPixels / height
-    fp = open(outfile, 'w')
+    fp = open("SVG/" + circuit + "x.svg", 'w')
     fp.write( '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
     fp.write(('<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" '
               '"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n'))
@@ -231,7 +231,7 @@ def GeoJSON_to_SVG(cx, circuit):
     ind = nearestpoint(wptData, origtrkData[0])
     print("indices", ind[0], ind[1], ind[2])
     print("before SvgTrk", len(trkData[0]))
-    writeSvgTrk(trkData, width, height, "SVG/" + circuit + "x.svg")
+    writeSvgTrk(trkData, width, height, circuit)
     return
 def mercatorProjection(coord):
     r = 6378137.0
