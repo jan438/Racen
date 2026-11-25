@@ -306,8 +306,6 @@ def GeoJSON_to_SVG(cx, circuit):
     print("indices", ind[0], ind[1], ind[2])
     print("before SvgTrk", len(trkData[0]))
     writeSvgTrk(trkData, width, height, "SVG/" + circuit + "x.svg")
-    print("before SvgSec", len(trkData[0]))
-    writeSvgSec(trkData, width, height, "SVG/" + circuit + "s.svg", ind)
     return
 def mercatorProjection(coord):
     r = 6378137.0
