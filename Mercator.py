@@ -134,7 +134,6 @@ def writeSvgTrk(trkData, width, height, outfile):
                                                           width = width * scale,
                                                           height = height * scale))
     circularSegments, straightSegments = searchCircularSegments(trkData)
-    print("writeSvgTrk before", len(trkData[0]))
     realCircularSegments = []
     singlePoints = []
     for segment in circularSegments:
@@ -144,7 +143,6 @@ def writeSvgTrk(trkData, width, height, outfile):
                 singlePoints.append(segment)
         else:
             realCircularSegments.append(segment)
-    print("writeSvgTrk after", len(trkData[0]))
     circularSegments = realCircularSegments
     if len(singlePoints) > 0:
         fp.write('<g>\n')
