@@ -1,6 +1,6 @@
 import sys
 import math
-from xml.dom.minidom import parse as parseXml
+from xml.dom.minidom import parse as parseXml, parseString
 import os
 import csv
 import json
