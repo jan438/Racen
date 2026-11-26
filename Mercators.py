@@ -288,7 +288,7 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                     fp.write(' {} {}'.format(x, y))
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec3color))
             if circuit =="us-2022":
-                # 88 1 48
+                # 88 1 48 0s1;12;20
                 sector1b = segment[ind[0]:]
                 sector1e = segment[:ind[1]+1]
                 sector2 = segment[ind[1]:ind[2]]
