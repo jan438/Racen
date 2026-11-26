@@ -46,9 +46,9 @@ def process_geometry(geom, properties, custom_symbol, gpx, circuit):
     elif geom_type == 'Point':
         process_point(geom, properties, custom_symbol, gpx, circuit)
     return
-def parseGpx(gpxFile):
+def parseGpx(gpxxml):
     try:
-        gpx = parseXml(gpxFile)
+        gpx = parseString(gpxxml)
     except:
         print('Terminating.', file = sys.stderr)
         sys.exit(1)
@@ -218,9 +218,8 @@ def GeoJSON_to_SVG(cx, circuit):
         geom = feature['geometry']
         properties = feature['properties']
         process_geometry(geom, properties, custom_symbol, gpx, circuit)
-    with open('Circuits/GPX/' + circuit + '.gpx', 'w') as outfile:
-        outfile.write( gpx.to_xml())
-    origtrkData, wptData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
+    gpxxml = gpx.to_xml()
+    origtrkData, wptData = parseGpx(gpxxml)
     print("after parseGpx", len(origtrkData[0]))
     if origtrkData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
