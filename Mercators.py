@@ -223,10 +223,10 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec2color))
             if circuit =="ae-2009":
                 # 72 134 27
-                sector3 = segment[ind[0]:ind[2]+1]
                 sector1e = segment[:ind[0]+1]
                 sector1b = segment[ind[1]:]
                 sector2 = segment[ind[2]:ind[0]+1]
+                sector3 = segment[ind[0]:ind[1]]
                 fp.write('<path d="M')
                 for x, y in generateScaledSegment(sector3, height, scale):
                     fp.write(' {} {}'.format(x, y))
