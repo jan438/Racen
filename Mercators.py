@@ -155,7 +155,6 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
     if len(circularSegments) > 0:
         fp.write('<g>\n')
         for segment in circularSegments:
-            print("len segment", len(segment), "ind0", ind[0], "ind1", ind[1], "ind2", ind[2])
             if circuit =="sg-2008":
                 sector1e = segment[ind[0]:]
                 sector1b = segment[:ind[2]+1]
@@ -283,7 +282,6 @@ def GeoJSON_to_SVG(cx, circuit):
     with open('Circuits/GPX/' + circuit + '.gpx', 'w') as outfile:
         outfile.write( gpx.to_xml())
     origtrkData, wptData = parseGpx("Circuits/GPX/" + circuit + ".gpx")
-    print("after parseGpx", len(origtrkData[0]))
     if origtrkData == []:
         print('No data to convert. Terminating.', file = sys.stderr)
         sys.exit(1)
@@ -292,7 +290,6 @@ def GeoJSON_to_SVG(cx, circuit):
     trkData, width, height = moveProjectedData(trkData)
     ind = nearestpoint(wptData, origtrkData[0])
     print("indices", ind[0], ind[1], ind[2])
-    print("before SvgTrk", len(trkData[0]))
     writeSvgTrk(trkData, width, height, circuit, ind)
     return
 def mercatorProjection(coord):
