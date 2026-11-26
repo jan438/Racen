@@ -265,26 +265,6 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                 for x, y in generateScaledSegment(sector2, height, scale):
                     fp.write(' {} {}'.format(x, y))
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec2color))
-                sector1e = segment[:ind[0]+1]
-                sector1b = segment[ind[1]:]
-                sector2 = segment[ind[2]:ind[0]+1]
-                sector3 = segment[ind[0]:ind[1]+1]
-                fp.write('<path d="M')
-                for x, y in generateScaledSegment(sector3, height, scale):
-                    fp.write(' {} {}'.format(x, y))
-                fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec3color))
-                fp.write('<path d="M')
-                for x, y in generateScaledSegment(sector1e, height, scale):
-                    fp.write(' {} {}'.format(x, y))
-                fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec1color))
-                fp.write('<path d="M')
-                for x, y in generateScaledSegment(sector1b, height, scale):
-                    fp.write(' {} {}'.format(x, y))
-                fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec1color))
-                fp.write('<path d="M')
-                for x, y in generateScaledSegment(sector2, height, scale):
-                    fp.write(' {} {}'.format(x, y))
-                fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec2color))
         fp.write('</g>\n')
     if len(straightSegments) > 0:
         fp.write('<g>\n')
