@@ -156,7 +156,7 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
         fp.write('<g>\n')
         for segment in circularSegments:
             if circuit =="sg-2008":
-                # 85 35 1
+                # 85 35 1 0s2;10;21
                 sector1e = segment[ind[0]:]
                 sector1b = segment[:ind[2]+1]
                 sector2 = segment[ind[1]:ind[0]+1]
@@ -178,7 +178,7 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                     fp.write(' {} {}'.format(x, y))
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec3color))
             if circuit =="mx-1962":
-                # 68 102 24
+                # 68 102 24 1s2;20;01
                 sector3 = segment[ind[0]:ind[1]+1]
                 sector1e = segment[:ind[2]+1]
                 sector1b = segment[ind[1]:]
@@ -200,7 +200,7 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                     fp.write(' {} {}'.format(x, y))
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec2color))
             if circuit =="be-1925":
-                # 31 154 105
+                # 31 154 105 1s0;21;02
                 sector3 = segment[ind[0]:ind[2]+1]
                 sector1e = segment[:ind[0]+1]
                 sector1b = segment[ind[1]:]
@@ -222,7 +222,7 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                     fp.write(' {} {}'.format(x, y))
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec2color))
             if circuit =="ae-2009":
-                # 72 134 27
+                # 72 134 27 1s0;20;01
                 sector1e = segment[:ind[0]+1]
                 sector1b = segment[ind[1]:]
                 sector2 = segment[ind[2]:ind[0]+1]
@@ -244,7 +244,7 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                     fp.write(' {} {}'.format(x, y))
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec2color))
             if circuit =="au-1953":
-                # 147 45 93
+                # 147 45 93 0s1;20;12
                 sector1e = segment[:ind[1]+1]
                 sector1b = segment[ind[0]:]
                 sector3 = segment[ind[1]:ind[2]+1]
@@ -266,7 +266,7 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                     fp.write(' {} {}'.format(x, y))
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec2color))
             if circuit =="us-2012":
-                # 56 172 107
+                # 56 172 107 02;21;1s0
                 sector1 = segment[ind[0]:ind[2]+1]
                 sector2 = segment[ind[2]:ind[1]+1]
                 sector3b = segment[ind[1]:]
