@@ -419,6 +419,28 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                 for x, y in generateScaledSegment(sector3, height, scale):
                     fp.write(' {} {}'.format(x, y))
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec3color))
+            if circuit =="ca-1978":
+                # 39 75 2
+                sector1 = segment[ind[0]:ind[1]+1]
+                sector2b = segment[ind[1]:]
+                sector2e = segment[:ind[2]+1]
+                sector3 = segment[ind[2]:ind[0]+1]
+                fp.write('<path d="M')
+                for x, y in generateScaledSegment(sector1, height, scale):
+                    fp.write(' {} {}'.format(x, y))
+                fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec1color))
+                fp.write('<path d="M')
+                for x, y in generateScaledSegment(sector2b, height, scale):
+                    fp.write(' {} {}'.format(x, y))
+                fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec2color))
+                fp.write('<path d="M')
+                for x, y in generateScaledSegment(sector2e, height, scale):
+                    fp.write(' {} {}'.format(x, y))
+                fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec2color))
+                fp.write('<path d="M')
+                for x, y in generateScaledSegment(sector3, height, scale):
+                    fp.write(' {} {}'.format(x, y))
+                fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec3color))
         fp.write('</g>\n')
     if len(straightSegments) > 0:
         fp.write('<g>\n')
@@ -513,7 +535,7 @@ with open(file_to_open, 'r') as file:
         count += 1
 #print(count)
 for i in range(len(circuitsdata)):
-    if circuitsdata[i][1] == "br-1940":
+    if circuitsdata[i][1] == "ca-1978":
     #if True:
         cx = i
         print(cx, "GPX_to_SVG", circuitsdata[cx][1])
