@@ -355,7 +355,7 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                 fp.write('" style="fill:none;stroke-width:7;stroke:{}"/>\n'.format(sec3color))
             if circuit =="at-1969":
                 # 1 52 15
-                sector1 = segment[ind[0]:ind[2]]
+                sector1 = segment[ind[0]:ind[2]+1]
                 sector2 = segment[ind[2]:ind[1]+1]
                 sector3b = segment[ind[1]:]
                 sector3e = segment[:ind[0]+1]
