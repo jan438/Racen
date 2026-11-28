@@ -533,7 +533,7 @@ def writeSvgTrk(trkData, width, height, circuit, ind):
                 # 171 61 134
                 sector1b = segment[ind[0]:]
                 sector1e = segment[:ind[2]+1]
-                sector3 = segment[ind[2]:ind[1]+1]
+                sector3 = segment[ind[2]:ind[0]+1]
                 sector2 = segment[ind[1]:ind[2]+1]
                 fp.write('<path d="M')
                 for x, y in generateScaledSegment(sector1b, height, scale):
