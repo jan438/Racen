@@ -17,6 +17,7 @@ sec3color = "#fae44a"   #yellow
 def get_property(properties, key, default='noname'):
     return properties.get(key) or properties.get(key.capitalize(), default)
 def process_linestring(geom, properties, gpx, circuit):
+    print("Properties", properties)
     node = geom['coordinates']
     gpx_track = gpxpy.gpx.GPXTrack(name=circuit)
     gpx.tracks.append(gpx_track)
